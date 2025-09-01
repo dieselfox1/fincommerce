@@ -1,0 +1,41 @@
+{
+	"name": "fincommerce/checkout",
+	"version": "1.0.0",
+	"title": "Checkout",
+	"description": "Display a checkout form so your customers can submit orders.",
+	"category": "fincommerce",
+	"keywords": [
+		"FinCommerce"
+	],
+	"supports": {
+		"align": [
+			"wide"
+		],
+		"html": false,
+		"multiple": false
+	},
+	"example": {
+		"attributes": {
+			"isPreview": true
+		},
+		"viewportWidth": 800
+	},
+	"attributes": {
+		"isPreview": {
+			"type": "boolean",
+			"default": false,
+			"save": false
+		},
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"showFormStepNumbers": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

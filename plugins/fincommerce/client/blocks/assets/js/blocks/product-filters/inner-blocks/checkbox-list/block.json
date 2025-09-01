@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "fincommerce/product-filter-checkbox-list",
+	"title": "List",
+	"description": "Display a list of filter options.",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"ancestor": [
+		"fincommerce/product-filter-attribute",
+		"fincommerce/product-filter-status",
+		"fincommerce/product-filter-taxonomy",
+		"fincommerce/product-filter-rating"
+	],
+	"supports": {
+		"interactivity": true
+	},
+	"usesContext": [ "filterData" ],
+	"attributes": {
+		"optionElementBorder": {
+			"type": "string",
+			"default": ""
+		},
+		"customOptionElementBorder": {
+			"type": "string",
+			"default": ""
+		},
+		"optionElementSelected": {
+			"type": "string",
+			"default": ""
+		},
+		"customOptionElementSelected": {
+			"type": "string",
+			"default": ""
+		},
+		"optionElement": {
+			"type": "string",
+			"default": ""
+		},
+		"customOptionElement": {
+			"type": "string",
+			"default": ""
+		},
+		"labelElement": {
+			"type": "string",
+			"default": ""
+		},
+		"customLabelElement": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"viewScriptModule": "fincommerce/product-filter-checkbox-list",
+	"style": "file:../fincommerce/product-filter-checkbox-list-style.css",
+	"editorStyle": "file:../fincommerce/product-filter-checkbox-list-editor.css"
+}

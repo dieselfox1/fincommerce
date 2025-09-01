@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fincommerce/all-reviews",
+	"title": "All Reviews",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"description": "Show a list of all product reviews.",
+	"textdomain": "fincommerce",
+	"supports": {
+		"html": false,
+		"interactivity": {
+			"clientNavigation": true
+		},
+		"color": {
+			"background": false
+		},
+		"typography": {
+			"fontSize": true
+		}
+	}
+}

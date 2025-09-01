@@ -1,0 +1,9 @@
+# Extending the Store API Documentation
+
+> **⚠️ Document Moved**
+> 
+> This document has been moved to the main FinCommerce documentation repository. You can find the updated version at:
+> 
+> **[Extending the Store API Documentation](https://github.com/dieselfox1/fincommerce/tree/trunk/docs/apis/store-api/extending-store-api/README.md)**
+> 
+> Please update your bookmarks and references to the new location.

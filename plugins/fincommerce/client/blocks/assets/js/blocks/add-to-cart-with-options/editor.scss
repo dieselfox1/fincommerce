@@ -1,0 +1,31 @@
+.wp-block-fincommerce-add-to-cart-with-options {
+	&.block-editor-block-list__block:not(.remove-outline) {
+		&.is-highlighted::after,
+		&.is-hovered:not(.is-selected)::after,
+		&.is-selected::after {
+			outline-color: var(--wp-block-synced-color);
+		}
+
+		&.block-editor-block-list__block:not([contenteditable]):focus {
+			&::after {
+				outline-color: var(--wp-block-synced-color);
+			}
+		}
+	}
+}
+
+.wp-block-fincommerce-add-to-cart-with-options__skeleton-wrapper {
+	max-width: 300px;
+	margin-bottom: $gap;
+}
+
+.wp-block-fincommerce-add-to-cart-with-options__block-icon {
+	color: $studio-fincommerce-purple-50;
+}
+
+.block-editor-list-view-leaf.is-selected
+	.block-editor-list-view-block-contents {
+	.wp-block-fincommerce-add-to-cart-with-options__block-icon {
+		color: inherit;
+	}
+}

@@ -1,0 +1,53 @@
+module.exports = {
+	extends: [ 'plugin:@fincommerce/eslint-plugin/recommended' ],
+	plugins: [ 'import' ],
+	root: true,
+	overrides: [
+		{
+			files: [ 'client/**/*.js', 'client/**/*.jsx', 'client/**/*.tsx' ],
+			rules: {
+				'react/react-in-jsx-scope': 'off',
+			},
+		},
+	],
+	settings: {
+		'import/core-modules': [
+			'@fincommerce/admin-layout',
+			'@fincommerce/components',
+			'@fincommerce/customer-effort-score',
+			'@fincommerce/currency',
+			'@fincommerce/csv-export',
+			'@fincommerce/data',
+			'@fincommerce/date',
+			'@fincommerce/explat',
+			'@fincommerce/internal-js-tests',
+			'@fincommerce/navigation',
+			'@fincommerce/number',
+			'@fincommerce/onboarding',
+			'@fincommerce/product-editor',
+			'@fincommerce/settings',
+			'@fincommerce/tracks',
+			'@fincommerce/experimental',
+			'@wordpress/components',
+			'@wordpress/core-data',
+			'@wordpress/element',
+			'@wordpress/blocks',
+			'@wordpress/block-editor',
+			'@wordpress/block-library',
+			'@wordpress/notices',
+			'dompurify',
+			'@react-spring/web',
+			'react-router-dom',
+			'redux',
+			'xstate',
+			'xstate5',
+		],
+		'import/resolver': {
+			node: {},
+			webpack: {},
+			typescript: {
+				project: [ 'plugins/fincommerce/client/admin/tsconfig.json' ],
+			},
+		},
+	},
+};

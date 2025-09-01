@@ -1,0 +1,25 @@
+{
+	"name": "fincommerce/add-to-cart-with-options",
+	"title": "Add to Cart + Options (Beta)",
+	"description": "Use blocks to create an \"Add to cart\" area that's customized for different product types, such as variable and grouped. ",
+	"category": "fincommerce-product-elements",
+	"attributes": {
+		"isDescendantOfAddToCartWithOptions": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"usesContext": [ "postId" ],
+	"providesContext": {
+		"fincommerce/isDescendantOfAddToCartWithOptions": "isDescendantOfAddToCartWithOptions"
+	},
+	"textdomain": "fincommerce",
+	"supports": {
+		"interactivity": true
+	},
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"viewScriptModule": "fincommerce/add-to-cart-with-options",
+	"style": "file:../fincommerce/add-to-cart-with-options-style.css",
+	"editorStyle": "file:../fincommerce/add-to-cart-with-options-editor.css"
+}

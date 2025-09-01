@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fincommerce/product-review-form",
+	"title": "Reviews Form",
+	"category": "fincommerce",
+	"description": "Display a product's reviews form.",
+	"textdomain": "fincommerce",
+	"attributes": {
+		"textAlign": {
+			"type": "string"
+		}
+	},
+	"usesContext": [ "postId", "postType" ],
+	"supports": {
+		"interactivity": true,
+		"html": false,
+		"color": {
+			"gradients": true,
+			"heading": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalBorder": {
+			"radius": true,
+			"color": true,
+			"width": true,
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true,
+				"color": true,
+				"width": true,
+				"style": true
+			}
+		}
+	},
+	"example": {
+		"attributes": {
+			"textAlign": "center"
+		}
+	},
+	"viewScriptModule": "fincommerce/product-review-form",
+	"style": "file:../fincommerce/product-review-form-style.css",
+	"editorStyle": "file:../fincommerce/product-review-form-editor.css"
+}

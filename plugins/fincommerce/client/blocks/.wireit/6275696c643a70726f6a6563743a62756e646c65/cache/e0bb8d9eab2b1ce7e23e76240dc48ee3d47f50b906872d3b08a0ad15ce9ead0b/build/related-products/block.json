@@ -1,0 +1,20 @@
+{
+	"name": "fincommerce/related-products",
+	"title": "Related Products",
+	"icon": "product",
+	"description": "Display related products.",
+	"category": "fincommerce",
+	"supports": {
+		"interactivity": {
+			"clientNavigation": true
+		},
+		"align": true,
+		"reusable": false,
+		"inserter": false
+	},
+	"keywords": [ "FinCommerce" ],
+	"usesContext": [ "postId", "postType", "queryId" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

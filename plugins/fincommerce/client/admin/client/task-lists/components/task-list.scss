@@ -1,0 +1,23 @@
+.fincommerce-task-list__item {
+	&.fincommerce-list__item-enter {
+		opacity: 0;
+		max-height: 0;
+	}
+
+	&.fincommerce-list__item-enter-active {
+		opacity: 1;
+		max-height: 100px;
+		transition: opacity 500ms, max-height 500ms;
+	}
+
+	&.fincommerce-list__item-exit {
+		opacity: 1;
+		max-height: 100px;
+	}
+
+	&.fincommerce-list__item-exit-active {
+		opacity: 0;
+		max-height: 0;
+		transition: opacity 500ms, max-height 500ms;
+	}
+}

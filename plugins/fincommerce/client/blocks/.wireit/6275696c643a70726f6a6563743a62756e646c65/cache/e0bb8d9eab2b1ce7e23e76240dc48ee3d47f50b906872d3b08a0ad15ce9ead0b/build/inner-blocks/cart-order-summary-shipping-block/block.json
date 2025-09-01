@@ -1,0 +1,29 @@
+{
+	"name": "fincommerce/cart-order-summary-shipping-block",
+	"version": "1.0.0",
+	"title": "Shipping",
+	"description": "Shows the cart shipping row.",
+	"category": "fincommerce",
+	"supports": {
+		"align": false,
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"lock": false
+	},
+	"attributes": {
+		"lock": {
+			"type": "object",
+			"default": {
+				"remove": true,
+				"move": true
+			}
+		}
+	},
+	"parent": [
+		"fincommerce/cart-order-summary-totals-block"
+	],
+	"textdomain": "fincommerce",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3
+}

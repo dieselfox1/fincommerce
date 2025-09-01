@@ -1,0 +1,21 @@
+/**
+ * _fonts.scss
+ * Custom FinCommerce fonts.
+ */
+@font-face {
+	font-family: 'star';
+	src: url('../fonts/FinCommerce.woff2') format('woff2'),
+	     url('../fonts/FinCommerce.woff') format('woff'),
+	     url('../fonts/FinCommerce.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FinCommerce';
+	src: url('../fonts/FinCommerce.woff2') format('woff2'),
+	     url('../fonts/FinCommerce.woff') format('woff'),
+	     url('../fonts/FinCommerce.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

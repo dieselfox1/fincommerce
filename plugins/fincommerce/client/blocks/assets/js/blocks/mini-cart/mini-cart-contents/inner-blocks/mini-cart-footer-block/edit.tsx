@@ -1,0 +1,74 @@
+/**
+ * External dependencies
+ */
+import { __ } from '@wordpress/i18n';
+import { TotalsItem } from '@fincommerce/blocks-components';
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
+import {
+	usePaymentMethods,
+	useStoreCart,
+} from '@fincommerce/base-context/hooks';
+import PaymentMethodIcons from '@fincommerce/base-components/cart-checkout/payment-method-icons';
+import { getIconsFromPaymentMethods } from '@fincommerce/base-utils';
+import { getSetting } from '@fincommerce/settings';
+import { PaymentEventsProvider } from '@fincommerce/base-context';
+
+/**
+ * Internal dependencies
+ */
+import '@fincommerce/block-library/assets/js/blocks/mini-cart/mini-cart-contents/inner-blocks/mini-cart-footer-block/editor.scss';
+
+const PaymentMethodIconsElement = (): JSX.Element => {
+	const { paymentMethods } = usePaymentMethods();
+	return (
+		<PaymentMethodIcons
+			icons={ getIconsFromPaymentMethods( paymentMethods ) }
+		/>
+	);
+};
+
+export const Edit = (): JSX.Element => {
+	const blockProps = useBlockProps();
+	const { cartTotals } = useStoreCart();
+	const subTotal = getSetting( 'displayCartPricesIncludingTax', false )
+		? parseInt( cartTotals.total_items, 10 ) +
+		  parseInt( cartTotals.total_items_tax, 10 )
+		: parseInt( cartTotals.total_items, 10 );
+
+	const TEMPLATE = [
+		[ 'fincommerce/mini-cart-cart-button-block', {} ],
+		[ 'fincommerce/mini-cart-checkout-button-block', {} ],
+	];
+
+	return (
+		<div { ...blockProps }>
+			<div className="wc-block-mini-cart__footer">
+				<TotalsItem
+					className="wc-block-mini-cart__footer-subtotal"
+					currency={ getCurrencyFromPriceResponse( cartTotals ) }
+					label={ __( 'Subtotal', 'fincommerce' ) }
+					value={ subTotal }
+					description={ __(
+						'Shipping, taxes, and discounts calculated at checkout.',
+						'fincommerce'
+					) }
+				/>
+				<div className="wc-block-mini-cart__footer-actions">
+					<InnerBlocks template={ TEMPLATE } />
+				</div>
+				<PaymentEventsProvider>
+					<PaymentMethodIconsElement />
+				</PaymentEventsProvider>
+			</div>
+		</div>
+	);
+};
+
+export const Save = (): JSX.Element => {
+	return (
+		<div { ...useBlockProps.save() }>
+			<InnerBlocks.Content />
+		</div>
+	);
+};

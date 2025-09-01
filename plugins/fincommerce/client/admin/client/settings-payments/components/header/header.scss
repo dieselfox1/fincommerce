@@ -1,0 +1,63 @@
+.fincommerce-layout__header {
+	.fincommerce-layout__header-wrapper {
+		flex-wrap: wrap;
+	}
+
+	.fincommerce-layout__header-heading {
+		.fincommerce-settings-payments-header__title {
+			color: $gray-900;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 24px;
+		}
+	}
+
+	.fincommerce-settings-payments-header__description {
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 20px;
+		color: $gray-700;
+		flex-basis: 100%;
+	}
+
+	&:has(.fincommerce-settings-payments-header__title) {
+		padding: $gap-large 2 * $gap-large;
+
+		.fincommerce-layout__header-heading {
+			height: initial;
+			padding: 0;
+		}
+
+		.fincommerce-layout__header-wrapper {
+			min-height: 40px;
+			gap: $gap-smaller;
+		}
+
+		.fincommerce-settings-payments__back-button {
+			+ .fincommerce-layout__header-heading {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 24px;
+				flex-basis: 50%;
+			}
+		}
+
+		@media screen and ( max-width: $break-xlarge ) {
+			padding: $gap-large;
+		}
+
+		@media screen and ( max-width: $break-medium ) {
+			padding: $gap-large $gap;
+		}
+	}
+
+	&:has(.fincommerce-settings-payments-header__description) {
+		.fincommerce-layout__header-heading,
+		.fincommerce-settings-payments-header__title,
+		.fincommerce-settings-payments-header__description {
+			display: block;
+		}
+	}
+}

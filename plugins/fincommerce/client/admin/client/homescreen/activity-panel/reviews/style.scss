@@ -1,0 +1,47 @@
+.fincommerce-review-activity-card {
+	.fincommerce-rating {
+		margin-top: $gap-smallest;
+		.gridicon {
+			fill: $notice-yellow;
+		}
+	}
+
+	.fincommerce-activity-card__body > span > p {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	$icon-size: 18px;
+	.fincommerce-review-activity-card__verified {
+		display: inline-flex;
+		margin-left: $gap-smallest;
+		position: relative;
+		top: $gap-smallest;
+		color: $valid-green;
+		@include font-size( 12 );
+
+		svg {
+			width: $icon-size;
+			height: $icon-size;
+			fill: $valid-green;
+		}
+	}
+
+	@include breakpoint( "<782px" ) {
+		.fincommerce-review-activity-card__image-overlay {
+			margin-top: $gap-smallest;
+		}
+	}
+
+	&.fincommerce-activity-card {
+		padding: $gap $gap-large;
+	}
+	.fincommerce-activity-card__header .fincommerce-activity-card__title {
+		line-height: 20px;
+	}
+}

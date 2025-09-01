@@ -1,0 +1,60 @@
+{
+	"name": "fincommerce/product-rating",
+	"icon": "info",
+	"title": "Product Rating",
+	"description": "Display the average rating of a product.",
+	"category": "fincommerce-product-elements",
+	"attributes": {
+		"productId": {
+			"type": "number",
+			"default": 0
+		},
+		"isDescendentOfQueryLoop": {
+			"type": "boolean",
+			"default": false
+		},
+		"textAlign": {
+			"type": "string",
+			"default": ""
+		},
+		"isDescendentOfSingleProductBlock": {
+			"type": "boolean",
+			"default": false
+		},
+		"isDescendentOfSingleProductTemplate": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"interactivity": {
+			"clientNavigation": true
+		},
+		"color": {
+			"text": true,
+			"background": false,
+			"link": false,
+			"__experimentalSkipSerialization": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalSkipSerialization": true
+		},
+		"__experimentalSelector": ".wc-block-components-product-rating"
+	},
+	"ancestor": [
+		"fincommerce/all-products",
+		"fincommerce/single-product",
+		"fincommerce/product-template",
+		"core/post-template"
+	],
+	"usesContext": [ "query", "queryId", "postId" ],
+	"keywords": [ "FinCommerce" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

@@ -1,0 +1,156 @@
+{
+	"exclude": [
+		"node_modules"
+	],
+	"compilerOptions": {
+		"outDir": "./build",
+		"sourceMap": true,
+		"baseUrl": ".",
+		"target": "esnext",
+		"module": "esnext",
+		"emitDeclarationOnly": true,
+		"esModuleInterop": true,
+		"exactOptionalPropertyTypes": true,
+		"resolveJsonModule": true,
+		"jsx": "preserve",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"lib": [
+			"dom",
+			"esnext"
+		],
+		"checkJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"allowSyntheticDefaultImports": true,
+		"composite": true,
+		"rootDir": ".",
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"types": [
+			"jest",
+			"jquery"
+		],
+		"paths": {
+			"@fincommerce/atomic-blocks": [
+				"assets/js/base/atomic/blocks"
+			],
+			"@fincommerce/atomic-blocks/*": [
+				"assets/js/base/atomic/blocks/*"
+			],
+			"@fincommerce/atomic-utils": [
+				"assets/js/atomic/utils"
+			],
+			"@fincommerce/base-components/*": [
+				"assets/js/base/components/*"
+			],
+			"@fincommerce/base-context": [
+				"assets/js/base/context"
+			],
+			"@fincommerce/base-context/*": [
+				"assets/js/base/context/*"
+			],
+			"@fincommerce/base-context/hooks": [
+				"assets/js/base/context/hooks"
+			],
+			"@fincommerce/base-context/components": [
+				"assets/js/base/context/components"
+			],
+			"@fincommerce/base-hocs/*": [
+				"assets/js/base/hocs/*"
+			],
+			"@fincommerce/base-hooks": [
+				"assets/js/base/hooks"
+			],
+			"@fincommerce/base-utils": [
+				"assets/js/base/utils"
+			],
+			"@fincommerce/base-utils/*": [
+				"assets/js/base/utils/*"
+			],
+			"@fincommerce/blocks/*": [
+				"assets/js/blocks/*"
+			],
+			"@fincommerce/editor-components/*": [
+				"assets/js/editor-components/*"
+			],
+			"@fincommerce/block-data": [
+				"assets/js/data"
+			],
+			"@fincommerce/block-hocs": [
+				"assets/js/hocs"
+			],
+			"@fincommerce/blocks-registry": [
+				"assets/js/blocks-registry"
+			],
+			"@fincommerce/blocks-checkout": [
+				"packages/checkout"
+			],
+			"@fincommerce/blocks-checkout-events": [
+				"assets/js/events"
+			],
+			"@fincommerce/blocks-components": [
+				"packages/components"
+			],
+			"@fincommerce/price-format": [
+				"packages/prices"
+			],
+			"@fincommerce/block-settings": [
+				"assets/js/settings/blocks"
+			],
+			"@fincommerce/icons": [
+				"assets/js/icons"
+			],
+			"@fincommerce/resource-previews": [
+				"assets/js/previews"
+			],
+			"@fincommerce/settings": [
+				"assets/js/settings/shared"
+			],
+			"@fincommerce/shared-context": [
+				"assets/js/shared/context"
+			],
+			"@fincommerce/shared-hocs": [
+				"assets/js/shared/hocs"
+			],
+			"@fincommerce/stores/store-notices": [
+				"assets/js/base/stores/store-notices"
+			],
+			"@fincommerce/stores/fincommerce/cart": [
+				"assets/js/base/stores/fincommerce/cart"
+			],
+			"@fincommerce/stores/fincommerce/product-data": [
+				"assets/js/base/stores/fincommerce/product-data"
+			],
+			"@fincommerce/type-defs/*": [
+				"assets/js/types/type-defs/*"
+			],
+			"@fincommerce/types": [
+				"assets/js/types"
+			],
+			"@fincommerce/storybook-controls": [
+				"storybook/custom-controls"
+			],
+			"@fincommerce/utils": [
+				"assets/js/utils"
+			],
+			"@fincommerce/e2e-utils": [
+				"tests/e2e/utils"
+			],
+			"@wordpress/interactivity": [
+				"node_modules/@wordpress/interactivity/src/index.ts"
+			],
+			"@wordpress/interactivity-router": [
+				"node_modules/@wordpress/interactivity-router/src/index.ts"
+			],
+			"@fincommerce/test-utils/msw": [
+				"tests/js/config/msw-setup"
+			],
+			"@fincommerce/entities": [
+				"assets/js/entities"
+			],
+		}
+	}
+}

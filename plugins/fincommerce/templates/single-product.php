@@ -1,0 +1,62 @@
+<?php
+/**
+ * The Template for displaying all single products
+ *
+ * This template can be overridden by copying it to yourtheme/fincommerce/single-product.php.
+ *
+ * HOWEVER, on occasion FinCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see         https://fincommerce.com/document/template-structure/
+ * @package     FinCommerce\Templates
+ * @version     1.6.4
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+get_header( 'shop' ); ?>
+
+	<?php
+		/**
+		 * fincommerce_before_main_content hook.
+		 *
+		 * @hooked fincommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked fincommerce_breadcrumb - 20
+		 */
+		do_action( 'fincommerce_before_main_content' );
+	?>
+
+		<?php while ( have_posts() ) : ?>
+			<?php the_post(); ?>
+
+			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+
+		<?php endwhile; // end of the loop. ?>
+
+	<?php
+		/**
+		 * fincommerce_after_main_content hook.
+		 *
+		 * @hooked fincommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 */
+		do_action( 'fincommerce_after_main_content' );
+	?>
+
+	<?php
+		/**
+		 * fincommerce_sidebar hook.
+		 *
+		 * @hooked fincommerce_get_sidebar - 10
+		 */
+		do_action( 'fincommerce_sidebar' );
+	?>
+
+<?php
+get_footer( 'shop' );
+
+/* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

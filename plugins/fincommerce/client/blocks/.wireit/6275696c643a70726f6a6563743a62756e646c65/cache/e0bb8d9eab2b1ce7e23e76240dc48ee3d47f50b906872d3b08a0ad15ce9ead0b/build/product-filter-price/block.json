@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "fincommerce/product-filter-price",
+	"title": "Price Filter",
+	"description": "Let shoppers filter products by choosing a price range.",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"ancestor": [ "fincommerce/product-filters" ],
+	"supports": {
+		"interactivity": true,
+		"html": false
+	},
+	"usesContext": [ "query", "filterParams" ],
+	"viewScriptModule": "fincommerce/product-filter-price"
+}

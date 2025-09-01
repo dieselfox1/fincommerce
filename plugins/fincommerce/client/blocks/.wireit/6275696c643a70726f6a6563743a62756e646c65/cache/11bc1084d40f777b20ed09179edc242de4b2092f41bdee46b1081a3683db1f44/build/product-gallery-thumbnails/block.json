@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fincommerce/product-gallery-thumbnails",
+	"title": "Thumbnails",
+	"description": "Display the Thumbnails of a product.",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"usesContext": [ "postId" ],
+	"textdomain": "fincommerce",
+	"ancestor": [ "fincommerce/product-gallery" ],
+	"attributes": {
+		"thumbnailSize": {
+			"type": "string",
+			"default": "25%"
+		},
+		"aspectRatio": {
+			"type": "string",
+			"default": "1"
+		}
+	},
+	"supports": {
+		"spacing": {
+			"margin": true
+		},
+		"interactivity": true
+	},
+	"editorStyle": "file:../fincommerce/product-gallery-thumbnails-editor.css"
+}

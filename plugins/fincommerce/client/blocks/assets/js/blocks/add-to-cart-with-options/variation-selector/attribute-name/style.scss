@@ -1,0 +1,4 @@
+/* Remove the default margin added by FinCommerce core stylesheets. */
+:where(.wp-block-fincommerce-add-to-cart-with-options-variation-selector-attribute-name.wp-block-fincommerce-add-to-cart-with-options-variation-selector-attribute-name) {
+	margin-bottom: 0;
+}

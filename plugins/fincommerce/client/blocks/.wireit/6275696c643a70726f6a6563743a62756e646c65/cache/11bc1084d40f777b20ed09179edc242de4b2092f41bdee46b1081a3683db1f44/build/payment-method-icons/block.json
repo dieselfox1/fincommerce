@@ -1,0 +1,23 @@
+{
+	"name": "fincommerce/payment-method-icons",
+	"version": "1.0.0",
+	"title": "Payment Method Icons",
+	"description": "Display icons for available payment methods.",
+	"category": "fincommerce",
+	"keywords": [ "fincommerce", "payments", "payment methods" ],
+	"textdomain": "fincommerce",
+	"attributes": {
+		"numberOfIcons": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"supports": {
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

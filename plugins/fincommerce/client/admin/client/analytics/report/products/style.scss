@@ -1,0 +1,16 @@
+
+
+.fincommerce-table__product-categories {
+	> .fincommerce-table__breadcrumbs {
+		display: inline-block;
+		margin-right: $gap-small;
+	}
+	.components-popover__content {
+		padding: 0 $gap;
+		text-align: left;
+	}
+	.components-popover__content .fincommerce-table__breadcrumbs {
+		margin-top: $gap-small;
+		margin-bottom: $gap-small;
+	}
+}

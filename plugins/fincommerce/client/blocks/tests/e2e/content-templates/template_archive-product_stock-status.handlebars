@@ -1,0 +1,23 @@
+<!-- wp:fincommerce/product-filter {"filterType":"stock-filter","heading":"Filter by Stock Status"} -->
+<!-- wp:heading {"level":3} -->
+<h3 class='wp-block-heading'>Filter by Stock Status</h3>
+<!-- /wp:heading -->
+
+{{#> wp-block blockName='fincommerce/product-filter-status' attributes=attributes }}
+{{/ wp-block }}
+
+<!-- wp:fincommerce/product-collection {"query":{"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":true,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"fincommerceOnSale":false,"fincommerceStockStatus":["instock","outofstock","onbackorder"],"fincommerceAttributes":[],"fincommerceHandPickedProducts":[]},"tagName":"div","displayLayout":{"type":"flex","columns":3,"shrinkColumns":true},"queryContextIncludes":["collection"]} -->
+<div class='wp-block-fincommerce-product-collection'>
+	<!-- wp:fincommerce/product-template -->
+	<!-- wp:fincommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true} -->
+		<!-- wp:fincommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right"} /-->
+	<!-- /wp:fincommerce/product-image -->
+
+	<!-- wp:post-title {"textAlign":"center","level":3,"isLink":true,"style":{"spacing":{"margin":{"bottom":"0.75rem","top":"0"}}},"fontSize":"medium","__fincommerceNamespace":"fincommerce/product-collection/product-title"} /-->
+
+	<!-- wp:fincommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"center","fontSize":"small"} /-->
+
+	<!-- wp:fincommerce/product-button {"textAlign":"center","isDescendentOfQueryLoop":true,"fontSize":"small"} /-->
+	<!-- /wp:fincommerce/product-template -->
+</div>
+<!-- /wp:fincommerce/product-collection -->

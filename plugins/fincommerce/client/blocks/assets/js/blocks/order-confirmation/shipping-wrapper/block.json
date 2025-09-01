@@ -1,0 +1,35 @@
+{
+	"name": "fincommerce/order-confirmation-shipping-wrapper",
+	"version": "1.0.0",
+	"title": "Shipping Address Section",
+	"description": "Display the order confirmation shipping section.",
+	"category": "fincommerce",
+	"keywords": [
+		"FinCommerce"
+	],
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Shipping"
+		}
+	},
+	"supports": {
+		"multiple": false,
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false,
+		"spacing": {
+			"padding": true,
+			"margin": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false
+			}
+		}
+	},
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

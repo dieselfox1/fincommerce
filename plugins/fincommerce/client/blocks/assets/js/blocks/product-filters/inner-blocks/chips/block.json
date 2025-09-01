@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "fincommerce/product-filter-chips",
+	"title": "Chips",
+	"description": "Display filter options as chips.",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"ancestor": [
+		"fincommerce/product-filter-attribute",
+		"fincommerce/product-filter-taxonomy",
+		"fincommerce/product-filter-status"
+	],
+	"supports": {
+		"interactivity": true
+	},
+	"usesContext": [ "filterData" ],
+	"attributes": {
+		"chipText": {
+			"type": "string"
+		},
+		"customChipText": {
+			"type": "string"
+		},
+		"chipBackground": {
+			"type": "string"
+		},
+		"customChipBackground": {
+			"type": "string"
+		},
+		"chipBorder": {
+			"type": "string"
+		},
+		"customChipBorder": {
+			"type": "string"
+		},
+		"selectedChipText": {
+			"type": "string"
+		},
+		"customSelectedChipText": {
+			"type": "string"
+		},
+		"selectedChipBackground": {
+			"type": "string"
+		},
+		"customSelectedChipBackground": {
+			"type": "string"
+		},
+		"selectedChipBorder": {
+			"type": "string"
+		},
+		"customSelectedChipBorder": {
+			"type": "string"
+		}
+	},
+	"viewScriptModule": "fincommerce/product-filter-chips",
+	"style": "file:../fincommerce/product-filter-chips-style.css",
+	"editorStyle": "file:../fincommerce/product-filter-chips-editor.css"
+}

@@ -1,0 +1,23 @@
+{
+	"name": "fincommerce/filter-wrapper",
+	"title": "Filter Block",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"supports": {
+		"interactivity": {
+			"clientNavigation": false
+		},
+		"inserter": false
+	},
+	"attributes": {
+		"filterType": {
+			"type": "string"
+		},
+		"heading": {
+			"type": "string"
+		}
+	},
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<ruleset name="FinCommerce Core" namespace="FinCommerce">
+    <description>FinCommerce coding standards.</description>
+</ruleset>

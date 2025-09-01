@@ -1,0 +1,30 @@
+{
+	"name": "fincommerce/proceed-to-checkout-block",
+	"version": "1.0.0",
+	"title": "Proceed to Checkout",
+	"description": "Allow customers proceed to Checkout.",
+	"category": "fincommerce",
+	"supports": {
+		"align": false,
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"inserter": false,
+		"lock": false
+	},
+	"attributes": {
+		"lock": {
+			"type": "object",
+			"default": {
+				"remove": true,
+				"move": true
+			}
+		}
+	},
+	"parent": [
+		"fincommerce/cart-totals-block"
+	],
+	"textdomain": "fincommerce",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3
+}

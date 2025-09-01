@@ -1,0 +1,28 @@
+.fincommerce-layout__activity-panel-content {
+
+	.fincommerce-abbreviated-notifications {
+		border-top: 1px solid $gray-200;
+		& > div {
+			border: none;
+			margin-bottom: 0;
+		}
+
+		.fincommerce-abbreviated-notification {
+			h3 {
+				color: var(--wp-admin-theme-color);
+				font-weight: bold;
+				font-size: 14px;
+			}
+			p,
+			div {
+				color: $gray-700;
+			}
+			.fincommerce-abbreviated-card__content {
+				padding: $gap-small $gap-large $gap-small 0;
+				& > :not(:first-child) {
+					margin-top: $gap-smallest;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+.fincommerce-recommended-payments-card {
+	margin: 0 15px 10px 0;
+	animation: isLoaded;
+	animation-duration: 250ms;
+
+	.fincommerce-list__item {
+		&:hover {
+			background-color: $white;
+			.fincommerce-list__item-title {
+				color: $gray-900;
+			}
+		}
+	}
+
+	.fincommerce-list__item-title {
+		font-size: 14px;
+		color: $gray-900;
+		font-weight: 600;
+	}
+
+	.fincommerce-review-activity-card__section-controls {
+		text-align: center;
+	}
+
+	.fincommerce-pill {
+		margin-left: 4px;
+		padding: 2px 8px;
+	}
+
+	@media (max-width: #{ ($break-mobile) }) {
+		.fincommerce-pill {
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+	}
+
+	.components-card__footer {
+		.gridicon {
+			margin-left: $gap-smallest;
+		}
+	}
+
+	.fincommerce-list__item-enter {
+		opacity: 0;
+		max-height: 100vh;
+		transform: none;
+	}
+
+	.fincommerce-list__item-enter-active {
+		opacity: 1;
+		transition: opacity 200ms;
+	}
+
+	.fincommerce-list__item-after .components-button {
+		margin-left: $gap-small;
+	}
+
+	.fincommerce-list__item-before img {
+		max-width: 96px;
+		height: 36px;
+		border-radius: 8px;
+	}
+
+	.fincommerce-list__item-text,
+	.fincommerce-recommended-payments__header-heading {
+		max-width: 749px;
+	}
+}
+
+@media (max-width: #{ ($break-medium) }) {
+	.fincommerce-recommended-payments-card {
+		margin: 0 0 10px 0;
+	}
+}

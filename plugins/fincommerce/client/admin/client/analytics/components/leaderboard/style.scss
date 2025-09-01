@@ -1,0 +1,17 @@
+.fincommerce-leaderboard {
+	&.fincommerce-empty-content {
+		margin-bottom: $gap-large;
+	}
+
+	.fincommerce-card__body {
+		padding: 0;
+	}
+
+	.fincommerce-table__table {
+		margin-bottom: 0;
+
+		tr:last-child {
+			border-bottom-style: none;
+		}
+	}
+}

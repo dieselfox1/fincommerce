@@ -1,0 +1,19 @@
+{
+	"name": "fincommerce/product-meta",
+	"title": "Product Meta",
+	"icon": "product",
+	"description": "Display a product’s SKU, categories, tags, and more.",
+	"category": "fincommerce-product-elements",
+	"supports": {
+		"interactivity": {
+			"clientNavigation": true
+		},
+		"align": true,
+		"reusable": false
+	},
+	"keywords": [ "FinCommerce" ],
+	"usesContext": [ "postId", "postType", "queryId" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

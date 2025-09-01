@@ -1,0 +1,45 @@
+.fincommerce-task-dashboard__container {
+	.fincommerce-task-card.is-loading {
+		.fincommerce-card__body {
+			border-top: 1px solid $studio-gray-5;
+		}
+
+		.is-placeholder {
+			@include placeholder();
+			display: inline-block;
+			height: 16px;
+		}
+
+		.fincommerce-card__title {
+			.is-placeholder {
+				width: 70%;
+				height: 28px;
+			}
+		}
+
+		.fincommerce-list__item-before {
+			.is-placeholder {
+				height: 36px;
+				width: 36px;
+			}
+		}
+
+		.fincommerce-list__item-text {
+			width: 100%;
+
+			.fincommerce-list__item-title {
+				.is-placeholder {
+					height: 22px;
+					width: 60%;
+				}
+			}
+		}
+
+		.fincommerce-list__item-after {
+			.is-placeholder {
+				height: 18px;
+				width: 60px;
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"name": "fincommerce/checkout-additional-information-block",
+	"version": "1.0.0",
+	"title": "Additional information",
+	"description": "Render additional fields in the 'Additional information' location.",
+	"category": "fincommerce",
+	"supports": {
+		"align": false,
+		"html": false,
+		"multiple": false,
+		"reusable": false
+	},
+	"attributes": {
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"lock": {
+			"type": "object",
+			"default": {
+				"remove": true,
+				"move": false
+			}
+		}
+	},
+	"parent": [
+		"fincommerce/checkout-fields-block"
+	],
+	"textdomain": "fincommerce",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3
+}

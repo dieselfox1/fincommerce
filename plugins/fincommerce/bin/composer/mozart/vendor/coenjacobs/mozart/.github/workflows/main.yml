@@ -1,0 +1,68 @@
+name: Lint, analyse and test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.3', '7.4', '8.0', '8.1']
+    name: PHP ${{ matrix.php }} tests
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - name: Debugging
+        run: |
+          php --version
+          php -m
+          composer --version
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-suggest --no-progress
+      - name: Run tests
+        run: vendor/bin/phpunit --printer mheap\\GithubActionsReporter\\Printer
+  analysis:
+    runs-on: ubuntu-latest
+    name: Analysis of code
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: Debugging
+        run: |
+          php --version
+          php -m
+          composer --version
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-suggest --no-progress
+      - name: Run validate
+        run: composer run analysis
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint all project files
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      - name: Debugging
+        run: |
+          php --version
+          php -m
+          composer --version
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-suggest --no-progress
+      - name: Run validate
+        run: composer run lint

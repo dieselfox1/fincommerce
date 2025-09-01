@@ -1,0 +1,10 @@
+.fincommerce-marketing-registered-channel-card-body {
+	.fincommerce-marketing-registered-channel-description {
+		display: flex;
+		gap: $gap-smaller;
+
+		&__separator::before {
+			content: "•";
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "fincommerce/add-to-cart-with-options-grouped-product-selector",
+	"title": "Grouped Product Selector (Beta)",
+	"description": "Display a group of products that can be added to the cart.",
+	"category": "fincommerce-product-elements",
+	"keywords": [ "FinCommerce" ],
+	"usesContext": [ "postId" ],
+	"ancestor": [ "fincommerce/add-to-cart-with-options" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"supports": {
+		"interactivity": true
+	},
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"viewScriptModule": "fincommerce/add-to-cart-with-options-grouped-product-selector"
+}

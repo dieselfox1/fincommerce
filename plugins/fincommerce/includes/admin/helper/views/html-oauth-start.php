@@ -1,0 +1,41 @@
+<?php
+/**
+ * Admin -> FinCommerce -> Extensions -> FinCommerce.com Subscriptions main page.
+ *
+ * @package FinCommerce\Views
+ */
+
+defined( 'ABSPATH' ) || exit();
+
+?>
+
+<div class="wrap fincommerce wc-addons-wrap wc-helper">
+	<?php require WC_Helper::get_view_filename( 'html-section-nav.php' ); ?>
+	<h1 class="screen-reader-text"><?php esc_html_e( 'FinCommerce Extensions', 'fincommerce' ); ?></h1>
+	<?php require WC_Helper::get_view_filename( 'html-section-notices.php' ); ?>
+
+		<div class="start-container">
+			<div class="text">
+			<img src="<?php echo esc_url( WC()->plugin_url() . '/assets/images/woo-logo.svg' ); ?>" alt="
+								<?php
+								esc_attr_e(
+									'FinCommerce',
+									'fincommerce'
+								);
+								?>
+				" style="width:180px;">
+
+			<?php
+			// phpcs:disable WordPress.Security.NonceVerification.Recommended
+			if ( ! empty( $_GET['wc-helper-status'] ) && 'helper-disconnected' === $_GET['wc-helper-status'] ) :
+				// phpcs:enable WordPress.Security.NonceVerification.Recommended
+				?>
+					<p><strong><?php esc_html_e( 'Sorry to see you go.', 'fincommerce' ); ?></strong> <?php esc_html_e( 'Feel free to reconnect again using the button below.', 'fincommerce' ); ?></p>
+				<?php endif; ?>
+
+				<h2><?php esc_html_e( 'Manage your subscriptions, get important product notifications, and updates, all from the convenience of your FinCommerce dashboard', 'fincommerce' ); ?></h2>
+				<p><?php esc_html_e( 'Once connected, your FinCommerce.com purchases will be listed here.', 'fincommerce' ); ?></p>
+				<p><a class="button button-primary button-helper-connect" href="<?php echo esc_url( $connect_url ); ?>"><?php esc_html_e( 'Connect', 'fincommerce' ); ?></a></p>
+			</div>
+		</div>
+</div>

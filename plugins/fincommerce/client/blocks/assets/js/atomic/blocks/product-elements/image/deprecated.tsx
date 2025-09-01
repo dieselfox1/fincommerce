@@ -1,0 +1,45 @@
+/**
+ * External dependencies
+ */
+import { createBlock } from '@wordpress/blocks';
+
+/**
+ * Internal dependencies
+ */
+import metadata from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/image/block.json';
+import { BlockAttributes } from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/image/types';
+import save from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/save';
+import { isTryingToDisplayLegacySaleBadge } from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/image/utils';
+
+// In v2, we're migrating the `showSaleBadge` attribute to an inner block.
+const v1 = {
+	save,
+	attributes: metadata.attributes,
+	isEligible: ( { showSaleBadge }: BlockAttributes ) =>
+		isTryingToDisplayLegacySaleBadge( showSaleBadge ),
+	migrate: ( attributes: BlockAttributes ) => {
+		const { showSaleBadge, saleBadgeAlign } = attributes;
+
+		// If showSaleBadge is false, it means that the sale badge was explicitly set to false.
+		if ( showSaleBadge === false ) {
+			return [ attributes ];
+		}
+		// Otherwise, it's either:
+		// - true explicitly or
+		// - undefined (implicit true by default).
+
+		return [
+			{
+				...attributes,
+				showSaleBadge: false,
+			},
+			[
+				createBlock( 'fincommerce/product-sale-badge', {
+					align: saleBadgeAlign,
+				} ),
+			],
+		];
+	},
+};
+
+export default [ v1 ];

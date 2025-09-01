@@ -1,0 +1,33 @@
+.fincommerce-activity-panel {
+	.fincommerce-order-empty__success-icon {
+		font-size: 36px;
+	}
+
+	// Needs the double-class for specificity
+	.fincommerce-activity-card.fincommerce-order-activity-card {
+		.fincommerce-activity-card__header {
+			margin-bottom: $gap-smallest;
+			.fincommerce-activity-card__title.is-placeholder {
+				width: 45%;
+			}
+		}
+
+		.fincommerce-activity-card__body {
+			& > .is-placeholder {
+				width: 30%;
+			}
+		}
+
+		.fincommerce-activity-card__actions {
+			& > .is-placeholder {
+				height: 24px;
+				margin-top: $gap-smallest;
+				width: 65px;
+			}
+		}
+
+		.fincommerce-order-activity-card {
+			cursor: pointer;
+		}
+	}
+}

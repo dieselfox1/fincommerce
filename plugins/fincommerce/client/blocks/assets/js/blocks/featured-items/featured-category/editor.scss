@@ -1,0 +1,6 @@
+@import "../style";
+
+.wp-block-fincommerce-featured-category {
+	@extend %with-media-controls;
+	@extend %with-resizable-box;
+}

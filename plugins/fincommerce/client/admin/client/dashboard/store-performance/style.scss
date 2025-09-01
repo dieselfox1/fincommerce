@@ -1,0 +1,33 @@
+.fincommerce-dashboard__store-performance {
+	margin-bottom: $gap-large;
+
+	@include breakpoint( "<782px" ) {
+		border-width: 0;
+	}
+
+	.fincommerce-summary__item {
+		background-color: $studio-white;
+		&:hover {
+			background-color: $gray-100;
+		}
+	}
+
+	.fincommerce-summary {
+		background-color: $gray-100;
+		margin: 0;
+
+		@include breakpoint( "<782px" ) {
+			&.is-placeholder {
+				border-top: 0;
+			}
+
+			&:not(.is-placeholder) {
+				.fincommerce-summary__item-container:first-child {
+					.fincommerce-summary__item {
+						border-top: 1px solid $gray-400;
+					}
+				}
+			}
+		}
+	}
+}

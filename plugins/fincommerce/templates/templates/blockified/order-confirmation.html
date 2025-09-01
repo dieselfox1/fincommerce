@@ -1,0 +1,53 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"inherit":true,"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:fincommerce/order-confirmation-status {"fontSize":"large"} /-->
+
+	<!-- wp:fincommerce/order-confirmation-summary /-->
+
+	<!-- wp:fincommerce/order-confirmation-totals-wrapper {"align":"wide"} -->
+	<!-- wp:pattern {"slug":"fincommerce/order-confirmation-totals-heading"} /-->
+
+	<!-- wp:fincommerce/order-confirmation-totals {"lock":{"remove":true}} /-->
+	<!-- /wp:fincommerce/order-confirmation-totals-wrapper -->
+
+	<!-- wp:fincommerce/order-confirmation-downloads-wrapper {"align":"wide"} -->
+	<!-- wp:pattern {"slug":"fincommerce/order-confirmation-downloads-heading"} /-->
+
+	<!-- wp:fincommerce/order-confirmation-downloads {"lock":{"remove":true}} /-->
+	<!-- /wp:fincommerce/order-confirmation-downloads-wrapper -->
+
+	<!-- wp:columns {"align":"wide","className":"wc-block-order-confirmation-address-wrapper"} -->
+	<div class="wp-block-columns alignwide wc-block-order-confirmation-address-wrapper">
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:fincommerce/order-confirmation-shipping-wrapper {"align":"wide"} -->
+			<!-- wp:pattern {"slug":"fincommerce/order-confirmation-shipping-heading"} /-->
+
+			<!-- wp:fincommerce/order-confirmation-shipping-address {"lock":{"remove":true}} /-->
+			<!-- /wp:fincommerce/order-confirmation-shipping-wrapper -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:fincommerce/order-confirmation-billing-wrapper {"align":"wide"} -->
+			<!-- wp:pattern {"slug":"fincommerce/order-confirmation-billing-heading"} /-->
+
+			<!-- wp:fincommerce/order-confirmation-billing-address {"lock":{"remove":true}} /-->
+			<!-- /wp:fincommerce/order-confirmation-billing-wrapper -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:fincommerce/order-confirmation-additional-fields-wrapper {"align":"wide"} -->
+	<!-- wp:pattern {"slug":"fincommerce/order-confirmation-additional-fields-heading"} /-->
+	<!-- wp:fincommerce/order-confirmation-additional-fields /-->
+	<!-- /wp:fincommerce/order-confirmation-additional-fields-wrapper -->
+
+	<!-- wp:fincommerce/order-confirmation-additional-information /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->

@@ -1,0 +1,34 @@
+{
+	"name": "fincommerce/order-confirmation-additional-fields-wrapper",
+	"version": "1.0.0",
+	"title": "Additional Fields",
+	"description": "Display additional checkout fields from the 'contact' and 'order' locations.",
+	"category": "fincommerce",
+	"keywords": [
+		"FinCommerce"
+	],
+	"attributes": {
+		"heading": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"multiple": false,
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false,
+		"spacing": {
+			"padding": true,
+			"margin": true,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false
+			}
+		}
+	},
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

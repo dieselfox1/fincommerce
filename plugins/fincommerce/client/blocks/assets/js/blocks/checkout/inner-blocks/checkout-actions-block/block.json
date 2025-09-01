@@ -1,0 +1,44 @@
+{
+	"name": "fincommerce/checkout-actions-block",
+	"version": "1.0.0",
+	"title": "Actions",
+	"description": "Allow customers to place their order.",
+	"category": "fincommerce",
+	"supports": {
+		"align": false,
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"inserter": false,
+		"lock": false
+	},
+	"attributes": {
+		"lock": {
+			"type": "object",
+			"default": {
+				"remove": true,
+				"move": true
+			}
+		},
+		"cartPageId": {
+			"type": "number",
+			"default": 0
+		},
+		"showReturnToCart": {
+			"type": "boolean",
+			"default": true
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"priceSeparator": {
+			"type": "string",
+			"default": "·"
+		}
+	},
+	"parent": [ "fincommerce/checkout-fields-block" ],
+	"textdomain": "fincommerce",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3
+}

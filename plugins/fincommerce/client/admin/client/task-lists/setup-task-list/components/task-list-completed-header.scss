@@ -1,0 +1,36 @@
+$ces-feedback-height: 64px;
+
+.fincommerce-task-card__header .fincommerce-task-card__header-subtitle {
+	color: $gray-700;
+	margin-bottom: $gap-large;
+}
+
+.fincommerce-task-card__finished-header-image {
+	max-width: 75%;
+}
+
+.customer-feedback-simple__container {
+	height: $ces-feedback-height;
+}
+
+.fincommerce-task-card__header-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.fincommerce-task-card__header-ces-feedback {
+	height: $ces-feedback-height;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fincommerce-task-header__contents-container img.svg-background {
+	padding-right: 16px;
+	padding-top: 9px; // align with header text
+}
+
+.fincommerce-task-header__contents-container.fincommerce-task-header__launch_your_store img.svg-background {
+	padding: 8px;
+}

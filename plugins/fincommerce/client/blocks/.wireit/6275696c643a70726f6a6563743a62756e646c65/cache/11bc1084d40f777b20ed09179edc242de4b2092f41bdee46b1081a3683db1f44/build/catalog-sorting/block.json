@@ -1,0 +1,32 @@
+{
+	"name": "fincommerce/catalog-sorting",
+	"title": "Catalog Sorting",
+	"description": "Enable customers to change the sorting order of the products.",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"supports": {
+		"interactivity": {
+			"clientNavigation": true
+		},
+		"color": {
+			"text": true,
+			"background": false
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"attributes": {
+		"fontSize": {
+			"type": "string",
+			"default": "small"
+		},
+		"useLabel": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}

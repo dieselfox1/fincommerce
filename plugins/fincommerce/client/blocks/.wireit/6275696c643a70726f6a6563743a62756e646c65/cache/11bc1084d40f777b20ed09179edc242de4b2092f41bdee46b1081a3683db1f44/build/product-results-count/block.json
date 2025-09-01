@@ -1,0 +1,24 @@
+{
+	"name": "fincommerce/product-results-count",
+	"title": "Product Results Count",
+	"description": "Display the number of products on the archive page or search result page.",
+	"category": "fincommerce",
+	"keywords": [ "FinCommerce" ],
+	"supports": {
+		"interactivity": {
+			"clientNavigation": true
+		},
+		"color": {
+			"text": true,
+			"background": false
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"attributes": {},
+	"usesContext": [ "queryId" ],
+	"textdomain": "fincommerce",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json"
+}
