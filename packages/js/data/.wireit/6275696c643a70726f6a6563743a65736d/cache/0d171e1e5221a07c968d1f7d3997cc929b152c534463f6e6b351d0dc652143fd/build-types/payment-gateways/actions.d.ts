@@ -1,0 +1,56 @@
+/**
+ * Internal dependencies
+ */
+import { ACTION_TYPES } from './action-types';
+import { PaymentGateway, PaymentGatewayUpdatePayload } from './types';
+export declare function getPaymentGatewaysRequest(): {
+    type: ACTION_TYPES.GET_PAYMENT_GATEWAYS_REQUEST;
+};
+export declare function getPaymentGatewaysSuccess(paymentGateways: PaymentGateway[]): {
+    type: ACTION_TYPES.GET_PAYMENT_GATEWAYS_SUCCESS;
+    paymentGateways: PaymentGateway[];
+};
+export declare function getPaymentGatewaysError(error: unknown): {
+    type: ACTION_TYPES.GET_PAYMENT_GATEWAYS_ERROR;
+    error: unknown;
+};
+export declare function getPaymentGatewayRequest(): {
+    type: ACTION_TYPES.GET_PAYMENT_GATEWAY_REQUEST;
+};
+export declare function getPaymentGatewayError(error: unknown): {
+    type: ACTION_TYPES.GET_PAYMENT_GATEWAY_ERROR;
+    error: unknown;
+};
+export declare function getPaymentGatewaySuccess(paymentGateway: PaymentGateway): {
+    type: ACTION_TYPES.GET_PAYMENT_GATEWAY_SUCCESS;
+    paymentGateway: PaymentGateway;
+};
+export declare function updatePaymentGatewaySuccess(paymentGateway: PaymentGateway): {
+    type: ACTION_TYPES.UPDATE_PAYMENT_GATEWAY_SUCCESS;
+    paymentGateway: PaymentGateway;
+};
+export declare function updatePaymentGatewayRequest(): {
+    type: ACTION_TYPES.UPDATE_PAYMENT_GATEWAY_REQUEST;
+};
+export declare function updatePaymentGatewayError(error: unknown): {
+    type: ACTION_TYPES.UPDATE_PAYMENT_GATEWAY_ERROR;
+    error: unknown;
+};
+type DeepPartial<T> = {
+    [P in keyof T]?: DeepPartial<T[P]>;
+};
+export declare function updatePaymentGateway(id: string, data: DeepPartial<PaymentGatewayUpdatePayload>): Generator<{
+    type: string;
+    request: import("@wordpress/api-fetch/build-types/types").APIFetchOptions;
+} | {
+    type: ACTION_TYPES.UPDATE_PAYMENT_GATEWAY_SUCCESS;
+    paymentGateway: PaymentGateway;
+} | {
+    type: ACTION_TYPES.UPDATE_PAYMENT_GATEWAY_REQUEST;
+} | {
+    type: ACTION_TYPES.UPDATE_PAYMENT_GATEWAY_ERROR;
+    error: unknown;
+}, PaymentGateway | undefined, PaymentGateway>;
+export type Actions = ReturnType<typeof updatePaymentGateway> | ReturnType<typeof updatePaymentGatewayRequest> | ReturnType<typeof updatePaymentGatewaySuccess> | ReturnType<typeof getPaymentGatewaysRequest> | ReturnType<typeof getPaymentGatewaysSuccess> | ReturnType<typeof getPaymentGatewaysError> | ReturnType<typeof getPaymentGatewayRequest> | ReturnType<typeof getPaymentGatewaySuccess> | ReturnType<typeof getPaymentGatewayError> | ReturnType<typeof updatePaymentGatewayRequest> | ReturnType<typeof updatePaymentGatewayError>;
+export {};
+//# sourceMappingURL=actions.d.ts.map

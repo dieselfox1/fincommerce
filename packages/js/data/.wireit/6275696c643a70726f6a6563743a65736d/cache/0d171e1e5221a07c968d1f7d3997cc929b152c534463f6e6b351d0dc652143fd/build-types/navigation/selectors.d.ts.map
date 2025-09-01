@@ -1,0 +1,1 @@
+{"version":3,"file":"selectors.d.ts","sourceRoot":"","sources":["../../src/navigation/selectors.ts"],"names":[],"mappings":"AAKA;;GAEG;AACH,OAAO,EAAE,eAAe,EAAE,MAAM,SAAS,CAAC;AAI1C,eAAO,MAAM,YAAY,UAAY,eAAe,YAQnD,CAAC;AAEF,eAAO,MAAM,YAAY,UAAY,eAAe,aAEnD,CAAC;AAEF,eAAO,MAAM,sBAAsB,UAC3B,eAAe,YACZ,MAAM,OAGhB,CAAC;AAEF,eAAO,MAAM,iBAAiB,UAAY,eAAe,WAExD,CAAC"}

@@ -1,0 +1,10 @@
+/**
+ * Internal dependencies
+ */
+import { CountriesState } from './types';
+export declare const getLocales: (state: CountriesState) => import("./types").Locales;
+export declare const getLocale: (state: CountriesState, id: string) => import("./types").Locale;
+export declare const getCountries: (state: CountriesState) => import("./types").Country[];
+export declare const getCountry: (state: CountriesState, code: string) => import("./types").Country | undefined;
+export declare const geolocate: (state: CountriesState) => import("./types").GeolocationResponse | undefined;
+//# sourceMappingURL=selectors.d.ts.map

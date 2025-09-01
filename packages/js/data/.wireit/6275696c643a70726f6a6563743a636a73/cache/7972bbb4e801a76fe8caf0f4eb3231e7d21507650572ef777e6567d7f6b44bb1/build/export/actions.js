@@ -1,0 +1,73 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.setExportId = setExportId;
+exports.setIsRequesting = setIsRequesting;
+exports.setError = setError;
+exports.startExport = startExport;
+/**
+ * Internal dependencies
+ */
+const controls_1 = require("../controls");
+const action_types_1 = __importDefault(require("./action-types"));
+const constants_1 = require("../constants");
+function setExportId(exportType, exportArgs, exportId) {
+    return {
+        type: action_types_1.default.SET_EXPORT_ID,
+        exportType,
+        exportArgs,
+        exportId,
+    };
+}
+function setIsRequesting(selector, selectorArgs, isRequesting) {
+    return {
+        type: action_types_1.default.SET_IS_REQUESTING,
+        selector,
+        selectorArgs,
+        isRequesting,
+    };
+}
+function setError(selector, selectorArgs, error) {
+    return {
+        type: action_types_1.default.SET_ERROR,
+        selector,
+        selectorArgs,
+        error,
+    };
+}
+function* startExport(type, args) {
+    yield setIsRequesting('startExport', { type, args }, true);
+    try {
+        const response = yield (0, controls_1.fetchWithHeaders)({
+            path: `${constants_1.NAMESPACE}/reports/${type}/export`,
+            method: 'POST',
+            data: {
+                report_args: args,
+                email: true,
+            },
+        });
+        yield setIsRequesting('startExport', { type, args }, false);
+        const { export_id: exportId, message } = response.data;
+        if (exportId) {
+            yield setExportId(type, args, exportId);
+        }
+        else {
+            throw new Error(message);
+        }
+        return response.data;
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            yield setError('startExport', { type, args }, error.message);
+        }
+        else {
+            // eslint-disable-next-line no-console
+            console.error(`Unexpected Error: ${JSON.stringify(error)}`);
+            // eslint-enable-next-line no-console
+        }
+        yield setIsRequesting('startExport', { type, args }, false);
+        throw error;
+    }
+}
