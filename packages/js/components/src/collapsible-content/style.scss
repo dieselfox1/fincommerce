@@ -1,0 +1,19 @@
+.fincommerce-collapsible-content {
+	.fincommerce-collapsible-content__toggle {
+		all: unset;
+		font-size: 13px;
+		color: #007cba;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		svg {
+			fill: #007cba;
+			margin-left: 2px;
+		}
+	}
+
+	.fincommerce-collapsible-content__content {
+		margin-top: $gap-large;
+	}
+}

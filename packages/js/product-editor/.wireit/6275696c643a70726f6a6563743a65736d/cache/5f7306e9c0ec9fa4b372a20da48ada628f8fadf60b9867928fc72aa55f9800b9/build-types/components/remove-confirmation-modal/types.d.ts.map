@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../src/components/remove-confirmation-modal/types.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,4BAA4B,GAAG;IAC1C,KAAK,EAAE,MAAM,CAAC;IACd,WAAW,EAAE,KAAK,CAAC,SAAS,CAAC;IAC7B,QAAQ,IAAI,IAAI,GAAG,OAAO,CAAE,IAAI,CAAE,CAAC;IACnC,QAAQ,CAAC,IAAI,IAAI,CAAC;CAClB,CAAC"}

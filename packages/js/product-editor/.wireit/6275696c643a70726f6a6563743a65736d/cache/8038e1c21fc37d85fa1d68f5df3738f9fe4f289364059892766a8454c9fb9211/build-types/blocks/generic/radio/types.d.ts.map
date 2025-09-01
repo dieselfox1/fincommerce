@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/blocks/generic/radio/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,eAAe,EAAE,MAAM,mBAAmB,CAAC;AAEpD,MAAM,WAAW,oBAAqB,SAAQ,eAAe;IAC5D,KAAK,EAAE,MAAM,CAAC;IACd,WAAW,EAAE,MAAM,CAAC;IACpB,QAAQ,EAAE,MAAM,CAAC;IACjB,OAAO,EAAE,EAAE,CAAC;IACZ,QAAQ,CAAC,EAAE,OAAO,CAAC;CACnB"}

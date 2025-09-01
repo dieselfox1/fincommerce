@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TYPES = void 0;
+var TYPES;
+(function (TYPES) {
+    TYPES["GENERATE_VARIATIONS_REQUEST"] = "GENERATE_VARIATIONS_REQUEST";
+    TYPES["GENERATE_VARIATIONS_SUCCESS"] = "GENERATE_VARIATIONS_SUCCESS";
+    TYPES["GENERATE_VARIATIONS_ERROR"] = "GENERATE_VARIATIONS_ERROR";
+    TYPES["BATCH_UPDATE_VARIATIONS_ERROR"] = "BATCH_UPDATE_VARIATIONS_ERROR";
+})(TYPES || (exports.TYPES = TYPES = {}));
+exports.default = TYPES;

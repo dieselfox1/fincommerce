@@ -1,0 +1,15 @@
+.wp-block-fincommerce-product-attributes-field {
+	.fincommerce-sortable {
+		padding: 0;
+	}
+
+	.fincommerce-sortable__handle {
+		display: none;
+	}
+
+	.components-button.has-icon {
+		svg {
+			fill: $gray-700;
+		}
+	}
+}

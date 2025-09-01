@@ -1,0 +1,189 @@
+/**
+ * External dependencies
+ */
+import { __ } from '@wordpress/i18n';
+import { optionsStore } from '@fincommerce/data';
+import { dispatch, resolveSelect } from '@wordpress/data';
+import { getQuery } from '@fincommerce/navigation';
+/**
+ * Internal dependencies
+ */
+import { ALLOW_TRACKING_OPTION_NAME } from '../constants';
+import store from '../store';
+const CUSTOMER_EFFORT_SCORE_EXIT_PAGE_KEY = 'customer-effort-score-exit-page';
+/**
+ * Gets the list of exited pages from Localstorage.
+ */
+export const getExitPageData = () => {
+    if (!window.localStorage) {
+        return [];
+    }
+    const items = window.localStorage.getItem(CUSTOMER_EFFORT_SCORE_EXIT_PAGE_KEY);
+    const parsedJSONItems = items ? JSON.parse(items) : [];
+    const arrayItems = Array.isArray(parsedJSONItems) ? parsedJSONItems : [];
+    return arrayItems;
+};
+/**
+ * Returns the value of whether tracking is allowed or not.
+ *
+ * @return boolean
+ */
+const isTrackingAllowed = async () => {
+    const trackingOption = await resolveSelect(optionsStore).getOption(ALLOW_TRACKING_OPTION_NAME);
+    return trackingOption === 'yes';
+};
+/**
+ * Adds the page to the exit page list in Localstorage.
+ *
+ * @param {string} pageId of page exited early.
+ */
+export const addExitPage = async (pageId) => {
+    const allowTracking = await isTrackingAllowed();
+    if (!(window.localStorage && allowTracking)) {
+        return;
+    }
+    let items = getExitPageData();
+    if (!items.find((pageExitedId) => pageExitedId === pageId)) {
+        items.push(pageId);
+    }
+    items = items.slice(-10); // Upper limit.
+    window.localStorage.setItem(CUSTOMER_EFFORT_SCORE_EXIT_PAGE_KEY, JSON.stringify(items));
+};
+/**
+ * Removes the passed in page id from the list in Localstorage.
+ *
+ * @param {string} pageId of page to be removed.
+ */
+export const removeExitPage = (pageId) => {
+    if (!window.localStorage) {
+        return;
+    }
+    let items = getExitPageData();
+    items = items.filter((pageExitedId) => pageExitedId !== pageId);
+    items = items.slice(-10); // Upper limit.
+    window.localStorage.setItem(CUSTOMER_EFFORT_SCORE_EXIT_PAGE_KEY, JSON.stringify(items));
+};
+const eventListeners = {};
+/**
+ * Adds unload event listener to add pageId to exit page list incase there were unsaved changes.
+ *
+ * @param {string}   pageId            the page id of the page being exited early.
+ * @param {Function} hasUnsavedChanges callback to check if the page had unsaved changes.
+ */
+export const addCustomerEffortScoreExitPageListener = (pageId, hasUnsavedChanges) => {
+    // Pre-fetch the tracking option so that it is available before the unload event.
+    isTrackingAllowed();
+    eventListeners[pageId] = () => {
+        if (hasUnsavedChanges()) {
+            addExitPage(pageId);
+        }
+    };
+    window.addEventListener('unload', eventListeners[pageId]);
+};
+/**
+ * Removes the unload exit page listener.
+ *
+ * @param {string} pageId the page id to remove the listener from.
+ */
+export const removeCustomerEffortScoreExitPageListener = (pageId) => {
+    if (eventListeners[pageId]) {
+        window.removeEventListener('unload', eventListeners[pageId], {
+            capture: true,
+        });
+    }
+};
+/**
+ * Returns the exit page copy of the passed in pageId.
+ *
+ * @param {string} pageId page id.
+ */
+function getExitPageCESCopy(pageId) {
+    switch (pageId) {
+        case 'product_edit_view':
+        case 'editing_new_product':
+            return {
+                action: pageId === 'editing_new_product' ? 'new_product' : pageId,
+                noticeLabel: __('How is your experience with editing products?', 'fincommerce'),
+                title: __("How's your experience with editing products?", 'fincommerce'),
+                description: __('We noticed you started editing a product, then left. How was it? Your feedback will help create a better experience for thousands of merchants like you.', 'fincommerce'),
+                firstQuestion: __('The product editing screen is easy to use', 'fincommerce'),
+                secondQuestion: __("The product editing screen's functionality meets my needs", 'fincommerce'),
+            };
+        case 'product_add_view':
+        case 'new_product':
+            return {
+                action: pageId,
+                noticeLabel: __('How is your experience with creating products?', 'fincommerce'),
+                title: __('How is your experience with creating products?', 'fincommerce'),
+                description: __('We noticed you started creating a product, then left. How was it? Your feedback will help create a better experience for thousands of merchants like you.', 'fincommerce'),
+                firstQuestion: __('The product creation screen is easy to use', 'fincommerce'),
+                secondQuestion: __("The product creation screen's functionality meets my needs", 'fincommerce'),
+            };
+        case 'settings_change':
+            return {
+                action: pageId,
+                icon: '⚙️',
+                noticeLabel: __('Did you find the right setting?', 'fincommerce'),
+                title: __('How’s your experience with settings?', 'fincommerce'),
+                description: __('We noticed you started changing store settings, then left. How was it? Your feedback will help create a better experience for thousands of merchants like you.', 'fincommerce'),
+                firstQuestion: __('The settings screen is easy to use', 'fincommerce'),
+                secondQuestion: __("The settings screen's functionality meets my needs", 'fincommerce'),
+            };
+        case 'shop_order_update':
+            return {
+                action: pageId,
+                icon: '📦',
+                noticeLabel: __('How easy or difficult was it to update this order?', 'fincommerce'),
+                title: __("How's your experience with orders?", 'fincommerce'),
+                description: __('We noticed you started editing an order, then left. How was it? Your feedback will help create a better experience for thousands of merchants like you.', 'fincommerce'),
+                firstQuestion: __('The order editing screen is easy to use', 'fincommerce'),
+                secondQuestion: __("The order details screen's functionality meets my needs", 'fincommerce'),
+            };
+        case 'import_products':
+            return {
+                action: pageId,
+                icon: '🔄',
+                noticeLabel: __('How is your experience with importing products?', 'fincommerce'),
+                title: __(`How's your experience with importing products?`, 'fincommerce'),
+                description: __('We noticed you started importing products, then left. How was it? Your feedback will help create a better experience for thousands of merchants like you.', 'fincommerce'),
+                firstQuestion: __('The product import screen is easy to use', 'fincommerce'),
+                secondQuestion: __("The product import screen's functionality meets my needs", 'fincommerce'),
+            };
+        default:
+            return null;
+    }
+}
+/**
+ * Stores trigger conditions for exit page actions.
+ *
+ * @param {string} pageId page id.
+ */
+function getShouldExitPageFire(pageId) {
+    const conditionPageMap = {
+        import_products: () => getQuery().page !== 'product_importer',
+    };
+    return conditionPageMap[pageId] ? conditionPageMap[pageId]() : true;
+}
+/**
+ * Checks the exit page list and triggers a CES survey for the first item in the list.
+ */
+export function triggerExitPageCesSurvey() {
+    const exitPageItems = getExitPageData();
+    if (exitPageItems?.length) {
+        if (!getShouldExitPageFire(exitPageItems[0])) {
+            return;
+        }
+        const copy = getExitPageCESCopy(exitPageItems[0]);
+        if (copy?.title?.length) {
+            dispatch(store).addCesSurvey({
+                ...copy,
+                pageNow: window.pagenow,
+                adminPage: window.adminpage,
+                props: {
+                    ces_location: 'outside',
+                },
+            });
+        }
+        removeExitPage(exitPageItems[0]);
+    }
+}

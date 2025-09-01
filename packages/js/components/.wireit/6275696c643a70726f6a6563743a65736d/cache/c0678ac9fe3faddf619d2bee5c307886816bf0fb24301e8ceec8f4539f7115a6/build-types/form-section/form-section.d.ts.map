@@ -1,0 +1,1 @@
+{"version":3,"file":"form-section.d.ts","sourceRoot":"","sources":["../../src/form-section/form-section.tsx"],"names":[],"mappings":"AAMA,KAAK,gBAAgB,GAAG;IACvB,KAAK,EAAE,GAAG,CAAC,OAAO,GAAG,MAAM,CAAC;IAC5B,WAAW,EAAE,GAAG,CAAC,OAAO,GAAG,MAAM,CAAC;IAClC,SAAS,CAAC,EAAE,MAAM,CAAC;CACnB,CAAC;AAEF,eAAO,MAAM,WAAW,iDAKrB,KAAK,CAAC,iBAAiB,CAAE,gBAAgB,CAAE,gBAc7C,CAAC"}

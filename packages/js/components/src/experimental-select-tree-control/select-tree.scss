@@ -1,0 +1,52 @@
+.fincommerce-experimental-select-control__combo-box-wrapper {
+	&:focus {
+		box-shadow: 0 0 0 1px var(--wp-admin-theme-color);
+		border-color: var(--wp-admin-theme-color);
+	}
+}
+
+.fincommerce-experimental-select-control {
+	&__input:disabled {
+		background-color: $gray-100;
+	}
+	&__suffix, &__suffix-items {
+		display: flex;
+		align-items: center;
+		button {
+			height: $gap-large;
+			padding: 0 $gap-smallest;
+		}
+	}
+	&__icon-clear {
+		padding-right: 0;
+		svg {
+			fill: $gray-700;
+			cursor: pointer;
+		}
+	}
+}
+
+.fincommerce-experimental-select-tree-control__dropdown {
+	display: block;
+
+	.experimental-fincommerce-tree.experimental-fincommerce-tree--level-1 {
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		border-radius: 0;
+	}
+
+	.experimental-fincommerce-tree-item__label {
+		margin-bottom: 0;
+	}
+}
+
+// That's the only way I could remove the padding from the @wordpress/components Dropdown.
+.fincommerce-experimental-select-tree-control__dropdown-content
+	.components-popover__content {
+	padding: 0;
+}
+
+.fincommerce-experimental-select-tree-control__popover-menu {
+	min-height: 100px;
+}

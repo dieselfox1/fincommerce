@@ -1,0 +1,12 @@
+.fincommerce-single-select-page-with-search__menu-loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: $grid-unit;
+	height: $grid-unit-60 + 2px;
+}
+
+.fincommerce-experimental-select-control__popover-menu-container,
+.fincommerce-experimental-select-control__menu-item {
+	cursor: pointer;
+}

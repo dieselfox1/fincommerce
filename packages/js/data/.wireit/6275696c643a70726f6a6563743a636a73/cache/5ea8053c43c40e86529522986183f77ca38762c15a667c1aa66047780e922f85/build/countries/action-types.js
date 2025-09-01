@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TYPES = void 0;
+var TYPES;
+(function (TYPES) {
+    TYPES["GET_LOCALES_ERROR"] = "GET_LOCALES_ERROR";
+    TYPES["GET_LOCALES_SUCCESS"] = "GET_LOCALES_SUCCESS";
+    TYPES["GET_COUNTRIES_ERROR"] = "GET_COUNTRIES_ERROR";
+    TYPES["GET_COUNTRIES_SUCCESS"] = "GET_COUNTRIES_SUCCESS";
+    TYPES["GEOLOCATION_SUCCESS"] = "GEOLOCATION_SUCCESS";
+    TYPES["GEOLOCATION_ERROR"] = "GEOLOCATION_ERROR";
+})(TYPES || (exports.TYPES = TYPES = {}));
+exports.default = TYPES;

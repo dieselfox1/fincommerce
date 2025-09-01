@@ -1,0 +1,6 @@
+import type { WooTourStepRendererProps } from '../types';
+declare const _default: import("react").ComponentType<Omit<WooTourStepRendererProps & {
+    isViewportMobile: boolean;
+}, "isViewportMobile">>;
+export default _default;
+//# sourceMappingURL=step.d.ts.map

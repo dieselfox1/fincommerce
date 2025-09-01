@@ -1,0 +1,16 @@
+export const getLocales = (state) => {
+    return state.locales;
+};
+export const getLocale = (state, id) => {
+    const country = id.split(':')[0];
+    return state.locales[country];
+};
+export const getCountries = (state) => {
+    return state.countries;
+};
+export const getCountry = (state, code) => {
+    return state.countries.find((country) => country.code === code);
+};
+export const geolocate = (state) => {
+    return state.geolocation;
+};

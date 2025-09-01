@@ -1,0 +1,4 @@
+Significance: minor
+Type: dev
+
+`@fincommerce/data`: Fix types and enable TS check.

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OPERATOR_IS_NONE = exports.OPERATOR_IS_ANY = exports.OPERATOR_IS_NOT = exports.OPERATOR_IS = exports.LAYOUT_LIST = exports.LAYOUT_TABLE = exports.LAYOUT_GRID = void 0;
+exports.LAYOUT_GRID = 'grid';
+exports.LAYOUT_TABLE = 'table';
+exports.LAYOUT_LIST = 'list';
+exports.OPERATOR_IS = 'is';
+exports.OPERATOR_IS_NOT = 'isNot';
+exports.OPERATOR_IS_ANY = 'isAny';
+exports.OPERATOR_IS_NONE = 'isNone';

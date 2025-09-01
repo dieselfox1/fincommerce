@@ -1,0 +1,77 @@
+/**
+ * External dependencies
+ */
+import { Card, CardBody, CardHeader, CardFooter } from '@wordpress/components';
+import { Text } from '@fincommerce/experimental';
+import { createElement } from '@wordpress/element';
+import { Link } from '@fincommerce/components';
+import { __ } from '@wordpress/i18n';
+
+/**
+ * Internal dependencies
+ */
+import { WCPayAcceptedMethods } from '../WCPayAcceptedMethods';
+import WCPayLogo from '../../images/wcpay-logo';
+
+type WCPayCardHeaderProps = {
+	logoWidth?: number;
+	logoHeight?: number;
+	children?: React.ReactNode;
+};
+
+export const WCPayCardHeader = ( {
+	logoWidth = 196,
+	logoHeight = 41,
+	children,
+}: WCPayCardHeaderProps ) => (
+	<CardHeader as="h2">
+		<WCPayLogo width={ logoWidth } height={ logoHeight } />
+		{ children }
+	</CardHeader>
+);
+
+type WCPayCardBodyProps = {
+	description: string;
+	heading: string;
+	onLinkClick?: () => void;
+};
+
+export const WCPayCardBody: React.VFC< WCPayCardBodyProps > = ( {
+	description,
+	heading,
+	onLinkClick = () => {},
+} ) => (
+	<CardBody>
+		{ heading && <Text as="h2">{ heading }</Text> }
+
+		<Text
+			className="fincommerce-task-payment-wcpay__description"
+			as="p"
+			lineHeight="1.5em"
+		>
+			{ description }
+			<br />
+			<Link
+				target="_blank"
+				type="external"
+				rel="noreferrer"
+				href="https://fincommerce.com/payments/?utm_medium=product"
+				onClick={ onLinkClick }
+			>
+				{ __( 'Learn more', 'fincommerce' ) }
+			</Link>
+		</Text>
+
+		<WCPayAcceptedMethods />
+	</CardBody>
+);
+
+export const WCPayCardFooter = ( {
+	children,
+}: {
+	children?: React.ReactNode;
+} ) => <CardFooter>{ children }</CardFooter>;
+
+export const WCPayCard = ( { children }: { children?: React.ReactNode } ) => {
+	return <Card className="fincommerce-task-payment-wcpay">{ children }</Card>;
+};

@@ -1,0 +1,1 @@
+{"version":3,"file":"sortable-item.d.ts","sourceRoot":"","sources":["../../src/sortable/sortable-item.tsx"],"names":[],"mappings":"AAcA,MAAM,MAAM,iBAAiB,GAAG,KAAK,CAAC,iBAAiB,CACtD,KAAK,CAAC,cAAc,CAAE,cAAc,CAAE,EACtC,cAAc,CACd,GAAG;IACH,KAAK,EAAE,MAAM,CAAC;IACd,UAAU,CAAC,EAAE,OAAO,CAAC;IACrB,UAAU,CAAC,EAAE,OAAO,CAAC;CACrB,CAAC;AAEF,eAAO,MAAM,YAAY,gGAUtB,iBAAiB,gBA4DnB,CAAC"}

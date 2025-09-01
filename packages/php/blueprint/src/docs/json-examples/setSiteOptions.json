@@ -1,0 +1,6 @@
+{
+  "step": "setSiteOptions",
+  "options": {
+    "fincommerce_allow_tracking": true
+  }
+}

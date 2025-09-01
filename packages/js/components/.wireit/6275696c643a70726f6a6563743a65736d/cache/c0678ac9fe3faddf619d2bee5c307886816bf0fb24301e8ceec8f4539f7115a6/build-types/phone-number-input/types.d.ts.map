@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../src/phone-number-input/types.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,QAAQ,GAAG,MAAM,CAC5B,MAAM,EACN;IACC,MAAM,EAAE,MAAM,CAAC;IACf,IAAI,EAAE,MAAM,CAAC;IACb,QAAQ,EAAE,MAAM,CAAC;IACjB,KAAK,CAAC,EAAE,MAAM,EAAE,CAAC;IACjB,OAAO,CAAC,EAAE,MAAM,EAAE,CAAC;CACnB,CACD,CAAC"}

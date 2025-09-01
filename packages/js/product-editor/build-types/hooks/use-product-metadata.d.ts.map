@@ -1,0 +1,1 @@
+{"version":3,"file":"use-product-metadata.d.ts","sourceRoot":"","sources":["../../src/hooks/use-product-metadata.ts"],"names":[],"mappings":"AASA;;GAEG;AACH,OAAO,EAAE,QAAQ,EAAE,MAAM,UAAU,CAAC;AAEpC,UAAU,OAAO;IAChB,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,EAAE,CAAC,EAAE,MAAM,CAAC;CACZ;AAED,iBAAS,kBAAkB,CAAE,OAAO,CAAC,EAAE,OAAO;;sBAwCzB,QAAQ,CAAE,MAAM,CAAE,EAAE;;EAaxC;AAED,eAAe,kBAAkB,CAAC"}

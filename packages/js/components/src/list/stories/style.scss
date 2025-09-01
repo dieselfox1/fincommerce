@@ -1,0 +1,21 @@
+.storybook-custom-list {
+	border: 1px solid $gray-400;
+	border-radius: 2px;
+	padding: 0;
+
+	.fincommerce-list__item {
+		&:not(:first-child) {
+			border-top: 1px solid $gray-200;
+		}
+
+		.fincommerce-list__item-before {
+			.gridicon {
+				fill: $studio-pink;
+			}
+		}
+
+		.fincommerce-list__item-title {
+			color: $studio-pink;
+		}
+	}
+}

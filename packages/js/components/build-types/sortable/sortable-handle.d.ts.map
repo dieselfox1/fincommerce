@@ -1,0 +1,1 @@
+{"version":3,"file":"sortable-handle.d.ts","sourceRoot":"","sources":["../../src/sortable/sortable-handle.tsx"],"names":[],"mappings":"AAYA,KAAK,mBAAmB,GAAG;IAC1B,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;IAC3B,SAAS,CAAC,EAAE,MAAM,CAAC;CACnB,CAAC;AAEF,eAAO,MAAM,cAAc,6BAGxB,mBAAmB,gBAerB,CAAC"}

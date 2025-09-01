@@ -1,0 +1,1 @@
+{"version":3,"file":"selectors.d.ts","sourceRoot":"","sources":["../../../src/store/product-editor-ui/selectors.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,aAAa,EAAE,MAAM,mBAAmB,CAAC;AAElD;;GAEG;AACH,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,SAAS,CAAC;;+BAIhD,yBAAyB;kCAMzB,yBAAyB,KAC9B,aAAa,EAAE;6CAKV,yBAAyB,KAC9B,OAAO;mCAIF,yBAAyB;;AAnBlC,wBAuBE"}

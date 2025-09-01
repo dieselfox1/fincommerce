@@ -1,0 +1,20 @@
+{
+	"phpVersion": "8.2",
+	"core": "https://wordpress.org/wordpress-6.2.1.zip",
+	"plugins": [
+		"https://github.com/dieselfox1/fincommerce/releases/download/nightly/fincommerce-trunk-nightly.zip",
+		"https://github.com/dieselfox1/fincommerce/releases/download/wc-beta-tester-2.3.0/fincommerce-beta-tester.zip",
+		"."
+	],
+	"config": {
+		"JETPACK_AUTOLOAD_DEV": true,
+		"WP_DEBUG": true,
+		"WP_DEBUG_LOG": true,
+		"WP_DEBUG_DISPLAY": false,
+		"SCRIPT_DEBUG": true,
+		"ALTERNATE_WP_CRON": true,
+	},
+	"lifecycleScripts": {
+		"afterStart": "npx wp-env run cli wp option update fincommerce_feature_product_block_editor_enabled 'yes'"
+	}
+}

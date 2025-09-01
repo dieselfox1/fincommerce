@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/components/variations-table/pagination/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,kBAAkB,EAAE,MAAM,yBAAyB,CAAC;AAE7D,MAAM,MAAM,eAAe,GAAG,kBAAkB,GAAG;IAClD,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,cAAc,CAAC,EAAE,MAAM,EAAE,CAAC;IAC1B,cAAc,CAAC,EAAE,MAAM,CAAC;CACxB,CAAC"}

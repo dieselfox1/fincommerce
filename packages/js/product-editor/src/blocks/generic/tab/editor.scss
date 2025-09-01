@@ -1,0 +1,14 @@
+.wp-block-fincommerce-product-tab__content {
+	&:not(.is-selected) {
+		display: none;
+	}
+
+	.fincommerce-error-boundary {
+		margin-top: $gap-largest;
+	}
+}
+
+// Remove the Gutenberg selected outline.
+.wp-block-fincommerce-product-tab:after {
+	display: none;
+}

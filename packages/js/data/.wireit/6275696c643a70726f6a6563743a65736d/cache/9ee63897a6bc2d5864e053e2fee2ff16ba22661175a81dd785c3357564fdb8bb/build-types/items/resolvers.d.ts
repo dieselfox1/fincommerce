@@ -1,0 +1,78 @@
+import { ItemType, Query } from './types';
+export declare function getItems(itemType: ItemType, query: Query): Generator<{
+    type: "SET_ITEMS";
+    items: import("./types").Item[];
+    itemType: ItemType;
+    query: Partial<import("..").BaseQueryParams>;
+    totalCount: number | undefined;
+} | {
+    type: "SET_ITEMS_TOTAL_COUNT";
+    itemType: ItemType;
+    query: Partial<import("..").BaseQueryParams>;
+    totalCount: number;
+} | {
+    type: "SET_ERROR";
+    itemType: ItemType | "createProductFromTemplate";
+    query: Record<string, unknown>;
+    error: unknown;
+} | Generator<(import("redux").AnyAction & {
+    options: import("@wordpress/api-fetch").APIFetchOptions;
+}) | {
+    type: string;
+    request: import("@wordpress/api-fetch/build-types/types").APIFetchOptions;
+}, {
+    items: unknown[];
+    totalCount: number;
+} | undefined, unknown[] | ({
+    data: unknown[];
+} & Response)>, void, {
+    items: any;
+    totalCount: any;
+}>;
+export declare function getItemsTotalCount(itemType: ItemType, query: Query): Generator<{
+    type: "SET_ITEMS_TOTAL_COUNT";
+    itemType: ItemType;
+    query: Partial<import("..").BaseQueryParams>;
+    totalCount: number;
+} | {
+    type: "SET_ERROR";
+    itemType: ItemType | "createProductFromTemplate";
+    query: Record<string, unknown>;
+    error: unknown;
+} | Generator<(import("redux").AnyAction & {
+    options: import("@wordpress/api-fetch").APIFetchOptions;
+}) | {
+    type: string;
+    request: import("@wordpress/api-fetch/build-types/types").APIFetchOptions;
+}, {
+    items: unknown[];
+    totalCount: number;
+} | undefined, unknown[] | ({
+    data: unknown[];
+} & Response)>, void, {
+    totalCount: any;
+}>;
+export declare function getReviewsTotalCount(itemType: ItemType, query: Query): Generator<Generator<{
+    type: "SET_ITEMS_TOTAL_COUNT";
+    itemType: ItemType;
+    query: Partial<import("..").BaseQueryParams>;
+    totalCount: number;
+} | {
+    type: "SET_ERROR";
+    itemType: ItemType | "createProductFromTemplate";
+    query: Record<string, unknown>;
+    error: unknown;
+} | Generator<(import("redux").AnyAction & {
+    options: import("@wordpress/api-fetch").APIFetchOptions;
+}) | {
+    type: string;
+    request: import("@wordpress/api-fetch/build-types/types").APIFetchOptions;
+}, {
+    items: unknown[];
+    totalCount: number;
+} | undefined, unknown[] | ({
+    data: unknown[];
+} & Response)>, void, {
+    totalCount: any;
+}>, void, unknown>;
+//# sourceMappingURL=resolvers.d.ts.map

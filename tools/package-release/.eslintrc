@@ -1,0 +1,3 @@
+{
+	"extends": [ "plugin:@fincommerce/eslint-plugin/recommended" ]
+}

@@ -1,0 +1,21 @@
+/**
+ * External dependencies
+ */
+import { registerStore } from '@wordpress/data';
+/**
+ * Internal dependencies
+ */
+import { STORE_NAME } from './constants';
+import * as selectors from './selectors';
+import * as actions from './actions';
+import reducer from './reducer';
+import controls from '../controls';
+export * from './types';
+// @ts-expect-error migrate store to createReduxStore function https://github.com/dieselfox1/fincommerce/issues/55640
+registerStore(STORE_NAME, {
+    reducer: reducer,
+    actions,
+    controls,
+    selectors,
+});
+export const EXPORT_STORE_NAME = STORE_NAME;

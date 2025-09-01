@@ -1,0 +1,3 @@
+import type { AttributeTableRowProps } from './types';
+export declare const AttributeTableRow: ({ index, attribute, attributePlaceholder, disabledAttributeMessage, isLoadingAttributes, attributes, onNewAttributeAdd, onAttributeSelect, termPlaceholder, onTermsSelect, termsAutoSelection, clearButtonDisabled, removeLabel, onRemove, }: AttributeTableRowProps) => JSX.Element;
+//# sourceMappingURL=attribute-table-row.d.ts.map

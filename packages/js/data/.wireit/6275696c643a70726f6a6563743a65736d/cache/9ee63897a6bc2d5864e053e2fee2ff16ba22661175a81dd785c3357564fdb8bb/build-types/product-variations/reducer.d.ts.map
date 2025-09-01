@@ -1,0 +1,1 @@
+{"version":3,"file":"reducer.d.ts","sourceRoot":"","sources":["../../src/product-variations/reducer.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,OAAO,EAAE,MAAM,OAAO,CAAC;AAEhC;;GAEG;AACH,OAAO,EAAE,OAAO,EAAE,MAAM,WAAW,CAAC;AAEpC,OAAO,EAAE,aAAa,EAAE,MAAM,iBAAiB,CAAC;AAIhD,QAAA,MAAM,OAAO,EAAE,OAAO,CAAE,aAAa,EAAE,OAAO,CAgE7C,CAAC;AACF,OAAO,EAAE,OAAO,EAAE,CAAC"}

@@ -1,0 +1,3 @@
+declare const _default: import("react").ComponentType<Omit<any, "isDropdownBreakpoint">>;
+export default _default;
+//# sourceMappingURL=index.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"action.d.ts","sourceRoot":"","sources":["../../src/inbox-note/action.tsx"],"names":[],"mappings":"AAMA,KAAK,oBAAoB,GAAG;IAC3B,OAAO,EAAE,MAAM,IAAI,CAAC;IACpB,KAAK,EAAE,MAAM,CAAC;IACd,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,gBAAgB,CAAC,EAAE,OAAO,CAAC;IAC3B,OAAO,EAAE,MAAM,GAAG,WAAW,CAAC;CAC9B,CAAC;AAEF;;;GAGG;AACH,eAAO,MAAM,qBAAqB,yDAM/B,oBAAoB,gBA8CtB,CAAC"}

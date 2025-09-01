@@ -1,0 +1,1 @@
+{"version":3,"file":"inbox-dismiss-confirmation-modal.d.ts","sourceRoot":"","sources":["../../src/inbox-note/inbox-dismiss-confirmation-modal.tsx"],"names":[],"mappings":"AAOA,KAAK,sBAAsB,GAAG;IAC7B,OAAO,EAAE,MAAM,IAAI,CAAC;IACpB,SAAS,EAAE,MAAM,IAAI,CAAC;IACtB,WAAW,CAAC,EAAE,MAAM,CAAC;CACrB,CAAC;AAEF,eAAO,MAAM,6BAA6B,yCAIvC,sBAAsB,gBAmCxB,CAAC"}

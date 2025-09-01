@@ -1,0 +1,19 @@
+/**
+ * External dependencies
+ */
+import { __experimentalRegisterCheckoutFilters } from '@fincommerce/blocks-checkout';
+import { registerPaymentMethodExtensionCallbacks } from '@fincommerce/blocks-registry';
+
+export const registerFilters = () => {
+    __experimentalRegisterCheckoutFilters( '{{slug}}', {
+        itemName: ( name ) => {
+            return `${name} + extra data!`
+        },
+    } );
+
+    registerPaymentMethodExtensionCallbacks( '{{slug}}',
+        {
+            cod: ( arg ) => arg.billingData.city !== 'Denver',
+        }
+    );
+};

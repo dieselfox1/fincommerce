@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../src/components/advice-card/types.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,eAAe,GAAG,KAAK,CAAC,iBAAiB,CACpD,KAAK,CAAC,cAAc,CAAE,cAAc,CAAE,EACtC,cAAc,CACd,GAAG;IACH,GAAG,CAAC,EAAE,MAAM,CAAC;IACb,aAAa,CAAC,EAAE,OAAO,CAAC;IACxB,mBAAmB,CAAC,EAAE,MAAM,CAAC;IAC7B,SAAS,CAAC,EAAE,MAAM,IAAI,CAAC;CACvB,CAAC"}

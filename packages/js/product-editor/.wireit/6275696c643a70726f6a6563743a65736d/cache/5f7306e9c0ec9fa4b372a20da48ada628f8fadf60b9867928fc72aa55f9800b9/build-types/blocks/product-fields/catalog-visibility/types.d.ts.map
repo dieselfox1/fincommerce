@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/blocks/product-fields/catalog-visibility/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAC5C,OAAO,EAAE,eAAe,EAAE,MAAM,mBAAmB,CAAC;AAEpD,MAAM,WAAW,gCAAiC,SAAQ,eAAe;IACxE,KAAK,EAAE,MAAM,CAAC;IACd,UAAU,EAAE,OAAO,CAAE,oBAAoB,CAAE,CAAC;CAC5C"}

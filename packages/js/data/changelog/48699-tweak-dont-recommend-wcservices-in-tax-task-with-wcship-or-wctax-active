@@ -1,0 +1,4 @@
+Significance: patch
+Type: tweak
+Comment: If either the upcoming FinCommerce Shipping or FinCommerce Tax extension is active, don't suggest FinCommerce Shipping & Tax in the "Collect sales tax" Home task.  This only adjusts the extension recommendation merchants receive and does not affect any other functionality.
+

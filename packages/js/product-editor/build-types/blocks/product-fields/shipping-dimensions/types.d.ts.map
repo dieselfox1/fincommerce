@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/blocks/product-fields/shipping-dimensions/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,eAAe,EAAE,MAAM,mBAAmB,CAAC;AAEpD,MAAM,WAAW,iCAAkC,SAAQ,eAAe;IACzE,iBAAiB,EAAE,MAAM,CAAC;IAC1B,QAAQ,CAAC,EAAE,OAAO,CAAC;CACnB"}

@@ -1,0 +1,3 @@
+declare const _default: import("react").ComponentType<Omit<any, "isViewportMobile" | "isViewportSmall">>;
+export default _default;
+//# sourceMappingURL=date-range.d.ts.map

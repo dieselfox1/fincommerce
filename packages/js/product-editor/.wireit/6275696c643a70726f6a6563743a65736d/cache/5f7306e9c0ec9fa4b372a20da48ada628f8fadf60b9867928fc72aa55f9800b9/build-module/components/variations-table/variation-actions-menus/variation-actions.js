@@ -1,0 +1,56 @@
+/**
+ * External dependencies
+ */
+import { MenuGroup, MenuItem } from '@wordpress/components';
+import { createElement, Fragment } from '@wordpress/element';
+import { __, sprintf } from '@wordpress/i18n';
+import { recordEvent } from '@fincommerce/tracks';
+import clsx from 'clsx';
+import { TRACKS_SOURCE } from '../../../constants';
+import { ShippingMenuItem } from '../shipping-menu-item';
+import { InventoryMenuItem } from '../inventory-menu-item';
+import { PricingMenuItem } from '../pricing-menu-item';
+import { ToggleVisibilityMenuItem } from '../toggle-visibility-menu-item';
+import { DownloadsMenuItem } from '../downloads-menu-item';
+import { VariationQuickUpdateMenuItem } from './variation-quick-update-menu-item';
+import { UpdateStockMenuItem } from '../update-stock-menu-item';
+import { SetListPriceMenuItem } from '../set-list-price-menu-item';
+import { AddImageMenuItem } from '../add-image-menu-item';
+export function VariationActions({ selection, onChange, onDelete, onClose, supportsMultipleSelection = false, }) {
+    const singleSelection = !supportsMultipleSelection && selection.length === 1
+        ? selection[0]
+        : null;
+    return (createElement("div", { className: clsx({
+            'components-dropdown-menu__menu': supportsMultipleSelection,
+        }) },
+        createElement(MenuGroup, { label: supportsMultipleSelection
+                ? undefined
+                : sprintf(
+                /** Translators: Variation ID */
+                __('Variation Id: %s', 'fincommerce'), singleSelection?.id) },
+            supportsMultipleSelection ? (createElement(Fragment, null,
+                createElement(UpdateStockMenuItem, { selection: selection, onChange: onChange, onClose: onClose }),
+                createElement(SetListPriceMenuItem, { selection: selection, onChange: onChange, onClose: onClose }),
+                createElement(AddImageMenuItem, { selection: selection, onChange: onChange, onClose: onClose }))) : (createElement(MenuItem, { rel: "noreferrer", onClick: () => {
+                    recordEvent('product_variations_preview', {
+                        source: TRACKS_SOURCE,
+                        variation_id: singleSelection?.id,
+                    });
+                } }, __('Preview', 'fincommerce'))),
+            createElement(ToggleVisibilityMenuItem, { selection: selection, onChange: onChange, onClose: onClose })),
+        createElement(VariationQuickUpdateMenuItem.Slot, { group: 'top-level', onChange: onChange, onClose: onClose, selection: selection, supportsMultipleSelection: supportsMultipleSelection }),
+        createElement(MenuGroup, null,
+            createElement(PricingMenuItem, { selection: selection, onChange: onChange, onClose: onClose, supportsMultipleSelection: supportsMultipleSelection }),
+            createElement(InventoryMenuItem, { selection: selection, onChange: onChange, onClose: onClose, supportsMultipleSelection: supportsMultipleSelection }),
+            createElement(ShippingMenuItem, { selection: selection, onChange: onChange, onClose: onClose, supportsMultipleSelection: supportsMultipleSelection }),
+            createElement(DownloadsMenuItem, { selection: selection, onChange: onChange, onClose: onClose, supportsMultipleSelection: supportsMultipleSelection })),
+        createElement(VariationQuickUpdateMenuItem.Slot, { group: 'secondary', onChange: onChange, onClose: onClose, selection: selection, supportsMultipleSelection: supportsMultipleSelection }),
+        createElement(MenuGroup, null,
+            createElement(MenuItem, { isDestructive: true, label: !supportsMultipleSelection
+                    ? __('Delete variation', 'fincommerce')
+                    : undefined, onClick: () => {
+                    onDelete(selection);
+                    onClose();
+                }, className: "fincommerce-product-variations__actions--delete" }, __('Delete', 'fincommerce'))),
+        createElement(VariationQuickUpdateMenuItem.Slot, { group: 'tertiary', onChange: onChange, onClose: onClose, selection: selection, supportsMultipleSelection: supportsMultipleSelection })));
+}

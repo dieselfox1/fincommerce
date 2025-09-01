@@ -1,0 +1,16 @@
+
+
+.fincommerce-empty-content {
+	margin-bottom: $gap;
+	text-align: center;
+
+	.fincommerce-empty-content__illustration {
+		max-width: 100%;
+	}
+
+	.fincommerce-empty-content__actions {
+		.components-button + .components-button {
+			margin-left: $gap;
+		}
+	}
+}

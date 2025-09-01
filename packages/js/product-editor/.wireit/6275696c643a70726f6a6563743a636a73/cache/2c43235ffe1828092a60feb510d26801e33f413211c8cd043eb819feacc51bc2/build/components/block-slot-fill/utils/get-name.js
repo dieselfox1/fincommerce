@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getName = getName;
+function getName(name, clientId) {
+    return `${name}-${clientId}`;
+}

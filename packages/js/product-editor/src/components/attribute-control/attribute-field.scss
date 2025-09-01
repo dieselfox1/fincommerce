@@ -1,0 +1,25 @@
+.fincommerce-attribute-field {
+	width: 100%;
+	font-size: 13px;
+
+	.fincommerce-sortable {
+		margin: 0;
+	}
+
+	.fincommerce-sortable__item:not(:first-child) {
+		margin-top: -1px;
+	}
+	.fincommerce-sortable__item:focus-visible:not(:active) + .fincommerce-sortable__item .fincommerce-attribute-list-item {
+		background: none;
+		border-top: 0;
+	}
+
+	.fincommerce-add-attribute-list-item__add-button {
+		margin-bottom: $gap;
+	}
+
+	&__notice.components-notice {
+		margin: 0px;
+		padding-right: $gap-small;
+	}
+}

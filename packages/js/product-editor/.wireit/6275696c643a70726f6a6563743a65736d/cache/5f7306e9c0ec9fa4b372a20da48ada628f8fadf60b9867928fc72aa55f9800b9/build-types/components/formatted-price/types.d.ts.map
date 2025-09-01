@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../src/components/formatted-price/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,MAAM,mBAAmB,GAAG,KAAK,CAAC,iBAAiB,CACxD,KAAK,CAAC,cAAc,CAAE,eAAe,CAAE,EACvC,eAAe,CACf,GAAG;IACH,OAAO,EAAE,OAAO,CAAC;CACjB,CAAC"}

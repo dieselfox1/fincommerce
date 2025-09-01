@@ -1,0 +1,1 @@
+{"version":3,"file":"resizable-editor.d.ts","sourceRoot":"","sources":["../../../src/components/iframe-editor/resizable-editor.tsx"],"names":[],"mappings":"AA6BA,KAAK,oBAAoB,GAAG;IAC3B,cAAc,EAAE,OAAO,CAAC;IACxB,MAAM,EAAE,MAAM,CAAC;IACf,QAAQ,EAAE,KAAK,CAAC,SAAS,CAAC;CAC1B,CAAC;AAEF,wBAAgB,eAAe,CAAE,EAChC,cAAc,EACd,MAAM,EACN,QAAQ,GACR,EAAE,oBAAoB,eA4DtB"}

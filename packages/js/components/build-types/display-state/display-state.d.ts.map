@@ -1,0 +1,1 @@
+{"version":3,"file":"display-state.d.ts","sourceRoot":"","sources":["../../src/display-state/display-state.tsx"],"names":[],"mappings":"AAKA;;GAEG;AAEH,MAAM,MAAM,iBAAiB,GAAG;IAC/B,KAAK,CAAC,EAAE,SAAS,GAAG,iBAAiB,GAAG,QAAQ,CAAC;IACjD,QAAQ,EAAE,KAAK,CAAC,SAAS,CAAC;CAC1B,GAAG,KAAK,CAAC,cAAc,CAAE,cAAc,CAAE,CAAC;AAE3C,eAAO,MAAM,YAAY,kCAItB,iBAAiB,uBAcnB,CAAC"}

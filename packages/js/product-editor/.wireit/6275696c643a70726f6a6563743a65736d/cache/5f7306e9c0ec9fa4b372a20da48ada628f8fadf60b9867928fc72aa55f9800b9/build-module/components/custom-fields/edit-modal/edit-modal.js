@@ -1,0 +1,77 @@
+/**
+ * External dependencies
+ */
+import { Button, Modal } from '@wordpress/components';
+import { createElement, useState, useRef, useEffect } from '@wordpress/element';
+import { __, sprintf } from '@wordpress/i18n';
+import { recordEvent } from '@fincommerce/tracks';
+import clsx from 'clsx';
+/**
+ * Internal dependencies
+ */
+import { TRACKS_SOURCE } from '../../../constants';
+import { TextControl } from '../../text-control';
+import { validate } from '../utils/validations';
+import { CustomFieldNameControl } from '../custom-field-name-control';
+export function EditModal({ initialValue, values, onUpdate, onCancel, ...props }) {
+    const [customField, setCustomField] = useState(initialValue);
+    const [validationError, setValidationError] = useState();
+    const keyInputRef = useRef(null);
+    const valueInputRef = useRef(null);
+    useEffect(function focusNameInputOnMount() {
+        keyInputRef.current?.focus();
+    }, []);
+    function renderTitle() {
+        return sprintf(
+        /* translators: %s: the name of the custom field */
+        __('Edit %s', 'fincommerce'), customField.key);
+    }
+    function changeHandler(prop) {
+        return function handleChange(value) {
+            setCustomField((current) => ({
+                ...current,
+                [prop]: value,
+            }));
+        };
+    }
+    function blurHandler(prop) {
+        return function handleBlur(event) {
+            const error = validate({
+                ...customField,
+                [prop]: event.target.value,
+            }, values);
+            setValidationError(error);
+        };
+    }
+    function handleUpdateButtonClick() {
+        const errors = validate(customField, values);
+        if (errors.key || errors.value) {
+            setValidationError(errors);
+            if (errors.key) {
+                keyInputRef.current?.focus();
+                return;
+            }
+            valueInputRef.current?.focus();
+            return;
+        }
+        onUpdate({
+            ...customField,
+            key: customField.key.trim(),
+            value: customField.value?.trim(),
+        });
+        recordEvent('product_custom_fields_update_button_click', {
+            source: TRACKS_SOURCE,
+            custom_field_id: customField.id,
+            custom_field_name: customField.key,
+            prev_custom_field_name: initialValue.key,
+        });
+    }
+    return (createElement(Modal, { shouldCloseOnClickOutside: false, ...props, title: renderTitle(), onRequestClose: onCancel, className: clsx('fincommerce-product-custom-fields__edit-modal', props.className) },
+        createElement(CustomFieldNameControl, { ref: keyInputRef, label: __('Name', 'fincommerce'), allowReset: false, help: validationError?.key, value: customField.key, onChange: changeHandler('key'), onBlur: blurHandler('key'), className: clsx({
+                'has-error': validationError?.key,
+            }) }),
+        createElement(TextControl, { ref: valueInputRef, label: __('Value', 'fincommerce'), error: validationError?.value, value: customField.value, onChange: changeHandler('value'), onBlur: blurHandler('value') }),
+        createElement("div", { className: "fincommerce-product-custom-fields__edit-modal-actions" },
+            createElement(Button, { variant: "secondary", onClick: onCancel }, __('Cancel', 'fincommerce')),
+            createElement(Button, { variant: "primary", onClick: handleUpdateButtonClick }, __('Update', 'fincommerce')))));
+}

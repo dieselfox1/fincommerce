@@ -1,0 +1,4 @@
+Significance: patch
+Type: dev
+
+Fix TS warnings in plugins/fincommerce/client/admin/client/marketplace

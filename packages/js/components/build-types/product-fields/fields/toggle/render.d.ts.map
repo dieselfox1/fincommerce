@@ -1,0 +1,1 @@
+{"version":3,"file":"render.d.ts","sourceRoot":"","sources":["../../../../src/product-fields/fields/toggle/render.tsx"],"names":[],"mappings":"AAMA;;GAEG;AACH,OAAO,EAAE,qBAAqB,EAAE,MAAM,UAAU,CAAC;AAGjD,KAAK,gBAAgB,GAAG,qBAAqB,CAAE,OAAO,CAAE,GAAG;IAC1D,OAAO,CAAC,EAAE,MAAM,CAAC;CACjB,CAAC;AACF,QAAA,MAAM,WAAW,mDAMd,gBAAgB,gBAclB,CAAC;AAEF,eAAe,WAAW,CAAC"}

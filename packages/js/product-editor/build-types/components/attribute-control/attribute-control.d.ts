@@ -1,0 +1,3 @@
+import { AttributeControlProps } from './types';
+export declare const AttributeControl: ({ value, onAdd, onAddAnother, onRemoveItem, onChange, onEdit, onNewModalCancel, onNewModalClose, onNewModalOpen, onEditModalCancel, onEditModalClose, onEditModalOpen, onRemove, onRemoveCancel, onNoticeDismiss, renderCustomEmptyState, uiStrings, createNewAttributesAsGlobal, useRemoveConfirmationModal, disabledAttributeIds, termsAutoSelection, defaultVisibility, }: AttributeControlProps) => JSX.Element;
+//# sourceMappingURL=attribute-control.d.ts.map

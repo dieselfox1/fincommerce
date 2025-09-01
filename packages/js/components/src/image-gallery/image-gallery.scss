@@ -1,0 +1,31 @@
+.fincommerce-image-gallery {
+    img {
+        display: block;
+    }
+
+    .fincommerce-sortable, &__wrapper {
+        display: grid;
+        grid-template-columns: inherit;
+        grid-gap: $gap;
+    }
+
+    .fincommerce-sortable__handle {
+        display: block;
+        margin: 0;
+    }
+
+    .fincommerce-sortable__item {
+        &.is-dragging {
+            position: absolute;
+        }
+
+        &.is-dragging-over-before:before {
+            left: calc( $gap / -2 - 1px );
+        }
+
+        &.is-dragging-over-after:after {
+            right: calc( $gap / -2 - 1px );
+        }
+    }
+
+}

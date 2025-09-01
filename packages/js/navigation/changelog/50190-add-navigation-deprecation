@@ -1,0 +1,4 @@
+Significance: minor
+Type: update
+
+Remove FinCommerce Navigation client side feature and deprecate PHP classes.

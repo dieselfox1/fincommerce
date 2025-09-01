@@ -1,0 +1,26 @@
+{
+	"name": "@fincommerce/create-woo-extension",
+	"version": "1.1.0",
+	"description": "A template to be used with `@wordpress/create-block` to create a FinCommerce extension.",
+	"main": "index.js",
+	"engines": {
+		"node": "^20.11.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dieselfox1/fincommerce.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/dieselfox1/fincommerce/issues"
+	},
+	"scripts": {
+		"changelog": "XDEBUG_MODE=off composer install --quiet && composer exec -- changelogger"
+	},
+	"homepage": "https://github.com/dieselfox1/fincommerce/tree/trunk/packages/js/create-woo-extension#readme",
+	"devDependencies": {
+		"wireit": "0.14.12"
+	}
+}

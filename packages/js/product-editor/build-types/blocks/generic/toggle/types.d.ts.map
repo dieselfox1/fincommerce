@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/blocks/generic/toggle/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,eAAe,EAAE,MAAM,mBAAmB,CAAC;AAEpD,MAAM,WAAW,qBAAsB,SAAQ,eAAe;IAC7D,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,EAAE,MAAM,CAAC;IACjB,QAAQ,CAAC,EAAE,OAAO,CAAC;IACnB,YAAY,CAAC,EAAE,KAAK,CAAC;IACrB,cAAc,CAAC,EAAE,KAAK,CAAC;CACvB"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"promiseify-selectors.d.ts","sourceRoot":"","sources":["../../src/types/promiseify-selectors.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AAEH,MAAM,MAAM,mBAAmB,CAAE,SAAS,IAAK;KAC5C,gBAAgB,IAAI,MAAM,SAAS,GAAI,SAAS,CAAE,gBAAgB,CAAE,SAAS,CAC9E,GAAG,IAAI,EAAE,MAAM,YAAY,KACvB,MAAM,kBAAkB,GAC1B,CAAE,GAAG,IAAI,EAAE,YAAY,KAAM,OAAO,CAAE,kBAAkB,CAAE,GAC1D,KAAK;CACR,CAAC"}

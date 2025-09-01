@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../src/product-fields/fields/types.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,qBAAqB,CAAE,CAAC,IAAK;IACxC,KAAK,EAAE,CAAC,CAAC;IACT,QAAQ,EAAE,CAAE,KAAK,EAAE,CAAC,KAAM,IAAI,CAAC;IAC/B,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,CAAC,EAAE,OAAO,CAAC;CACnB,CAAC"}

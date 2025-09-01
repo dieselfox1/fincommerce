@@ -1,0 +1,179 @@
+.fincommerce-stepper {
+	$step-icon-size: 24px;
+
+	.fincommerce-stepper__steps {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: $gap-large;
+	}
+
+	.fincommerce-stepper__step {
+		padding: $gap-smaller;
+		font-weight: 400;
+		position: relative;
+
+		.fincommerce-stepper__step-label-wrapper {
+			display: flex;
+			text-align: left;
+			border: 0;
+			background-color: transparent;
+			padding: 0;
+
+			&:focus {
+				outline: none;
+				box-shadow: none;
+			}
+		}
+
+		button.fincommerce-stepper__step-label-wrapper {
+			cursor: pointer;
+		}
+
+		.fincommerce-stepper__step-text {
+			width: 100%;
+		}
+
+		.fincommerce-stepper__step-label {
+			color: $gray-900;
+			line-height: $step-icon-size;
+			font-size: 16px;
+		}
+
+		.fincommerce-stepper__step-description {
+			display: none;
+			font-size: 14px;
+			color: $gray-700;
+			font-weight: 400;
+			margin-top: 2px;
+		}
+
+		.fincommerce-stepper__step-icon svg {
+			display: none;
+		}
+
+		.fincommerce-spinner {
+			display: block;
+			margin-right: $gap-small;
+			max-height: $step-icon-size;
+			min-width: 24px;
+			width: 24px;
+			border-radius: 50%;
+			background: var(--wp-admin-theme-color);
+		}
+
+		.fincommerce-spinner__circle {
+			stroke: $studio-white;
+		}
+
+		&.is-active,
+		&.is-complete {
+			.fincommerce-stepper__step-icon {
+				background: var(--wp-admin-theme-color);
+				color: $studio-white;
+			}
+
+			.fincommerce-stepper__step-label {
+				color: $gray-900;
+			}
+		}
+
+		&.is-active {
+			.fincommerce-stepper__step-icon {
+				font-weight: 600;
+			}
+			.fincommerce-stepper__step-label {
+				font-weight: 600;
+				margin: 0;
+			}
+		}
+
+		&.is-complete {
+			.fincommerce-stepper__step-number {
+				display: none;
+			}
+			svg {
+				display: inline;
+			}
+		}
+	}
+
+	.fincommerce-stepper__step-icon {
+		font-size: 16px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: $step-icon-size;
+		height: $step-icon-size;
+		min-width: $step-icon-size;
+		margin-right: $gap-small;
+		background: $gray-100;
+		color: $gray-700;
+		border-radius: 50%;
+	}
+
+	.fincommerce-stepper__step-divider {
+		align-self: flex-start;
+		flex-grow: 1;
+		border-bottom: 1px solid $gray-100;
+		margin-top: math.div($step-icon-size, 2) + $gap-smaller;
+
+		&:last-child {
+			display: none;
+		}
+	}
+
+	@include breakpoint( '<782px' ) {
+		.fincommerce-stepper__step-label {
+			display: none;
+			padding-top: 24px;
+		}
+		.fincommerce-stepper__step-icon {
+			margin-right: 0;
+		}
+	}
+
+	&.is-vertical {
+		.fincommerce-stepper__steps {
+			align-items: initial;
+			flex-direction: column;
+			margin-bottom: 0;
+		}
+
+		.fincommerce-stepper__step {
+			padding-bottom: $gap-larger;
+		}
+
+		.fincommerce-stepper__step::after {
+			content: '';
+			position: absolute;
+			left: math.div($step-icon-size, 2) + $gap-smaller;
+			top: $step-icon-size + ( $gap-smaller * 2 );
+			height: calc(100% - #{$step-icon-size} - #{$gap-smaller * 2});
+			border-left: 1px solid $gray-100;
+		}
+
+		.fincommerce-stepper__step:last-child {
+			padding-bottom: $gap-smaller;
+			&::after {
+				display: none;
+			}
+		}
+
+		.fincommerce-stepper__step-label {
+			display: initial;
+		}
+
+		.fincommerce-stepper__step-icon {
+			margin-right: $gap-small;
+		}
+
+		.fincommerce-stepper__step-description {
+			display: block;
+		}
+
+		.fincommerce-stepper_content {
+			margin-top: $gap;
+			margin-left: $gap-small + $step-icon-size;
+		}
+	}
+}

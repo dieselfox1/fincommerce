@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getOption = getOption;
+/**
+ * Internal dependencies
+ */
+const actions_1 = require("./actions");
+const controls_1 = require("./controls");
+/**
+ * Request an option value.
+ *
+ * @param {string} name - Option name
+ */
+function* getOption(name) {
+    try {
+        const result = yield (0, controls_1.batchFetch)(name);
+        yield (0, actions_1.receiveOptions)(result);
+    }
+    catch (error) {
+        yield (0, actions_1.setRequestingError)(error, name);
+    }
+}

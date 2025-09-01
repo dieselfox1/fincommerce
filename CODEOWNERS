@@ -1,0 +1,41 @@
+# Monorepo CI and package managers manifests.
+/.github/ @fincommerce/flux
+**/composer.json @fincommerce/flux
+**/package.json @fincommerce/flux
+
+# Monorepo tooling folders.
+/bin/ @fincommerce/flux
+/tools/ @fincommerce/flux
+/packages/js/eslint-plugin/ @fincommerce/flux
+/packages/js/dependency-extraction-webpack-plugin/ @fincommerce/flux
+/packages/js/e2e-utils-playwright/ @fincommerce/flux
+
+# Files in root of repository
+/.* @fincommerce/flux
+/*.* @fincommerce/flux
+/changelog.txt
+/pnpm-lock.yaml
+
+# Docs resources, which gets published to https://developer.fincommerce.com
+/docs/ @fincommerce/developer-advocacy
+
+# Interactivity API - public stores
+/plugins/fincommerce/client/blocks/assets/js/base/stores/ @fincommerce/billow
+/plugins/fincommerce/src/Blocks/Utils/BlocksSharedState.php @fincommerce/billow
+
+# Core cart and checkout related files
+/plugins/fincommerce/includes/class-wc-cart*.php @fincommerce/rubik
+/plugins/fincommerce/includes/class-wc-checkout*.php @fincommerce/rubik
+/plugins/fincommerce/includes/wc-cart-functions.php @fincommerce/rubik
+/plugins/fincommerce/includes/class-wc-session-handler.php @fincommerce/rubik
+
+# Store API related files
+/plugins/fincommerce/src/StoreApi/ @fincommerce/rubik
+
+# Cart Checkout Blocks
+/plugins/fincommerce/client/blocks/assets/js/blocks/cart @fincommerce/rubik
+/plugins/fincommerce/client/blocks/assets/js/blocks/cart-checkout-shared @fincommerce/rubik
+/plugins/fincommerce/client/blocks/assets/js/blocks/checkout @fincommerce/rubik
+/plugins/fincommerce/client/blocks/assets/js/blocks/mini-cart @fincommerce/rubik
+/plugins/fincommerce/client/blocks/assets/js/blocks/order-confirmation @fincommerce/rubik
+/plugins/fincommerce/client/blocks/packages/checkout @fincommerce/rubik

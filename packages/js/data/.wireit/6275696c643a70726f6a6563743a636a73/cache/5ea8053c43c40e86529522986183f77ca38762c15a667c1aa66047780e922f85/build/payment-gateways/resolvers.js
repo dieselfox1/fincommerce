@@ -1,0 +1,46 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getPaymentGateways = getPaymentGateways;
+exports.getPaymentGateway = getPaymentGateway;
+/**
+ * External dependencies
+ */
+const data_controls_1 = require("@wordpress/data-controls");
+const data_1 = require("@wordpress/data");
+/**
+ * Internal dependencies
+ */
+const actions_1 = require("./actions");
+const constants_1 = require("./constants");
+// Can be removed in WP 5.9.
+const dispatch = data_1.controls && data_1.controls.dispatch ? data_1.controls.dispatch : data_controls_1.dispatch;
+function* getPaymentGateways() {
+    yield (0, actions_1.getPaymentGatewaysRequest)();
+    try {
+        const response = yield (0, data_controls_1.apiFetch)({
+            path: constants_1.API_NAMESPACE + '/payment_gateways',
+        });
+        yield (0, actions_1.getPaymentGatewaysSuccess)(response);
+        for (let i = 0; i < response.length; i++) {
+            yield dispatch(constants_1.STORE_KEY, 'finishResolution', 'getPaymentGateway', [response[i].id]);
+        }
+    }
+    catch (e) {
+        yield (0, actions_1.getPaymentGatewaysError)(e);
+    }
+}
+function* getPaymentGateway(id) {
+    yield (0, actions_1.getPaymentGatewayRequest)();
+    try {
+        const response = yield (0, data_controls_1.apiFetch)({
+            path: constants_1.API_NAMESPACE + '/payment_gateways/' + id,
+        });
+        if (response && response.id) {
+            yield (0, actions_1.getPaymentGatewaySuccess)(response);
+            return response;
+        }
+    }
+    catch (e) {
+        yield (0, actions_1.getPaymentGatewayError)(e);
+    }
+}

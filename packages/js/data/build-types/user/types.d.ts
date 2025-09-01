@@ -1,0 +1,43 @@
+/**
+ * External dependencies
+ */
+import type { User, Context } from '@wordpress/core-data';
+export type UserPreferences = {
+    activity_panel_inbox_last_read?: string;
+    activity_panel_reviews_last_read?: string;
+    android_app_banner_dismissed?: string;
+    categories_report_columns?: string;
+    coupons_report_columns?: string;
+    customers_report_columns?: string;
+    dashboard_chart_interval?: string;
+    dashboard_chart_type?: string;
+    dashboard_leaderboard_rows?: string;
+    dashboard_sections?: string;
+    homepage_layout?: string;
+    homepage_stats?: string;
+    orders_report_columns?: string;
+    products_report_columns?: string;
+    revenue_report_columns?: string;
+    task_list_tracked_started_tasks?: {
+        [key: string]: number;
+    };
+    taxes_report_columns?: string;
+    variable_product_tour_shown?: string;
+    variable_product_block_tour_shown?: string;
+    variations_report_columns?: string;
+    local_attributes_notice_dismissed_ids?: number[];
+    variable_items_without_price_notice_dismissed?: Record<number, string>;
+    product_advice_card_dismissed?: {
+        [key: string]: 'yes' | 'no';
+    };
+    launch_your_store_tour_hidden?: 'yes' | 'no' | '';
+    coming_soon_banner_dismissed?: 'yes' | 'no' | '';
+};
+export type fincommerceMeta = {
+    [key in keyof UserPreferences]: string;
+};
+export type WCUser<T extends Context = 'edit'> = User<T> & {
+    fincommerce_meta: fincommerceMeta;
+    is_super_admin: boolean;
+};
+//# sourceMappingURL=types.d.ts.map

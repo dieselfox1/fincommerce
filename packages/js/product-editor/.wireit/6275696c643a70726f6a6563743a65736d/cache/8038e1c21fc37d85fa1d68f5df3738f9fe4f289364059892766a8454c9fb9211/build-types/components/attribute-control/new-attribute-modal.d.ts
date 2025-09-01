@@ -1,0 +1,30 @@
+import type { EnhancedProductAttribute } from '../../hooks/use-product-attributes';
+type NewAttributeModalProps = {
+    title?: string;
+    description?: string | React.ReactElement;
+    notice?: string;
+    attributeLabel?: string;
+    valueLabel?: string;
+    attributePlaceholder?: string;
+    termPlaceholder?: string;
+    removeLabel?: string;
+    addAnotherAccessibleLabel?: string;
+    addAnotherLabel?: string;
+    cancelLabel?: string;
+    addAccessibleLabel?: string;
+    addLabel?: string;
+    onCancel: () => void;
+    onAdd: (newCategories: EnhancedProductAttribute[]) => void;
+    onAddAnother?: () => void;
+    onRemoveItem?: () => void;
+    selectedAttributeIds?: number[];
+    createNewAttributesAsGlobal?: boolean;
+    disabledAttributeIds?: number[];
+    disabledAttributeMessage?: string;
+    termsAutoSelection?: 'first' | 'all';
+    defaultVisibility?: boolean;
+    defaultSearch?: string;
+};
+export declare const NewAttributeModal: ({ title, description, notice, attributeLabel, valueLabel, attributePlaceholder, termPlaceholder, removeLabel, addAnotherAccessibleLabel, addAnotherLabel, cancelLabel, addAccessibleLabel, addLabel, onCancel, onAdd, onAddAnother, onRemoveItem, selectedAttributeIds, createNewAttributesAsGlobal, disabledAttributeIds, disabledAttributeMessage, termsAutoSelection, defaultVisibility, defaultSearch, }: NewAttributeModalProps) => JSX.Element;
+export {};
+//# sourceMappingURL=new-attribute-modal.d.ts.map

@@ -1,0 +1,42 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.fetchWithHeaders = void 0;
+/**
+ * External dependencies
+ */
+const data_controls_1 = require("@wordpress/data-controls");
+const api_fetch_1 = __importDefault(require("@wordpress/api-fetch"));
+const fetchWithHeaders = (options) => {
+    return {
+        type: 'FETCH_WITH_HEADERS',
+        options,
+    };
+};
+exports.fetchWithHeaders = fetchWithHeaders;
+const controls = {
+    ...data_controls_1.controls,
+    FETCH_WITH_HEADERS(action) {
+        return (0, api_fetch_1.default)({ ...action.options, parse: false })
+            .then((response) => {
+            return Promise.all([
+                response.headers,
+                response.status,
+                response.json(),
+            ]);
+        })
+            .then(([headers, status, data]) => ({
+            headers,
+            status,
+            data,
+        }))
+            .catch((response) => {
+            return response.json().then((data) => {
+                throw data;
+            });
+        });
+    },
+};
+exports.default = controls;

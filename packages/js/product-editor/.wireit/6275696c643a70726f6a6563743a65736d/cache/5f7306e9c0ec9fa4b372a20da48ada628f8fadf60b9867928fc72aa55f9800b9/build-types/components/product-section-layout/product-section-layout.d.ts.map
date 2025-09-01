@@ -1,0 +1,1 @@
+{"version":3,"file":"product-section-layout.d.ts","sourceRoot":"","sources":["../../../src/components/product-section-layout/product-section-layout.tsx"],"names":[],"mappings":"AAMA,UAAU,yBAAyB;IAClC,KAAK,EAAE,MAAM,CAAC;IACd,WAAW,EAAE,MAAM,GAAG,GAAG,CAAC,OAAO,CAAC;IAClC,SAAS,CAAC,EAAE,MAAM,CAAC;CACnB;AAED,eAAO,MAAM,oBAAoB,iDAK9B,KAAK,CAAC,iBAAiB,CAAE,yBAAyB,CAAE,gBAatD,CAAC"}

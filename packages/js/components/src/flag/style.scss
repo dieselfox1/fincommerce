@@ -1,0 +1,14 @@
+.fincommerce-flag {
+	span {
+		vertical-align: middle;
+	}
+
+	.fincommerce-flag__fallback {
+		background: $gray-100;
+		color: transparent;
+		width: 24px;
+		height: 18px;
+		display: block;
+		overflow: hidden;
+	}
+}
