@@ -56,7 +56,7 @@ Use these resources to help take some of the heavy lifting off of fetching and t
 
 ### API Clients
 
-#### [FinCommerce REST API - JavaScript](https://www.npmjs.com/package/@fincommerce/fincommerce-rest-api)
+#### [FinCommerce REST API - JavaScript](https://www.npmjs.com/package/@dieselfox1/fincommerce-rest-api)
 
 The official JavaScript library for working with the FinCommerce REST API.
 

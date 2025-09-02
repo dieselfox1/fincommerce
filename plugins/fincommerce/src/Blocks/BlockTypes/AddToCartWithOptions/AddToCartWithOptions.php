@@ -60,7 +60,7 @@ class AddToCartWithOptions extends AbstractBlock {
 			if ( $theme_has_template ) {
 				$template_part_ids[ $product_type ] = "{$current_theme}//{$slug}";
 			} else {
-				$template_part_ids[ $product_type ] = "fincommerce/fincommerce//{$slug}";
+				$template_part_ids[ $product_type ] = "dieselfox1/fincommerce//{$slug}";
 			}
 		}
 

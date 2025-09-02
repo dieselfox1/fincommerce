@@ -41,8 +41,8 @@ class WC_Admin_Tests_Plugins_Helper extends WP_UnitTestCase {
 		$this->assertEquals( false, $invalid_path, 'False should be returned when no matching plugin is installed.' );
 
 		// Check for when slug already appears to be a path.
-		$wc_path_slug = PluginsHelper::get_plugin_path_from_slug( 'fincommerce/fincommerce' );
-		$this->assertEquals( 'fincommerce/fincommerce', $wc_path_slug, 'Slug should be returned if it appears to already be path.' );
+		$wc_path_slug = PluginsHelper::get_plugin_path_from_slug( 'dieselfox1/fincommerce' );
+		$this->assertEquals( 'dieselfox1/fincommerce', $wc_path_slug, 'Slug should be returned if it appears to already be path.' );
 	}
 
 	/**

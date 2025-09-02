@@ -31,7 +31,7 @@ interface PluginsProviderInterface {
 	/**
 	 * Get the path to the plugin file relative to the plugins directory from the plugin slug.
 	 *
-	 * E.g. 'fincommerce' returns 'fincommerce/fincommerce.php'
+	 * E.g. 'fincommerce' returns 'dieselfox1/fincommerce.php'
 	 *
 	 * @param string $slug Plugin slug to get path for.
 	 *

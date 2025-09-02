@@ -5,11 +5,11 @@
 	"license": "GPL-2.0-or-later",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/fincommerce/fincommerce-beta-tester.git"
+		"url": "git://github.com/dieselfox1/fincommerce-beta-tester.git"
 	},
 	"title": "FinCommerce Beta Tester",
 	"version": "3.0.0",
-	"homepage": "http://github.com/fincommerce/fincommerce-beta-tester",
+	"homepage": "http://github.com/dieselfox1/fincommerce-beta-tester",
 	"devDependencies": {
 		"@types/react": "18.3.x",
 		"@types/react-dom": "18.3.x",

@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'fincommerce/fincommerce',
+        'name' => 'dieselfox1/fincommerce',
         'pretty_version' => '10.3.0',
         'version' => '10.3.0.0',
         'reference' => null,
@@ -229,7 +229,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'fincommerce/fincommerce' => array(
+        'dieselfox1/fincommerce' => array(
             'pretty_version' => '10.3.0',
             'version' => '10.3.0.0',
             'reference' => null,

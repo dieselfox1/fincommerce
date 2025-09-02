@@ -111,7 +111,7 @@ export const CUSTOMIZABLE_WC_TEMPLATES: TemplateCustomizationTest[] = [
 			// We will be able to simplify this logic once the blockified
 			// Add to Cart with Options block is the default.
 			await admin.visitSiteEditor( {
-				postId: 'fincommerce/fincommerce//single-product',
+				postId: 'dieselfox1/fincommerce//single-product',
 				postType: 'wp_template',
 				canvas: 'edit',
 			} );
@@ -181,4 +181,4 @@ export const CUSTOMIZABLE_WC_TEMPLATES: TemplateCustomizationTest[] = [
 	},
 ];
 
-export const WC_TEMPLATES_SLUG = 'fincommerce/fincommerce';
+export const WC_TEMPLATES_SLUG = 'dieselfox1/fincommerce';

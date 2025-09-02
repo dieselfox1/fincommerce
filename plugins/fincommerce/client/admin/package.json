@@ -7,7 +7,7 @@
 	"homepage": "https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/client/admin/README.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com:fincommerce/fincommerce.git"
+		"url": "https://github.com:dieselfox1/fincommerce.git"
 	},
 	"files": [
 		"build"

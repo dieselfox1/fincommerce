@@ -5,7 +5,7 @@
 	"author": "Automattic",
 	"homepage": "https://github.com/dieselfox1/fincommerce",
 	"license": "GPL-2.0-or-later",
-	"repository": "fincommerce/fincommerce",
+	"repository": "dieselfox1/fincommerce",
 	"private": true,
 	"bin": {
 		"monorepo-utils": "./bin/run"

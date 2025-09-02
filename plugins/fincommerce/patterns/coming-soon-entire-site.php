@@ -36,7 +36,7 @@ $body_font_family    = $fonts['body'];
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"fincommerce-coming-soon-social-login","style":{"spacing":{"blockGap":"48px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group fincommerce-coming-soon-social-login"><!-- wp:template-part {"slug":"coming-soon-social-links","theme":"fincommerce/fincommerce","tagName":"div"} /-->
+<div class="wp-block-group fincommerce-coming-soon-social-login"><!-- wp:template-part {"slug":"coming-soon-social-links","theme":"dieselfox1/fincommerce","tagName":"div"} /-->
 
 <!-- wp:loginout {"style":{"elements":{"link":{"color":{"text":"#ffffff"}}},"color":{"background":"#000000"},"spacing":{"padding":{"top":"12px","bottom":"12px","left":"16px","right":"16px"}},"typography":{"fontSize":"14px","lineHeight":"1.2"},"border":{"radius":"6px"}},"fontFamily":"<?php echo esc_html( $body_font_family ); ?>"} /--></div>
 <!-- /wp:group --></div>

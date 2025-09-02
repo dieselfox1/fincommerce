@@ -106,7 +106,7 @@ class WC_Admin_Tests_Install extends WP_UnitTestCase {
 
 	/**
 	 * Test missed DB version number update.
-	 * See: https:// github.com/fincommerce/fincommerce-admin/issues/5058
+	 * See: https:// github.com/dieselfox1/fincommerce-admin/issues/5058
 	 */
 	public function test_missed_version_number_update() {
 		$this->markTestSkipped( 'We no longer update FinCommerce Admin versions' );

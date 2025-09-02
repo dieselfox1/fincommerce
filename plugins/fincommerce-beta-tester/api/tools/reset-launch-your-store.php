@@ -33,7 +33,7 @@ function tools_reset_launch_your_store() {
 	}
 
 	// Remove template changes.
-	$template = get_block_template( 'fincommerce/fincommerce//coming-soon', 'wp_template' );
+	$template = get_block_template( 'dieselfox1/fincommerce//coming-soon', 'wp_template' );
 	if ( $template && isset( $template->wp_id ) ) {
 		$delete_result = wp_delete_post( $template->wp_id, true );
 		if ( false === $delete_result ) {

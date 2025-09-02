@@ -46,7 +46,7 @@ for plugin in "${mu_plugins[@]}"; do
     echo "Processing $plugin..."
 
     # Download the PHP file
-    curl -o "$plugin.php" "https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/bin/$plugin.php"
+    curl -o "$plugin.php" "https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/bin/$plugin.php"
 
     # Create a zip file
     (chmod 755 "$plugin.php" && zip "${plugin%}.zip" "$plugin.php")
@@ -89,6 +89,6 @@ echo "--------------------------------------------------------"
 echo -e 'Upload test images'
 echo "--------------------------------------------------------"
 echo "Importing test images..."
-wp media import https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/test-data/images/image-01.png \
-    https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/test-data/images/image-02.png \
-    https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/test-data/images/image-03.png
+wp media import https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/test-data/images/image-01.png \
+    https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/test-data/images/image-02.png \
+    https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/plugins/fincommerce/tests/e2e-pw/test-data/images/image-03.png

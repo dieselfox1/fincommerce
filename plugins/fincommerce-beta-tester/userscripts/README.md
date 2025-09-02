@@ -5,7 +5,7 @@
 ## Installation
 
 1. Install Tampermonkey or equivalent user script extension.
-2. Click https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/plugins/fincommerce-beta-tester/userscripts/wc-live-branches.user.js Once installed, it should be able to auto-update
+2. Click https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/plugins/fincommerce-beta-tester/userscripts/wc-live-branches.user.js Once installed, it should be able to auto-update
 
 ## Development
 

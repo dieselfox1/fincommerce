@@ -53,7 +53,7 @@ class BlockTemplatesController {
 	 * @return string The render.
 	 */
 	public function render_fincommerce_template_part( $attributes ) {
-		if ( isset( $attributes['theme'] ) && 'fincommerce/fincommerce' === $attributes['theme'] ) {
+		if ( isset( $attributes['theme'] ) && 'dieselfox1/fincommerce' === $attributes['theme'] ) {
 			$template_part = get_block_template( $attributes['theme'] . '//' . $attributes['slug'], 'wp_template_part' );
 
 			if ( $template_part && ! empty( $template_part->content ) ) {
@@ -298,7 +298,7 @@ class BlockTemplatesController {
 		$query_result = array_merge( $new_templates, $query_result );
 
 		if ( count( $new_templates ) > 0 ) {
-			// If there are certain templates that have been customised with the `fincommerce/fincommerce` slug,
+			// If there are certain templates that have been customised with the `dieselfox1/fincommerce` slug,
 			// We prioritize them over the theme and WC templates. That is, we remove the theme and WC templates
 			// from the results and only keep the customised ones.
 			$query_result = BlockTemplateUtils::remove_templates_with_custom_alternative( $query_result );

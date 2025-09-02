@@ -36,7 +36,7 @@ export function useFilterHook< T >(
 			}
 		};
 
-		const namespace = `fincommerce/fincommerce/watch_${ filterName }`;
+		const namespace = `dieselfox1/fincommerce/watch_${ filterName }`;
 		addAction( 'hookAdded', namespace, handleHookAdded );
 
 		// Refresh value to catch any hooks added between initial getter and this effect

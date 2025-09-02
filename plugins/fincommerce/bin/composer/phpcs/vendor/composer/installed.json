@@ -82,7 +82,7 @@
             "install-path": "../dealerdirect/phpcodesniffer-composer-installer"
         },
         {
-            "name": "fincommerce/fincommerce-sniffs",
+            "name": "dieselfox1/fincommerce-sniffs",
             "version": "1.0.0",
             "version_normalized": "1.0.0.0",
             "source": {
@@ -92,7 +92,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fincommerce/fincommerce-sniffs/zipball/3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8",
+                "url": "https://api.github.com/repos/dieselfox1/fincommerce-sniffs/zipball/3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8",
                 "reference": "3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8",
                 "shasum": ""
             },
@@ -121,7 +121,7 @@
                 "issues": "https://github.com/dieselfox1/fincommerce-sniffs/issues",
                 "source": "https://github.com/dieselfox1/fincommerce-sniffs/tree/1.0.0"
             },
-            "install-path": "../fincommerce/fincommerce-sniffs"
+            "install-path": "../dieselfox1/fincommerce-sniffs"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -944,7 +944,7 @@
     "dev": true,
     "dev-package-names": [
         "dealerdirect/phpcodesniffer-composer-installer",
-        "fincommerce/fincommerce-sniffs",
+        "dieselfox1/fincommerce-sniffs",
         "phpcompatibility/php-compatibility",
         "phpcompatibility/phpcompatibility-paragonie",
         "phpcompatibility/phpcompatibility-wp",

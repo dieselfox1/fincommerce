@@ -124,7 +124,7 @@ describe( 'Layout', () => {
 		} );
 
 		it( 'should render the page added after the initial filter has been run, not show the error message', () => {
-			const namespace = `fincommerce/fincommerce/test_${ PAGES_FILTER }`;
+			const namespace = `dieselfox1/fincommerce/test_${ PAGES_FILTER }`;
 			const path = '/test/greeting';
 
 			mockPath( path );

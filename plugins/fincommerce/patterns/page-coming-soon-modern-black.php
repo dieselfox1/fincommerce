@@ -29,7 +29,7 @@ $email         = get_option( 'admin_email', 'marianne.renoir@mail.com' );
 				<!-- /wp:group --></div>
 			<!-- /wp:group -->
 
-			<!-- wp:template-part {"slug":"coming-soon-social-links","theme":"fincommerce/fincommerce","tagName":"div"} /--></div>
+			<!-- wp:template-part {"slug":"coming-soon-social-links","theme":"dieselfox1/fincommerce","tagName":"div"} /--></div>
 		<!-- /wp:group -->
 
 		<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","right":"0","left":"0"},"margin":{"bottom":"0"},"blockGap":"0px"},"dimensions":{"minHeight":"650px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"bottom"}} -->

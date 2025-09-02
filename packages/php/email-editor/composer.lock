@@ -3582,7 +3582,7 @@
             "time": "2021-02-27T15:53:37+00:00"
         },
         {
-            "name": "fincommerce/fincommerce-sniffs",
+            "name": "dieselfox1/fincommerce-sniffs",
             "version": "1.0.0",
             "source": {
                 "type": "git",
@@ -3591,7 +3591,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fincommerce/fincommerce-sniffs/zipball/3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8",
+                "url": "https://api.github.com/repos/dieselfox1/fincommerce-sniffs/zipball/3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8",
                 "reference": "3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8",
                 "shasum": ""
             },

@@ -183,4 +183,4 @@ Tests are automatically run with [GitHub Actions](https://github.com/dieselfox1/
 
 ## Code Coverage
 
-Code coverage is available on [Codecov](https://codecov.io/gh/fincommerce/fincommerce/) which receives updated data after each build.
+Code coverage is available on [Codecov](https://codecov.io/gh/dieselfox1/fincommerce/) which receives updated data after each build.

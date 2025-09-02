@@ -109,7 +109,7 @@ register_fincommerce_admin_test_helper_rest_route(
  */
 function get_latest_wc_release( $include_pre_releases = false ) {
 	// Get all releases including pre-releases
-	$response = wp_remote_get( 'https://api.github.com/repos/fincommerce/fincommerce/releases' );
+	$response = wp_remote_get( 'https://api.github.com/repos/dieselfox1/fincommerce/releases' );
 
 	if ( is_wp_error( $response ) ) {
 		return $response;

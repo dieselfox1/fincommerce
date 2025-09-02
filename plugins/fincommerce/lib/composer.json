@@ -1,5 +1,5 @@
 {
-	"name": "fincommerce/fincommerce-lib",
+	"name": "dieselfox1/fincommerce-lib",
 	"description": "A package for hiding re-namespaced dependencies and executing them",
 	"prefer-stable": true,
 	"minimum-stability": "dev",

@@ -36,7 +36,7 @@ if ( ! function_exists( 'get_plugin_data' ) ) {
 	require_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
 // Define the path to the main FinCommerce plugin file using the correct constant.
-$plugin_path = WP_PLUGIN_DIR . '/fincommerce/fincommerce.php';
+$plugin_path = WP_PLUGIN_DIR . '/dieselfox1/fincommerce.php';
 // Initialize the FinCommerce version variable.
 $wc_version = '';
 // Check if the plugin file exists before trying to access it.

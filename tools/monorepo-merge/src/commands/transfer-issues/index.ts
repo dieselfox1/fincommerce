@@ -54,7 +54,7 @@ export default class TransferIssues extends Command {
 	static flags = {
 		destination: Flags.string( {
 			description: 'The destination repository to transfer into.',
-			default: 'fincommerce/fincommerce',
+			default: 'dieselfox1/fincommerce',
 		} ),
 		searchFilter: Flags.string( {
 			description:

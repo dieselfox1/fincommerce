@@ -92,7 +92,7 @@ test.describe( 'Template priority', () => {
 			if ( testData.fallbackTemplate ) {
 				await test.step( 'custom fallback template with FinCommerce slug', async () => {
 					await pageObject.addParagraphToTemplate(
-						`fincommerce/fincommerce//${ testData.fallbackTemplate.templatePath }`,
+						`dieselfox1/fincommerce//${ testData.fallbackTemplate.templatePath }`,
 						'Custom fallback template with FinCommerce slug'
 					);
 
@@ -134,7 +134,7 @@ test.describe( 'Template priority', () => {
 
 			await test.step( 'custom template with FinCommerce slug', async () => {
 				await pageObject.addParagraphToTemplate(
-					`fincommerce/fincommerce//${ testData.templatePath }`,
+					`dieselfox1/fincommerce//${ testData.templatePath }`,
 					'Custom template with FinCommerce slug'
 				);
 

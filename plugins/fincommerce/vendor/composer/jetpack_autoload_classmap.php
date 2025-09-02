@@ -780,7 +780,7 @@ return array(
 	),
 	'Automattic\\FinCommerce\\Admin\\Features\\OnboardingTasks\\Tasks\\fincommercePayments' => array(
 		'version' => '1010.3.0.0',
-		'path'    => $baseDir . '/src/Admin/Features/OnboardingTasks/Tasks/fincommercePayments.php'
+		'path'    => $baseDir . '/src/Admin/Features/OnboardingTasks/Tasks/FinCommercePayments.php'
 	),
 	'Automattic\\FinCommerce\\Admin\\Features\\PaymentGatewaySuggestions\\DefaultPaymentGateways' => array(
 		'version' => '1010.3.0.0',
@@ -1268,7 +1268,7 @@ return array(
 	),
 	'Automattic\\FinCommerce\\Admin\\RemoteSpecs\\RuleProcessors\\fincommerceAdminUpdatedRuleProcessor' => array(
 		'version' => '1010.3.0.0',
-		'path'    => $baseDir . '/src/Admin/RemoteSpecs/RuleProcessors/fincommerceAdminUpdatedRuleProcessor.php'
+		'path'    => $baseDir . '/src/Admin/RemoteSpecs/RuleProcessors/FinCommerceAdminUpdatedRuleProcessor.php'
 	),
 	'Automattic\\FinCommerce\\Admin\\ReportCSVEmail' => array(
 		'version' => '1010.3.0.0',
@@ -2788,11 +2788,11 @@ return array(
 	),
 	'Automattic\\FinCommerce\\Internal\\Admin\\Notes\\fincommercePayments' => array(
 		'version' => '1010.3.0.0',
-		'path'    => $baseDir . '/src/Internal/Admin/Notes/fincommercePayments.php'
+		'path'    => $baseDir . '/src/Internal/Admin/Notes/FinCommercePayments.php'
 	),
 	'Automattic\\FinCommerce\\Internal\\Admin\\Notes\\fincommerceSubscriptions' => array(
 		'version' => '1010.3.0.0',
-		'path'    => $baseDir . '/src/Internal/Admin/Notes/fincommerceSubscriptions.php'
+		'path'    => $baseDir . '/src/Internal/Admin/Notes/FinCommerceSubscriptions.php'
 	),
 	'Automattic\\FinCommerce\\Internal\\Admin\\Onboarding\\Onboarding' => array(
 		'version' => '1010.3.0.0',
@@ -3232,7 +3232,7 @@ return array(
 	),
 	'Automattic\\FinCommerce\\Internal\\CLI\\Migrator\\Core\\fincommerceProductImporter' => array(
 		'version' => '1010.3.0.0',
-		'path'    => $baseDir . '/src/Internal/CLI/Migrator/Core/fincommerceProductImporter.php'
+		'path'    => $baseDir . '/src/Internal/CLI/Migrator/Core/FinCommerceProductImporter.php'
 	),
 	'Automattic\\FinCommerce\\Internal\\CLI\\Migrator\\Interfaces\\PlatformFetcherInterface' => array(
 		'version' => '1010.3.0.0',
@@ -5532,7 +5532,7 @@ return array(
 	),
 	'Automattic\\FinCommerce\\Tests\\Internal\\CLI\\Migrator\\Core\\fincommerceProductImporterTest' => array(
 		'version' => '1010.3.0.0',
-		'path'    => $baseDir . '/tests/php/src/Internal/CLI/Migrator/Core/fincommerceProductImporterTest.php'
+		'path'    => $baseDir . '/tests/php/src/Internal/CLI/Migrator/Core/FinCommerceProductImporterTest.php'
 	),
 	'Automattic\\FinCommerce\\Tests\\Internal\\CLI\\Migrator\\Fixtures\\MockShopifyData' => array(
 		'version' => '1010.3.0.0',
@@ -6538,523 +6538,523 @@ return array(
 		'version' => '6.18.1.0',
 		'path'    => $vendorDir . '/automattic/jetpack-connection/src/class-tracking.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\BuiltInExporters' => array(
+	'Automattic\\WooCommerce\\Blueprint\\BuiltInExporters' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/BuiltInExporters.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\BuiltInStepProcessors' => array(
+	'Automattic\\WooCommerce\\Blueprint\\BuiltInStepProcessors' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/BuiltInStepProcessors.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ClassExtractor' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ClassExtractor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ClassExtractor.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Cli' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Cli' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Cli.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Cli\\ExportCli' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Cli\\ExportCli' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Cli/ExportCli.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Cli\\ImportCli' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Cli\\ImportCli' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Cli/ImportCli.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ExportSchema' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ExportSchema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ExportSchema.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Exporters\\ExportInstallPluginSteps' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Exporters\\ExportInstallPluginSteps' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Exporters/ExportInstallPluginSteps.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Exporters\\ExportInstallThemeSteps' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Exporters\\ExportInstallThemeSteps' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Exporters/ExportInstallThemeSteps.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Exporters\\HasAlias' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Exporters\\HasAlias' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Exporters/HasAlias.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Exporters\\StepExporter' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Exporters\\StepExporter' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Exporters/StepExporter.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ImportSchema' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ImportSchema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ImportSchema.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ImportStep' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ImportStep' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ImportStep.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Importers\\ImportActivatePlugin' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Importers\\ImportActivatePlugin' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Importers/ImportActivatePlugin.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Importers\\ImportActivateTheme' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Importers\\ImportActivateTheme' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Importers/ImportActivateTheme.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Importers\\ImportInstallPlugin' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Importers\\ImportInstallPlugin' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Importers/ImportInstallPlugin.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Importers\\ImportInstallTheme' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Importers\\ImportInstallTheme' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Importers/ImportInstallTheme.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Importers\\ImportRunSql' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Importers\\ImportRunSql' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Importers/ImportRunSql.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Importers\\ImportSetSiteOptions' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Importers\\ImportSetSiteOptions' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Importers/ImportSetSiteOptions.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Logger' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Logger' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Logger.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResourceStorages' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResourceStorages' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResourceStorages.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResourceStorages\\LocalPluginResourceStorage' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResourceStorages\\LocalPluginResourceStorage' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResourceStorages/LocalPluginResourceStorage.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResourceStorages\\LocalThemeResourceStorage' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResourceStorages\\LocalThemeResourceStorage' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResourceStorages/LocalThemeResourceStorage.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResourceStorages\\OrgPluginResourceStorage' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResourceStorages\\OrgPluginResourceStorage' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResourceStorages/OrgPluginResourceStorage.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResourceStorages\\OrgThemeResourceStorage' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResourceStorages\\OrgThemeResourceStorage' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResourceStorages/OrgThemeResourceStorage.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResourceStorages\\ResourceStorage' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResourceStorages\\ResourceStorage' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResourceStorages/ResourceStorage.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResultFormatters\\CliResultFormatter' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResultFormatters\\CliResultFormatter' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResultFormatters/CliResultFormatter.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\ResultFormatters\\JsonResultFormatter' => array(
+	'Automattic\\WooCommerce\\Blueprint\\ResultFormatters\\JsonResultFormatter' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/ResultFormatters/JsonResultFormatter.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Schemas\\JsonSchema' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Schemas\\JsonSchema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Schemas/JsonSchema.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\StepProcessor' => array(
+	'Automattic\\WooCommerce\\Blueprint\\StepProcessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/StepProcessor.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\StepProcessorResult' => array(
+	'Automattic\\WooCommerce\\Blueprint\\StepProcessorResult' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/StepProcessorResult.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\ActivatePlugin' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\ActivatePlugin' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/ActivatePlugin.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\ActivateTheme' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\ActivateTheme' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/ActivateTheme.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\InstallPlugin' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\InstallPlugin' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/InstallPlugin.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\InstallTheme' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\InstallTheme' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/InstallTheme.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\RunSql' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\RunSql' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/RunSql.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\SetSiteOptions' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\SetSiteOptions' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/SetSiteOptions.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Steps\\Step' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Steps\\Step' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Steps/Step.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\UsePluginHelpers' => array(
+	'Automattic\\WooCommerce\\Blueprint\\UsePluginHelpers' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/UsePluginHelpers.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\UsePubSub' => array(
+	'Automattic\\WooCommerce\\Blueprint\\UsePubSub' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/UsePubSub.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\UseWPFunctions' => array(
+	'Automattic\\WooCommerce\\Blueprint\\UseWPFunctions' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/UseWPFunctions.php'
 	),
-	'Automattic\\fincommerce\\Blueprint\\Util' => array(
+	'Automattic\\WooCommerce\\Blueprint\\Util' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/blueprint/src/Util.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\AccessDeniedException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\AccessDeniedException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Bootstrap' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Bootstrap' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/class-bootstrap.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\ConflictException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\ConflictException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Container' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Container' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/class-container.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Email_Css_Inliner' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Email_Css_Inliner' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/class-email-css-inliner.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Email_Editor_Container' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Email_Editor_Container' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/class-email-editor-container.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Assets_Manager' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Assets_Manager' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-assets-manager.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Dependency_Check' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Dependency_Check' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-dependency-check.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Email_Api_Controller' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Email_Api_Controller' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-email-api-controller.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Email_Editor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Email_Editor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-email-editor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Email_Styles_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Email_Styles_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-email-styles-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Logger\\Default_Email_Editor_Logger' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Logger\\Default_Email_Editor_Logger' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Logger/class-default-email-editor-logger.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Logger\\Email_Editor_Logger' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Logger\\Email_Editor_Logger' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Logger/class-email-editor-logger.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Logger\\Email_Editor_Logger_Interface' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Logger\\Email_Editor_Logger_Interface' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Logger/class-email-editor-logger-interface.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Patterns\\Abstract_Pattern' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Patterns\\Abstract_Pattern' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Patterns/class-abstract-pattern.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Patterns\\Patterns' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Patterns\\Patterns' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Patterns/class-patterns.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\PersonalizationTags\\HTML_Tag_Processor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\PersonalizationTags\\HTML_Tag_Processor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/PersonalizationTags/class-html-tag-processor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\PersonalizationTags\\Personalization_Tag' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\PersonalizationTags\\Personalization_Tag' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/PersonalizationTags/class-personalization-tag.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\PersonalizationTags\\Personalization_Tags_Registry' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\PersonalizationTags\\Personalization_Tags_Registry' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/PersonalizationTags/class-personalization-tags-registry.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Personalizer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Personalizer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-personalizer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Block_Renderer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Block_Renderer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-block-renderer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Blocks_Parser' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Blocks_Parser' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-blocks-parser.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Content_Renderer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Content_Renderer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-content-renderer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Layout\\Flex_Layout_Renderer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Layout\\Flex_Layout_Renderer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Layout/class-flex-layout-renderer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Border_Style_Postprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Border_Style_Postprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/class-border-style-postprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Highlighting_Postprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Highlighting_Postprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/class-highlighting-postprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Postprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Postprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/interface-postprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Variables_Postprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Postprocessors\\Variables_Postprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/class-variables-postprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Blocks_Width_Preprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Blocks_Width_Preprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-blocks-width-preprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Cleanup_Preprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Cleanup_Preprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-cleanup-preprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Preprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Preprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/interface-preprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Quote_Preprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Quote_Preprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-quote-preprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Spacing_Preprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Spacing_Preprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-spacing-preprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Typography_Preprocessor' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Preprocessors\\Typography_Preprocessor' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-typography-preprocessor.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Process_Manager' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Process_Manager' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-process-manager.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Rendering_Context' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\ContentRenderer\\Rendering_Context' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-rendering-context.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\Css_Inliner' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\Css_Inliner' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/interface-css-inliner.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\Html2Text' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\Html2Text' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/class-html2text.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\Html2Text_Exception' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\Html2Text_Exception' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/class-html2text-exception.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Renderer\\Renderer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Renderer\\Renderer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Renderer/class-renderer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Send_Preview_Email' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Send_Preview_Email' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-send-preview-email.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Settings_Controller' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Settings_Controller' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-settings-controller.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Site_Style_Sync_Controller' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Site_Style_Sync_Controller' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-site-style-sync-controller.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Templates\\Template' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Templates\\Template' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Templates/class-template.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Templates\\Templates' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Templates\\Templates' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Templates/class-templates.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Templates\\Templates_Registry' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Templates\\Templates_Registry' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/Templates/class-templates-registry.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\Theme_Controller' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\Theme_Controller' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-theme-controller.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Engine\\User_Theme' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Engine\\User_Theme' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Engine/class-user-theme.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Exception' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Exception' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\HttpAwareException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\HttpAwareException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Initializer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Initializer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/class-initializer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Abstract_Block_Renderer' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Abstract_Block_Renderer' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-abstract-block-renderer.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Button' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Button' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-button.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Buttons' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Buttons' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-buttons.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Column' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Column' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-column.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Columns' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Columns' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-columns.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Fallback' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Fallback' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-fallback.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Group' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Group' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-group.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Image' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Image' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-image.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\List_Block' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\List_Block' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-list-block.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\List_Item' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\List_Item' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-list-item.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Quote' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Quote' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-quote.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Social_Link' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Social_Link' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-social-link.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Social_Links' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Social_Links' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-social-links.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Text' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Core\\Renderer\\Blocks\\Text' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-text.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Utils\\Dom_Document_Helper' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Utils\\Dom_Document_Helper' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Utils/class-dom-document-helper.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Utils\\Social_Links_Helper' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Utils\\Social_Links_Helper' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Utils/class-social-links-helper.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Utils\\Styles_Helper' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Utils\\Styles_Helper' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Utils/class-styles-helper.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Integrations\\Utils\\Table_Wrapper_Helper' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Integrations\\Utils\\Table_Wrapper_Helper' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Integrations/Utils/class-table-wrapper-helper.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\InvalidStateException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\InvalidStateException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\NewsletterProcessingException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\NewsletterProcessingException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\NotFoundException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\NotFoundException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Package' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Package' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/class-package.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\RuntimeException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\RuntimeException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\UnexpectedValueException' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\UnexpectedValueException' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/exceptions.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Builder' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Builder' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/class-builder.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/class-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Any_Of_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Any_Of_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-any-of-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Array_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Array_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-array-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Boolean_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Boolean_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-boolean-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Integer_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Integer_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-integer-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Null_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Null_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-null-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Number_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Number_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-number-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\Object_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\Object_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-object-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\One_Of_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\One_Of_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-one-of-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Schema\\String_Schema' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Schema\\String_Schema' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/Schema/class-string-schema.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Validation_Exception' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Validation_Exception' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/class-validation-exception.php'
 	),
-	'Automattic\\fincommerce\\EmailEditor\\Validator\\Validator' => array(
+	'Automattic\\WooCommerce\\EmailEditor\\Validator\\Validator' => array(
 		'version' => '1010.3.0.0',
 		'path'    => $baseDir . '/packages/email-editor/src/Validator/class-validator.php'
 	),

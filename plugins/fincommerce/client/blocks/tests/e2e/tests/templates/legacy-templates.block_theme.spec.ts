@@ -18,7 +18,7 @@ test.describe( 'Legacy templates', () => {
 
 		await test.step( 'Customize existing template to create DB entry', async () => {
 			await admin.visitSiteEditor( {
-				postId: `fincommerce/fincommerce//${ template.id }`,
+				postId: `dieselfox1/fincommerce//${ template.id }`,
 				postType: 'wp_template',
 				canvas: 'edit',
 			} );

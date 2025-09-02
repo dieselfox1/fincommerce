@@ -1,5 +1,5 @@
 {
-    "name": "fincommerce/fincommerce-sniffs",
+    "name": "dieselfox1/fincommerce-sniffs",
     "description": "FinCommerce sniffs",
     "type": "phpcodesniffer-standard",
     "license": "MIT",

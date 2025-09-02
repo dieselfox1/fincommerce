@@ -901,7 +901,7 @@ final class FinCommerce {
 	 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
 	 *
 	 * Locales found in:
-	 *      - WP_LANG_DIR/fincommerce/fincommerce-LOCALE.mo
+	 *      - WP_LANG_DIR/dieselfox1/fincommerce-LOCALE.mo
 	 *      - WP_LANG_DIR/plugins/fincommerce-LOCALE.mo
 	 */
 	public function load_plugin_textdomain() {
@@ -909,7 +909,7 @@ final class FinCommerce {
 		 * Filter to adjust the FinCommerce locale to use for translations.
 		 */
 		$locale                  = apply_filters( 'plugin_locale', determine_locale(), 'fincommerce' ); // phpcs:ignore FinCommerce.Commenting.CommentHooks.MissingSinceComment
-		$custom_translation_path = WP_LANG_DIR . '/fincommerce/fincommerce-' . $locale . '.mo';
+		$custom_translation_path = WP_LANG_DIR . '/dieselfox1/fincommerce-' . $locale . '.mo';
 		$plugin_translation_path = WP_LANG_DIR . '/plugins/fincommerce-' . $locale . '.mo';
 
 		// If a custom translation exists (by default it will not, as it is not a standard WordPress convention)

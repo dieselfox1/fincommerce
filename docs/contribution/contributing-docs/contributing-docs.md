@@ -33,7 +33,7 @@ This guide walks you through the structure, tooling, and process for contributin
 ### Opening a pull request
 
 1. Commit and push your changes to your fork.
-2. [Open a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to fincommerce/fincommerce, targeting the trunk branch.
+2. [Open a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to dieselfox1/fincommerce, targeting the trunk branch.
 3. Use a descriptive title, and fill out the PR template. Include:
     * Rationale for new files or categories
     * A note about any sidebar or structure changes

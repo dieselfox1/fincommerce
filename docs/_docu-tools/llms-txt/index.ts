@@ -127,7 +127,7 @@ async function generateFileList(files: Array<{ path: string; relativePath: strin
   for (const file of files) {
     const description = extractDescription(file.content);
     const posixPath = file.relativePath.split(path.sep).join('/'); // ensure forward slashes
-    const url = `https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/docs/${posixPath}`;
+    const url = `https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/docs/${posixPath}`;
     content += `[${file.title}](${url}) ${description}\n\n`;
   }
   

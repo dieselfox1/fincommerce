@@ -33,9 +33,9 @@ class WC_Updates_Screen_Updates extends WC_Plugin_Updates {
 	 */
 	public function update_screen_modal() {
 		$updateable_plugins = get_plugin_updates();
-		if ( empty( $updateable_plugins['fincommerce/fincommerce.php'] )
-			|| empty( $updateable_plugins['fincommerce/fincommerce.php']->update )
-			|| empty( $updateable_plugins['fincommerce/fincommerce.php']->update->new_version ) ) {
+		if ( empty( $updateable_plugins['dieselfox1/fincommerce.php'] )
+			|| empty( $updateable_plugins['dieselfox1/fincommerce.php']->update )
+			|| empty( $updateable_plugins['dieselfox1/fincommerce.php']->update->new_version ) ) {
 			return;
 		}
 
@@ -44,7 +44,7 @@ class WC_Updates_Screen_Updates extends WC_Plugin_Updates {
 			$version_type = 'none';
 		}
 
-		$this->new_version            = wc_clean( $updateable_plugins['fincommerce/fincommerce.php']->update->new_version );
+		$this->new_version            = wc_clean( $updateable_plugins['dieselfox1/fincommerce.php']->update->new_version );
 		$this->major_untested_plugins = $this->get_untested_plugins( $this->new_version, $version_type );
 
 		if ( ! empty( $this->major_untested_plugins ) ) {
@@ -67,13 +67,13 @@ class WC_Updates_Screen_Updates extends WC_Plugin_Updates {
 					if ( modal_dismissed ) {
 						return;
 					}
-					var $checkbox = $( 'input[value="fincommerce/fincommerce.php"]' );
+					var $checkbox = $( 'input[value="dieselfox1/fincommerce.php"]' );
 					if ( $checkbox.prop( 'checked' ) ) {
 						$( '#wc-upgrade-warning' ).trigger( 'click' );
 					}
 				}
 
-				$( '#plugins-select-all, input[value="fincommerce/fincommerce.php"]' ).on( 'change', function() {
+				$( '#plugins-select-all, input[value="dieselfox1/fincommerce.php"]' ).on( 'change', function() {
 					show_modal_if_checked();
 				} );
 
@@ -90,7 +90,7 @@ class WC_Updates_Screen_Updates extends WC_Plugin_Updates {
 				// Uncheck the WC update checkbox if the modal is canceled.
 				$( '#wc_untested_extensions_modal .cancel' ).on( 'click', function( evt ) {
 					evt.preventDefault();
-					$( 'input[value="fincommerce/fincommerce.php"]' ).prop( 'checked', false );
+					$( 'input[value="dieselfox1/fincommerce.php"]' ).prop( 'checked', false );
 					tb_remove();
 				});
 			})( jQuery );

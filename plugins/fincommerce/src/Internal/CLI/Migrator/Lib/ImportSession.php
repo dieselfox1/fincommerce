@@ -4,7 +4,7 @@
  * !! Do not apply Woo-specific changes to this class !!
  *
  * This class is a part of the WordPress/php-toolkit project and is currently
- * duplicated between WordPress/php-toolkit and fincommerce/fincommerce:
+ * duplicated between WordPress/php-toolkit and dieselfox1/fincommerce:
  * * https://github.com/WordPress/php-toolkit/blob/trunk/components/DataLiberation/Importer/ImportSession.php
  * * https://github.com/dieselfox1/fincommerce/blob/trunk/plugins/fincommerce/src/Internal/CLI/Migrator/Lib/ImportSession.php
  *

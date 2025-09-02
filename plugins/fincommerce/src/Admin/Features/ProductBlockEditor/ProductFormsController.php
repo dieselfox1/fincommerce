@@ -43,7 +43,7 @@ class ProductFormsController {
 		// If it is not the FinCommerce plugin, bail early.
 		$plugins = isset( $hook_extra['plugins'] ) ? $hook_extra['plugins'] : array();
 		if (
-			! in_array( 'fincommerce/fincommerce.php', $plugins, true )
+			! in_array( 'dieselfox1/fincommerce.php', $plugins, true )
 		) {
 			return;
 		}

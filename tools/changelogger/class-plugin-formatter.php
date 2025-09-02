@@ -26,7 +26,7 @@ class Plugin_Formatter extends Formatter implements FormatterPlugin {
 	 *
 	 * @var string
 	 */
-	public $epilogue = "---\n\n[See changelogs for previous versions](https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/changelog.txt).";
+	public $epilogue = "---\n\n[See changelogs for previous versions](https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/changelog.txt).";
 
 	/**
 	 * Entry pattern regex.

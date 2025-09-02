@@ -81,7 +81,7 @@ class WC_Tests_Product_Download extends WC_Unit_Test_Case {
 		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/assets/images/help.png' );
 		$this->assertEquals( 'image/png', $download->get_file_type() );
 
-		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/fincommerce.php' );
+		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'dieselfox1/fincommerce.php' );
 		$this->assertEquals( false, $download->get_file_type() );
 	}
 
@@ -111,7 +111,7 @@ class WC_Tests_Product_Download extends WC_Unit_Test_Case {
 		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/assets/images/help.png' );
 		$this->assertEquals( 'png', $download->get_file_extension() );
 
-		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/fincommerce.php' );
+		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'dieselfox1/fincommerce.php' );
 		$this->assertEquals( 'php', $download->get_file_extension() );
 	}
 
@@ -138,11 +138,11 @@ class WC_Tests_Product_Download extends WC_Unit_Test_Case {
 		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/assets/images/help.png' );
 		$this->assertEquals( true, $download->is_allowed_filetype() );
 
-		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/fincommerce.php' );
+		$download->set_file( trailingslashit( WP_PLUGIN_DIR ) . 'dieselfox1/fincommerce.php' );
 		$this->assertEquals( false, $download->is_allowed_filetype() );
 
 		// For triple-slash overwriting of "local" to "absolute" - see https://github.com/dieselfox1/fincommerce/pull/28699.
-		$download->set_file( '//' . trailingslashit( WP_PLUGIN_DIR ) . 'fincommerce/fincommerce.php' );
+		$download->set_file( '//' . trailingslashit( WP_PLUGIN_DIR ) . 'dieselfox1/fincommerce.php' );
 		$this->assertEquals( false, $download->is_allowed_filetype() );
 	}
 

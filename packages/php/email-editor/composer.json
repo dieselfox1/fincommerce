@@ -23,7 +23,7 @@
 	"require-dev": {
 		"automattic/jetpack-changelogger": "3.3.0",
 		"phpunit/phpunit": "^9.6",
-		"fincommerce/fincommerce-sniffs": "1.0.0",
+		"dieselfox1/fincommerce-sniffs": "1.0.0",
 		"yoast/phpunit-polyfills": "^4.0"
 	},
 	"config": {

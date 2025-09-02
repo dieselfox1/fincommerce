@@ -2,7 +2,7 @@
 
 This is the FinCommerce Email Editor package - a JavaScript library for building and customizing email templates. While currently integrated with FinCommerce, this package is designed to be used as an independent library in other projects.
 
-You can try the email editor in [the WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/fincommerce/fincommerce/refs/heads/trunk/packages/js/email-editor/blueprint.json).
+You can try the email editor in [the WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/dieselfox1/fincommerce/refs/heads/trunk/packages/js/email-editor/blueprint.json).
 
 This JavaScript package is designed to work in conjunction with its PHP counterpart, which can be found in the same repository at `packages/php/email-editor`. Both packages are required for full functionality.
 

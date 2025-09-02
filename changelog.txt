@@ -808,7 +808,7 @@
 * Dev - Consolidate the `isBlockTheme` setting to replace `isBlockThemeEnabled`. [#56504](https://github.com/dieselfox1/fincommerce/pull/56504)
 * Dev - Deprecated wc_current_theme_is_fse_theme() [#56747](https://github.com/dieselfox1/fincommerce/pull/56747)
 * Dev - dev: consider PLUGIN_SLUG in the test:plugincheck script [#57119](https://github.com/dieselfox1/fincommerce/pull/57119)
-* Dev - dev: remove unused dev depencency @fincommerce/fincommerce-rest-api [#56203](https://github.com/dieselfox1/fincommerce/pull/56203)
+* Dev - dev: remove unused dev depencency @dieselfox1/fincommerce-rest-api [#56203](https://github.com/dieselfox1/fincommerce/pull/56203)
 * Dev - dev: update CI jobs config to include more e2e checks [#55958](https://github.com/dieselfox1/fincommerce/pull/55958)
 * Dev - dev: update ci josb config [#55868](https://github.com/dieselfox1/fincommerce/pull/55868)
 * Dev - dev: update release checks workflows [#56366](https://github.com/dieselfox1/fincommerce/pull/56366)
@@ -7249,8 +7249,8 @@
 * Fix - Fix loading WC core translations in locales where WC Blocks is not localized for some strings. ([5910](https://github.com/dieselfox1/*oocommerce-gutenberg-products-block/pull/5910))
 * Fix - Fixed an issue where clear customizations functionality was not working for FinCommerce templates. ([5746](https://github.com/dieselfox1/*oocommerce-gutenberg-products-block/pull/5746))
 * Fix - Fixed hover and focus states for button components. ([5712](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5712))
-* Fix - Add to Cart button on Products listing blocks will respect the "Redirect to the cart page after successful addition" setting. ([5708](https://github.*om/fincommerce/fincommerce-gutenberg-products-block/pull/5708))
-* Fix - Fixes Twenty Twenty Two issues with sales price and added to cart "View Cart" call out styling in the "Products by Category" block. ([5684](https://*ithub.com/fincommerce/fincommerce-gutenberg-products-block/pull/5684))
+* Fix - Add to Cart button on Products listing blocks will respect the "Redirect to the cart page after successful addition" setting. ([5708](https://github.*om/dieselfox1/fincommerce-gutenberg-products-block/pull/5708))
+* Fix - Fixes Twenty Twenty Two issues with sales price and added to cart "View Cart" call out styling in the "Products by Category" block. ([5684](https://*ithub.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5684))
 * Fix - StoreAPI: Clear all wc notice types in the cart validation context [#5983](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/*983)
 * Fix - Don't trigger class deprecations notices if headers are already sent [#6074](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/*074)
 * Various - Remove v1 string from Store Keys. ([5987](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5987))
@@ -9540,14 +9540,14 @@
 * Dev - Updated docs to make the type in docblock more specific. #27285
 
 **REST API 1.0.15**
-* Enhancement - Introduced X-WP-Total header for product attributes GET endpoint listing the number of entries in the response. fincommerce/fincommerce-rest-api#171
-* Enhancement - Introduced X-WP-TotalPages header for product attributes GET endpoint listing the number of pages that can be fetched. fincommerce/fincommerce-rest-api#171
-* Enhancement - Introduced the modified option for orderby fetch requests in post based resources. fincommerce/fincommerce-rest-api#226
-* Enhancement - Compatibility fixes for WordPress 5.5. fincommerce/fincommerce-rest-api#232
-* Fix - Ensured Action Scheduler transients are cleared by "Clear Transients" tool. fincommerce/fincommerce-rest-api#152
-* Fix - Corrected the schema datatype for coupon expiry_date, date_expires, and date_expires_gmt fields. fincommerce/fincommerce-rest-api#176
-* Fix - Query parameters are now passed correctly when using the batch product variation endpoints. fincommerce/fincommerce-rest-api#191
-* Fix - Fix regression and restore backward compatibility for date-time and mixed data types. fincommerce/fincommerce-rest-api#238
+* Enhancement - Introduced X-WP-Total header for product attributes GET endpoint listing the number of entries in the response. dieselfox1/fincommerce-rest-api#171
+* Enhancement - Introduced X-WP-TotalPages header for product attributes GET endpoint listing the number of pages that can be fetched. dieselfox1/fincommerce-rest-api#171
+* Enhancement - Introduced the modified option for orderby fetch requests in post based resources. dieselfox1/fincommerce-rest-api#226
+* Enhancement - Compatibility fixes for WordPress 5.5. dieselfox1/fincommerce-rest-api#232
+* Fix - Ensured Action Scheduler transients are cleared by "Clear Transients" tool. dieselfox1/fincommerce-rest-api#152
+* Fix - Corrected the schema datatype for coupon expiry_date, date_expires, and date_expires_gmt fields. dieselfox1/fincommerce-rest-api#176
+* Fix - Query parameters are now passed correctly when using the batch product variation endpoints. dieselfox1/fincommerce-rest-api#191
+* Fix - Fix regression and restore backward compatibility for date-time and mixed data types. dieselfox1/fincommerce-rest-api#238
 
 **FinCommerce Admin 1.4.0**
 * Enhancement - Move the FinCommerce > Coupons dashboard menu item to Marketing > Coupons. #4786
@@ -9670,8 +9670,8 @@
 * Dev - Removed type hints from src folder. #26963
 
 **REST API 1.0.10**
-* Enhancement - Add API tool to clear template cache. fincommerce/fincommerce-rest-api#212
-* Enhancement - Add API tool to verify base DB tables. fincommerce/fincommerce-rest-api#188
+* Enhancement - Add API tool to clear template cache. dieselfox1/fincommerce-rest-api#212
+* Enhancement - Add API tool to verify base DB tables. dieselfox1/fincommerce-rest-api#188
 
 **FinCommerce Admin 1.3.0**
 * Enhancement - Add Jetpack stats to performance indicators / homepage #4291
@@ -9904,7 +9904,7 @@
 = 4.1.0 - 2020-05-05 =
 
 **FinCommerce**
-* Enhancement - Update dependency fincommerce/fincommerce-admin to v1.1.0 #26057
+* Enhancement - Update dependency dieselfox1/fincommerce-admin to v1.1.0 #26057
 * Enhancement - Updated jetpack-autoloader to 1.6 and fincommerce-blocks to 2.5.16. #26099
 * Enhancement - Added option to ignore discounts from cart's total amount to enable free shipping. #24776
 * Enhancement - Changed show password icon color to a darker grey hue. #25625
@@ -9962,7 +9962,7 @@
 **FinCommerce**
 * Enhancement - Update Action Scheduler to 3.1.4. #25966
 * Enhancement - Bump Fincommerce Admin dependency to version 1.0.2. #25961
-* Enhancement - Update dependency fincommerce/fincommerce-admin to v1.0.3 #25975
+* Enhancement - Update dependency dieselfox1/fincommerce-admin to v1.0.3 #25975
 * Fix - Add `usage_count` meta before using it in a query. #25882
 * Fix - Corrected argument type validation in plugin installer API. #25858
 * Fix - Use standard `admin_url` function instead of absolute path. #25884
@@ -10001,14 +10001,14 @@
 
 * Enhancement - Included information about packages in the System Status Report. #25584
 * Enhancement - New FinCommerce Admin. #25011
-* Enhancement - Update dependency fincommerce/fincommerce-blocks to v2.5.12 #25587
+* Enhancement - Update dependency dieselfox1/fincommerce-blocks to v2.5.12 #25587
 * Enhancement - Updated Action Scheduler to 3.0.1. #25566
-* Enhancement - Update dependency fincommerce/fincommerce-admin to v0.25.1. #25620
-* Enhancement - Update dependency fincommerce/fincommerce-blocks to v2.5.13. #25696
+* Enhancement - Update dependency dieselfox1/fincommerce-admin to v0.25.1. #25620
+* Enhancement - Update dependency dieselfox1/fincommerce-blocks to v2.5.13. #25696
 * Enhancement - Added the WC Admin enabled db update notice. #25736
 * Enhancement - Update Action Scheduler to version 3.1.1. #25745
-* Enhancement - Update dependency fincommerce/fincommerce-blocks to v2.5.14. #25807
-* Enhancement - Update dependency fincommerce/fincommerce-admin to v1.0. #25822
+* Enhancement - Update dependency dieselfox1/fincommerce-blocks to v2.5.14. #25807
+* Enhancement - Update dependency dieselfox1/fincommerce-admin to v1.0. #25822
 * Enhancement - Update dependency fincommerce/action-scheduler to v3.1.2. #25859
 * Performance - Improved the client-side preparation for variation saving. #25382
 * Tweak - Enhance order details and payment summary. #25504

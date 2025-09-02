@@ -124,7 +124,7 @@ function tools_load_template_version( $request ) {
 	}
 
 	// Remove any customizations
-	$template = get_block_template( "fincommerce/fincommerce//{$template_name}", 'wp_template' );
+	$template = get_block_template( "dieselfox1/fincommerce//{$template_name}", 'wp_template' );
 	if ( $template && isset( $template->wp_id ) ) {
 		$delete_result = wp_delete_post( $template->wp_id, true );
 		if ( false === $delete_result ) {
@@ -166,9 +166,9 @@ function tools_load_template_version( $request ) {
 	}
 
 	// Set template metadata and taxonomy terms
-	update_post_meta( $template_id, 'theme', 'fincommerce/fincommerce' );
+	update_post_meta( $template_id, 'theme', 'dieselfox1/fincommerce' );
 	wp_set_object_terms( $template_id, 'wp_template', 'wp_template_type' );
-	wp_set_object_terms( $template_id, 'fincommerce/fincommerce', 'wp_theme' );
+	wp_set_object_terms( $template_id, 'dieselfox1/fincommerce', 'wp_theme' );
 
 	return new \WP_REST_Response(
 		array(

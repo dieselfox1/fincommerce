@@ -32,7 +32,7 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 	 * Constructor.
 	 */
 	public function __construct() {
-		add_action( 'in_plugin_update_message-fincommerce/fincommerce.php', array( $this, 'in_plugin_update_message' ), 10, 2 );
+		add_action( 'in_plugin_update_message-dieselfox1/fincommerce.php', array( $this, 'in_plugin_update_message' ), 10, 2 );
 	}
 
 	/**

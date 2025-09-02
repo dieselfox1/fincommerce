@@ -151,8 +151,8 @@ class WC_Beta_Tester_Live_Branches_Installer {
 	 */
 	public function deactivate_fincommerce() {
 		// First check is the regular woo plugin active.
-		if ( is_plugin_active( 'fincommerce/fincommerce.php' ) ) {
-			deactivate_plugins( 'fincommerce/fincommerce.php' );
+		if ( is_plugin_active( 'dieselfox1/fincommerce.php' ) ) {
+			deactivate_plugins( 'dieselfox1/fincommerce.php' );
 		}
 
 		// Check if any beta tester installed plugins are active.

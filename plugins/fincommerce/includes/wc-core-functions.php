@@ -2416,7 +2416,7 @@ function wc_prevent_dangerous_auto_updates( $should_update, $plugin ) {
 		return $should_update;
 	}
 
-	if ( 'fincommerce/fincommerce.php' !== $plugin->plugin ) {
+	if ( 'dieselfox1/fincommerce.php' !== $plugin->plugin ) {
 		return $should_update;
 	}
 

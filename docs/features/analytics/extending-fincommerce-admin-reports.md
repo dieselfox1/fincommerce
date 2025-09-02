@@ -20,7 +20,7 @@ In your local install, clone and start WC-Admin if you haven't already.
 
 ```sh
 cd wp-content/plugins
-git clone git@github.com:fincommerce/fincommerce.git
+git clone git@github.com:dieselfox1/fincommerce.git
 cd plugins/fincommerce/client/admin
 npm run build
 ```

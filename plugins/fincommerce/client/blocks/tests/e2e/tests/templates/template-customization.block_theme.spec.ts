@@ -29,7 +29,7 @@ test.describe( 'Template customization', () => {
 			requestUtils,
 		} ) => {
 			await admin.visitSiteEditor( {
-				postId: `fincommerce/fincommerce//${ testData.templatePath }`,
+				postId: `dieselfox1/fincommerce//${ testData.templatePath }`,
 				postType: testData.templateType,
 				canvas: 'edit',
 			} );
@@ -86,7 +86,7 @@ test.describe( 'Template customization', () => {
 			} ) => {
 				// Edit fallback template and verify changes are visible.
 				await admin.visitSiteEditor( {
-					postId: `fincommerce/fincommerce//${ testData.fallbackTemplate?.templatePath }`,
+					postId: `dieselfox1/fincommerce//${ testData.fallbackTemplate?.templatePath }`,
 					postType: testData.templateType,
 					canvas: 'edit',
 				} );
@@ -149,7 +149,7 @@ test.describe( 'Template customization', () => {
 		} ) => {
 			// Edit the FinCommerce default template
 			await admin.visitSiteEditor( {
-				postId: `fincommerce/fincommerce//${ testData.templatePath }`,
+				postId: `dieselfox1/fincommerce//${ testData.templatePath }`,
 				postType: testData.templateType,
 				canvas: 'edit',
 			} );

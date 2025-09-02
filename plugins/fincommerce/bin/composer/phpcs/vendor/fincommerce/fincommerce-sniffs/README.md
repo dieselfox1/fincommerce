@@ -5,7 +5,7 @@ Collection of PHP_CodeSniffer sniffs for FinCommerce.
 ## Installation
 
 ```php
-composer require fincommerce/fincommerce-sniffs
+composer require dieselfox1/fincommerce-sniffs
 ```
 
 ## Usage

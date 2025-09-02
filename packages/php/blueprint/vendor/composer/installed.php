@@ -529,12 +529,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'fincommerce/fincommerce-sniffs' => array(
+        'dieselfox1/fincommerce-sniffs' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
             'reference' => '3a65b917ff5ab5e65609e5dcb7bc62f9455bbef8',
             'type' => 'phpcodesniffer-standard',
-            'install_path' => __DIR__ . '/../fincommerce/fincommerce-sniffs',
+            'install_path' => __DIR__ . '/../dieselfox1/fincommerce-sniffs',
             'aliases' => array(),
             'dev_requirement' => true,
         ),

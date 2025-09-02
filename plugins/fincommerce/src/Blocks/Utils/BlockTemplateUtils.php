@@ -536,9 +536,9 @@ class BlockTemplateUtils {
 
 	/**
 	 * Removes templates from the theme or FinCommerce which have the same slug
-	 * as template saved in the database with the `fincommerce/fincommerce` theme.
+	 * as template saved in the database with the `dieselfox1/fincommerce` theme.
 	 * Before WC migrated to the Template Registration API from WordPress, templates
-	 * were saved in the database with the `fincommerce/fincommerce` theme instead
+	 * were saved in the database with the `dieselfox1/fincommerce` theme instead
 	 * of the theme's slug.
 	 *
 	 * @param \WP_Block_Template[]|\stdClass[] $templates List of templates to run the filter on.

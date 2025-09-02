@@ -1382,7 +1382,7 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "fincommerce/fincommerce-sniffs": "0.1.0",
+                "dieselfox1/fincommerce-sniffs": "0.1.0",
                 "phpunit/phpunit": "^8.5",
                 "wp-cli/wp-cli": "~2.5.0",
                 "yoast/phpunit-polyfills": "^2.0"
@@ -1423,7 +1423,7 @@
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "3.3.0",
-                "fincommerce/fincommerce-sniffs": "^1.0.0",
+                "dieselfox1/fincommerce-sniffs": "^1.0.0",
                 "mockery/mockery": "^1.6",
                 "phpunit/phpunit": "^9",
                 "yoast/phpunit-polyfills": "^2.0"
@@ -1492,7 +1492,7 @@
             },
             "require-dev": {
                 "automattic/jetpack-changelogger": "3.3.0",
-                "fincommerce/fincommerce-sniffs": "1.0.0",
+                "dieselfox1/fincommerce-sniffs": "1.0.0",
                 "phpunit/phpunit": "^9.6",
                 "yoast/phpunit-polyfills": "^4.0"
             },

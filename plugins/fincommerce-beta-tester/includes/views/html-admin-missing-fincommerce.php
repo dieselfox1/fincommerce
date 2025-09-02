@@ -17,13 +17,13 @@ defined( 'ABSPATH' ) || exit;
 		?>
 	</p>
 
-	<?php if ( ! is_plugin_active( 'fincommerce/fincommerce.php' ) && current_user_can( 'activate_plugin', 'fincommerce/fincommerce.php' ) ) : ?>
+	<?php if ( ! is_plugin_active( 'dieselfox1/fincommerce.php' ) && current_user_can( 'activate_plugin', 'dieselfox1/fincommerce.php' ) ) : ?>
 		<p>
 			<?php
 			$installed_plugins = get_plugins();
-			if ( isset( $installed_plugins['fincommerce/fincommerce.php'] ) ) :
+			if ( isset( $installed_plugins['dieselfox1/fincommerce.php'] ) ) :
 				?>
-			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugins.php?action=activate&plugin=fincommerce/fincommerce.php&plugin_status=active' ), 'activate-plugin_fincommerce/fincommerce.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Activate FinCommerce', 'fincommerce-beta-tester' ); ?></a>
+			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugins.php?action=activate&plugin=dieselfox1/fincommerce.php&plugin_status=active' ), 'activate-plugin_dieselfox1/fincommerce.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Activate FinCommerce', 'fincommerce-beta-tester' ); ?></a>
 			<?php endif; ?>
 			<?php if ( current_user_can( 'deactivate_plugin', 'fincommerce-beta-tester/fincommerce-beta-tester.php' ) ) : ?>
 				<a href="<?php echo esc_url( wp_nonce_url( 'plugins.php?action=deactivate&plugin=fincommerce-beta-tester/fincommerce-beta-tester.php&plugin_status=inactive', 'deactivate-plugin_fincommerce-beta-tester/fincommerce-beta-tester.php' ) ); ?>" class="button button-secondary"><?php esc_html_e( 'Turn off Beta Tester plugin', 'fincommerce-beta-tester' ); ?></a>

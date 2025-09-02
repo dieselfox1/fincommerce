@@ -14,7 +14,7 @@ Packages require a Package class which inits the package and returns version inf
 
 ## Publishing a package
 
-Your package should be published to Packagist ([example](https://packagist.org/packages/fincommerce/fincommerce-example-package)). The package name in this case is `fincommerce/fincommerce-example-package`.
+Your package should be published to Packagist ([example](https://packagist.org/packages/dieselfox1/fincommerce-example-package)). The package name in this case is `dieselfox1/fincommerce-example-package`.
 
 ## Including packages in core
 
@@ -22,7 +22,7 @@ Edit `composer.json` in the root directory and add the package and package versi
 
 ```json
 {
-  "name": "fincommerce/fincommerce",
+  "name": "dieselfox1/fincommerce",
   "description": "An eCommerce toolkit that helps you sell anything. Beautifully.",
   "homepage": "https://fincommerce.com/",
   "type": "wordpress-plugin",
@@ -31,10 +31,10 @@ Edit `composer.json` in the root directory and add the package and package versi
   "minimum-stability": "dev",
   "require": {
     "composer/installers": "1.6.0",
-    "fincommerce/fincommerce-rest-api": "dev-test/jetpack-autoloader",
-    "fincommerce/fincommerce-blocks": "dev-build/2.2.0-dev",
+    "dieselfox1/fincommerce-rest-api": "dev-test/jetpack-autoloader",
+    "dieselfox1/fincommerce-blocks": "dev-build/2.2.0-dev",
     "automattic/jetpack-autoloader": "1.2.0",
-    "fincommerce/fincommerce-example-package": "1.0.0"
+    "dieselfox1/fincommerce-example-package": "1.0.0"
   },
   ...
 ```

@@ -172,4 +172,4 @@ FinCommerce comes with some sample data you can use to see how products look; im
 
 = 10.3.0-dev 2025-XX-XX =
 
-[See changelog for all versions](https://raw.githubusercontent.com/fincommerce/fincommerce/trunk/changelog.txt).
+[See changelog for all versions](https://raw.githubusercontent.com/dieselfox1/fincommerce/trunk/changelog.txt).

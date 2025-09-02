@@ -43,7 +43,7 @@ $right_image = plugins_url( 'assets/images/pattern-placeholders/orange-wall-with
 					<!-- /wp:paragraph -->
 
 					<!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","bottom":"0px"},"margin":{"top":"24px","bottom":"32px"},"blockGap":"0"},"layout":{"selfStretch":"fit","flexSize":null}},"layout":{"type":"constrained","justifyContent":"center"}} -->
-					<div class="wp-block-group" style="margin-top:24px;margin-bottom:32px;padding-top:0px;padding-bottom:0px"><!-- wp:template-part {"slug":"coming-soon-social-links","theme":"fincommerce/fincommerce","tagName":"div","align":"center","className":"is-size-fit-content"} /--></div>
+					<div class="wp-block-group" style="margin-top:24px;margin-bottom:32px;padding-top:0px;padding-bottom:0px"><!-- wp:template-part {"slug":"coming-soon-social-links","theme":"dieselfox1/fincommerce","tagName":"div","align":"center","className":"is-size-fit-content"} /--></div>
 					<!-- /wp:group --></div>
 				<!-- /wp:group --></div>
 			<!-- /wp:column -->

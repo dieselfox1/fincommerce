@@ -2470,11 +2470,11 @@ class WC_Helper {
 			return false;
 		}
 
-		if ( empty( $updates->response['fincommerce/fincommerce.php'] ) ) {
+		if ( empty( $updates->response['dieselfox1/fincommerce.php'] ) ) {
 			return false;
 		}
 
-		$data = $updates->response['fincommerce/fincommerce.php'];
+		$data = $updates->response['dieselfox1/fincommerce.php'];
 		if ( version_compare( Constants::get_constant( 'WC_VERSION' ), $data->new_version, '>=' ) ) {
 			return false;
 		}

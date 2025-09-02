@@ -317,7 +317,7 @@ class WC_Beta_Tester {
 
 		$response->sections['changelog'] = sprintf(
 			'<p><a target="_blank" href="%s">' . __( 'Read the changelog and find out more about the release on GitHub.', 'fincommerce-beta-tester' ) . '</a></p>',
-			'https://github.com/dieselfox1/fincommerce/blob/' . $response->version . '/readme.txt'
+			'https://github.com/fincommerce/fincommerce/blob/' . $response->version . '/readme.txt'
 		);
 
 		foreach ( $response->sections as $key => $section ) {

@@ -311,7 +311,7 @@ class Packages {
 				 *
 				 * @since 5.0.0
 				 * @param bool $activated_plugin Activated plugin path,
-				 *                               generally fincommerce/fincommerce.php.
+				 *                               generally dieselfox1/fincommerce.php.
 				 */
 				do_action( 'fincommerce_activated_plugin', $activated_plugin );
 			}

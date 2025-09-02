@@ -1,4 +1,4 @@
-export const fincommerce_ID = 'fincommerce/fincommerce';
+export const fincommerce_ID = 'dieselfox1/fincommerce';
 
 export const getDefaultTemplateProps = ( templateTitle: string ) => {
 	return {

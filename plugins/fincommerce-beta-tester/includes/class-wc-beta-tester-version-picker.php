@@ -52,7 +52,7 @@ class WC_Beta_Tester_Version_Picker {
 			include dirname( __FILE__ ) . '/class-wc-beta-tester-plugin-upgrader.php';
 
 			$plugin_name = 'fincommerce';
-			$plugin      = 'fincommerce/fincommerce.php';
+			$plugin      = 'dieselfox1/fincommerce.php';
 			$skin_args   = array(
 				'type'    => 'web',
 				'url'     => 'plugins.php?page=wc-beta-tester-version-picker',

@@ -2424,7 +2424,7 @@ $stock_notifications_table_schema;
 	 * Get slug from path and associate it with the path.
 	 *
 	 * @param array  $plugins Associative array of plugin files to paths.
-	 * @param string $key Plugin relative path. Example: fincommerce/fincommerce.php.
+	 * @param string $key Plugin relative path. Example: dieselfox1/fincommerce.php.
 	 */
 	private static function associate_plugin_file( $plugins, $key ) {
 		$path                 = explode( '/', $key );

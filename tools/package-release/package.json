@@ -9,7 +9,7 @@
 	"homepage": "https://github.com/dieselfox1/fincommerce",
 	"license": "GPL-2.0-or-later",
 	"main": "dist/index.js",
-	"repository": "fincommerce/fincommerce",
+	"repository": "dieselfox1/fincommerce",
 	"files": [
 		"/bin",
 		"/dist",

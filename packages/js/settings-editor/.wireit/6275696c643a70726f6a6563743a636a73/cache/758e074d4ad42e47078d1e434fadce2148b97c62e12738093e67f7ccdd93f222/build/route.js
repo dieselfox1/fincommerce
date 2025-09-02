@@ -104,7 +104,7 @@ function useModernRoutes() {
                 setRoutes(getModernPages());
             }
         };
-        const namespace = `fincommerce/fincommerce/watch_${PAGES_FILTER}`;
+        const namespace = `dieselfox1/fincommerce/watch_${PAGES_FILTER}`;
         (0, hooks_1.addAction)('hookAdded', namespace, handleHookAdded);
         return () => {
             (0, hooks_1.removeAction)('hookAdded', namespace);
