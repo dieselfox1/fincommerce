@@ -1,9 +1,0 @@
-export declare const PARAGRAPH_BLOCK_ID = "core/paragraph";
-export declare const HEADING_BLOCK_ID = "core/heading";
-export declare const LIST_BLOCK_ID = "core/list";
-export declare const LIST_ITEM_BLOCK_ID = "core/list-item";
-export declare const QUOTE_BLOCK_ID = "core/quote";
-export declare const IMAGE_BLOCK_ID = "core/image";
-export declare const VIDEO_BLOCK_ID = "core/video";
-export declare const registerBlocks: () => void;
-//# sourceMappingURL=register-blocks.d.ts.map

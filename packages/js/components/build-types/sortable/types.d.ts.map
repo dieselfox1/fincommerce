@@ -1,1 +1,0 @@
-{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../src/sortable/types.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,EAAE,gBAAgB,EAAE,MAAM,OAAO,CAAC;AAEzC,MAAM,MAAM,aAAa,GAAG,GAAG,CAAC,OAAO,CAAC;AAExC,MAAM,MAAM,mBAAmB,GAAG;IACjC,SAAS,CAAC,EAAE,gBAAgB,CAAE,cAAc,CAAE,CAAC;IAC/C,WAAW,CAAC,EAAE,gBAAgB,CAAE,cAAc,CAAE,CAAC;CACjD,CAAC"}

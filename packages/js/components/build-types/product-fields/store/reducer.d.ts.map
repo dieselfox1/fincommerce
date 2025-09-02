@@ -1,1 +1,0 @@
-{"version":3,"file":"reducer.d.ts","sourceRoot":"","sources":["../../../src/product-fields/store/reducer.ts"],"names":[],"mappings":"AAIA,OAAO,EAAE,OAAO,EAAE,MAAM,WAAW,CAAC;AACpC,OAAO,EAAE,iBAAiB,EAAE,MAAM,SAAS,CAAC;AAE5C,QAAA,MAAM,OAAO,UACL,iBAAiB,uBAGf,OAAO,sBAiBhB,CAAC;AAEF,MAAM,MAAM,KAAK,GAAG,UAAU,CAAE,OAAO,OAAO,CAAE,CAAC;AACjD,eAAe,OAAO,CAAC"}

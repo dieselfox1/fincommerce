@@ -1,6 +1,0 @@
-export declare const ConfettiAnimation: ({ trigger, delay, colors, }: {
-    trigger?: boolean | undefined;
-    delay?: number | undefined;
-    colors?: string[] | undefined;
-}) => null;
-//# sourceMappingURL=index.d.ts.map

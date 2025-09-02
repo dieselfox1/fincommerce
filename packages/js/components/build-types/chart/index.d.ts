@@ -1,3 +1,0 @@
-declare const _default: import("react").ComponentType<Omit<any, "isViewportLarge" | "isViewportMobile" | "isViewportWide">>;
-export default _default;
-//# sourceMappingURL=index.d.ts.map
