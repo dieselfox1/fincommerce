@@ -13,9 +13,9 @@
 		}
 	],
 	"ignoreDeps": [
-		"fincommerce/action-scheduler",
-		"fincommerce/fincommerce-admin",
-		"fincommerce/fincommerce-blocks",
-		"fincommerce/fincommerce-rest-api"
+		"woocommerce/action-scheduler",
+		"woocommerce/woocommerce-admin",
+		"woocommerce/woocommerce-blocks",
+		"woocommerce/woocommerce-rest-api"
 	]
 }

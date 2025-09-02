@@ -2,7 +2,7 @@
 	"name": "fincommerce-monorepo",
 	"title": "FinCommerce Monorepo",
 	"description": "Monorepo for the FinCommerce ecosystem",
-	"homepage": "https://fincommerce.com/",
+	"homepage": "https://fintasticfish.us/",
 	"packageManager": "pnpm@9.15.0",
 	"engines": {
 		"node": "^20.11.1"

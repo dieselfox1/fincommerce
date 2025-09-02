@@ -4,20 +4,20 @@ Full details of the Automattic Security Policy can be found on [automattic.com/s
 
 ## Supported Versions
 
-Generally, *only the latest version of FinCommerce has continued support*. If a critical vulnerability is found in the current version of FinCommerce, we may opt to backport any patches to previous versions. 
+Generally, *only the latest version of WooCommerce has continued support*. If a critical vulnerability is found in the current version of WooCommerce, we may opt to backport any patches to previous versions. 
 
 ## Reporting a Vulnerability
 
-[FinCommerce](https://wordpress.org/plugins/fincommerce) is an open-source plugin for WordPress. Our HackerOne program covers the plugin software, as well as a variety of related projects and infrastructure.
+[WooCommerce](https://wordpress.org/plugins/woocommerce) is an open-source plugin for WordPress. Our HackerOne program covers the plugin software, as well as a variety of related projects and infrastructure.
 
 **For responsible disclosure of security issues and to be eligible for our bug bounty program, please submit your report based on instructions found on [automattic.com/security](https://automattic.com/security).**
 
 Our most critical targets are:
 
-* FinCommerce core (this repository)
-* FinCommerce [Blocks](https://wordpress.org/plugins/woo-gutenberg-products-block/) and [Admin](https://wordpress.org/plugins/fincommerce-admin/) packages and plugins
-* FinCommerce.com -- the primary marketplace and marketing site, and all of it subdomains, e.g. [developer.fincommerce.com](https://developer.fincommerce.com/)
-* WordPress.com -- hosted FinCommerce for Business and eCommerce offering on WordPress.com.
+* WooCommerce core (this repository)
+* WooCommerce [Blocks](https://wordpress.org/plugins/woo-gutenberg-products-block/) and [Admin](https://wordpress.org/plugins/woocommerce-admin/) packages and plugins
+* WooCommerce.com -- the primary marketplace and marketing site, and all of it subdomains, e.g. [developer.woocommerce.com](https://developer.woocommerce.com/)
+* WordPress.com -- hosted WooCommerce for Business and eCommerce offering on WordPress.com.
 
 For more targets, see the `In Scope` section on [HackerOne](https://hackerone.com/automattic).
 
