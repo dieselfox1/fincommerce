@@ -254,7 +254,7 @@ jQuery( function( $ ) {
 			var slug = plugins[ i ].slug;
 			bySlug[ slug ] = bySlug[ slug ] ||
 				$( '<span class="plugin-install-info-list-item">' )
-					.append( '<a href="https://wordpress.org/plugins/' + slug + '/" target="_blank">' + plugins[ i ].name + '</a>' );
+					.append( '<a href="https://finpress.org/plugins/' + slug + '/" target="_blank">' + plugins[ i ].name + '</a>' );
 
 			bySlug[ slug ].find( 'a' )
 				.on( 'mouseenter mouseleave', ( function( $hover, event ) {

@@ -100,7 +100,7 @@ jQuery( function ( $ ) {
 		applyRedactions( report ) {
 			var redactions = [
 				{
-					regex: /(WordPress address \(URL\):)[^\n]*/,
+					regex: /(finpress address \(URL\):)[^\n]*/,
 					replacement: "$1 [Redacted]"
 				},
 				{

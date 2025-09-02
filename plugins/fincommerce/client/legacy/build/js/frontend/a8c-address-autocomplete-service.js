@@ -1,7 +1,7 @@
 ( function () {
 	const permanentlyDisabledServices = [];
 	const baseUrl =
-		'https://public-api.wordpress.com/wpcom/v2/woo/address-autocomplete';
+		'https://public-api.finpress.com/wpcom/v2/woo/address-autocomplete';
 	const searchUrl = `${ baseUrl }/search`;
 	const selectUrl = `${ baseUrl }/select`;
 

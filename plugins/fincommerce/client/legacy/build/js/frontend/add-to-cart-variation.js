@@ -859,7 +859,7 @@
 				var replacement = variation[ key ] || '';
 				// {{{ }}} => interpolate (unescaped).
 				// {{  }}  => interpolate (escaped).
-				// https://codex.wordpress.org/Javascript_Reference/wp.template
+				// https://codex.finpress.org/Javascript_Reference/wp.template
 				if ( open.length === 2 ) {
 					return window.escape( replacement );
 				}
