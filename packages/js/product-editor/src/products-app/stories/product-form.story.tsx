@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
-import { DataForm, FieldType, Form } from '@wordpress/dataviews';
+import { useState } from '@finpress/element';
+import { DataForm, FieldType, Form } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

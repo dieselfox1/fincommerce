@@ -138,11 +138,11 @@ class FilesystemUtilTest extends WC_Unit_Test_Case {
 		$mock_wp_filesystem     = $this->createMock( WP_Filesystem_Base::class );
 		$mock_wp_filesystem->method( 'is_readable' )->willReturn( true );
 		$mock_wp_filesystem->method( 'abspath' )->willReturn( ABSPATH );
-		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		FilesystemUtil::validate_upload_file_path( ABSPATH . 'test.txt' );
 
-		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	}
 
 	/**
@@ -167,11 +167,11 @@ class FilesystemUtilTest extends WC_Unit_Test_Case {
 		$mock_wp_filesystem     = $this->createMock( WP_Filesystem_Base::class );
 		$mock_wp_filesystem->method( 'is_readable' )->willReturn( false );
 		$mock_wp_filesystem->method( 'abspath' )->willReturn( ABSPATH );
-		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		FilesystemUtil::validate_upload_file_path( ABSPATH . 'test.txt' );
 
-		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	}
 
 	/**
@@ -185,11 +185,11 @@ class FilesystemUtilTest extends WC_Unit_Test_Case {
 		$mock_wp_filesystem     = $this->createMock( WP_Filesystem_Base::class );
 		$mock_wp_filesystem->method( 'is_readable' )->willReturn( true );
 		$mock_wp_filesystem->method( 'abspath' )->willReturn( ABSPATH );
-		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		FilesystemUtil::validate_upload_file_path( '/etc/test.txt' );
 
-		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	}
 
 	/**
@@ -210,11 +210,11 @@ class FilesystemUtilTest extends WC_Unit_Test_Case {
 		$mock_wp_filesystem     = $this->createMock( WP_Filesystem_Base::class );
 		$mock_wp_filesystem->method( 'is_readable' )->willReturn( true );
 		$mock_wp_filesystem->method( 'abspath' )->willReturn( ABSPATH );
-		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		FilesystemUtil::validate_upload_file_path( '/uploads/test.txt' );
 
-		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		remove_filter( 'upload_dir', $callback );
 	}
 
@@ -229,11 +229,11 @@ class FilesystemUtilTest extends WC_Unit_Test_Case {
 		$mock_wp_filesystem     = $this->createMock( WP_Filesystem_Base::class );
 		$mock_wp_filesystem->method( 'is_readable' )->willReturn( true );
 		$mock_wp_filesystem->method( 'abspath' )->willReturn( ABSPATH );
-		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		FilesystemUtil::validate_upload_file_path( 'file://' . ABSPATH . 'test.txt' );
 
-		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	}
 
 	/**
@@ -247,10 +247,10 @@ class FilesystemUtilTest extends WC_Unit_Test_Case {
 		$mock_wp_filesystem     = $this->createMock( WP_Filesystem_Base::class );
 		$mock_wp_filesystem->method( 'is_readable' )->willReturn( true );
 		$mock_wp_filesystem->method( 'abspath' )->willReturn( 's3://mock-bucket/' );
-		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $mock_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		FilesystemUtil::validate_upload_file_path( 's3://mock-bucket/test.txt' );
 
-		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_filesystem = $original_wp_filesystem; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	}
 }

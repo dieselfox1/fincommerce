@@ -128,9 +128,9 @@ if ( wc_tax_enabled() ) {
 					$coupon_info = $item->get_meta( 'coupon_info' );
 					if ( $coupon_info ) {
 						$coupon_info = json_decode( $coupon_info, true );
-						$post_id     = $coupon_info[0]; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+						$post_id     = $coupon_info[0]; //phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 					} else {
-						$post_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE LOWER(post_title) = LOWER(%s) AND post_type = 'shop_coupon' AND post_status = 'publish' AND post_date < %s LIMIT 1;", wc_sanitize_coupon_code( $item->get_code() ), $order->get_date_created()->format( 'Y-m-d H:i:s' ) ) ); // phpcs:disable WordPress.WP.GlobalVariablesOverride.Prohibited
+						$post_id = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE LOWER(post_title) = LOWER(%s) AND post_type = 'shop_coupon' AND post_status = 'publish' AND post_date < %s LIMIT 1;", wc_sanitize_coupon_code( $item->get_code() ), $order->get_date_created()->format( 'Y-m-d H:i:s' ) ) ); // phpcs:disable finpress.WP.GlobalVariablesOverride.Prohibited
 					}
 					$class = $order->is_editable() ? 'code editable' : 'code';
 					?>
@@ -171,7 +171,7 @@ if ( wc_tax_enabled() ) {
 				<td class="label"><?php esc_html_e( 'Items Subtotal:', 'fincommerce' ); ?></td>
 				<td width="1%"></td>
 				<td class="total">
-					<?php echo wc_price( $order->get_subtotal(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_price( $order->get_subtotal(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 		<?php if ( 0 < $order->get_total_discount() ) : ?>
@@ -179,7 +179,7 @@ if ( wc_tax_enabled() ) {
 				<td class="label"><?php esc_html_e( 'Coupon(s):', 'fincommerce' ); ?></td>
 				<td width="1%"></td>
 				<td class="total">-
-					<?php echo wc_price( $order->get_total_discount(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_price( $order->get_total_discount(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -188,7 +188,7 @@ if ( wc_tax_enabled() ) {
 				<td class="label"><?php esc_html_e( 'Fees:', 'fincommerce' ); ?></td>
 				<td width="1%"></td>
 				<td class="total">
-					<?php echo wc_price( $order->get_total_fees(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_price( $order->get_total_fees(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -200,7 +200,7 @@ if ( wc_tax_enabled() ) {
 				<td class="label"><?php esc_html_e( 'Shipping:', 'fincommerce' ); ?></td>
 				<td width="1%"></td>
 				<td class="total">
-					<?php echo wc_price( $order->get_shipping_total(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_price( $order->get_shipping_total(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 		<?php endif; ?>
@@ -215,7 +215,7 @@ if ( wc_tax_enabled() ) {
 					<td class="total">
 						<?php
 							// We use wc_round_tax_total here because tax may need to be round up or round down depending upon settings, whereas wc_price alone will always round it down.
-							echo wc_price( wc_round_tax_total( $tax_total->amount ), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							echo wc_price( wc_round_tax_total( $tax_total->amount ), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 						?>
 					</td>
 				</tr>
@@ -228,7 +228,7 @@ if ( wc_tax_enabled() ) {
 			<td class="label"><?php esc_html_e( 'Order Total', 'fincommerce' ); ?>:</td>
 			<td width="1%"></td>
 			<td class="total">
-				<?php echo wc_price( $order->get_total(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo wc_price( $order->get_total(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 			</td>
 		</tr>
 
@@ -243,7 +243,7 @@ if ( wc_tax_enabled() ) {
 				<td class="<?php echo $order->get_total_refunded() ? 'label' : 'label label-highlight'; ?>"><?php esc_html_e( 'Paid', 'fincommerce' ); ?>: <br /></td>
 				<td width="1%"></td>
 				<td class="total">
-					<?php echo wc_price( $order->get_total(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_price( $order->get_total(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 			<tr>
@@ -272,7 +272,7 @@ if ( wc_tax_enabled() ) {
 			<tr>
 				<td class="label refunded-total"><?php esc_html_e( 'Refunded', 'fincommerce' ); ?>:</td>
 				<td width="1%"></td>
-				<td class="total refunded-total">-<?php echo wc_price( $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+				<td class="total refunded-total">-<?php echo wc_price( $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></td>
 			</tr>
 
 			<?php do_action( 'fincommerce_admin_order_totals_after_refunded', $order->get_id() ); ?>
@@ -281,7 +281,7 @@ if ( wc_tax_enabled() ) {
 				<td class="label label-highlight"><?php esc_html_e( 'Net Payment', 'fincommerce' ); ?>:</td>
 				<td width="1%"></td>
 				<td class="total">
-				<?php echo wc_price( $order->get_total() - $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo wc_price( $order->get_total() - $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 
@@ -296,7 +296,7 @@ if ( wc_tax_enabled() ) {
 				<td class="label cost-total"><?php esc_html_e( 'Cost Total', 'fincommerce' ); ?>:</td>
 				<td width="1%"></td>
 				<td class="total cost-total">
-					<?php echo wc_price( $order->get_cogs_total_value(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_price( $order->get_cogs_total_value(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</td>
 			</tr>
 		</table>
@@ -357,11 +357,11 @@ if ( wc_tax_enabled() ) {
 		<?php endif; ?>
 		<tr>
 			<td class="label"><?php esc_html_e( 'Amount already refunded', 'fincommerce' ); ?>:</td>
-			<td class="total">-<?php echo wc_price( $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+			<td class="total">-<?php echo wc_price( $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></td>
 		</tr>
 		<tr>
 			<td class="label"><?php esc_html_e( 'Total available to refund', 'fincommerce' ); ?>:</td>
-			<td class="total"><?php echo wc_price( $order->get_total() - $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+			<td class="total"><?php echo wc_price( $order->get_total() - $order->get_total_refunded(), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></td>
 		</tr>
 		<tr>
 			<td class="label">
@@ -442,7 +442,7 @@ if ( wc_tax_enabled() ) {
 							?>
 							<tbody data-row="<?php echo esc_attr( $row ); ?>">
 								<tr>
-									<?php echo $row; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php echo $row; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 								</tr>
 							</tbody>
 						</table>

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useState } from 'react';
 import type { ProductAttribute } from '@fincommerce/data';
-import '@wordpress/interface/src/style.scss';
+import '@finpress/interface/src/style.scss';
 
 /**
  * Internal dependencies

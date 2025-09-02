@@ -8,7 +8,7 @@ namespace Automattic\FinCommerce\Database\Migrations\CustomOrderTable;
 use Automattic\FinCommerce\Database\Migrations\MetaToCustomTableMigrator;
 
 /**
- * Helper class to migrate records from the WordPress post table
+ * Helper class to migrate records from the finpress post table
  * to the custom order table (and only that table - PostsToOrdersMigrationController
  * is used for fully migrating orders).
  */

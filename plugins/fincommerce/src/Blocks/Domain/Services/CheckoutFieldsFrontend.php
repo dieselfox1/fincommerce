@@ -78,7 +78,7 @@ class CheckoutFieldsFrontend {
 	 * @param WC_Order $order Order object.
 	 */
 	public function render_order_address_fields( $address_type, $order ) {
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo $this->render_additional_fields( $this->checkout_fields_controller->get_order_additional_fields_with_values( $order, 'address', $address_type, 'view' ) );
 	}
 
@@ -106,7 +106,7 @@ class CheckoutFieldsFrontend {
 
 		echo '<section class="wc-block-order-confirmation-additional-fields-wrapper">';
 		echo '<h2>' . esc_html__( 'Additional information', 'fincommerce' ) . '</h2>';
-		echo $this->render_additional_fields( $fields ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->render_additional_fields( $fields ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo '</section>';
 	}
 
@@ -294,7 +294,7 @@ class CheckoutFieldsFrontend {
 		$additional_fields = $this->checkout_fields_controller->get_fields_for_location( $location );
 		$field_values      = [];
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		foreach ( $additional_fields as $field_key => $field_data ) {
 			$post_key                   = CheckoutFields::get_group_key( $group ) . $field_key;
 			$field_values[ $field_key ] = wc_clean( wp_unslash( $_POST[ $post_key ] ?? '' ) );
@@ -303,7 +303,7 @@ class CheckoutFieldsFrontend {
 				$field_values[ $field_key ] = $this->checkout_fields_controller->sanitize_field( $field_key, $field_values[ $field_key ] );
 			}
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 		return $field_values;
 	}
 

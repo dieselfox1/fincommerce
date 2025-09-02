@@ -134,7 +134,7 @@ class ProductSpecifications extends AbstractBlock {
 			array( 'class' => 'wp-block-table' )
 		);
 		?>
-		<figure <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<figure <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<table>
 				<thead class="screen-reader-text">
 					<tr>

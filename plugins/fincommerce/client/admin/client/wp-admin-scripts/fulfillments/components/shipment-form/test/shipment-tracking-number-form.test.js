@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies
@@ -20,10 +20,10 @@ jest.mock( '../../../utils/icons', () => ( {
 	EditIcon: () => <span data-testid="edit-icon" />,
 } ) );
 
-jest.mock( '@wordpress/api-fetch' );
+jest.mock( '@finpress/api-fetch' );
 
-jest.mock( '@wordpress/components', () => ( {
-	...jest.requireActual( '@wordpress/components' ),
+jest.mock( '@finpress/components', () => ( {
+	...jest.requireActual( '@finpress/components' ),
 	TextControl: ( { value, onChange, placeholder, onKeyDown } ) => (
 		<div data-testid="text-control">
 			<input

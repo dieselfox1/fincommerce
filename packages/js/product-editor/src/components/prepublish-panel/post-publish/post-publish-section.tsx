@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createElement, useState, Fragment } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Button, PanelBody, TextControl } from '@wordpress/components';
+import { createElement, useState, Fragment } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, PanelBody, TextControl } from '@finpress/components';
 import { recordEvent } from '@fincommerce/tracks';
-import { useCopyToClipboard } from '@wordpress/compose';
+import { useCopyToClipboard } from '@finpress/compose';
 import { Ref } from 'react';
 import { getNewPath } from '@fincommerce/navigation';
 

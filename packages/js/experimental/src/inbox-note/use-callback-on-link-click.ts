@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useCallback, useEffect, useRef } from '@wordpress/element';
+import { useCallback, useEffect, useRef } from '@finpress/element';
 
 export function useCallbackOnLinkClick( onClick: ( link: string ) => void ) {
 	const onNodeClick = useCallback(

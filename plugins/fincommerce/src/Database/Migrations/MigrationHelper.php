@@ -45,7 +45,7 @@ class MigrationHelper {
 
 	/**
 	 * Helper method to escape backtick in column and table names.
-	 * WP does not provide a method to escape table/columns names yet, but hopefully soon in @link https://core.trac.wordpress.org/ticket/52506
+	 * WP does not provide a method to escape table/columns names yet, but hopefully soon in @link https://core.trac.finpress.org/ticket/52506
 	 *
 	 * @param string|array $identifier Column or table name.
 	 *
@@ -116,7 +116,7 @@ class MigrationHelper {
 	private static function migrate_country_states_for_shipping_locations( string $country_code, array $old_to_new_states_mapping ): void {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 
 		$sql            = "SELECT location_id, location_code FROM {$wpdb->prefix}fincommerce_shipping_zone_locations WHERE location_code LIKE '{$country_code}:%'";
 		$locations_data = $wpdb->get_results( $sql, ARRAY_A );
@@ -134,7 +134,7 @@ class MigrationHelper {
 			}
 		}
 
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -180,7 +180,7 @@ class MigrationHelper {
 		$limit      = apply_filters( 'fincommerce_migrate_country_states_for_orders_batch_size', 100, $country_code, $old_to_new_states_mapping );
 		$cot_exists = wc_get_container()->get( DataSynchronizer::class )->check_orders_table_exists();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		foreach ( $old_to_new_states_mapping as $old_state => $new_state ) {
 			if ( $cot_exists ) {
@@ -261,7 +261,7 @@ class MigrationHelper {
 
 		return (int) ( $wpdb->get_var( $more_exist_query ) ) !== 0;
 
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import PageIcon from 'gridicons/dist/pages';
 import { getAdminLink } from '@fincommerce/settings';
 import { recordEvent } from '@fincommerce/tracks';

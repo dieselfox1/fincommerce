@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { __ } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import {
 	importStore,
 	notesStore,
 	QUERY_DEFAULTS,
 	SECOND,
 } from '@fincommerce/data';
-import { withDispatch, withSelect } from '@wordpress/data';
-import { withSpokenMessages } from '@wordpress/components';
+import { withDispatch, withSelect } from '@finpress/data';
+import { withSpokenMessages } from '@finpress/components';
 
 /**
  * Internal dependencies

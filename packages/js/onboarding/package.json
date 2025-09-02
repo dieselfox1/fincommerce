@@ -8,7 +8,7 @@
 		"node": "^20.11.1"
 	},
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce",
 		"onboarding"
 	],
@@ -60,10 +60,10 @@
 		"@fincommerce/experimental": "workspace:*",
 		"@fincommerce/explat": "workspace:*",
 		"@fincommerce/tracks": "workspace:*",
-		"@wordpress/components": "wp-6.6",
-		"@wordpress/compose": "wp-6.6",
-		"@wordpress/element": "wp-6.6",
-		"@wordpress/i18n": "wp-6.6",
+		"@finpress/components": "wp-6.6",
+		"@finpress/compose": "wp-6.6",
+		"@finpress/element": "wp-6.6",
+		"@finpress/i18n": "wp-6.6",
 		"clsx": "2.1.x",
 		"gridicons": "^3.4.2",
 		"react": "18.3.x",
@@ -78,7 +78,7 @@
 		"@fincommerce/eslint-plugin": "workspace:*",
 		"@fincommerce/internal-js-tests": "workspace:*",
 		"@fincommerce/internal-style-build": "workspace:*",
-		"@wordpress/browserslist-config": "next",
+		"@finpress/browserslist-config": "next",
 		"css-loader": "6.11.x",
 		"eslint": "^8.55.0",
 		"jest": "27.5.x",

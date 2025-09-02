@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { ComponentProps, forwardRef } from 'react';
-import { TextControl } from '@wordpress/components';
+import { TextControl } from '@finpress/components';
 import clsx from 'clsx';
 
 /**

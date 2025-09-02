@@ -4,11 +4,11 @@
 /**
  * External dependencies
  */
-import { InnerBlocks } from '@wordpress/block-editor';
-import { registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks } from '@finpress/block-editor';
+import { registerBlockType } from '@finpress/blocks';
 import { getSetting } from '@fincommerce/settings';
 import type { FunctionComponent } from 'react';
-import type { BlockConfiguration } from '@wordpress/blocks';
+import type { BlockConfiguration } from '@finpress/blocks';
 
 /**
  * Internal dependencies

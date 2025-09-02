@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { createElement, Fragment } from '@finpress/element';
+import { Icon, chevronDown } from '@finpress/icons';
 
 /**
  * Internal dependencies

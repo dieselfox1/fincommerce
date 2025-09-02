@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, cloneElement } from '@wordpress/element';
+import { createElement, cloneElement } from '@finpress/element';
 
 type NonSortableItemProps = {
 	children: JSX.Element;

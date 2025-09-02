@@ -5,7 +5,7 @@
  * @package FinCommerce\Tests\Countries
  */
 
-// phpcs:disable WordPress.Files.FileName
+// phpcs:disable finpress.Files.FileName
 
 /**
  * WC_Countries tests.

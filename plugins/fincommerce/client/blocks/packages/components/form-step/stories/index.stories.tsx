@@ -3,7 +3,7 @@
  */
 import type { StoryFn, Meta } from '@storybook/react';
 import { ValidatedTextInput } from '@fincommerce/blocks-checkout';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

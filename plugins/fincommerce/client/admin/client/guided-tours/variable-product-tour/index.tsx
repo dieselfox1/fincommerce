@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { TourKit, TourKitTypes } from '@fincommerce/components';
 import { useUserPreferences } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';

@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import TourKit, { TourStepRenderer, Options } from '@automattic/tour-kit';
 
 /**

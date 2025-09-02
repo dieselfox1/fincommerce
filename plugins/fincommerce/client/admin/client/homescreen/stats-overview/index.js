@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { Fragment } from '@wordpress/element';
-import { TabPanel, Card, CardHeader, CardFooter } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { Fragment } from '@finpress/element';
+import { TabPanel, Card, CardHeader, CardFooter } from '@finpress/components';
 import { get, xor } from 'lodash';
 import {
 	EllipsisMenu,

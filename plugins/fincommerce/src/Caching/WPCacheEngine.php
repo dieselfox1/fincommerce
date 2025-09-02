@@ -3,7 +3,7 @@
 namespace Automattic\FinCommerce\Caching;
 
 /**
- * Implementation of CacheEngine that uses the built-in WordPress cache.
+ * Implementation of CacheEngine that uses the built-in finpress cache.
  */
 class WPCacheEngine implements CacheEngine {
 	use CacheNameSpaceTrait;

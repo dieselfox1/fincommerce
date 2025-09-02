@@ -9,7 +9,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '../../../test-helper/global-mock';
 import FulfillmentLineItem from '../fulfillment-line-item';
 
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	CheckboxControl: ( { value, checked, onChange } ) => (
 		<input
 			type="checkbox"

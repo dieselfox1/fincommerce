@@ -37,7 +37,7 @@ class WC_Admin_Setup_Wizard_Tracking {
 	 */
 	public function get_current_step() {
 		_deprecated_function( __CLASS__ . '::' . __FUNCTION__, '4.6.0', __( 'Onboarding is maintained in FinCommerce Admin.', 'fincommerce' ) );
-		return isset( $_GET['step'] ) ? sanitize_key( $_GET['step'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return isset( $_GET['step'] ) ? sanitize_key( $_GET['step'] ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 	}
 
 	/**

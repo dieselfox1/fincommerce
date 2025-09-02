@@ -102,7 +102,7 @@ class CheckoutFieldsFrontendTest extends TestCase {
 		$hash = uniqid();
 
 		$mock_data_store = function () use ( $hash ) {
-			throw new Exception( $hash ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new Exception( $hash ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		};
 
 		add_filter( 'fincommerce_customer_data_store', $mock_data_store );
@@ -115,7 +115,7 @@ class CheckoutFieldsFrontendTest extends TestCase {
 		remove_filter( 'fincommerce_customer_data_store', $mock_data_store );
 
 		$this->assertCount( 1, $mocked_messages );
-		$this->assertEquals( sprintf( __( 'An error occurred while saving account details: %s', 'fincommerce' ), $hash ), $mocked_messages[0]['message'] ); // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+		$this->assertEquals( sprintf( __( 'An error occurred while saving account details: %s', 'fincommerce' ), $hash ), $mocked_messages[0]['message'] ); // phpcs:ignore finpress.WP.I18n.MissingTranslatorsComment
 		$this->assertEquals( 'error', $mocked_messages[0]['type'] );
 	}
 

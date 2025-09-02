@@ -5,12 +5,12 @@ import {
 	registerBlockType,
 	InnerBlockTemplate,
 	BlockAttributes,
-} from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
-import { page } from '@wordpress/icons';
+} from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
+import { InnerBlocks, useBlockProps } from '@finpress/block-editor';
+import { page } from '@finpress/icons';
 import { CHECKOUT_PAGE_ID, CART_PAGE_ID } from '@fincommerce/block-settings';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

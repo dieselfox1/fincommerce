@@ -27,13 +27,13 @@ class HposTestCase extends WC_Unit_Test_Case {
 			"SELECT EXISTS (SELECT id FROM $table_name WHERE id = %d)" :
 			"SELECT EXISTS (SELECT ID FROM $table_name WHERE ID = %d AND post_type LIKE %s)";
 
-		//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$exists = $wpdb->get_var(
 			$in_cot ?
 				$wpdb->prepare( $sql, $order_id ) :
 				$wpdb->prepare( $sql, $order_id, $order_type )
 		);
-		//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		if ( $must_exist ) {
 			$this->assertTrue( (bool) $exists, "No order found with id $order_id in table $table_name" );
@@ -54,7 +54,7 @@ class HposTestCase extends WC_Unit_Test_Case {
 		global $wpdb;
 
 		$meta_table_name = OrdersTableDataStore::get_meta_table_name();
-		//phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		//phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$record = $wpdb->get_row(
 			$wpdb->prepare(
 				"SELECT meta_value FROM $meta_table_name WHERE order_id = %d AND meta_key = %s",
@@ -63,7 +63,7 @@ class HposTestCase extends WC_Unit_Test_Case {
 			),
 			ARRAY_A
 		);
-		//phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		//phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		if ( $must_exist ) {
 			$this->assertNotNull( $record, "No deletion record found for order id {$order_id}" );

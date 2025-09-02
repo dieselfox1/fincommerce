@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 import { RadioControl } from '@fincommerce/blocks-components';
 import type { CartShippingPackageShippingRate } from '@fincommerce/types';
 

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { type RecommendedPaymentMethod } from '@fincommerce/data';
-import { ToggleControl } from '@wordpress/components';
-import { useRef } from '@wordpress/element';
+import { ToggleControl } from '@finpress/components';
+import { useRef } from '@finpress/element';
 
 /**
  * Internal dependencies

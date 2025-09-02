@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema that allows a value to match one of the given schemas.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#oneof-and-anyof
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#oneof-and-anyof
  */
 class One_Of_Schema extends Schema {
 	/**

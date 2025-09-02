@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { VARIATION_NAME as PRODUCT_TITLE_VARIATION_NAME } from '@fincommerce/blocks/product-query/variations/elements/product-title';
 import {
 	INNER_BLOCKS_PRODUCT_TEMPLATE as productCollectionInnerBlocksTemplate,
@@ -13,7 +13,7 @@ import {
 	createBlock,
 	// @ts-expect-error Type definitions for this function are missing in Gutenberg
 	createBlocksFromInnerBlocksTemplate,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

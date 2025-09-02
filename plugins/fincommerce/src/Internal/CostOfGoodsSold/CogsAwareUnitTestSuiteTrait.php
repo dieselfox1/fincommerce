@@ -30,7 +30,7 @@ trait CogsAwareUnitTestSuiteTrait {
 		$this->register_legacy_proxy_function_mocks(
 			array(
 				'wc_doing_it_wrong' => function ( $function_name, $message ) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( "Doing it wrong, function: '$function_name', message: '$message'" );
 				},
 			)

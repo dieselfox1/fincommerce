@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { Text } from '@fincommerce/experimental';
-import { Flex } from '@wordpress/components';
+import { Flex } from '@finpress/components';
 
 /**
  * Internal dependencies

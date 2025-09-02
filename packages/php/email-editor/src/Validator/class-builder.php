@@ -20,7 +20,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema\String_Schema;
 
 /**
  * Builder for creating schema objects.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/
  */
 class Builder {
 	/**

@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { __, _n } from '@wordpress/i18n';
-import { useEffect, useState, useMemo } from '@wordpress/element';
+import { __, _n } from '@finpress/i18n';
+import { useEffect, useState, useMemo } from '@finpress/element';
 import {
 	EmptyContent,
 	Section,
 	Badge,
 	EllipsisMenu,
 } from '@fincommerce/components';
-import { Card, CardHeader, Button, CardFooter } from '@wordpress/components';
+import { Card, CardHeader, Button, CardFooter } from '@finpress/components';
 import { notesStore, QUERY_DEFAULTS } from '@fincommerce/data';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import {

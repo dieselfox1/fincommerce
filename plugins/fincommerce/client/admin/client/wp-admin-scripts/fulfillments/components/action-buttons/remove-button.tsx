@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Modal } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { useDispatch, select } from '@wordpress/data';
+import { Button, Modal } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { useDispatch, select } from '@finpress/data';
 import { useState } from 'react';
 
 /**

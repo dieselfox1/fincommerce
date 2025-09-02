@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, memo } from '@wordpress/element';
-import { store as editorStore } from '@wordpress/editor';
-import { dispatch } from '@wordpress/data';
-import { Modal, Button, Flex, FlexItem } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { useState, useEffect, memo } from '@finpress/element';
+import { store as editorStore } from '@finpress/editor';
+import { dispatch } from '@finpress/data';
+import { Modal, Button, Flex, FlexItem } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

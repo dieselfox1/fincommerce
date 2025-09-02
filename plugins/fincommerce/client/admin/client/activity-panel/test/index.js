@@ -8,9 +8,9 @@ import {
 	act,
 	createEvent,
 } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useUser } from '@fincommerce/data';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -57,9 +57,9 @@ jest.mock( '../highlight-tooltip', () => ( {
 	HighlightTooltip: jest.fn().mockReturnValue( '[HighlightTooltip]' ),
 } ) );
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	// Require the original module to not be mocked...
-	const originalModule = jest.requireActual( '@wordpress/data' );
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true, // Use it when dealing with esModules

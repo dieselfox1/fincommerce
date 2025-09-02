@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { Post, useEntityRecords } from '@wordpress/core-data';
-import { useDispatch, select, subscribe } from '@wordpress/data';
+import { Post, useEntityRecords } from '@finpress/core-data';
+import { useDispatch, select, subscribe } from '@finpress/data';
 import { settingsStore } from '@fincommerce/data';
-import { useState, useCallback, useMemo } from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
-// @ts-expect-error - We need to use this /wp see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-dataviews/#dataviews
-import { View } from '@wordpress/dataviews/wp'; // eslint-disable-line @fincommerce/dependency-group
+import { useState, useCallback, useMemo } from '@finpress/element';
+import apiFetch from '@finpress/api-fetch';
+// @ts-expect-error - We need to use this /wp see https://developer.finpress.org/block-editor/reference-guides/packages/packages-dataviews/#dataviews
+import { View } from '@finpress/dataviews/wp'; // eslint-disable-line @fincommerce/dependency-group
 
 /**
  * Internal dependencies

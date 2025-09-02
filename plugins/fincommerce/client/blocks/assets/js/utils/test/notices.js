@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { select, dispatch } from '@wordpress/data';
+import { select, dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import { hasNoticesOfType, removeNoticesByStatus } from '@fincommerce/block-library/assets/js/utils/notices';
 
-jest.mock( '@wordpress/data' );
+jest.mock( '@finpress/data' );
 
 describe( 'Notice utils', () => {
 	beforeEach( () => {

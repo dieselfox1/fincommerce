@@ -64,7 +64,7 @@ class DatabaseUtilTest extends \WC_Unit_Test_Case {
 	 */
 	public function test_create_fts_index_order_address_table() {
 		$db = wc_get_container()->get( DataSynchronizer::class );
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		remove_filter( 'query', array( $this, '_create_temporary_tables' ) );
 		remove_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 		$db->create_database_tables();
@@ -108,27 +108,27 @@ class DatabaseUtilTest extends \WC_Unit_Test_Case {
 		$count_query   = "SELECT COUNT(*) FROM $table_name WHERE post_title = 'Test Post' AND post_name = 'test-post'";
 		$content_query = "SELECT post_content FROM $table_name WHERE post_title = 'Test Post' AND post_name = 'test-post'";
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
 		$this->assertEquals( 0, $wpdb->get_var( $count_query ) );
 
 		$result = $this->sut->insert_or_update( $table_name, $data, $where, $format, $format_where );
 		$this->assertEquals( 1, $result );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
 		$this->assertEquals( 'Test Content', $wpdb->get_var( $content_query ) );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
 		$this->assertEquals( 1, $wpdb->get_var( $count_query ) );
 
 		$data['post_content'] = 'Updated Content';
 		$result               = $this->sut->insert_or_update( $table_name, $data, $where, $format, $format_where );
 		$this->assertEquals( 1, $result );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
 		$this->assertEquals( 'Updated Content', $wpdb->get_var( $content_query ) );
 
 		$result = $this->sut->insert_or_update( $table_name, $data, $where, $format, $format_where );
 		$this->assertEquals( 0, $result ); // No row updated.
 		$this->assertTrue( false !== $result ); // Ensure boolean false.
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Hardcoded query.
 		$this->assertEquals( 'Updated Content', $wpdb->get_var( $content_query ) );
 	}
 

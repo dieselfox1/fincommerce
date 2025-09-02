@@ -29,12 +29,12 @@ class WC_Install_Test extends \WC_Unit_Test_Case {
 
 		// Rename a base table to simulate it as non-existing.
 		dbDelta( $schema->call( new \WC_Install() ) ); // Restore correct state.
-		$wpdb->query( sprintf( $clear_query, $changed_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
-		$wpdb->query( sprintf( $rename_table_query, $original_table_name, $changed_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $clear_query, $changed_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $rename_table_query, $original_table_name, $changed_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		$missing_tables = \WC_Install::verify_base_tables();
 
-		$wpdb->query( sprintf( $rename_table_query, $changed_table_name, $original_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $rename_table_query, $changed_table_name, $original_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		add_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 
 		$this->assertContains( $original_table_name, $missing_tables );
@@ -70,13 +70,13 @@ class WC_Install_Test extends \WC_Unit_Test_Case {
 
 		// Rename a base table to simulate it as non-existing.
 		dbDelta( $schema->call( new \WC_Install() ) ); // Restore correct state.
-		$wpdb->query( sprintf( $clear_query, $changed_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
-		$wpdb->query( sprintf( $rename_table_query, $original_table_name, $changed_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $clear_query, $changed_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $rename_table_query, $original_table_name, $changed_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		$missing_tables = \WC_Install::verify_base_tables( true, true );
 
-		$wpdb->query( sprintf( $clear_query, $original_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
-		$wpdb->query( sprintf( $rename_table_query, $changed_table_name, $original_table_name ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $clear_query, $original_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( sprintf( $rename_table_query, $changed_table_name, $original_table_name ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		add_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 
 		// Ideally, no missing table because verify base tables created the table as well.

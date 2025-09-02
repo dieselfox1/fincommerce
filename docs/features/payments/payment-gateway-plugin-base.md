@@ -5,7 +5,7 @@ post_title: FinCommerce payment gateway plugin base
 
 # FinCommerce payment gateway plugin base
 
-This code can be used as a base to create your own simple custom payment gateway for FinCommerce. If not used in a custom plugin, you need to add this code to your child theme's functions.php file or via a plugin that allows custom functions to be added, such as the [Code snippets](https://wordpress.org/plugins/code-snippets/) plugin. Please don't add custom code directly to your parent theme's functions.php file as this will be wiped entirely when you update the theme.
+This code can be used as a base to create your own simple custom payment gateway for FinCommerce. If not used in a custom plugin, you need to add this code to your child theme's functions.php file or via a plugin that allows custom functions to be added, such as the [Code snippets](https://finpress.org/plugins/code-snippets/) plugin. Please don't add custom code directly to your parent theme's functions.php file as this will be wiped entirely when you update the theme.
 
 
 ```php

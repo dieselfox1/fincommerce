@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import {
 	EditorSettings,
 	EditorBlockListSettings,
@@ -14,7 +14,7 @@ import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore No types for this exist yet.
 	__unstableEditorStyles as EditorStyles,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 type EditorCanvasProps = {
 	children: React.ReactNode;

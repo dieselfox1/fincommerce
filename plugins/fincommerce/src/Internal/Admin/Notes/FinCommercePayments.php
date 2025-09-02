@@ -105,12 +105,12 @@ class fincommercePayments {
 		$note = new Note();
 		$note->set_title( __( 'Try the new way to get paid', 'fincommerce' ) );
 		$note->set_content(
-			__( 'Securely accept credit and debit cards on your site. Manage transactions without leaving your WordPress dashboard. Only with <strong>WooPayments</strong>.', 'fincommerce' ) .
+			__( 'Securely accept credit and debit cards on your site. Manage transactions without leaving your finpress dashboard. Only with <strong>WooPayments</strong>.', 'fincommerce' ) .
 			'<br><br>' .
 			sprintf(
 				/* translators: 1: opening link tag, 2: closing tag */
 				__( 'By clicking "Get started", you agree to our %1$sTerms of Service%2$s', 'fincommerce' ),
-				'<a href="https://wordpress.com/tos/" target="_blank">',
+				'<a href="https://finpress.com/tos/" target="_blank">',
 				'</a>'
 			)
 		);
@@ -197,7 +197,7 @@ class fincommercePayments {
 			( isset( $action->nonce_action ) &&
 				(
 					empty( $_GET['_wpnonce'] ) ||
-					! wp_verify_nonce( wp_unslash( $_GET['_wpnonce'] ), $action->nonce_action ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+					! wp_verify_nonce( wp_unslash( $_GET['_wpnonce'] ), $action->nonce_action ) // phpcs:ignore finpress.Security.ValidatedSanitizedInput
 				)
 			)
 		) {

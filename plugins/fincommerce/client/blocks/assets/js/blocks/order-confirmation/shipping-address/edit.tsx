@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import { AdditionalFieldsPlaceholder } from '@fincommerce/base-components/cart-checkout';
 import { ADDRESS_FORM_FIELDS } from '@fincommerce/block-settings';
 

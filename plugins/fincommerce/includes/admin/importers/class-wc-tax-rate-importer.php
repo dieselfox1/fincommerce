@@ -66,7 +66,7 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 	}
 
 	/**
-	 * Registered callback function for the WordPress Importer.
+	 * Registered callback function for the finpress Importer.
 	 *
 	 * Manages the three separate stages of the CSV import process.
 	 */
@@ -217,7 +217,7 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 	 * @return bool False if error uploading or invalid file, true otherwise
 	 */
 	public function handle_upload() {
-		$file_url = isset( $_POST['file_url'] ) ? wc_clean( wp_unslash( $_POST['file_url'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce already verified in WC_Tax_Rate_Importer::dispatch()
+		$file_url = isset( $_POST['file_url'] ) ? wc_clean( wp_unslash( $_POST['file_url'] ) ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Missing -- Nonce already verified in WC_Tax_Rate_Importer::dispatch()
 
 		if ( empty( $file_url ) ) {
 			$file = wp_import_handle_upload();

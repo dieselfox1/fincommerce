@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useState, useRef, createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Modal, Button } from '@wordpress/components';
+import { useState, useRef, createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Modal, Button } from '@finpress/components';
 
 /**
  * Internal dependencies
@@ -13,7 +13,7 @@ import PageControl from './page-control';
 import type { GuideProps } from './types';
 
 /*
- * This component was copied from @wordpress/components since we needed
+ * This component was copied from @finpress/components since we needed
  * additional functionality and also found some issues.
  * 1: The Close button was being focused every time the page changed.
  * 2: It was not possible to know if the Guide was closed because the modal was closed or because the Finish button was clicked.

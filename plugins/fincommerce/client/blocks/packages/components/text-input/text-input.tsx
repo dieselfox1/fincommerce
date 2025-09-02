@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { forwardRef, useState } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { forwardRef, useState } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import type { InputHTMLAttributes } from 'react';
 
 /**

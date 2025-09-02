@@ -22,7 +22,7 @@ Currently we have a set of public-facing packages that can be downloaded from [n
 
 ## Creating a new package
 
-Most of this is pulled [from the Gutenberg workflow](https://github.com/WordPress/gutenberg/blob/trunk/CONTRIBUTING.md#creating-new-package).
+Most of this is pulled [from the Gutenberg workflow](https://github.com/finpress/gutenberg/blob/trunk/CONTRIBUTING.md#creating-new-package).
 
 To create a new package, add a new folder to `/packages`, containing…
 
@@ -35,7 +35,7 @@ To create a new package, add a new folder to `/packages`, containing…
      "description": "Package description.",
      "author": "Automattic",
      "license": "GPL-2.0-or-later",
-     "keywords": [ "wordpress", "fincommerce" ],
+     "keywords": [ "finpress", "fincommerce" ],
      "homepage": "https://github.com/dieselfox1/fincommerce/tree/trunk/packages/js/[_YOUR_PACKAGE_]/README.md",
      "repository": {
       "type": "git",

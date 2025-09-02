@@ -4,7 +4,7 @@
 import path from 'path';
 import { readFile } from 'fs/promises';
 import Handlebars from 'handlebars';
-import { Post } from '@wordpress/e2e-test-utils-playwright/build-types/request-utils/posts';
+import { Post } from '@finpress/e2e-test-utils-playwright/build-types/request-utils/posts';
 
 /**
  * Internal dependencies
@@ -50,7 +50,7 @@ export async function createPostFromFile( this: RequestUtils, name: string ) {
 
 			// We're calling the posts endpoint directly until we can use the
 			// createPost method.
-			// See https://github.com/WordPress/gutenberg/pull/59463 for more
+			// See https://github.com/finpress/gutenberg/pull/59463 for more
 			// details.
 			return await this.rest( {
 				method: 'POST',

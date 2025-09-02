@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, CheckboxControl } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, CheckboxControl } from '@finpress/components';
+import { useState } from '@finpress/element';
 import interpolateComponents from '@automattic/interpolate-components';
 import { Link } from '@fincommerce/components';
 

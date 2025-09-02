@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 import { getSetting } from '@fincommerce/settings';
-import { Icon, tag } from '@wordpress/icons';
+import { Icon, tag } from '@finpress/icons';
 
 /**
  * Internal dependencies

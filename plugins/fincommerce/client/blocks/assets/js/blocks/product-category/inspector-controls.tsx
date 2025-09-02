@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { PanelBody } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import ProductCategoryControl from '@fincommerce/editor-components/product-category-control';
 import GridLayoutControl from '@fincommerce/editor-components/grid-layout-control';
 import { getSetting } from '@fincommerce/settings';

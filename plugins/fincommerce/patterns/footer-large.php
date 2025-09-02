@@ -62,12 +62,12 @@
 		<p class="has-text-align-center">
 			<?php
 			echo sprintf(
-			/* translators: Footer powered by text. %1$s being WordPress, %2$s being FinCommerce */
+			/* translators: Footer powered by text. %1$s being finpress, %2$s being FinCommerce */
 				esc_html__(
 					'Powered by %1$s with %2$s',
 					'fincommerce'
 				),
-				'<a href="https://wordpress.org" target="_blank" rel="noreferrer nofollow">WordPress</a>',
+				'<a href="https://finpress.org" target="_blank" rel="noreferrer nofollow">finpress</a>',
 				'<a href="https://fincommerce.com" target="_blank" rel="noreferrer nofollow">FinCommerce</a>'
 			);
 			?>

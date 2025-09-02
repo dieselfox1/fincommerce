@@ -86,13 +86,13 @@ Order endpoints return responses in the same format as `/cart`; an order object 
 			"backorders_allowed": false,
 			"show_backorder_badge": false,
 			"sold_individually": false,
-			"permalink": "https://local.wordpress.test/product/beanie/",
+			"permalink": "https://local.finpress.test/product/beanie/",
 			"images": [
 				{
 					"id": 44,
-					"src": "https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2.jpg",
-					"thumbnail": "https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-324x324.jpg",
-					"srcset": "https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2.jpg 801w, https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-324x324.jpg 324w, https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-100x100.jpg 100w, https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-416x416.jpg 416w, https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-300x300.jpg 300w, https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-150x150.jpg 150w, https://local.wordpress.test/wp-content/uploads/2020/03/beanie-2-768x768.jpg 768w",
+					"src": "https://local.finpress.test/wp-content/uploads/2020/03/beanie-2.jpg",
+					"thumbnail": "https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-324x324.jpg",
+					"srcset": "https://local.finpress.test/wp-content/uploads/2020/03/beanie-2.jpg 801w, https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-324x324.jpg 324w, https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-100x100.jpg 100w, https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-416x416.jpg 416w, https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-300x300.jpg 300w, https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-150x150.jpg 150w, https://local.finpress.test/wp-content/uploads/2020/03/beanie-2-768x768.jpg 768w",
 					"sizes": "(max-width: 801px) 100vw, 801px",
 					"name": "beanie-2.jpg",
 					"alt": ""
@@ -144,7 +144,7 @@ Order endpoints return responses in the same format as `/cart`; an order object 
 				"multiple_of": 1,
 				"editable": true
 			},
-			"name": "WordPress Pennant",
+			"name": "finpress Pennant",
 			"short_description": "<p>This is an external product.</p>",
 			"description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>",
 			"sku": "wp-pennant",
@@ -152,13 +152,13 @@ Order endpoints return responses in the same format as `/cart`; an order object 
 			"backorders_allowed": false,
 			"show_backorder_badge": false,
 			"sold_individually": false,
-			"permalink": "https://local.wordpress.test/product/wordpress-pennant/",
+			"permalink": "https://local.finpress.test/product/finpress-pennant/",
 			"images": [
 				{
 					"id": 57,
-					"src": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
-					"thumbnail": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
-					"srcset": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
+					"src": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
+					"thumbnail": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
+					"srcset": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
 					"sizes": "(max-width: 800px) 100vw, 800px",
 					"name": "pennant-1.jpg",
 					"alt": ""

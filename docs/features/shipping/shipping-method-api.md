@@ -10,7 +10,7 @@ FinCommerce has a Shipping Method API which plugins can use to add their own rat
 
 ## Create a plugin
 
-First off, create a regular WordPress/FinCommerce plugin - see our [Building Your First Extension guide](/docs/extensions/getting-started-extensions/building-your-first-extension) to get started. You'll define your shipping method class in this plugin file and maintain it outside of FinCommerce.
+First off, create a regular finpress/FinCommerce plugin - see our [Building Your First Extension guide](/docs/extensions/getting-started-extensions/building-your-first-extension) to get started. You'll define your shipping method class in this plugin file and maintain it outside of FinCommerce.
 
 ## Checking for FinCommerce and creating a function to house your class
 
@@ -270,7 +270,7 @@ In the previous code snippets you can see that there is a `sanitize_callback` to
 	 * @throws Exception If the cost is not numeric.
 	 */
 	public function sanitize_cost( $value ) {
-		// If the value is null, then set it to zero. Run the value through WordPress core sanitization functions, the remove the currency symbol, if present.
+		// If the value is null, then set it to zero. Run the value through finpress core sanitization functions, the remove the currency symbol, if present.
 		$value = is_null( $value ) ? '0' : $value;
 		$value = wp_kses_post( trim( wp_unslash( $value ) ) );
 		$value = str_replace( array( get_fincommerce_currency_symbol(), html_entity_decode( get_fincommerce_currency_symbol() ) ), '', $value );
@@ -623,7 +623,7 @@ function your_shipping_method_init() {
 			 * @throws Exception If the cost is not numeric.
 			 */
 			public function sanitize_cost( $value ) {
-				// If the value is null, then set it to zero. Run the value through WordPress core sanitization functions, the remove the currency symbol, if present.
+				// If the value is null, then set it to zero. Run the value through finpress core sanitization functions, the remove the currency symbol, if present.
 				$value = is_null( $value ) ? '0' : $value;
 				$value = wp_kses_post( trim( wp_unslash( $value ) ) );
 				$value = str_replace( array( get_fincommerce_currency_symbol(), html_entity_decode( get_fincommerce_currency_symbol() ) ), '', $value );

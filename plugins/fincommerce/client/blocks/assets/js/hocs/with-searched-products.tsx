@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useState, useCallback, useRef } from '@wordpress/element';
+import { useEffect, useState, useCallback, useRef } from '@finpress/element';
 import { blocksConfig } from '@fincommerce/block-settings';
 import { getProducts } from '@fincommerce/editor-components/utils';
 import { useDebouncedCallback } from 'use-debounce';

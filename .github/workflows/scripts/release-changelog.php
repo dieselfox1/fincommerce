@@ -14,8 +14,8 @@ $base_dir = dirname( dirname( dirname( __DIR__ ) ) );
 $release_time = strtotime( '+22 days', $now );
 $release_date = date( 'Y-m-d', $release_time );
 
-$readme_file    = $base_dir . '/plugins/woocommerce/readme.txt';
-$next_log_file  = $base_dir . '/plugins/woocommerce/NEXT_CHANGELOG.md';
+$readme_file    = $base_dir . '/plugins/fincommerce/readme.txt';
+$next_log_file  = $base_dir . '/plugins/fincommerce/NEXT_CHANGELOG.md';
 
 $readme    = file_get_contents( $readme_file );
 $next_log  = file_get_contents( $next_log_file );
@@ -23,7 +23,7 @@ $next_log  = file_get_contents( $next_log_file );
 $next_log  = preg_replace( "/= (\d+\.\d+\.\d+) YYYY-mm-dd =/", "= \\1 {$release_date} =", $next_log );
 
 // Convert PR number to markdown link.
-$next_log  = preg_replace( "/\[#(\d+)\]/", '[#$1](https://github.com/woocommerce/woocommerce/pull/$1)', $next_log );
+$next_log  = preg_replace( "/\[#(\d+)\]/", '[#$1](https://github.com/fincommerce/fincommerce/pull/$1)', $next_log );
 
 $readme    = preg_replace( "/== Changelog ==\n(.*?)\[See changelog for all versions\]/s", "== Changelog ==\n\n{$next_log}\n\n[See changelog for all versions]", $readme );
 

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Icon, mediaAndText } from '@wordpress/icons';
+import { Icon, mediaAndText } from '@finpress/icons';
 import { getBlockMap } from '@fincommerce/atomic-utils';
-import type { InnerBlockTemplate } from '@wordpress/blocks';
+import type { InnerBlockTemplate } from '@finpress/blocks';
 
 /**
  * Internal dependencies

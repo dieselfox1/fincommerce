@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Placeholder } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, Placeholder } from '@finpress/components';
 import { ADMIN_URL } from '@fincommerce/settings';
-import { Icon, external } from '@wordpress/icons';
+import { Icon, external } from '@finpress/icons';
 
 export const renderNoProductsPlaceholder = ( blockTitle, blockIcon ) => (
 	<Placeholder

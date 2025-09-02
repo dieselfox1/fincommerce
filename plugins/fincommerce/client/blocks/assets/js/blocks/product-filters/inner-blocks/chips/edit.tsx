@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useMemo } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useMemo } from '@finpress/element';
 import clsx from 'clsx';
 import { decodeHtmlEntities } from '@fincommerce/utils';
 import {
@@ -10,12 +10,12 @@ import {
 	useBlockProps,
 	withColors,
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

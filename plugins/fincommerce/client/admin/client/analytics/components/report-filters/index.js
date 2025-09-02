@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import PropTypes from 'prop-types';
 import { omitBy, isUndefined, snakeCase } from 'lodash';
-import { withSelect, withDispatch } from '@wordpress/data';
+import { withSelect, withDispatch } from '@finpress/data';
 import { STORE_KEY as CES_STORE_KEY } from '@fincommerce/customer-effort-score';
 import { ReportFilters as Filters } from '@fincommerce/components';
 import { settingsStore } from '@fincommerce/data';

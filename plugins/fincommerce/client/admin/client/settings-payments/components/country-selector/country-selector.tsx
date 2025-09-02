@@ -8,11 +8,11 @@ import {
 	UseSelectState,
 	UseSelectStateChangeOptions,
 } from 'downshift';
-import { Button } from '@wordpress/components';
-import { useThrottle } from '@wordpress/compose';
-import { useCallback, useEffect } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { check, chevronDown, Icon } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { useThrottle } from '@finpress/compose';
+import { useCallback, useEffect } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { check, chevronDown, Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

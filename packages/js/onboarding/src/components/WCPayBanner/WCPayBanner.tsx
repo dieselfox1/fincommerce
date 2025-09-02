@@ -5,9 +5,9 @@ import {
 	createElement,
 	createInterpolateElement,
 	Fragment,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Card, CardFooter, CardBody } from '@wordpress/components';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Card, CardFooter, CardBody } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
 
 /**

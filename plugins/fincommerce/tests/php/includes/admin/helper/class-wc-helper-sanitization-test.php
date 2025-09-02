@@ -50,7 +50,7 @@ class WC_Helper_Sanitization_Test extends WC_Unit_Test_Case {
 	public function test_url_domain_whitelisting() {
 		$allowed_domains = array(
 			'https://fincommerce.com/image.jpg',
-			'https://wordpress.com/image.jpg',
+			'https://finpress.com/image.jpg',
 			'https://cdn.fincommerce.com/image.jpg',
 			'https://s0.wp.com/image.jpg',
 			'https://fincommerce.test/image.jpg',
@@ -59,7 +59,7 @@ class WC_Helper_Sanitization_Test extends WC_Unit_Test_Case {
 		$disallowed_domains = array(
 			'https://evil.com/image.jpg',
 			'https://fincommerce.evil.com/image.jpg',
-			'https://wordpress.org/image.jpg',
+			'https://finpress.org/image.jpg',
 		);
 
 		// Test allowed domains.

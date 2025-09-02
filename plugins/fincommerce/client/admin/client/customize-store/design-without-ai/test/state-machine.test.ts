@@ -25,9 +25,9 @@ const createMockMachine = ( {
 	return machineWithConfig;
 };
 
-jest.mock( '@wordpress/api-fetch', () => jest.fn() );
+jest.mock( '@finpress/api-fetch', () => jest.fn() );
 jest.mock(
-	'@wordpress/edit-site/build-module/components/global-styles/global-styles-provider',
+	'@finpress/edit-site/build-module/components/global-styles/global-styles-provider',
 	() => jest.fn()
 );
 

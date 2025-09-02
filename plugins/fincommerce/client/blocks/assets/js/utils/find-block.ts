@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
+import { BlockInstance } from '@finpress/blocks';
 
 /**
  * Recursively searches through an array of `BlockInstance` objects and their nested `innerBlocks` arrays to find a block that matches a given condition.

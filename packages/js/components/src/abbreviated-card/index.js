@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { Card, CardBody, Icon } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { Card, CardBody, Icon } from '@finpress/components';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 

@@ -6,12 +6,12 @@ import {
 	BlockConfiguration,
 	BlockEditProps,
 	registerBlockType,
-} from '@wordpress/blocks';
-import { createElement } from '@wordpress/element';
+} from '@finpress/blocks';
+import { createElement } from '@finpress/element';
 import { evaluate } from '@fincommerce/expression-evaluation';
 import { isWpVersion, getSetting } from '@fincommerce/settings';
 import { ComponentType } from 'react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 // Define a more generic type for the select function to avoid TypeScript errors
 type SelectType = ( store: string ) => Record< string, unknown >;

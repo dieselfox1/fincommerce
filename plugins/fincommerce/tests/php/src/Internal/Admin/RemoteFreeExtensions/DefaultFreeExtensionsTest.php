@@ -136,7 +136,7 @@ class DefaultFreeExtensionsTest extends WC_Unit_Test_Case {
 		 * DefaultFreeExtensions::get_all uses to convert the entire
 		 * associative array into an object.
 		 */
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode -- We're duplicating what the tested class does.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.json_encode_json_encode -- We're duplicating what the tested class does.
 		$bundles = json_decode( json_encode( $bundles ) );
 		$results = EvaluateExtension::evaluate_bundles( $bundles );
 

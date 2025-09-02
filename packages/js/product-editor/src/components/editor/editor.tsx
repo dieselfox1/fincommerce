@@ -7,23 +7,23 @@ import {
 	Fragment,
 	useCallback,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	LayoutContextProvider,
 	useExtendLayout,
 } from '@fincommerce/admin-layout';
 import { navigateTo, getNewPath, getQuery } from '@fincommerce/navigation';
-import { useSelect } from '@wordpress/data';
-import { Popover } from '@wordpress/components';
-import InterfaceSkeleton from '@wordpress/interface/build-module/components/interface-skeleton';
+import { useSelect } from '@finpress/data';
+import { Popover } from '@finpress/components';
+import InterfaceSkeleton from '@finpress/interface/build-module/components/interface-skeleton';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { EntityProvider } from '@wordpress/core-data';
+import { EntityProvider } from '@finpress/core-data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { ShortcutProvider } from '@wordpress/keyboard-shortcuts';
+import { ShortcutProvider } from '@finpress/keyboard-shortcuts';
 
 /**
  * Internal dependencies
@@ -102,7 +102,7 @@ export function Editor( { productId, postType = 'product' }: EditorProps ) {
 									}
 								/>
 							</EditorLoadingContext.Provider>
-							{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
+							{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
 							<Popover.Slot />
 						</ValidationProvider>
 					</ShortcutProvider>

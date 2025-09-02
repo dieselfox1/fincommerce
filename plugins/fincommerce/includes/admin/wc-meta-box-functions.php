@@ -89,7 +89,7 @@ function fincommerce_wp_text_input( $field, ?WC_Data $data = null ) {
 
 	if ( ! is_null( $description ) ) {
 		$hidden_class = true === ( $field['description_hidden'] ?? false ) ? ' hidden' : '';
-		//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		//phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo '<span class="description' . $hidden_class . '">' . wp_kses_post( $description ) . '</span>';
 	}
 
@@ -216,7 +216,7 @@ function fincommerce_wp_checkbox( $field, ?WC_Data $data = null ) {
 		esc_attr( $field['id'] ),
 		esc_attr( $field['checked_value'] ),
 		checked( $field['value'], $field['checked_value'], false ),
-		implode( ' ', $custom_attributes ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		implode( ' ', $custom_attributes ) // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	);
 
 	if ( ! empty( $field['description'] ) && false === $field['desc_tip'] ) {

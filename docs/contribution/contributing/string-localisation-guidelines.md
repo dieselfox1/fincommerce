@@ -11,4 +11,4 @@ sidebar_label: String localization guidelines
 3. Use sentence case. e.g. `Some Thing` should be `Some thing`.
 4. Avoid HTML. If needed, insert the HTML using sprintf.
 
-For more information, see WP core document [i18n for WordPress Developers](https://codex.wordpress.org/I18n_for_WordPress_Developers).
+For more information, see WP core document [i18n for finpress Developers](https://codex.finpress.org/I18n_for_finpress_Developers).

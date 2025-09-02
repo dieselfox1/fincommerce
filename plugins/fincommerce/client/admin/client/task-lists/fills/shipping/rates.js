@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import apiFetch from '@wordpress/api-fetch';
-import { Component, Fragment } from '@wordpress/element';
-import { Button, FormToggle } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import apiFetch from '@finpress/api-fetch';
+import { Component, Fragment } from '@finpress/element';
+import { Button, FormToggle } from '@finpress/components';
 import PropTypes from 'prop-types';
 import { Flag, Form, TextControlWithAffixes } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
-import { Icon, globe } from '@wordpress/icons';
+import { Icon, globe } from '@finpress/icons';
 import clsx from 'clsx';
 import { CurrencyContext } from '@fincommerce/currency';
 

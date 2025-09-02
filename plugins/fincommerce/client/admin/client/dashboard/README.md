@@ -7,7 +7,7 @@ This folder contains the components used in the Dashboard page.
 New Dashboard sections can be added by hooking into the filter `fincommerce_dashboard_default_sections`. For example:
 
 ```js
-import { arrowRight } from '@wordpress/icons';
+import { arrowRight } from '@finpress/icons';
 addFilter( 'fincommerce_dashboard_default_sections', ( sections ) => {
 	return [
 		...sections,

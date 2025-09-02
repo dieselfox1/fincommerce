@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { createElement } from 'react';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 import clsx from 'clsx';
 
 type SuffixIconProps = {

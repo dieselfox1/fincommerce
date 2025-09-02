@@ -150,13 +150,13 @@ class ShopifyMapper implements PlatformMapperInterface {
 		$status_data = array();
 
 		// Publication date.
-		if ( property_exists( $shopify_product, 'publishedAt' ) && $shopify_product->publishedAt ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-			$status_data['date_published_gmt'] = $shopify_product->publishedAt; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		if ( property_exists( $shopify_product, 'publishedAt' ) && $shopify_product->publishedAt ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$status_data['date_published_gmt'] = $shopify_product->publishedAt; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		}
 
 		// Available for sale flag.
 		if ( property_exists( $shopify_product, 'availableForSale' ) ) {
-			$status_data['available_for_sale'] = $shopify_product->availableForSale; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$status_data['available_for_sale'] = $shopify_product->availableForSale; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		}
 
 		return $status_data;
@@ -173,8 +173,8 @@ class ShopifyMapper implements PlatformMapperInterface {
 
 		// Product type - check both camelCase and snake_case for compatibility.
 		$product_type = null;
-		if ( property_exists( $shopify_product, 'productType' ) && $shopify_product->productType ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-			$product_type = $shopify_product->productType; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		if ( property_exists( $shopify_product, 'productType' ) && $shopify_product->productType ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$product_type = $shopify_product->productType; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		} elseif ( property_exists( $shopify_product, 'product_type' ) && $shopify_product->product_type ) {
 			$product_type = $shopify_product->product_type;
 		}
@@ -196,13 +196,13 @@ class ShopifyMapper implements PlatformMapperInterface {
 
 		// Gift card detection - check both camelCase and snake_case for compatibility.
 		if ( property_exists( $shopify_product, 'isGiftCard' ) ) {
-			$classification['is_gift_card'] = $shopify_product->isGiftCard; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$classification['is_gift_card'] = $shopify_product->isGiftCard; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		} elseif ( property_exists( $shopify_product, 'is_gift_card' ) ) {
 			$classification['is_gift_card'] = $shopify_product->is_gift_card;
 		}
 
 		if ( property_exists( $shopify_product, 'requiresSellingPlan' ) ) {
-			$classification['requires_subscription'] = $shopify_product->requiresSellingPlan; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$classification['requires_subscription'] = $shopify_product->requiresSellingPlan; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		} elseif ( property_exists( $shopify_product, 'requires_selling_plan' ) ) {
 			$classification['requires_subscription'] = $shopify_product->requires_selling_plan;
 		}
@@ -359,24 +359,24 @@ class ShopifyMapper implements PlatformMapperInterface {
 		// Basic Product Fields.
 		$basic_data['name']              = $shopify_product->title;
 		$basic_data['slug']              = $shopify_product->handle;
-		$basic_data['description']       = $this->sanitize_product_description( $shopify_product->descriptionHtml ?? '' ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-		$basic_data['short_description'] = $shopify_product->descriptionPlainSummary ?? ''; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$basic_data['description']       = $this->sanitize_product_description( $shopify_product->descriptionHtml ?? '' ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$basic_data['short_description'] = $shopify_product->descriptionPlainSummary ?? ''; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		$basic_data['status']            = $this->get_woo_product_status( $shopify_product );
-		$basic_data['date_created_gmt']  = $shopify_product->createdAt; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$basic_data['date_created_gmt']  = $shopify_product->createdAt; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 
 		// Enhanced date handling.
 		if ( property_exists( $shopify_product, 'updatedAt' ) ) {
-			$basic_data['date_modified_gmt'] = $shopify_product->updatedAt; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$basic_data['date_modified_gmt'] = $shopify_product->updatedAt; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		}
 
 		// Catalog Visibility & Original URL.
 		$basic_data['catalog_visibility'] = 'visible';
 		$basic_data['original_url']       = null;
 		if ( property_exists( $shopify_product, 'onlineStoreUrl' ) ) {
-			if ( null === $shopify_product->onlineStoreUrl ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			if ( null === $shopify_product->onlineStoreUrl ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 				$basic_data['catalog_visibility'] = 'hidden';
 			} else {
-				$basic_data['original_url'] = $shopify_product->onlineStoreUrl; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+				$basic_data['original_url'] = $shopify_product->onlineStoreUrl; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 			}
 		}
 
@@ -414,9 +414,9 @@ class ShopifyMapper implements PlatformMapperInterface {
 			$variant_node = $shopify_product->variants->edges[0]->node;
 
 			if ( $this->should_process( 'price' ) ) {
-				if ( $variant_node->compareAtPrice && $variant_node->compareAtPrice > $variant_node->price ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+				if ( $variant_node->compareAtPrice && $variant_node->compareAtPrice > $variant_node->price ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 					$simple_data['sale_price']    = $variant_node->price;
-					$simple_data['regular_price'] = $variant_node->compareAtPrice; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					$simple_data['regular_price'] = $variant_node->compareAtPrice; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 				} else {
 					$simple_data['sale_price']    = null;
 					$simple_data['regular_price'] = $variant_node->price;
@@ -428,21 +428,21 @@ class ShopifyMapper implements PlatformMapperInterface {
 			}
 
 			if ( $this->should_process( 'stock' ) ) {
-				$manage_stock                  = property_exists( $variant_node, 'inventoryItem' ) && $variant_node->inventoryItem->tracked; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+				$manage_stock                  = property_exists( $variant_node, 'inventoryItem' ) && $variant_node->inventoryItem->tracked; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 				$simple_data['manage_stock']   = $manage_stock;
-				$stock_quantity                = $variant_node->inventoryQuantity ?? 0; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-				$allow_oversell                = $manage_stock && 'CONTINUE' === $variant_node->inventoryPolicy; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+				$stock_quantity                = $variant_node->inventoryQuantity ?? 0; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+				$allow_oversell                = $manage_stock && 'CONTINUE' === $variant_node->inventoryPolicy; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 				$simple_data['stock_status']   = ( $stock_quantity > 0 || $allow_oversell ) ? 'instock' : 'outofstock';
 				$simple_data['stock_quantity'] = $stock_quantity;
 			}
 
 			if ( $this->should_process( 'weight' ) ) {
 				$weight_data = null;
-				if ( property_exists( $variant_node, 'inventoryItem' ) && is_object( $variant_node->inventoryItem ) && // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-					property_exists( $variant_node->inventoryItem, 'measurement' ) && is_object( $variant_node->inventoryItem->measurement ) && // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-					property_exists( $variant_node->inventoryItem->measurement, 'weight' ) && is_object( $variant_node->inventoryItem->measurement->weight ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+				if ( property_exists( $variant_node, 'inventoryItem' ) && is_object( $variant_node->inventoryItem ) && // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					property_exists( $variant_node->inventoryItem, 'measurement' ) && is_object( $variant_node->inventoryItem->measurement ) && // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					property_exists( $variant_node->inventoryItem->measurement, 'weight' ) && is_object( $variant_node->inventoryItem->measurement->weight ) // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 				) {
-					$weight_data = $variant_node->inventoryItem->measurement->weight; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					$weight_data = $variant_node->inventoryItem->measurement->weight; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 				}
 				$weight                = $weight_data ? $weight_data->value : null;
 				$weight_unit           = $weight_data ? $weight_data->unit : null;
@@ -499,8 +499,8 @@ class ShopifyMapper implements PlatformMapperInterface {
 				$variation_data['original_id'] = basename( $variant_node->id );
 
 				if ( $this->should_process( 'price' ) ) {
-					if ( $variant_node->compareAtPrice && (float) $variant_node->compareAtPrice > (float) $variant_node->price ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-						$variation_data['regular_price'] = $variant_node->compareAtPrice; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					if ( $variant_node->compareAtPrice && (float) $variant_node->compareAtPrice > (float) $variant_node->price ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+						$variation_data['regular_price'] = $variant_node->compareAtPrice; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 						$variation_data['sale_price']    = $variant_node->price;
 					} else {
 						$variation_data['regular_price'] = $variant_node->price;
@@ -513,21 +513,21 @@ class ShopifyMapper implements PlatformMapperInterface {
 				}
 
 				if ( $this->should_process( 'stock' ) ) {
-					$manage_stock                     = property_exists( $variant_node, 'inventoryItem' ) && $variant_node->inventoryItem->tracked; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					$manage_stock                     = property_exists( $variant_node, 'inventoryItem' ) && $variant_node->inventoryItem->tracked; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 					$variation_data['manage_stock']   = $manage_stock;
-					$stock_quantity                   = $variant_node->inventoryQuantity ?? 0; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-					$allow_oversell                   = $manage_stock && 'CONTINUE' === $variant_node->inventoryPolicy; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					$stock_quantity                   = $variant_node->inventoryQuantity ?? 0; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					$allow_oversell                   = $manage_stock && 'CONTINUE' === $variant_node->inventoryPolicy; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 					$variation_data['stock_status']   = ( $stock_quantity > 0 || $allow_oversell ) ? 'instock' : 'outofstock';
 					$variation_data['stock_quantity'] = $stock_quantity;
 				}
 
 				if ( $this->should_process( 'weight' ) ) {
 					$weight_data = null;
-					if ( property_exists( $variant_node, 'inventoryItem' ) && is_object( $variant_node->inventoryItem ) && // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-						property_exists( $variant_node->inventoryItem, 'measurement' ) && is_object( $variant_node->inventoryItem->measurement ) && // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-						property_exists( $variant_node->inventoryItem->measurement, 'weight' ) && is_object( $variant_node->inventoryItem->measurement->weight ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+					if ( property_exists( $variant_node, 'inventoryItem' ) && is_object( $variant_node->inventoryItem ) && // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+						property_exists( $variant_node->inventoryItem, 'measurement' ) && is_object( $variant_node->inventoryItem->measurement ) && // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+						property_exists( $variant_node->inventoryItem->measurement, 'weight' ) && is_object( $variant_node->inventoryItem->measurement->weight ) // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 					) {
-						$weight_data = $variant_node->inventoryItem->measurement->weight; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+						$weight_data = $variant_node->inventoryItem->measurement->weight; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 					}
 					$weight                   = $weight_data ? $weight_data->value : null;
 					$weight_unit              = $weight_data ? $weight_data->unit : null;
@@ -536,9 +536,9 @@ class ShopifyMapper implements PlatformMapperInterface {
 
 				if ( $this->should_process( 'attributes' ) ) {
 					$variation_data['attributes'] = array();
-					if ( ! empty( $variant_node->selectedOptions ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-						foreach ( $variant_node->selectedOptions as $selectedOption ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase,WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase -- GraphQL uses camelCase.
-							$variation_data['attributes'][ $selectedOption->name ] = $selectedOption->value; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase -- GraphQL uses camelCase.
+					if ( ! empty( $variant_node->selectedOptions ) ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+						foreach ( $variant_node->selectedOptions as $selectedOption ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase,finpress.NamingConventions.ValidVariableName.VariableNotSnakeCase -- GraphQL uses camelCase.
+							$variation_data['attributes'][ $selectedOption->name ] = $selectedOption->value; // phpcs:ignore finpress.NamingConventions.ValidVariableName.VariableNotSnakeCase -- GraphQL uses camelCase.
 						}
 					}
 				}
@@ -573,8 +573,8 @@ class ShopifyMapper implements PlatformMapperInterface {
 		$images_data       = array();
 		$featured_media_id = null;
 
-		if ( ! empty( $shopify_product->featuredMedia ) && is_object( $shopify_product->featuredMedia ) && ! empty( $shopify_product->featuredMedia->id ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-			$featured_media_id = $shopify_product->featuredMedia->id; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		if ( ! empty( $shopify_product->featuredMedia ) && is_object( $shopify_product->featuredMedia ) && ! empty( $shopify_product->featuredMedia->id ) ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+			$featured_media_id = $shopify_product->featuredMedia->id; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		}
 
 		if ( ! empty( $shopify_product->media->edges ) ) {

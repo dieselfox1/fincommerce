@@ -2,17 +2,17 @@
  * External dependencies
  */
 import { FormEvent, useEffect } from 'react';
-import { Button, Modal, Spinner } from '@wordpress/components';
-import { resolveSelect } from '@wordpress/data';
+import { Button, Modal, Spinner } from '@finpress/components';
+import { resolveSelect } from '@finpress/data';
 import {
 	createElement,
 	Fragment,
 	useContext,
 	useCallback,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { closeSmall } from '@wordpress/icons';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { closeSmall } from '@finpress/icons';
 import {
 	__experimentalSelectControl as SelectControl,
 	__experimentalSelectControlMenu as Menu,

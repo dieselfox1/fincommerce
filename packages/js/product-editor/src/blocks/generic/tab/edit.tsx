@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InnerBlocks } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { InnerBlocks } from '@finpress/block-editor';
 import clsx from 'clsx';
-import { createElement, useEffect, useState } from '@wordpress/element';
-import type { BlockAttributes } from '@wordpress/blocks';
+import { createElement, useEffect, useState } from '@finpress/element';
+import type { BlockAttributes } from '@finpress/blocks';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { __experimentalErrorBoundary as ErrorBoundary } from '@fincommerce/components';
 

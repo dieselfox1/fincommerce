@@ -6,7 +6,7 @@ import {
 	useState,
 	useRef,
 	useLayoutEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 export const Column = ( { children, shouldStick = false } ) => {
 	const [ isContentStuck, setIsContentStuck ] = useState( false );

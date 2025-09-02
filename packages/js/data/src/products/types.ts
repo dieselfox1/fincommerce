@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Post } from '@wordpress/core-data';
+import { Post } from '@finpress/core-data';
 
 /**
  * Internal dependencies

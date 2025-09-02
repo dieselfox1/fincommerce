@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  */
 import './style.scss';
 
-function WordPressLogo( { className = 'wordpress-logo', size = 72 } ) {
+function finpressLogo( { className = 'finpress-logo', size = 72 } ) {
 	return (
 		<svg
 			className={ className }
@@ -21,9 +21,9 @@ function WordPressLogo( { className = 'wordpress-logo', size = 72 } ) {
 	);
 }
 
-WordPressLogo.propTypes = {
+finpressLogo.propTypes = {
 	className: PropTypes.string,
 	size: PropTypes.number,
 };
 
-export default WordPressLogo;
+export default finpressLogo;

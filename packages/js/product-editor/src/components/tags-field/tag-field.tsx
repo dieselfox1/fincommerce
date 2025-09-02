@@ -1,21 +1,21 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useEffect,
 	useState,
 	createElement,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	TreeItemType,
 	__experimentalSelectTreeControl as SelectTree,
 } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
 import { experimentalProductTagsStore, ProductTag } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
-import { useDebounce } from '@wordpress/compose';
+import { useDispatch } from '@finpress/data';
+import { useDebounce } from '@finpress/compose';
 
 /**
  * Internal dependencies

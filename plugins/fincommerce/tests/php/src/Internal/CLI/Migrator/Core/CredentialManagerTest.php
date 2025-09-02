@@ -102,7 +102,7 @@ class CredentialManagerTest extends \WC_Unit_Test_Case {
 
 
 	/**
-	 * Test that credentials are stored securely in WordPress options.
+	 * Test that credentials are stored securely in finpress options.
 	 */
 	public function test_credentials_storage_location() {
 		$platform    = 'test_platform';

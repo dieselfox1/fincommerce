@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { store as coreStore } from '@wordpress/core-data';
-import { dispatch } from '@wordpress/data';
+import { store as coreStore } from '@finpress/core-data';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

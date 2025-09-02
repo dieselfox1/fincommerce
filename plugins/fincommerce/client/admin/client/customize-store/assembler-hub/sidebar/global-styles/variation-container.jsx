@@ -1,17 +1,17 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/d5ab7238e53d0947d4bb0853464b1c58325b6130/packages/edit-site/src/components/global-styles/style-variations-container.js
+// Reference: https://github.com/finpress/gutenberg/blob/d5ab7238e53d0947d4bb0853464b1c58325b6130/packages/edit-site/src/components/global-styles/style-variations-container.js
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { useMemo, useContext } from '@wordpress/element';
-import { ENTER } from '@wordpress/keycodes';
-import { __, sprintf } from '@wordpress/i18n';
+import { useMemo, useContext } from '@finpress/element';
+import { ENTER } from '@finpress/keycodes';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	privateApis as blockEditorPrivateApis,
 	BlockEditorProvider,
-} from '@wordpress/block-editor';
-import { mergeBaseAndUserConfigs } from '@wordpress/edit-site/build-module/components/global-styles/global-styles-provider';
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+} from '@finpress/block-editor';
+import { mergeBaseAndUserConfigs } from '@finpress/edit-site/build-module/components/global-styles/global-styles-provider';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 import { isEqual, noop } from 'lodash';
 
 /**
@@ -38,7 +38,7 @@ const resetTypographySettings = ( variation, userStyles ) => {
 	return userStyles;
 };
 
-// mergeBaseAndUserConfigs is just a wrapper around deepmerge library: https://github.com/WordPress/gutenberg/blob/237865fad0864c209a7c3e771e23fe66f4fbca25/packages/edit-site/src/components/global-styles/global-styles-provider.js/#L24-L31
+// mergeBaseAndUserConfigs is just a wrapper around deepmerge library: https://github.com/finpress/gutenberg/blob/237865fad0864c209a7c3e771e23fe66f4fbca25/packages/edit-site/src/components/global-styles/global-styles-provider.js/#L24-L31
 // Deepmerge library merges two objects x and y deeply, returning a new merged object with the elements from both x and y.
 // In the case of the variation.title === 'New - Neutral', the core/button is an empty object, because we don't want that the classes for the core/button are created.
 // Deepmerge merges the userStyles.blocks[ 'core/button' ] with the variation.styles.blocks[ 'core/button' ] and the result is an object with values that doesn't match with the variation. For this reason it is necessary remove the userStyles.blocks[ 'core/button' ].

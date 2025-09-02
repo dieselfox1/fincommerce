@@ -89,7 +89,7 @@ export type ActivatePluginsResponse = PluginsResponse< {
 } >;
 
 export type JetpackConnectionDataResponse = {
-	/** The user on this site who is connected to Jetpack with their WordPress.com account */
+	/** The user on this site who is connected to Jetpack with their finpress.com account */
 	connectionOwner: string | null;
 	/** Details about the currently logged in user on this site */
 	currentUser: {

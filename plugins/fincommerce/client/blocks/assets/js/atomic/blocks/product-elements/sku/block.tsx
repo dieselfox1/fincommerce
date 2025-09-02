@@ -9,9 +9,9 @@ import {
 import { withProductDataContext } from '@fincommerce/shared-hocs';
 import type { HTMLAttributes } from 'react';
 import { useStyleProps } from '@fincommerce/base-hooks';
-import { RichText } from '@wordpress/block-editor';
-import type { BlockEditProps } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import { RichText } from '@finpress/block-editor';
+import type { BlockEditProps } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

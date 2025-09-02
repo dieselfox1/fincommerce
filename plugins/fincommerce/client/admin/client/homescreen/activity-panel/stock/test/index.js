@@ -3,7 +3,7 @@
  */
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

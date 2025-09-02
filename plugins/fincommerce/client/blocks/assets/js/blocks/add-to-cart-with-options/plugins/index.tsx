@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { SelectControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { SelectControl } from '@finpress/components';
 import { recordEvent } from '@fincommerce/tracks';
 import {
 	// @ts-expect-error no exported member.
 	PluginDocumentSettingPanel,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies

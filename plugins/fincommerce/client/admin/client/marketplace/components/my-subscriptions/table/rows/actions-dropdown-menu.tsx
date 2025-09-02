@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { DropdownMenu } from '@wordpress/components';
-import { moreVertical } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { DropdownMenu } from '@finpress/components';
+import { moreVertical } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

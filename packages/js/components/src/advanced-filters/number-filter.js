@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createElement, Component, Fragment } from '@wordpress/element';
-import { SelectControl, TextControl } from '@wordpress/components';
+import { createElement, Component, Fragment } from '@finpress/element';
+import { SelectControl, TextControl } from '@finpress/components';
 import { get, find, isArray } from 'lodash';
 import clsx from 'clsx';
-import { sprintf, __, _x } from '@wordpress/i18n';
+import { sprintf, __, _x } from '@finpress/i18n';
 import { CurrencyFactory } from '@fincommerce/currency';
 
 /**

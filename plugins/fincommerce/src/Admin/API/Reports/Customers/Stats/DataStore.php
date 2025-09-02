@@ -116,7 +116,7 @@ class DataStore extends CustomersDataStore implements DataStoreInterface {
 		$this->add_sql_clause( 'from', "({$this->subquery->get_query_statement()}) AS tt" );
 
 		$report_data = $wpdb->get_results(
-			$this->get_query_statement(), // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$this->get_query_statement(), // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			ARRAY_A
 		);
 

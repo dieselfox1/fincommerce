@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { FormEvent } from 'react';
-import { Button, Modal } from '@wordpress/components';
-import { createElement, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { dragHandle } from '@wordpress/icons';
+import { Button, Modal } from '@finpress/components';
+import { createElement, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { dragHandle } from '@finpress/icons';
 import { Product } from '@fincommerce/data';
 import clsx from 'clsx';
 

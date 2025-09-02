@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Card } from '@wordpress/components';
+import { Card } from '@finpress/components';
 import { Table } from '@fincommerce/components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

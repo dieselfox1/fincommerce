@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Slot, Fill, MenuItem, MenuGroup } from '@wordpress/components';
-import { Children, createElement, Fragment } from '@wordpress/element';
+import { Slot, Fill, MenuItem, MenuGroup } from '@finpress/components';
+import { Children, createElement, Fragment } from '@finpress/element';
 import {
 	createOrderedChildren,
 	sortFillsByOrder,

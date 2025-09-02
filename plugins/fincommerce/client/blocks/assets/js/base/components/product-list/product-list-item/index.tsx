@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import { useInnerBlockLayoutContext } from '@fincommerce/shared-context';
-import { withInstanceId } from '@wordpress/compose';
+import { withInstanceId } from '@finpress/compose';
 
 /**
  * Internal dependencies

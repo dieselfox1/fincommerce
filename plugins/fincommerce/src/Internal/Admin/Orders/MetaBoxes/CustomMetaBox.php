@@ -39,8 +39,8 @@ class CustomMetaBox {
 			}
 			$metadata_to_list[] = array(
 				'meta_id'    => $data['id'],
-				'meta_key'   => $data['key'], // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- False positive, not a meta query.
-				'meta_value' => maybe_serialize( $data['value'] ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- False positive, not a meta query.
+				'meta_key'   => $data['key'], // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key -- False positive, not a meta query.
+				'meta_value' => maybe_serialize( $data['value'] ), // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value -- False positive, not a meta query.
 			);
 		}
 		return $metadata_to_list;
@@ -80,7 +80,7 @@ class CustomMetaBox {
 			printf(
 				/* translators: 1: opening documentation tag 2: closing documentation tag. */
 				esc_html( __( 'Custom fields can be used to add extra metadata to an order that you can %1$suse in your theme%2$s.', 'fincommerce' ) ),
-				'<a href="' . esc_attr__( 'https://wordpress.org/support/article/custom-fields/', 'fincommerce' ) . '">',
+				'<a href="' . esc_attr__( 'https://finpress.org/support/article/custom-fields/', 'fincommerce' ) . '">',
 				'</a>'
 			);
 			?>
@@ -251,7 +251,7 @@ class CustomMetaBox {
 		}
 
 		if ( ! empty( $_POST['meta'] ) ) { // update.
-			$meta = wp_unslash( $_POST['meta'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitization done below in array_walk.
+			$meta = wp_unslash( $_POST['meta'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitization done below in array_walk.
 			$this->handle_update_meta( $order, $meta );
 		} else { // add meta.
 			$meta_value = sanitize_text_field( wp_unslash( $_POST['metavalue'] ?? '' ) );
@@ -293,8 +293,8 @@ class CustomMetaBox {
 				'data'     => $this->list_meta_row(
 					array(
 						'meta_id'    => $meta_id,
-						'meta_key'   => $meta_key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- false positive, not a meta query.
-						'meta_value' => $meta_value, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
+						'meta_key'   => $meta_key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key -- false positive, not a meta query.
+						'meta_value' => $meta_value, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
 					),
 					$count
 				),
@@ -344,8 +344,8 @@ class CustomMetaBox {
 				'old_id'   => $mid,
 				'data'     => $this->list_meta_row(
 					array(
-						'meta_key'   => $key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- false positive, not a meta query.
-						'meta_value' => $value, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
+						'meta_key'   => $key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key -- false positive, not a meta query.
+						'meta_value' => $value, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
 						'meta_id'    => $mid,
 					),
 					$count
@@ -380,7 +380,7 @@ class CustomMetaBox {
 		if ( is_serialized( $entry['meta_value'] ) ) {
 			if ( is_serialized_string( $entry['meta_value'] ) ) {
 				// This is a serialized string, so we should display it.
-				$entry['meta_value'] = maybe_unserialize( $entry['meta_value'] ); // // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
+				$entry['meta_value'] = maybe_unserialize( $entry['meta_value'] ); // // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
 			} else {
 				// This is a serialized array/object so we should NOT display it.
 				--$count;
@@ -388,8 +388,8 @@ class CustomMetaBox {
 			}
 		}
 
-		$entry['meta_key']   = esc_attr( $entry['meta_key'] ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- false positive, not a meta query.
-		$entry['meta_value'] = esc_textarea( $entry['meta_value'] ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
+		$entry['meta_key']   = esc_attr( $entry['meta_key'] ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key -- false positive, not a meta query.
+		$entry['meta_value'] = esc_textarea( $entry['meta_value'] ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value -- false positive, not a meta query.
 		$entry['meta_id']    = (int) $entry['meta_id'];
 
 		$delete_nonce = wp_create_nonce( 'delete-meta_' . $entry['meta_id'] );
@@ -459,7 +459,7 @@ class CustomMetaBox {
 				$order_meta
 			);
 
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput, WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput, finpress.Security.NonceVerification.Missing
 
 		foreach ( ( $_POST['meta'] ?? array() ) as $request_meta_id => $request_meta_data ) {
 			$request_meta_id    = wp_unslash( $request_meta_id );
@@ -479,7 +479,7 @@ class CustomMetaBox {
 			$has_meta_changes = true;
 		}
 
-		// phpcs:enable WordPress.Security.ValidatedSanitizedInput, WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.ValidatedSanitizedInput, finpress.Security.NonceVerification.Missing
 
 		if ( $has_meta_changes ) {
 			$order->save();

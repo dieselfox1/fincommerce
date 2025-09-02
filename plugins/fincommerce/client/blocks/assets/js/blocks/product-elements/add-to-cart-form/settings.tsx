@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
 import {
 	PanelBody,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore - Ignoring because `__experimentalToggleGroupControl` is not yet in the type definitions.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore - Ignoring because `__experimentalToggleGroupControl` is not yet in the type definitions.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 export enum QuantitySelectorStyle {
 	Input = 'input',

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getBlockTypes, Block } from '@wordpress/blocks';
+import { getBlockTypes, Block } from '@finpress/blocks';
 
 /**
  * Returns an array of block names that support the 'email' feature.

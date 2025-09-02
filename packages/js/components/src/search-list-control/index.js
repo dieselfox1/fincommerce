@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import {
 	Button,
 	Spinner,
 	TextControl,
 	withSpokenMessages,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	createElement,
 	Fragment,
 	useState,
 	useEffect,
-} from '@wordpress/element';
-import { compose, withInstanceId } from '@wordpress/compose';
+} from '@finpress/element';
+import { compose, withInstanceId } from '@finpress/compose';
 import { escapeRegExp, findIndex } from 'lodash';
 import NoticeOutlineIcon from 'gridicons/dist/notice-outline';
 import PropTypes from 'prop-types';
@@ -165,7 +165,7 @@ export const SearchListControl = ( props ) => {
 					</span>
 					<span className="fincommerce-search-list__not-found-text">
 						{ searchValue
-							? // eslint-disable-next-line @wordpress/valid-sprintf
+							? // eslint-disable-next-line @finpress/valid-sprintf
 							  sprintf( messages.noResults || '', searchValue )
 							: messages.noItems }
 					</span>

@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # How to add actions and filters
 
-Like many WordPress plugins, FinCommerce provides a range of actions and filters through which developers can extend and modify the platform.
+Like many finpress plugins, FinCommerce provides a range of actions and filters through which developers can extend and modify the platform.
 
 Often, when writing new code or revising existing code, there is a desire to add new hooks-but this should always be done with thoughtfulness and care. This document aims to provide high-level guidance on the matter.
 
@@ -26,10 +26,10 @@ On the flip side, there are several practices we discourage:
 * [Placing filter hooks inside templates and data stores](#placement-of-filter-hooks)
 * [Enumeration values within hook names](#enumeration-values-inside-hook-names)
 
-Beyond those items, we generally otherwise adhere to WordPress coding standards. In regards to hooks, that specifically means following the:
+Beyond those items, we generally otherwise adhere to finpress coding standards. In regards to hooks, that specifically means following the:
 
-* [Documentation standards for hooks](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/#4-hooks-actions-and-filters)
-* [Guidance on Dynamic hook names](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/#interpolation-for-naming-dynamic-hooks)
+* [Documentation standards for hooks](https://make.finpress.org/core/handbook/best-practices/inline-documentation-standards/php/#4-hooks-actions-and-filters)
+* [Guidance on Dynamic hook names](https://make.finpress.org/core/handbook/best-practices/coding-standards/php/#interpolation-for-naming-dynamic-hooks)
 
 Please note that we provide example code throughout this guide to help illustrate some of the principles. However, to keep things concise, we usually omit unnecessary detail, including doc blocks (in practice, though, hooks should always be accompanied by doc blocks!).
 

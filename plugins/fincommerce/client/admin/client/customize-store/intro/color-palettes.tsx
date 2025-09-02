@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useInstanceId } from '@wordpress/compose';
-import { __, sprintf } from '@wordpress/i18n';
+import { useInstanceId } from '@finpress/compose';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

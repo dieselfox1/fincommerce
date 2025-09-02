@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import ServerSideRender from '@wordpress/server-side-render';
-import { useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import ServerSideRender from '@finpress/server-side-render';
+import { useBlockProps } from '@finpress/block-editor';
 import {
 	__experimentalText as Text, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 // eslint-disable-next-line @fincommerce/dependency-group
-import { store as editorStore } from '@wordpress/editor';
+import { store as editorStore } from '@finpress/editor';
 
 /**
  * Internal dependencies

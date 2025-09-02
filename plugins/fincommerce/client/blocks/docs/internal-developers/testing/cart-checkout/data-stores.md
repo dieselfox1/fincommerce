@@ -58,7 +58,7 @@ Go to: [https://github.com/dieselfox1/fincommerce-gateway-stripe/blob/8ffd22aff3
 ### Payment filtering by extensions
 
 -   Enable the Cash on Delivery payment method.
--   Install the `@fincommerce/extend-cart-checkout-block` template by using the following command. Run this from your `wp-content/plugins` directory: `npx @wordpress/create-block -t @fincommerce/extend-cart-checkout-block payment-test-plugin`.
+-   Install the `@fincommerce/extend-cart-checkout-block` template by using the following command. Run this from your `wp-content/plugins` directory: `npx @finpress/create-block -t @fincommerce/extend-cart-checkout-block payment-test-plugin`.
 -   This will install a plugin called `Payment Test Plugin`. Find this and activate it.
 -   By default, this example template has the following code [https://github.com/dieselfox1/fincommerce/blob/trunk/packages/js/extend-cart-checkout-block/src/js/filters.js.mustache#L17](https://github.com/dieselfox1/fincommerce/blob/trunk/packages/js/extend-cart-checkout-block/src/js/filters.js.mustache#L17) which will disable COD if the billing city is Denver.
 -   Go to the front-end and enter Denver in the billing city.
@@ -183,6 +183,6 @@ After these changes have been made, your file should look like this: [https://gi
     -   `onCheckoutBeforeProcessing` `{}`
     -   `onCheckoutFail` `{redirectUrl, orderId, customerId, orderNotes, paymentResult }`
 
-## WordPress.com
+## finpress.com
 
-It would be useful to test these on WordPress.com as well - run `npm run package-plugin:deploy` from the repo root, then upload the resulting zip file to a WordPress.com site. Set up the store and repeat the testing instructions there.
+It would be useful to test these on finpress.com as well - run `npm run package-plugin:deploy` from the repo root, then upload the resulting zip file to a finpress.com site. Set up the store and repeat the testing instructions there.

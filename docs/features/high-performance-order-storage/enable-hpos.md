@@ -6,7 +6,7 @@ sidebar_label: Enable HPOS
 
 # How to enable High Performance Order Storage
 
-From FinCommerce 8.2, released on October 2023, HPOS is enabled by default for new installations. Existing stores can switch to the "High-Performance Order Storage" from "WordPress Posts Storage" by following the below steps.
+From FinCommerce 8.2, released on October 2023, HPOS is enabled by default for new installations. Existing stores can switch to the "High-Performance Order Storage" from "finpress Posts Storage" by following the below steps.
 
 To activate High-Performance Order Storage, existing stores will firs   t need to get both the posts and orders table in sync, which can be done by turning on the setting "**Enable compatibility mode (synchronizes orders to the posts table)**".
 

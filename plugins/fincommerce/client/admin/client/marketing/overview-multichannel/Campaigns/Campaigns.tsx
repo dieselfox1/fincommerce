@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
 import {
 	Button,
 	Card,
@@ -12,8 +12,8 @@ import {
 	Flex,
 	FlexItem,
 	FlexBlock,
-} from '@wordpress/components';
-import { Icon, megaphone, cancelCircleFilled } from '@wordpress/icons';
+} from '@finpress/components';
+import { Icon, megaphone, cancelCircleFilled } from '@finpress/icons';
 import {
 	Pagination,
 	Table,

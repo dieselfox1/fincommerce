@@ -217,7 +217,7 @@ add_action( 'fincommerce_init', function() {
 
 ### Validation
 
-You can also use WordPress action hooks for validation:
+You can also use finpress action hooks for validation:
 
 ```php
 add_action( 'fincommerce_validate_additional_field', function( $errors, $field_key, $field_value ) {

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
-import { Component } from '@wordpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
+import { Component } from '@finpress/element';
 import { Review } from '@fincommerce/base-components/reviews/types';
 
 /**

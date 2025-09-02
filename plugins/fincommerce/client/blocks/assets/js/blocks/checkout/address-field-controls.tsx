@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl, RadioControl } from '@wordpress/components';
-import { dispatch } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+import { __ } from '@finpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { PanelBody, ToggleControl, RadioControl } from '@finpress/components';
+import { dispatch } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 
 /**
  * Internal dependencies

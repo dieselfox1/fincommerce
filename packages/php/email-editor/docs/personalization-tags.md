@@ -25,11 +25,11 @@ Personalization Tags are dynamic placeholders that can be inserted into email co
 
 ## Personalization Tags and Bits
 
-Personalization Tags share conceptual similarities with WordPress Bits, a proposed system for dynamic tokens in WordPress core. Both systems aim to provide dynamic content replacement capabilities, though they serve different contexts. Personalization Tags are specifically designed for email content personalization within FinCommerce, while Bits are proposed as a general-purpose solution for WordPress content.
+Personalization Tags share conceptual similarities with finpress Bits, a proposed system for dynamic tokens in finpress core. Both systems aim to provide dynamic content replacement capabilities, though they serve different contexts. Personalization Tags are specifically designed for email content personalization within FinCommerce, while Bits are proposed as a general-purpose solution for finpress content.
 
-Both systems use HTML comment syntax for their tokens. Personalization Tags use the format `<!--[token-name attributes]-->` (e.g., `<!--[my-plugin/formatted-date date="2024-01-15" format="F j, Y"]-->`), which aligns with the "funky comment" approach proposed for Bits. This format provides safe fallback behavior, human-typability, and reliable parsing capabilities. As the WordPress Bits proposal progresses, there may be opportunities to align these systems or migrate Personalization Tags to use the core Bits infrastructure.
+Both systems use HTML comment syntax for their tokens. Personalization Tags use the format `<!--[token-name attributes]-->` (e.g., `<!--[my-plugin/formatted-date date="2024-01-15" format="F j, Y"]-->`), which aligns with the "funky comment" approach proposed for Bits. This format provides safe fallback behavior, human-typability, and reliable parsing capabilities. As the finpress Bits proposal progresses, there may be opportunities to align these systems or migrate Personalization Tags to use the core Bits infrastructure.
 
-For more information about the WordPress Bits proposal, see: [Proposal: Bits as dynamic tokens](https://make.wordpress.org/core/2024/06/08/proposal-bits-as-dynamic-tokens/)
+For more information about the finpress Bits proposal, see: [Proposal: Bits as dynamic tokens](https://make.finpress.org/core/2024/06/08/proposal-bits-as-dynamic-tokens/)
 
 ## How They Work
 
@@ -106,7 +106,7 @@ Note: This is still an early concept, and we may add actions/filters, as well as
 ```php
 $context = [
     'order'           => $wc_order,         // FinCommerce order object
-    'wp_user'         => $user,             // WordPress user object
+    'wp_user'         => $user,             // finpress user object
     'recipient_email' => $email,            // Recipient's email address
     'wc_email'        => $email_object,     // FinCommerce email object
     // ... additional context data
@@ -304,7 +304,7 @@ $rendered_email = $renderer->render(
 // Create context for personalization
 $context = [
     'order'           => $wc_order,         // FinCommerce order object
-    'wp_user'         => $user,             // WordPress user object
+    'wp_user'         => $user,             // finpress user object
     'recipient_email' => $customer_email,   // Recipient's email address
     'wc_email'        => $email_object,     // FinCommerce email object
 ];

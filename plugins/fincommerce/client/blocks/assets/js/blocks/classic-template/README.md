@@ -58,7 +58,7 @@ From the `render()` method we inspect the `$attributes` object for a `template` 
 ### PHP actions and filters
 
 > [!NOTE]
-> Using PHP actions and filters to customize the look-and-feel of a store with a block theme is discouraged. We recommend using [blocks](https://developer.wordpress.org/block-editor/), [global styles](https://developer.wordpress.org/themes/global-settings-and-styles/), [block hooks](https://make.wordpress.org/core/2023/10/15/introducing-block-hooks-for-dynamic-blocks/), and other block-based APIs. However, these filters can be useful to port some customizations from the blocks into the Classic Template block.
+> Using PHP actions and filters to customize the look-and-feel of a store with a block theme is discouraged. We recommend using [blocks](https://developer.finpress.org/block-editor/), [global styles](https://developer.finpress.org/themes/global-settings-and-styles/), [block hooks](https://make.finpress.org/core/2023/10/15/introducing-block-hooks-for-dynamic-blocks/), and other block-based APIs. However, these filters can be useful to port some customizations from the blocks into the Classic Template block.
 
 Internally, the `ClassicTemplate` class triggers several PHP hooks that are shared with classic themes. Those are:
 
@@ -76,7 +76,7 @@ Those hooks except `fincommerce_show_page_title` and `fincommerce_shop_loop` are
 ### PHP template parts
 
 > [!NOTE]
-> Using PHP template parts to customize the look-and-feel of a store with a block theme is discouraged. We recommend using [blocks](https://developer.wordpress.org/block-editor/), [global styles](https://developer.wordpress.org/themes/global-settings-and-styles/), [block hooks](https://make.wordpress.org/core/2023/10/15/introducing-block-hooks-for-dynamic-blocks/), and other block-based APIs. However, these template parts can be useful to port some customizations from the blocks into the Classic Template block.
+> Using PHP template parts to customize the look-and-feel of a store with a block theme is discouraged. We recommend using [blocks](https://developer.finpress.org/block-editor/), [global styles](https://developer.finpress.org/themes/global-settings-and-styles/), [block hooks](https://make.finpress.org/core/2023/10/15/introducing-block-hooks-for-dynamic-blocks/), and other block-based APIs. However, these template parts can be useful to port some customizations from the blocks into the Classic Template block.
 
 > [!CAUTION]
 > Unlike most PHP actions and filters mentioned above, the PHP template parts are not applied in the blockified version of the templates, so you should make sure to build a version of the same changes that works with blocks.

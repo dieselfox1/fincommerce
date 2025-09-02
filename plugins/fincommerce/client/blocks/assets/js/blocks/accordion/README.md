@@ -1,6 +1,6 @@
 # Accordion
 
-_Note: This block is a copy of an upstream implementation ( [PR](https://github.com/WordPress/gutenberg/pull/64119) ) Please keep changes to a minimum. This block is namespaced under FinCommerce._
+_Note: This block is a copy of an upstream implementation ( [PR](https://github.com/finpress/gutenberg/pull/64119) ) Please keep changes to a minimum. This block is namespaced under FinCommerce._
 
 ## Accordion Group
 

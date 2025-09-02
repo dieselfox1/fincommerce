@@ -3,21 +3,21 @@
  */
 import { act, render, screen } from '@testing-library/react';
 import { validationStore } from '@fincommerce/block-data';
-import { dispatch, select, StoreDescriptor } from '@wordpress/data';
+import { dispatch, select, StoreDescriptor } from '@finpress/data';
 import userEvent from '@testing-library/user-event';
-import { useState } from '@wordpress/element';
-import * as wpData from '@wordpress/data';
+import { useState } from '@finpress/element';
+import * as wpData from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import ValidatedTextInput from '@fincommerce/block-library/packages/components/text-input/validated-text-input';
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	__esModule: true,
-	...jest.requireActual( '@wordpress/data' ),
+	...jest.requireActual( '@finpress/data' ),
 	useDispatch: jest.fn().mockImplementation( ( args ) => {
-		return jest.requireActual( '@wordpress/data' ).useDispatch( args );
+		return jest.requireActual( '@finpress/data' ).useDispatch( args );
 	} ),
 } ) );
 
@@ -254,13 +254,13 @@ describe( 'ValidatedTextInput', () => {
 					if ( store === validationStore ) {
 						return {
 							...jest
-								.requireActual( '@wordpress/data' )
+								.requireActual( '@finpress/data' )
 								.useDispatch( store ),
 							setValidationErrors,
 						};
 					}
 					return jest
-						.requireActual( '@wordpress/data' )
+						.requireActual( '@finpress/data' )
 						.useDispatch( store );
 				}
 			);
@@ -298,13 +298,13 @@ describe( 'ValidatedTextInput', () => {
 					if ( store === validationStore ) {
 						return {
 							...jest
-								.requireActual( '@wordpress/data' )
+								.requireActual( '@finpress/data' )
 								.useDispatch( store ),
 							setValidationErrors,
 						};
 					}
 					return jest
-						.requireActual( '@wordpress/data' )
+						.requireActual( '@finpress/data' )
 						.useDispatch( store );
 				}
 			);
@@ -342,13 +342,13 @@ describe( 'ValidatedTextInput', () => {
 					if ( store === validationStore ) {
 						return {
 							...jest
-								.requireActual( '@wordpress/data' )
+								.requireActual( '@finpress/data' )
 								.useDispatch( store ),
 							setValidationErrors,
 						};
 					}
 					return jest
-						.requireActual( '@wordpress/data' )
+						.requireActual( '@finpress/data' )
 						.useDispatch( store );
 				}
 			);

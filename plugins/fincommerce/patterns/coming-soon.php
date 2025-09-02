@@ -14,4 +14,4 @@ $default_pattern  = $store_pages_only ? 'coming-soon-store-only' : 'page-coming-
 
 ?>
 
-<!-- wp:pattern {"slug":"fincommerce/<?php echo $default_pattern; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>"} /-->
+<!-- wp:pattern {"slug":"fincommerce/<?php echo $default_pattern; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>"} /-->

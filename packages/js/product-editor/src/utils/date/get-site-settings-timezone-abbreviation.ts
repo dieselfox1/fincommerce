@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { TimezoneConfig, getSettings } from '@wordpress/date';
+import { TimezoneConfig, getSettings } from '@finpress/date';
 
 export function getSiteSettingsTimezoneAbbreviation() {
 	const { timezone } = getSettings() as {

@@ -14,7 +14,7 @@ use Automattic\FinCommerce\Enums\ProductType;
 require_once __DIR__ . '/../features/onboarding-tasks/test-task.php';
 
 // Wrokaround to suppress exif_read_data errors from
-// https://github.com/WordPress/WordPress/blob/master/wp-admin/includes/image.php#L835
+// https://github.com/finpress/finpress/blob/master/wp-admin/includes/image.php#L835
 define( 'WP_RUN_CORE_TESTS', false );
 
 /**

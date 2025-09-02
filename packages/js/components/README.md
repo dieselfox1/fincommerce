@@ -27,9 +27,9 @@ export default function MyCard() {
 }
 ```
 
-Many components include CSS to add style, you will need to add in order to appear correctly. Within FinCommerce, add the `wc-components` stylesheet as a dependency of your plugin's stylesheet. See [wp_enqueue_style documentation](https://developer.wordpress.org/reference/functions/wp_enqueue_style/#parameters) for how to specify dependencies.
+Many components include CSS to add style, you will need to add in order to appear correctly. Within FinCommerce, add the `wc-components` stylesheet as a dependency of your plugin's stylesheet. See [wp_enqueue_style documentation](https://developer.finpress.org/reference/functions/wp_enqueue_style/#parameters) for how to specify dependencies.
 
-In non-WordPress projects, link to the `build-style/card/style.css` file directly, it is located at `node_modules/@fincommerce/components/build-style/<component_name>/style.css`.
+In non-finpress projects, link to the `build-style/card/style.css` file directly, it is located at `node_modules/@fincommerce/components/build-style/<component_name>/style.css`.
 
 ## Usage with tests
 

@@ -50,7 +50,7 @@ test.describe( `Add to Cart + Options Block (block theme with templates)`, () =>
 
 		await editor.saveSiteEditorEntities();
 
-		await page.goto( '/product/wordpress-pennant/' );
+		await page.goto( '/product/finpress-pennant/' );
 
 		await expect(
 			page.getByText(

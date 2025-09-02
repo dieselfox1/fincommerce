@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
-import { resolveSelect } from '@wordpress/data';
+import { useState } from '@finpress/element';
+import { resolveSelect } from '@finpress/data';
 import { ProductTag, experimentalProductTagsStore } from '@fincommerce/data';
 
 /**

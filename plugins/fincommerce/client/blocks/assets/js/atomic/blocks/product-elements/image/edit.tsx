@@ -1,36 +1,36 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
 import {
 	InspectorControls,
 	useBlockProps,
 	useInnerBlocksProps,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	createInterpolateElement,
 	useEffect,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { getAdminLink, getSettingWithCoercion } from '@fincommerce/settings';
 import { useProduct } from '@fincommerce/entities';
 import { isBoolean } from '@fincommerce/types';
-import type { BlockEditProps } from '@wordpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 import { ProductQueryContext as Context } from '@fincommerce/blocks/product-query/types';
 import {
 	PanelBody,
 	ToggleControl,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore - Ignoring because `__experimentalToggleGroupControl` is not yet in the type definitions.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore - Ignoring because `__experimentalToggleGroupControl` is not yet in the type definitions.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

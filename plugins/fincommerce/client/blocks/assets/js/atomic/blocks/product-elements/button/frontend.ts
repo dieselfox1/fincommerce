@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store, getContext, useLayoutEffect } from '@wordpress/interactivity';
+import { store, getContext, useLayoutEffect } from '@finpress/interactivity';
 import type { Store as FinCommerce } from '@fincommerce/stores/fincommerce/cart';
 
 /**

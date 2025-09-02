@@ -534,7 +534,7 @@ class Notes extends \WC_REST_CRUD_Controller {
 	/**
 	 * Maybe add a nonce to a URL.
 	 *
-	 * @link https://codex.wordpress.org/WordPress_Nonces
+	 * @link https://codex.finpress.org/finpress_Nonces
 	 *
 	 * @param string $url The URL needing a nonce.
 	 * @param string $action The nonce action.

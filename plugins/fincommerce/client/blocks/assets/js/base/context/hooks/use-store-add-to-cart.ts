@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useRef } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { useState, useEffect, useRef } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import { cartStore } from '@fincommerce/block-data';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import type { CartItem } from '@fincommerce/types';
 
 /**

@@ -1047,7 +1047,7 @@ function wc_print_js() {
 		 * @since 2.6.0
 		 * @param string $js JavaScript code.
 		 */
-		echo apply_filters( 'fincommerce_queued_js', $js ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_queued_js', $js ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 		unset( $wc_queued_js );
 	}
@@ -1161,11 +1161,11 @@ function flush_rewrite_rules_on_shop_page_save() {
 	}
 
 	// Check if page is edited.
-	if ( empty( $_GET['post'] ) || empty( $_GET['action'] ) || ( isset( $_GET['action'] ) && 'edit' !== $_GET['action'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	if ( empty( $_GET['post'] ) || empty( $_GET['action'] ) || ( isset( $_GET['action'] ) && 'edit' !== $_GET['action'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		return;
 	}
 
-	$post_id      = intval( $_GET['post'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	$post_id      = intval( $_GET['post'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 	$shop_page_id = wc_get_page_id( 'shop' );
 
 	if ( $shop_page_id === $post_id || in_array( $post_id, wc_get_page_children( $shop_page_id ), true ) ) {
@@ -1810,10 +1810,10 @@ function wc_get_shipping_method_count( $include_legacy = false, $enabled_only = 
 			}
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$counts['enabled']  = absint( $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}fincommerce_shipping_zone_methods WHERE is_enabled=1 AND method_id IN ('" . implode( "','", array_map( 'esc_sql', $method_ids ) ) . "')" ) );
 		$counts['disabled'] = absint( $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}fincommerce_shipping_zone_methods WHERE is_enabled=0 AND method_id IN ('" . implode( "','", array_map( 'esc_sql', $method_ids ) ) . "')" ) );
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$transient_value = array(
 			'version'  => $transient_version,
@@ -1964,7 +1964,7 @@ function wc_asort_by_locale( &$data, $locale = '' ) {
 			 * It may be caused in installations that doesn't include ICU TZData.
 			 */
 			if ( Constants::is_true( 'WP_DEBUG' ) ) {
-				error_log( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+				error_log( // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log
 					sprintf(
 						'An unexpected error occurred while trying to use PHP Intl Collator class, it may be caused by an incorrect installation of PHP Intl and ICU, and could be fixed by reinstallaing PHP Intl, see more details about PHP Intl installation: %1$s. Error message: %2$s',
 						'https://www.php.net/manual/en/intl.installation.php',
@@ -2204,10 +2204,10 @@ function wc_print_r( $expression, $return = false ) {
 		if ( function_exists( $alternative['func'] ) ) {
 			$res = $alternative['func']( ...$alternative['args'] );
 			if ( $return ) {
-				return $res; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				return $res; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			}
 
-			echo $res; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $res; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			return true;
 		}
 	}
@@ -2361,7 +2361,7 @@ function wc_make_phone_clickable( $phone ) {
  * @return mixed Value sanitized by wc_clean.
  */
 function wc_get_post_data_by_key( $key, $default = '' ) {
-	// phpcs:ignore WordPress.Security.ValidatedSanitizedInput, WordPress.Security.NonceVerification.Missing
+	// phpcs:ignore finpress.Security.ValidatedSanitizedInput, finpress.Security.NonceVerification.Missing
 	return wc_clean( wp_unslash( wc_get_var( $_POST[ $key ], $default ) ) );
 }
 
@@ -2454,7 +2454,7 @@ add_filter( 'auto_update_plugin', 'wc_prevent_dangerous_auto_updates', 99, 2 );
 function wc_delete_expired_transients() {
 	global $wpdb;
 
-	// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+	// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 	$sql  = "DELETE a, b FROM $wpdb->options a, $wpdb->options b
 		WHERE a.option_name LIKE %s
 		AND a.option_name NOT LIKE %s
@@ -2468,7 +2468,7 @@ function wc_delete_expired_transients() {
 		AND b.option_name = CONCAT( '_site_transient_timeout_', SUBSTRING( a.option_name, 17 ) )
 		AND b.option_value < %d";
 	$rows2 = $wpdb->query( $wpdb->prepare( $sql, $wpdb->esc_like( '_site_transient_' ) . '%', $wpdb->esc_like( '_site_transient_timeout_' ) . '%', time() ) );
-	// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+	// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 	return absint( $rows + $rows2 );
 }
@@ -2668,7 +2668,7 @@ function wc_load_cart() {
  * @return bool
  */
 function wc_is_running_from_async_action_scheduler() {
-	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	// phpcs:ignore finpress.Security.NonceVerification.Recommended
 	return isset( $_REQUEST['action'] ) && 'as_async_request_queue_runner' === $_REQUEST['action'];
 }
 

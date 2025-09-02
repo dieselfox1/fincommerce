@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf, getLocaleData } from '@wordpress/i18n';
+import { __, sprintf, getLocaleData } from '@finpress/i18n';
 
 /**
  * Get the field label with the correct casing. Certain locales (e.g. German)

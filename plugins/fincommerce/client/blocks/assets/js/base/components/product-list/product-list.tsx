@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import fastDeepEqual from 'fast-deep-equal/es6';
 import clsx from 'clsx';
 import Pagination from '@fincommerce/base-components/pagination';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { usePrevious } from '@fincommerce/base-hooks';
 import {
 	useStoreEvents,
@@ -15,7 +15,7 @@ import {
 } from '@fincommerce/base-context/hooks';
 import withScrollToTop from '@fincommerce/base-hocs/with-scroll-to-top';
 import { useInnerBlockLayoutContext } from '@fincommerce/shared-context';
-import { speak } from '@wordpress/a11y';
+import { speak } from '@finpress/a11y';
 
 /**
  * Internal dependencies

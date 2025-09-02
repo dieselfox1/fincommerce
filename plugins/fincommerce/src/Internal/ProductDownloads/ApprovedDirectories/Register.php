@@ -189,7 +189,7 @@ class Register {
 
 		$table = $this->get_table();
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$result = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$table} WHERE url_id = %d", array( $id ) ) );
 
 		if ( ! $result ) {
@@ -212,7 +212,7 @@ class Register {
 		$table = $this->get_table();
 		$url   = trailingslashit( $url );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$result = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$table} WHERE url = %s", array( $url ) ) );
 
 		if ( ! $result ) {
@@ -256,7 +256,7 @@ class Register {
 		// Look for a rule that matches the start of the download URL being tested. Since rules describe parent
 		// directories, we also ensure it ends with a trailing slash.
 		//
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$matches = (int) $wpdb->get_var(
 			"
 				SELECT COUNT(*)
@@ -381,7 +381,7 @@ class Register {
 
 		$limit_sql = $wpdb->prepare( 'LIMIT %d, %d', ( $page - 1 ) * $per_page, $per_page );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$results = $wpdb->get_results(
 			"
 				SELECT   url_id, url, enabled
@@ -428,7 +428,7 @@ class Register {
 	public function delete_all(): bool {
 		global $wpdb;
 		$table = $this->get_table();
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return (bool) $wpdb->query( "DELETE FROM $table" );
 	}
 
@@ -466,7 +466,7 @@ class Register {
 	public function enable_all(): bool {
 		global $wpdb;
 		$table = $this->get_table();
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return (bool) $wpdb->query( "UPDATE {$table} SET enabled = 1" );
 	}
 
@@ -478,7 +478,7 @@ class Register {
 	public function disable_all(): bool {
 		global $wpdb;
 		$table = $this->get_table();
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return (bool) $wpdb->query( "UPDATE {$table} SET enabled = 0" );
 	}
 
@@ -496,7 +496,7 @@ class Register {
 
 		return (int) $wpdb->get_var(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT COUNT(*) FROM {$table} WHERE enabled = %d",
 				$enabled ? 1 : 0
 			)

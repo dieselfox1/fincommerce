@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import domReady from '@wordpress/dom-ready';
+import domReady from '@finpress/dom-ready';
 import { recordEvent } from '@fincommerce/tracks';
 
 domReady( () => {

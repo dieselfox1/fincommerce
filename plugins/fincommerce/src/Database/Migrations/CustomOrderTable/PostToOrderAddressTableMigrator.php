@@ -9,7 +9,7 @@ use Automattic\FinCommerce\Database\Migrations\MetaToCustomTableMigrator;
 use Automattic\FinCommerce\Internal\DataStores\Orders\OrdersTableDataStore;
 
 /**
- * Helper class to migrate records from the WordPress post table
+ * Helper class to migrate records from the finpress post table
  * to the custom order addresses table.
  *
  * @package Automattic\FinCommerce\Database\Migrations\CustomOrderTable
@@ -162,7 +162,7 @@ class PostToOrderAddressTableMigrator extends MetaToCustomTableMigrator {
 	protected function get_where_clause_for_verification( $source_ids ) {
 		global $wpdb;
 		$query = parent::get_where_clause_for_verification( $source_ids );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $query should already be prepared, $schema_config is hardcoded.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $query should already be prepared, $schema_config is hardcoded.
 		return $wpdb->prepare( "$query AND {$this->schema_config['destination']['table_name']}.address_type = %s", $this->type );
 	}
 }

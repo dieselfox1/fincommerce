@@ -2,12 +2,12 @@
  * External dependencies
  */
 import { useWooBlockProps } from '@fincommerce/block-templates';
-import { useMergeRefs } from '@wordpress/compose';
+import { useMergeRefs } from '@finpress/compose';
 import { Link } from '@fincommerce/components';
 import { Product } from '@fincommerce/data';
-import { createElement, useRef } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { Icon, external } from '@wordpress/icons';
+import { createElement, useRef } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { Icon, external } from '@finpress/icons';
 
 /**
  * Internal dependencies
@@ -81,7 +81,7 @@ export function Edit( {
 					__( 'Invalid value for the field.', 'fincommerce' );
 			}
 			if ( input.validity.tooShort ) {
-				// eslint-disable-next-line @wordpress/valid-sprintf
+				// eslint-disable-next-line @finpress/valid-sprintf
 				customErrorMessage = sprintf(
 					minLength?.message ??
 						/* translators: %d: minimum length */
@@ -93,7 +93,7 @@ export function Edit( {
 				);
 			}
 			if ( input.validity.tooLong ) {
-				// eslint-disable-next-line @wordpress/valid-sprintf
+				// eslint-disable-next-line @finpress/valid-sprintf
 				customErrorMessage = sprintf(
 					maxLength?.message ??
 						/* translators: %d: maximum length */
@@ -105,7 +105,7 @@ export function Edit( {
 				);
 			}
 			if ( input.validity.rangeUnderflow ) {
-				// eslint-disable-next-line @wordpress/valid-sprintf
+				// eslint-disable-next-line @finpress/valid-sprintf
 				customErrorMessage = sprintf(
 					min?.message ??
 						/* translators: %d: minimum length */
@@ -117,7 +117,7 @@ export function Edit( {
 				);
 			}
 			if ( input.validity.rangeOverflow ) {
-				// eslint-disable-next-line @wordpress/valid-sprintf
+				// eslint-disable-next-line @finpress/valid-sprintf
 				customErrorMessage = sprintf(
 					max?.message ??
 						/* translators: %d: maximum length */

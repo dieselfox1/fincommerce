@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Disabled, PanelBody } from '@wordpress/components';
-import { InspectorControls } from '@wordpress/block-editor';
-import ServerSideRender from '@wordpress/server-side-render';
+import { __ } from '@finpress/i18n';
+import { Disabled, PanelBody } from '@finpress/components';
+import { InspectorControls } from '@finpress/block-editor';
+import ServerSideRender from '@finpress/server-side-render';
 import GridContentControl from '@fincommerce/editor-components/grid-content-control';
 import GridLayoutControl from '@fincommerce/editor-components/grid-layout-control';
 import ProductCategoryControl from '@fincommerce/editor-components/product-category-control';

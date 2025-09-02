@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, Notice } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, Notice } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 /**
  * Internal dependencies
  */

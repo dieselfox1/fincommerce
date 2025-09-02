@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 import { parse } from 'qs';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies

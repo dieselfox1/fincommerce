@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 import { productFilterActive } from '@fincommerce/icons';
 
 /**

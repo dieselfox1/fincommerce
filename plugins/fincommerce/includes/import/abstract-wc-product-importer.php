@@ -576,7 +576,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 		$upload_dir = wp_upload_dir( null, false );
 		$base_url   = $upload_dir['baseurl'] . '/';
 
-		// Check first if attachment is inside the WordPress uploads directory, or we're given a filename only.
+		// Check first if attachment is inside the finpress uploads directory, or we're given a filename only.
 		if ( false !== strpos( $url, $base_url ) || false === strpos( $url, '://' ) ) {
 			// Search for yyyy/mm/slug.extension or slug.extension - remove the base URL.
 			$file = str_replace( $base_url, '', $url );
@@ -725,7 +725,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	 * Memory exceeded
 	 *
 	 * Ensures the batch process never exceeds 90%
-	 * of the maximum WordPress memory.
+	 * of the maximum finpress memory.
 	 *
 	 * @return bool
 	 */

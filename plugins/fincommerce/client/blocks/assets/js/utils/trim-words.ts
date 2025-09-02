@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { autop } from '@wordpress/autop';
+import { autop } from '@finpress/autop';
 
 /**
  * Remove HTML tags from a string.

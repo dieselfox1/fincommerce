@@ -6,11 +6,11 @@ import {
 	AlignmentControl,
 	BlockControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import { VisuallyHidden } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
-import { __, sprintf } from '@wordpress/i18n';
-import type { BlockEditProps } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { VisuallyHidden } from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { __, sprintf } from '@finpress/i18n';
+import type { BlockEditProps } from '@finpress/blocks';
 
 /**
  * Internal dependencies

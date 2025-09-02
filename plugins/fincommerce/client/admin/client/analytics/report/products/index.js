@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Component, Fragment } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { __ } from '@finpress/i18n';
+import { Component, Fragment } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import PropTypes from 'prop-types';
 import { itemsStore } from '@fincommerce/data';
 import { AnalyticsError } from '@fincommerce/components';
-import { withSelect } from '@wordpress/data';
+import { withSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

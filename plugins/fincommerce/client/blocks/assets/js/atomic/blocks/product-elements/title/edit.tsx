@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Disabled, PanelBody, ToggleControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Disabled, PanelBody, ToggleControl } from '@finpress/components';
 import {
 	InspectorControls,
 	BlockControls,
 	AlignmentToolbar,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import HeadingToolbar from '@fincommerce/editor-components/heading-toolbar';
 
 /**

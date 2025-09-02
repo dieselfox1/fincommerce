@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
+import { useInnerBlocksProps, useBlockProps } from '@finpress/block-editor';
 
 export const Save = () => {
 	const blockProps = useBlockProps.save( {

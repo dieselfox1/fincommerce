@@ -9,7 +9,7 @@ import deepFreeze from 'deep-freeze';
 import { getRoute, getRoutes } from '@fincommerce/block-library/assets/js/data/schema/selectors';
 
 const mockHasFinishedResolution = jest.fn().mockReturnValue( false );
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	__esModule: true,
 	createRegistrySelector: ( callback ) =>
 		callback( () => ( {

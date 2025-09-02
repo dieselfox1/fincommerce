@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Card as WPCard, CardBody, CardHeader } from '@wordpress/components';
+import { Card as WPCard, CardBody, CardHeader } from '@finpress/components';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Text } from '@fincommerce/experimental';

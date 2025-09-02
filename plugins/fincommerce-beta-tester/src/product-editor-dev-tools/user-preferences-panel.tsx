@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { useUserPreferences, UserPreferences } from '@fincommerce/data';
-import { useCallback } from '@wordpress/element';
+import { useCallback } from '@finpress/element';
 
 /**
  * Internal dependencies

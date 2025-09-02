@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useCallback,
 	useContext,
 	useEffect,
 	useMemo,
-} from '@wordpress/element';
-import { BlockInstance } from '@wordpress/blocks';
-import { Spinner } from '@wordpress/components';
-import { store as coreStore } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/element';
+import { BlockInstance } from '@finpress/blocks';
+import { Spinner } from '@finpress/components';
+import { store as coreStore } from '@finpress/core-data';
+import { useSelect } from '@finpress/data';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { __experimentalBlockPatternsList as BlockPatternList } from '@wordpress/block-editor';
+import { __experimentalBlockPatternsList as BlockPatternList } from '@finpress/block-editor';
 /**
  * Internal dependencies
  */

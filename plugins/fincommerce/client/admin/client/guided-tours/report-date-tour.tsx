@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { TourKit, TourKitTypes } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { optionsStore } from '@fincommerce/data';
 import {
 	createElement,
 	createInterpolateElement,
 	useState,
-} from '@wordpress/element';
-import { useSelect, useDispatch } from '@wordpress/data';
+} from '@finpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
 import { getAdminLink } from '@fincommerce/settings';
 
 /**

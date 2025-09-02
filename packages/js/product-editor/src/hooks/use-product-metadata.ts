@@ -1,11 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId } from '@wordpress/core-data';
+import { useEntityId } from '@finpress/core-data';
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { Product } from '@fincommerce/data';
 /**
  * Internal dependencies

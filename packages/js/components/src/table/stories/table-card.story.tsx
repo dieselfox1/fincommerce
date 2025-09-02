@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { TableCard } from '@fincommerce/components';
-import { useState, createElement } from '@wordpress/element';
-import { Button, Notice } from '@wordpress/components';
+import { useState, createElement } from '@finpress/element';
+import { Button, Notice } from '@finpress/components';
 
 /**
  * Internal dependencies

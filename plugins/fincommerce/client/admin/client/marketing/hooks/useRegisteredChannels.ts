@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { __, sprintf } from '@wordpress/i18n';
-import { useCallback } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { useCallback } from '@finpress/element';
 
 /**
  * Internal dependencies

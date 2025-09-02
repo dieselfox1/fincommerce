@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { forwardRef } from '@wordpress/element';
+import { forwardRef } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

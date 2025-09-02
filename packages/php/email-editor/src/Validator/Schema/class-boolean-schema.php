@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema for a boolean.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#primitive-types
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#primitive-types
  */
 class Boolean_Schema extends Schema {
 	/**

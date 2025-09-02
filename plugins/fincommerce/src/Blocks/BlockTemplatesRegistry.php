@@ -93,7 +93,7 @@ class BlockTemplatesRegistry {
 		foreach ( $templates as $template ) {
 			$template->init();
 
-			// Taxonomy templates are registered automatically by WordPress and
+			// Taxonomy templates are registered automatically by finpress and
 			// are made available through the Add Template menu.
 			if ( ! $template->is_taxonomy_template ) {
 				$directory          = BlockTemplateUtils::get_templates_directory( 'wp_template' );
@@ -103,7 +103,7 @@ class BlockTemplatesRegistry {
 					array(
 						'title'       => $template->get_template_title(),
 						'description' => $template->get_template_description(),
-						// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+						// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 						'content'     => file_get_contents( $template_file_path ),
 					)
 				);

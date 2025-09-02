@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { Notice, ExternalLink } from '@wordpress/components';
-import { createInterpolateElement } from '@wordpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { Notice, ExternalLink } from '@finpress/components';
+import { createInterpolateElement } from '@finpress/element';
 import { Alert } from '@fincommerce/icons';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { Icon, chevronDown } from '@finpress/icons';
 
 /**
  * Internal dependencies

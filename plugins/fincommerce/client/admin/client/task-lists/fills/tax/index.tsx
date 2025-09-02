@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Card, CardBody, Spinner } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Card, CardBody, Spinner } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 import { getAdminLink } from '@fincommerce/settings';
 import { optionsStore, settingsStore, TaskType } from '@fincommerce/data';
 import { queueRecordEvent, recordEvent } from '@fincommerce/tracks';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import {
 	useCallback,
 	useEffect,
 	useState,
 	createElement,
 	useMemo,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 
 /**

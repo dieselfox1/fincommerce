@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { difference } from 'lodash';
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 import { Stepper } from '@fincommerce/components';
-import { Card, CardBody, Button } from '@wordpress/components';
+import { Card, CardBody, Button } from '@finpress/components';
 import { getAdminLink } from '@fincommerce/settings';
 
 /**
@@ -118,7 +118,7 @@ export const ShippingRecommendation = ( {
 			key: 'connect',
 			label: __( 'Connect your store', 'fincommerce' ),
 			description: __(
-				'Connect your store to WordPress.com to enable FinCommerce Shipping',
+				'Connect your store to finpress.com to enable FinCommerce Shipping',
 				'fincommerce'
 			),
 			content: isJetpackConnected ? (

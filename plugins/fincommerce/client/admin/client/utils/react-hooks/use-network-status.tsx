@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 
 export const useNetworkStatus = () => {
 	const [ isNetworkOffline, setIsNetworkOffline ] = useState( false );

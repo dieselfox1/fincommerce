@@ -3,7 +3,7 @@
  */
 import { createElement, useState } from 'react';
 
-import { Button, Modal, SlotFillProvider } from '@wordpress/components';
+import { Button, Modal, SlotFillProvider } from '@finpress/components';
 
 /**
  * Internal dependencies

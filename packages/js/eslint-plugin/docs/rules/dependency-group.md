@@ -12,7 +12,7 @@ Examples of **incorrect** code for this rule:
 
 ```js
 import { get } from 'lodash';
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import edit from './edit';
 ```
 
@@ -23,7 +23,7 @@ Examples of **correct** code for this rule:
  * External dependencies
  */
 import { get } from 'lodash';
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 
 /*
  * Internal dependencies

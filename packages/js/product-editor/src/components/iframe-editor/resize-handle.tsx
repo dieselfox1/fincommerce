@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Fragment } from '@wordpress/element';
-import { LEFT, RIGHT } from '@wordpress/keycodes';
+import { __ } from '@finpress/i18n';
+import { createElement, Fragment } from '@finpress/element';
+import { LEFT, RIGHT } from '@finpress/keycodes';
 import { KeyboardEvent } from 'react';
-import { VisuallyHidden } from '@wordpress/components';
+import { VisuallyHidden } from '@finpress/components';
 
 const DELTA_DISTANCE = 20; // The distance to resize per keydown in pixels.
 

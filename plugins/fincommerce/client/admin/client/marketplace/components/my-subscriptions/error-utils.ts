@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf, _n } from '@wordpress/i18n';
+import { __, sprintf, _n } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
-import type { Options as NoticeOptions } from 'wordpress__notices';
+import type { Options as NoticeOptions } from 'finpress__notices';
 
 /**
  * Internal dependencies

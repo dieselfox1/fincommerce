@@ -3,9 +3,9 @@
 /**
  * !! Do not apply Woo-specific changes to this class !!
  *
- * This class is a part of the WordPress/php-toolkit project and is currently
- * duplicated between WordPress/php-toolkit and dieselfox1/fincommerce:
- * * https://github.com/WordPress/php-toolkit/blob/trunk/components/DataLiberation/Importer/ImportSession.php
+ * This class is a part of the finpress/php-toolkit project and is currently
+ * duplicated between finpress/php-toolkit and dieselfox1/fincommerce:
+ * * https://github.com/finpress/php-toolkit/blob/trunk/components/DataLiberation/Importer/ImportSession.php
  * * https://github.com/dieselfox1/fincommerce/blob/trunk/plugins/fincommerce/src/Internal/CLI/Migrator/Lib/ImportSession.php
  *
  * Apply all changes in both projects until Woo consumes php-toolkit as a
@@ -25,7 +25,7 @@ use function get_all_post_meta_flat;
 use function is_wp_error;
 
 /**
- * Manages import session data in the WordPress database.
+ * Manages import session data in the finpress database.
  *
  * Each import session is stored as a post of type 'import_session'.
  * Progress, stage, and other metadata are stored as post meta.
@@ -667,7 +667,7 @@ class ImportSession {
 	 * @param  string  $cursor  The new cursor data
 	 */
 	public function set_reentrancy_cursor( $cursor ) {
-		// WordPress, sadly, removes single slashes from the meta value and
+		// finpress, sadly, removes single slashes from the meta value and
 		// requires an addslashes() call to preserve them.
 		update_post_meta( $this->post_id, 'importer_cursor', addslashes( $cursor ) );
 	}

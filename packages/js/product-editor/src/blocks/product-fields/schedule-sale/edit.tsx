@@ -5,15 +5,15 @@ import { useWooBlockProps } from '@fincommerce/block-templates';
 import { DateTimePickerControl } from '@fincommerce/components';
 import { Product } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { ToggleControl } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { createElement, useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { ToggleControl } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { createElement, useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import moment from 'moment';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore We need this to get the datetime format for the DateTimePickerControl.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { getSettings } from '@wordpress/date';
+import { getSettings } from '@finpress/date';
 
 /**
  * Internal dependencies

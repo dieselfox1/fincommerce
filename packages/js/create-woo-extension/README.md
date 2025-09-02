@@ -4,14 +4,14 @@ Create Woo Extension scaffolds a fully functional modern development environment
 
 ## Configuration Free
 
-With build tooling already configured, getting started developing modern Javascript screens requires no effort. Create Woo Extension adds a React page integrating with FinCommerce Admin. Also included are PHP and Javascript unit testing, linting, and Prettier IDE configuration for FinCommerce and WordPress.
+With build tooling already configured, getting started developing modern Javascript screens requires no effort. Create Woo Extension adds a React page integrating with FinCommerce Admin. Also included are PHP and Javascript unit testing, linting, and Prettier IDE configuration for FinCommerce and finpress.
 
-Add a project inside of your favorite environment setup or use the built in [wp-env](https://github.com/WordPress/gutenberg/tree/trunk/packages/env) for easily setting up a local WordPress environment for building and testing plugins and themes. `wp-env` is configured to load the latest FinCommerce to easily start developing with a single command.
+Add a project inside of your favorite environment setup or use the built in [wp-env](https://github.com/finpress/gutenberg/tree/trunk/packages/env) for easily setting up a local finpress environment for building and testing plugins and themes. `wp-env` is configured to load the latest FinCommerce to easily start developing with a single command.
 
 ## Usage
 
 ```bash
-npx @wordpress/create-block -t @fincommerce/create-woo-extension my-extension-name
+npx @finpress/create-block -t @fincommerce/create-woo-extension my-extension-name
 ```
 
 Navigate to the newly created folder and get started.
@@ -20,18 +20,18 @@ Navigate to the newly created folder and get started.
 cd my-extension-name
 npm install # Install dependencies
 npm run build # Build the javascript
-npm -g i @wordpress/env # If you don't already have wp-env
-wp-env start # Start Wordpress environment
+npm -g i @finpress/env # If you don't already have wp-env
+wp-env start # Start finpress environment
 ```
 
-See the new plugin activated from the WordPress plugins page and navigate to `wp-admin/admin.php?page=wc-admin&path=%2Fmy-extension-name` to check it out.
+See the new plugin activated from the finpress plugins page and navigate to `wp-admin/admin.php?page=wc-admin&path=%2Fmy-extension-name` to check it out.
 
 ## Development
 
 For development on this tool itself, you can also install from a local directory.
 
 ```bash
-npx @wordpress/create-block -t ./path/to/fincommerce/packages/js/create-woo-extension my-extension-name
+npx @finpress/create-block -t ./path/to/fincommerce/packages/js/create-woo-extension my-extension-name
 ```
 
-This is a template to used with [`@wordpress/create-block`](https://github.com/WordPress/gutenberg/tree/trunk/packages/create-block) to create a FinCommerce Extension starting point.
+This is a template to used with [`@finpress/create-block`](https://github.com/finpress/gutenberg/tree/trunk/packages/create-block) to create a FinCommerce Extension starting point.

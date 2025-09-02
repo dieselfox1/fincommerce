@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { List } from '@fincommerce/components';
-import { download, Icon } from '@wordpress/icons';
+import { download, Icon } from '@finpress/icons';
 
 import {
 	Card,
@@ -12,7 +12,7 @@ import {
 	ExternalLink,
 	Notice,
 	ToggleControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

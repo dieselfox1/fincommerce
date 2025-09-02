@@ -8,7 +8,7 @@ import {
 	FormType,
 	KeyedParsedFormFields,
 } from '@fincommerce/settings';
-import { useRef } from '@wordpress/element';
+import { useRef } from '@finpress/element';
 import fastDeepEqual from 'fast-deep-equal/es6';
 
 /**

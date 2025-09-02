@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { useContext, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { useContext, useState } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

@@ -1245,7 +1245,7 @@ test.describe.serial( 'Orders API tests', () => {
 					data: {
 						create: [
 							{
-								name: `WordPress Pennant ${ RAND_STRING }`,
+								name: `finpress Pennant ${ RAND_STRING }`,
 								date_created_gmt: '2021-09-16T15:50:20',
 								type: 'external',
 								status: 'publish',
@@ -1271,8 +1271,8 @@ test.describe.serial( 'Orders API tests', () => {
 								download_limit: 0,
 								download_expiry: 0,
 								external_url:
-									'https://mercantile.wordpress.org/product/wordpress-pennant/',
-								button_text: 'Buy on the WordPress swag store!',
+									'https://mercantile.finpress.org/product/finpress-pennant/',
+								button_text: 'Buy on the finpress swag store!',
 								tax_status: 'taxable',
 								tax_class: '',
 								manage_stock: false,
@@ -3123,7 +3123,7 @@ test.describe.serial( 'Orders API tests', () => {
 					expect.objectContaining( {
 						line_items: expect.arrayContaining( [
 							expect.objectContaining( {
-								name: `WordPress Pennant ${ RAND_STRING }`,
+								name: `finpress Pennant ${ RAND_STRING }`,
 							} ),
 						] ),
 					} )

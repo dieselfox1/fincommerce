@@ -112,7 +112,7 @@ abstract class CustomMetaDataStore {
 		$meta_key   = wp_unslash( wp_slash( $meta->key ) );
 		$meta_value = maybe_serialize( is_string( $meta->value ) ? wp_unslash( wp_slash( $meta->value ) ) : $meta->value );
 
-		// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_value,WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_value,finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		$result = $wpdb->insert(
 			$db_info['table'],
 			array(
@@ -121,7 +121,7 @@ abstract class CustomMetaDataStore {
 				'meta_value'                => $meta_value,
 			)
 		);
-		// phpcs:enable WordPress.DB.SlowDBQuery.slow_db_query_meta_value,WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		// phpcs:enable finpress.DB.SlowDBQuery.slow_db_query_meta_value,finpress.DB.SlowDBQuery.slow_db_query_meta_key
 
 		return $result ? (int) $wpdb->insert_id : false;
 	}
@@ -141,12 +141,12 @@ abstract class CustomMetaDataStore {
 			return false;
 		}
 
-		// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_value,WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_value,finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		$data = array(
 			'meta_key'   => $meta->key,
 			'meta_value' => maybe_serialize( $meta->value ),
 		);
-		// phpcs:enable WordPress.DB.SlowDBQuery.slow_db_query_meta_value,WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		// phpcs:enable finpress.DB.SlowDBQuery.slow_db_query_meta_value,finpress.DB.SlowDBQuery.slow_db_query_meta_key
 
 		$result = $wpdb->update(
 			$this->get_table_name(),
@@ -171,21 +171,21 @@ abstract class CustomMetaDataStore {
 	public function get_metadata_by_id( $meta_id ) {
 		global $wpdb;
 
-		if ( ! is_numeric( $meta_id ) || floor( $meta_id ) != $meta_id ) { // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
+		if ( ! is_numeric( $meta_id ) || floor( $meta_id ) != $meta_id ) { // phpcs:ignore finpress.PHP.StrictComparisons.LooseComparison
 			return false;
 		}
 
 		$db_info = $this->get_db_info();
 
 		$meta_id = absint( $meta_id );
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$meta = $wpdb->get_row(
 			$wpdb->prepare(
 				"SELECT {$db_info['meta_id_field']}, meta_key, meta_value, {$db_info['object_id_field']} FROM {$db_info['table']} WHERE {$db_info['meta_id_field']} = %d",
 				$meta_id
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		if ( empty( $meta ) ) {
 			return false;
@@ -215,7 +215,7 @@ abstract class CustomMetaDataStore {
 
 		$db_info = $this->get_db_info();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$meta = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT {$db_info['meta_id_field']}, meta_key, meta_value, {$db_info['object_id_field']} FROM {$db_info['table']} WHERE meta_key = %s AND {$db_info['object_id_field']} = %d",
@@ -223,7 +223,7 @@ abstract class CustomMetaDataStore {
 				$object->get_id(),
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		if ( empty( $meta ) ) {
 			return false;
@@ -268,7 +268,7 @@ abstract class CustomMetaDataStore {
 			$query .= $wpdb->prepare( 'LIMIT %d ', $limit );
 		}
 
-		return $wpdb->get_col( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- $query is prepared.
+		return $wpdb->get_col( $query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- $query is prepared.
 	}
 
 	/**
@@ -289,7 +289,7 @@ abstract class CustomMetaDataStore {
 		$meta_table       = $this->get_table_name();
 		$object_id_column = $this->get_object_id_field();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $object_id_column and $meta_table is hardcoded. IDs are prepared above.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared,finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $object_id_column and $meta_table is hardcoded. IDs are prepared above.
 		$meta_rows = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT id, $object_id_column as object_id, meta_key, meta_value FROM $meta_table WHERE $object_id_column in ( $id_placeholder )",
@@ -305,8 +305,8 @@ abstract class CustomMetaDataStore {
 			}
 			$meta_data[ $meta_row->object_id ][] = (object) array(
 				'meta_id'    => $meta_row->id,
-				'meta_key'   => $meta_row->meta_key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-				'meta_value' => $meta_row->meta_value, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_key'   => $meta_row->meta_key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+				'meta_value' => $meta_row->meta_value, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 			);
 		}
 

@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { chevronRight, chevronLeft, trash } from '@wordpress/icons';
-import { MediaItem, MediaUpload } from '@wordpress/media-utils';
-import { __ } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { chevronRight, chevronLeft, trash } from '@finpress/icons';
+import { MediaItem, MediaUpload } from '@finpress/media-utils';
+import { __ } from '@finpress/i18n';
 import {
 	Toolbar,
 	ToolbarButton,
 	ToolbarGroup,
 	ToolbarItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Circle, SVG, Path } from '@wordpress/primitives';
+import { Circle, SVG, Path } from '@finpress/primitives';
 
 const customerAccountStyleLine = (
 	<SVG viewBox="1 1 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">

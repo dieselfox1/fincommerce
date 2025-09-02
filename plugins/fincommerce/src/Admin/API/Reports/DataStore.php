@@ -204,7 +204,7 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 		}
 
 		// Utilize enveloped responses to include debugging info.
-		// See https://querymonitor.com/blog/2021/05/debugging-wordpress-rest-api-requests/
+		// See https://querymonitor.com/blog/2021/05/debugging-finpress-rest-api-requests/
 		if ( isset( $_GET['_envelope'] ) ) {
 			$this->debug_cache = true;
 			add_filter( 'rest_envelope_response', array( $this, 'add_debug_cache_to_envelope' ), 999, 2 );
@@ -975,12 +975,12 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 		global $wpdb;
 		$selects = array();
 		foreach ( $ids as $id ) {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$new_select = $wpdb->prepare( "SELECT %s AS {$id_field}", $id );
 			foreach ( $other_values as $key => $value ) {
 				$new_select .= $wpdb->prepare( ", %s AS {$key}", $value );
 			}
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			array_push( $selects, $new_select );
 		}
 		return join( ' UNION ', $selects );
@@ -1137,7 +1137,7 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 		}
 
 		$lookup_name = isset( $wpdb->$filter_table ) ? $wpdb->$filter_table : $wpdb->prefix . $filter_table;
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return " {$select_table}.{$select_field} {$compare} (
 			SELECT
 				DISTINCT {$filter_table}.{$select_field}
@@ -1146,7 +1146,7 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 			WHERE
 				{$filter_table}.{$filter_field} IN ({$id_list})
 		)";
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 
 	/**
@@ -1512,8 +1512,8 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 
 				// Add subquery for products ordered using attributes not used in variations.
 				$term_attribute_subquery = "select product_id from {$wpdb->prefix}wc_product_attributes_lookup where is_variation_attribute=0 and term_id = %s";
-				// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-				// phpcs:disable WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
+				// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:disable finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
 				$sql_clauses['where'][] = $wpdb->prepare(
 					"
 					( ( {$join_alias}.meta_key = %s AND {$join_alias}.meta_value {$comparator} %s ) or (
@@ -1523,8 +1523,8 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 					$meta_value,
 					$term_id,
 				);
-				// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-				// phpcs:enable WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
+				// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:enable finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
 			}
 		}
 
@@ -1589,7 +1589,7 @@ class DataStore extends SqlQuery implements DataStoreInterface {
 
 		if ( ! empty( $ids ) ) {
 			$placeholders = implode( $separator, array_fill( 0, count( $ids ), '%d' ) );
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 			$ids_str = $wpdb->prepare( "{$placeholders}", $ids );
 			/* phpcs:enable */
 		}

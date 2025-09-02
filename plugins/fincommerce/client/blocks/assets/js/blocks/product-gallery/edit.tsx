@@ -6,8 +6,8 @@ import {
 	InspectorControls,
 	useBlockProps,
 	useInnerBlocksProps,
-} from '@wordpress/block-editor';
-import { BlockEditProps, InnerBlockTemplate } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { BlockEditProps, InnerBlockTemplate } from '@finpress/blocks';
 import { withProductDataContext } from '@fincommerce/shared-hocs';
 
 /**

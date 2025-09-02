@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { createElement, Component, createRef } from '@wordpress/element';
+import { createElement, Component, createRef } from '@finpress/element';
 import { isEqual, throttle } from 'lodash';
 import { select as d3Select } from 'd3-selection';
 

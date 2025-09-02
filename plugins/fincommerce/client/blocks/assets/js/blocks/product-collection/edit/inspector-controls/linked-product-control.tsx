@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import ProductControl from '@fincommerce/editor-components/product-control';
 import { SelectedOption } from '@fincommerce/block-hocs';
 import { WC_BLOCKS_IMAGE_URL } from '@fincommerce/block-settings';
-import { useState, useRef } from '@wordpress/element';
+import { useState, useRef } from '@finpress/element';
 import type { fincommerceBlockLocation } from '@fincommerce/blocks/product-template/utils';
 import { type ProductResponseItem, isEmpty } from '@fincommerce/types';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import {
 	PanelBody,
 	PanelRow,
@@ -18,10 +18,10 @@ import {
 	Dropdown,
 	RadioControl,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalText as Text,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

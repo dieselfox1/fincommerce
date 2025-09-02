@@ -20,8 +20,8 @@ import {
 	isCartResponseTotals,
 	isNumber,
 } from '@fincommerce/types';
-import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
-import { sprintf, _n } from '@wordpress/i18n';
+import { useCallback, useEffect, useRef, useState } from '@finpress/element';
+import { sprintf, _n } from '@finpress/i18n';
 import clsx from 'clsx';
 import { CHECKOUT_URL } from '@fincommerce/block-settings';
 import type { ReactRootWithContainer } from '@fincommerce/base-utils';

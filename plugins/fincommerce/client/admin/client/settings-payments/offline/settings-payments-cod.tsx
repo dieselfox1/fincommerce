@@ -6,12 +6,12 @@ import {
 	CheckboxControl,
 	TextControl,
 	TextareaControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { TreeSelectControl } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
 import { paymentGatewaysStore, paymentSettingsStore } from '@fincommerce/data';
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

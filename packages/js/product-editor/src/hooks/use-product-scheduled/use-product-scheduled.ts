@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEntityProp } from '@wordpress/core-data';
-import { getDate, isInTheFuture, date as parseDate } from '@wordpress/date';
+import { useEntityProp } from '@finpress/core-data';
+import { getDate, isInTheFuture, date as parseDate } from '@finpress/date';
 import type { ProductStatus } from '@fincommerce/data';
 
 /**

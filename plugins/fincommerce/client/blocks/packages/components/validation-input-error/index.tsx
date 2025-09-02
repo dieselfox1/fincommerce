@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
-import { Icon, warning } from '@wordpress/icons';
+import { Icon, warning } from '@finpress/icons';
 
 /**
  * Internal dependencies

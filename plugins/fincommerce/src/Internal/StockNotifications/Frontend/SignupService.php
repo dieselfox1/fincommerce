@@ -212,7 +212,7 @@ class SignupService {
 		$query_args['limit']  = 1;
 		if ( ! empty( $posted_attributes ) ) {
 			// Hint: We need to compare the posted attributes with the stored attributes to handle variations with "any" attributes.
-			$query_args['meta_query'] = array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$query_args['meta_query'] = array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				array(
 					'key'     => 'posted_attributes',
 					'value'   => maybe_serialize( $posted_attributes ),

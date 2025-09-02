@@ -7,7 +7,7 @@ import {
 	useContext,
 	useCallback,
 	useReducer,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 type FillConfigType = {
 	visible: boolean;

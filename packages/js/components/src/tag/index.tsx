@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	createElement,
 	forwardRef,
 	Fragment,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
-import { Button, Popover } from '@wordpress/components';
-import { Icon, closeSmall } from '@wordpress/icons';
-import { decodeEntities } from '@wordpress/html-entities';
+import { Button, Popover } from '@finpress/components';
+import { Icon, closeSmall } from '@finpress/icons';
+import { decodeEntities } from '@finpress/html-entities';
 import { Ref } from 'react';
-import { useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@finpress/compose';
 
 type Props = {
 	/** The name for this item, displayed as the tag's text. */

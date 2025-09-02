@@ -17,8 +17,8 @@ jest.mock( '~/utils/react-hooks/use-network-status', () => ( {
 	useNetworkStatus: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	return {
 		...originalModule,
 		useSelect: jest.fn( () => ( {

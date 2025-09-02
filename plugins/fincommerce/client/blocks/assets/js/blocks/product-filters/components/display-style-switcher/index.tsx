@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { createBlock, getBlockTypes } from '@wordpress/blocks';
-import { useState } from '@wordpress/element';
-import { dispatch, select, useDispatch } from '@wordpress/data';
+import { createBlock, getBlockTypes } from '@finpress/blocks';
+import { useState } from '@finpress/element';
+import { dispatch, select, useDispatch } from '@finpress/data';
 import { getInnerBlockByName } from '@fincommerce/utils';
 import {
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 export const DisplayStyleSwitcher = ( {
 	clientId,

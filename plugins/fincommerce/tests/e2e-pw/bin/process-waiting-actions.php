@@ -13,7 +13,7 @@
 add_action(
 	'init',
 	function () {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! isset( $_GET['process-waiting-actions'] ) ) {
 			return;
 		}

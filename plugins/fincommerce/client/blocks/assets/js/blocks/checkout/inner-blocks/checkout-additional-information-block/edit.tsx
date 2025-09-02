@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import { FormStepBlock } from '@fincommerce/blocks/checkout/form-step';
 import clsx from 'clsx';
 import { ORDER_FORM_KEYS } from '@fincommerce/block-settings';

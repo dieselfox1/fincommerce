@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 						'utm_campaign' => 'fincommerceplugin',
 						'utm_content'  => 'docs',
 					),
-					'https://fincommerce.com/document/update-php-wordpress/'
+					'https://fincommerce.com/document/update-php-finpress/'
 				)
 			)
 		);

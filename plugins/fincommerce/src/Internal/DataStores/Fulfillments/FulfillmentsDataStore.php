@@ -435,8 +435,8 @@ class FulfillmentsDataStore extends \WC_Data_Store_WP implements \WC_Object_Data
 			$wpdb->prefix . 'wc_order_fulfillment_meta',
 			array(
 				'fulfillment_id' => $data_id,
-				'meta_key'       => $meta->key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-				'meta_value'     => wp_json_encode( $meta->value ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_key'       => $meta->key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+				'meta_value'     => wp_json_encode( $meta->value ), // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 			),
 			array(
 				'%d',
@@ -478,12 +478,12 @@ class FulfillmentsDataStore extends \WC_Data_Store_WP implements \WC_Object_Data
 		$rows_updated = $wpdb->update(
 			$wpdb->prefix . 'wc_order_fulfillment_meta',
 			array(
-				'meta_value' => wp_json_encode( $meta->value ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_value' => wp_json_encode( $meta->value ), // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 			),
 			array(
 				'fulfillment_id' => $data_id,
 				'meta_id'        => $meta->id,
-				'meta_key'       => $meta->key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				'meta_key'       => $meta->key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 			),
 			array(
 				'%s',

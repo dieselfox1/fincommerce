@@ -6,14 +6,14 @@
  * for almost all endpoints in FinCommerce REST API.
  *
  * It's required to follow "Controller Classes" guide before extending this class:
- * <https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/>
+ * <https://developer.finpress.org/rest-api/extending-the-rest-api/controller-classes/>
  *
  * NOTE THAT ONLY CODE RELEVANT FOR MOST ENDPOINTS SHOULD BE INCLUDED INTO THIS CLASS.
  * If necessary extend this class and create new abstract classes like `WC_REST_CRUD_Controller` or `WC_REST_Terms_Controller`.
  *
  * @class   WC_REST_Controller
  * @package FinCommerce\RestApi
- * @see     https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/
+ * @see     https://developer.finpress.org/rest-api/extending-the-rest-api/controller-classes/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -93,7 +93,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 
 	/**
 	 * Compatibility functions for WP 5.5, since custom types are not supported anymore.
-	 * See @link https://core.trac.wordpress.org/changeset/48306
+	 * See @link https://core.trac.finpress.org/changeset/48306
 	 *
 	 * @param string $method Optional. HTTP method of the request.
 	 *
@@ -115,7 +115,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Change datatypes `date-time` to string, and `mixed` to composite of all built in types. This is required for maintaining forward compatibility with WP 5.5 since custom post types are not supported anymore.
 	 *
-	 * See @link https://core.trac.wordpress.org/changeset/48306
+	 * See @link https://core.trac.finpress.org/changeset/48306
 	 *
 	 * We still use the 'mixed' type, since if we convert to composite type everywhere, it won't work in 5.4 anymore because they require to define the full schema.
 	 *
@@ -554,7 +554,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	 * Gets an array of fields to be included on the response.
 	 *
 	 * Included fields are based on item schema and `_fields=` request argument.
-	 * Updated from WordPress 5.3, included into this class to support old versions.
+	 * Updated from finpress 5.3, included into this class to support old versions.
 	 *
 	 * @since 3.5.0
 	 * @param WP_REST_Request $request Full details about the request.

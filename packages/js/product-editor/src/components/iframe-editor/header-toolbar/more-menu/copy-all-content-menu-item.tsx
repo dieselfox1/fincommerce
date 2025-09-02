@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { serialize } from '@wordpress/blocks';
-import { MenuItem } from '@wordpress/components';
-import { useCopyToClipboard } from '@wordpress/compose';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { serialize } from '@finpress/blocks';
+import { MenuItem } from '@finpress/components';
+import { useCopyToClipboard } from '@finpress/compose';
+import { useDispatch, useSelect } from '@finpress/data';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 export const CopyAllContentMenuItem = () => {

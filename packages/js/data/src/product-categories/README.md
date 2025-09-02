@@ -13,7 +13,7 @@ Example:
 
 ```js
 import { EXPERIMENTAL_PRODUCT_CATEGORIES_STORE_NAME } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 function Component() {
 	const actions = useDispatch(

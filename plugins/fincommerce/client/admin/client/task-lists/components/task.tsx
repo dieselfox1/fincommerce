@@ -8,8 +8,8 @@ import {
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 import { getHistory, getNewPath } from '@fincommerce/navigation';
 import { onboardingStore, TaskType } from '@fincommerce/data';
-import { useCallback } from '@wordpress/element';
-import { useDispatch, resolveSelect } from '@wordpress/data';
+import { useCallback } from '@finpress/element';
+import { useDispatch, resolveSelect } from '@finpress/data';
 /**
  * Internal dependencies
  */

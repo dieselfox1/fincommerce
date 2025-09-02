@@ -2,19 +2,19 @@
  * External dependencies
  */
 import { productsStore } from '@fincommerce/data';
-import { useEffect, useMemo } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { Disabled, PanelBody, ToggleControl } from '@wordpress/components';
+import { useEffect, useMemo } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { Disabled, PanelBody, ToggleControl } from '@finpress/components';
 
 import {
 	store as blockEditorStore,
 	useBlockProps,
-	// @ts-expect-error - useInnerBlocksProps is not exported from @wordpress/block-editor
+	// @ts-expect-error - useInnerBlocksProps is not exported from @finpress/block-editor
 	useInnerBlocksProps,
 	Warning,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * External dependencies

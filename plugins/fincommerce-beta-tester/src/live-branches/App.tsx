@@ -5,7 +5,7 @@ import { Spinner } from '@fincommerce/components';
 import {
 	// @ts-ignore
 	__experimentalHeading as Heading,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

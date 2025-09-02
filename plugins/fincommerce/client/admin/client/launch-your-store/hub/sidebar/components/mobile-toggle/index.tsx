@@ -2,9 +2,9 @@
  * External dependencies
  */
 import React from 'react';
-import { Button } from '@wordpress/components';
-import { Icon, menu } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { Icon, menu } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -8,8 +8,8 @@ module.exports = {
 		npmDevDependencies: [
 			'@fincommerce/dependency-extraction-webpack-plugin',
 			'@fincommerce/eslint-plugin',
-			'@wordpress/prettier-config@2.18.2',
-			'@wordpress/scripts',
+			'@finpress/prettier-config@2.18.2',
+			'@finpress/scripts',
 		],
 	},
 };

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { resolveSelect, useSelect } from '@wordpress/data';
-import { useState, useEffect, useMemo } from '@wordpress/element';
-import { store as coreStore } from '@wordpress/core-data';
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { resolveSelect, useSelect } from '@finpress/data';
+import { useState, useEffect, useMemo } from '@finpress/element';
+import { store as coreStore } from '@finpress/core-data';
+import { store as blockEditorStore } from '@finpress/block-editor';
 
 export const enum LocationType {
 	Product = 'product',

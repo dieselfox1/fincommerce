@@ -16,8 +16,8 @@ const tsConfig = require( '../tsconfig.base.json' );
 
 const aliases = Object.keys( tsConfig.compilerOptions.paths ).reduce(
 	( acc, key ) => {
-		// Filter out @wordpress/* paths to allow resolution from node_modules instead of build-types directory specified in tsconfig.
-		if ( ! key.startsWith( '@wordpress' ) ) {
+		// Filter out @finpress/* paths to allow resolution from node_modules instead of build-types directory specified in tsconfig.
+		if ( ! key.startsWith( '@finpress' ) ) {
 			const currentPath = tsConfig.compilerOptions.paths[ key ][ 0 ];
 			acc[ key.replace( '/*', '' ) ] = path.resolve(
 				__dirname,
@@ -41,8 +41,8 @@ module.exports = ( { config: storybookConfig } ) => {
 		'@fincommerce/base-hooks': require.resolve(
 			'./__mocks__/fincommerce-base-hooks.js'
 		),
-		'wordpress-components': require.resolve(
-			'../node_modules/wordpress-components'
+		'finpress-components': require.resolve(
+			'../node_modules/finpress-components'
 		),
 	};
 	storybookConfig.module.rules.push(

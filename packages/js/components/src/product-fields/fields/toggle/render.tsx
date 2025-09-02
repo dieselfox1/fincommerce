@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { ToggleControl } from '@wordpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import { ToggleControl } from '@finpress/components';
 
 /**
  * Internal dependencies

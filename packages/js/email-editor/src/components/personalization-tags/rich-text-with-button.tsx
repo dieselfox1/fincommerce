@@ -2,12 +2,12 @@
  * External dependencies
  */
 import type { ReactNode } from 'react';
-import { BaseControl, Button } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
-import { useCallback, useRef, useState } from '@wordpress/element';
-import { create, insert, toHTMLString } from '@wordpress/rich-text';
-import { RichText } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { BaseControl, Button } from '@finpress/components';
+import { useSelect } from '@finpress/data';
+import { useCallback, useRef, useState } from '@finpress/element';
+import { create, insert, toHTMLString } from '@finpress/rich-text';
+import { RichText } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

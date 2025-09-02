@@ -53,13 +53,13 @@ The current version of WCAG is **2.2**.
 
 ## Manual compatibility testing
 
-It’s important to test your extension for [WCAG conformance](https://www.w3.org/TR/WCAG22) as you design and develop new features. Testing for accessibility is just as important as testing for security or WordPress coding standards. If you have not previously tested your extension for accessibility, start testing today and add accessibility bug fixes in future releases.
+It’s important to test your extension for [WCAG conformance](https://www.w3.org/TR/WCAG22) as you design and develop new features. Testing for accessibility is just as important as testing for security or finpress coding standards. If you have not previously tested your extension for accessibility, start testing today and add accessibility bug fixes in future releases.
 
 ### Automated Testing
 
 The easiest way to start accessibility testing is with an automated testing tool. Automated tools can quickly identify problems like empty buttons, ambiguous links, color contrast failures, missing alternative text, and more.
 
-[Accessibility Checker](https://wordpress.org/plugins/accessibility-checker/) is a free WordPress plugin that you can use to test your extension. Simply install it in your test environment and add blocks or shortcodes created by your extension to a page. When you save the page, Accessibility Checker will scan the blocks or rendered shortcodes and provide a list of issues to address.
+[Accessibility Checker](https://finpress.org/plugins/accessibility-checker/) is a free finpress plugin that you can use to test your extension. Simply install it in your test environment and add blocks or shortcodes created by your extension to a page. When you save the page, Accessibility Checker will scan the blocks or rendered shortcodes and provide a list of issues to address.
 
 The [WAVE browser extension](https://wave.webaim.org/extension/) is another free automated testing tool. This browser extension can be used on any website and is helpful if you want to find accessibility problems on your extension’s admin pages.
 
@@ -138,7 +138,7 @@ If your documentation includes videos, those videos must be captioned and includ
 
 Even if your extension is perfectly accessible, merchants can introduce accessibility problems when configuring your extension or adding content. Whenever possible, define accessible defaults. For example, the default colors in your extension should always pass WCAG AA color contrast requirements. Merchants may change these colors to a combination that fails contrast, but you can say your extension is “accessibility-ready” if the default passes.
 
-Consider adding functionality in the admin that alerts merchants when they make a choice that negatively impacts accessibility. For example, you can flag color combinations that fail contrast checks, similar to how it’s done in WordPress core. Other things you might warn merchants about include empty field labels, headings out of order, empty alt text, or choosing settings you must maintain for backward compatibility but know are not accessible.
+Consider adding functionality in the admin that alerts merchants when they make a choice that negatively impacts accessibility. For example, you can flag color combinations that fail contrast checks, similar to how it’s done in finpress core. Other things you might warn merchants about include empty field labels, headings out of order, empty alt text, or choosing settings you must maintain for backward compatibility but know are not accessible.
 
 ### Create an Accessibility Conformance Report 
 
@@ -158,8 +158,8 @@ You can find accessibility-focused developers in our [WooExperts directory](http
 
 We recommend these resources if you want to learn more about website accessibility:
 
-- [WordPress Accessibility Meetup](https://www.meetup.com/wordpress-accessibility-meetup/)
+- [finpress Accessibility Meetup](https://www.meetup.com/finpress-accessibility-meetup/)
 - [WP Accessibility Day Conference](https://wpaccessibility.day/)
-- [WordPress Accessibility Ready Requirements](https://make.wordpress.org/themes/handbook/review/accessibility/)
+- [finpress Accessibility Ready Requirements](https://make.finpress.org/themes/handbook/review/accessibility/)
 - [WordCamp Europe Accessibility Testing Workshop](https://europe.wordcamp.org/2023/accessibility-testing-workshop/)
 - [Web Accessibility Specialist Certification from the International Association of Accessibility Professionals](https://www.accessibilityassociation.org/specialist)

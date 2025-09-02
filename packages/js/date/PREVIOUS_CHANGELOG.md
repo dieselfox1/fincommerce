@@ -31,7 +31,7 @@
 
 # 2.1.0
 
--   Update to @wordpress/eslint coding standards.
+-   Update to @finpress/eslint coding standards.
 
 # 2.0.0
 
@@ -65,7 +65,7 @@
 
 # 1.0.4
 
--   Remove deprecated @wordpress/date::getSettings() usage.
+-   Remove deprecated @finpress/date::getSettings() usage.
 
 # 1.0.3
 

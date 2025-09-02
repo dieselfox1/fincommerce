@@ -35,7 +35,7 @@ class ImportActivatePluginTest extends TestCase {
 
 		// Create a mock schema object.
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->pluginPath = $plugin_path;
 
 		// Create a partial mock of ImportActivatePlugin.
@@ -74,7 +74,7 @@ class ImportActivatePluginTest extends TestCase {
 
 		// Create a mock schema object.
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->pluginPath = $plugin_path;
 
 		// Create a partial mock of ImportActivatePlugin.

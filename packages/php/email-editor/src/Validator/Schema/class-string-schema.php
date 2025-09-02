@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema for a string.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#strings
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#strings
  */
 class String_Schema extends Schema {
 	/**
@@ -44,7 +44,7 @@ class String_Schema extends Schema {
 
 	/**
 	 * Parameter $pattern is a regular expression without leading/trailing delimiters.
-	 * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#pattern
+	 * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#pattern
 	 *
 	 * @param string $pattern Regular expression pattern.
 	 */

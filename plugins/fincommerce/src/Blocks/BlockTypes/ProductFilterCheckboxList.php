@@ -66,7 +66,7 @@ final class ProductFilterCheckboxList extends AbstractBlock {
 
 		ob_start();
 		?>
-		<div <?php echo get_block_wrapper_attributes( $wrapper_attributes ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo get_block_wrapper_attributes( $wrapper_attributes ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<fieldset>
 				<?php if ( ! empty( $block_context['groupLabel'] ) ) : ?>
 					<legend class="screen-reader-text"><?php echo esc_html( $block_context['groupLabel'] ); ?></legend>
@@ -99,7 +99,7 @@ final class ProductFilterCheckboxList extends AbstractBlock {
 										data-wp-on--change="actions.toggleFilter"
 										value="<?php echo esc_attr( $item['value'] ); ?>"
 										data-wp-bind--checked="state.isFilterSelected"
-										<?php echo wp_interactivity_data_wp_context( array( 'item' => $item ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+										<?php echo wp_interactivity_data_wp_context( array( 'item' => $item ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 									>
 									<svg class="wc-block-product-filter-checkbox-list__mark" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M9.25 1.19922L3.75 6.69922L1 3.94922" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -107,7 +107,7 @@ final class ProductFilterCheckboxList extends AbstractBlock {
 								</span>
 								<span class="wc-block-product-filter-checkbox-list__text-wrapper">
 									<span class="wc-block-product-filter-checkbox-list__text">
-										<?php echo $item['label']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+										<?php echo $item['label']; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 									</span>
 									<?php if ( $show_counts ) : ?>
 										<span class="wc-block-product-filter-checkbox-list__count">

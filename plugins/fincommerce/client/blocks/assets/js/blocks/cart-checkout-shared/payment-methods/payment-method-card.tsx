@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useEditorContext } from '@fincommerce/base-context';
 import { CheckboxControl } from '@fincommerce/blocks-components';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useEffect } from '@finpress/element';
 import {
 	checkoutStore as checkoutStoreDescriptor,
 	paymentStore,

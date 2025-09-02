@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useState,
 	useEffect,
@@ -9,7 +9,7 @@ import {
 	useMemo,
 	useRef,
 	useLayoutEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 import { FormattedMonetaryAmount } from '@fincommerce/blocks-components';
 import { Currency, isObject } from '@fincommerce/types';

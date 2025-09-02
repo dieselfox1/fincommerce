@@ -131,7 +131,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 			$date = $date->getTimestamp();
 		}
 
-		$adjusted_date = date( 'Y-m-d', $date ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+		$adjusted_date = date( 'Y-m-d', $date ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 
 		if ( $adjusted_date ) {
 			return $adjusted_date;
@@ -200,10 +200,10 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 			'order_id'            => $download->get_order_id( 'edit' ),
 			'order_key'           => $download->get_order_key( 'edit' ),
 			'downloads_remaining' => $download->get_downloads_remaining( 'edit' ),
-			// phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			// phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 			'access_granted'      => date( 'Y-m-d', $download->get_access_granted( 'edit' )->getTimestamp() ),
 			'download_count'      => $download->get_download_count( 'edit' ),
-			// phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			// phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 			'access_expires'      => ! is_null( $download->get_access_expires( 'edit' ) ) ? date( 'Y-m-d', $download->get_access_expires( 'edit' )->getTimestamp() ) : null,
 		);
 
@@ -302,7 +302,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 					)";
 
 		$wpdb->query(
-			$wpdb->prepare( $query, $value ) // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$wpdb->prepare( $query, $value ) // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		);
 	}
 
@@ -471,7 +471,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 			$query[] = $wpdb->prepare( 'LIMIT %d, %d', absint( $args['limit'] ) * absint( $args['page'] - 1 ), absint( $args['limit'] ) );
 		}
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$results = $wpdb->get_results( implode( ' ', $query ), $get_results_output );
 
 		switch ( $args['return'] ) {
@@ -537,7 +537,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 					)
 				ORDER BY permissions.order_id, permissions.product_id, permissions.permission_id;",
 				$customer_id,
-				date( 'Y-m-d', current_time( 'timestamp' ) )  // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+				date( 'Y-m-d', current_time( 'timestamp' ) )  // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 			)
 		);
 	}

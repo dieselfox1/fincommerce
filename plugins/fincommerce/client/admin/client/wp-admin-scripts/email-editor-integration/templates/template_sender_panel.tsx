@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { PanelRow, TextControl } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { useCallback, useRef } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { PanelRow, TextControl } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { useCallback, useRef } from '@finpress/element';
 
 type TemplateSenderPanelProps = {
 	debouncedRecordEvent: (

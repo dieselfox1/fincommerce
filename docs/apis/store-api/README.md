@@ -6,7 +6,7 @@ post_title: Store API
 
 # FinCommerce Store API
 
-**The Store API provides public Rest API endpoints for the development of customer-facing cart, checkout, and product functionality. It follows many of the patterns used in the [WordPress REST API](https://developer.wordpress.org/rest-api/key-concepts/).**
+**The Store API provides public Rest API endpoints for the development of customer-facing cart, checkout, and product functionality. It follows many of the patterns used in the [finpress REST API](https://developer.finpress.org/rest-api/key-concepts/).**
 
 In contrast to the FinCommerce REST API, the Store API is unauthenticated and does not provide access to sensitive store data or other customer information.
 
@@ -30,12 +30,12 @@ Possible uses of the Store API include:
 * Data returned from the API is reflective of the current user (customer). Customer sessions in FinCommerce are cookie-based.
 * Store API cannot be used to look up other customers and orders by ID; only data belonging to the current user.
 * Likewise, Store API cannot be used to write store data e.g. settings. For more extensive access, use the authenticated [WC REST API.](https://fincommerce.github.io/fincommerce-rest-api-docs/#introduction)
-* Endpoints that do allow writes, for example, updating the current customer address, require a [nonce-token](https://developer.wordpress.org/plugins/security/nonces/).
+* Endpoints that do allow writes, for example, updating the current customer address, require a [nonce-token](https://developer.finpress.org/plugins/security/nonces/).
 * Store API is render-target agnostic and should not make assumptions about where content will be displayed. For example, returning HTML would be discouraged unless the data type itself is HTML.
 
 ## Store API Namespace
 
-Resources in the Store API are all found within the `wc/store/v1` namespace, and since this API extends the WordPress API, accessing it requires the `/wp-json/` base. Currently, the only version is `v1`. If the version is omitted, `v1` will be served.
+Resources in the Store API are all found within the `wc/store/v1` namespace, and since this API extends the finpress API, accessing it requires the `/wp-json/` base. Currently, the only version is `v1`. If the version is omitted, `v1` will be served.
 
 Examples:
 
@@ -159,7 +159,7 @@ If new schema is required, and any of the following statements are true, choose 
 
 If the data is sensitive (for example, a core setting that should be private), or not related to the current user (for example, looking up an order by order ID), [choose to use the authenticated WC REST API](https://fincommerce.github.io/fincommerce-rest-api-docs/#introduction).
 
-If you're looking to add _new routes and endpoints_, rather than extending the Store API _schema_, extending the Store API is not necessary. You can instead utilize core WordPress functionality to create new routes, choosing to use the same pattern of Store API if you wish. See:
+If you're looking to add _new routes and endpoints_, rather than extending the Store API _schema_, extending the Store API is not necessary. You can instead utilize core finpress functionality to create new routes, choosing to use the same pattern of Store API if you wish. See:
 
-* [`register_rest_route()`](https://developer.wordpress.org/reference/functions/register_rest_route/)
-* [Rest API Permissions Callbacks](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#permissions-callback)
+* [`register_rest_route()`](https://developer.finpress.org/reference/functions/register_rest_route/)
+* [Rest API Permissions Callbacks](https://developer.finpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#permissions-callback)

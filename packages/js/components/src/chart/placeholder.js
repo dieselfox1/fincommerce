@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Component } from '@wordpress/element';
+import { createElement, Component } from '@finpress/element';
 import PropTypes from 'prop-types';
-import { Spinner } from '@wordpress/components';
+import { Spinner } from '@finpress/components';
 
 /**
  * `ChartPlaceholder` displays a large loading indiciator for use in place of a `Chart` while data is loading.

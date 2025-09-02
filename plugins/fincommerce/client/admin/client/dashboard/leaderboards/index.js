@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Fragment, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Fragment, useState } from '@finpress/element';
 import PropTypes from 'prop-types';
-import { SelectControl } from '@wordpress/components';
+import { SelectControl } from '@finpress/components';
 
 import {
 	EllipsisMenu,

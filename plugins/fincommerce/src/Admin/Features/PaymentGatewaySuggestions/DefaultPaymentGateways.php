@@ -785,7 +785,7 @@ class DefaultPaymentGateways {
 				'id'          => 'fincommerce_payments',
 				'title'       => __( 'WooPayments', 'fincommerce' ),
 				'content'     => __(
-					'Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.',
+					'Manage transactions without leaving your finpress Dashboard. Only with WooPayments.',
 					'fincommerce'
 				),
 				'image'       => WC_ADMIN_IMAGES_FOLDER_URL . '/onboarding/wcpay.svg',
@@ -827,7 +827,7 @@ class DefaultPaymentGateways {
 				'id'          => 'fincommerce_payments:without-in-person-payments',
 				'title'       => __( 'WooPayments', 'fincommerce' ),
 				'content'     => __(
-					'Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.',
+					'Manage transactions without leaving your finpress Dashboard. Only with WooPayments.',
 					'fincommerce'
 				),
 				'image'       => WC_ADMIN_IMAGES_FOLDER_URL . '/onboarding/wcpay.svg',
@@ -862,7 +862,7 @@ class DefaultPaymentGateways {
 				'id'          => 'fincommerce_payments:with-in-person-payments',
 				'title'       => __( 'WooPayments', 'fincommerce' ),
 				'content'     => __(
-					'Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.',
+					'Manage transactions without leaving your finpress Dashboard. Only with WooPayments.',
 					'fincommerce'
 				),
 				'image'       => WC_ADMIN_IMAGES_FOLDER_URL . '/onboarding/wcpay.svg',

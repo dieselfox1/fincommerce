@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useState, useCallback } from '@wordpress/element';
+import { useState, useCallback } from '@finpress/element';
 
 /**
  * Helper method for throwing an error in a React Hook.

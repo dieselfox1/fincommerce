@@ -1,22 +1,22 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { createInterpolateElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Block, getBlockTypes } from '@wordpress/blocks';
+import { InspectorControls } from '@finpress/block-editor';
+import { createInterpolateElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Block, getBlockTypes } from '@finpress/blocks';
 import {
 	SelectControl,
 	ToggleControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanel as ToolsPanel,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanelItem as ToolsPanelItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

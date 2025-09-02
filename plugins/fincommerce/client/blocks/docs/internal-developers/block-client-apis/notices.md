@@ -8,7 +8,7 @@
 
 ## Notices in FinCommerce Blocks
 
-FinCommerce Blocks uses the [`@wordpress/notices`](https://github.com/WordPress/gutenberg/blob/d9eb36d80e05b4e45b1ad8462c8bace4e9cf1f6f/docs/reference-guides/data/data-core-notices.md) package to display notices in the frontend. For more information on the actions and selectors available on this data store, please review [the `@wordpress/notices` documentation](https://github.com/WordPress/gutenberg/blob/d9eb36d80e05b4e45b1ad8462c8bace4e9cf1f6f/docs/reference-guides/data/data-core-notices.md)
+FinCommerce Blocks uses the [`@finpress/notices`](https://github.com/finpress/gutenberg/blob/d9eb36d80e05b4e45b1ad8462c8bace4e9cf1f6f/docs/reference-guides/data/data-core-notices.md) package to display notices in the frontend. For more information on the actions and selectors available on this data store, please review [the `@finpress/notices` documentation](https://github.com/finpress/gutenberg/blob/d9eb36d80e05b4e45b1ad8462c8bace4e9cf1f6f/docs/reference-guides/data/data-core-notices.md)
 
 ### `StoreNoticesContainer`
 

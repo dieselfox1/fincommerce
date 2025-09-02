@@ -1,4 +1,4 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/save-hub/index.js
+// Reference: https://github.com/finpress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/save-hub/index.js
 /**
  * External dependencies
  */
@@ -7,24 +7,24 @@ import {
 	useContext,
 	useEffect,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useQuery } from '@fincommerce/navigation';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	__experimentalHStack as HStack,
 	Button,
 	Spinner,
-} from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { store as coreStore } from '@wordpress/core-data';
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { store as noticesStore } from '@wordpress/notices';
+} from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { store as coreStore } from '@finpress/core-data';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { store as noticesStore } from '@finpress/notices';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntitiesSavedStatesIsDirty as useIsDirty } from '@wordpress/editor';
+import { useEntitiesSavedStatesIsDirty as useIsDirty } from '@finpress/editor';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useIsSiteEditorLoading } from '@wordpress/edit-site/build-module/components/layout/hooks';
+import { useIsSiteEditorLoading } from '@finpress/edit-site/build-module/components/layout/hooks';
 
 /**
  * Internal dependencies

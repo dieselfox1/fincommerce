@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { queryPaginationPrevious as icon } from '@wordpress/icons';
-import { registerBlockType } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { queryPaginationPrevious as icon } from '@finpress/icons';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies

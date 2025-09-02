@@ -58,7 +58,7 @@
 		}
 	}
 
-	// This is wrong for @wordpress/components/InputControl since it is
+	// This is wrong for @finpress/components/InputControl since it is
 	// wrapped within the BaseControl by default. So it does not need
 	// to be wrapped again.
 	.has-error {

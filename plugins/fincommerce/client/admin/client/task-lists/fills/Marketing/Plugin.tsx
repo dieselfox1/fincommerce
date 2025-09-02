@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { getAdminLink } from '@fincommerce/settings';
 import { recordEvent } from '@fincommerce/tracks';
 import { Text } from '@fincommerce/experimental';

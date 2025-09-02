@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useWooBlockProps } from '@fincommerce/block-templates';
-import { createElement, createInterpolateElement } from '@wordpress/element';
-import { BaseControl } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { useInstanceId } from '@wordpress/compose';
+import { createElement, createInterpolateElement } from '@finpress/element';
+import { BaseControl } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { useInstanceId } from '@finpress/compose';
 import clsx from 'clsx';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -14,7 +14,7 @@ import {
 	AlignmentControl,
 	BlockControls,
 	RichText,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -47,7 +47,7 @@ export function SummaryBlockEdit( {
 
 	// This is a workaround to hide the toolbar when the block is blurred.
 	// This is a temporary solution until using Gutenberg 18 with the
-	// fix from https://github.com/WordPress/gutenberg/pull/59800
+	// fix from https://github.com/finpress/gutenberg/pull/59800
 	const { handleBlur: hideToolbar } = useClearSelectedBlockOnBlur();
 
 	function handleAlignmentChange( value: SummaryAttributes[ 'align' ] ) {

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { registerBlockType, type BlockConfiguration } from '@wordpress/blocks';
-import { InnerBlocks } from '@wordpress/block-editor';
-import { Icon, mapMarker } from '@wordpress/icons';
+import { registerBlockType, type BlockConfiguration } from '@finpress/blocks';
+import { InnerBlocks } from '@finpress/block-editor';
+import { Icon, mapMarker } from '@finpress/icons';
 
 /**
  * Internal dependencies

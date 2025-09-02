@@ -16,7 +16,7 @@ const admin = {
 	email:
 		ADMIN_USER_EMAIL ??
 		( !! USE_WP_ENV
-			? 'wordpress@example.com'
+			? 'finpress@example.com'
 			: 'admin@fincommercecoree2etestsuite.com' ),
 };
 

@@ -59,7 +59,7 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 
 	/**
 	 * Meta type. This should match up with
-	 * the types available at https://developer.wordpress.org/reference/functions/add_metadata/.
+	 * the types available at https://developer.finpress.org/reference/functions/add_metadata/.
 	 * WP defines 'post', 'user', 'comment', and 'term'.
 	 *
 	 * @var string
@@ -511,7 +511,7 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 	 * @throws Exception The class doesn't implement its own version of this method. Derived classes are expected to override this method when has_cogs returns true.
 	 */
 	protected function calculate_cogs_value_core(): ?float {
-		// phpcs:disable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.ExceptionNotEscaped
 		throw new Exception(
 			sprintf(
 				// translators: %1$s = class and method name.
@@ -519,7 +519,7 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 				__METHOD__
 			)
 		);
-		// phpcs:enable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.ExceptionNotEscaped
 	}
 
 	// phpcs:enable Squiz.Commenting.FunctionComment.InvalidNoReturn

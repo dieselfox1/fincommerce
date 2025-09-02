@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Component } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createElement, Component } from '@finpress/element';
 import {
 	Button,
 	Card,
 	CardBody,
 	CardFooter,
 	CardHeader,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { isEqual, isFunction } from 'lodash';
 import PropTypes from 'prop-types';
 import { getIdsFromQuery, updateQueryString } from '@fincommerce/navigation';

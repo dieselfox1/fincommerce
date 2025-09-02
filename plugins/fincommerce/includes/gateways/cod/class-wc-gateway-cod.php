@@ -207,14 +207,14 @@ class WC_Gateway_COD extends WC_Payment_Gateway {
 			if ( ! is_wc_admin_settings_page() ) {
 				return false;
 			}
-			// phpcs:disable WordPress.Security.NonceVerification
+			// phpcs:disable finpress.Security.NonceVerification
 			if ( ! isset( $_REQUEST['tab'] ) || 'checkout' !== $_REQUEST['tab'] ) {
 				return false;
 			}
 			if ( ! isset( $_REQUEST['section'] ) || self::ID !== $_REQUEST['section'] ) {
 				return false;
 			}
-			// phpcs:enable WordPress.Security.NonceVerification
+			// phpcs:enable finpress.Security.NonceVerification
 
 			return true;
 		}

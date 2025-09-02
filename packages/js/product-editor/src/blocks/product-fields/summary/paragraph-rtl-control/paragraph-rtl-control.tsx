@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { ToolbarButton } from '@wordpress/components';
-import { _x, isRTL } from '@wordpress/i18n';
-import { formatLtr } from '@wordpress/icons';
+import { createElement, Fragment } from '@finpress/element';
+import { ToolbarButton } from '@finpress/components';
+import { _x, isRTL } from '@finpress/i18n';
+import { formatLtr } from '@finpress/icons';
 
 /**
  * Internal dependencies

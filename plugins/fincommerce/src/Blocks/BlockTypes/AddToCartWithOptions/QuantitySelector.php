@@ -78,7 +78,7 @@ class QuantitySelector extends AbstractBlock {
 			array(
 				'min_value'   => $product->get_min_purchase_quantity(),
 				'max_value'   => $product->get_max_purchase_quantity(),
-				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // phpcs:ignore WordPress.Security.NonceVerification.Missing
+				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // phpcs:ignore finpress.Security.NonceVerification.Missing
 			)
 		);
 

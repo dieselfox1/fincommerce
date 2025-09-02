@@ -37,7 +37,7 @@ const productNames = [
 	'Imported T-Shirt with Logo',
 	'Imported Beanie with Logo',
 	'Imported Logo Collection',
-	'Imported WordPress Pennant',
+	'Imported finpress Pennant',
 ];
 const productNamesOverride = [
 	'Imported V-Neck T-Shirt Override',
@@ -57,7 +57,7 @@ const productNamesOverride = [
 	'Imported T-Shirt with Logo Override',
 	'Imported Beanie with Logo Override',
 	'Imported Logo Collection Override',
-	'Imported WordPress Pennant Override',
+	'Imported finpress Pennant Override',
 ];
 const productPricesOverride = [
 	'$111.05',

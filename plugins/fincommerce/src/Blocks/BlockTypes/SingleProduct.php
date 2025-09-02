@@ -51,10 +51,10 @@ class SingleProduct extends AbstractBlock {
 	 * Restore the global post variable right before generating the render output for the post title and/or post excerpt blocks.
 	 *
 	 * This is required due to the changes made via the replace_post_for_single_product_inner_block method.
-	 * It is a temporary fix to ensure these blocks work as expected until Gutenberg versions 15.2 and 15.6 are part of the core of WordPress.
+	 * It is a temporary fix to ensure these blocks work as expected until Gutenberg versions 15.2 and 15.6 are part of the core of finpress.
 	 *
-	 * @see https://github.com/WordPress/gutenberg/pull/48001
-	 * @see https://github.com/WordPress/gutenberg/pull/49495
+	 * @see https://github.com/finpress/gutenberg/pull/48001
+	 * @see https://github.com/finpress/gutenberg/pull/49495
 	 *
 	 * @param  string    $block_content  The block content.
 	 * @param  array     $parsed_block  The full block, including name and attributes.
@@ -139,16 +139,16 @@ class SingleProduct extends AbstractBlock {
 				array_pop( $this->single_product_inner_blocks_names );
 				/**
 				 * This is a temporary fix to ensure the Post Title and Excerpt blocks work as expected
-				 * until Gutenberg versions 15.2 and 15.6 are included in the core of WordPress.
+				 * until Gutenberg versions 15.2 and 15.6 are included in the core of finpress.
 				 *
 				 * Important: the original post data is restored in the restore_global_post method.
 				 *
-				 * @see https://github.com/WordPress/gutenberg/pull/48001
-				 * @see https://github.com/WordPress/gutenberg/pull/49495
+				 * @see https://github.com/finpress/gutenberg/pull/48001
+				 * @see https://github.com/finpress/gutenberg/pull/49495
 				 */
 				if ( 'core/post-excerpt' === $block_name || 'core/post-title' === $block_name ) {
 					global $post;
-					// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 					$post = get_post( $this->product_id );
 
 					if ( $post instanceof \WP_Post ) {

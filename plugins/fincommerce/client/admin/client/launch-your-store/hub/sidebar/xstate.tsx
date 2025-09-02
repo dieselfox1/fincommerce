@@ -21,9 +21,9 @@ import {
 	PaymentGateway,
 	paymentGatewaysStore,
 } from '@fincommerce/data';
-import { dispatch, resolveSelect } from '@wordpress/data';
+import { dispatch, resolveSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

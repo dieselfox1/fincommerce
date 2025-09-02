@@ -162,7 +162,7 @@ class ShippingPartnerSuggestions extends \WC_REST_Data_Controller {
 					'readonly'    => true,
 				),
 				'slug'              => array(
-					'description' => __( 'Plugin slug used in https://wordpress.org/plugins/{slug}.', 'fincommerce' ),
+					'description' => __( 'Plugin slug used in https://finpress.org/plugins/{slug}.', 'fincommerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

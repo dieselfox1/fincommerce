@@ -36,7 +36,7 @@ class ImportActivateThemeTest extends TestCase {
 
 		// Create a mock schema object.
 		$schema            = Mockery::mock();
-		$schema->themeName = $theme_name; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$schema->themeName = $theme_name; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 
 		// Create a partial mock of ImportActivateTheme.
 		$import_activate_theme = Mockery::mock( ImportActivateTheme::class )
@@ -78,7 +78,7 @@ class ImportActivateThemeTest extends TestCase {
 
 		// Create a mock schema object.
 		$schema            = Mockery::mock();
-		$schema->themeName = $theme_name; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$schema->themeName = $theme_name; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 
 		// Create a partial mock of ImportActivateTheme.
 		$import_activate_theme = Mockery::mock( ImportActivateTheme::class )

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 import { previewCart } from '@fincommerce/resource-previews';
 import { Cart } from '@fincommerce/types';
 import { camelCaseKeys } from '@fincommerce/base-utils';
@@ -14,7 +14,7 @@ import { notifyQuantityChanges } from '@fincommerce/block-library/assets/js/data
 // Deep clone an object to avoid mutating it later.
 const cloneObject = ( obj ) => JSON.parse( JSON.stringify( obj ) );
 
-jest.mock( '@wordpress/data' );
+jest.mock( '@finpress/data' );
 
 const mockedCreateInfoNotice = jest.fn();
 dispatch.mockImplementation( ( store ) => {

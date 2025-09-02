@@ -109,7 +109,7 @@ class MarketingRecommendations extends WC_REST_Controller {
 	/**
 	 * Prepares the item for the REST response.
 	 *
-	 * @param array           $item    WordPress representation of the item.
+	 * @param array           $item    finpress representation of the item.
 	 * @param WP_REST_Request $request Request object.
 	 *
 	 * @return WP_REST_Response|WP_Error Response object on success, or WP_Error object on failure.

@@ -2,20 +2,20 @@
  * External dependencies
  */
 import { noop } from 'lodash';
-import { __ } from '@wordpress/i18n';
-import { focus } from '@wordpress/dom';
+import { __ } from '@finpress/i18n';
+import { focus } from '@finpress/dom';
 import {
 	useEffect,
 	useMemo,
 	useState,
 	useRef,
 	createElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 import {
 	__experimentalUseFocusOutside as useFocusOutside,
 	useInstanceId,
-} from '@wordpress/compose';
+} from '@finpress/compose';
 
 /**
  * Internal dependencies

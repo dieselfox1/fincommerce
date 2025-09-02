@@ -3,7 +3,7 @@
  */
 import { find, get } from 'lodash';
 import { flattenFilters } from '@fincommerce/navigation';
-import { format as formatDate } from '@wordpress/date';
+import { format as formatDate } from '@finpress/date';
 import {
 	containsLeapYear,
 	getPreviousDate,

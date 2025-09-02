@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { MenuGroup, MenuItem } from '@wordpress/components';
-import { cog, Icon } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { MenuGroup, MenuItem } from '@finpress/components';
+import { cog, Icon } from '@finpress/icons';
 import { __experimentalWooProductMoreMenuItem as WooProductMoreMenuItem } from '@fincommerce/product-editor';
 
 export function ProductEditorDevToolsMenu( {

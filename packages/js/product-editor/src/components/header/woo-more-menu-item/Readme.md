@@ -42,7 +42,7 @@ const CustomMenuItem = () => (
 The Slot component is used to render all fills in the specified slot.
 
 ```jsx
-import { MoreMenuDropdown } from '@wordpress/interface';
+import { MoreMenuDropdown } from '@finpress/interface';
 export { __experimentalWooProductMoreMenuItem as WooProductMoreMenuItem } from '@fincommerce/product-editor';
 
 export const MoreMenu = () => {

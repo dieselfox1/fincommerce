@@ -2,11 +2,11 @@
  * External dependencies
  */
 import { optionsStore, pluginsStore, settingsStore } from '@fincommerce/data';
-import { withSelect } from '@wordpress/data';
-import { registerPlugin } from '@wordpress/plugins';
+import { withSelect } from '@finpress/data';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
-import { compose } from '@wordpress/compose';
-import type { SelectFunction } from '@wordpress/data/build-types/types';
+import { compose } from '@finpress/compose';
+import type { SelectFunction } from '@finpress/data/build-types/types';
 /**
  * Internal dependencies
  */

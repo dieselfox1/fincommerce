@@ -2,17 +2,17 @@
  * External dependencies
  */
 
-import { isRTL, __ } from '@wordpress/i18n';
+import { isRTL, __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { chevronRight, chevronLeft } from '@wordpress/icons';
-import { useSelect } from '@wordpress/data';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
-import { createElement, Fragment } from '@wordpress/element';
+import { chevronRight, chevronLeft } from '@finpress/icons';
+import { useSelect } from '@finpress/data';
+import { privateApis as routerPrivateApis } from '@finpress/router';
+import { createElement, Fragment } from '@finpress/element';
 import {
 	__experimentalHStack as HStack,
 	__experimentalHeading as Heading,
 	__experimentalVStack as VStack,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

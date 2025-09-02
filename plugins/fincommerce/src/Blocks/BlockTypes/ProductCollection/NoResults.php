@@ -108,9 +108,9 @@ class NoResults extends AbstractBlock {
 		$protocol = is_ssl() ? 'https' : 'http';
 
 		// Check the existence and sanitize HTTP_HOST and REQUEST_URI in the $_SERVER superglobal.
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$http_host = isset( $_SERVER['HTTP_HOST'] ) ? wp_unslash( $_SERVER['HTTP_HOST'] ) : '';
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
 
 		// Sanitize the host and URI.

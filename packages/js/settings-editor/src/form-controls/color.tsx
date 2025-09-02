@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import type { DataFormControlProps } from '@wordpress/dataviews';
-import { ColorPicker } from '@wordpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import type { DataFormControlProps } from '@finpress/dataviews';
+import { ColorPicker } from '@finpress/components';
 
 /**
  * Internal dependencies

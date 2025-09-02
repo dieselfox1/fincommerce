@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useRef } from '@wordpress/element';
+import { useRef } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

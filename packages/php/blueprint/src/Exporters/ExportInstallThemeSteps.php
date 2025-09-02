@@ -61,7 +61,7 @@ class ExportInstallThemeSteps implements StepExporter {
 			if ( isset( $info->download_link ) ) {
 				$steps[] = new InstallTheme(
 					$slug,
-					'wordpress.org/themes',
+					'finpress.org/themes',
 					array(
 						'activate' => $is_active,
 					)

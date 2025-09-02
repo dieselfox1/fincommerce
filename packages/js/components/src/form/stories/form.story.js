@@ -7,8 +7,8 @@ import {
 	RadioControl,
 	SelectControl,
 	TextControl,
-} from '@wordpress/components';
-import { useState } from '@wordpress/element';
+} from '@finpress/components';
+import { useState } from '@finpress/element';
 import { Form, DateTimePickerControl } from '@fincommerce/components';
 import moment from 'moment';
 

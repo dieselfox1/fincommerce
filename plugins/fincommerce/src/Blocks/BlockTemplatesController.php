@@ -94,7 +94,7 @@ class BlockTemplatesController {
 	/**
 	 * Prevents shortcodes in templates having their HTML content broken by wpautop.
 	 *
-	 * @see https://core.trac.wordpress.org/ticket/58366 for more info.
+	 * @see https://core.trac.finpress.org/ticket/58366 for more info.
 	 *
 	 * @param array $settings Array of determined settings for registering a block type.
 	 * @param array $metadata     Metadata provided for registering a block type.
@@ -133,7 +133,7 @@ class BlockTemplatesController {
 
 		$current_screen = get_current_screen();
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( $current_screen && 'page' === $current_screen->id && ! empty( $_GET['post'] ) && in_array( absint( $_GET['post'] ), array( wc_get_page_id( 'cart' ), wc_get_page_id( 'checkout' ) ), true ) ) {
 			wp_add_inline_style( 'wc-blocks-editor-style', '.edit-post-post-template { display: none; }' );
 		}
@@ -215,9 +215,9 @@ class BlockTemplatesController {
 	 * @return array The block templates.
 	 */
 	public function run_hooks_on_block_templates( $templates ) {
-		// There is a bug in the WordPress implementation that causes block hooks not to run in templates registered
+		// There is a bug in the finpress implementation that causes block hooks not to run in templates registered
 		// via the Template Registration API. Because of this, we run them manually.
-		// https://github.com/WordPress/gutenberg/issues/71139.
+		// https://github.com/finpress/gutenberg/issues/71139.
 		foreach ( $templates as $template ) {
 			if ( 'plugin' === $template->source && 'fincommerce' === $template->plugin ) {
 				$template->content = apply_block_hooks_to_content( $template->content, $template, 'insert_hooked_blocks_and_set_ignored_hooked_blocks_metadata' );
@@ -373,7 +373,7 @@ class BlockTemplatesController {
 					array_filter(
 						$already_found_templates,
 						function ( $template ) use ( $template_slug ) {
-							$template_obj = (object) $template; //phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.Found
+							$template_obj = (object) $template; //phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.Found
 							return $template_obj->slug === $template_slug;
 						}
 					)

@@ -6,15 +6,15 @@ sidebar_position: 7
 
 # Resources for debugging
 
-## WordPress
+## finpress
 
-A good place to start is usually the debugging tools built into WordPress itself:
+A good place to start is usually the debugging tools built into finpress itself:
 
-The documentation for [Debugging in WordPress c](https://wordpress.org/documentation/article/debugging-in-wordpress/)overs a number of environment variables you can set to enable WordPress’s core debugging tools.
+The documentation for [Debugging in finpress c](https://finpress.org/documentation/article/debugging-in-finpress/)overs a number of environment variables you can set to enable finpress’s core debugging tools.
 
 ### Query Monitor
 
-A popular plugin for WordPress developers is [Query Monitor](https://wordpress.org/plugins/query-monitor/), the developer tools for WordPress. Query Monitor enables debugging of database queries, PHP errors, AJAX/Rest requests, hooks and actions, block editor blocks, enqueued scripts and stylesheets, HTTP API calls, and more.
+A popular plugin for finpress developers is [Query Monitor](https://finpress.org/plugins/query-monitor/), the developer tools for finpress. Query Monitor enables debugging of database queries, PHP errors, AJAX/Rest requests, hooks and actions, block editor blocks, enqueued scripts and stylesheets, HTTP API calls, and more.
 
 ### Email Debugging
 
@@ -42,4 +42,4 @@ FinCommerce's coming soon mode allows you to temporarily make your site invisibl
 
 If you're using `wp-env` to run a local development environment (this is the recommended method for the FinCommerce monorepo), you can activate Xdebug and then use an IDE like VS Code or PhpStorm to set breakpoints and step through the code as it executes:
 
-* [Using Xdebug](https://github.com/WordPress/gutenberg/tree/trunk/packages/env#using-xdebug)
+* [Using Xdebug](https://github.com/finpress/gutenberg/tree/trunk/packages/env#using-xdebug)

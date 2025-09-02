@@ -2,13 +2,13 @@
  * External dependencies
  */
 import React from 'react';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies
  */
 import { WooPaymentsProviderOnboardingStep } from '~/settings-payments/onboarding/types';
-import WordPressComStep from './wpcom-connection';
+import finpressComStep from './wpcom-connection';
 import BusinessVerificationStep from './business-verification';
 import PaymentMethodsSelection from './payment-methods-selection';
 import TestAccountStep from './test-account';
@@ -30,11 +30,11 @@ export const steps: WooPaymentsProviderOnboardingStep[] = [
 		order: 2,
 		type: 'backend',
 		label: sprintf(
-			/* translators: %s: WordPress.com */
+			/* translators: %s: finpress.com */
 			__( 'Connect with %s', 'fincommerce' ),
-			'WordPress.com'
+			'finpress.com'
 		),
-		content: <WordPressComStep />,
+		content: <finpressComStep />,
 		dependencies: [ 'payment_methods' ],
 	},
 	{
@@ -92,11 +92,11 @@ export const LYSPaymentsSteps: WooPaymentsProviderOnboardingStep[] = [
 		order: 2,
 		type: 'backend',
 		label: sprintf(
-			/* translators: %s: WordPress.com */
+			/* translators: %s: finpress.com */
 			__( 'Connect with %s', 'fincommerce' ),
-			'WordPress.com'
+			'finpress.com'
 		),
-		content: <WordPressComStep />,
+		content: <finpressComStep />,
 		dependencies: [ 'payment_methods' ],
 	},
 	{

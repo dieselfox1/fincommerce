@@ -3,7 +3,7 @@
  */
 import { createElement, CSSProperties, ReactElement } from 'react';
 import clsx from 'clsx';
-import { Tooltip } from '@wordpress/components';
+import { Tooltip } from '@finpress/components';
 
 /**
  * Internal dependencies

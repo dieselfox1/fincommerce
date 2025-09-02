@@ -179,8 +179,8 @@ class OrdersTableSearchQuery {
 
 		$search_pattern = $wpdb->esc_like( $db_util->sanitise_boolean_fts_search_term( $this->search_term ) );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->prepare(
 			"LEFT JOIN (
 				SELECT DISTINCT order_id
@@ -189,8 +189,8 @@ class OrdersTableSearchQuery {
 			) AS " . self::PRODUCTS_JOIN_ALIAS . ' ON ' . self::PRODUCTS_JOIN_ALIAS . ".order_id = $orders_table.id",
 			$search_pattern
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -221,8 +221,8 @@ class OrdersTableSearchQuery {
 			$maybe_phone_field = ', phone';
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->prepare(
 			"LEFT JOIN (
 				SELECT DISTINCT order_id
@@ -235,8 +235,8 @@ class OrdersTableSearchQuery {
 			) AS " . self::CUSTOMERS_JOIN_ALIAS . ' ON ' . self::CUSTOMERS_JOIN_ALIAS . ".order_id = $orders_table.id",
 			$search_pattern
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -280,7 +280,7 @@ class OrdersTableSearchQuery {
 
 		$order_table = $this->query->get_table_name( 'orders' );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $order_table is hardcoded.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $order_table is hardcoded.
 		if ( 'customer_email' === $search_filter ) {
 			return $wpdb->prepare(
 				"`$order_table`.billing_email LIKE %s",
@@ -301,7 +301,7 @@ class OrdersTableSearchQuery {
 				'%' . $wpdb->esc_like( $this->search_term ) . '%'
 			);
 		}
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		if ( 'products' === $search_filter ) {
 			return $this->get_where_for_products();
@@ -351,7 +351,7 @@ class OrdersTableSearchQuery {
 			return self::PRODUCTS_JOIN_ALIAS . '.order_id IS NOT NULL';
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $orders_table and $items_table are hardcoded.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $orders_table and $items_table are hardcoded.
 		return $wpdb->prepare(
 			"
 $orders_table.id in (
@@ -404,7 +404,7 @@ $orders_table.id in (
 			return '-1';
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $meta_fields is already escaped before imploding, $meta_table is hardcoded.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $meta_fields is already escaped before imploding, $meta_table is hardcoded.
 		return $wpdb->prepare(
 			"
 SELECT search_query_meta.order_id

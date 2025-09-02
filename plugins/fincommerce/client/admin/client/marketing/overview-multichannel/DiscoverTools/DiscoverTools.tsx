@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { Icon, trendingUp } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { Icon, trendingUp } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

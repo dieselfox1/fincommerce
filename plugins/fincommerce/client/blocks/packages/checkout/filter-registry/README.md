@@ -17,7 +17,7 @@
         -   [`validation (function)`](#validation-function)
 -   [Available Filters](#available-filters)
 
-The filter registry allows callbacks to be registered to manipulate certain values. This is similar to the traditional filter system in WordPress (where you register a callback with a specific filter and return a modified value).
+The filter registry allows callbacks to be registered to manipulate certain values. This is similar to the traditional filter system in finpress (where you register a callback with a specific filter and return a modified value).
 
 ## registerCheckoutFilters
 

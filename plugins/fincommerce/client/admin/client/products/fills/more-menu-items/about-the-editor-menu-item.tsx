@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { MenuItem } from '@wordpress/components';
-import { info, Icon } from '@wordpress/icons';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { MenuItem } from '@finpress/components';
+import { info, Icon } from '@finpress/icons';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

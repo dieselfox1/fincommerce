@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { appendTimestamp, getCurrentDates } from '@fincommerce/date';
-import { select as wpSelect } from '@wordpress/data';
+import { select as wpSelect } from '@finpress/data';
 /**
  * Internal dependencies
  */
@@ -28,7 +28,7 @@ type Options = {
  * @param {Object} options.persisted_query  Persisted query passed to endpoint
  * @param {Object} options.query            Query parameters in the url
  * @param {Object} options.filterQuery      Query parameters to filter the leaderboard
- * @param {Object} options.select           Instance of @wordpress/select
+ * @param {Object} options.select           Instance of @finpress/select
  * @param {string} options.defaultDateRange User specified default date range.
  * @return {Object} Object containing leaderboard responses.
  */
@@ -60,7 +60,7 @@ export function getLeaderboard( options: Options ) {
 
 	// Disable eslint rule requiring `getItems` to be defined below because the next two statements
 	// depend on `getItems` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const leaderboards = getItems< 'leaderboards' >(
 		endpoint,
 		leaderboardQuery

@@ -33,7 +33,7 @@ class WC_Helper_Admin {
 	public static function load() {
 		if ( is_admin() ) {
 			$is_wc_home_or_in_app_marketplace = (
-				isset( $_GET['page'] ) && 'wc-admin' === $_GET['page'] //phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				isset( $_GET['page'] ) && 'wc-admin' === $_GET['page'] //phpcs:ignore finpress.Security.NonceVerification.Recommended
 			);
 
 			if ( $is_wc_home_or_in_app_marketplace ) {
@@ -54,7 +54,7 @@ class WC_Helper_Admin {
 	 * @return mixed $settings
 	 */
 	public static function add_marketplace_settings( $settings ) {
-		if ( ! WC_Helper::is_site_connected() && isset( $_GET['connect'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! WC_Helper::is_site_connected() && isset( $_GET['connect'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			wp_safe_redirect( self::get_connection_url() );
 			exit;
 		}
@@ -95,7 +95,7 @@ class WC_Helper_Admin {
 		// This data is only used in the `Extensions` screen, so only populate it there.
 		// More specifically, it's used in `My Subscriptions`, however, switching tabs doesn't require
 		// a page reload, so we just check for `path` (/extensions), rather than `tab` (my-subscriptions).
-		if ( ! empty( $_GET['path'] ) && '/extensions' === $_GET['path'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['path'] ) && '/extensions' === $_GET['path'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$settings['wccomHelper']['wooUpdateCount']          = WC_Helper_Updater::get_updates_count_based_on_site_status();
 			$settings['wccomHelper']['connected_notice']        = PluginsHelper::get_wccom_connected_notice( $auth_user_email );
 			$settings['wccomHelper']['woocomConnectNoticeType'] = WC_Helper_Updater::get_woo_connect_notice_type();
@@ -139,12 +139,12 @@ class WC_Helper_Admin {
 			$connect_url_args['wc-helper-nonce']   = wp_create_nonce( 'connect' );
 		}
 
-		if ( ! empty( $_GET['utm_source'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$connect_url_args['utm_source'] = wc_clean( wp_unslash( $_GET['utm_source'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['utm_source'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$connect_url_args['utm_source'] = wc_clean( wp_unslash( $_GET['utm_source'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
-		if ( ! empty( $_GET['utm_campaign'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$connect_url_args['utm_campaign'] = wc_clean( wp_unslash( $_GET['utm_campaign'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['utm_campaign'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$connect_url_args['utm_campaign'] = wc_clean( wp_unslash( $_GET['utm_campaign'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
 		return add_query_arg(

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEntityId } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
+import { useEntityId } from '@finpress/core-data';
+import { useSelect } from '@finpress/data';
 /**
  * Internal dependencies
  */

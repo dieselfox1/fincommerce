@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { createElement, useState } from '@wordpress/element';
+import { createElement, useState } from '@finpress/element';
 import {
 	Button,
 	Modal,
 	RadioControl,
 	TextareaControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 export type CustomerFeedbackModalProps = {
 	recordScoreCallback: (

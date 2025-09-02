@@ -19,7 +19,7 @@ To get started, go to Plugins > Add New > Upload plugin, and install the beta te
 
 [FinCommerce Beta Tester](https://fincommerce.com/products/fincommerce-beta-tester/)
 
-This plugin will give you access to all of the FinCommerce versions uploaded to [WordPress.org]. This includes beta releases and release candidates.
+This plugin will give you access to all of the FinCommerce versions uploaded to [finpress.org]. This includes beta releases and release candidates.
 
 ## Giving Feedback
 

@@ -345,11 +345,11 @@ class WC_Email extends WC_Settings_API {
 		}
 
 		if ( 'multipart' === $this->get_email_type() ) {
-			$mailer->AltBody = wordwrap( // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$mailer->AltBody = wordwrap( // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 				preg_replace( $this->plain_search, $this->plain_replace, wp_strip_all_tags( $this->get_content_plain() ) )
 			);
 		} else {
-			$mailer->AltBody = ''; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$mailer->AltBody = ''; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		}
 
 		$this->sending = false;
@@ -819,7 +819,7 @@ class WC_Email extends WC_Settings_API {
 	}
 
 	/**
-	 * Get WordPress blog name.
+	 * Get finpress blog name.
 	 *
 	 * @return string
 	 */
@@ -1222,12 +1222,12 @@ class WC_Email extends WC_Settings_API {
 			$file  = $this->get_theme_template_file( $template_path );
 			$code  = wp_unslash( $template_code );
 
-			if ( is_writeable( $file ) ) { // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writeable
-				$f = fopen( $file, 'w+' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+			if ( is_writeable( $file ) ) { // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writeable
+				$f = fopen( $file, 'w+' ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fopen
 
 				if ( false !== $f ) {
-					fwrite( $f, $code ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
-					fclose( $f ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose
+					fwrite( $f, $code ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
+					fclose( $f ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fclose
 					$saved = true;
 				}
 			}
@@ -1302,7 +1302,7 @@ class WC_Email extends WC_Settings_API {
 				$theme_file = $this->get_theme_template_file( $template );
 
 				if ( file_exists( $theme_file ) ) {
-					unlink( $theme_file ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_unlink
+					unlink( $theme_file ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_unlink
 
 					/**
 					 * Action hook fired after deleting template file.
@@ -1331,7 +1331,7 @@ class WC_Email extends WC_Settings_API {
 		if (
 			( ! empty( $this->template_html ) || ! empty( $this->template_plain ) )
 			&& ( ! empty( $_GET['move_template'] ) || ! empty( $_GET['delete_template'] ) )
-			&& 'GET' === $_SERVER['REQUEST_METHOD'] // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+			&& 'GET' === $_SERVER['REQUEST_METHOD'] // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotValidated
 		) {
 			if ( empty( $_GET['_wc_email_nonce'] ) || ! wp_verify_nonce( wc_clean( wp_unslash( $_GET['_wc_email_nonce'] ) ), 'fincommerce_email_template_nonce' ) ) {
 				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'fincommerce' ) );
@@ -1365,7 +1365,7 @@ class WC_Email extends WC_Settings_API {
 		?>
 		<?php wc_back_header( $this->get_title(), __( 'Return to emails', 'fincommerce' ), admin_url( 'admin.php?page=wc-settings&tab=email' ) ); ?>
 
-		<?php echo wpautop( wp_kses_post( $this->get_description() ) ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
+		<?php echo wpautop( wp_kses_post( $this->get_description() ) ); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped ?>
 
 		<?php
 		/**
@@ -1419,7 +1419,7 @@ class WC_Email extends WC_Settings_API {
 							<p>
 								<a href="#" class="button toggle_editor"></a>
 
-								<?php if ( is_writable( $local_file ) ) : // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable ?>
+								<?php if ( is_writable( $local_file ) ) : // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writable ?>
 									<a href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'move_template', 'saved' ), add_query_arg( 'delete_template', $template_type ) ), 'fincommerce_email_template_nonce', '_wc_email_nonce' ) ); ?>" class="delete_template button">
 										<?php esc_html_e( 'Delete template file', 'fincommerce' ); ?>
 									</a>
@@ -1434,11 +1434,11 @@ class WC_Email extends WC_Settings_API {
 							<div class="editor" style="display:none">
 								<textarea class="code" cols="25" rows="20"
 								<?php
-								if ( ! is_writable( $local_file ) ) : // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable
+								if ( ! is_writable( $local_file ) ) : // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writable
 									?>
 									readonly="readonly" disabled="disabled"
 								<?php else : ?>
-									data-name="<?php echo esc_attr( $template_type ) . '_code'; ?>"<?php endif; ?>><?php echo esc_html( file_get_contents( $local_file ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents ?></textarea>
+									data-name="<?php echo esc_attr( $template_type ) . '_code'; ?>"<?php endif; ?>><?php echo esc_html( file_get_contents( $local_file ) ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents ?></textarea>
 							</div>
 						<?php elseif ( file_exists( $template_file ) ) : ?>
 							<p>
@@ -1457,7 +1457,7 @@ class WC_Email extends WC_Settings_API {
 									$target_dir = $theme_dir;
 								}
 
-								if ( is_writable( $target_dir ) ) : // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable
+								if ( is_writable( $target_dir ) ) : // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writable
 									?>
 									<a href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'delete_template', 'saved' ), add_query_arg( 'move_template', $template_type ) ), 'fincommerce_email_template_nonce', '_wc_email_nonce' ) ); ?>" class="button">
 										<?php esc_html_e( 'Copy file to theme', 'fincommerce' ); ?>
@@ -1471,7 +1471,7 @@ class WC_Email extends WC_Settings_API {
 							</p>
 
 							<div class="editor" style="display:none">
-								<textarea class="code" readonly="readonly" disabled="disabled" cols="25" rows="20"><?php echo esc_html( file_get_contents( $template_file ) );  // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents ?></textarea>
+								<textarea class="code" readonly="readonly" disabled="disabled" cols="25" rows="20"><?php echo esc_html( file_get_contents( $template_file ) );  // phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents ?></textarea>
 							</div>
 						<?php else : ?>
 							<p><?php esc_html_e( 'File was not found.', 'fincommerce' ); ?></p>
@@ -1538,7 +1538,7 @@ class WC_Email extends WC_Settings_API {
 		global $phpmailer;
 
 		if ( $phpmailer instanceof PHPMailer\PHPMailer\PHPMailer ) {
-			$phpmailer->AltBody = ''; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			$phpmailer->AltBody = ''; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		}
 	}
 

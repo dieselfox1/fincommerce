@@ -5,7 +5,7 @@
 
 namespace Automattic\FinCommerce\Internal\Font;
 
-// IMPORTANT: We have to switch to the WordPress API to create the FontFamily post type when they will be implemented: https://github.com/WordPress/gutenberg/issues/58670!
+// IMPORTANT: We have to switch to the finpress API to create the FontFamily post type when they will be implemented: https://github.com/finpress/gutenberg/issues/58670!
 
 /**
  * Helper class for font family related functionality.

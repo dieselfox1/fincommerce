@@ -72,7 +72,7 @@ class CartApplyCoupon extends AbstractCartRoute {
 		try {
 			$this->cart_controller->apply_coupon( $coupon_code );
 		} catch ( \WC_REST_Exception $e ) {
-			throw new RouteException( $e->getErrorCode(), $e->getMessage(), $e->getCode() ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new RouteException( $e->getErrorCode(), $e->getMessage(), $e->getCode() ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 
 		return rest_ensure_response( $this->schema->get_item_response( $this->cart_controller->get_cart_for_response() ) );

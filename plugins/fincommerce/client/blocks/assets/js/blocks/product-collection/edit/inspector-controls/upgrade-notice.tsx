@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useLocalStorageState } from '@fincommerce/base-hooks';
 import {
 	createInterpolateElement,
 	useEffect,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	MIGRATION_STATUS_LS_KEY,
 	getInitialStatusLSValue,

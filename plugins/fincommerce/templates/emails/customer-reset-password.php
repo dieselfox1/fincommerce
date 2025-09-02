@@ -44,7 +44,7 @@ $email_improvements_enabled = FeaturesUtil::feature_is_enabled( 'email_improveme
 	<p><?php esc_html_e( 'If you didn\'t make this request, just ignore this email. If you\'d like to proceed:', 'fincommerce' ); ?></p>
 <?php endif; ?>
 <p>
-	<a class="link" href="<?php echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ); ?>"><?php // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound ?>
+	<a class="link" href="<?php echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ); ?>"><?php // phpcs:ignore finpress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound ?>
 		<?php
 		if ( $email_improvements_enabled ) {
 			esc_html_e( 'Reset your password', 'fincommerce' );

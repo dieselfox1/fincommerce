@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { select, dispatch } from '@wordpress/data';
+import { select, dispatch } from '@finpress/data';
 import { waitFor } from '@testing-library/react';
 
 /**

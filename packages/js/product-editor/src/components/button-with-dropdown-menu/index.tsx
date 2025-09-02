@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { chevronDown } from '@wordpress/icons';
-import { Button, DropdownMenu, Flex, FlexItem } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { chevronDown } from '@finpress/icons';
+import { Button, DropdownMenu, Flex, FlexItem } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

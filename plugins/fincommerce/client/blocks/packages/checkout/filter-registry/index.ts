@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { CURRENT_USER_IS_ADMIN } from '@fincommerce/settings';
-import deprecated from '@wordpress/deprecated';
-import isShallowEqual from '@wordpress/is-shallow-equal';
-import type { ComparableObject } from '@wordpress/is-shallow-equal';
+import deprecated from '@finpress/deprecated';
+import isShallowEqual from '@finpress/is-shallow-equal';
+import type { ComparableObject } from '@finpress/is-shallow-equal';
 import { isNull, isObject, objectHasProp } from '@fincommerce/types';
 
 /**

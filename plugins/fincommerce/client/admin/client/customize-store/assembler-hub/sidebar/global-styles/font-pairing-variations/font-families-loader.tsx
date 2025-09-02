@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+import { useEffect } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 
 /**
  * Internal dependencies

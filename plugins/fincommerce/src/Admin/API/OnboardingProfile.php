@@ -253,7 +253,7 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 
 	/**
 	 * Returns a default email to be pre-filled in OBW. Prioritizes Jetpack if connected,
-	 * otherwise will default to WordPress general settings.
+	 * otherwise will default to finpress general settings.
 	 *
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
@@ -273,7 +273,7 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 			}
 		}
 
-		// Attempt to get email from WordPress general settings.
+		// Attempt to get email from finpress general settings.
 		if ( empty( $result['email'] ) ) {
 			$result['email'] = get_option( 'admin_email' );
 		}

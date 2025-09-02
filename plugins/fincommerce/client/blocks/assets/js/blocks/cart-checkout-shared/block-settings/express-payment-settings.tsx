@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { InspectorControls, HeightControl } from '@wordpress/block-editor';
+import { InspectorControls, HeightControl } from '@finpress/block-editor';
 import {
 	PanelBody,
 	ToggleControl,
 	RadioControl,
 	Notice,
-} from '@wordpress/components';
+} from '@finpress/components';
 import ExternalLinkCard from '@fincommerce/editor-components/external-link-card';
-import { __ } from '@wordpress/i18n';
-import type { BlockAttributes } from '@wordpress/blocks';
-import { select } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import type { BlockAttributes } from '@finpress/blocks';
+import { select } from '@finpress/data';
 import { paymentStore } from '@fincommerce/block-data';
 import { ADMIN_URL } from '@fincommerce/settings';
 

@@ -56,12 +56,12 @@ Next, you have to add your task to the tasks list in JavaScript.
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import {
 	WooOnboardingTask,
 	WooOnboardingTaskListItem,
 } from '@fincommerce/onboarding';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 
 const Task = ( { onComplete, task, query } ) => {
 	// Implement your task UI/feature here.
@@ -100,7 +100,7 @@ registerPlugin( 'add-task-list-item', {
 
 ### Example
 
-You can find a complete example of how to add a custom task as a WordPress plugin in the [examples directory](../examples/extensions/add-task/).
+You can find a complete example of how to add a custom task as a finpress plugin in the [examples directory](../examples/extensions/add-task/).
 
 ## Models and classes
 
@@ -291,7 +291,7 @@ Using the `@fincommerce/data` package, the following selectors and actions are a
 
 ```js
 import { onboardingStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 const { snoozeTask } = useDispatch( onboardingStore );
 const { taskLists } = useSelect( ( select ) => {
@@ -323,14 +323,14 @@ The following REST endpoints are available to interact with tasks. For ease of u
 
 ### SlotFills
 
-The task UI can be supplemented by registering plugins that fill the provided task slots. Learn more about slot fills in the [SlotFill documentation](https://developer.wordpress.org/block-editor/reference-guides/slotfills/) and [here](https://developer.wordpress.org/block-editor/reference-guides/components/slot-fill/).
+The task UI can be supplemented by registering plugins that fill the provided task slots. Learn more about slot fills in the [SlotFill documentation](https://developer.finpress.org/block-editor/reference-guides/slotfills/) and [here](https://developer.finpress.org/block-editor/reference-guides/components/slot-fill/).
 
 ### Task content
 
 A task list fill is required if no `action_url` is provided for the task. This is the content shown after a task list item has been clicked.
 
 ```js
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 
 registerPlugin( 'my-task-plugin', {

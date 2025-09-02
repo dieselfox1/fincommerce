@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button, TextareaControl, TextControl } from '@wordpress/components';
-import { isEmail } from '@wordpress/url';
-import { __ } from '@wordpress/i18n';
-import { useDispatch } from '@wordpress/data';
-import { useCallback, useEffect, useRef } from '@wordpress/element';
+import { Button, TextareaControl, TextControl } from '@finpress/components';
+import { isEmail } from '@finpress/url';
+import { __ } from '@finpress/i18n';
+import { useDispatch } from '@finpress/data';
+import { useCallback, useEffect, useRef } from '@finpress/element';
 import { STORE_KEY as CES_STORE_KEY } from '@fincommerce/customer-effort-score';
 
 /**

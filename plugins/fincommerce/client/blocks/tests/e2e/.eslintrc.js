@@ -12,8 +12,8 @@ const config = {
 		project: './tsconfig.json',
 	},
 	rules: {
-		'@wordpress/no-global-active-element': 'off',
-		'@wordpress/no-global-get-selection': 'off',
+		'@finpress/no-global-active-element': 'off',
+		'@finpress/no-global-get-selection': 'off',
 		'no-restricted-syntax': [
 			'error',
 			{

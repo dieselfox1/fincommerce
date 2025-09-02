@@ -5,7 +5,7 @@
 	"author": "Automattic",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce"
 	],
 	"engines": {
@@ -56,11 +56,11 @@
 	},
 	"dependencies": {
 		"@fincommerce/experimental": "workspace:*",
-		"@wordpress/components": "wp-6.6",
-		"@wordpress/compose": "wp-6.6",
-		"@wordpress/element": "wp-6.6",
-		"@wordpress/i18n": "wp-6.6",
-		"@wordpress/notices": "wp-6.6",
+		"@finpress/components": "wp-6.6",
+		"@finpress/compose": "wp-6.6",
+		"@finpress/element": "wp-6.6",
+		"@finpress/i18n": "wp-6.6",
+		"@finpress/notices": "wp-6.6",
 		"clsx": "2.1.x",
 		"prop-types": "^15.8.1",
 		"react-transition-group": "^4.4.5"
@@ -81,7 +81,7 @@
 		"@fincommerce/internal-style-build": "workspace:*",
 		"@fincommerce/navigation": "workspace:*",
 		"@fincommerce/tracks": "workspace:*",
-		"@wordpress/browserslist-config": "next",
+		"@finpress/browserslist-config": "next",
 		"css-loader": "6.11.x",
 		"eslint": "^8.55.0",
 		"jest": "27.5.x",
@@ -97,7 +97,7 @@
 		"wireit": "0.14.12"
 	},
 	"peerDependencies": {
-		"@wordpress/data": "wp-6.6",
+		"@finpress/data": "wp-6.6",
 		"react": "18.3.x",
 		"react-dom": "18.3.x"
 	},

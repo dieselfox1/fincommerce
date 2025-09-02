@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
+import { BlockInstance } from '@finpress/blocks';
 import { memo } from 'react';
-import { EditorSettings } from '@wordpress/block-editor';
+import { EditorSettings } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

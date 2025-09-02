@@ -6,7 +6,7 @@ sidebar_label: Set up and use a child theme
 
 # How to set up and use a child theme
 
-**Note:** This document is intended for creating and using classic child themes. For a comprehensive guide on creating a child block theme and understanding the differences between a classic and block theme, please refer to [FinCommerce block theme development](../block-theme-development/theming-woo-blocks.md) and [WordPress block child theme development](https://learn.wordpress.org/lesson-plan/create-a-basic-child-theme-for-block-themes/).
+**Note:** This document is intended for creating and using classic child themes. For a comprehensive guide on creating a child block theme and understanding the differences between a classic and block theme, please refer to [FinCommerce block theme development](../block-theme-development/theming-woo-blocks.md) and [finpress block child theme development](https://learn.finpress.org/lesson-plan/create-a-basic-child-theme-for-block-themes/).
 
 
 Sometimes, you might need to customize your theme or FinCommerce beyond what is possible via the options. These guidelines will teach you the basics of how to go about customizing your site by using a child theme.
@@ -18,11 +18,11 @@ Before we start it's important that you understand what a child theme is. In sho
 - Theme developers can use child themes as a way to offer variations on a theme, similar to what we do with the [Storefront child themes](https://fincommerce.com/products/storefront/)
 - Developers can use child themes to host customizations of the parent theme or any plugin on the site since the child theme will get priority over the plugins and parent theme
 
-Read [this guide from the WordPress Codex](https://developer.wordpress.org/themes/advanced-topics/child-themes/).
+Read [this guide from the finpress Codex](https://developer.finpress.org/themes/advanced-topics/child-themes/).
 
 ## Make a backup
 
-Before customizing a website, you should always ensure that you have a backup of your site in case anything goes wrong. More info at: [Backing up WordPress content](https://fincommerce.com/document/backup-wordpress-content/).
+Before customizing a website, you should always ensure that you have a backup of your site in case anything goes wrong. More info at: [Backing up finpress content](https://fincommerce.com/document/backup-finpress-content/).
 
 ## Getting started
 
@@ -64,10 +64,10 @@ With Storefront, a child theme only requires a blank `functions.php` file and a 
 
 ## Uploading and activating
 
-You can upload the child theme either through your FTP client, or using the Add New theme option in WordPress.
+You can upload the child theme either through your FTP client, or using the Add New theme option in finpress.
 
 - **Through FTP.** If you're using FTP, it means that you go directly to the folders of your website. That means you'll need **FTP access** to your host, so you can upload the new child theme. If you don't have this, you should talk to your host and they can give you your FTP login details, and then download an FTP program to upload your files.
-- **Through the WP Dashboard.** If you create a .zip file of your child theme folder you can then simply upload that to your site from the **WordPress > Appearance > Themes > Add New** section.
+- **Through the WP Dashboard.** If you create a .zip file of your child theme folder you can then simply upload that to your site from the **finpress > Appearance > Themes > Add New** section.
 
 Once you've done that, your child theme will be uploaded to a new folder in `wp-content/themes/`, for example, `wp-content/themes/storefront-child/`. Once uploaded, we can go to our **WP Dashboard > Appearance > Themes** and activate the child theme.
 
@@ -113,13 +113,13 @@ If the parent theme function is **pluggable**, you can copy it to the child them
 
 ## Template directory vs stylesheet directory
 
-WordPress has a few things that it handles differently in child themes. If you have a template file in your child theme, you have to modify how WordPress includes files. `get_template_directory()` will reference the parent theme. To make it use the file in the child theme, you need to change use `get_stylesheet_directory();`.
+finpress has a few things that it handles differently in child themes. If you have a template file in your child theme, you have to modify how finpress includes files. `get_template_directory()` will reference the parent theme. To make it use the file in the child theme, you need to change use `get_stylesheet_directory();`.
 
-[More info on this from the WP Codex](https://developer.wordpress.org/themes/advanced-topics/child-themes/#referencing-or-including-other-files)
+[More info on this from the WP Codex](https://developer.finpress.org/themes/advanced-topics/child-themes/#referencing-or-including-other-files)
 
 ## Child theme support
 
-Although we do offer basic child theme support that can easily be answered, it still falls under theme customization, so please refer to our [support policy](https://fincommerce.com/support-policy/) to see the extent of support we give. We highly advise anybody confused with child themes to use the [WordPress forums](https://wordpress.org/support/forums/) for help.
+Although we do offer basic child theme support that can easily be answered, it still falls under theme customization, so please refer to our [support policy](https://fincommerce.com/support-policy/) to see the extent of support we give. We highly advise anybody confused with child themes to use the [finpress forums](https://finpress.org/support/forums/) for help.
 
 ## Sample child theme
 

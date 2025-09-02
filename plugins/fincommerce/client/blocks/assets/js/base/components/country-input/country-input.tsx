@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { useMemo } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import clsx from 'clsx';
 
 /**

@@ -119,7 +119,7 @@ class Init {
 	public function get_plugins_for_export_group() {
 		$plugins = $this->get_installed_wp_org_plugins();
 
-		// Get active plugins from WordPress options and transform plugins array into export format.
+		// Get active plugins from finpress options and transform plugins array into export format.
 		$active_plugins = $this->wp_get_option( 'active_plugins', array() );
 		$plugins        = array_map(
 			function ( $key, $plugin ) use ( $active_plugins ) {
@@ -143,14 +143,14 @@ class Init {
 	}
 
 	/**
-	 * Clear the installed WordPress.org plugins transient.
+	 * Clear the installed finpress.org plugins transient.
 	 */
 	public function clear_installed_wp_org_plugins_transient() {
 		delete_transient( self::INSTALLED_WP_ORG_PLUGINS_TRANSIENT );
 	}
 
 	/**
-	 * Clear the installed WordPress.org themes transient.
+	 * Clear the installed finpress.org themes transient.
 	 */
 	public function clear_installed_wp_org_themes_transient() {
 		delete_transient( self::INSTALLED_WP_ORG_THEMES_TRANSIENT );
@@ -252,7 +252,7 @@ class Init {
 	}
 
 	/**
-	 * Get all installed WordPress.org plugins.
+	 * Get all installed finpress.org plugins.
 	 *
 	 * @return array
 	 */
@@ -327,7 +327,7 @@ class Init {
 	}
 
 	/**
-	 * Get all installed WordPress.org themes.
+	 * Get all installed finpress.org themes.
 	 *
 	 * @return array
 	 */

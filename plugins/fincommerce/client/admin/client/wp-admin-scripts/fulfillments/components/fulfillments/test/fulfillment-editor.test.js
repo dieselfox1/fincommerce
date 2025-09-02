@@ -9,7 +9,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '../../../test-helper/global-mock';
 import FulfillmentEditor from '../fulfillment-editor';
 
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	Button: ( { onClick, children } ) => (
 		<button data-testid="button" onClick={ onClick }>
 			{ children }

@@ -49,7 +49,7 @@
 		}
 	  ]
 	},
-	"learn_more_link": "https://wordpress.org/plugins/fincommerce-shipstation-integration/",
+	"learn_more_link": "https://finpress.org/plugins/fincommerce-shipstation-integration/",
 	"is_visible": [
 	  {
 		"type": "or",
@@ -102,7 +102,7 @@
 	  ]
 	},
 	"description": "",
-	"learn_more_link": "https://wordpress.org/plugins/skydropx-cotizador-y-envios/",
+	"learn_more_link": "https://finpress.org/plugins/skydropx-cotizador-y-envios/",
 	"is_visible": [
 	  {
 		"type": "or",
@@ -313,7 +313,7 @@
 		}
 	  ]
 	},
-	"learn_more_link": "https://wordpress.org/plugins/sendcloud-shipping/",
+	"learn_more_link": "https://finpress.org/plugins/sendcloud-shipping/",
 	"is_visible": [
 	  {
 		"type": "or",
@@ -416,7 +416,7 @@
 		}
 	  ]
 	},
-	"learn_more_link": "https://wordpress.org/plugins/packlink-pro-shipping/",
+	"learn_more_link": "https://finpress.org/plugins/packlink-pro-shipping/",
 	"is_visible": [
 	  {
 		"type": "or",

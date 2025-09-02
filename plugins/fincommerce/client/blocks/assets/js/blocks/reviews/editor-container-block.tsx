@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { debounce } from '@fincommerce/base-utils';
-import { Placeholder } from '@wordpress/components';
+import { Placeholder } from '@finpress/components';
 import { EditorContainerBlockProps } from '@fincommerce/blocks/reviews/types';
 
 /**

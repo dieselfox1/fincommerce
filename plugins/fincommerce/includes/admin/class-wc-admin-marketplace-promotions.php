@@ -144,7 +144,7 @@ class WC_Admin_Marketplace_Promotions {
 		);
 		$raw_promotions = WC_Admin_Addons::fetch( self::PROMOTIONS_API_URL, $fetch_options );
 
-		// phpcs:disable WordPress.NamingConventions.ValidHookName.UseUnderscores
+		// phpcs:disable finpress.NamingConventions.ValidHookName.UseUnderscores
 		if ( is_wp_error( $raw_promotions ) ) {
 			/**
 			 * Allows connection error to be handled.
@@ -176,7 +176,7 @@ class WC_Admin_Marketplace_Promotions {
 			 */
 			do_action( 'fincommerce_page_wc-addons_connection_error', 'Malformed response' );
 		}
-		// phpcs:enable WordPress.NamingConventions.ValidHookName.UseUnderscores
+		// phpcs:enable finpress.NamingConventions.ValidHookName.UseUnderscores
 
 		return $promotions;
 	}

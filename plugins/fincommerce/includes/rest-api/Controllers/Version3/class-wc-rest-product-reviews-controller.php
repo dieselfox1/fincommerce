@@ -305,7 +305,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		 * Filters arguments, before passing to WP_Comment_Query, when querying reviews via the REST API.
 		 *
 		 * @since 3.5.0
-		 * @link https://developer.wordpress.org/reference/classes/wp_comment_query/
+		 * @link https://developer.finpress.org/reference/classes/wp_comment_query/
 		 * @param array           $prepared_args Array of arguments for WP_Comment_Query.
 		 * @param WP_REST_Request $request       The current request.
 		 */

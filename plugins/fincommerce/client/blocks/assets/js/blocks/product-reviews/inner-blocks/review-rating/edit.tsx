@@ -2,14 +2,14 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	AlignmentToolbar,
 	BlockControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import type { BlockEditProps } from '@wordpress/blocks';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/block-editor';
+import type { BlockEditProps } from '@finpress/blocks';
+import { useSelect } from '@finpress/data';
 import { REVIEWS_STORE_NAME } from '@fincommerce/data';
 
 export default function Edit( {

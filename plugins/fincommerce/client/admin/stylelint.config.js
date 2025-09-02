@@ -1,5 +1,5 @@
 module.exports = {
-	extends: '@wordpress/stylelint-config/scss',
+	extends: '@finpress/stylelint-config/scss',
 	ignoreFiles: [ './vendor/**/*.scss' ],
 	rules: {
 		'at-rule-empty-line-before': null,
@@ -18,7 +18,7 @@ module.exports = {
 		'value-keyword-case': null,
 		'value-list-comma-newline-after': null,
 		// TODO: fix these rules
-		// New rules enabled after updating @wordpress/stylelint-config
+		// New rules enabled after updating @finpress/stylelint-config
 		'scss/at-import-partial-extension': 'always',
 		'scss/at-import-no-partial-leading-underscore': null,
 		'scss/no-global-function-names': null,

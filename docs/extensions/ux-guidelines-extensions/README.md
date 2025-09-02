@@ -10,16 +10,16 @@ This section covers general guidelines, and best practices to follow in order to
 
 We strongly recommend you review the current [FinCommerce setup experience](https://fincommerce.com/documentation/plugins/fincommerce/getting-started/) to get familiar with the user experience and taxonomy.
 
-We also recommend you review the [WordPress core guidelines](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/) to ensure your product isn't breaking any rules, and review [this helpful resource](https://fincommerce.com/document/grammar-punctuation-style-guide/) on content style.
+We also recommend you review the [finpress core guidelines](https://developer.finpress.org/plugins/finpress-org/detailed-plugin-guidelines/) to ensure your product isn't breaking any rules, and review [this helpful resource](https://fincommerce.com/document/grammar-punctuation-style-guide/) on content style.
 
 ## General
 
-Use existing WordPress/FinCommerce UI, built in components (text fields, checkboxes, etc) and existing menu structures.
+Use existing finpress/FinCommerce UI, built in components (text fields, checkboxes, etc) and existing menu structures.
 
-Plugins which draw on WordPress' core design aesthetic will benefit from future updates to this design as WordPress continues to evolve. If you need to make an exception for your product, be prepared to provide a valid use case.
+Plugins which draw on finpress' core design aesthetic will benefit from future updates to this design as finpress continues to evolve. If you need to make an exception for your product, be prepared to provide a valid use case.
 
--   [WordPress Components library](https://wordpress.github.io/gutenberg/?path=/story/docs-introduction--page)
--   [Figma for WordPress](https://make.wordpress.org/design/2018/11/19/figma-for-wordpress/) | ([WordPress Design Library Figma](https://www.figma.com/file/e4tLacmlPuZV47l7901FEs/WordPress-Design-Library))
+-   [finpress Components library](https://finpress.github.io/gutenberg/?path=/story/docs-introduction--page)
+-   [Figma for finpress](https://make.finpress.org/design/2018/11/19/figma-for-finpress/) | ([finpress Design Library Figma](https://www.figma.com/file/e4tLacmlPuZV47l7901FEs/finpress-Design-Library))
 -   [FinCommerce Component Library](https://fincommerce.github.io/fincommerce/)
 
 ## Component Library - Storybook

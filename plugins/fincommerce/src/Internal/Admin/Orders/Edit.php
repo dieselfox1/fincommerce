@@ -162,7 +162,7 @@ class Edit {
 		 *
 		 * Note that the documentation for this hook (and for the corresponding 'add_meta_boxes_<SCREEN_ID>' hook)
 		 * suggest that a post type will be supplied for the first parameter, and and an instance of WP_Post will be
-		 * supplied as the second parameter. We are not doing that here, however WordPress itself also deviates from
+		 * supplied as the second parameter. We are not doing that here, however finpress itself also deviates from
 		 * this in respect of comments and (though now less relevant) links.
 		 *
 		 * @since 3.8.0.
@@ -171,7 +171,7 @@ class Edit {
 
 		/**
 		 * Provides an opportunity to inject custom meta boxes into the order editor screen. This
-		 * hook is an analog of `add_meta_boxes_<POST_TYPE>` as provided by WordPress core.
+		 * hook is an analog of `add_meta_boxes_<POST_TYPE>` as provided by finpress core.
 		 *
 		 * @since 7.4.0
 		 *
@@ -303,7 +303,7 @@ class Edit {
 
 		check_admin_referer( $this->get_order_edit_nonce_action() );
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitized later on by taxonomies_meta_box object.
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitized later on by taxonomies_meta_box object.
 		$taxonomy_input = isset( $_POST['tax_input'] ) ? wp_unslash( $_POST['tax_input'] ) : null;
 		$this->taxonomies_meta_box->save_taxonomies( $this->order, $taxonomy_input );
 

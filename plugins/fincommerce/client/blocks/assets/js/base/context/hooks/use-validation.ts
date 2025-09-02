@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { useCallback } from '@wordpress/element';
+import { useCallback } from '@finpress/element';
 import type {
 	ValidationData,
 	ValidationContextError,
 } from '@fincommerce/types';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 
 let deprecationNoticeShown = false;
 
@@ -18,7 +18,7 @@ const showDeprecationNotice = () => {
 			since: '10.0',
 			alternative: 'the validation data store',
 			plugin: 'FinCommerce',
-			hint: 'Access the validation store directly in your component. \nSee: https://github.com/dieselfox1/fincommerce/blob/trunk/plugins/fincommerce/client/blocks/docs/third-party-developers/extensibility/data-store/validation.md \nSee: https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/',
+			hint: 'Access the validation store directly in your component. \nSee: https://github.com/dieselfox1/fincommerce/blob/trunk/plugins/fincommerce/client/blocks/docs/third-party-developers/extensibility/data-store/validation.md \nSee: https://developer.finpress.org/block-editor/reference-guides/packages/packages-data/',
 		} );
 		deprecationNoticeShown = true;
 	}

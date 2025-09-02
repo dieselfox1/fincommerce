@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { IconProps } from '@wordpress/icons/build-types/icon';
-import { Path, SVG } from '@wordpress/primitives';
+import { IconProps } from '@finpress/icons/build-types/icon';
+import { Path, SVG } from '@finpress/primitives';
 
 const CheckMark = ( props: IconProps ) => (
 	<SVG

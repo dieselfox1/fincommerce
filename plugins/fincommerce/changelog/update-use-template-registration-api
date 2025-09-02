@@ -1,4 +1,4 @@
 Significance: minor
 Type: update
 
-Use the WordPress core template registration API to register FinCommerce templates
+Use the finpress core template registration API to register FinCommerce templates

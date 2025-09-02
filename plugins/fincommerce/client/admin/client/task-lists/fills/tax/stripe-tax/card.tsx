@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getAdminLink } from '@fincommerce/settings';
 import { recordEvent } from '@fincommerce/tracks';
 import { Plugins } from '@fincommerce/components';
-import { dispatch, useDispatch } from '@wordpress/data';
+import { dispatch, useDispatch } from '@finpress/data';
 import { settingsStore } from '@fincommerce/data';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 
 /**
  * Internal dependencies

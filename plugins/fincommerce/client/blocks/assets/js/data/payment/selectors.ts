@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { objectHasProp } from '@fincommerce/types';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 import { getSetting } from '@fincommerce/settings';
 import type { GlobalPaymentMethod } from '@fincommerce/types';
-import { createSelector } from '@wordpress/data';
+import { createSelector } from '@finpress/data';
 
 /**
  * Internal dependencies

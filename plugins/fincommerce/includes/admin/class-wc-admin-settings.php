@@ -697,7 +697,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 						?>
 						<tr class="single_select_page <?php echo esc_attr( $value['row_class'] ); ?>">
 							<th scope="row" class="titledesc">
-								<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?> <?php echo $tooltip_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></label>
+								<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?> <?php echo $tooltip_html; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></label>
 							</th>
 							<td class="forminp forminp-<?php echo esc_attr( sanitize_title( $value['type'] ) ); ?>">
 								<select
@@ -705,7 +705,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 									id="<?php echo esc_attr( $value['id'] ); ?>"
 									style="<?php echo esc_attr( $value['css'] ); ?>"
 									class="<?php echo esc_attr( $value['class'] ); ?>"
-									<?php echo implode( ' ', $custom_attributes ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php echo implode( ' ', $custom_attributes ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 									data-placeholder="<?php esc_attr_e( 'Search for a page&hellip;', 'fincommerce' ); ?>"
 									data-allow_clear="true"
 									data-exclude="<?php echo wc_esc_json( wp_json_encode( $value['args']['exclude'] ) ); ?>"
@@ -713,10 +713,10 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 									<option value=""></option>
 									<?php if ( ! is_null( $page ) ) { ?>
 										<option value="<?php echo esc_attr( $option_value ); ?>" selected="selected">
-										<?php echo wp_strip_all_tags( $option_display_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+										<?php echo wp_strip_all_tags( $option_display_name ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 										</option>
 									<?php } ?>
-								</select> <?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								</select> <?php echo $description; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 							</td>
 						</tr>
 						<?php
@@ -1044,7 +1044,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 			if ( wp_mkdir_p( $downloads_path ) && ! file_exists( $file_path ) ) {
 				$create = true;
 			} else {
-				$current_content = @file_get_contents( $file_path ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+				$current_content = @file_get_contents( $file_path ); // phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 
 				if ( $current_content !== $file_content ) {
 					unlink( $file_path );
@@ -1053,10 +1053,10 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 			}
 
 			if ( $create ) {
-				$file_handle = @fopen( $file_path, 'wb' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fopen
+				$file_handle = @fopen( $file_path, 'wb' ); // phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_system_read_fopen
 				if ( $file_handle ) {
-					fwrite( $file_handle, $file_content ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
-					fclose( $file_handle ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose
+					fwrite( $file_handle, $file_content ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
+					fclose( $file_handle ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fclose
 				}
 			}
 		}

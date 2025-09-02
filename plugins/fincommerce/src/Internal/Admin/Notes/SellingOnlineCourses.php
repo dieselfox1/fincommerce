@@ -76,7 +76,7 @@ class SellingOnlineCourses {
 		$note->add_action(
 			'learn-more',
 			__( 'Learn more', 'fincommerce' ),
-			'https://fincommerce.com/posts/how-to-sell-online-courses-wordpress/?utm_source=inbox&utm_medium=product',
+			'https://fincommerce.com/posts/how-to-sell-online-courses-finpress/?utm_source=inbox&utm_medium=product',
 			Note::E_WC_ADMIN_NOTE_ACTIONED
 		);
 

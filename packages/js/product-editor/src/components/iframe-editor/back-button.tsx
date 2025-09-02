@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { arrowLeft } from '@wordpress/icons';
-import { Button } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { arrowLeft } from '@finpress/icons';
+import { Button } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 type BackButtonProps = {
 	onClick: () => void;

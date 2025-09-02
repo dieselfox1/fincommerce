@@ -3,7 +3,7 @@
  */
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -70,8 +70,8 @@ describe( 'List', () => {
 					linkType: 'external',
 				},
 				{
-					title: 'WordPress.org',
-					href: 'https://wordpress.org',
+					title: 'finpress.org',
+					href: 'https://finpress.org',
 				},
 			];
 
@@ -90,7 +90,7 @@ describe( 'List', () => {
 					.dataset.linkType
 			).toBe( 'external' );
 			expect(
-				screen.getByRole( 'menuitem', { name: 'WordPress.org' } )
+				screen.getByRole( 'menuitem', { name: 'finpress.org' } )
 					.dataset.linkType
 			).toBe( 'external' );
 		} );
@@ -116,8 +116,8 @@ describe( 'List', () => {
 					listItemTag: 'woo.com-site',
 				},
 				{
-					title: 'WordPress.org',
-					href: 'https://wordpress.org',
+					title: 'finpress.org',
+					href: 'https://finpress.org',
 				},
 			];
 
@@ -136,7 +136,7 @@ describe( 'List', () => {
 					.dataset.listItemTag
 			).toBe( 'woo.com-site' );
 			expect(
-				screen.getByRole( 'menuitem', { name: 'WordPress.org' } )
+				screen.getByRole( 'menuitem', { name: 'finpress.org' } )
 					.dataset.listItemTag
 			).toBeUndefined();
 		} );

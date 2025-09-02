@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
+import { __ } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
-	// @ts-expect-error Type for PluginDocumentSettingPanel is missing in @types/wordpress__editor
+	// @ts-expect-error Type for PluginDocumentSettingPanel is missing in @types/finpress__editor
 	PluginDocumentSettingPanel,
 	ErrorBoundary,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -49,7 +49,7 @@ export function TemplateSettingsPanel() {
 			className="fincommerce-email-editor__settings-panel"
 		>
 			{ templateSections.map( ( section ) => (
-				// @ts-expect-error Type for ErrorBoundary is outdated in @types/wordpress__editor
+				// @ts-expect-error Type for ErrorBoundary is outdated in @types/finpress__editor
 				<ErrorBoundary key={ `error-boundary-${ section.id }` }>
 					<div key={ section.id }>{ section.render() }</div>
 				</ErrorBoundary>

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
-import { _n, sprintf } from '@wordpress/i18n';
+import { useBlockProps } from '@finpress/block-editor';
+import { _n, sprintf } from '@finpress/i18n';
 import { useStoreCart } from '@fincommerce/base-context';
 
 export const Edit = (): JSX.Element => {

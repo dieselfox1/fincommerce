@@ -2,13 +2,13 @@
  * External dependencies
  */
 import { optionsStore } from '@fincommerce/data';
-import apiFetch from '@wordpress/api-fetch';
-import { dispatch, resolveSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+import apiFetch from '@finpress/api-fetch';
+import { dispatch, resolveSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 import { Sender } from 'xstate';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { mergeBaseAndUserConfigs } from '@wordpress/edit-site/build-module/components/global-styles/global-styles-provider';
+import { mergeBaseAndUserConfigs } from '@finpress/edit-site/build-module/components/global-styles/global-styles-provider';
 
 /**
  * Internal dependencies

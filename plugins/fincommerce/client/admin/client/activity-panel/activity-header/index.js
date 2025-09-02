@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import PropTypes from 'prop-types';
 import { Text } from '@fincommerce/experimental';
 import { EllipsisMenu } from '@fincommerce/components';

@@ -773,7 +773,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Set product created date.
 	 *
 	 * @since 3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_created( $date = null ) {
 		$this->set_date_prop( 'date_created', $date );
@@ -783,7 +783,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Set product modified date.
 	 *
 	 * @since 3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_modified( $date = null ) {
 		$this->set_date_prop( 'date_modified', $date );
@@ -927,7 +927,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Set date on sale from.
 	 *
 	 * @since 3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_on_sale_from( $date = null ) {
 		$this->set_date_prop( 'date_on_sale_from', $date );
@@ -937,7 +937,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Set date on sale to.
 	 *
 	 * @since 3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_on_sale_to( $date = null ) {
 		$this->set_date_prop( 'date_on_sale_to', $date );
@@ -2269,8 +2269,8 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 				$price = $this->get_price();
 			}
 			$replacements = array(
-				'{price_including_tax}' => wc_price( wc_get_price_including_tax( $this, array( 'qty' => $qty, 'price' => $price ) ) ), // @phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.ArrayItemNoNewLine, WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
-				'{price_excluding_tax}' => wc_price( wc_get_price_excluding_tax( $this, array( 'qty' => $qty, 'price' => $price ) ) ), // @phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+				'{price_including_tax}' => wc_price( wc_get_price_including_tax( $this, array( 'qty' => $qty, 'price' => $price ) ) ), // @phpcs:ignore finpress.Arrays.ArrayDeclarationSpacing.ArrayItemNoNewLine, finpress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+				'{price_excluding_tax}' => wc_price( wc_get_price_excluding_tax( $this, array( 'qty' => $qty, 'price' => $price ) ) ), // @phpcs:ignore finpress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
 			);
 			$html         = str_replace( array_keys( $replacements ), array_values( $replacements ), ' <small class="fincommerce-price-suffix">' . wp_kses_post( $suffix ) . '</small>' );
 		}

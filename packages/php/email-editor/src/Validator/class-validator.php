@@ -42,7 +42,7 @@ class Validator {
 	public function validate_schema_array( array $schema, $value, string $param_name = 'value' ) {
 		$result = $this->validate_and_sanitize_value_from_schema( $value, $schema, $param_name );
 		if ( $result instanceof WP_Error ) {
-			throw Validation_Exception::create_from_wp_error( $result ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw Validation_Exception::create_from_wp_error( $result ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 		return $result;
 	}

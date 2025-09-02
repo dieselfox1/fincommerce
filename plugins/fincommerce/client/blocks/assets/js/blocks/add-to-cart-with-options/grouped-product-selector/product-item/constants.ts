@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { TemplateArray } from '@wordpress/blocks';
+import type { TemplateArray } from '@finpress/blocks';
 
 /**
  * Template definition for Grouped Product Item Template in the Add to Cart form.

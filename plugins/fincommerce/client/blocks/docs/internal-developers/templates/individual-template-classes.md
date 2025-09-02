@@ -12,7 +12,7 @@ These classes have several purposes:
 
 ## render_block_template()
 
-This method is applied to the filter `template_redirect` and executed before WordPress determines which template to load.
+This method is applied to the filter `template_redirect` and executed before finpress determines which template to load.
 
 This allows us to hook into FinCommerce core through the filter `fincommerce_has_block_template` where we can determine if the block template should be loaded.
 

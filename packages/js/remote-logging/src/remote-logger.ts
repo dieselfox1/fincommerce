@@ -4,7 +4,7 @@
 import debugFactory from 'debug';
 import { getSetting } from '@fincommerce/settings';
 import TraceKit from 'tracekit';
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 import { bumpStat } from '@fincommerce/tracks';
 
 /**
@@ -207,7 +207,7 @@ export class RemoteLogger {
 			 */
 			const endpoint = applyFilters(
 				REMOTE_LOGGING_LOG_ENDPOINT_FILTER,
-				'https://public-api.wordpress.com/rest/v1.1/logstash'
+				'https://public-api.finpress.com/rest/v1.1/logstash'
 			) as string;
 
 			const response = await window.fetch( endpoint, {
@@ -299,7 +299,7 @@ export class RemoteLogger {
 			 */
 			const endpoint = applyFilters(
 				REMOTE_LOGGING_JS_ERROR_ENDPOINT_FILTER,
-				'https://public-api.wordpress.com/rest/v1.1/js-error'
+				'https://public-api.finpress.com/rest/v1.1/js-error'
 			) as string;
 
 			debug( 'Sending error to API:', error );

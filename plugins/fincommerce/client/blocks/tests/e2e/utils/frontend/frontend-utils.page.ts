@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Page, Locator, Request, Response } from '@playwright/test';
-import { RequestUtils } from '@wordpress/e2e-test-utils-playwright';
+import { RequestUtils } from '@finpress/e2e-test-utils-playwright';
 
 const wait = ( time: number ) =>
 	new Promise( ( resolve ) => setTimeout( resolve, time ) );
@@ -21,7 +21,7 @@ async function waitForFunction(
 	interval = 100
 ) {
 	// Lint is too grabby in this case, this usage is fine
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const startTime = performance.now();
 	do {
 		if ( predicateFunction() ) {

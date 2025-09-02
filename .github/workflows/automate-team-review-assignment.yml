@@ -110,7 +110,7 @@ jobs:
           id: get_team_name
           run: |
               # Retrieves the name of all teams asked for review and stores them in a comma-separated list
-              teams=$(echo '${{ toJson(github.event.pull_request.requested_teams[*].slug) }}' | jq -r 'map("@woocommerce/\(.)") | join(" ")')
+              teams=$(echo '${{ toJson(github.event.pull_request.requested_teams[*].slug) }}' | jq -r 'map("@fincommerce/\(.)") | join(" ")')
               echo "TEAMS=$teams" >> $GITHUB_ENV
 
         - name: Find the comment by github-actions[bot] asking for reviewing the testing instructions
@@ -130,7 +130,7 @@ jobs:
                   ## Testing Guidelines
                   Hi ${{ env.REVIEWERS }} ${{ env.TEAMS }},
 
-                  Apart from reviewing the code changes, please make sure to **review the testing instructions** ([Guide](https://github.com/woocommerce/woocommerce/wiki/Writing-high-quality-testing-instructions)) and verify that relevant tests (E2E, Unit, Integration, etc.) have been added or updated as needed.
+                  Apart from reviewing the code changes, please make sure to **review the testing instructions** ([Guide](https://github.com/fincommerce/fincommerce/wiki/Writing-high-quality-testing-instructions)) and verify that relevant tests (E2E, Unit, Integration, etc.) have been added or updated as needed.
 
                   **Reminder:** PR reviewers are required to document testing performed. This includes:
                   - 🖼️ **Screenshots or screen recordings**.

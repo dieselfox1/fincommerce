@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Button, CheckboxControl, SelectControl } from '@wordpress/components';
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { Button, CheckboxControl, SelectControl } from '@finpress/components';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import { withDispatch } from '@wordpress/data';
+import { withDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

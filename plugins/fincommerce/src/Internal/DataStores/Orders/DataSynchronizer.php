@@ -548,7 +548,7 @@ class DataSynchronizer implements BatchProcessorInterface {
 			return 0;
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare,WordPress.DB.PreparedSQL.NotPrepared --
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared,finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare,finpress.DB.PreparedSQL.NotPrepared --
 		// -- $order_post_type_placeholder, $orders_table, self::PLACEHOLDER_ORDER_POST_TYPE are all safe to use in queries.
 		if ( ! $this->get_table_exists() ) {
 			$count = $wpdb->get_var(
@@ -605,7 +605,7 @@ SELECT(
 		);
 		// phpcs:enable
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$pending_count = (int) $wpdb->get_var( $sql );
 
 		$deleted_from_table = $this->get_current_deletion_record_meta_value();
@@ -668,7 +668,7 @@ SELECT(
 		$order_post_types             = wc_get_order_types( 'cot-migration' );
 		$order_post_type_placeholders = implode( ', ', array_fill( 0, count( $order_post_types ), '%s' ) );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare,WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared,finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare,finpress.DB.PreparedSQL.NotPrepared
 		switch ( $type ) {
 			case self::ID_TYPE_MISSING_IN_ORDERS_TABLE:
 				$sql = $wpdb->prepare(
@@ -719,7 +719,7 @@ ORDER BY orders.id ASC
 		}
 		// phpcs:enable
 
-		// phpcs:ignore WordPress.DB
+		// phpcs:ignore finpress.DB
 		return array_map( 'intval', $wpdb->get_col( $sql . " LIMIT $limit" ) );
 	}
 
@@ -736,13 +736,13 @@ ORDER BY orders.id ASC
 		$deleted_from_table = $this->get_current_deletion_record_meta_value();
 
 		$order_ids = $wpdb->get_col(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->prepare(
 				"SELECT DISTINCT(order_id) FROM {$wpdb->prefix}wc_orders_meta WHERE meta_key=%s AND meta_value=%s LIMIT {$limit}",
 				self::DELETED_RECORD_META_KEY,
 				$deleted_from_table
 			)
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		);
 
 		return array_map( 'absint', $order_ids );
@@ -820,7 +820,7 @@ ORDER BY orders.id ASC
 		$deleted_order_ids  = array();
 		$meta_ids_to_delete = array();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$deletion_data = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT id, order_id FROM {$wpdb->prefix}wc_orders_meta WHERE meta_key=%s AND meta_value=%s AND order_id IN $order_ids_as_sql_list ORDER BY order_id DESC",
@@ -829,7 +829,7 @@ ORDER BY orders.id ASC
 			),
 			ARRAY_A
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		if ( empty( $deletion_data ) ) {
 			return array();
@@ -874,7 +874,7 @@ ORDER BY orders.id ASC
 
 		if ( ! empty( $meta_ids_to_delete ) ) {
 			$order_id_rows_as_sql_list = '(' . implode( ',', $meta_ids_to_delete ) . ')';
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->query( "DELETE FROM {$wpdb->prefix}wc_orders_meta WHERE id IN {$order_id_rows_as_sql_list}" );
 		}
 
@@ -1013,7 +1013,7 @@ ORDER BY orders.id ASC
 			return;
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.SlowDBQuery
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.SlowDBQuery
 		if ( $wpdb->get_var(
 			$wpdb->prepare(
 				"SELECT EXISTS (SELECT id FROM {$this->data_store::get_orders_table_name()} WHERE ID=%d)
@@ -1034,7 +1034,7 @@ ORDER BY orders.id ASC
 				)
 			);
 		}
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.SlowDBQuery
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.SlowDBQuery
 	}
 
 	/**
@@ -1094,7 +1094,7 @@ ORDER BY orders.id ASC
 	}
 
 	/**
-	 * Handles deletion of trashed orders after `EMPTY_TRASH_DAYS` as defined by WordPress.
+	 * Handles deletion of trashed orders after `EMPTY_TRASH_DAYS` as defined by finpress.
 	 *
 	 * @since 8.5.0
 	 *

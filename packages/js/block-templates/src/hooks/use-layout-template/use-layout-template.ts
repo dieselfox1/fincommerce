@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { useEntityRecord, store as coreDataStore } from '@wordpress/core-data';
-import { dispatch, select } from '@wordpress/data';
+import { useEffect, useState } from '@finpress/element';
+import { useEntityRecord, store as coreDataStore } from '@finpress/core-data';
+import { dispatch, select } from '@finpress/data';
 
 export const useLayoutTemplate = ( layoutTemplateId: string | null ) => {
 	const [ isEntityRegistered, setIsEntityRegistered ] = useState( false );
@@ -41,7 +41,7 @@ export const useLayoutTemplate = ( layoutTemplateId: string | null ) => {
 		// Only perform the query if the layout template entity is registered and we have a layout template ID; otherwise, just return null.
 		// Note: Until we are using @fincommerce/core-data 6.24.0 (Gutenberg 17.2),
 		// the REST API requests will still be triggered even when the query is disabled due to a regression.
-		// See: https://github.com/WordPress/gutenberg/pull/56108
+		// See: https://github.com/finpress/gutenberg/pull/56108
 		{ enabled: isEntityRegistered && !! layoutTemplateId }
 	);
 

@@ -6,7 +6,7 @@
  * https://github.com/Automattic/jetpack/blob/master/tools/check-changelogger-use.php
  */
 
-// phpcs:disable WordPress.WP.AlternativeFunctions, WordPress.PHP.DiscouragedPHPFunctions, WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.GlobalVariablesOverride
+// phpcs:disable finpress.WP.AlternativeFunctions, finpress.PHP.DiscouragedPHPFunctions, finpress.Security.EscapeOutput.OutputNotEscaped, finpress.WP.GlobalVariablesOverride
 
 /**
  * Display usage information and exit.
@@ -148,7 +148,7 @@ fclose( $pipes[0] );
 
 $ok_projects      = array();
 $touched_projects = array();
-// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 while ( ( $line = fgets( $pipes[1] ) ) ) {
 	$line  = trim( $line );
 

@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { useCallback, useMemo, useRef } from '@wordpress/element';
-import { useSelect, useDispatch, select } from '@wordpress/data';
-import { BlockInstance, cloneBlock } from '@wordpress/blocks';
-import { store as coreStore } from '@wordpress/core-data';
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { useCallback, useMemo, useRef } from '@finpress/element';
+import { useSelect, useDispatch, select } from '@finpress/data';
+import { BlockInstance, cloneBlock } from '@finpress/blocks';
+import { store as coreStore } from '@finpress/core-data';
+import { store as blockEditorStore } from '@finpress/block-editor';
 
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies

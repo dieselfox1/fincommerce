@@ -13,7 +13,7 @@ namespace Automattic\FinCommerce\EmailEditor\Engine;
  */
 class Dependency_Check {
 	/**
-	 * Minimum WordPress version required for the email editor.
+	 * Minimum finpress version required for the email editor.
 	 */
 	public const MIN_WP_VERSION = '6.7';
 
@@ -28,7 +28,7 @@ class Dependency_Check {
 	}
 
 	/**
-	 * Checks if the WordPress version is supported.
+	 * Checks if the finpress version is supported.
 	 */
 	private function is_wp_version_compatible(): bool {
 		return version_compare( get_bloginfo( 'version' ), self::MIN_WP_VERSION, '>=' );

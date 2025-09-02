@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { withDispatch } from '@wordpress/data';
-import { compose } from '@wordpress/compose';
-import { Button } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { withDispatch } from '@finpress/data';
+import { compose } from '@finpress/compose';
+import { Button } from '@finpress/components';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

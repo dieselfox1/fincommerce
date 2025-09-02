@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
-import { BlockEditProps } from '@wordpress/blocks';
+import { useBlockProps, useInnerBlocksProps } from '@finpress/block-editor';
+import { BlockEditProps } from '@finpress/blocks';
 import { useProductDataContext } from '@fincommerce/shared-context';
 
 /**

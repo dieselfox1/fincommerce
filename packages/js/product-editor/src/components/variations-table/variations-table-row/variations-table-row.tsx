@@ -11,15 +11,15 @@ import {
 	CheckboxControl,
 	Dropdown,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	createElement,
 	Fragment,
 	useContext,
 	useMemo,
-} from '@wordpress/element';
-import { plus, info, Icon } from '@wordpress/icons';
-import { __, sprintf } from '@wordpress/i18n';
+} from '@finpress/element';
+import { plus, info, Icon } from '@finpress/icons';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 
 /**

@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { decodeEntities } from '@wordpress/html-entities';
-import { Card, CardHeader, CardFooter, Button } from '@wordpress/components';
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useSelect, useDispatch } from '@finpress/data';
+import { decodeEntities } from '@finpress/html-entities';
+import { Card, CardHeader, CardFooter, Button } from '@finpress/components';
+import { useEffect, useRef, useState } from '@finpress/element';
 import { EllipsisMenu, List, Pill } from '@fincommerce/components';
 import { Text } from '@fincommerce/experimental';
 import {

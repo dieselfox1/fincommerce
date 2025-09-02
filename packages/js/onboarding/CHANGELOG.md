@@ -39,7 +39,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Replace use of interpolateComponents with createInterpolateElement. [#38536]
 -   Minor - Fix lint issues [#38536]
 -   Minor - Moved geolocation country matching functions to @fincommerce/onboarding [#38536]
--   Minor - Sync @wordpress package versions via syncpack. [#38536]
+-   Minor - Sync @finpress package versions via syncpack. [#38536]
 -   Minor - Update pnpm to version 8. [#38536]
 -   Patch - Update webpack config to use @fincommerce/internal-style-build's parser config [#38536]
 -   Patch - Fix a word case typo. [#38536]

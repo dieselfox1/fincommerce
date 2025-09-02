@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { use, select } from '@wordpress/data';
-import { store as preferencesStore } from '@wordpress/preferences';
-import { store as editorStore } from '@wordpress/editor';
-import { __ } from '@wordpress/i18n';
+import { use, select } from '@finpress/data';
+import { store as preferencesStore } from '@finpress/preferences';
+import { store as editorStore } from '@finpress/editor';
+import { __ } from '@finpress/i18n';
 /**
  * Internal dependencies
  */
@@ -77,7 +77,7 @@ const trackSetRenderingMode = ( renderingMode: string ) => {
 		return;
 	}
 	const isPreviewDropdownOpened = !! document.querySelector(
-		// eslint-disable-next-line @wordpress/i18n-text-domain
+		// eslint-disable-next-line @finpress/i18n-text-domain
 		`[aria-label="${ __( 'View options' ) }"]`
 	);
 	// We want to track the event only from the dropdown.

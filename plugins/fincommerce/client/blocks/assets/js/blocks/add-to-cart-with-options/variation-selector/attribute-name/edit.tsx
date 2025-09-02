@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { type BlockEditProps } from '@wordpress/blocks';
+import { type BlockEditProps } from '@finpress/blocks';
 import {
 	useBlockProps,
 	__experimentalUseColorProps as useColorProps,
 	getTypographyClassesAndStyles as useTypographyProps,
 	__experimentalGetSpacingClassesAndStyles as useSpacingProps,
 	useSettings,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { useCustomDataContext } from '@fincommerce/shared-context';
 import type { ProductResponseAttributeItem } from '@fincommerce/types';
 import clsx from 'clsx';

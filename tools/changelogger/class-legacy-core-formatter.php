@@ -46,7 +46,7 @@ class Legacy_Core_Formatter extends Formatter implements FormatterPlugin {
 	private function getSubheadingTypeMapping() {
 		$fincommerce_path = dirname( dirname( __DIR__ ) ) . '/plugins/fincommerce';
 		$composer_file    = $fincommerce_path . '/composer.json';
-		// phpcs:disable WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:disable finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$composer_config = json_decode( file_get_contents( $composer_file ), true );
 		return array_flip( $composer_config['extra']['changelogger']['types'] );
 	}

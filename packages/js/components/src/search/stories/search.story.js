@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { H, Search, Section } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const SearchExample = () => {
 	const [ selected, setSelected ] = useState( [] );

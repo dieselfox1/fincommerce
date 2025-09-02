@@ -5,7 +5,7 @@
 
 namespace Automattic\FinCommerce\Internal\Font;
 
-// IMPORTANT: We have to switch to the WordPress API to create the FontFace post type when they will be implemented: https://github.com/WordPress/gutenberg/issues/58670!
+// IMPORTANT: We have to switch to the finpress API to create the FontFace post type when they will be implemented: https://github.com/finpress/gutenberg/issues/58670!
 
 /**
  * Helper class for font face related functionality.
@@ -41,7 +41,7 @@ class FontFace {
 	/**
 	 * Sanitizes a single src value for a font face.
 	 *
-	 * Copied from Gutenberg: https://github.com/WordPress/gutenberg/blob/8d94c3bd7af977d998466b56bd773f9b19de8d03/lib/compat/wordpress-6.5/fonts/class-wp-rest-font-faces-controller.php/#L837-L840
+	 * Copied from Gutenberg: https://github.com/finpress/gutenberg/blob/8d94c3bd7af977d998466b56bd773f9b19de8d03/lib/compat/finpress-6.5/fonts/class-wp-rest-font-faces-controller.php/#L837-L840
 	 *
 	 * @param string $value Font face src that is a URL or the key for a $_FILES array item.
 	 *
@@ -55,7 +55,7 @@ class FontFace {
 	/**
 	 * Handles file upload error.
 	 *
-	 * Copied from Gutenberg: https://github.com/WordPress/gutenberg/blob/b283c47dba96d74dd7589a823d8ab84c9e5a4765/lib/compat/wordpress-6.5/fonts/class-wp-rest-font-faces-controller.php/#L859-L883
+	 * Copied from Gutenberg: https://github.com/finpress/gutenberg/blob/b283c47dba96d74dd7589a823d8ab84c9e5a4765/lib/compat/finpress-6.5/fonts/class-wp-rest-font-faces-controller.php/#L859-L883
 	 *
 	 * @param array  $file    File upload data.
 	 * @param string $message Error message from wp_handle_upload().
@@ -76,7 +76,7 @@ class FontFace {
 	/**
 	 * Handles the upload of a font file using wp_handle_upload().
 	 *
-	 * Copied from Gutenberg: https://github.com/WordPress/gutenberg/blob/f4889bf58ddeb8470c8d2a765f1b57229c515eda/lib/compat/wordpress-6.5/fonts/class-wp-rest-font-faces-controller.php/#L859-L896
+	 * Copied from Gutenberg: https://github.com/finpress/gutenberg/blob/f4889bf58ddeb8470c8d2a765f1b57229c515eda/lib/compat/finpress-6.5/fonts/class-wp-rest-font-faces-controller.php/#L859-L896
 	 *
 	 * @param array $file Single file item from $_FILES.
 	 * @return array Array containing uploaded file attributes on success, or error on failure.

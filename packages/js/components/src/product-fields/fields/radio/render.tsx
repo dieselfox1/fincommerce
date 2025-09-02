@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { RadioControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { RadioControl } from '@finpress/components';
 
 /**
  * Internal dependencies

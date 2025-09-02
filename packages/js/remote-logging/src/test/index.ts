@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import '@wordpress/jest-console';
-import { addFilter, removeFilter } from '@wordpress/hooks';
+import '@finpress/jest-console';
+import { addFilter, removeFilter } from '@finpress/hooks';
 /**
  * Internal dependencies
  */
@@ -71,7 +71,7 @@ describe( 'RemoteLogger', () => {
 		it( 'should send a log message to the API', async () => {
 			await logger.log( 'info', 'Test message' );
 			expect( fetchMock ).toHaveBeenCalledWith(
-				'https://public-api.wordpress.com/rest/v1.1/logstash',
+				'https://public-api.finpress.com/rest/v1.1/logstash',
 				expect.objectContaining( {
 					method: 'POST',
 					body: expect.any( FormData ),
@@ -112,7 +112,7 @@ describe( 'RemoteLogger', () => {
 			await logger.error( error );
 
 			expect( fetchMock ).toHaveBeenCalledWith(
-				'https://public-api.wordpress.com/rest/v1.1/js-error',
+				'https://public-api.finpress.com/rest/v1.1/js-error',
 				expect.objectContaining( {
 					method: 'POST',
 					body: expect.any( FormData ),
@@ -137,7 +137,7 @@ describe( 'RemoteLogger', () => {
 			await logger.error( error, extraData );
 
 			expect( fetchMock ).toHaveBeenCalledWith(
-				'https://public-api.wordpress.com/rest/v1.1/js-error',
+				'https://public-api.finpress.com/rest/v1.1/js-error',
 				expect.objectContaining( {
 					method: 'POST',
 					body: expect.any( FormData ),
@@ -164,7 +164,7 @@ describe( 'RemoteLogger', () => {
 			const error = new Error( 'Test error' );
 			await ( logger as any ).handleError( error );
 			expect( fetchMock ).toHaveBeenCalledWith(
-				'https://public-api.wordpress.com/rest/v1.1/js-error',
+				'https://public-api.finpress.com/rest/v1.1/js-error',
 				expect.objectContaining( {
 					method: 'POST',
 					body: expect.any( FormData ),

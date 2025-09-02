@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { compose } from '@wordpress/compose';
-import { withSelect, type select as WCDataSelector } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
+import { compose } from '@finpress/compose';
+import { withSelect, type select as WCDataSelector } from '@finpress/data';
+import { useEffect } from '@finpress/element';
 import { onboardingStore, withOnboardingHydration } from '@fincommerce/data';
 import { getHistory, getNewPath, useQuery } from '@fincommerce/navigation';
 

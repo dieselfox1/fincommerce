@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { PlainText, useBlockProps } from '@wordpress/block-editor';
+import { PlainText, useBlockProps } from '@finpress/block-editor';
 import clsx from 'clsx';
 
 /**

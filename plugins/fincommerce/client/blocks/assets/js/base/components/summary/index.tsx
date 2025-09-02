@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { RawHTML, useMemo } from '@wordpress/element';
+import { RawHTML, useMemo } from '@finpress/element';
 import { WordCountType } from '@fincommerce/block-settings';
 import { sanitizeHTML } from '@fincommerce/utils';
 import type { CSSProperties } from 'react';

@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { createElement, memo, forwardRef } from '@wordpress/element';
+import { createElement, memo, forwardRef } from '@finpress/element';
 import clsx from 'clsx';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { store as coreStore } from '@wordpress/core-data';
-import { decodeEntities } from '@wordpress/html-entities';
-import { filterURLForDisplay } from '@wordpress/url';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { store as coreStore } from '@finpress/core-data';
+import { decodeEntities } from '@finpress/html-entities';
+import { filterURLForDisplay } from '@finpress/url';
 import {
 	Button,
 	__experimentalHStack as HStack,
 	VisuallyHidden,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

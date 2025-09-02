@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Icon, customPostType } from '@wordpress/icons';
-import { registerBlockType } from '@wordpress/blocks';
+import { Icon, customPostType } from '@finpress/icons';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies

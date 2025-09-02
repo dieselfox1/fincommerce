@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import apiFetch from '@wordpress/api-fetch';
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import apiFetch from '@finpress/api-fetch';
+import { useEffect, useRef, useState } from '@finpress/element';
 import { debounce } from 'lodash';
 
 /**

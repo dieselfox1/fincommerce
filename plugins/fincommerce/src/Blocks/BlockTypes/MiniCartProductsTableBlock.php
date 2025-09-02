@@ -86,7 +86,7 @@ class MiniCartProductsTableBlock extends AbstractInnerBlock {
 
 		ob_start();
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<table class="wc-block-cart-items wc-block-mini-cart-items" tabindex="-1">
 				<caption class="screen-reader-text">
 					<h2>
@@ -163,7 +163,7 @@ class MiniCartProductsTableBlock extends AbstractInnerBlock {
 										data-wp-bind--hidden="!state.cartItemHasDiscount" 
 										class="wc-block-components-product-badge wc-block-components-sale-badge"
 									>
-										<?php echo $save_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+										<?php echo $save_label; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 										<span
 											data-wp-text="state.cartItemDiscount" 
 											class="wc-block-formatted-money-amount wc-block-components-formatted-money-amount"
@@ -229,7 +229,7 @@ class MiniCartProductsTableBlock extends AbstractInnerBlock {
 										data-wp-bind--hidden="!state.isLineItemTotalDiscountVisible" 
 										class="wc-block-components-product-badge wc-block-components-sale-badge"
 									>
-										<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+										<?php // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 										<?php echo $save_label; ?>
 										<span
 											data-wp-text="state.lineItemDiscount" 

@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	useBlockProps,
 	Warning,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/block-editor';
+import { useSelect } from '@finpress/data';
 
 interface QueryLoopProductContextValidation {
 	hasInvalidContext: boolean;

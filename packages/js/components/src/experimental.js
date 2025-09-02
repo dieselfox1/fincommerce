@@ -4,7 +4,7 @@
 import {
 	__experimentalText,
 	Text as TextComponent,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Export experimental components within the components package to prevent a circular

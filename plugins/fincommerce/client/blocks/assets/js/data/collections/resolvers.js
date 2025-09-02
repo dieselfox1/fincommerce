@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { controls } from '@wordpress/data';
-import { addQueryArgs } from '@wordpress/url';
+import { controls } from '@finpress/data';
+import { addQueryArgs } from '@finpress/url';
 
 /**
  * Internal dependencies

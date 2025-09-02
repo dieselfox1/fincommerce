@@ -41,7 +41,7 @@ class WC_Test_Taxonomies extends WC_Unit_Test_Case {
 				'Beta Category',
 			),
 			$terms,
-			print_r( $terms, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $terms, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 
 		// Explicit menu_order sort, backwards.
@@ -66,7 +66,7 @@ class WC_Test_Taxonomies extends WC_Unit_Test_Case {
 				'Alpha Category',
 			),
 			$terms,
-			print_r( $terms, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $terms, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 
 		// Force sort by name.
@@ -90,7 +90,7 @@ class WC_Test_Taxonomies extends WC_Unit_Test_Case {
 				'Zulu Category',
 			),
 			$terms,
-			print_r( $terms, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $terms, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 
 		// Force sort by ID.
@@ -114,7 +114,7 @@ class WC_Test_Taxonomies extends WC_Unit_Test_Case {
 				'Beta Category',
 			),
 			$terms,
-			print_r( $terms, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $terms, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 	}
 
@@ -162,7 +162,7 @@ class WC_Test_Taxonomies extends WC_Unit_Test_Case {
 				'9',
 			),
 			$terms,
-			print_r( $terms, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $terms, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 
 		// by numeric name.
@@ -193,7 +193,7 @@ class WC_Test_Taxonomies extends WC_Unit_Test_Case {
 				'10',
 			),
 			$terms,
-			print_r( $terms, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $terms, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 	}
 }

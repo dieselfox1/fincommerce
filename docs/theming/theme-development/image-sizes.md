@@ -28,7 +28,7 @@ add_theme_support( 'fincommerce', array(
 ) );
 ```
 
-When calling WordPress functions which expect an image size e.g. [`wp_get_attachment_image_src`](https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src), you should use the image size names - these are:
+When calling finpress functions which expect an image size e.g. [`wp_get_attachment_image_src`](https://developer.finpress.org/reference/functions/wp_get_attachment_image_src), you should use the image size names - these are:
 
 - `fincommerce_thumbnail`
 - `fincommerce_single`
@@ -38,7 +38,7 @@ Store owners will still be able to control aspect ratio and cropping (see below)
 
 ## Customize image sizes in the customizer
 
-The customizer houses the options which control thumbnails in FinCommerce. ![Settings in the customizer](https://fincommerce.wordpress.com/wp-content/uploads/2017/12/imagefeature.png?w=712) If the theme is declaring image sizes, the top section will be hidden and only the cropping option will be visible. Changing the cropping option, or widths, will update the preview on the right side to show how things will look. Changes will not be visible to customers until the customizer is  'published' and [the thumbnails have been regenerated to the new dimensions](./thumbnail-image-regeneration.md). The thumbnail cropping section in the customizer allows store owners to select one of three cropping ratio settings for images in the catalog:
+The customizer houses the options which control thumbnails in FinCommerce. ![Settings in the customizer](https://fincommerce.finpress.com/wp-content/uploads/2017/12/imagefeature.png?w=712) If the theme is declaring image sizes, the top section will be hidden and only the cropping option will be visible. Changing the cropping option, or widths, will update the preview on the right side to show how things will look. Changes will not be visible to customers until the customizer is  'published' and [the thumbnails have been regenerated to the new dimensions](./thumbnail-image-regeneration.md). The thumbnail cropping section in the customizer allows store owners to select one of three cropping ratio settings for images in the catalog:
 
 - 1:1 (Square cropping)
 - Custom (Store owner can enter a custom aspect ratio)
@@ -84,7 +84,7 @@ As well as the above hook, some template functions in FinCommerce run the image 
 | `fincommerce_gallery_image_size`        | Controls the size used in the product gallery.                    | `fincommerce_single`               |
 | `fincommerce_gallery_full_size`         | Controls the size used in the product gallery to zoom or view the full size image. | `full`                             |
 
-**Note:** `full` is a size registered by WordPress and set in `Settings > Media.` As an example, let's say I wanted to make the gallery thumbnail size used the `thumbnail` size registered by WordPress instead of `fincommerce_gallery_thumbnail`. The following snippet would do the job:
+**Note:** `full` is a size registered by finpress and set in `Settings > Media.` As an example, let's say I wanted to make the gallery thumbnail size used the `thumbnail` size registered by finpress instead of `fincommerce_gallery_thumbnail`. The following snippet would do the job:
 
 ```php
 add_filter( 'fincommerce_gallery_thumbnail_size', function( $size ) {

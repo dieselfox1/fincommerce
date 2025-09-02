@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { fireEvent, render } from '@testing-library/react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -13,10 +13,10 @@ import TreeSelectControl from '../index';
  * In jsdom, the width and height of all elements are zero,
  * so setting `offsetWidth` to avoid them to be filtered out
  * by `isVisible` in focusable.
- * Ref: https://github.com/WordPress/gutenberg/blob/%40wordpress/dom%403.1.1/packages/dom/src/focusable.js#L42-L48
+ * Ref: https://github.com/finpress/gutenberg/blob/%40finpress/dom%403.1.1/packages/dom/src/focusable.js#L42-L48
  */
-jest.mock( '@wordpress/dom', () => {
-	const { focus } = jest.requireActual( '@wordpress/dom' );
+jest.mock( '@finpress/dom', () => {
+	const { focus } = jest.requireActual( '@finpress/dom' );
 	const descriptor = { configurable: true, get: () => 1 };
 	function find( context ) {
 		context.querySelectorAll( '*' ).forEach( ( element ) => {

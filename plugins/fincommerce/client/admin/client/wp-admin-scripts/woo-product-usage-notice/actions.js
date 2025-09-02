@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { addQueryArgs } from '@wordpress/url';
+import { addQueryArgs } from '@finpress/url';
 import { getSetting } from '@fincommerce/settings';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 const request = ( { action, productId, nonce }, callback ) => {
 	const url = addQueryArgs(

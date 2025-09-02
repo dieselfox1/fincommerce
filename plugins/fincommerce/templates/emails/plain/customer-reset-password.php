@@ -40,7 +40,7 @@ if ( $email_improvements_enabled ) {
 } else {
 	echo esc_html__( 'If you didn\'t make this request, just ignore this email. If you\'d like to proceed:', 'fincommerce' ) . "\n\n";
 }
-echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ) . "\n\n"; // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ) . "\n\n"; // phpcs:ignore finpress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
 
 echo "\n\n----------------------------------------\n\n";
 

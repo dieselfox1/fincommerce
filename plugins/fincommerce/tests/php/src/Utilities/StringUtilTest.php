@@ -69,7 +69,7 @@ class StringUtilTest extends \WC_Unit_Test_Case {
 	 * @testdox 'plugin_name_from_plugin_file' returns the plugin name in the form 'directory/file.php' from the plugin file.
 	 */
 	public function test_plugin_name_from_plugin_file() {
-		$file_path = '/home/someone/wordpress/wp-content/plugins/foobar/fizzbuzz.php';
+		$file_path = '/home/someone/finpress/wp-content/plugins/foobar/fizzbuzz.php';
 		$result    = StringUtil::plugin_name_from_plugin_file( $file_path );
 		$expected  = 'foobar/fizzbuzz.php';
 		$this->assertEquals( $expected, $result );

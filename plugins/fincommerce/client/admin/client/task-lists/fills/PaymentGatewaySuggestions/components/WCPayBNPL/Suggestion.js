@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Card, CardBody, CardHeader } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, Card, CardBody, CardHeader } from '@finpress/components';
 import { recordEvent } from '@fincommerce/tracks';
-import { addQueryArgs } from '@wordpress/url';
+import { addQueryArgs } from '@finpress/url';
 
 /**
  * Internal dependencies

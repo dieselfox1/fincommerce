@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment, useContext } from '@wordpress/element';
+import { createElement, Fragment, useContext } from '@finpress/element';
 import { CurrencyContext } from '@fincommerce/currency';
 import clsx from 'clsx';
 

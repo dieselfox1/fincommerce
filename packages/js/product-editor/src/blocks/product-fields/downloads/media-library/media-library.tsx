@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useMemo } from '@wordpress/element';
+import { useEffect, useMemo } from '@finpress/element';
 
 /**
  * Internal dependencies

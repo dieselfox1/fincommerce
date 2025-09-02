@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Spinner } from '@wordpress/components';
-import { useDebounce } from '@wordpress/compose';
-import { useCallback, useState, createElement } from '@wordpress/element';
+import { Spinner } from '@finpress/components';
+import { useDebounce } from '@finpress/compose';
+import { useCallback, useState, createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store, getElement, getContext } from '@wordpress/interactivity';
+import { store, getElement, getContext } from '@finpress/interactivity';
 
 /**
  * Internal dependencies
@@ -26,7 +26,7 @@ export type ProductCollectionStoreContext = {
 	ariaLabelNext: string;
 };
 
-// @wordpress/i18n is not available on the frontend.
+// @finpress/i18n is not available on the frontend.
 function isRTL(): boolean {
 	return document.documentElement?.dir === 'rtl';
 }
@@ -161,7 +161,7 @@ const productCollectionStore = {
 					?.getAttribute( 'data-wp-router-region' );
 
 				const { actions } = yield import(
-					'@wordpress/interactivity-router'
+					'@finpress/interactivity-router'
 				);
 
 				yield actions.navigate( ref.href );
@@ -189,7 +189,7 @@ const productCollectionStore = {
 
 			if ( isValidLink( ref ) ) {
 				const { actions } = yield import(
-					'@wordpress/interactivity-router'
+					'@finpress/interactivity-router'
 				);
 
 				yield actions.prefetch( ref.href );
@@ -239,7 +239,7 @@ const productCollectionStore = {
 
 			if ( isValidLink( ref ) && context.isPrefetchNextOrPreviousLink ) {
 				const { actions } = yield import(
-					'@wordpress/interactivity-router'
+					'@finpress/interactivity-router'
 				);
 
 				yield actions.prefetch( ref.href );

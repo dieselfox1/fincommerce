@@ -8,7 +8,7 @@ permissions: {}
 jobs:
   prep:
     if: github.event.label.name == 'code freeze exception' || github.event.label.name == 'point release request' || github.event.label.name == 'Approved' || github.event.label.name == 'Rejected'
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       pr_number: ${{ steps.extract-pr.outputs.PR_NUMBER }}
     steps:
@@ -39,7 +39,7 @@ jobs:
 
   verify:
     if: github.event.label.name == 'code freeze exception' || github.event.label.name == 'point release request' || github.event.label.name == 'Approved'
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       release_number: ${{ steps.extract-release.outputs.RELEASE_NUMBER }}
     permissions:
@@ -189,7 +189,7 @@ jobs:
 
   apply-milestone:
     if: github.event.label.name == 'code freeze exception' || github.event.label.name == 'point release request' || github.event.label.name == 'Approved' || github.event.label.name == 'Rejected'
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     permissions:
       issues: write
     needs:
@@ -206,7 +206,7 @@ jobs:
 
   cfe-created:
     if: github.event.label.name == 'code freeze exception' || github.event.label.name == 'point release request'
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs:
       - verify
     permissions:
@@ -227,7 +227,7 @@ jobs:
 
             const slackMessage = `*${labelName === 'code freeze exception' ? ':ice_cube: Code Freeze Exception request' : ':release: Point Release Request'} (${releaseNumber})*: _<${issueUrl}|${issueTitle}>_`;
 
-            const githubComment = `Your request for a ${labelName === 'code freeze exception' ? 'Code Freeze Exception' : 'Point Release'} targeting WC version **${releaseNumber}** has been successfully created and is pending approval from @woocommerce/flux.`;
+            const githubComment = `Your request for a ${labelName === 'code freeze exception' ? 'Code Freeze Exception' : 'Point Release'} targeting WC version **${releaseNumber}** has been successfully created and is pending approval from @fincommerce/flux.`;
 
             // Set the message as a core output
             core.setOutput('SLACK_MESSAGE', slackMessage);
@@ -252,7 +252,7 @@ jobs:
 
   request-approved:
     if: ${{ github.event.label.name == 'Approved' }}
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     permissions:
       pull-requests: write
       issues: write
@@ -331,7 +331,7 @@ jobs:
 
   request-rejected:
     if: ${{ github.event.label.name == 'Rejected' }}
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     permissions:
       issues: write
     steps:

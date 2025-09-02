@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Tooltip } from '@wordpress/components';
-import { Icon, chevronLeft } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Tooltip } from '@finpress/components';
+import { Icon, chevronLeft } from '@finpress/icons';
 import { getHistory, updateQueryString } from '@fincommerce/navigation';
-import { ENTER, SPACE } from '@wordpress/keycodes';
+import { ENTER, SPACE } from '@finpress/keycodes';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

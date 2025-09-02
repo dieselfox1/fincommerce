@@ -45,7 +45,7 @@ The specs use the [rule processor](https://github.com/dieselfox1/fincommerce/tre
 
 ## Payment Gateway Configs
 
-Information concerning the configuration and status of the payment gateway is determined by the payment gateway itself. This allows a single source of truth for this information, but more importantly allows the latest and most accurate settings to be included with the plugin downloaded from WordPress.org.
+Information concerning the configuration and status of the payment gateway is determined by the payment gateway itself. This allows a single source of truth for this information, but more importantly allows the latest and most accurate settings to be included with the plugin downloaded from finpress.org.
 
 Additional information is added to the existing payment gateway in the FinCommerce REST API response. The following public methods can be added to the payment gateway class to pass information to the recommended payment gateways task:
 

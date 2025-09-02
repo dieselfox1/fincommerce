@@ -5,13 +5,13 @@ import {
 	unregisterPlugin,
 	registerPlugin,
 	getPlugins,
-} from '@wordpress/plugins';
+} from '@finpress/plugins';
 import {
 	WooHeaderNavigationItem,
 	WooHeaderPageTitle,
 	WooHeaderItem,
 } from '@fincommerce/admin-layout';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 
 /**
  * Internal dependencies

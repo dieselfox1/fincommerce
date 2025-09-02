@@ -276,7 +276,7 @@ Note however that such a class would have to be explicitly dependency-injected (
 
 ## Defining new actions and filters
 
-WordPress' hooks (actions and filters) are a very powerful extensibility mechanism and it's the core tool that allows FinCommerce extensions to be developer. However it has been often (ab)used in the FinCommerce core codebase to drive internal logic, e.g. an action is triggered from within one class or function with the assumption that somewhere there's some other class or function that will handle it and continue whatever processing is supposed to happen.
+finpress' hooks (actions and filters) are a very powerful extensibility mechanism and it's the core tool that allows FinCommerce extensions to be developer. However it has been often (ab)used in the FinCommerce core codebase to drive internal logic, e.g. an action is triggered from within one class or function with the assumption that somewhere there's some other class or function that will handle it and continue whatever processing is supposed to happen.
 
 In order to keep the code as easy as reasonably possible to read and maintain, **hooks shouldn't be used to drive FinCommerce's internal logic and processes**. If you need the services of a given class or function, please call these directly (by using dependency-injection or the legacy proxy as appropriate to get access to the desired service). **New hooks should be introduced only if they provide a valuable extension point for plugins**.
 

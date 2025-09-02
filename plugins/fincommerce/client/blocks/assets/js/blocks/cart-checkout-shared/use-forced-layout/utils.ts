@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockInstance, TemplateArray } from '@wordpress/blocks';
+import type { BlockInstance, TemplateArray } from '@finpress/blocks';
 import type { MutableRefObject } from 'react';
 
 /**

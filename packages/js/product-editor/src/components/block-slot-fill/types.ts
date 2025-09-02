@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Fill, Slot } from '@wordpress/components';
+import { Fill, Slot } from '@finpress/components';
 
 export type BlockSlotFillProps = {
 	name:

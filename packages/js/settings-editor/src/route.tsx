@@ -8,14 +8,14 @@ import {
 	useState,
 	useRef,
 	useContext,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	addAction,
 	applyFilters,
 	didFilter,
 	removeAction,
-} from '@wordpress/hooks';
+} from '@finpress/hooks';
 import { useLocation } from '@automattic/site-admin';
 
 /**

@@ -80,7 +80,7 @@ if ( null === $fulfillment->get_date_deleted() ) {
 	<table class="td font-family <?php echo esc_attr( $order_table_class ); ?>" cellspacing="0" cellpadding="6" style="width: 100%;" border="1">
 		<tbody>
 			<?php
-			echo wc_get_email_fulfillment_items( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo wc_get_email_fulfillment_items( // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				$order,
 				$fulfillment,
 				array(

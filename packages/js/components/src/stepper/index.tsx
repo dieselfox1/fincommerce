@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import type React from 'react';
 
 /**

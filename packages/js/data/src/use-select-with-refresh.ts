@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEffect, useRef } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { useEffect, useRef } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 
 const useInterval = (
 	callback: ( ...args: unknown[] ) => void,

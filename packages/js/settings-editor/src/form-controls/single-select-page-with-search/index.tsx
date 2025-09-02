@@ -6,16 +6,16 @@ import {
 	Fragment,
 	useCallback,
 	useState,
-} from '@wordpress/element';
-import type { DataFormControlProps } from '@wordpress/dataviews';
+} from '@finpress/element';
+import type { DataFormControlProps } from '@finpress/dataviews';
 import {
 	__experimentalSelectControl as SelectControl,
 	__experimentalSelectControlMenu as Menu,
 	__experimentalSelectControlMenuItem as MenuItem,
 } from '@fincommerce/components';
-import { Spinner, BaseControl, Icon } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { search } from '@wordpress/icons';
+import { Spinner, BaseControl, Icon } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { search } from '@finpress/icons';
 
 /**
  * Internal dependencies

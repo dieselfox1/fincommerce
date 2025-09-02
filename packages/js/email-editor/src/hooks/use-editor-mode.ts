@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+import { useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 
 export function useEditorMode() {
 	const { isEditingTemplate } = useSelect(

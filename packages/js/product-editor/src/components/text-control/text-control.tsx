@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { Ref } from 'react';
-import { createElement, forwardRef } from '@wordpress/element';
+import { createElement, forwardRef } from '@finpress/element';
 import clsx from 'clsx';
-import { __experimentalInputControl as InputControl } from '@wordpress/components';
+import { __experimentalInputControl as InputControl } from '@finpress/components';
 
 /**
  * Internal dependencies

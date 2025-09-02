@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
 import { getSetting } from '@fincommerce/settings';
 import clsx from 'clsx';
 

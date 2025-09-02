@@ -48,7 +48,7 @@ class MiniCartCartButtonBlock extends AbstractInnerBlock {
 		ob_start();
 
 		?>
-		<a <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<a <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div class="wc-block-components-button__text">
 				<?php echo esc_html( $view_cart_text ); ?>
 			</div>

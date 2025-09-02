@@ -311,13 +311,13 @@ class CartItems extends ControllerTestCase {
 		// Simple product.
 		$response = $controller->prepare_item_for_response( current( $cart ), new \WP_REST_Request() );
 		$diff     = $validate->get_diff_from_object( $response->get_data() );
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertEmpty( $diff, print_r( $diff, true ) );
 
 		// Variable product.
 		$response = $controller->prepare_item_for_response( end( $cart ), new \WP_REST_Request() );
 		$diff     = $validate->get_diff_from_object( $response->get_data() );
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertEmpty( $diff, print_r( $diff, true ) );
 	}
 
@@ -348,7 +348,7 @@ class CartItems extends ControllerTestCase {
 
 		$response = $controller->prepare_item_for_response( current( $cart ), new \WP_REST_Request() );
 		$image    = $response->get_data()['images'][0];
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertEquals( $image->src, 'https://example.com/image-1.jpg' );
 		$this->assertEquals( $image->thumbnail, 'https://example.com/image-1-thumbnail.jpg' );
 		remove_all_filters( 'fincommerce_store_api_cart_item_images' );
@@ -419,7 +419,7 @@ class CartItems extends ControllerTestCase {
 		$response       = $controller->prepare_item_for_response( current( $cart ), new \WP_REST_Request() );
 		$image          = $response->get_data()['images'][0];
 		$expected_image = wp_get_attachment_image_url( $this->products[0]->get_image_id(), 'full' );
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertEquals( $image->src, $expected_image );
 		$this->assertEquals( $image->thumbnail, $expected_image );
 	}

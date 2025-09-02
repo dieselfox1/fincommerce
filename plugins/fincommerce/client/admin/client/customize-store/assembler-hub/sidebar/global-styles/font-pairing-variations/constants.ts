@@ -507,7 +507,7 @@ export const FONT_PAIRINGS_WHEN_USER_DID_NOT_ALLOW_TRACKING = [
 					theme: [
 						{
 							fontFamily: 'Cardo',
-							// Use the theme-defined variable: https://github.com/WordPress/twentytwentyfour/blob/trunk/theme.json#L240
+							// Use the theme-defined variable: https://github.com/finpress/twentytwentyfour/blob/trunk/theme.json#L240
 							slug: 'heading',
 						},
 						{
@@ -543,12 +543,12 @@ export const FONT_PAIRINGS_WHEN_USER_DID_NOT_ALLOW_TRACKING = [
 					theme: [
 						{
 							fontFamily: 'Inter',
-							// Use the theme-defined variable: https://github.com/WordPress/twentytwentyfour/blob/trunk/theme.json#L215
+							// Use the theme-defined variable: https://github.com/finpress/twentytwentyfour/blob/trunk/theme.json#L215
 							slug: 'body',
 						},
 						{
 							fontFamily: 'Cardo',
-							// Use the theme-defined variable: https://github.com/WordPress/twentytwentyfour/blob/trunk/theme.json#L240
+							// Use the theme-defined variable: https://github.com/finpress/twentytwentyfour/blob/trunk/theme.json#L240
 							slug: 'heading',
 						},
 					],

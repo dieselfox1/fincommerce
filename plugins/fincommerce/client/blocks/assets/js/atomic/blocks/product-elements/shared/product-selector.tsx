@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import ProductControl from '@fincommerce/editor-components/product-control';
-import { Placeholder, Button, ToolbarGroup } from '@wordpress/components';
-import { BlockControls } from '@wordpress/block-editor';
+import { Placeholder, Button, ToolbarGroup } from '@finpress/components';
+import { BlockControls } from '@finpress/block-editor';
 import TextToolbarButton from '@fincommerce/editor-components/text-toolbar-button';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 export const ProductSelector = ( {
 	productId,

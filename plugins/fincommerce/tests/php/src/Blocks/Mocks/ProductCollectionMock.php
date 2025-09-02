@@ -30,7 +30,7 @@ class ProductCollectionMock extends Controller {
 	}
 
 	/**
-	 * Override the normal initialization behavior to prevent registering the block with WordPress filters.
+	 * Override the normal initialization behavior to prevent registering the block with finpress filters.
 	 */
 	protected function initialize() {
 		$this->query_builder               = new QueryBuilder();

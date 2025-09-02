@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useState, useEffect } from '@wordpress/element';
-import { SelectControl } from '@wordpress/components';
-import apiFetch from '@wordpress/api-fetch';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useState, useEffect } from '@finpress/element';
+import { SelectControl } from '@finpress/components';
+import apiFetch from '@finpress/api-fetch';
+import { useDispatch, useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

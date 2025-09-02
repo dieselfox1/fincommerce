@@ -14,7 +14,7 @@ global $wpdb, $wp_version, $wc_uninstalling_plugin;
 
 $wc_uninstalling_plugin = true;
 
-// Clear WordPress cron events.
+// Clear finpress cron events.
 wp_clear_scheduled_hook( 'fincommerce_scheduled_sales' );
 wp_clear_scheduled_hook( 'fincommerce_cancel_unpaid_orders' );
 wp_clear_scheduled_hook( 'fincommerce_cleanup_sessions' );

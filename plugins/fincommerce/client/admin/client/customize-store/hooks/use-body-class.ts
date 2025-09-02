@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 // Counter to keep track of the number of components using a particular class
 const classCounter: Record< string, number > = {};

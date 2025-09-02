@@ -31,7 +31,7 @@ class Legacy {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification
+		// phpcs:ignore finpress.Security.NonceVerification
 		$post_data = $_POST;
 
 		// Set constants.

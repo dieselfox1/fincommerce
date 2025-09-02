@@ -1,11 +1,11 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 
 /**
  * External dependencies
  */
-import type { BlockAlignment } from '@wordpress/blocks';
+import type { BlockAlignment } from '@finpress/blocks';
 import { ProductResponseItem, isEmpty } from '@fincommerce/types';
-import { Icon, Placeholder, Spinner } from '@wordpress/components';
+import { Icon, Placeholder, Spinner } from '@finpress/components';
 import clsx from 'clsx';
 import {
 	useCallback,
@@ -13,7 +13,7 @@ import {
 	useEffect,
 	useRef,
 	useMemo,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { WP_REST_API_Category } from 'wp-types';
 import { useStyleProps } from '@fincommerce/base-hooks';
 import type { ComponentType, Dispatch, SetStateAction } from 'react';

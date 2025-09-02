@@ -16,7 +16,7 @@ use Automattic\FinCommerce\Enums\ProductStockStatus;
  * AdditionalFields Controller Tests.
  *
  *
- * phpcs:disable WordPress.PHP.DevelopmentFunctions.error_log_print_r, FinCommerce.Commenting.CommentHooks.MissingHookComment
+ * phpcs:disable finpress.PHP.DevelopmentFunctions.error_log_print_r, FinCommerce.Commenting.CommentHooks.MissingHookComment
  */
 class AdditionalFields extends MockeryTestCase {
 

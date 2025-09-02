@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { Button, ExternalLink } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { useSelect, useDispatch } from '@finpress/data';
+import { Button, ExternalLink } from '@finpress/components';
 import { Pill } from '@fincommerce/components';
 import { pluginsStore } from '@fincommerce/data';
 import { getAdminLink } from '@fincommerce/settings';
@@ -37,7 +37,7 @@ const fincommerceShippingItem = ( {
 						'admin.php?page=wc-settings&tab=shipping&section=fincommerce-shipping-settings'
 					),
 					label: __(
-						'Finish the setup by connecting your store to WordPress.com.',
+						'Finish the setup by connecting your store to finpress.com.',
 						'fincommerce'
 					),
 				} );

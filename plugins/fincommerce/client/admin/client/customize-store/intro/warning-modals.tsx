@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button, Modal } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, Modal } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { Link } from '@fincommerce/components';
-import { createInterpolateElement } from '@wordpress/element';
+import { createInterpolateElement } from '@finpress/element';
 
 /**
  * Internal dependencies

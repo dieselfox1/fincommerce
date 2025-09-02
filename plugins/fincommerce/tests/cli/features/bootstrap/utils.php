@@ -1,6 +1,6 @@
 <?php
 
-// Utilities that do NOT depend on WordPress code.
+// Utilities that do NOT depend on finpress code.
 
 namespace WP_CLI\Utils;
 
@@ -536,7 +536,7 @@ function replace_path_consts( $source, $path ) {
  * Wraps the Requests HTTP library to ensure every request includes a cert.
  *
  * ```
- * # `wp core download` verifies the hash for a downloaded WordPress archive
+ * # `wp core download` verifies the hash for a downloaded finpress archive
  *
  * $md5_response = Utils\http_request( 'GET', $download_url . '.md5' );
  * if ( 20 != substr( $md5_response->status_code, 0, 2 ) ) {
@@ -725,7 +725,7 @@ function get_temp_dir() {
  * Similar to parse_url(), but adds support for defined SSH aliases.
  *
  * ```
- * host OR host/path/to/wordpress OR host:port/path/to/wordpress
+ * host OR host/path/to/finpress OR host:port/path/to/finpress
  * ```
  *
  * @access public

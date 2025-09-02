@@ -41,14 +41,14 @@ const state = {
 					'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.</p>',
 				sku: 'woo-album',
 				low_stock_remaining: null,
-				permalink: 'http://local.wordpress.test/product/album/',
+				permalink: 'http://local.finpress.test/product/album/',
 				images: [
 					{
 						id: 48,
-						src: 'http://local.wordpress.test/wp-content/uploads/2019/12/album-1.jpg',
+						src: 'http://local.finpress.test/wp-content/uploads/2019/12/album-1.jpg',
 						thumbnail:
-							'http://local.wordpress.test/wp-content/uploads/2019/12/album-1-324x324.jpg',
-						srcset: 'http://local.wordpress.test/wp-content/uploads/2019/12/album-1.jpg 800w, http://local.wordpress.test/wp-content/uploads/2019/12/album-1-324x324.jpg 324w, http://local.wordpress.test/wp-content/uploads/2019/12/album-1-100x100.jpg 100w, http://local.wordpress.test/wp-content/uploads/2019/12/album-1-416x416.jpg 416w, http://local.wordpress.test/wp-content/uploads/2019/12/album-1-300x300.jpg 300w, http://local.wordpress.test/wp-content/uploads/2019/12/album-1-150x150.jpg 150w, http://local.wordpress.test/wp-content/uploads/2019/12/album-1-768x768.jpg 768w',
+							'http://local.finpress.test/wp-content/uploads/2019/12/album-1-324x324.jpg',
+						srcset: 'http://local.finpress.test/wp-content/uploads/2019/12/album-1.jpg 800w, http://local.finpress.test/wp-content/uploads/2019/12/album-1-324x324.jpg 324w, http://local.finpress.test/wp-content/uploads/2019/12/album-1-100x100.jpg 100w, http://local.finpress.test/wp-content/uploads/2019/12/album-1-416x416.jpg 416w, http://local.finpress.test/wp-content/uploads/2019/12/album-1-300x300.jpg 300w, http://local.finpress.test/wp-content/uploads/2019/12/album-1-150x150.jpg 150w, http://local.finpress.test/wp-content/uploads/2019/12/album-1-768x768.jpg 768w',
 						sizes: '(max-width: 800px) 100vw, 800px',
 						name: 'album-1.jpg',
 						alt: '',
@@ -79,14 +79,14 @@ const state = {
 					'<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
 				sku: 'woo-beanie',
 				low_stock_remaining: null,
-				permalink: 'http://local.wordpress.test/product/beanie/',
+				permalink: 'http://local.finpress.test/product/beanie/',
 				images: [
 					{
 						id: 40,
-						src: 'http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2.jpg',
+						src: 'http://local.finpress.test/wp-content/uploads/2019/12/beanie-2.jpg',
 						thumbnail:
-							'http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-324x324.jpg',
-						srcset: 'http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2.jpg 801w, http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-324x324.jpg 324w, http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-100x100.jpg 100w, http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-416x416.jpg 416w, http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-300x300.jpg 300w, http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-150x150.jpg 150w, http://local.wordpress.test/wp-content/uploads/2019/12/beanie-2-768x768.jpg 768w',
+							'http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-324x324.jpg',
+						srcset: 'http://local.finpress.test/wp-content/uploads/2019/12/beanie-2.jpg 801w, http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-324x324.jpg 324w, http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-100x100.jpg 100w, http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-416x416.jpg 416w, http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-300x300.jpg 300w, http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-150x150.jpg 150w, http://local.finpress.test/wp-content/uploads/2019/12/beanie-2-768x768.jpg 768w',
 						sizes: '(max-width: 801px) 100vw, 801px',
 						name: 'beanie-2.jpg',
 						alt: '',

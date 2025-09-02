@@ -6,14 +6,14 @@ import {
 	useContext,
 	useCallback,
 	useState,
-} from '@wordpress/element';
-import { cleanForSlug } from '@wordpress/url';
+} from '@finpress/element';
+import { cleanForSlug } from '@finpress/url';
 import type { UniqueIdentifier } from '@dnd-kit/core';
-import apiFetch from '@wordpress/api-fetch';
-import { dispatch } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import apiFetch from '@finpress/api-fetch';
+import { dispatch } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import fastDeepEqual from 'fast-deep-equal/es6';
-import { store as noticesStore } from '@wordpress/notices';
+import { store as noticesStore } from '@finpress/notices';
 
 /**
  * Internal dependencies

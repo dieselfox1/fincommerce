@@ -26,13 +26,13 @@ defined( 'ABSPATH' ) || exit;
 function wc_template_redirect() {
 	global $wp_query, $wp;
 
-	// phpcs:disable WordPress.Security.NonceVerification.Recommended
+	// phpcs:disable finpress.Security.NonceVerification.Recommended
 	// When default permalinks are enabled, redirect shop page to post type archive url.
 	if ( ! empty( $_GET['page_id'] ) && '' === get_option( 'permalink_structure' ) && wc_get_page_id( 'shop' ) === absint( $_GET['page_id'] ) && get_post_type_archive_link( 'product' ) ) {
 		wp_safe_redirect( get_post_type_archive_link( 'product' ) );
 		exit;
 	}
-	// phpcs:enable WordPress.Security.NonceVerification.Recommended
+	// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 	// When on the checkout with an empty cart, redirect to cart page.
 	if ( is_page( wc_get_page_id( 'checkout' ) ) && wc_get_page_id( 'checkout' ) !== wc_get_page_id( 'cart' ) && WC()->cart->is_empty() && empty( $wp->query_vars['order-pay'] ) && ! isset( $wp->query_vars['order-received'] ) && ! is_customize_preview() && apply_filters( 'fincommerce_checkout_redirect_empty_cart', true ) ) {
@@ -114,11 +114,11 @@ add_action( 'template_redirect', 'wc_send_frame_options_header' );
  * @since 2.5.3
  */
 function wc_prevent_endpoint_indexing() {
-	// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.PHP.NoSilencedErrors.Discouraged
+	// phpcs:disable finpress.Security.NonceVerification.Recommended, finpress.PHP.NoSilencedErrors.Discouraged
 	if ( is_wc_endpoint_url() || isset( $_GET['download_file'] ) ) {
 		@header( 'X-Robots-Tag: noindex' );
 	}
-	// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.PHP.NoSilencedErrors.Discouraged
+	// phpcs:enable finpress.Security.NonceVerification.Recommended, finpress.PHP.NoSilencedErrors.Discouraged
 }
 add_action( 'template_redirect', 'wc_prevent_endpoint_indexing' );
 
@@ -390,7 +390,7 @@ function wc_body_class( $classes ) {
 function wc_no_js() {
 	$type_attr = current_theme_supports( 'html5', 'script' ) ? '' : " type='text/javascript'";
 	?>
-	<script<?php echo $type_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<script<?php echo $type_attr; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 		(function () {
 			var c = document.body.className;
 			c = c.replace(/fincommerce-no-js/, 'fincommerce-js');
@@ -530,7 +530,7 @@ function wc_get_product_cat_class( $class = '', $category = null ) {
 }
 
 /**
- * Adds extra post classes for products via the WordPress post_class hook, if used.
+ * Adds extra post classes for products via the finpress post_class hook, if used.
  *
  * Note: For performance reasons we instead recommend using wc_product_class/wc_get_product_class instead.
  *
@@ -631,7 +631,7 @@ function wc_get_product_taxonomy_class( $term_ids, $taxonomy ) {
 /**
  * Retrieves the classes for the post div as an array.
  *
- * This method was modified from WordPress's get_post_class() to allow the removal of taxonomies
+ * This method was modified from finpress's get_post_class() to allow the removal of taxonomies
  * (for performance reasons). Previously wc_product_post_class was hooked into post_class. @since 3.6.0
  *
  * @since 3.4.0
@@ -776,7 +776,7 @@ function wc_product_class( $class = '', $product_id = null ) {
  */
 function wc_query_string_form_fields( $values = null, $exclude = array(), $current_key = '', $return = false ) {
 	if ( is_null( $values ) ) {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$values = $_GET;
 	} elseif ( is_string( $values ) ) {
 		$url_parts = wp_parse_url( $values );
@@ -822,7 +822,7 @@ function wc_query_string_form_fields( $values = null, $exclude = array(), $curre
 		return $html;
 	}
 
-	echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $html; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -925,7 +925,7 @@ function wc_terms_and_conditions_page_content() {
 	$page      = get_post( $terms_page_id );
 
 	if ( $page && 'publish' === $page->post_status && $page->post_content && ! has_shortcode( $page->post_content, 'fincommerce_checkout' ) ) {
-		echo '<div class="fincommerce-terms-and-conditions" style="display: none; max-height: 200px; overflow: auto;">' . wc_format_content( $sanitizer->styled_post_content( $page->post_content ) ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<div class="fincommerce-terms-and-conditions" style="display: none; max-height: 200px; overflow: auto;">' . wc_format_content( $sanitizer->styled_post_content( $page->post_content ) ) . '</div>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -1102,7 +1102,7 @@ if ( ! function_exists( 'fincommerce_demo_store' ) ) {
 		 * @since 1.6.4
 		 * @param string $store_notice Notice element.
 		 */
-		echo apply_filters( 'fincommerce_demo_store', '<p role="complementary" aria-label="' . esc_attr__( 'Store notice', 'fincommerce' ) . '" class="fincommerce-store-notice demo_store" data-notice-id="' . esc_attr( $notice_id ) . '" style="display:none;">' . wp_kses_post( $notice ) . ' <a role="button" href="#" class="fincommerce-store-notice__dismiss-link">' . esc_html__( 'Dismiss', 'fincommerce' ) . '</a></p>', $notice ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_demo_store', '<p role="complementary" aria-label="' . esc_attr__( 'Store notice', 'fincommerce' ) . '" class="fincommerce-store-notice demo_store" data-notice-id="' . esc_attr( $notice_id ) . '" style="display:none;">' . wp_kses_post( $notice ) . ' <a role="button" href="#" class="fincommerce-store-notice__dismiss-link">' . esc_html__( 'Dismiss', 'fincommerce' ) . '</a></p>', $notice ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -1142,7 +1142,7 @@ if ( ! function_exists( 'fincommerce_page_title' ) ) {
 		$page_title = apply_filters( 'fincommerce_page_title', $page_title );
 
 		if ( $echo ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo $page_title;
 		} else {
 			return $page_title;
@@ -1168,7 +1168,7 @@ if ( ! function_exists( 'fincommerce_product_loop_start' ) ) {
 		$loop_start = apply_filters( 'fincommerce_product_loop_start', ob_get_clean() );
 
 		if ( $echo ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo $loop_start;
 		} else {
 			return $loop_start;
@@ -1192,7 +1192,7 @@ if ( ! function_exists( 'fincommerce_product_loop_end' ) ) {
 		$loop_end = apply_filters( 'fincommerce_product_loop_end', ob_get_clean() );
 
 		if ( $echo ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo $loop_end;
 		} else {
 			return $loop_end;
@@ -1205,7 +1205,7 @@ if ( ! function_exists( 'fincommerce_template_loop_product_title' ) ) {
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
 	function fincommerce_template_loop_product_title() {
-		echo '<h2 class="' . esc_attr( apply_filters( 'fincommerce_product_loop_title_classes', 'fincommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<h2 class="' . esc_attr( apply_filters( 'fincommerce_product_loop_title_classes', 'fincommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 if ( ! function_exists( 'fincommerce_template_loop_category_title' ) ) {
@@ -1222,7 +1222,7 @@ if ( ! function_exists( 'fincommerce_template_loop_category_title' ) ) {
 			echo esc_html( $category->name );
 
 			if ( $category->count > 0 ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				echo apply_filters( 'fincommerce_subcategory_count_html', ' <mark class="count">(' . esc_html( $category->count ) . ')</mark>', $category );
 			}
 			?>
@@ -1309,7 +1309,7 @@ if ( ! function_exists( 'fincommerce_taxonomy_archive_description' ) ) {
 				$term_description = apply_filters( 'fincommerce_taxonomy_archive_description_raw', $term->description, $term );
 
 				if ( ! empty( $term_description ) ) {
-					echo '<div class="term-description">' . wc_format_content( wp_kses_post( $term_description ) ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo '<div class="term-description">' . wc_format_content( wp_kses_post( $term_description ) ) . '</div>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 		}
@@ -1379,7 +1379,7 @@ if ( ! function_exists( 'fincommerce_product_archive_description' ) ) {
 
 				$description = wc_format_content( wp_kses( $shop_page->post_content, $allowed_html ) );
 				if ( $description ) {
-					echo '<div class="page-description">' . $description . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo '<div class="page-description">' . $description . '</div>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 		}
@@ -1470,7 +1470,7 @@ if ( ! function_exists( 'fincommerce_template_loop_product_thumbnail' ) ) {
 	 * Get the product thumbnail for the loop.
 	 */
 	function fincommerce_template_loop_product_thumbnail() {
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo fincommerce_get_product_thumbnail();
 	}
 }
@@ -1551,7 +1551,7 @@ if ( ! function_exists( 'fincommerce_result_count' ) ) {
 		 * @param string  $default_orderby The default orderby option.
 		 */
 		$default_orderby = apply_filters( 'fincommerce_default_catalog_orderby', get_option( 'fincommerce_default_catalog_orderby', '' ) );
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$orderby = isset( $_GET['orderby'] ) ? wc_clean( wp_unslash( $_GET['orderby'] ) ) : $default_orderby;
 
 		// If products follow the default order this doesn't need to be informed.
@@ -1645,9 +1645,9 @@ if ( ! function_exists( 'fincommerce_catalog_ordering' ) ) {
 		}
 
 		$default_orderby = wc_get_loop_prop( 'is_search' ) ? 'relevance' : apply_filters( 'fincommerce_default_catalog_orderby', get_option( 'fincommerce_default_catalog_orderby', '' ) );
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$orderby = isset( $_GET['orderby'] ) ? wc_clean( wp_unslash( $_GET['orderby'] ) ) : $default_orderby;
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		if ( wc_get_loop_prop( 'is_search' ) ) {
 			$catalog_orderby_options = array_merge( array( 'relevance' => __( 'Relevance', 'fincommerce' ) ), $catalog_orderby_options );
@@ -2033,7 +2033,7 @@ if ( ! function_exists( 'fincommerce_quantity_input' ) ) {
 		wc_get_template( 'global/quantity-input.php', $args );
 
 		if ( $echo ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo ob_get_clean();
 		} else {
 			return ob_get_clean();
@@ -2126,7 +2126,7 @@ if ( ! function_exists( 'fincommerce_sort_product_tabs' ) ) {
 
 		// Make sure the $tabs parameter is an array.
 		if ( ! is_array( $tabs ) ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error( 'Function fincommerce_sort_product_tabs() expects an array as the first parameter. Defaulting to empty array.' );
 			$tabs = array();
 		}
@@ -2164,7 +2164,7 @@ if ( ! function_exists( 'fincommerce_comments' ) ) {
 	 * @param int        $depth Depth.
 	 */
 	function fincommerce_comments( $comment, $args, $depth ) {
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$GLOBALS['comment'] = $comment;
 		wc_get_template(
 			'single-product/review.php',
@@ -2465,7 +2465,7 @@ if ( ! function_exists( 'fincommerce_widget_shopping_cart_subtotal' ) ) {
 	 * @since 3.7.0
 	 */
 	function fincommerce_widget_shopping_cart_subtotal() {
-		echo '<strong>' . esc_html__( 'Subtotal:', 'fincommerce' ) . '</strong> ' . WC()->cart->get_cart_subtotal(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<strong>' . esc_html__( 'Subtotal:', 'fincommerce' ) . '</strong> ' . WC()->cart->get_cart_subtotal(); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -2768,7 +2768,7 @@ if ( ! function_exists( 'fincommerce_output_product_categories' ) ) {
 			return false;
 		}
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo $args['before'];
 
 		foreach ( $product_categories as $category ) {
@@ -2780,7 +2780,7 @@ if ( ! function_exists( 'fincommerce_output_product_categories' ) ) {
 			);
 		}
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo $args['after'];
 
 		return true;
@@ -2800,7 +2800,7 @@ if ( ! function_exists( 'fincommerce_get_product_subcategories' ) ) {
 		$product_categories = $cache_key ? wp_cache_get( $cache_key, 'product_cat' ) : false;
 
 		if ( false === $product_categories ) {
-			// NOTE: using child_of instead of parent - this is not ideal but due to a WP bug ( https://core.trac.wordpress.org/ticket/15626 ) pad_counts won't work.
+			// NOTE: using child_of instead of parent - this is not ideal but due to a WP bug ( https://core.trac.finpress.org/ticket/15626 ) pad_counts won't work.
 			$product_categories = get_categories(
 				apply_filters(
 					'fincommerce_product_subcategories_args',
@@ -2852,7 +2852,7 @@ if ( ! function_exists( 'fincommerce_subcategory_thumbnail' ) ) {
 
 		if ( $image ) {
 			// Prevent esc_url from breaking spaces in urls for image embeds.
-			// Ref: https://core.trac.wordpress.org/ticket/23605.
+			// Ref: https://core.trac.finpress.org/ticket/23605.
 			$image = str_replace( ' ', '%20', $image );
 
 			// Add responsive image markup if available.
@@ -3245,7 +3245,7 @@ if ( ! function_exists( 'fincommerce_form_field' ) ) {
 		if ( $args['return'] ) {
 			return $field;
 		} else {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo $field;
 		}
 	}
@@ -3289,7 +3289,7 @@ if ( ! function_exists( 'get_product_search_form' ) ) {
 			return $form;
 		}
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo $form;
 	}
 }
@@ -3362,9 +3362,9 @@ if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
 		// Get selected value.
 		if ( false === $args['selected'] && $args['attribute'] && $args['product'] instanceof WC_Product ) {
 			$selected_key = 'attribute_' . sanitize_title( $args['attribute'] );
-			// phpcs:disable WordPress.Security.NonceVerification.Recommended
+			// phpcs:disable finpress.Security.NonceVerification.Recommended
 			$args['selected'] = isset( $_REQUEST[ $selected_key ] ) ? wc_clean( wp_unslash( $_REQUEST[ $selected_key ] ) ) : $args['product']->get_variation_default_attribute( $args['attribute'] );
-			// phpcs:enable WordPress.Security.NonceVerification.Recommended
+			// phpcs:enable finpress.Security.NonceVerification.Recommended
 		}
 
 		$options               = $args['options'];
@@ -3412,7 +3412,7 @@ if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
 
 		$html .= '</select>';
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo apply_filters( 'fincommerce_dropdown_variation_attribute_options_html', $html, $args );
 	}
 }
@@ -3766,7 +3766,7 @@ if ( ! function_exists( 'wc_display_item_meta' ) ) {
 		$html = apply_filters( 'fincommerce_display_item_meta', $html, $item, $args );
 
 		if ( $args['echo'] ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo $html;
 		} else {
 			return $html;
@@ -3821,7 +3821,7 @@ if ( ! function_exists( 'wc_display_item_downloads' ) ) {
 		$html = apply_filters( 'fincommerce_display_item_downloads', $html, $item, $args );
 
 		if ( $args['echo'] ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			echo $html;
 		} else {
 			return $html;
@@ -4063,7 +4063,7 @@ function wc_empty_cart_message() {
 	$notice = str_replace( 'class="fincommerce-info"', 'class="cart-empty fincommerce-info"', $notice );
 
 	// Return the notice within a consistent wrapper element. This is targeted by some scripts such as cart.js.
-	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	echo '<div class="wc-empty-cart-message">' . $notice . '</div>';
 }
 

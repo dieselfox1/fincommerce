@@ -771,7 +771,7 @@ class WC_Admin_Tests_Reports_Interval_Stats extends WC_Unit_Test_Case {
 	/**
 	 * Tests for the exact datetime returned by next_week_start to make sure it
 	 * returns the exact time and timezone with shifting timezones
-	 * between PHP settings and WordPress config.
+	 * between PHP settings and finpress config.
 	 */
 	public function test_next_week_start_correct_timezone_calculation() {
 		$original_timezone = date_default_timezone_get();

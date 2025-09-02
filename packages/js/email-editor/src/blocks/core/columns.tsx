@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { Block } from '@wordpress/blocks/index';
-import { addFilter } from '@wordpress/hooks';
+import { InspectorControls } from '@finpress/block-editor';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { Block } from '@finpress/blocks/index';
+import { addFilter } from '@finpress/hooks';
 
 const columnsEditCallback = createHigherOrderComponent(
 	( BlockEdit ) =>

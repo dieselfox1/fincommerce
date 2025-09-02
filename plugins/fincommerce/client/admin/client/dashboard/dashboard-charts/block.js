@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import PropTypes from 'prop-types';
-import { __, sprintf } from '@wordpress/i18n';
-import { Card, CardBody, CardHeader } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Card, CardBody, CardHeader } from '@finpress/components';
 import {
 	getHistory,
 	getNewPath,

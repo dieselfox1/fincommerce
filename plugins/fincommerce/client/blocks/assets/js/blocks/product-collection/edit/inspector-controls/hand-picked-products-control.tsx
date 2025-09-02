@@ -3,17 +3,17 @@
  */
 import { getProducts } from '@fincommerce/editor-components/utils';
 import { ProductResponseItem } from '@fincommerce/types';
-import { decodeEntities } from '@wordpress/html-entities';
-import { useState, useEffect, useCallback, useMemo } from '@wordpress/element';
-import { useDebounce } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
+import { useState, useEffect, useCallback, useMemo } from '@finpress/element';
+import { useDebounce } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 import { blocksConfig } from '@fincommerce/block-settings';
 import {
 	FormTokenField,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanelItem as ToolsPanelItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

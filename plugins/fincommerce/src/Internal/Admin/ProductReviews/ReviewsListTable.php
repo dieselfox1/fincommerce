@@ -152,10 +152,10 @@ class ReviewsListTable extends WP_List_Table {
 	protected function set_review_status() : void {
 		global $comment_status;
 
-		$comment_status = sanitize_text_field( wp_unslash( $_REQUEST['comment_status'] ?? 'all' ) ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = sanitize_text_field( wp_unslash( $_REQUEST['comment_status'] ?? 'all' ) ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		if ( ! in_array( $comment_status, [ 'all', 'moderated', 'approved', 'spam', 'trash' ], true ) ) {
-			$comment_status = 'all'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$comment_status = 'all'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 	}
 
@@ -172,7 +172,7 @@ class ReviewsListTable extends WP_List_Table {
 		$review_type = sanitize_text_field( wp_unslash( $_REQUEST['review_type'] ?? 'all' ) );
 
 		if ( 'all' !== $review_type && ! empty( $review_type ) ) {
-			$comment_type = $review_type; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$comment_type = $review_type; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 	}
 
@@ -383,11 +383,11 @@ class ReviewsListTable extends WP_List_Table {
 		global $post, $comment;
 
 		// Overrides the comment global for properly rendering rows.
-		$comment           = $item; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment           = $item; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$the_comment_class = (string) wp_get_comment_status( $comment->comment_ID );
 		$the_comment_class = implode( ' ', get_comment_class( $the_comment_class, $comment->comment_ID, $comment->comment_post_ID ) );
 		// Sets the post for the product in context.
-		$post = get_post( $comment->comment_post_ID ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$post = get_post( $comment->comment_post_ID ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$this->current_user_can_edit_review = current_user_can( 'edit_comment', $comment->comment_ID );
 
@@ -737,7 +737,7 @@ class ReviewsListTable extends WP_List_Table {
 		if ( $this->current_action() ) {
 			check_admin_referer( 'bulk-product-reviews' );
 
-			$query_string = remove_query_arg( [ 'page', '_wpnonce' ], wp_unslash( ( $_SERVER['QUERY_STRING'] ?? '' ) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$query_string = remove_query_arg( [ 'page', '_wpnonce' ], wp_unslash( ( $_SERVER['QUERY_STRING'] ?? '' ) ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			// Replace current nonce with bulk-comments nonce.
 			$comments_nonce = wp_create_nonce( 'bulk-comments' );
@@ -947,7 +947,7 @@ class ReviewsListTable extends WP_List_Table {
 			<?php
 		}
 
-		echo $this->filter_column_output( 'cb', ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'cb', ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -965,7 +965,7 @@ class ReviewsListTable extends WP_List_Table {
 		ob_start();
 
 		if ( $in_reply_to ) {
-			echo $in_reply_to . '<br><br>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $in_reply_to . '<br><br>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 		echo '<div class="comment-text">';
@@ -984,7 +984,7 @@ class ReviewsListTable extends WP_List_Table {
 			<?php
 		}
 
-		echo $this->filter_column_output( 'comment', ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'comment', ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1033,7 +1033,7 @@ class ReviewsListTable extends WP_List_Table {
 
 		ob_start();
 
-		echo '<strong>' . $author_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<strong>' . $author_avatar; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		comment_author();
 		echo '</strong><br>';
 
@@ -1075,7 +1075,7 @@ class ReviewsListTable extends WP_List_Table {
 
 		endif;
 
-		echo $this->filter_column_output( 'author', ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'author', ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1151,7 +1151,7 @@ class ReviewsListTable extends WP_List_Table {
 		</div>
 		<?php
 
-		echo $this->filter_column_output( 'date', ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'date', ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1180,7 +1180,7 @@ class ReviewsListTable extends WP_List_Table {
 					$post_link = esc_html( get_the_title( $product_post->ID ) );
 				endif;
 
-				echo $post_link; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo $post_link; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 				$post_type_object = get_post_type_object( $product_post->post_type );
 
@@ -1196,7 +1196,7 @@ class ReviewsListTable extends WP_List_Table {
 
 		endif;
 
-		echo $this->filter_column_output( 'response', ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'response', ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1211,7 +1211,7 @@ class ReviewsListTable extends WP_List_Table {
 			? '&#9734;&nbsp;' . __( 'Review', 'fincommerce' )
 			: __( 'Reply', 'fincommerce' );
 
-		echo $this->filter_column_output( 'type', esc_html( $type ), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'type', esc_html( $type ), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1242,7 +1242,7 @@ class ReviewsListTable extends WP_List_Table {
 			<?php
 		}
 
-		echo $this->filter_column_output( 'rating', ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( 'rating', ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1267,7 +1267,7 @@ class ReviewsListTable extends WP_List_Table {
 		 */
 		do_action( 'fincommerce_product_reviews_table_column_' . $column_name, $item );
 
-		echo $this->filter_column_output( $column_name, ob_get_clean(), $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->filter_column_output( $column_name, ob_get_clean(), $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1315,7 +1315,7 @@ class ReviewsListTable extends WP_List_Table {
 			$this->review_rating_dropdown( $this->current_reviews_rating );
 			$this->product_search( $this->current_product_for_reviews );
 
-			echo ob_get_clean(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo ob_get_clean(); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 			submit_button( __( 'Filter', 'fincommerce' ), '', 'filter_action', false, [ 'id' => 'post-query-submit' ] );
 		}

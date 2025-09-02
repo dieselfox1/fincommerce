@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { dispatch, useDispatch, useSelect } from '@wordpress/data';
-import { useCallback } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { dispatch, useDispatch, useSelect } from '@finpress/data';
+import { useCallback } from '@finpress/element';
 import {
 	cartStore,
 	validationStore,
 	checkoutStore,
 } from '@fincommerce/block-data';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import type {
 	StoreCartCoupon,
 	CouponApiErrorResponse,

@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import { get } from 'lodash';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

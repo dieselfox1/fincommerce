@@ -6,16 +6,16 @@ import {
 	useBlockProps,
 	InnerBlocks,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { EditorProvider } from '@fincommerce/base-context';
-import type { TemplateArray } from '@wordpress/blocks';
+import type { TemplateArray } from '@finpress/blocks';
 import type { FocusEvent, ReactElement } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	PanelBody,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalUnitControl as UnitControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

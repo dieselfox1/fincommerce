@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockEditProps } from '@wordpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 import type { ReactNode } from 'react';
 
 export type BlockAttributes = {

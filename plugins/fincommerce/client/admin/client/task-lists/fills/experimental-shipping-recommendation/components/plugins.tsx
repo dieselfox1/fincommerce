@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Plugins as PluginInstaller } from '@fincommerce/components';
 import { optionsStore, InstallPluginsResponse } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

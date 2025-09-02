@@ -1,7 +1,7 @@
 # Theme.json for the email editor
 
 We use theme.json to define settings and styles for the email editor and we reuse the definitions also in the rendering engine.
-The theme is used in combination with the [core's theme.json](https://github.com/WordPress/WordPress/blob/master/wp-includes/theme.json). We load the core's theme.json first and then we merge the email editor's theme.json on top of it.
+The theme is used in combination with the [core's theme.json](https://github.com/finpress/finpress/blob/master/wp-includes/theme.json). We load the core's theme.json first and then we merge the email editor's theme.json on top of it.
 
 In this file we want to document settings and styles that are specific to the email editor.
 

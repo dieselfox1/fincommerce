@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import type {
 	// @ts-expect-error no exported member.
 	DropdownOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 type PositionYAxis = 'top' | 'middle' | 'bottom';
 type PositionXAxis = 'left' | 'center' | 'right';

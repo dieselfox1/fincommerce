@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { SVG, Circle } from '@wordpress/primitives';
-import { createElement } from '@wordpress/element';
+import { SVG, Circle } from '@finpress/primitives';
+import { createElement } from '@finpress/element';
 
 export const PageControlIcon = ( { isSelected }: { isSelected: boolean } ) => (
 	<SVG width="8" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">

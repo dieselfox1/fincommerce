@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { COLLECTIONS_STORE_KEY as storeKey } from '@fincommerce/block-data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useShallowEqual } from '@fincommerce/base-hooks';
 
 /**

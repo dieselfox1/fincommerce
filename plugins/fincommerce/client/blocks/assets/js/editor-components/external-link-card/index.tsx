@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Icon, external } from '@wordpress/icons';
-import { VisuallyHidden } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Icon, external } from '@finpress/icons';
+import { VisuallyHidden } from '@finpress/components';
 import { sanitizeHTML } from '@fincommerce/utils';
 import { Alert } from '@fincommerce/icons';
 

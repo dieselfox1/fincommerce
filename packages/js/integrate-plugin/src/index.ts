@@ -4,7 +4,7 @@
  * External dependencies
  */
 import { Command } from 'commander';
-import CLIError from '@wordpress/create-block/lib/cli-error';
+import CLIError from '@finpress/create-block/lib/cli-error';
 
 /**
  * Internal dependencies
@@ -27,11 +27,11 @@ program
 	.version( '0.1.0' )
 	.option(
 		'--wp-scripts',
-		'enable integration with `@wordpress/scripts` package'
+		'enable integration with `@finpress/scripts` package'
 	)
 	.option(
 		'--no-wp-scripts',
-		'disable integration with `@wordpress/scripts` package'
+		'disable integration with `@finpress/scripts` package'
 	)
 	.option(
 		'-t, --template <name>',
@@ -39,7 +39,7 @@ program
 		'standard'
 	)
 	.option( '--variant <variant>', 'the variant of the template to use' )
-	.option( '--wp-env', 'enable integration with `@wordpress/env` package' )
+	.option( '--wp-env', 'enable integration with `@finpress/env` package' )
 	.option(
 		'--includes-dir <dir>',
 		'the path to the includes directory with backend logic'

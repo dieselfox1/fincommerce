@@ -178,7 +178,7 @@ function wc_print_notices( $return = false ) {
 		return $notices;
 	}
 
-	echo $notices; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $notices; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -220,7 +220,7 @@ function wc_print_notice( $message, $notice_type = 'success', $data = array(), $
 		return $notice;
 	}
 
-	echo $notice; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $notice; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**

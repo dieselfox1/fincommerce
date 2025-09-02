@@ -8,7 +8,7 @@ use Automattic\FinCommerce\Internal\Admin\Logging\{ LogHandlerFileV2, Settings }
 use Automattic\FinCommerce\Internal\Admin\Logging\FileV2\{ File, FileController };
 use WC_Unit_Test_Case;
 
-// phpcs:disable WordPress.WP.AlternativeFunctions.file_system_read_fopen, WordPress.WP.AlternativeFunctions.file_system_read_fclose
+// phpcs:disable finpress.WP.AlternativeFunctions.file_system_read_fopen, finpress.WP.AlternativeFunctions.file_system_read_fclose
 
 /**
  * FileControllerTest class.
@@ -90,7 +90,7 @@ class FileControllerTest extends WC_Unit_Test_Case {
 
 		$this->assertStringStartsWith( $source, $file->get_basename() );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content = file_get_contents( $path );
 		$this->assertEquals( $content . "\n", $actual_content );
 	}
@@ -126,7 +126,7 @@ class FileControllerTest extends WC_Unit_Test_Case {
 		$this->assertCount( 3, $paths );
 
 		$target_path = Settings::get_log_directory() . $existing_files['target'];
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content = file_get_contents( $target_path );
 		$this->assertEquals( $content . "\n", $actual_content );
 	}
@@ -140,7 +140,7 @@ class FileControllerTest extends WC_Unit_Test_Case {
 
 		$resource         = fopen( $path, 'a' );
 		$existing_content = random_bytes( 200 ) . "\n";
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
 		fwrite( $resource, $existing_content );
 		fclose( $resource );
 
@@ -163,7 +163,7 @@ class FileControllerTest extends WC_Unit_Test_Case {
 		foreach ( $paths as $path ) {
 			$file = new File( $path );
 
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 			$actual_content = file_get_contents( $file->get_path() );
 
 			switch ( true ) {
@@ -188,7 +188,7 @@ class FileControllerTest extends WC_Unit_Test_Case {
 	public function test_get_files_with_files(): void {
 		$this->handler->handle( strtotime( '-5 days' ), 'debug', '1', array() ); // No source defaults to "plugin-fincommerce" as source.
 		$this->handler->handle( time(), 'debug', '2', array( 'source' => 'unit-testing' ) );
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_wp_debug_backtrace_summary -- Unit test.
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_wp_debug_backtrace_summary -- Unit test.
 		$this->handler->handle( time(), 'debug', random_bytes( 100 ), array( 'source' => 'unit-testing' ) ); // Increase file size.
 
 		$files = $this->sut->get_files();
@@ -421,14 +421,14 @@ class FileControllerTest extends WC_Unit_Test_Case {
 		$path             = Settings::get_log_directory() . 'unit-testing-1.log';
 		$resource         = fopen( $path, 'a' );
 		$existing_content = random_bytes( 200 );
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
 		fwrite( $resource, $existing_content );
 		fclose( $resource );
 
 		$path             = Settings::get_log_directory() . 'unit-testing-2.log';
 		$resource         = fopen( $path, 'a' );
 		$existing_content = random_bytes( 300 );
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
 		fwrite( $resource, $existing_content );
 		fclose( $resource );
 
@@ -439,4 +439,4 @@ class FileControllerTest extends WC_Unit_Test_Case {
 	}
 }
 
-// phpcs:enable WordPress.WP.AlternativeFunctions.file_system_read_fopen, WordPress.WP.AlternativeFunctions.file_system_read_fclose
+// phpcs:enable finpress.WP.AlternativeFunctions.file_system_read_fopen, finpress.WP.AlternativeFunctions.file_system_read_fclose

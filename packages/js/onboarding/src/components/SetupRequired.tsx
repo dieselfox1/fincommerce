@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import NoticeOutlineIcon from 'gridicons/dist/notice-outline';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Text } from '@fincommerce/experimental';
 
 export const SetupRequired: React.VFC = () => {

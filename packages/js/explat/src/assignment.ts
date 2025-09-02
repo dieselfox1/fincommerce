@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { stringify } from 'qs';
-import { applyFilters } from '@wordpress/hooks';
-import apiFetch from '@wordpress/api-fetch';
+import { applyFilters } from '@finpress/hooks';
+import apiFetch from '@finpress/api-fetch';
 
 export const canTrack =
 	window.wcTracks?.isEnabled || window?._wca?.push !== undefined;
@@ -100,7 +100,7 @@ export const fetchExperimentAssignment = async ( {
 	}
 
 	const response = await window.fetch(
-		`https://public-api.wordpress.com/wpcom/v2/experiments/${ EXPLAT_VERSION }/assignments/fincommerce?${ stringify(
+		`https://public-api.finpress.com/wpcom/v2/experiments/${ EXPLAT_VERSION }/assignments/fincommerce?${ stringify(
 			queryParams
 		) }`
 	);

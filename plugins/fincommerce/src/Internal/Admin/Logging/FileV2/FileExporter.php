@@ -65,20 +65,20 @@ class FileExporter {
 		}
 
 		// These configuration tweaks are copied from WC_CSV_Exporter::send_headers().
-		// phpcs:disable WordPress.PHP.NoSilencedErrors.Discouraged
+		// phpcs:disable finpress.PHP.NoSilencedErrors.Discouraged
 		if ( function_exists( 'gc_enable' ) ) {
 			gc_enable(); // phpcs:ignore PHPCompatibility.FunctionUse.NewFunctions.gc_enableFound
 		}
 		if ( function_exists( 'apache_setenv' ) ) {
-			@apache_setenv( 'no-gzip', '1' ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_apache_setenv
+			@apache_setenv( 'no-gzip', '1' ); // phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.runtime_configuration_apache_setenv
 		}
-		@ini_set( 'zlib.output_compression', 'Off' ); // phpcs:ignore WordPress.PHP.IniSet.Risky
-		@ini_set( 'output_buffering', 'Off' ); // phpcs:ignore WordPress.PHP.IniSet.Risky
-		@ini_set( 'output_handler', '' ); // phpcs:ignore WordPress.PHP.IniSet.Risky
+		@ini_set( 'zlib.output_compression', 'Off' ); // phpcs:ignore finpress.PHP.IniSet.Risky
+		@ini_set( 'output_buffering', 'Off' ); // phpcs:ignore finpress.PHP.IniSet.Risky
+		@ini_set( 'output_handler', '' ); // phpcs:ignore finpress.PHP.IniSet.Risky
 		ignore_user_abort( true );
 		wc_set_time_limit();
 		wc_nocache_headers();
-		// phpcs:enable WordPress.PHP.NoSilencedErrors.Discouraged
+		// phpcs:enable finpress.PHP.NoSilencedErrors.Discouraged
 
 		$this->send_headers();
 		$this->send_contents();
@@ -106,20 +106,20 @@ class FileExporter {
 	 * @return void
 	 */
 	private function send_contents(): void {
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- No suitable alternative.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_fopen -- No suitable alternative.
 		$stream = fopen( $this->path, 'rb' );
 
 		while ( is_resource( $stream ) && ! feof( $stream ) ) {
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fread -- No suitable alternative.
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_fread -- No suitable alternative.
 			$chunk = fread( $stream, self::CHUNK_SIZE );
 
 			if ( is_string( $chunk ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Outputting to file.
+				// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped -- Outputting to file.
 				echo $chunk;
 			}
 		}
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- No suitable alternative.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_fclose -- No suitable alternative.
 		fclose( $stream );
 	}
 

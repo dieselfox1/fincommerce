@@ -7,10 +7,10 @@ import {
 	FlexItem,
 	DropdownMenu,
 	MenuItem,
-} from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+} from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

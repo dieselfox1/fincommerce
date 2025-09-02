@@ -1709,7 +1709,7 @@ class UtilsTest extends WC_Unit_Test_Case {
 
 		// Arrange.
 		$tmp_local = $wp_locale;
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$wp_locale                  = new WP_Locale();
 		$wp_locale->word_count_type = 'characters_excluding_spaces';
 
@@ -1730,7 +1730,7 @@ class UtilsTest extends WC_Unit_Test_Case {
 		$this->assertSame( $text, $truncated );
 
 		// Cleanup.
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$wp_locale = $tmp_local;
 	}
 }

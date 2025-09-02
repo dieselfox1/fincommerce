@@ -1,5 +1,5 @@
 /**
- * This must inherit the InputControlProp from @wordpress/components
+ * This must inherit the InputControlProp from @finpress/components
  * but it has not been exported yet
  */
 

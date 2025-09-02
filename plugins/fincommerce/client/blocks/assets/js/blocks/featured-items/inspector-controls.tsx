@@ -1,15 +1,15 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 
 /**
  * External dependencies
  */
 import { WP_REST_API_Category } from 'wp-types';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	InspectorControls as GutenbergInspectorControls,
 	__experimentalPanelColorGradientSettings as PanelColorGradientSettings,
 	__experimentalUseGradient as useGradient,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	FocalPointPicker,
 	PanelBody,
@@ -20,7 +20,7 @@ import {
 	TextareaControl,
 	ExternalLink,
 	Notice,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { LooselyMustHave, ProductResponseItem } from '@fincommerce/types';
 import type { ComponentType } from 'react';
 
@@ -104,7 +104,7 @@ export const InspectorControls = ( {
 	backgroundColorVisibilityStatus,
 	backgroundColor,
 }: InspectorControlsProps ) => {
-	// FocalPointPicker was introduced in Gutenberg 5.0 (WordPress 5.2),
+	// FocalPointPicker was introduced in Gutenberg 5.0 (finpress 5.2),
 	// so we need to check if it exists before using it.
 	const focalPointPickerExists = typeof FocalPointPicker === 'function';
 

@@ -608,7 +608,7 @@ abstract class Abstract_WC_Order_Data_Store_CPT extends WC_Data_Store_WP impleme
 		$non_cached_ids        = esc_sql( $non_cached_ids );
 		$non_cached_ids_string = implode( ',', $non_cached_ids );
 		$order_items           = $wpdb->get_results(
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			"SELECT order_item_type, order_item_id, order_id, order_item_name FROM {$wpdb->prefix}fincommerce_order_items WHERE order_id in ( $non_cached_ids_string ) ORDER BY order_item_id;"
 		);
 		if ( empty( $order_items ) ) {
@@ -780,14 +780,14 @@ abstract class Abstract_WC_Order_Data_Store_CPT extends WC_Data_Store_WP impleme
 					_get_meta_table( 'post' ),
 					array(
 						'post_id'    => $order->get_id(),
-						'meta_key'   => $meta_data->key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-						'meta_value' => $meta_value, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+						'meta_key'   => $meta_data->key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+						'meta_value' => $meta_value, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 					),
 					array( '%d', '%s', '%s' )
 				);
 				wp_cache_delete( $order->get_id(), 'post_meta' );
 				$logger = wc_get_container()->get( LegacyProxy::class )->call_function( 'wc_get_logger' );
-				$logger->warning( sprintf( 'encountered an order meta value of type __PHP_Incomplete_Class during `update_order_meta_from_object` in order with ID %d: "%s"', $order->get_id(), var_export( $meta_value, true ) ) ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export
+				$logger->warning( sprintf( 'encountered an order meta value of type __PHP_Incomplete_Class during `update_order_meta_from_object` in order with ID %d: "%s"', $order->get_id(), var_export( $meta_value, true ) ) ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_var_export
 			} else {
 				add_post_meta( $order->get_id(), $meta_data->key, $meta_data->value, false );
 			}

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createRef, Component } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createRef, Component } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import type { MouseEvent, RefObject, ReactNode } from 'react';
 
 /**

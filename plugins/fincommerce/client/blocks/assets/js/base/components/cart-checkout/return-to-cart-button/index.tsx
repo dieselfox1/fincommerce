@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { CART_URL } from '@fincommerce/block-settings';
-import { Icon, arrowLeft } from '@wordpress/icons';
+import { Icon, arrowLeft } from '@finpress/icons';
 
 /**
  * Internal dependencies

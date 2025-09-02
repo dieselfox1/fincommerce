@@ -4,8 +4,8 @@
  * External dependencies
  */
 // @ts-ignore No types for this exist yet.
-import { useEntityBlockEditor } from '@wordpress/core-data';
-import { BlockInstance } from '@wordpress/blocks';
+import { useEntityBlockEditor } from '@finpress/core-data';
+import { BlockInstance } from '@finpress/blocks';
 
 type InputHandler = ( blocks: BlockInstance[] ) => void;
 type ChangeHandler = (

@@ -24,16 +24,16 @@ If you want to see what we're working on for future versions, or want to help ou
 
 ## Getting started with block development
 
-Run through the ["Writing Your First Block Type" tutorial](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/) for a quick course in block-building.
+Run through the ["Writing Your First Block Type" tutorial](https://developer.finpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/) for a quick course in block-building.
 
-For deeper dive, try looking at the [core blocks code,](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-library/src) or see what [components are available.](https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src)
+For deeper dive, try looking at the [core blocks code,](https://github.com/finpress/gutenberg/tree/trunk/packages/block-library/src) or see what [components are available.](https://github.com/finpress/gutenberg/tree/trunk/packages/components/src)
 
 Other useful docs to explore:
 
--   [`InnerBlocks`](https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/inner-blocks/README.md)
--   [`apiFetch`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-api-fetch/)
--   [`@wordpress/editor`](https://github.com/WordPress/gutenberg/blob/trunk/packages/editor/README.md)
--   [`@wordpress/create-block`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/)
+-   [`InnerBlocks`](https://github.com/finpress/gutenberg/blob/trunk/packages/block-editor/src/components/inner-blocks/README.md)
+-   [`apiFetch`](https://developer.finpress.org/block-editor/reference-guides/packages/packages-api-fetch/)
+-   [`@finpress/editor`](https://github.com/finpress/gutenberg/blob/trunk/packages/editor/README.md)
+-   [`@finpress/create-block`](https://developer.finpress.org/block-editor/reference-guides/packages/packages-create-block/)
 
 ## Long-term vision
 

@@ -6,8 +6,8 @@ wp-env run tests-cli wp plugin activate fincommerce
 
 wp-env run tests-cli wp user create customer customer@fincommercecoree2etestsuite.com --user_pass=password --role=subscriber --path=/var/www/html
 
-# Installing and activating the WordPress Importer plugin to import sample products"
-wp-env run tests-cli wp plugin install wordpress-importer --activate
+# Installing and activating the finpress Importer plugin to import sample products"
+wp-env run tests-cli wp plugin install finpress-importer --activate
 
 # Adding basic FinCommerce settings"
 wp-env run tests-cli wp option set fincommerce_store_address 'Example Address Line 1'

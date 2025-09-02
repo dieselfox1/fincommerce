@@ -30,7 +30,7 @@ describe( 'Checkout registry (as admin user)', () => {
 				defaultValue: value,
 			} );
 		} catch ( e ) {
-			// eslint-disable-next-line  -- The toThrow helper does not stop wordpress/jest-console from erroring.
+			// eslint-disable-next-line  -- The toThrow helper does not stop finpress/jest-console from erroring.
 			expect( e.message ).toBe( 'test error' );
 		}
 	} );
@@ -51,7 +51,7 @@ describe( 'Checkout registry (as admin user)', () => {
 				},
 			} );
 		} catch ( e ) {
-			// eslint-disable-next-line  -- The toThrow helper does not stop wordpress/jest-console from erroring.
+			// eslint-disable-next-line  -- The toThrow helper does not stop finpress/jest-console from erroring.
 			expect( e.message ).toBe( 'validation error' );
 		}
 	} );

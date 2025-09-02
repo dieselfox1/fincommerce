@@ -732,7 +732,7 @@ class WC_Post_Data {
 		}
 		$taxonomy  = 'pa_' . $old_slug;
 		$threshold = self::get_variation_summaries_sync_threshold();
-		// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		$args = array(
 			'post_type'      => 'product_variation',
 			'post_status'    => 'any',
@@ -745,7 +745,7 @@ class WC_Post_Data {
 				),
 			),
 		);
-		// phpcs:enable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		// phpcs:enable finpress.DB.SlowDBQuery.slow_db_query_meta_query
 
 		$variation_ids = get_posts( $args );
 
@@ -782,7 +782,7 @@ class WC_Post_Data {
 	 * @param string $taxonomy Attribute taxonomy.
 	 */
 	public static function regenerate_attribute_variation_summaries( $taxonomy ) {
-		// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		$variation_ids = get_posts(
 			array(
 				'post_type'   => 'product_variation',
@@ -796,7 +796,7 @@ class WC_Post_Data {
 				),
 			)
 		);
-		// phpcs:enable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		// phpcs:enable finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		self::regenerate_variation_summaries( $variation_ids );
 	}
 

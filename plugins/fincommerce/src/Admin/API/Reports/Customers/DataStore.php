@@ -325,7 +325,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 				$searchby = $query_args['searchby'];
 			}
 
-			$where_clauses[] = $wpdb->prepare( "{$searchby} LIKE %s", $name_like ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$where_clauses[] = $wpdb->prepare( "{$searchby} LIKE %s", $name_like ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		}
 
 		$filter_empty_params = array(
@@ -387,7 +387,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 			if ( isset( $query_args[ $min_param ] ) ) {
 				$subclauses[] = $wpdb->prepare(
-					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+					// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 					"{$param_info['column']} >{$or_equal} {$param_info['format']}",
 					$query_args[ $min_param ]
 				);
@@ -395,7 +395,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 			if ( isset( $query_args[ $max_param ] ) ) {
 				$subclauses[] = $wpdb->prepare(
-					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+					// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 					"{$param_info['column']} <{$or_equal} {$param_info['format']}",
 					$query_args[ $max_param ]
 				);
@@ -507,7 +507,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			) as tt
 			";
 		$db_records_count = (int) $wpdb->get_var(
-			$count_query // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$count_query // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		);
 
 		$params      = $this->get_limit_params( $query_args );
@@ -528,7 +528,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->subquery->add_sql_clause( 'limit', $this->get_sql_clause( 'limit' ) );
 
 		$customer_data = $wpdb->get_results(
-			$this->subquery->get_query_statement(), // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$this->subquery->get_query_statement(), // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			ARRAY_A
 		);
 
@@ -648,7 +648,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$table_name  = self::get_db_table_name();
 		$customer_id = $wpdb->get_var(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT customer_id FROM {$table_name} WHERE email = %s AND user_id IS NULL LIMIT 1",
 				$email
 			)
@@ -674,7 +674,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$table_name  = self::get_db_table_name();
 		$customer_id = $wpdb->get_var(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT customer_id FROM {$table_name} WHERE email = %s ORDER BY user_id IS NOT NULL DESC LIMIT 1",
 				$email
 			)
@@ -695,7 +695,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$table_name  = self::get_db_table_name();
 		$customer_id = $wpdb->get_var(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT customer_id FROM {$table_name} WHERE user_id = %d LIMIT 1",
 				$user_id
 			)
@@ -716,7 +716,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 		$last_order = $wpdb->get_var(
 			$wpdb->prepare(
-				// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT order_id, date_created_gmt FROM {$orders_table}
 				WHERE customer_id = %d
 				ORDER BY date_created_gmt DESC, order_id DESC LIMIT 1",
@@ -748,7 +748,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 		return $wpdb->get_results(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT order_id, date_created FROM {$orders_table} WHERE customer_id = %d {$excluded_statuses_condition} ORDER BY date_created, order_id ASC LIMIT 2",
 				$customer_id
 			)
@@ -926,9 +926,9 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 	}
 
 	/**
-	 * Delete a customer lookup row by WordPress User ID.
+	 * Delete a customer lookup row by finpress User ID.
 	 *
-	 * @param int $user_id WordPress User ID.
+	 * @param int $user_id finpress User ID.
 	 */
 	public static function delete_customer_by_user_id( $user_id ) {
 		global $wpdb;

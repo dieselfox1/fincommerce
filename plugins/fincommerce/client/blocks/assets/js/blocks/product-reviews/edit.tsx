@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { SelectControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { SelectControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { useQueryLoopProductContextValidation } from '@fincommerce/base-hooks';
 import {
 	InspectorControls,
 	useBlockProps,
 	// @ts-expect-error missing types.
 	useInnerBlocksProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

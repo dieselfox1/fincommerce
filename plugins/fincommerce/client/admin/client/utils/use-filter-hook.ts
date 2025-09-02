@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { addAction, removeAction, didFilter } from '@wordpress/hooks';
+import { useEffect, useState } from '@finpress/element';
+import { addAction, removeAction, didFilter } from '@finpress/hooks';
 
 /**
- * A generic hook to handle WordPress filter hooks with race condition mitigation.
+ * A generic hook to handle finpress filter hooks with race condition mitigation.
  * This hook ensures that components re-render when new hooks are dynamically added
  * after the initial filter application, preventing race conditions.
  *
- * @param filterName   The name of the WordPress filter hook to watch
+ * @param filterName   The name of the finpress filter hook to watch
  * @param getterFn     Function that applies the filter and returns the filtered value
  * @param dependencies Optional dependency array for re-computation
  * @return The current filtered value

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { CheckboxControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { CheckboxControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 import { Extension } from '@fincommerce/data';
 import { Link } from '@fincommerce/components';
@@ -11,7 +11,7 @@ import {
 	Children,
 	isValidElement,
 	cloneElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

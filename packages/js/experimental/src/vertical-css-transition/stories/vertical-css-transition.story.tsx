@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment, useState } from '@wordpress/element';
+import { createElement, Fragment, useState } from '@finpress/element';
 import { withConsole } from '@storybook/addon-console';
 import { Meta, Story } from '@storybook/react';
 

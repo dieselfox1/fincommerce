@@ -18,7 +18,7 @@ if ( ! WP_ENV_CONFIG_PATH ) {
 	process.exit( 1 );
 }
 
-const artifactUrl = `https://github.com/woocommerce/woocommerce/releases/download/${ RELEASE_TAG }/${ ARTIFACT_NAME }`;
+const artifactUrl = `https://github.com/fincommerce/fincommerce/releases/download/${ RELEASE_TAG }/${ ARTIFACT_NAME }`;
 
 const configPath = `${ WP_ENV_CONFIG_PATH }/.wp-env.json`;
 console.log( `Reading ${ configPath }` );
@@ -39,7 +39,7 @@ if ( wpEnvConfig.env?.tests?.plugins ) {
 	};
 }
 
-const entriesToReplace = [ '.', '../woocommerce' ];
+const entriesToReplace = [ '.', '../fincommerce' ];
 
 for ( const entry of entriesToReplace ) {
 	// Search and replace in root plugins

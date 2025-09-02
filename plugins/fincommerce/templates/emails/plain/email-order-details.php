@@ -35,7 +35,7 @@ if ( $email_improvements_enabled ) {
 	/* translators: %1$s: Order ID. %2$s: Order date */
 	echo wp_kses_post( wc_strtoupper( sprintf( esc_html__( '[Order #%1$s] (%2$s)', 'fincommerce' ), $order->get_order_number(), wc_format_datetime( $order->get_date_created() ) ) ) ) . "\n";
 }
-echo "\n" . wc_get_email_order_items( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+echo "\n" . wc_get_email_order_items( // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	$order,
 	array(
 		'show_sku'      => $sent_to_admin,

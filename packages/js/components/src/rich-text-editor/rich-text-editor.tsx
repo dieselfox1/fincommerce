@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { BaseControl, Popover, SlotFillProvider } from '@wordpress/components';
-import { BlockEditorProvider } from '@wordpress/block-editor';
-import { BlockInstance } from '@wordpress/blocks';
-import { createElement, useEffect, useState, useRef } from '@wordpress/element';
+import { BaseControl, Popover, SlotFillProvider } from '@finpress/components';
+import { BlockEditorProvider } from '@finpress/block-editor';
+import { BlockInstance } from '@finpress/blocks';
+import { createElement, useEffect, useState, useRef } from '@finpress/element';
 import { debounce } from 'lodash';
-import { uploadMedia } from '@wordpress/media-utils';
+import { uploadMedia } from '@finpress/media-utils';
 import { useUser } from '@fincommerce/data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { ShortcutProvider } from '@wordpress/keyboard-shortcuts';
+import { ShortcutProvider } from '@finpress/keyboard-shortcuts';
 
 /**
  * Internal dependencies
@@ -99,7 +99,7 @@ export const RichTextEditor: React.VFC< RichTextEditorProps > = ( {
 							placeholder={ placeholder }
 						/>
 					</ShortcutProvider>
-					{ /* @ts-expect-error Popover is missing Slot type: https://github.com/WordPress/gutenberg/blob/dd042a265afc0d4679858220441dd45c98b27ed3/packages/components/src/popover/index.tsx#L521 */ }
+					{ /* @ts-expect-error Popover is missing Slot type: https://github.com/finpress/gutenberg/blob/dd042a265afc0d4679858220441dd45c98b27ed3/packages/components/src/popover/index.tsx#L521 */ }
 					<Popover.Slot />
 				</BlockEditorProvider>
 			</SlotFillProvider>

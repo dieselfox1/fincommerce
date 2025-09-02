@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import domReady from '@wordpress/dom-ready';
+import { dispatch } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import domReady from '@finpress/dom-ready';
 import { getAdminLink } from '@fincommerce/settings';
 import { queueRecordEvent } from '@fincommerce/tracks';
 

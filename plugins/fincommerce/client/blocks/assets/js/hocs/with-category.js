@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import { createHigherOrderComponent } from '@wordpress/compose';
+import { Component } from '@finpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
 import { getCategory } from '@fincommerce/editor-components/utils';
 
 /**

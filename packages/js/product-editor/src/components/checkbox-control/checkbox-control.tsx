@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { CheckboxControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { CheckboxControl } from '@finpress/components';
 import { __experimentalTooltip as Tooltip } from '@fincommerce/components';
-import { Icon, help } from '@wordpress/icons';
+import { Icon, help } from '@finpress/icons';
 
 /**
  * Internal dependencies

@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useBlockProps,
 	RichText,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { CheckboxControl } from '@fincommerce/blocks-components';
 import {
 	PanelBody,
 	ToggleControl,
 	Notice,
 	ExternalLink,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { PRIVACY_URL, TERMS_URL } from '@fincommerce/block-settings';
 import { ADMIN_URL } from '@fincommerce/settings';
 import clsx from 'clsx';

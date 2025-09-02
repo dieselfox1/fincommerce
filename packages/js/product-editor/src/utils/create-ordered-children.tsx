@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { isValidElement } from 'react';
-import { Fill } from '@wordpress/components';
-import { cloneElement, createElement } from '@wordpress/element';
+import { Fill } from '@finpress/components';
+import { cloneElement, createElement } from '@finpress/element';
 
 type ChildrenProps = {
 	order: number;

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import GridIcon from 'gridicons';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export default [
 	{

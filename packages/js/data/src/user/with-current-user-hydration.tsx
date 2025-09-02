@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { useSelect, useDispatch } from '@finpress/data';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -22,7 +22,7 @@ export const withCurrentUserHydration = ( currentUser: WCUser ) =>
 		React.ComponentType< Record< string, unknown > >
 	>(
 		( OriginalComponent ) => ( props ) => {
-			// Use currentUser to hydrate calls to @wordpress/core-data's getCurrentUser().
+			// Use currentUser to hydrate calls to @finpress/core-data's getCurrentUser().
 
 			const shouldHydrate = useSelect( ( select ) => {
 				if ( ! currentUser ) {

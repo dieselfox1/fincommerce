@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getBlockTypes } from '@wordpress/blocks';
+import { getBlockTypes } from '@finpress/blocks';
 
 /**
  * Returns an array of allowed block names excluding the specified blocks.

@@ -2,26 +2,26 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 import {
 	customerAccountStyle,
 	customerAccountStyleAlt,
 	customerAccountStyleLine,
 } from '@fincommerce/icons';
-import { InspectorControls } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
-import type { BlockAttributes } from '@wordpress/blocks';
+import { InspectorControls } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
+import type { BlockAttributes } from '@finpress/blocks';
 import { getSetting } from '@fincommerce/settings';
-import { createInterpolateElement } from '@wordpress/element';
+import { createInterpolateElement } from '@finpress/element';
 import {
 	PanelBody,
 	SelectControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 	ExternalLink,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

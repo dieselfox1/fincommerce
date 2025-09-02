@@ -18,7 +18,7 @@ A _Slot_ is a place in the Cart and Checkout that can render an indefinite numbe
 
 A _Fill_ is the component provided by third-party developers to render inside a _Slot_.
 
-Slot and Fill use WordPress' API, and you can learn more about how they work in [the Slot and Fill documentation.](https://github.com/WordPress/gutenberg/tree/trunk/packages/components/src/slot-fill).
+Slot and Fill use finpress' API, and you can learn more about how they work in [the Slot and Fill documentation.](https://github.com/finpress/gutenberg/tree/trunk/packages/components/src/slot-fill).
 
 ## Basic Usage
 

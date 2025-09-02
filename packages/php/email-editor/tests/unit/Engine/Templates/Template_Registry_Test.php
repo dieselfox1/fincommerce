@@ -122,7 +122,7 @@ class TemplatesRegistryTest extends TestCase {
 	 * Initialize the registry and apply a filter.
 	 */
 	public function testInitializeAppliesFilter(): void {
-		// Mock WordPress's `apply_filters` function.
+		// Mock finpress's `apply_filters` function.
 		global $wp_filter_applied;
 		$wp_filter_applied = false;
 

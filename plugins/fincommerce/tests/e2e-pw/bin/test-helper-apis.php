@@ -109,7 +109,7 @@ function enable_experimental_features( $features ) {
 add_filter( 'fincommerce_admin_get_feature_config', 'enable_experimental_features' );
 
 /**
- * Update a WordPress option.
+ * Update a finpress option.
  * @param WP_REST_Request $request
  * @return WP_REST_Response
  */
@@ -131,7 +131,7 @@ function api_update_option( WP_REST_Request $request ) {
 }
 
 /**
- * Delete a WordPress option.
+ * Delete a finpress option.
  *
  * @param WP_REST_Request $request
  * @return WP_REST_Response

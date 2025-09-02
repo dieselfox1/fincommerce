@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { useQueryStateByKey } from '@fincommerce/base-context/hooks';
 import { getSetting, getSettingWithCoercion } from '@fincommerce/settings';
-import { useMemo, useEffect, useState } from '@wordpress/element';
+import { useMemo, useEffect, useState } from '@finpress/element';
 import clsx from 'clsx';
 import { Label } from '@fincommerce/blocks-components';
 import {
@@ -17,7 +17,7 @@ import {
 import { getUrlParameter } from '@fincommerce/utils';
 import FilterTitlePlaceholder from '@fincommerce/base-components/filter-placeholder';
 import { useIsMounted } from '@fincommerce/base-hooks';
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 
 /**
  * Internal dependencies

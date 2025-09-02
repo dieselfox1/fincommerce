@@ -197,7 +197,7 @@ class OrdersTableRefundDataStore extends OrdersTableDataStore {
 		return sprintf(
 		/* translators: %s: Order date */
 			__( 'Refund &ndash; %s', 'fincommerce' ),
-			( new \DateTime( 'now' ) )->format( _x( 'M d, Y @ h:i A', 'Order date parsed by DateTime::format', 'fincommerce' ) ) // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.UnorderedPlaceholdersText
+			( new \DateTime( 'now' ) )->format( _x( 'M d, Y @ h:i A', 'Order date parsed by DateTime::format', 'fincommerce' ) ) // phpcs:ignore finpress.WP.I18n.MissingTranslatorsComment, finpress.WP.I18n.UnorderedPlaceholdersText
 		);
 	}
 

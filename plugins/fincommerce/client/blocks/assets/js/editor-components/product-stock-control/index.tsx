@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
-import { useCallback, useState, useEffect } from '@wordpress/element';
-import { ToggleControl } from '@wordpress/components';
+import { useCallback, useState, useEffect } from '@finpress/element';
+import { ToggleControl } from '@finpress/components';
 
 export interface ProductStockControlProps {
 	value: Array< string >;

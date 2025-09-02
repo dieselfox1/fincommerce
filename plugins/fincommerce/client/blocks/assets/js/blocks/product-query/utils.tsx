@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { store as WP_BLOCKS_STORE } from '@wordpress/blocks';
+import { useSelect } from '@finpress/data';
+import { store as WP_BLOCKS_STORE } from '@finpress/blocks';
 import { isSiteEditorPage } from '@fincommerce/utils';
 
 /**

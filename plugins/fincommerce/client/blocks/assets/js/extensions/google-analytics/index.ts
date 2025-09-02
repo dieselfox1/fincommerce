@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { addAction } from '@wordpress/hooks';
+import { __ } from '@finpress/i18n';
+import { addAction } from '@finpress/hooks';
 import type { ProductResponseItem, CartResponseItem } from '@fincommerce/types';
 
 /**

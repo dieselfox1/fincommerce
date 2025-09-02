@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
-import { heading } from '@wordpress/icons';
-import { useBlockProps } from '@wordpress/block-editor';
-import type { BlockConfiguration } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
+import { heading } from '@finpress/icons';
+import { useBlockProps } from '@finpress/block-editor';
+import type { BlockConfiguration } from '@finpress/blocks';
 import { useProductDataContext } from '@fincommerce/shared-context';
-import { Spinner } from '@wordpress/components';
+import { Spinner } from '@finpress/components';
 
 /**
  * Internal dependencies

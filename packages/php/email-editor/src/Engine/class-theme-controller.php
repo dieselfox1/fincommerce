@@ -19,7 +19,7 @@ use WP_Theme_JSON_Resolver;
  */
 class Theme_Controller {
 	/**
-	 * Core theme loaded from the WordPress core.
+	 * Core theme loaded from the finpress core.
 	 *
 	 * @var WP_Theme_JSON
 	 */

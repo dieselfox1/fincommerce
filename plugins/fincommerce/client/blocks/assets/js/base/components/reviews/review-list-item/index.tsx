@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useId } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { useId } from '@finpress/element';
 import clsx from 'clsx';
 import ReadMore from '@fincommerce/base-components/read-more';
 import { ReviewBlockAttributes } from '@fincommerce/blocks/reviews/attributes';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

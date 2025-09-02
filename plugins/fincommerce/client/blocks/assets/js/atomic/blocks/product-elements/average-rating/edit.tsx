@@ -5,8 +5,8 @@ import {
 	AlignmentToolbar,
 	BlockControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import type { BlockEditProps } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import type { BlockEditProps } from '@finpress/blocks';
 
 /**
  * Internal dependencies

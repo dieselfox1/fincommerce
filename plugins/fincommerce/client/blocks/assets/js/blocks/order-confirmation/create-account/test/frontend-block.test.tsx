@@ -3,7 +3,7 @@
  */
 import { act, render, fireEvent, waitFor } from '@testing-library/react';
 import { getSetting } from '@fincommerce/settings';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies
@@ -21,9 +21,9 @@ jest.mock( '@fincommerce/settings', () => ( {
 		),
 } ) );
 
-jest.mock( '@wordpress/i18n', () => ( {
+jest.mock( '@finpress/i18n', () => ( {
 	__esModule: true,
-	...jest.requireActual( '@wordpress/i18n' ),
+	...jest.requireActual( '@finpress/i18n' ),
 	__: jest.fn( ( msg ) => msg ),
 } ) );
 
@@ -363,6 +363,6 @@ describe( 'CreateAccountFrontendBlock - Localization', () => {
 		} );
 
 		// Clean up the mock
-		jest.unmock( '@wordpress/i18n' );
+		jest.unmock( '@finpress/i18n' );
 	} );
 } );

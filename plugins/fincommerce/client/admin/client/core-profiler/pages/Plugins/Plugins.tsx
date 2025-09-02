@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { Extension, ExtensionList } from '@fincommerce/data';
-import { useState, useMemo } from '@wordpress/element';
-import { useMediaQuery } from '@wordpress/compose';
+import { useState, useMemo } from '@finpress/element';
+import { useMediaQuery } from '@finpress/compose';
 import clsx from 'clsx';
 
 /**

@@ -127,7 +127,7 @@ const config: Config = {
 						},
 						{
 							label: 'Community Forum',
-							href: 'https://wordpress.org/support/plugin/fincommerce/',
+							href: 'https://finpress.org/support/plugin/fincommerce/',
 						},
 						{
 							label: 'Code of Conduct',

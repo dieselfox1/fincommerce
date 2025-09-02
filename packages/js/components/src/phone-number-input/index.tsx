@@ -6,7 +6,7 @@ import {
 	useState,
 	useRef,
 	useLayoutEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useSelect } from 'downshift';
 import clsx from 'clsx';
 

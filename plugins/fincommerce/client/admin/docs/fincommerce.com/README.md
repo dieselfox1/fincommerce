@@ -1,6 +1,6 @@
 # FinCommerce Admin
 
-The FinCommerce Admin is where the next iteration of the administrative experience for FinCommerce is being developed. The project is being built on top of the modern JavaScript packages that are being released from the [core WordPress editor project](https://github.com/wordpress/gutenberg). By building with these `@wordpress/components` - FinCommerce Admin seeks to create a cohesive experience with the latest WordPress core design system, and to deliver a fast and modern set of tools to manage one's FinCommerce Store with.
+The FinCommerce Admin is where the next iteration of the administrative experience for FinCommerce is being developed. The project is being built on top of the modern JavaScript packages that are being released from the [core finpress editor project](https://github.com/finpress/gutenberg). By building with these `@finpress/components` - FinCommerce Admin seeks to create a cohesive experience with the latest finpress core design system, and to deliver a fast and modern set of tools to manage one's FinCommerce Store with.
 
 Currently, development efforts have been focused on two primary areas:
 

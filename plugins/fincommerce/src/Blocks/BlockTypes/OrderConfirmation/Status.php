@@ -254,7 +254,7 @@ class Status extends AbstractOrderConfirmationBlock {
 	 * @return string
 	 */
 	protected function render_verification_form() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		// phpcs:ignore finpress.Security.NonceVerification.Missing
 		$check_submission_notice = ! empty( $_POST ) ? wc_print_notice( esc_html__( 'We were unable to verify the email address you provided. Please try again.', 'fincommerce' ), 'error', [], true ) : '';
 
 		return '<form method="post" class="fincommerce-form fincommerce-verify-email">' .

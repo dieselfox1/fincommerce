@@ -1,24 +1,24 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
 import {
 	useBlockProps,
 	InspectorControls,
 	RichText,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { useProduct } from '@fincommerce/entities';
 import {
 	RangeControl,
 	ToggleControl,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanel as ToolsPanel,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanelItem as ToolsPanelItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

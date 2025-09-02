@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import '@wordpress/core-data';
+import '@finpress/core-data';
 
 // Export store names
 export { SETTINGS_STORE_NAME } from './settings';

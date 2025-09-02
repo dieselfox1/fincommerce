@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import './wordpress-blocks';
-import './wordpress-core-data';
-import './wordpress-data';
-import './wordpress-editor';
-import './wordpress-hooks';
-import './wordpress-i18n';
-import './wordpress-preferences';
+import './finpress-blocks';
+import './finpress-core-data';
+import './finpress-data';
+import './finpress-editor';
+import './finpress-hooks';
+import './finpress-i18n';
+import './finpress-preferences';

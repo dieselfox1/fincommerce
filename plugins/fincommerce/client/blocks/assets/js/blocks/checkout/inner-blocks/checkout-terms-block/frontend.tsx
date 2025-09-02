@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 import { CheckboxControl } from '@fincommerce/blocks-components';
 import { useCheckoutSubmit } from '@fincommerce/base-context/hooks';
-import { withInstanceId } from '@wordpress/compose';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { withInstanceId } from '@finpress/compose';
+import { useDispatch, useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 
 /**

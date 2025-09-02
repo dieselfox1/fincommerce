@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
-import { useMemo } from '@wordpress/element';
+import { InspectorControls } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { useMemo } from '@finpress/element';
 import { EditorBlock } from '@fincommerce/types';
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 import {
 	revertMigration,
 	getUpgradeStatus,
@@ -16,9 +16,9 @@ import { recordEvent } from '@fincommerce/tracks';
 import { CesFeedbackButton } from '@fincommerce/editor-components/ces-feedback-button';
 import {
 	PanelBody,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanel as ToolsPanel,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { createElement, useEffect, Fragment } from '@wordpress/element';
+import { createElement, useEffect, Fragment } from '@finpress/element';
 import { ReactElement, ReactNode, useMemo } from 'react';
-import { NavigableMenu, Slot } from '@wordpress/components';
+import { NavigableMenu, Slot } from '@finpress/components';
 import { Product } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { select } from '@wordpress/data';
-import { useEntityProp } from '@wordpress/core-data';
+import { select } from '@finpress/data';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

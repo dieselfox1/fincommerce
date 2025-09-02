@@ -71,7 +71,7 @@ class WC_Widget_Brand_Description extends WP_Widget {
 	 * @param array $instance The settings for the particular instance of the widget.
 	 */
 	public function widget( $args, $instance ) {
-		extract( $args ); // phpcs:ignore WordPress.PHP.DontExtract.extract_extract
+		extract( $args ); // phpcs:ignore finpress.PHP.DontExtract.extract_extract
 
 		if ( ! is_tax( 'product_brand' ) ) {
 			return;
@@ -86,7 +86,7 @@ class WC_Widget_Brand_Description extends WP_Widget {
 
 		$thumbnail = wc_get_brand_thumbnail_url( $term->term_id, 'large' );
 
-		echo $before_widget . $before_title . $term->name . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo $before_widget . $before_title . $term->name . $after_title; // phpcs:ignore finpress.Security.EscapeOutput
 
 		wc_get_template(
 			'widgets/brand-description.php',
@@ -98,7 +98,7 @@ class WC_Widget_Brand_Description extends WP_Widget {
 			WC()->plugin_path() . '/templates/brands/'
 		);
 
-		echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo $after_widget; // phpcs:ignore finpress.Security.EscapeOutput
 	}
 
 	/**

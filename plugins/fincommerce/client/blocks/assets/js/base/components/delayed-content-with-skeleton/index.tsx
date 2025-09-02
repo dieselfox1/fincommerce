@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState, useEffect } from '@wordpress/element';
-import { useReducedMotion } from '@wordpress/compose';
+import { useState, useEffect } from '@finpress/element';
+import { useReducedMotion } from '@finpress/compose';
 import type { ReactNode } from 'react';
 
 export interface DelayedContentWithSkeletonProps {

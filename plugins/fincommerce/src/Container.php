@@ -17,7 +17,7 @@ use Automattic\FinCommerce\Internal\DependencyManagement\RuntimeContainer;
  * with type hints. If an instance of the container itself is needed, the type hint to use is \Psr\Container\ContainerInterface.
  *
  * Classes in the `src` directory should interact with anything outside (especially code in the `includes` directory
- * and WordPress functions) by using the classes in the `Proxies` directory. The exception is idempotent
+ * and finpress functions) by using the classes in the `Proxies` directory. The exception is idempotent
  * functions (e.g. `wp_parse_url`), those can be used directly.
  *
  * Classes in the `includes` directory should use the `wc_get_container` function to get the instance of the container when

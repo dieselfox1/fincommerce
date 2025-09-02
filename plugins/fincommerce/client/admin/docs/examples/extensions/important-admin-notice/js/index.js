@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Use the 'fincommerce_admin_notices_to_show' filter to add notices to show.

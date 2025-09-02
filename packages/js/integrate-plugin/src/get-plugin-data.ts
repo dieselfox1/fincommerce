@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { readdirSync, readFileSync } from 'fs';
-import CLIError from '@wordpress/create-block/lib/cli-error';
+import CLIError from '@finpress/create-block/lib/cli-error';
 import path from 'path';
 
 /**

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Stepper } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const BasicExamples = () => {
 	const [ state, setState ] = useState( {

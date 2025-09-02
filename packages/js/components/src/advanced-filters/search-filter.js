@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, Component, Fragment } from '@wordpress/element';
-import { SelectControl } from '@wordpress/components';
+import { createElement, Component, Fragment } from '@finpress/element';
+import { SelectControl } from '@finpress/components';
 import { getIdsFromQuery } from '@fincommerce/navigation';
 import { find, isEqual } from 'lodash';
 import PropTypes from 'prop-types';

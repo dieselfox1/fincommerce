@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { __, sprintf } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
+import { Icon, chevronDown } from '@finpress/icons';
 import { usePrevious, useShallowEqual } from '@fincommerce/base-hooks';
 import {
 	useQueryStateByKey,
@@ -17,17 +17,17 @@ import {
 	useState,
 	useMemo,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { CheckboxList } from '@fincommerce/blocks-components';
 import FilterSubmitButton from '@fincommerce/base-components/filter-submit-button';
 import FilterResetButton from '@fincommerce/base-components/filter-reset-button';
 import FilterTitlePlaceholder from '@fincommerce/base-components/filter-placeholder';
 import Label from '@fincommerce/base-components/filter-element-label';
 import FormTokenField from '@fincommerce/base-components/form-token-field';
-import isShallowEqual from '@wordpress/is-shallow-equal';
-import { decodeEntities } from '@wordpress/html-entities';
+import isShallowEqual from '@finpress/is-shallow-equal';
+import { decodeEntities } from '@finpress/html-entities';
 import { isBoolean, objectHasProp } from '@fincommerce/types';
-import { addQueryArgs, removeQueryArgs } from '@wordpress/url';
+import { addQueryArgs, removeQueryArgs } from '@finpress/url';
 import {
 	changeUrl,
 	PREFIX_QUERY_ARG_FILTER_TYPE,

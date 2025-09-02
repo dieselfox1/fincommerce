@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl } from '@wordpress/components';
-import { Icon, postComments } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { PanelBody, ToggleControl } from '@finpress/components';
+import { Icon, postComments } from '@finpress/icons';
 
 /**
  * Internal dependencies

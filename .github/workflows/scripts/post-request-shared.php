@@ -2,10 +2,10 @@
 /**
  * Common code for the post-merge GitHub action scripts.
  *
- * @package WooCommerce/GithubActions
+ * @package fincommerce/GithubActions
  */
 
-// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions
+// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped, finpress.WP.AlternativeFunctions
 
 global $repo_owner, $repo_name, $github_token, $graphql_api_url;
 
@@ -281,4 +281,4 @@ function do_graphql_api_request( $body, $is_mutation = false ) {
 	return is_string( $result ) ? json_decode( $result, true ) : $result;
 }
 
-// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions
+// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped, finpress.WP.AlternativeFunctions

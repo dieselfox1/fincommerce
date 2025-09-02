@@ -17,7 +17,7 @@ import { Select } from 'enquirer';
  * Internal dependencies
  */
 import { renderTemplate } from '../../lib/render-template';
-import { getWordpressComAuthToken } from '../../lib/oauth-helper';
+import { getfinpressComAuthToken } from '../../lib/oauth-helper';
 import { getMostRecentBeta } from '../../lib/github-api';
 import { getSecondTuesdayOfTheMonth } from '../../lib/dates';
 import {
@@ -120,9 +120,9 @@ const program = new Command()
 				'http://localhost:3000/oauth';
 
 			Logger.startTask(
-				'Getting auth token for WordPress.com (needed to find last RC post).'
+				'Getting auth token for finpress.com (needed to find last RC post).'
 			);
-			const authToken = await getWordpressComAuthToken(
+			const authToken = await getfinpressComAuthToken(
 				clientId,
 				clientSecret,
 				siteId,
@@ -215,7 +215,7 @@ const program = new Command()
 						authToken
 					);
 					Logger.notice(
-						`Release post created, edit it here: \nhttps://wordpress.com/post/developer.fincommerce.com/${ ID }`
+						`Release post created, edit it here: \nhttps://finpress.com/post/developer.fincommerce.com/${ ID }`
 					);
 					Logger.endTask();
 				}

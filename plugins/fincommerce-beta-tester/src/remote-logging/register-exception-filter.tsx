@@ -4,9 +4,9 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

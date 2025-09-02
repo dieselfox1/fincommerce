@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { usePrevious, useShallowEqual } from '@fincommerce/base-hooks';
 import {
 	useCollection,
@@ -9,14 +9,14 @@ import {
 	useQueryStateByContext,
 	useCollectionData,
 } from '@fincommerce/base-context/hooks';
-import { useCallback, useEffect, useState, useMemo } from '@wordpress/element';
+import { useCallback, useEffect, useState, useMemo } from '@finpress/element';
 import Label from '@fincommerce/base-components/filter-element-label';
 import FilterResetButton from '@fincommerce/base-components/filter-reset-button';
 import FilterSubmitButton from '@fincommerce/base-components/filter-submit-button';
-import isShallowEqual from '@wordpress/is-shallow-equal';
-import { decodeEntities } from '@wordpress/html-entities';
+import isShallowEqual from '@finpress/is-shallow-equal';
+import { decodeEntities } from '@finpress/html-entities';
 import { getSettingWithCoercion } from '@fincommerce/settings';
-import { getQueryArgs, removeQueryArgs } from '@wordpress/url';
+import { getQueryArgs, removeQueryArgs } from '@finpress/url';
 import {
 	AttributeQuery,
 	AttributeTerm,
@@ -26,7 +26,7 @@ import {
 	objectHasProp,
 	isObject,
 } from '@fincommerce/types';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { Icon, chevronDown } from '@finpress/icons';
 import {
 	changeUrl,
 	PREFIX_QUERY_ARG_FILTER_TYPE,

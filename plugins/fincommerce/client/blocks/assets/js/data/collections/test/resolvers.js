@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { controls } from '@wordpress/data';
+import { controls } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -12,7 +12,7 @@ import { STORE_KEY as SCHEMA_STORE_KEY } from '@fincommerce/block-library/assets
 import { STORE_KEY } from '@fincommerce/block-library/assets/js/data/collections/constants';
 import { apiFetchWithHeadersControl } from '@fincommerce/block-library/assets/js/data/shared-controls';
 
-jest.mock( '@wordpress/data' );
+jest.mock( '@finpress/data' );
 
 describe( 'getCollection', () => {
 	describe( 'yields with expected responses', () => {

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

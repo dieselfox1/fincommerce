@@ -160,7 +160,7 @@ class DataStore extends CouponsDataStore implements DataStoreInterface {
 		$this->update_sql_query_params( $query_args, $totals_query, $intervals_query );
 
 		$db_intervals = $wpdb->get_col(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->interval_query->get_query_statement()
 		);
 
@@ -168,7 +168,7 @@ class DataStore extends CouponsDataStore implements DataStoreInterface {
 
 		$this->total_query->add_sql_clause( 'select', $selections );
 		$totals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->total_query->get_query_statement(),
 			ARRAY_A
 		);
@@ -204,7 +204,7 @@ class DataStore extends CouponsDataStore implements DataStoreInterface {
 		}
 
 		$intervals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->interval_query->get_query_statement(),
 			ARRAY_A
 		);

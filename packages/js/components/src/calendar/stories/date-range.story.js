@@ -3,7 +3,7 @@
  */
 import moment from 'moment';
 import { DateRange, H, Section } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const dateFormat = 'MM/DD/YYYY';
 

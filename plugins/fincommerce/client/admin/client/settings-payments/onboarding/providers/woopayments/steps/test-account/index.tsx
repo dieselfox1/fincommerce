@@ -2,10 +2,10 @@
  * External dependencies
  */
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 import { Loader } from '@fincommerce/onboarding';
-import { __ } from '@wordpress/i18n';
-import { Notice } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Notice } from '@finpress/components';
 import { navigateTo, getNewPath } from '@fincommerce/navigation';
 
 /**

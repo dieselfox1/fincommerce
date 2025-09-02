@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { lazy, useState, useEffect, useCallback } from '@wordpress/element';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { lazy, useState, useEffect, useCallback } from '@finpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
 import { uniqueId, find } from 'lodash';
-import { Icon, help as helpIcon, external } from '@wordpress/icons';
+import { Icon, help as helpIcon, external } from '@finpress/icons';
 import { STORE_KEY as CES_STORE_KEY } from '@fincommerce/customer-effort-score';
 import { H, Section } from '@fincommerce/components';
 import { onboardingStore, optionsStore, useUser } from '@fincommerce/data';

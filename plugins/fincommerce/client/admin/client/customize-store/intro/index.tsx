@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { chevronLeft } from '@wordpress/icons';
+import { useState } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { chevronLeft } from '@finpress/icons';
 import interpolateComponents from '@automattic/interpolate-components';
 import { getNewPath } from '@fincommerce/navigation';
 import { Sender } from 'xstate';
-import { Notice, Card, CardHeader, CardFooter } from '@wordpress/components';
+import { Notice, Card, CardHeader, CardFooter } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
 
 /**

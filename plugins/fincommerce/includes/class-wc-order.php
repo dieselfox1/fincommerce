@@ -1548,7 +1548,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Set date completed.
 	 *
-	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 * @throws WC_Data_Exception Throws exception when invalid data is found.
 	 */
 	public function set_date_completed( $date = null ) {
@@ -1558,7 +1558,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Set date paid.
 	 *
-	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 * @throws WC_Data_Exception Throws exception when invalid data is found.
 	 */
 	public function set_date_paid( $date = null ) {

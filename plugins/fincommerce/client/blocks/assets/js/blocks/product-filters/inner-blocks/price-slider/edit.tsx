@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { PanelBody, ToggleControl, Disabled } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { PanelBody, ToggleControl, Disabled } from '@finpress/components';
 import { formatPrice, getCurrency } from '@fincommerce/price-format';
 import {
 	useBlockProps,
@@ -11,12 +11,12 @@ import {
 	withColors,
 
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

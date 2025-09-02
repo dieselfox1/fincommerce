@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { addAction } from '@wordpress/hooks';
+import { addAction } from '@finpress/hooks';
 
 /**
  * Internal dependencies
@@ -21,7 +21,7 @@ const removeDefaultMoveToTrashActionAddCustom = ( postType: string ) => {
 };
 
 function modifyMoveToTrashAction() {
-	// Available in WordPress 6.8+
+	// Available in finpress 6.8+
 	addAction(
 		'core.registerPostTypeSchema',
 		'fincommerce-email-editor/modify-move-to-trash-action',
@@ -30,7 +30,7 @@ function modifyMoveToTrashAction() {
 		}
 	);
 
-	// Support for WordPress 6.7+
+	// Support for finpress 6.7+
 	addAction(
 		'core.registerPostTypeActions',
 		'fincommerce-email-editor/modify-move-to-trash-action',

@@ -101,7 +101,7 @@ class Coupons {
 		global $parent_file, $post_type;
 
 		if ( $post_type === 'shop_coupon' ) {
-			$parent_file = 'fincommerce-marketing'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride
+			$parent_file = 'fincommerce-marketing'; // phpcs:ignore finpress.WP.GlobalVariablesOverride
 		}
 	}
 

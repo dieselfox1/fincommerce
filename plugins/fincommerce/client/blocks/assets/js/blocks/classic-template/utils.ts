@@ -6,7 +6,7 @@ import {
 	type BlockInstance,
 	getBlockType,
 	createBlock,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

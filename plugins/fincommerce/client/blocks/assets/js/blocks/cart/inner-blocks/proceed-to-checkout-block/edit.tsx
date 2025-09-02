@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useRef } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { useRef } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import EditableButton from '@fincommerce/editor-components/editable-button';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
 import PageSelector from '@fincommerce/editor-components/page-selector';
 import { CART_PAGE_ID } from '@fincommerce/block-settings';
 

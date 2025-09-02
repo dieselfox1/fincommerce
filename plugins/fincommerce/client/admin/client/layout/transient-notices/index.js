@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 import clsx from 'clsx';
 import { WooFooterItem } from '@fincommerce/admin-layout';
 import { optionsStore, userStore } from '@fincommerce/data';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

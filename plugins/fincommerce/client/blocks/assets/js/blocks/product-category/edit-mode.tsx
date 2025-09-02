@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Placeholder } from '@wordpress/components';
-import { Icon, file } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { Button, Placeholder } from '@finpress/components';
+import { Icon, file } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import ProductCategoryControl from '@fincommerce/editor-components/product-category-control';
 
 /**

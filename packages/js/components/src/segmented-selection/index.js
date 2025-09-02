@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Component } from '@wordpress/element';
+import { createElement, Component } from '@finpress/element';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { partial, uniqueId } from 'lodash';

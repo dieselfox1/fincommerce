@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { applyFilters } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+import { useEffect, useState } from '@finpress/element';
+import { applyFilters } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 import { TourKit, TourKitTypes } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
 

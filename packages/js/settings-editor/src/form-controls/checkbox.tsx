@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { CheckboxControl } from '@wordpress/components';
-import type { DataFormControlProps } from '@wordpress/dataviews';
+import { createElement, Fragment } from '@finpress/element';
+import { CheckboxControl } from '@finpress/components';
+import type { DataFormControlProps } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

@@ -3,7 +3,7 @@
 /**
  * External dependencies
  */
-import React, { createElement } from '@wordpress/element';
+import React, { createElement } from '@finpress/element';
 import { Meta, Story } from '@storybook/react';
 /**
  * Internal dependencies

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useBlockProps, PlainText } from '@wordpress/block-editor';
-import { BlockEditProps } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { useBlockProps, PlainText } from '@finpress/block-editor';
+import { BlockEditProps } from '@finpress/blocks';
 
 const arrowMap = {
 	none: '',

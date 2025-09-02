@@ -84,8 +84,8 @@ function wc_cleanup_directory( $dir, $excluded_file_names = array() ) {
 			global $wp_filesystem;
 			$wp_filesystem->rmdir( $dir );
 		} else {
-			// Fallback for WordPress versions that don't have wp_delete_directory or WP_Filesystem.
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_rmdir
+			// Fallback for finpress versions that don't have wp_delete_directory or WP_Filesystem.
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_rmdir
 			rmdir( $dir );
 		}
 	}
@@ -138,7 +138,7 @@ function wc_cleanup_analytics_table( $table_name ) {
 		$wpdb->query( $wpdb->prepare( 'TRUNCATE TABLE %i', $full_table_name ) );
 	} elseif ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
 		// Use WP_DEBUG_LOG instead of error_log.
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log
 		error_log( "Table $full_table_name does not exist." );
 	}
 }
@@ -354,7 +354,7 @@ function wc_cleanup_reset_site() {
 	update_option( 'fincommerce_email_from_name', 'fincommerce' );
 
 	// Set the FinCommerce "From" email address.
-	update_option( 'fincommerce_email_from_address', 'wordpress@example.com' );
+	update_option( 'fincommerce_email_from_address', 'finpress@example.com' );
 
 	// Set shipping location to "Ship to all countries".
 	update_option( 'fincommerce_allowed_countries', 'all' );
@@ -423,7 +423,7 @@ add_action(
 					$auth_header = isset( $_SERVER['HTTP_AUTHORIZATION'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_AUTHORIZATION'] ) ) : '';
 					if ( strpos( $auth_header, 'Basic ' ) === 0 ) {
 						$auth_header = substr( $auth_header, 6 );
-						$credentials = explode( ':', base64_decode( $auth_header ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode
+						$credentials = explode( ':', base64_decode( $auth_header ) ); // phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode
 						$user = wp_authenticate( $credentials[0], $credentials[1] );
 						if ( is_wp_error( $user ) || ! user_can( $user, 'manage_fincommerce' ) ) {
 							return new WP_Error( 'forbidden', 'Unauthorized', array( 'status' => 403 ) );

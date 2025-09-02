@@ -133,7 +133,7 @@ class CLIRunner {
 	 * @return int The number of orders to be migrated.*
 	 */
 	public function count_unmigrated( $args = array(), $assoc_args = array() ): int {
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$order_count = $this->synchronizer->get_current_orders_pending_sync_count();
 
 		$assoc_args = wp_parse_args(
@@ -161,7 +161,7 @@ class CLIRunner {
 	}
 
 	/**
-	 * Sync order data between the custom order tables and the core WordPress post tables.
+	 * Sync order data between the custom order tables and the core finpress post tables.
 	 *
 	 * ## OPTIONS
 	 *
@@ -414,7 +414,7 @@ class CLIRunner {
 				)
 			);
 
-			// phpcs:disable WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Inputs are prepared.
+			// phpcs:disable finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, finpress.DB.PreparedSQL.InterpolatedNotPrepared -- Inputs are prepared.
 			$order_ids = $wpdb->get_col(
 				$wpdb->prepare(
 					"SELECT ID FROM $wpdb->posts WHERE post_type in ( $order_types_pl ) AND ID >= %d AND ID <= %d ORDER BY ID ASC LIMIT %d",
@@ -586,7 +586,7 @@ class CLIRunner {
 
 		$order_types_placeholder = implode( ',', array_fill( 0, count( $order_types ), '%s' ) );
 
-		// phpcs:disable WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Inputs are prepared.
+		// phpcs:disable finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, finpress.DB.PreparedSQL.InterpolatedNotPrepared -- Inputs are prepared.
 		$order_count = (int) $wpdb->get_var(
 			$wpdb->prepare(
 				"SELECT COUNT(*) FROM $wpdb->posts WHERE post_type in ($order_types_placeholder) AND ID >= %d AND ID <= %d",
@@ -642,7 +642,7 @@ class CLIRunner {
 		$order_ids_placeholder        = implode( ', ', array_fill( 0, count( $order_ids ), '%d' ) );
 		$meta_table                   = OrdersTableDataStore::get_meta_table_name();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- table names are hardcoded, orders_ids and excluded_columns are prepared.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- table names are hardcoded, orders_ids and excluded_columns are prepared.
 		$query       = $wpdb->prepare(
 			"
 SELECT {$wpdb->postmeta}.post_id as entity_id, {$wpdb->postmeta}.meta_key, {$wpdb->postmeta}.meta_value
@@ -662,7 +662,7 @@ ORDER BY {$wpdb->postmeta}.post_id ASC, {$wpdb->postmeta}.meta_key ASC;
 
 		$normalized_source_data = $this->normalize_raw_meta_data( $source_data );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- table names are hardcoded, orders_ids and excluded_columns are prepared.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- table names are hardcoded, orders_ids and excluded_columns are prepared.
 		$migrated_query = $wpdb->prepare(
 			"
 SELECT $meta_table.order_id as entity_id, $meta_table.meta_key, $meta_table.meta_value
@@ -689,7 +689,7 @@ ORDER BY $meta_table.order_id ASC, $meta_table.meta_key ASC;
 					}
 					$failed_ids[ $order_id ][] = array(
 						'order_id'         => $order_id,
-						'meta_key'         => $meta_key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Not a meta query.
+						'meta_key'         => $meta_key, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key -- Not a meta query.
 						'orig_meta_values' => $values,
 						'new_meta_values'  => $migrated_meta_values,
 					);
@@ -714,7 +714,7 @@ ORDER BY $meta_table.order_id ASC, $meta_table.meta_key ASC;
 				$clubbed_data[ $row['entity_id'] ] = array();
 			}
 			if ( ! isset( $clubbed_data[ $row['entity_id'] ][ $row['meta_key'] ] ) ) {
-				$clubbed_data[ $row['entity_id'] ][ $row['meta_key'] ] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Not a meta query.
+				$clubbed_data[ $row['entity_id'] ][ $row['meta_key'] ] = array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key -- Not a meta query.
 			}
 			$clubbed_data[ $row['entity_id'] ][ $row['meta_key'] ][] = $row['meta_value'];
 		}

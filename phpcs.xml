@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Coding Standards">
-	<description>WooCommerce dev PHP_CodeSniffer ruleset.</description>
+<ruleset name="finpress Coding Standards">
+	<description>fincommerce dev PHP_CodeSniffer ruleset.</description>
 
 	<file>.</file>
 
@@ -30,9 +30,9 @@
 	<config name="testVersion" value="7.4-" />
 
 	<!-- Rules -->
-	<rule ref="WooCommerce-Core" />
+	<rule ref="fincommerce-Core" />
 
-	<rule ref="WooCommerce.Functions.InternalInjectionMethod">
+	<rule ref="fincommerce.Functions.InternalInjectionMethod">
 		<include-pattern>src/</include-pattern>
 		<include-pattern>tests/php/src/</include-pattern>
 		<properties>
@@ -40,9 +40,9 @@
 		</properties>
 	</rule>
 
-	<rule ref="WordPress.WP.I18n">
+	<rule ref="finpress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="woocommerce" />
+			<property name="text_domain" type="array" value="fincommerce" />
 		</properties>
 	</rule>
 
@@ -50,11 +50,11 @@
 		<exclude-pattern>tests/</exclude-pattern>
 	</rule>
 
-	<rule ref="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
+	<rule ref="finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
 		<exclude-pattern>tests/src</exclude-pattern>
 	</rule>
 
-	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+	<rule ref="finpress.Files.FileName.InvalidClassFileName">
 		<exclude-pattern>includes/**/abstract-*.php</exclude-pattern>
 		<exclude-pattern>tests/</exclude-pattern>
 		<exclude-pattern>src/</exclude-pattern>
@@ -79,7 +79,7 @@
 		<exclude-pattern>tests/e2e-tests/</exclude-pattern>
 	</rule>
 
-	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+	<rule ref="finpress.Files.FileName.NotHyphenatedLowercase">
 		<exclude-pattern>i18n/</exclude-pattern>
 		<exclude-pattern>src/</exclude-pattern>
 		<exclude-pattern>tests/php</exclude-pattern>
@@ -112,7 +112,7 @@
 	</rule>
 
 	<!-- Temporary -->
-	<rule ref="WooCommerce.Functions.InternalInjectionMethod.MissingFinal">
+	<rule ref="fincommerce.Functions.InternalInjectionMethod.MissingFinal">
 		<exclude-pattern>src/Internal/Admin/</exclude-pattern>
 		<exclude-pattern>src/Admin/</exclude-pattern>
 		<exclude-pattern>src/Blocks/</exclude-pattern>
@@ -120,7 +120,7 @@
 	</rule>
 
 	<!-- Temporary -->
-	<rule ref="WooCommerce.Functions.InternalInjectionMethod.MissingInternalTag">
+	<rule ref="fincommerce.Functions.InternalInjectionMethod.MissingInternalTag">
 		<exclude-pattern>src/Internal/Admin/</exclude-pattern>
 		<exclude-pattern>src/Admin/</exclude-pattern>
 		<exclude-pattern>src/Blocks/</exclude-pattern>
@@ -128,7 +128,7 @@
 	</rule>
 
 	<!-- Temporary -->
-	<rule ref="WordPress.Security.NonceVerification.Recommended">
+	<rule ref="finpress.Security.NonceVerification.Recommended">
 		<exclude-pattern>src/Internal/Admin/</exclude-pattern>
 		<exclude-pattern>src/Admin/</exclude-pattern>
 	</rule>

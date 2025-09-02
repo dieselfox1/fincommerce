@@ -2,12 +2,12 @@
 /* eslint-disable import/no-duplicates -- importing within multiple "declare module" blocks is OK  */
 /* eslint-disable @typescript-eslint/no-duplicate-imports -- importing within multiple "declare module" blocks is OK  */
 
-declare module '@wordpress/block-editor' {
-	import * as blockEditorActions from '@wordpress/block-editor/store/actions';
-	import * as blockEditorSelectors from '@wordpress/block-editor/store/selectors';
-	import { StoreDescriptor as GenericStoreDescriptor } from '@wordpress/data/build-types/types';
+declare module '@finpress/block-editor' {
+	import * as blockEditorActions from '@finpress/block-editor/store/actions';
+	import * as blockEditorSelectors from '@finpress/block-editor/store/selectors';
+	import { StoreDescriptor as GenericStoreDescriptor } from '@finpress/data/build-types/types';
 
-	export * from '@wordpress/block-editor/index';
+	export * from '@finpress/block-editor/index';
 
 	export const store: {
 		name: 'core/block-editor';
@@ -18,14 +18,14 @@ declare module '@wordpress/block-editor' {
 	} >;
 }
 
-declare module '@wordpress/editor' {
+declare module '@finpress/editor' {
 	import { ComponentType } from 'react';
-	import * as editorActions from '@wordpress/editor/store/actions';
-	import * as editorSelectors from '@wordpress/editor/store/selectors';
-	import { StoreDescriptor as GenericStoreDescriptor } from '@wordpress/data/build-types/types';
-	import { PostPreviewButton as WPPostPreviewButton } from '@wordpress/editor/components';
+	import * as editorActions from '@finpress/editor/store/actions';
+	import * as editorSelectors from '@finpress/editor/store/selectors';
+	import { StoreDescriptor as GenericStoreDescriptor } from '@finpress/data/build-types/types';
+	import { PostPreviewButton as WPPostPreviewButton } from '@finpress/editor/components';
 
-	export * from '@wordpress/editor/index';
+	export * from '@finpress/editor/index';
 
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore - disable redeclaration error because it's a module declaration
@@ -45,9 +45,9 @@ declare module '@wordpress/editor' {
 	>;
 }
 
-// there are no @types/wordpress__keyboard-shortcuts yet
-declare module '@wordpress/keyboard-shortcuts' {
-	import { StoreDescriptor } from '@wordpress/data/build-types/types';
+// there are no @types/finpress__keyboard-shortcuts yet
+declare module '@finpress/keyboard-shortcuts' {
+	import { StoreDescriptor } from '@finpress/data/build-types/types';
 
 	export const store: { name: 'core/keyboard-shortcuts' } & StoreDescriptor< {
 		reducer: () => unknown;
@@ -65,9 +65,9 @@ declare module '@wordpress/keyboard-shortcuts' {
 	export const useShortcut: any;
 }
 
-// there are no @types/wordpress__preferences yet
-declare module '@wordpress/preferences' {
-	import { StoreDescriptor } from '@wordpress/data/build-types/types';
+// there are no @types/finpress__preferences yet
+declare module '@finpress/preferences' {
+	import { StoreDescriptor } from '@finpress/data/build-types/types';
 
 	export const store: { name: 'core/preferences' } & StoreDescriptor< {
 		reducer: () => unknown;
@@ -78,13 +78,13 @@ declare module '@wordpress/preferences' {
 	export const PreferenceToggleMenuItem: any;
 }
 
-// Types in @types/wordpress__notices are outdated and build on top of @types/wordpress__data
-declare module '@wordpress/notices' {
-	import { StoreDescriptor } from '@wordpress/data/build-types/types';
-	import { NoticeProps } from '@wordpress/components/build-types/notice/types';
-	import { WPNotice } from '@wordpress/notices/build-types/store/selectors';
+// Types in @types/finpress__notices are outdated and build on top of @types/finpress__data
+declare module '@finpress/notices' {
+	import { StoreDescriptor } from '@finpress/data/build-types/types';
+	import { NoticeProps } from '@finpress/components/build-types/notice/types';
+	import { WPNotice } from '@finpress/notices/build-types/store/selectors';
 
-	export * from '@wordpress/notices';
+	export * from '@finpress/notices';
 
 	type Notice = Omit< NoticeProps, 'children' > & {
 		id: string;
@@ -111,8 +111,8 @@ declare module '@wordpress/notices' {
 	} >;
 }
 
-declare module '@wordpress/core-data' {
-	import { BlockInstance } from '@wordpress/blocks/index';
+declare module '@finpress/core-data' {
+	import { BlockInstance } from '@finpress/blocks/index';
 
 	export function useEntityBlockEditor(
 		kind: string,
@@ -131,5 +131,5 @@ declare module '@wordpress/core-data' {
 	];
 	export type WPBlock = any;
 
-	export * from '@wordpress/core-data/build-types';
+	export * from '@finpress/core-data/build-types';
 }

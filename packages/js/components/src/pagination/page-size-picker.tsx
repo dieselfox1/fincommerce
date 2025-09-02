@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { SelectControl } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { SelectControl } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 export const DEFAULT_PER_PAGE_OPTIONS = [ 25, 50, 75, 100 ];
 

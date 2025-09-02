@@ -2,10 +2,10 @@
  * External dependencies
  */
 
-import { addFilter } from '@wordpress/hooks';
-import { Component, Fragment } from '@wordpress/element';
-import { wordpress } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { addFilter } from '@finpress/hooks';
+import { Component, Fragment } from '@finpress/element';
+import { finpress } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 
 /**
  * FinCommerce dependencies
@@ -142,7 +142,7 @@ addFilter(
 				component: Section,
 				title: __( 'Apples', 'fincommerce-admin' ),
 				isVisible: true,
-				icon: wordpress,
+				icon: finpress,
 				hiddenBlocks: [],
 			},
 		];

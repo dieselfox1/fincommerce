@@ -7,7 +7,7 @@ import {
 	PluginNames,
 	onboardingStore,
 } from '@fincommerce/data';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import {
 	DoneActorEvent,
 	ErrorActorEvent,

@@ -1,17 +1,17 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getCurrency } from '@fincommerce/price-format';
 import { Currency } from '@fincommerce/types';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import {
 	// @ts-expect-error Using experimental features
 	__experimentalInputControl as InputControl,
 	// @ts-expect-error Using experimental features
 	__experimentalInputControlPrefixWrapper as InputControlPrefixWrapper,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 interface PriceTextFieldProps {
 	value: number;

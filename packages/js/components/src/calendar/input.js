@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Popover } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { Icon, calendar } from '@wordpress/icons';
+import { Popover } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { Icon, calendar } from '@finpress/icons';
 import clsx from 'clsx';
 import { uniqueId, noop } from 'lodash';
 import PropTypes from 'prop-types';

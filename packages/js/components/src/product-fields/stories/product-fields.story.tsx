@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState, createElement } from '@wordpress/element';
-import { createRegistry, RegistryProvider } from '@wordpress/data';
+import { useState, createElement } from '@finpress/element';
+import { createRegistry, RegistryProvider } from '@finpress/data';
 
 /**
  * Internal dependencies

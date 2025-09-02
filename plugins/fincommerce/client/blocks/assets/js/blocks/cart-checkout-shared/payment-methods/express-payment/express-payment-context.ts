@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useContext, createContext } from '@wordpress/element';
+import { useContext, createContext } from '@finpress/element';
 
 type ExpressPaymentContextProps = {
 	showButtonStyles: boolean;

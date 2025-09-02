@@ -6,7 +6,7 @@ import {
 	Cart,
 	CartShippingPackageShippingRate,
 } from '@fincommerce/type-defs/cart';
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 
 /**
  * Internal dependencies

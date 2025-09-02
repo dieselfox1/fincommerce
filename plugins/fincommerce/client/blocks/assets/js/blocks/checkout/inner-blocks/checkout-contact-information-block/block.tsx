@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	useCheckoutAddress,
 	useStoreEvents,
@@ -12,7 +12,7 @@ import {
 	StoreNoticesContainer,
 	CheckboxControl,
 } from '@fincommerce/blocks-components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 import { CONTACT_FORM_KEYS } from '@fincommerce/block-settings';
 import { Form } from '@fincommerce/base-components/cart-checkout';

@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { MenuGroup, MenuItem } from '@wordpress/components';
-import { check } from '@wordpress/icons';
-import { Fragment } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { MenuGroup, MenuItem } from '@finpress/components';
+import { check } from '@finpress/icons';
+import { Fragment } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
 import { onboardingStore, TaskListType, TaskType } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 

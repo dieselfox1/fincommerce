@@ -5,7 +5,7 @@
 	"author": "Automattic",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce"
 	],
 	"homepage": "https://github.com/dieselfox1/fincommerce/tree/trunk/packages/js/admin-layout/README.md",
@@ -53,14 +53,14 @@
 	},
 	"dependencies": {
 		"@fincommerce/components": "workspace:*",
-		"@wordpress/components": "wp-6.6",
-		"@wordpress/element": "wp-6.6"
+		"@finpress/components": "wp-6.6",
+		"@finpress/element": "wp-6.6"
 	},
 	"devDependencies": {
 		"@types/react": "18.3.x",
 		"@fincommerce/eslint-plugin": "workspace:*",
 		"@fincommerce/internal-style-build": "workspace:*",
-		"@wordpress/browserslist-config": "next",
+		"@finpress/browserslist-config": "next",
 		"css-loader": "6.11.x",
 		"eslint": "^8.55.0",
 		"jest": "27.5.x",

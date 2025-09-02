@@ -16,7 +16,7 @@ on:
 jobs:
   extract-versions:
     name: Extract release current and previous versions
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       current_version: ${{ steps.calculate-versions.outputs.current_version }}
       previous_version: ${{ steps.calculate-versions.outputs.previous_version }}
@@ -92,7 +92,7 @@ jobs:
   count-commits-and-contributors:
     name: Count commits and contributors between releases
     needs: extract-versions
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       commit_count: ${{ steps.count-commits.outputs.commit_count }}
       contributor_count: ${{ steps.count-commits.outputs.contributor_count }}
@@ -128,7 +128,7 @@ jobs:
   generate-contributors-list:
     name: Generate contributors list
     needs: extract-versions
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       contributor_list_path: ${{ steps.generate-contributors-list.outputs.filepath }}
       artifact_url: ${{ steps.output-artifact-url.outputs.artifact_url }}
@@ -189,7 +189,7 @@ jobs:
   db-updates:
     name: Check for database updates
     needs: extract-versions
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       has_updates: ${{ steps.check-db-updates.outputs.has_updates }}
       updates_list: ${{ steps.check-db-updates.outputs.updates_list }}
@@ -218,7 +218,7 @@ jobs:
           script: |
             const fs = require('fs');
             const { readDbUpdatesFromString } = require( './checkout-trunk/.github/workflows/scripts/release-check-db-updates' );
-            const path = 'checkout-release/plugins/woocommerce/includes/class-wc-install.php';
+            const path = 'checkout-release/plugins/fincommerce/includes/class-wc-install.php';
             const version = '${{ needs.extract-versions.outputs.current_version }}';
 
             console.log(`Checking for database updates for version: ${version}`);
@@ -263,7 +263,7 @@ jobs:
         id: find-pr
         if: ${{ steps.check-db-updates.outputs.has_updates == 'true' }}
         run: |
-          FILE_PATH="plugins/woocommerce/includes/class-wc-install.php"
+          FILE_PATH="plugins/fincommerce/includes/class-wc-install.php"
           UPDATES="${{ steps.check-db-updates.outputs.updates_list }}"
 
           cd checkout-release
@@ -319,7 +319,7 @@ jobs:
   send-slack-notification:
     name: Send Slack Notification
     needs: [extract-versions, count-commits-and-contributors, generate-contributors-list, db-updates]
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     steps:
       - name: Send Slack message
         uses: archive/github-actions-slack@a62d71a4ea93e68cbdc37581166b0298bea512e9 # v 2.10.0
@@ -328,7 +328,7 @@ jobs:
           slack-channel: ${{ secrets.WOO_RELEASE_SLACK_NOTIFICATION_CHANNEL }}
           slack-optional-unfurl_links: false
           slack-text: |
-            :woo: *WooCommerce ${{ needs.extract-versions.outputs.current_version }} Release Summary*
+            :woo: *fincommerce ${{ needs.extract-versions.outputs.current_version }} Release Summary*
 
             📊 *Statistics:*
             • Commits: ${{ needs.count-commits-and-contributors.outputs.commit_count }}
@@ -338,4 +338,4 @@ jobs:
             :database: *Database Updates:*
             ${{ needs.db-updates.outputs.has_updates == 'true' && needs.db-updates.outputs.formatted_updates || 'This release does not include a database update.' }}
 
-            <!subteam^S086N376UTS> you can re-run this workflow <https://github.com/woocommerce/woocommerce/actions/workflows/release-commits-and-contributors.yml|here>
+            <!subteam^S086N376UTS> you can re-run this workflow <https://github.com/fincommerce/fincommerce/actions/workflows/release-commits-and-contributors.yml|here>

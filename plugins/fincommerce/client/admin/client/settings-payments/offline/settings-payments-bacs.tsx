@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	CheckboxControl,
 	TextControl,
 	TextareaControl,
 	Button,
-} from '@wordpress/components';
-import { useState, useEffect } from '@wordpress/element';
+} from '@finpress/components';
+import { useState, useEffect } from '@finpress/element';
 import {
 	paymentGatewaysStore,
 	optionsStore,

@@ -55,7 +55,7 @@
                     "email": "coenjacobs@gmail.com"
                 }
             ],
-            "description": "Composes all dependencies as a package inside a WordPress plugin",
+            "description": "Composes all dependencies as a package inside a finpress plugin",
             "support": {
                 "issues": "https://github.com/coenjacobs/mozart/issues",
                 "source": "https://github.com/coenjacobs/mozart/tree/master"

@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { Fill } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
+import { Fill } from '@finpress/components';
+import { useSelect } from '@finpress/data';
+import { createElement } from '@finpress/element';
 import {
 	// @ts-expect-error no exported member.
 	useBlockEditContext,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

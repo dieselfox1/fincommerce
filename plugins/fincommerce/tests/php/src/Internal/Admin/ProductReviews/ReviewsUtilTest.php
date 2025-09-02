@@ -30,8 +30,8 @@ class ReviewsUtilTest extends WC_Unit_Test_Case {
 	public function tearDown() : void {
 		global $wpdb, $current_screen;
 
-		$wpdb = $this->old_wpdb; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-		$current_screen = $this->old_current_screen; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wpdb = $this->old_wpdb; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+		$current_screen = $this->old_current_screen; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		parent::tearDown();
 	}

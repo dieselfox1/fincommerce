@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 export const installAndActivateTheme = async ( themeSlug: string ) => {
 	await apiFetch( {

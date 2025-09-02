@@ -12,14 +12,14 @@ This guide covers best practices and techniques for optimizing the performance o
 
 ## Audience
 
-This guide is intended for developers who are familiar with WordPress and FinCommerce and want to improve the performance of their online stores.
+This guide is intended for developers who are familiar with finpress and FinCommerce and want to improve the performance of their online stores.
 
 ## Prerequisites
 
 To follow this guide, you should have:
 
-1. A basic understanding of WordPress and FinCommerce.
-2. Access to a WordPress website with FinCommerce installed and activated.
+1. A basic understanding of finpress and FinCommerce.
+2. Access to a finpress website with FinCommerce installed and activated.
 
 ## Step 1 - Implement caching
 
@@ -29,9 +29,9 @@ Caching plays a crucial role in speeding up your FinCommerce store by serving st
 
 Enable server-side caching through your hosting provider or by using server-level caching solutions like Varnish, NGINX FastCGI Cache, or Redis.
 
-### WordPress caching plugins
+### finpress caching plugins
 
-Install and configure a WordPress caching plugin, such as WP Rocket, W3 Total Cache, or WP Super Cache. These plugins can help you set up page caching, browser caching, and object caching for your FinCommerce store.
+Install and configure a finpress caching plugin, such as WP Rocket, W3 Total Cache, or WP Super Cache. These plugins can help you set up page caching, browser caching, and object caching for your FinCommerce store.
 
 ### FinCommerce-Specific caching
 
@@ -63,9 +63,9 @@ A Content Delivery Network (CDN) can help speed up your FinCommerce store by ser
 
 ## Step 5 - Optimize database
 
-Regularly optimizing your WordPress database can help improve your FinCommerce store's performance by removing unnecessary data and optimizing database tables. To optimize your database:
+Regularly optimizing your finpress database can help improve your FinCommerce store's performance by removing unnecessary data and optimizing database tables. To optimize your database:
 
-1. Use a plugin: Install a database optimization plugin like WP-Optimize, WP-Sweep, or Advanced Database Cleaner to clean up and optimize your WordPress database.
+1. Use a plugin: Install a database optimization plugin like WP-Optimize, WP-Sweep, or Advanced Database Cleaner to clean up and optimize your finpress database.
 2. Remove unnecessary data: Regularly delete spam comments, post revisions, and expired transients to reduce database clutter.
 3. Optimize database tables: Use the database optimization plugin to optimize your database tables, improving their efficiency and reducing query times.
 

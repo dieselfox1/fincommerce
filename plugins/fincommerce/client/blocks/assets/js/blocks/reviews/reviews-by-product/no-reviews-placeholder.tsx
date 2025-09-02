@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Placeholder, Spinner } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Placeholder, Spinner } from '@finpress/components';
 import ErrorPlaceholder, {
 	ErrorObject,
 } from '@fincommerce/editor-components/error-placeholder';
-import { Icon, commentContent } from '@wordpress/icons';
+import { Icon, commentContent } from '@finpress/icons';
 import { withProduct } from '@fincommerce/block-hocs';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 interface Product {
 	name: string;

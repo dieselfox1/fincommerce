@@ -27,7 +27,7 @@ class OrgPluginResourceStorageTest extends TestCase {
 	 */
 	public function test_get_supported_resource_returns_correct_value() {
 		$storage = new OrgPluginResourceStorage();
-		$this->assertEquals( 'wordpress.org/plugins', $storage->get_supported_resource() );
+		$this->assertEquals( 'finpress.org/plugins', $storage->get_supported_resource() );
 	}
 
 	/**
@@ -37,7 +37,7 @@ class OrgPluginResourceStorageTest extends TestCase {
 	 */
 	public function test_download_returns_path_for_valid_plugin() {
 		$slug          = 'sample-plugin';
-		$download_link = "https://downloads.wordpress.org/plugin/{$slug}.zip";
+		$download_link = "https://downloads.finpress.org/plugin/{$slug}.zip";
 		$local_path    = "/tmp/{$slug}.zip";
 
 		$mock_storage = Mockery::mock( OrgPluginResourceStorage::class )

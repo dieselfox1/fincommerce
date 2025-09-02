@@ -6,15 +6,15 @@ import {
 	type CheckoutResponse,
 	isSuccessResponse,
 } from '@fincommerce/types';
-import { store as noticesStore } from '@wordpress/notices';
-import { dispatch as wpDispatch, select as wpSelect } from '@wordpress/data';
+import { store as noticesStore } from '@finpress/notices';
+import { dispatch as wpDispatch, select as wpSelect } from '@finpress/data';
 import type {
 	ActionCreatorsOf,
 	ConfigOf,
 	CurriedSelectorsOf,
 	DispatchFunction,
 	SelectFunction,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 import {
 	CHECKOUT_EVENTS,
 	checkoutEventsEmitter,

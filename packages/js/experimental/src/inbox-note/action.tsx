@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement, useState } from '@wordpress/element';
+import { Button } from '@finpress/components';
+import { createElement, useState } from '@finpress/element';
 
 type InboxNoteActionProps = {
 	onClick: () => void;

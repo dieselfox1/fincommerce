@@ -4,10 +4,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
 import { getNewPath, getPersistedQuery } from '@fincommerce/navigation';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 
 /**
  * Internal dependencies
@@ -18,7 +18,7 @@ import { ADMIN_URL } from '~/utils/admin-settings';
 import './style.scss';
 import { WooCYSSecondaryButtonSlot } from './secondary-button-slot';
 import lessonPlan from '../assets/icons/lesson-plan.js';
-import { Icon, brush, tag } from '@wordpress/icons';
+import { Icon, brush, tag } from '@finpress/icons';
 import { trackEvent } from '../tracking';
 import { isEntrepreneurFlow } from '../entrepreneur-flow';
 

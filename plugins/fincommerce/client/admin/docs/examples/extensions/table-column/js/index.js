@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 import { Rating } from '@fincommerce/components';
 
 addFilter(

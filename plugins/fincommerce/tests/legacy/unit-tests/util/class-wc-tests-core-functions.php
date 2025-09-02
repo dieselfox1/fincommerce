@@ -1123,7 +1123,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	}
 
 	/**
-	 * Allows us to force the template path. Since the ABSPATH is to /tmp/wordpress in tests, we need to do this
+	 * Allows us to force the template path. Since the ABSPATH is to /tmp/finpress in tests, we need to do this
 	 * in order to keep the paths consistent for testing purposes.
 	 *
 	 * @param string $template The path to the template file.

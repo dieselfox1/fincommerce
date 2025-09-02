@@ -917,7 +917,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 
 		// Filter downloadable product variations.
 		if ( isset( $request['downloadable'] ) ) {
-			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				$args,
 				array(
 					'key'   => '_downloadable',
@@ -936,7 +936,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 				if ( ! isset( $attribute['attribute'] ) || ! isset( $attribute['term'] ) ) {
 					continue;
 				}
-				$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 					$args,
 					array(
 						'key'   => 'attribute_' . $attribute['attribute'],
@@ -951,7 +951,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 			foreach ( $request['attributes'] as $attribute ) {
 				if ( isset( $attribute['attribute'] ) ) {
 					if ( isset( $attribute['term'] ) ) {
-						$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+						$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 							$args,
 							array(
 								'key'   => 'attribute_' . $attribute['attribute'],
@@ -959,7 +959,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 							)
 						);
 					} elseif ( ! empty( $attribute['terms'] ) && is_array( $attribute['terms'] ) ) {
-						$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+						$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 							$args,
 							array(
 								'key'     => 'attribute_' . $attribute['attribute'],
@@ -993,7 +993,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 		// Filter by global_unique_id.
 		if ( ! empty( $request['global_unique_id'] ) ) {
 			$global_unique_ids  = array_map( 'trim', explode( ',', $request['global_unique_id'] ) );
-			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				$args,
 				array(
 					'key'     => '_global_unique_id',
@@ -1087,7 +1087,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 
 		// Filter virtual product variations.
 		if ( isset( $request['virtual'] ) ) {
-			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				$args,
 				array(
 					'key'   => '_virtual',
@@ -1241,7 +1241,7 @@ class WC_REST_Product_Variations_Controller extends WC_REST_Product_Variations_V
 		$possible_attribute_combinations = array_reverse( wc_array_cartesian( $attributes ) );
 
 		foreach ( $existing_variations as $existing_variation ) {
-			$matching_attribute_key = array_search( $existing_variation->get_attributes(), $possible_attribute_combinations ); // phpcs:ignore WordPress.PHP.StrictInArray.MissingTrueStrict
+			$matching_attribute_key = array_search( $existing_variation->get_attributes(), $possible_attribute_combinations ); // phpcs:ignore finpress.PHP.StrictInArray.MissingTrueStrict
 			if ( false !== $matching_attribute_key ) {
 				// We only want one possible variation for each possible attribute combination.
 				unset( $possible_attribute_combinations[ $matching_attribute_key ] );

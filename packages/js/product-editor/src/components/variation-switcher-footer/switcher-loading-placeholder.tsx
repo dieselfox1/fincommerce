@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { arrowLeft, arrowRight, Icon } from '@wordpress/icons';
-import { Button } from '@wordpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import { arrowLeft, arrowRight, Icon } from '@finpress/icons';
+import { Button } from '@finpress/components';
 
 export function SwitcherLoadingPlaceholder( {
 	position,

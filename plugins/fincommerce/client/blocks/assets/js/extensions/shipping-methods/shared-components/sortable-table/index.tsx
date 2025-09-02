@@ -2,8 +2,8 @@
  * External dependencies
  */
 import styled from '@emotion/styled';
-import { Icon, dragHandle } from '@wordpress/icons';
-import { useMemo } from '@wordpress/element';
+import { Icon, dragHandle } from '@finpress/icons';
+import { useMemo } from '@finpress/element';
 import {
 	closestCenter,
 	DndContext,

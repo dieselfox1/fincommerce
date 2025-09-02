@@ -6,7 +6,7 @@ import {
 	type CurrencyResponse,
 	type CartShippingPackageShippingRate,
 } from '@fincommerce/types';
-import { getConfig } from '@wordpress/interactivity';
+import { getConfig } from '@finpress/interactivity';
 
 /**
  * Internal dependencies

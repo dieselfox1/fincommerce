@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useCallback, useState, useEffect } from '@wordpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useCallback, useState, useEffect } from '@finpress/element';
 import {
 	cartStore,
 	checkoutStore,

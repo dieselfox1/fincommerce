@@ -70,7 +70,7 @@ There are other note statuses but we just use them **internally**:
 
 ### Locale
 
-The note locales contain the title and content of the note. Having this broken up by locale allows different translations of the note to be used. The default locale used if none of the locales match the WordPress locale is `en_US`.
+The note locales contain the title and content of the note. Having this broken up by locale allows different translations of the note to be used. The default locale used if none of the locales match the finpress locale is `en_US`.
 
 ```json
 {
@@ -113,7 +113,7 @@ These are the actions that can be interacted with on the note. This might be a l
 			"label": "Schedule free session"
 		}
 	],
-	"url": "https://wordpress.com/me/concierge",
+	"url": "https://finpress.com/me/concierge",
 	"url_is_admin_query": false,
 	"status": "actioned"
 },
@@ -121,7 +121,7 @@ These are the actions that can be interacted with on the note. This might be a l
 
 `name` must be unique to the created note.
 
-The action locales contain the label of the action. Having this broken up by locale allows different translations of the note to be used. The default locale used if none of the locales match the WordPress locale is `en_US`.
+The action locales contain the label of the action. Having this broken up by locale allows different translations of the note to be used. The default locale used if none of the locales match the finpress locale is `en_US`.
 
 The `status` is what the status of the created note will be set to after interacting with the action.
 

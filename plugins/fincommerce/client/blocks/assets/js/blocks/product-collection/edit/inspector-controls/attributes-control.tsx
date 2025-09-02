@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import ProductAttributeTermControl from '@fincommerce/editor-components/product-attribute-term-control';
 import { SearchListItem } from '@fincommerce/editor-components/search-list-control/types';
 import { ADMIN_URL } from '@fincommerce/settings';
 import {
 	ExternalLink,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanelItem as ToolsPanelItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { info, megaphone, check } from '@wordpress/icons';
+import { info, megaphone, check } from '@finpress/icons';
 
 /**
  * Get the default politeness level for a given status. This is based on how severe the status is.

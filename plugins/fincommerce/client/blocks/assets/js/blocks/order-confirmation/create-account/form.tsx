@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { useState, createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useState, createInterpolateElement } from '@finpress/element';
 import Button from '@fincommerce/base-components/button';
 import {
 	PasswordStrengthMeter,
@@ -11,7 +11,7 @@ import {
 } from '@fincommerce/base-components/cart-checkout/password-strength-meter';
 import { PRIVACY_URL, TERMS_URL } from '@fincommerce/block-settings';
 import { ValidatedTextInput, Spinner } from '@fincommerce/blocks-components';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 import { getSetting } from '@fincommerce/settings';
 

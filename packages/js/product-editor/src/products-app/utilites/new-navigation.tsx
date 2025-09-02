@@ -6,7 +6,7 @@ import {
 	createContext,
 	useState,
 	useContext,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 type NewNavigationContextType = {
 	showNewNavigation: boolean;

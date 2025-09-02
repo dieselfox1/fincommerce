@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import React, { useEffect, useState } from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { Icon } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import React, { useEffect, useState } from '@finpress/element';
+import { Button } from '@finpress/components';
+import { Icon } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import GridiconCrossIcon from 'gridicons/dist/cross-small';
 

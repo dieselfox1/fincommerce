@@ -4,7 +4,7 @@ This component adds an upload button and a dropzone for uploading media to a sit
 
 ## Usage
 
-By default this will use the functionality from `@wordpress/media-utils` which provides access and uploads to the WP media library and uses the WP media modal.
+By default this will use the functionality from `@finpress/media-utils` which provides access and uploads to the WP media library and uses the WP media modal.
 
 ```jsx
 <MediaUploader

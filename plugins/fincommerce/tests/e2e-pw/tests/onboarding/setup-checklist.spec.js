@@ -154,10 +154,10 @@ test( 'Can connect to FinCommerce.com', async ( { page } ) => {
 	} );
 
 	await test.step( 'Check that we are sent to wp.com', async () => {
-		await expect( page.url() ).toContain( 'wordpress.com/log-in' );
+		await expect( page.url() ).toContain( 'finpress.com/log-in' );
 		await expect(
 			page.getByRole( 'heading', {
-				name: 'Log in to Woo with WordPress.com',
+				name: 'Log in to Woo with finpress.com',
 			} )
 		).toBeVisible( { timeout: 30000 } );
 	} );

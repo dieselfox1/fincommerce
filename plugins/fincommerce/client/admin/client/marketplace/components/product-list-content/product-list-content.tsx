@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Fragment, useEffect, useState } from '@wordpress/element';
+import { Fragment, useEffect, useState } from '@finpress/element';
 import clsx from 'clsx';
-import { addQueryArgs } from '@wordpress/url';
+import { addQueryArgs } from '@finpress/url';
 
 /**
  * Internal dependencies

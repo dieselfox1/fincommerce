@@ -3,7 +3,7 @@
  */
 import { render, screen, fireEvent } from '@testing-library/react';
 import { TaskType } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -11,8 +11,8 @@ import { recordEvent } from '@fincommerce/tracks';
  */
 import { Tax } from '..';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 } ) );
 

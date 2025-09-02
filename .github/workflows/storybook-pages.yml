@@ -11,7 +11,7 @@ permissions:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        if: ${{ github.repository == 'woocommerce/woocommerce' }}
+        if: ${{ github.repository == 'fincommerce/fincommerce' }}
 
         steps:
             - name: Checkout
@@ -20,15 +20,15 @@ jobs:
                   ref: trunk
                   fetch-depth: 0
 
-            - name: Setup WooCommerce Monorepo
-              uses: ./.github/actions/setup-woocommerce-monorepo
+            - name: Setup fincommerce Monorepo
+              uses: ./.github/actions/setup-fincommerce-monorepo
               with:
                   install: true
 
             - name: Build Storybook
-              run: pnpm --filter='@woocommerce/storybook' build
+              run: pnpm --filter='@fincommerce/storybook' build
               env:
-                  STORYBOOK_COMPOSITION_PATH_PREFIX: /woocommerce
+                  STORYBOOK_COMPOSITION_PATH_PREFIX: /fincommerce
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0

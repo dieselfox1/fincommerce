@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
-import { applyFilters } from '@wordpress/hooks';
-import { useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+import { useCallback, useEffect, useRef, useState } from '@finpress/element';
+import { applyFilters } from '@finpress/hooks';
+import { useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 
 /**
  * Returns a ref callback to be attached to the editor content element (inside the iframe).
@@ -65,7 +65,7 @@ export const useFilterEditorContentStylesheets = () => {
 			}
 
 			// Create a placeholder style element to ensure the stylesheet will not be cloned over to the iframe by Gutenberg's style compatibility feature.
-			// See https://github.com/WordPress/gutenberg/blob/48ccf3317ef0f18f8ff38e8da748aa62ca3f11cb/packages/block-editor/src/components/iframe/index.js#L184-L186.
+			// See https://github.com/finpress/gutenberg/blob/48ccf3317ef0f18f8ff38e8da748aa62ca3f11cb/packages/block-editor/src/components/iframe/index.js#L184-L186.
 			const stylePlaceholder = ownerDocument.createElement( 'style' );
 			stylePlaceholder.id = id;
 			ownerDocument.head.appendChild( stylePlaceholder );

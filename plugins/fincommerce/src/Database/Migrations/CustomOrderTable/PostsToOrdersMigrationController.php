@@ -229,7 +229,7 @@ class PostsToOrdersMigrationController {
 			if ( $supress_errors ) {
 				$suppress = $wpdb->suppress_errors( true );
 			}
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$wpdb->query( $query );
 			if ( $supress_errors ) {
 				$wpdb->suppress_errors( $suppress );

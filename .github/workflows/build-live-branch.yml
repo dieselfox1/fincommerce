@@ -28,7 +28,7 @@ permissions: {}
 
 jobs:
     build:
-        if: github.repository_owner == 'woocommerce' && github.actor != 'github-actions[bot]'
+        if: github.repository_owner == 'fincommerce' && github.actor != 'github-actions[bot]'
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -38,14 +38,14 @@ jobs:
             - name: Get current version
               id: version
               run: |
-                  current_version=$( cat plugins/woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
+                  current_version=$( cat plugins/fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
                   echo "Detected version: $current_version"
                   echo "version=$current_version" >> $GITHUB_OUTPUT
 
-            - name: Setup WooCommerce Monorepo
-              uses: ./.github/actions/setup-woocommerce-monorepo
+            - name: Setup fincommerce Monorepo
+              uses: ./.github/actions/setup-fincommerce-monorepo
               with:
-                pull-package-deps: '@woocommerce/plugin-woocommerce'
+                pull-package-deps: '@fincommerce/plugin-fincommerce'
 
             - name: Prepare plugin zips
               id: prepare
@@ -59,18 +59,18 @@ jobs:
 
                   CURRENT_VERSION="$CURRENT_VERSION-$VERSUFFIX"
 
-                  sed -i -e 's/Version: .*$/Version: '"$CURRENT_VERSION"'/' "$GITHUB_WORKSPACE/plugins/woocommerce/woocommerce.php"
-                  echo "$CURRENT_VERSION" > "$GITHUB_WORKSPACE/plugins/woocommerce/version.txt"
+                  sed -i -e 's/Version: .*$/Version: '"$CURRENT_VERSION"'/' "$GITHUB_WORKSPACE/plugins/fincommerce/fincommerce.php"
+                  echo "$CURRENT_VERSION" > "$GITHUB_WORKSPACE/plugins/fincommerce/version.txt"
 
-                  cd "$GITHUB_WORKSPACE/plugins/woocommerce"
-                  PLUGIN_SLUG='woocommerce-dev' bash bin/build-zip.sh
+                  cd "$GITHUB_WORKSPACE/plugins/fincommerce"
+                  PLUGIN_SLUG='fincommerce-dev' bash bin/build-zip.sh
 
                   mkdir "$GITHUB_WORKSPACE/zips"
-                  mv "$GITHUB_WORKSPACE/plugins/woocommerce/woocommerce-dev.zip" "$GITHUB_WORKSPACE/zips/woocommerce-dev.zip"
+                  mv "$GITHUB_WORKSPACE/plugins/fincommerce/fincommerce-dev.zip" "$GITHUB_WORKSPACE/zips/fincommerce-dev.zip"
 
                   # Plugin data is passed as a JSON object.
                   PLUGIN_DATA="{}"          
-                  PLUGIN_DATA=$( jq -c --arg slug "woocommerce" --arg ver "$CURRENT_VERSION" '.[ $slug ] = { version: $ver }' <<<"$PLUGIN_DATA" )
+                  PLUGIN_DATA=$( jq -c --arg slug "fincommerce" --arg ver "$CURRENT_VERSION" '.[ $slug ] = { version: $ver }' <<<"$PLUGIN_DATA" )
                   echo "plugin-data=$PLUGIN_DATA" >> $GITHUB_OUTPUT
 
             - name: Create plugins artifact

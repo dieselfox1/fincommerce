@@ -2,7 +2,7 @@
 
 Container with collapsible inner blocks.
 
-![Collapsible](https://fincommerce.files.wordpress.com/2023/09/fincommerceproduct-collapsible.png)
+![Collapsible](https://fincommerce.files.finpress.com/2023/09/fincommerceproduct-collapsible.png)
 
 ## Attributes
 

@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	useBlockProps,
 	useInnerBlocksProps,
 	BlockContextProvider,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	useQueryStateByKey,
 	useQueryStateByContext,
@@ -15,9 +15,9 @@ import {
 } from '@fincommerce/base-context/hooks';
 import { getSettingWithCoercion } from '@fincommerce/settings';
 import { isBoolean } from '@fincommerce/types';
-import { useState, useMemo, useEffect } from '@wordpress/element';
-import { withSpokenMessages } from '@wordpress/components';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { useState, useMemo, useEffect } from '@finpress/element';
+import { withSpokenMessages } from '@finpress/components';
+import type { BlockEditProps } from '@finpress/blocks';
 
 /**
  * Internal dependencies

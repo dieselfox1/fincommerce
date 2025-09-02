@@ -5,8 +5,8 @@
 import { getByTestId, waitFor } from '@testing-library/dom';
 import { getSettingWithCoercion } from '@fincommerce/settings';
 import { cartStore } from '@fincommerce/block-data';
-import { dispatch, select } from '@wordpress/data';
-import apiFetch from '@wordpress/api-fetch';
+import { dispatch, select } from '@finpress/data';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies
@@ -14,8 +14,8 @@ import apiFetch from '@wordpress/api-fetch';
 import { migrateAttributesToColorPanel } from '@fincommerce/block-library/assets/js/blocks/mini-cart/utils/data';
 import '@fincommerce/block-library/assets/js/blocks/mini-cart/frontend';
 
-jest.mock( '@wordpress/data-controls' );
-jest.mock( '@wordpress/api-fetch' );
+jest.mock( '@finpress/data-controls' );
+jest.mock( '@finpress/api-fetch' );
 
 // This is a simplified version of the response of the Cart API endpoint.
 const responseMock = {

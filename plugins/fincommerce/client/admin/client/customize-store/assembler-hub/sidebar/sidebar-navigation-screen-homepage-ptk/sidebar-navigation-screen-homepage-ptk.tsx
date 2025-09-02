@@ -9,18 +9,18 @@ import {
 	Modal,
 	__experimentalNavigatorButton as NavigatorButton,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	createInterpolateElement,
 	useContext,
 	useMemo,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import interpolateComponents from '@automattic/interpolate-components';
-import { store as coreStore } from '@wordpress/core-data';
+import { store as coreStore } from '@finpress/core-data';
 // @ts-expect-error No types for this exist yet.
-import SidebarNavigationItem from '@wordpress/edit-site/build-module/components/sidebar-navigation-item';
+import SidebarNavigationItem from '@finpress/edit-site/build-module/components/sidebar-navigation-item';
 
 /**
  * Internal dependencies
@@ -32,7 +32,7 @@ import { Link } from '@fincommerce/components';
 import { PATTERN_CATEGORIES } from '../pattern-screen/categories';
 import { capitalize } from 'lodash';
 import { getNewPath, navigateTo, useQuery } from '@fincommerce/navigation';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useNetworkStatus } from '~/utils/react-hooks/use-network-status';
 import { useEditorBlocks } from '../../hooks/use-editor-blocks';
 import { isTrackingAllowed } from '../../utils/is-tracking-allowed';
@@ -40,7 +40,7 @@ import clsx from 'clsx';
 import './style.scss';
 import { usePatterns } from '~/customize-store/assembler-hub/hooks/use-patterns';
 import { THEME_SLUG } from '~/customize-store/data/constants';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 import { enableTracking } from '~/customize-store/design-without-ai/services';
 
 const isActiveElement = ( path: string | undefined, category: string ) => {

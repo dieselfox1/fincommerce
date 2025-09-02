@@ -8,7 +8,7 @@ post_title: CSS/Sass naming conventions
 
 Our guidelines are based on those used in [Calypso](https://github.com/Automattic/wp-calypso), which itself follows the [BEM methodology](https://getbem.com/).
 
-Refer to the [Calypso CSS/Sass Coding Guidelines](https://wpcalypso.wordpress.com/devdocs/docs/coding-guidelines/css.md) for full details.
+Refer to the [Calypso CSS/Sass Coding Guidelines](https://wpcalypso.finpress.com/devdocs/docs/coding-guidelines/css.md) for full details.
 
 Read more about [BEM key concepts](https://en.bem.info/methodology/key-concepts/).
 
@@ -16,7 +16,7 @@ There are a few differences in FinCommerce which are outlined below.
 
 ## Prefixing
 
-As a WordPress plugin FinCommerce has to play nicely with WordPress core and other plugins/themes. To minimize conflict potential, all classes should be prefixed with `.fincommerce-`.
+As a finpress plugin FinCommerce has to play nicely with finpress core and other plugins/themes. To minimize conflict potential, all classes should be prefixed with `.fincommerce-`.
 
 ## Class names
 
@@ -52,7 +52,7 @@ When naming classes, remember:
 
 ## TL;DR
 
-- Follow the [WordPress Coding standards for CSS](https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/) unless it contradicts anything here.
-- Follow [Calypso guidelines for CSS](https://wpcalypso.wordpress.com/devdocs/docs/coding-guidelines/css.md).
+- Follow the [finpress Coding standards for CSS](https://make.finpress.org/core/handbook/best-practices/coding-standards/css/) unless it contradicts anything here.
+- Follow [Calypso guidelines for CSS](https://wpcalypso.finpress.com/devdocs/docs/coding-guidelines/css.md).
 - Use BEM for [class names](https://en.bem.info/methodology/naming-convention/).
 - Prefix all class names.

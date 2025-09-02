@@ -1,4 +1,4 @@
-const WPDependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
+const WPDependencyExtractionWebpackPlugin = require( '@finpress/dependency-extraction-webpack-plugin' );
 const packages = require( '../assets/packages' );
 
 const fincommerce_NAMESPACE = '@fincommerce/';

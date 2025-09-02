@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import type { TemplateArray } from '@wordpress/blocks';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
+import type { TemplateArray } from '@finpress/blocks';
 
 /**
  * Internal dependencies

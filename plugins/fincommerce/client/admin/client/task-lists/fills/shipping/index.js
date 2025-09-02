@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import apiFetch from '@wordpress/api-fetch';
-import { Component } from '@wordpress/element';
-import { Button, Card, CardBody } from '@wordpress/components';
-import { compose } from '@wordpress/compose';
+import { __, sprintf } from '@finpress/i18n';
+import apiFetch from '@finpress/api-fetch';
+import { Component } from '@finpress/element';
+import { Button, Card, CardBody } from '@finpress/components';
+import { compose } from '@finpress/compose';
 import { filter } from 'lodash';
 import interpolateComponents from '@automattic/interpolate-components';
-import { withDispatch, withSelect } from '@wordpress/data';
+import { withDispatch, withSelect } from '@finpress/data';
 import { Link, Stepper, Plugins } from '@fincommerce/components';
 import { getAdminLink } from '@fincommerce/settings';
 import { getHistory, getNewPath } from '@fincommerce/navigation';
@@ -20,7 +20,7 @@ import {
 	shippingMethodsStore,
 } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 import clsx from 'clsx';
 
@@ -381,7 +381,7 @@ export class Shipping extends Component {
 				key: 'connect',
 				label: __( 'Connect your store', 'fincommerce' ),
 				description: __(
-					'Connect your store to WordPress.com to enable label printing',
+					'Connect your store to finpress.com to enable label printing',
 					'fincommerce'
 				),
 				content: (

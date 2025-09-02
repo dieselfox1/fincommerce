@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 export const DEFAULT_TITLE = __( 'Billing address', 'fincommerce' );
 export const DEFAULT_DESCRIPTION = __(

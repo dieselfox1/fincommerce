@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Children, cloneElement } from '@wordpress/element';
-import { Dropdown } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { createElement, Children, cloneElement } from '@finpress/element';
+import { Dropdown } from '@finpress/components';
 import PropTypes from 'prop-types';
-import { withViewportMatch } from '@wordpress/viewport';
+import { withViewportMatch } from '@finpress/viewport';
 
 /**
  * Internal dependencies

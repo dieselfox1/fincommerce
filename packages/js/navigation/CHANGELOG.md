@@ -17,7 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Fix return value on parseAdminUrl [#36235]
 -   Patch - Make eslint emit JSON report for annotating PRs. [#39704]
 -   Minor - Match TypeScript version with syncpack [#34787]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
 -   Patch - Update eslint to 8.32.0 across the monorepo. [#36700]
 -   Patch - Update events that should trigger the test job(s) [#47612]
 -   Minor - Update pnpm monorepo-wide to 8.6.5 [#38990]
@@ -34,7 +34,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [8.0.0](https://www.npmjs.com/package/@fincommerce/navigation/v/8.0.0) - 2022-06-15 
 
 -   Minor - Add Jetpack Changelogger
--   Minor - Update dependency `@wordpress/hooks` to ^3.5.0
+-   Minor - Update dependency `@finpress/hooks` to ^3.5.0
 -   Minor - Added Typescript type declarations. #32615
 -   Minor - Update dependency `history` to ^5.3.0
 -   Patch - Standardize lint scripts: add lint:fix

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { useState, useEffect, useCallback, useMemo } from '@wordpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { useState, useEffect, useCallback, useMemo } from '@finpress/element';
 import { SearchListControl } from '@fincommerce/editor-components/search-list-control';
-import { SelectControl } from '@wordpress/components';
+import { SelectControl } from '@finpress/components';
 import { getSetting } from '@fincommerce/settings';
 import { useDebouncedCallback } from 'use-debounce';
 

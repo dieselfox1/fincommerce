@@ -59,7 +59,7 @@ class WC_Background_Emailer extends WC_Background_Process {
 				WC_Emails::send_queued_transactional_email( $callback['filter'], $callback['args'] );
 			} catch ( Exception $e ) {
 				if ( Constants::is_true( 'WP_DEBUG' ) ) {
-					trigger_error( 'Transactional email triggered fatal error for callback ' . esc_html( $callback['filter'] ), E_USER_WARNING ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+					trigger_error( 'Transactional email triggered fatal error for callback ' . esc_html( $callback['filter'] ), E_USER_WARNING ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 				}
 			}
 		}
@@ -69,7 +69,7 @@ class WC_Background_Emailer extends WC_Background_Process {
 	/**
 	 * Finishes replying to the client, but keeps the process running for further (async) code execution.
 	 *
-	 * @see https://core.trac.wordpress.org/ticket/41358 .
+	 * @see https://core.trac.finpress.org/ticket/41358 .
 	 */
 	protected function close_http_connection() {
 		// Only 1 PHP process can access a session object at a time, close this so the next request isn't kept waiting.

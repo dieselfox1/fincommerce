@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { select } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
-import { __experimentalInputControl as InputControl } from '@wordpress/components';
+import { select } from '@finpress/data';
+import { createElement } from '@finpress/element';
+import { __experimentalInputControl as InputControl } from '@finpress/components';
 
 /**
  * Internal dependencies

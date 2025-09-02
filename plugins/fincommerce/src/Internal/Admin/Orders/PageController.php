@@ -104,7 +104,7 @@ class PageController {
 		$locked = $edit_lock->is_locked_by_another_user( $this->order );
 
 		// Take over order?
-		if ( ! empty( $_GET['claim-lock'] ) && wp_verify_nonce( $_GET['_wpnonce'] ?? '', 'claim-lock-' . $this->order->get_id() ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+		if ( ! empty( $_GET['claim-lock'] ) && wp_verify_nonce( $_GET['_wpnonce'] ?? '', 'claim-lock-' . $this->order->get_id() ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized,finpress.Security.ValidatedSanitizedInput.MissingUnslash
 			$edit_lock->lock( $this->order );
 			wp_safe_redirect( $this->get_edit_url( $this->order->get_id() ) );
 			exit;
@@ -187,14 +187,14 @@ class PageController {
 		if ( $this->is_order_screen( $this->order_type, 'list' ) ) {
 			$admin_title = sprintf(
 				// translators: 1: The label for an order type 2: The name of the website.
-				esc_html__( '%1$s &lsaquo; %2$s &#8212; WordPress', 'fincommerce' ),
+				esc_html__( '%1$s &lsaquo; %2$s &#8212; finpress', 'fincommerce' ),
 				esc_html( $labels->name ),
 				esc_html( get_bloginfo( 'name' ) )
 			);
 		} elseif ( $this->is_order_screen( $this->order_type, 'edit' ) ) {
 			$admin_title = sprintf(
 				// translators: 1: The label for an order type 2: The title of the order 3: The name of the website.
-				esc_html__( '%1$s #%2$s &lsaquo; %3$s &#8212; WordPress', 'fincommerce' ),
+				esc_html__( '%1$s #%2$s &lsaquo; %3$s &#8212; finpress', 'fincommerce' ),
 				esc_html( $labels->edit_item ),
 				absint( $this->order->get_id() ),
 				esc_html( get_bloginfo( 'name' ) )
@@ -202,7 +202,7 @@ class PageController {
 		} elseif ( $this->is_order_screen( $this->order_type, 'new' ) ) {
 			$admin_title = sprintf(
 				// translators: 1: The label for an order type 2: The name of the website.
-				esc_html__( '%1$s &lsaquo; %2$s &#8212; WordPress', 'fincommerce' ),
+				esc_html__( '%1$s &lsaquo; %2$s &#8212; finpress', 'fincommerce' ),
 				esc_html( $labels->add_new_item ),
 				esc_html( get_bloginfo( 'name' ) )
 			);

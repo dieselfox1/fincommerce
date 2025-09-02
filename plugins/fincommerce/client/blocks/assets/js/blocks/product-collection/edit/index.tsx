@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { useState } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { useState } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import { useGetLocation } from '@fincommerce/blocks/product-template/utils';
-import { Spinner, Flex } from '@wordpress/components';
+import { Spinner, Flex } from '@finpress/components';
 
 /**
  * Internal dependencies

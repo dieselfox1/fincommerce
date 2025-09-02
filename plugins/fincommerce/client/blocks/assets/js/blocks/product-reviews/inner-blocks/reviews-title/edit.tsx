@@ -2,21 +2,21 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { useEntityProp } from '@wordpress/core-data';
-import { PanelBody, ToggleControl } from '@wordpress/components';
-import { useState, useEffect } from '@wordpress/element';
-import { resolveSelect } from '@wordpress/data';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { useEntityProp } from '@finpress/core-data';
+import { PanelBody, ToggleControl } from '@finpress/components';
+import { useState, useEffect } from '@finpress/element';
+import { resolveSelect } from '@finpress/data';
 import { reviewsStore } from '@fincommerce/data';
 import {
-	// @ts-expect-error AlignmentControl is not exported from @wordpress/block-editor
+	// @ts-expect-error AlignmentControl is not exported from @finpress/block-editor
 	AlignmentControl,
 	BlockControls,
 	useBlockProps,
 	InspectorControls,
-	// @ts-expect-error HeadingLevelDropdown is not exported from @wordpress/block-editor
+	// @ts-expect-error HeadingLevelDropdown is not exported from @finpress/block-editor
 	HeadingLevelDropdown,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

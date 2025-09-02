@@ -10,17 +10,17 @@ import {
 	useMemo,
 	useEffect,
 	useCallback,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { usePrevious } from '@fincommerce/base-hooks';
-import deprecated from '@wordpress/deprecated';
-import { useDispatch, useSelect } from '@wordpress/data';
+import deprecated from '@finpress/deprecated';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	checkoutStore,
 	paymentStore,
 	validationStore,
 } from '@fincommerce/block-data';
-import { store as noticesStore } from '@wordpress/notices';
-import type { WPNotice } from '@wordpress/notices/build-types/store/selectors';
+import { store as noticesStore } from '@finpress/notices';
+import type { WPNotice } from '@finpress/notices/build-types/store/selectors';
 import { checkoutEvents } from '@fincommerce/blocks-checkout-events';
 import {
 	ExpressPaymentMethods,

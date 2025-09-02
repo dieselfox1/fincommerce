@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, Modal } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, Modal } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 const DismissModal = ( {
 	showDismissModal,

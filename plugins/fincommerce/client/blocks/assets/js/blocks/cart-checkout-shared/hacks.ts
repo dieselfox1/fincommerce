@@ -2,11 +2,11 @@
  * HACKS
  *
  * This file contains functionality to "lock" blocks i.e. to prevent blocks being moved or deleted. This needs to be
- * kept in place until native support for locking is available in WordPress (estimated WordPress 5.9).
+ * kept in place until native support for locking is available in finpress (estimated finpress 5.9).
  */
 
 /**
- * @todo Remove custom block locking (requires native WordPress support)
+ * @todo Remove custom block locking (requires native finpress support)
  */
 
 /**
@@ -15,13 +15,13 @@
 import {
 	useBlockProps,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { isTextField } from '@wordpress/dom';
-import { subscribe, select as _select } from '@wordpress/data';
-import { useEffect, useRef } from '@wordpress/element';
-import { BACKSPACE, DELETE } from '@wordpress/keycodes';
-import { hasFilter } from '@wordpress/hooks';
-import { getBlockType } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { isTextField } from '@finpress/dom';
+import { subscribe, select as _select } from '@finpress/data';
+import { useEffect, useRef } from '@finpress/element';
+import { BACKSPACE, DELETE } from '@finpress/keycodes';
+import { hasFilter } from '@finpress/hooks';
+import { getBlockType } from '@finpress/blocks';
 import type { MutableRefObject } from 'react';
 
 /**

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, useMemo } from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { createElement, useMemo } from '@finpress/element';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

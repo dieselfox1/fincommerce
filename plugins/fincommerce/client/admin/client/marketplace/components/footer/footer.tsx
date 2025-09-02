@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { check, commentContent, shield, people } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { check, commentContent, shield, people } from '@finpress/icons';
 
 /**
  * Internal dependencies

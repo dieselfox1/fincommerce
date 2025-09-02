@@ -2,7 +2,7 @@
  * External dependencies
  */
 import type { StoryFn, Meta } from '@storybook/react';
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

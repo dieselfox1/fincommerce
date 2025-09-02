@@ -27,7 +27,7 @@ echo esc_html__( 'The following note has been added to your order:', 'fincommerc
 
 echo "----------\n\n";
 
-echo wc_wptexturize_order_note( $customer_note ) . "\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+echo wc_wptexturize_order_note( $customer_note ) . "\n\n"; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 echo "----------\n\n";
 

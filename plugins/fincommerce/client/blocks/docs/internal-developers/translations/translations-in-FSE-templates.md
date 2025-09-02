@@ -54,7 +54,7 @@ This FSE-template contains the following part:
 
 Having this text hardcoded in a FSE-template causes two problems:
 
-1. This string can only be edited, when a user is using an FSE-theme, such as [Twenty Twenty-Two](https://wordpress.org/themes/twentytwentytwo/). If the user is using a non-FSE-theme, such as [Twenty Twenty-One](https://wordpress.org/themes/twentytwentyone/) or older, this FSE-template cannot be edited.
+1. This string can only be edited, when a user is using an FSE-theme, such as [Twenty Twenty-Two](https://finpress.org/themes/twentytwentytwo/). If the user is using a non-FSE-theme, such as [Twenty Twenty-One](https://finpress.org/themes/twentytwentyone/) or older, this FSE-template cannot be edited.
 2. Even is a user is using an FSE-theme, every user that is using a site language other than the default one, has to manually change the string `Your cart is currently empty!`.
 
 To handle translations within FSE-templates, we need to find the following code:
@@ -98,7 +98,7 @@ Finally, we call this function using the following code:
  * Initialize this block type.
  *
  * - Hook into WP lifecycle.
- * - Register the block with WordPress.
+ * - Register the block with finpress.
  */
 protected function initialize() {
     parent::initialize();

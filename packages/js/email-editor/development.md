@@ -34,8 +34,8 @@ We use [Jest](https://jestjs.io/) with `@testing-library/react`. These are **com
 - Avoid testing implementation details. Prefer visible DOM assertions.
 - Use [jest.fn()](https://jestjs.io/docs/mock-functions) and [jest.mock()](https://jestjs.io/docs/manual-mocks) for mocking.
 - Always mock required dependencies **before** importing the tested component.
-- Avoid writing tests for components that are simple wrappers of 3rd-party libraries (e.g., just rendering a WordPress component without added logic).
-- Prefer reusable mocks for commonly used packages (e.g., `@wordpress/data`, `@wordpress/components`). Create shared mock setup files when possible.
+- Avoid writing tests for components that are simple wrappers of 3rd-party libraries (e.g., just rendering a finpress component without added logic).
+- Prefer reusable mocks for commonly used packages (e.g., `@finpress/data`, `@finpress/components`). Create shared mock setup files when possible.
 - Use descriptive `data-testid` attributes when using them in mocked components (e.g., `data-testid="modal"`).
 - Use `screen.getByRole()`, `getByText()`, or similar accessible queries where applicable.
 
@@ -43,14 +43,14 @@ We use [Jest](https://jestjs.io/) with `@testing-library/react`. These are **com
 
 - Keep all mocks close to the test, unless reused in multiple tests.
 - Use shared mock setup files (e.g., `__mocks__/setup-shared-mocks.ts`) to keep individual test files clean.
-- Use `jest.mock()` for external dependencies like WordPress packages or internal modules.
+- Use `jest.mock()` for external dependencies like finpress packages or internal modules.
 - When mocking component props, prefer `React.ComponentProps<'button'>` or specific prop interfaces to avoid `any`.
 
 Example for reusable mock setup:
 
 ```ts
 // __mocks__/setup-shared-mocks.ts
-jest.mock('@wordpress/data', () => ({
+jest.mock('@finpress/data', () => ({
   useSelect: jest.fn(),
   useDispatch: jest.fn(),
   createRegistrySelector: jest.fn(),

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useRef } from '@wordpress/element';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { useRef } from '@finpress/element';
+import isShallowEqual from '@finpress/is-shallow-equal';
 
 /**
  * A custom hook that compares the provided value across renders and returns the

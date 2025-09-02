@@ -48,8 +48,8 @@ class MiniCartItemsBlock extends AbstractInnerBlock {
 
 		ob_start();
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-			<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
+			<?php echo $content; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 		</div>
 		<?php
 		return ob_get_clean();

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { Badge } from '@fincommerce/components';
 import {
 	Button,
@@ -9,10 +9,10 @@ import {
 	PanelBody,
 	PanelRow,
 	__experimentalText as Text,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { ordersStore, productsStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { snakeCase } from 'lodash';
 
 /**

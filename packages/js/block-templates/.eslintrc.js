@@ -11,8 +11,8 @@ module.exports = {
 	],
 	settings: {
 		'import/core-modules': [
-			'@wordpress/core-data',
-			'@wordpress/blocks',
+			'@finpress/core-data',
+			'@finpress/blocks',
 			'@fincommerce/expression-evaluation',
 		],
 		'import/resolver': {

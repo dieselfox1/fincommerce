@@ -5,7 +5,7 @@
 	"author": "Automattic",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce",
 		"currency"
 	],
@@ -54,11 +54,11 @@
 	},
 	"dependencies": {
 		"@fincommerce/number": "workspace:*",
-		"@wordpress/deprecated": "wp-6.6",
-		"@wordpress/element": "wp-6.6",
-		"@wordpress/hooks": "wp-6.6",
-		"@wordpress/html-entities": "wp-6.6",
-		"@wordpress/i18n": "wp-6.6"
+		"@finpress/deprecated": "wp-6.6",
+		"@finpress/element": "wp-6.6",
+		"@finpress/hooks": "wp-6.6",
+		"@finpress/html-entities": "wp-6.6",
+		"@finpress/i18n": "wp-6.6"
 	},
 	"publishConfig": {
 		"access": "public"

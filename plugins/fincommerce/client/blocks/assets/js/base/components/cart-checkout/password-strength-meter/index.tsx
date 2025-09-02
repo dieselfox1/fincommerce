@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { sprintf, __ } from '@wordpress/i18n';
-import { useInstanceId } from '@wordpress/compose';
+import { sprintf, __ } from '@finpress/i18n';
+import { useInstanceId } from '@finpress/compose';
 import { passwordStrength } from 'check-password-strength';
 import { usePrevious } from '@fincommerce/base-hooks';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

@@ -3,7 +3,7 @@
  */
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 
 /**

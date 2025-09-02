@@ -54,11 +54,11 @@ class WC_AJAX {
 	private static function set_wc_ajax_argument_in_query() {
 		global $wp_query;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['wc-ajax'] ) && empty( $wp_query->get( 'wc-ajax' ) ) ) {
 			$wp_query->set( 'wc-ajax', sanitize_text_field( wp_unslash( $_GET['wc-ajax'] ) ) );
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -105,7 +105,7 @@ class WC_AJAX {
 	public static function do_wc_ajax() {
 		global $wp_query;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		self::set_wc_ajax_argument_in_query();
 
 		$action = $wp_query->get( 'wc-ajax' );
@@ -120,7 +120,7 @@ class WC_AJAX {
 	}
 
 	/**
-	 * Hook in methods - uses WordPress ajax handlers (admin-ajax).
+	 * Hook in methods - uses finpress ajax handlers (admin-ajax).
 	 */
 	public static function add_ajax_events() {
 		$ajax_events_nopriv = array(
@@ -276,7 +276,7 @@ class WC_AJAX {
 		}
 
 		if ( ! StringUtil::is_null_or_whitespace( $coupon_code ) ) {
-			WC()->cart->add_discount( wc_format_coupon_code( wp_unslash( $coupon_code ) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			WC()->cart->add_discount( wc_format_coupon_code( wp_unslash( $coupon_code ) ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		} else {
 			wc_add_notice( WC_Coupon::get_generic_coupon_error( WC_Coupon::E_WC_COUPON_PLEASE_ENTER ), 'error' );
 		}
@@ -291,7 +291,7 @@ class WC_AJAX {
 	public static function remove_coupon() {
 		check_ajax_referer( 'remove-coupon', 'security' );
 
-		$coupon = isset( $_POST['coupon'] ) ? wc_format_coupon_code( wp_unslash( $_POST['coupon'] ) ) : false; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$coupon = isset( $_POST['coupon'] ) ? wc_format_coupon_code( wp_unslash( $_POST['coupon'] ) ) : false; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		if ( StringUtil::is_null_or_whitespace( $coupon ) ) {
 			wc_add_notice( __( 'Sorry there was a problem removing this coupon.', 'fincommerce' ), 'error' );
@@ -372,7 +372,7 @@ class WC_AJAX {
 			self::update_order_review_expired();
 		}
 
-		do_action( 'fincommerce_checkout_update_order_review', isset( $_POST['post_data'] ) ? wp_unslash( $_POST['post_data'] ) : '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		do_action( 'fincommerce_checkout_update_order_review', isset( $_POST['post_data'] ) ? wp_unslash( $_POST['post_data'] ) : '' ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		$chosen_shipping_methods = WC()->session->get( 'chosen_shipping_methods' );
 		$posted_shipping_methods = isset( $_POST['shipping_method'] ) ? wc_clean( wp_unslash( $_POST['shipping_method'] ) ) : array();
@@ -477,7 +477,7 @@ class WC_AJAX {
 	public static function add_to_cart() {
 		ob_start();
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( ! isset( $_POST['product_id'] ) ) {
 			return;
 		}
@@ -525,7 +525,7 @@ class WC_AJAX {
 	public static function remove_from_cart() {
 		ob_start();
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		// phpcs:ignore finpress.Security.NonceVerification.Missing
 		$cart_item_key = wc_clean( isset( $_POST['cart_item_key'] ) ? wp_unslash( $_POST['cart_item_key'] ) : '' );
 
 		if ( $cart_item_key && false !== WC()->cart->remove_cart_item( $cart_item_key ) ) {
@@ -550,7 +550,7 @@ class WC_AJAX {
 	public static function get_variation() {
 		ob_start();
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( empty( $_POST['product_id'] ) ) {
 			wp_die();
 		}
@@ -742,7 +742,7 @@ class WC_AJAX {
 		$response = array();
 
 		try {
-			parse_str( wp_unslash( $_POST['data'] ), $data ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			parse_str( wp_unslash( $_POST['data'] ), $data ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			$product = self::create_product_with_attributes( $data );
 
@@ -787,7 +787,7 @@ class WC_AJAX {
 		}
 
 		try {
-			parse_str( wp_unslash( $_POST['data'] ), $data ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			parse_str( wp_unslash( $_POST['data'] ), $data ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			$product = self::create_product_with_attributes( $data );
 			self::create_all_product_variations( $product );
@@ -806,7 +806,7 @@ class WC_AJAX {
 	 * @return mixed Product class.
 	 */
 	private static function create_product_with_attributes( $data ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( ! isset( $_POST['post_id'] ) ) {
 			wp_die( -1 );
 		}
@@ -1035,9 +1035,9 @@ class WC_AJAX {
 		$order_id = absint( wp_unslash( $_POST['order_id'] ) );
 
 		// If we passed through items it means we need to save first before adding a new one.
-		$items = ( ! empty( $_POST['items'] ) ) ? wp_unslash( $_POST['items'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$items = ( ! empty( $_POST['items'] ) ) ? wp_unslash( $_POST['items'] ) : ''; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
-		$items_to_add = isset( $_POST['data'] ) ? array_filter( wp_unslash( (array) $_POST['data'] ) ) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$items_to_add = isset( $_POST['data'] ) ? array_filter( wp_unslash( (array) $_POST['data'] ) ) : array(); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		try {
 			$response = self::maybe_add_order_item( $order_id, $items, $items_to_add );
@@ -1330,7 +1330,7 @@ class WC_AJAX {
 				throw new Exception( __( 'Invalid coupon', 'fincommerce' ) );
 			}
 
-			$code = wc_format_coupon_code( wp_unslash( $coupon ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$code = wc_format_coupon_code( wp_unslash( $coupon ) ); // phpcs:ignore finpress.Security.NonceVerification.Missing, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			if ( $order->remove_coupon( $code ) ) {
 				// translators: %s coupon code.
 				$order->add_order_note( esc_html( sprintf( __( 'Coupon removed: "%s".', 'fincommerce' ), $code ) ), 0, true );
@@ -1381,8 +1381,8 @@ class WC_AJAX {
 				throw new Exception( __( 'Invalid items', 'fincommerce' ) );
 			}
 
-			$order_item_ids     = wp_unslash( $_POST['order_item_ids'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			$items              = ( ! empty( $_POST['items'] ) ) ? wp_unslash( $_POST['items'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$order_item_ids     = wp_unslash( $_POST['order_item_ids'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$items              = ( ! empty( $_POST['items'] ) ) ? wp_unslash( $_POST['items'] ) : ''; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$calculate_tax_args = array(
 				'country'  => isset( $_POST['country'] ) ? wc_strtoupper( wc_clean( wp_unslash( $_POST['country'] ) ) ) : '',
 				'state'    => isset( $_POST['state'] ) ? wc_strtoupper( wc_clean( wp_unslash( $_POST['state'] ) ) ) : '',
@@ -1530,7 +1530,7 @@ class WC_AJAX {
 
 			// Parse the jQuery serialized items.
 			$items = array();
-			parse_str( wp_unslash( $_POST['items'] ), $items ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			parse_str( wp_unslash( $_POST['items'] ), $items ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			// Save order items.
 			wc_save_order_items( $order_id, $items );
@@ -1586,7 +1586,7 @@ class WC_AJAX {
 		}
 
 		$post_id   = absint( $_POST['post_id'] );
-		$note      = wp_kses_post( trim( wp_unslash( $_POST['note'] ) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$note      = wp_kses_post( trim( wp_unslash( $_POST['note'] ) ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$note_type = wc_clean( wp_unslash( $_POST['note_type'] ) );
 
 		$is_customer_note = ( 'customer' === $note_type ) ? 1 : 0;
@@ -1675,7 +1675,7 @@ class WC_AJAX {
 		$exclude_types = array();
 		if ( ! empty( $_GET['exclude_type'] ) ) {
 			// Support both comma-delimited and array format inputs.
-			$exclude_types = wp_unslash( $_GET['exclude_type'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$exclude_types = wp_unslash( $_GET['exclude_type'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			if ( ! is_array( $exclude_types ) ) {
 				$exclude_types = explode( ',', $exclude_types );
 			}
@@ -1774,7 +1774,7 @@ class WC_AJAX {
 			wp_die( -1 );
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$term  = isset( $_GET['term'] ) ? (string) wc_clean( wp_unslash( $_GET['term'] ) ) : '';
 		$limit = 0;
 
@@ -1811,9 +1811,9 @@ class WC_AJAX {
 
 		$found_customers = array();
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['exclude'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$ids = array_diff( $ids, array_map( 'absint', (array) wp_unslash( $_GET['exclude'] ) ) );
 		}
 
@@ -2094,14 +2094,14 @@ class WC_AJAX {
 	 * Ajax request handling for categories ordering.
 	 */
 	public static function term_ordering() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( ! current_user_can( 'edit_products' ) || empty( $_POST['id'] ) ) {
 			wp_die( -1 );
 		}
 
 		$id       = (int) $_POST['id'];
 		$next_id  = isset( $_POST['nextid'] ) && (int) $_POST['nextid'] ? (int) $_POST['nextid'] : null;
-		$taxonomy = isset( $_POST['thetaxonomy'] ) ? esc_attr( wp_unslash( $_POST['thetaxonomy'] ) ) : null; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$taxonomy = isset( $_POST['thetaxonomy'] ) ? esc_attr( wp_unslash( $_POST['thetaxonomy'] ) ) : null; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$term     = get_term_by( 'id', $id, $taxonomy );
 
 		if ( ! $id || ! $term || ! $taxonomy ) {
@@ -2123,12 +2123,12 @@ class WC_AJAX {
 	/**
 	 * Ajax request handling for product ordering.
 	 *
-	 * Based on Simple Page Ordering by 10up (https://wordpress.org/plugins/simple-page-ordering/).
+	 * Based on Simple Page Ordering by 10up (https://finpress.org/plugins/simple-page-ordering/).
 	 */
 	public static function product_ordering() {
 		global $wpdb;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( ! current_user_can( 'edit_products' ) || empty( $_POST['id'] ) ) {
 			wp_die( -1 );
 		}
@@ -2280,7 +2280,7 @@ class WC_AJAX {
 			wp_die( -1 );
 		}
 
-		$refund_ids = array_map( 'absint', is_array( $_POST['refund_id'] ) ? wp_unslash( $_POST['refund_id'] ) : array( wp_unslash( $_POST['refund_id'] ) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$refund_ids = array_map( 'absint', is_array( $_POST['refund_id'] ) ? wp_unslash( $_POST['refund_id'] ) : array( wp_unslash( $_POST['refund_id'] ) ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		foreach ( $refund_ids as $refund_id ) {
 			if ( $refund_id && 'shop_order_refund' === OrderUtil::get_order_type( $refund_id ) ) {
 				$refund   = wc_get_order( $refund_id );
@@ -2767,12 +2767,12 @@ class WC_AJAX {
 			$variation = wc_get_product( $variation_id );
 
 			if ( 'false' !== $data['date_from'] ) {
-				$date_on_sale_from = date( 'Y-m-d 00:00:00', strtotime( wc_clean( $data['date_from'] ) ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+				$date_on_sale_from = date( 'Y-m-d 00:00:00', strtotime( wc_clean( $data['date_from'] ) ) ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 				$variation->set_date_on_sale_from( $date_on_sale_from );
 			}
 
 			if ( 'false' !== $data['date_to'] ) {
-				$date_on_sale_to = date( 'Y-m-d 23:59:59', strtotime( wc_clean( $data['date_to'] ) ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+				$date_on_sale_to = date( 'Y-m-d 23:59:59', strtotime( wc_clean( $data['date_to'] ) ) ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 				$variation->set_date_on_sale_to( $date_on_sale_to );
 			}
 
@@ -2981,15 +2981,15 @@ class WC_AJAX {
 	 * Handle submissions from assets/js/settings-views-html-settings-tax.js Backbone model.
 	 */
 	public static function tax_rates_save_changes() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( ! isset( $_POST['wc_tax_nonce'], $_POST['changes'] ) ) {
 			wp_send_json_error( 'missing_fields' );
 			wp_die();
 		}
 
-		$current_class = ! empty( $_POST['current_class'] ) ? wp_unslash( $_POST['current_class'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$current_class = ! empty( $_POST['current_class'] ) ? wp_unslash( $_POST['current_class'] ) : ''; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_tax_nonce'] ), 'wc_tax_nonce-class:' . $current_class ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_tax_nonce'] ), 'wc_tax_nonce-class:' . $current_class ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3002,7 +3002,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		foreach ( $changes as $tax_rate_id => $data ) {
 			if ( isset( $data['deleted'] ) ) {
 				if ( isset( $data['newRow'] ) ) {
@@ -3068,7 +3068,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3079,7 +3079,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		foreach ( $changes as $zone_id => $data ) {
 			if ( isset( $data['deleted'] ) ) {
 				if ( isset( $data['newRow'] ) ) {
@@ -3156,7 +3156,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3226,7 +3226,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3283,7 +3283,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3312,7 +3312,7 @@ class WC_AJAX {
 				)
 			);
 		}
-		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		if ( isset( $changes['zone_name'] ) ) {
 			/**
@@ -3452,7 +3452,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_zones_nonce'] ), 'wc_shipping_zones_nonce' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3471,7 +3471,7 @@ class WC_AJAX {
 		 * @since 7.8.0
 		 */
 		do_action( 'fincommerce_update_non_option_setting', array( 'id' => 'zone_method_settings' ) );
-		$shipping_method->set_post_data( wp_unslash( $_POST['data'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$shipping_method->set_post_data( wp_unslash( $_POST['data'] ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		global $current_tab;
 		$current_tab = 'shipping';
@@ -3504,7 +3504,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_classes_nonce'] ), 'wc_shipping_classes_nonce' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! wp_verify_nonce( wp_unslash( $_POST['wc_shipping_classes_nonce'] ), 'wc_shipping_classes_nonce' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_send_json_error( 'bad_nonce' );
 			wp_die();
 		}
@@ -3514,7 +3514,7 @@ class WC_AJAX {
 			wp_die();
 		}
 
-		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$changes = wp_unslash( $_POST['changes'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		foreach ( $changes as $term_id => $data ) {
 			$term_id = absint( $term_id );

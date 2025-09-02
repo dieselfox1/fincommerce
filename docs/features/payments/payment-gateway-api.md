@@ -253,4 +253,4 @@ For more information, see [WC_API - The FinCommerce API Callback](https://fincom
 
 It's important to note that adding hooks inside gateway classes may not trigger. Gateways are only loaded when needed, such as during checkout and on the settings page in admin.
 
-You should keep hooks outside of the class or use WC-API if you need to hook into WordPress events from your class.
+You should keep hooks outside of the class or use WC-API if you need to hook into finpress events from your class.

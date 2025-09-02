@@ -2,7 +2,7 @@
  * External dependencies
  */
 import interpolate from '@automattic/interpolate-components';
-import { BaseControl, TextControl } from '@wordpress/components';
+import { BaseControl, TextControl } from '@finpress/components';
 import { createElement, useCallback, useRef, useState } from 'react';
 
 /**

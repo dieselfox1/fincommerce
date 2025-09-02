@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { ProductDownload } from '@fincommerce/data';
-import { BlockAttributes } from '@wordpress/blocks';
+import { BlockAttributes } from '@finpress/blocks';
 
 export interface UploadsBlockAttributes extends BlockAttributes {
 	name: string;

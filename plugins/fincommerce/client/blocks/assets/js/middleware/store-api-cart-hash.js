@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 // Stores the current hash for the middleware.
 let currentCartHash = window.localStorage.getItem( 'storeApiCartHash' );

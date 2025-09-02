@@ -3,7 +3,7 @@
  */
 import { Page } from '@playwright/test';
 import { Editor, FrontendUtils, RequestUtils } from '@fincommerce/e2e-utils';
-import { BlockRepresentation } from '@wordpress/e2e-test-utils-playwright/build-types/editor/insert-block';
+import { BlockRepresentation } from '@finpress/e2e-test-utils-playwright/build-types/editor/insert-block';
 
 export class AccordionPage {
 	editor: Editor;

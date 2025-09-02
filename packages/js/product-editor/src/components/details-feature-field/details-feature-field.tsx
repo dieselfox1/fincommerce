@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { CheckboxControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { CheckboxControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import {
 	useFormContext,
 	Link,
@@ -14,7 +14,7 @@ import {
 	createElement,
 	Fragment,
 	createInterpolateElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

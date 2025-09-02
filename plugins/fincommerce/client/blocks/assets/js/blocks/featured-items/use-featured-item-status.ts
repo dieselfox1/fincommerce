@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { store as coreDataStore } from '@wordpress/core-data';
+import { useSelect } from '@finpress/data';
+import { store as coreDataStore } from '@finpress/core-data';
 import { useProduct } from '@fincommerce/entities';
 
 /**

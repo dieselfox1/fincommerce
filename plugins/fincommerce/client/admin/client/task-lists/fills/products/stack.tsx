@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { List, Link, Spinner } from '@fincommerce/components';
 import { Text } from '@fincommerce/experimental';
 import interpolateComponents from '@automattic/interpolate-components';

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+import { useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 
 enum Locations {
 	SINGLE_PRODUCT = 'single-product',
@@ -32,7 +32,7 @@ const templateSlugToTemplateMap: {
 export const useTracksLocation = ( templateSlug: string | undefined ) => {
 	const postType = useSelect( ( select ) => {
 		// @ts-expect-error Type definitions are missing
-		// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/wordpress__blocks/store/selectors.d.ts
+		// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/finpress__blocks/store/selectors.d.ts
 		return select( editorStore ).getCurrentPostType();
 	}, [] );
 

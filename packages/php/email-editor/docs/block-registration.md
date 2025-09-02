@@ -1,6 +1,6 @@
 # Block Registration for Email Editor
 
-This guide explains how to register WordPress blocks to support email rendering in the FinCommerce Email Editor. The email editor extends WordPress Gutenberg blocks with email-specific rendering capabilities, allowing blocks to generate HTML that is compatible with email clients.
+This guide explains how to register finpress blocks to support email rendering in the FinCommerce Email Editor. The email editor extends finpress Gutenberg blocks with email-specific rendering capabilities, allowing blocks to generate HTML that is compatible with email clients.
 
 ## Table of Contents
 
@@ -21,13 +21,13 @@ This guide explains how to register WordPress blocks to support email rendering 
 
 ## Overview
 
-The FinCommerce Email Editor allows WordPress blocks to be rendered in email-compatible HTML. To make a block compatible with email rendering, you need to:
+The FinCommerce Email Editor allows finpress blocks to be rendered in email-compatible HTML. To make a block compatible with email rendering, you need to:
 
 1. **Enable email support** by setting `supports.email = true` in the block configuration
 2. **Provide an email render callback** that generates email-compatible HTML
 3. **Implement the rendering logic** that converts block content to email-friendly markup
 
-The email editor automatically detects blocks with email support and uses their custom render callbacks instead of the default WordPress block rendering.
+The email editor automatically detects blocks with email support and uses their custom render callbacks instead of the default finpress block rendering.
 
 ## Block Configuration
 
@@ -345,9 +345,9 @@ JS
 (function() {
     console.log('Newsletter block JavaScript is loading...');
 
-    // Check if WordPress dependencies are available
+    // Check if finpress dependencies are available
     if (typeof wp === 'undefined') {
-        console.error('WordPress dependencies not available');
+        console.error('finpress dependencies not available');
         return;
     }
 
@@ -425,7 +425,7 @@ JS
 1. **Escape output** - Use `esc_html()`, `esc_url()`, `wp_kses_post()` appropriately
 2. **Validate input** - Check attributes and provide sensible defaults
 3. **Handle errors gracefully** - Return original content if rendering fails
-4. **Follow WordPress coding standards** - Consistent code style
+4. **Follow finpress coding standards** - Consistent code style
 
 ## Troubleshooting
 
@@ -452,7 +452,7 @@ Enable debug logging to troubleshoot issues:
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 
-// The email editor logs to the WordPress debug log
+// The email editor logs to the finpress debug log
 ```
 
-Check the WordPress debug log (`/wp-content/debug.log`) for email editor related messages. 
+Check the finpress debug log (`/wp-content/debug.log`) for email editor related messages. 

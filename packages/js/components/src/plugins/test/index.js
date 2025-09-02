@@ -3,8 +3,8 @@
  */
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createElement } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { createElement } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -12,8 +12,8 @@ import { useDispatch } from '@wordpress/data';
 
 import { Plugins } from '../index';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	__esModule: true,
 	useDispatch: jest
 		.fn()

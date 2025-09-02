@@ -2,7 +2,7 @@
  * External dependencies
  */
 import confetti from 'canvas-confetti';
-import { useEffect, useRef } from '@wordpress/element';
+import { useEffect, useRef } from '@finpress/element';
 
 /**
  * Note: This was copied over from https://github.com/Automattic/wp-calypso/blob/a39539547780871d0371a20fcf21c767a86a1010/packages/components/src/confetti/index.ts

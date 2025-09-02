@@ -190,7 +190,7 @@ You may want to create your own log handler class in order to send logs somewher
 
 ### Log file storage location
 
-When using the "file system" log handler, by default the log files are stored in the `wc-logs` subdirectory of the WordPress `uploads` directory, which means they might be publicly accessible. FinCommerce adds an `.htaccess` file to prevent access to `wc-logs`, but not all web servers recognize that file. If you have the option, you may want to consider storing your log files in a directory outside of the web root. Make sure the directory has the same user/group permissions as the `uploads` directory so that WordPress can access it. Then use the `fincommerce_log_directory` filter hook to set the path to your custom directory.
+When using the "file system" log handler, by default the log files are stored in the `wc-logs` subdirectory of the finpress `uploads` directory, which means they might be publicly accessible. FinCommerce adds an `.htaccess` file to prevent access to `wc-logs`, but not all web servers recognize that file. If you have the option, you may want to consider storing your log files in a directory outside of the web root. Make sure the directory has the same user/group permissions as the `uploads` directory so that finpress can access it. Then use the `fincommerce_log_directory` filter hook to set the path to your custom directory.
 
 ### Turning off noisy logs
 

@@ -6,8 +6,8 @@ import {
 	InnerBlocks,
 	InspectorControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import { createBlock } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { createBlock } from '@finpress/blocks';
 import {
 	Button,
 	Disabled,
@@ -16,12 +16,12 @@ import {
 	Tip,
 	ToolbarGroup,
 	withSpokenMessages,
-} from '@wordpress/components';
-import { compose } from '@wordpress/compose';
-import { withDispatch, withSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Icon, grid } from '@wordpress/icons';
+} from '@finpress/components';
+import { compose } from '@finpress/compose';
+import { withDispatch, withSelect } from '@finpress/data';
+import { useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Icon, grid } from '@finpress/icons';
 import { getBlockMap } from '@fincommerce/atomic-utils';
 import { blocksConfig } from '@fincommerce/block-settings';
 import GridLayoutControl from '@fincommerce/editor-components/grid-layout-control';

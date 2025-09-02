@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Fragment } from 'react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 type Fills = Array< Array< React.ReactElement > >;
 

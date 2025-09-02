@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 import { camelCaseKeys, debounce } from '@fincommerce/base-utils';
-import { isEmail } from '@wordpress/url';
+import { isEmail } from '@finpress/url';
 import {
 	CartBillingAddress,
 	CartShippingAddress,
 	Cart,
 	CartResponse,
 } from '@fincommerce/types';
-import { CurriedSelectorsOf } from '@wordpress/data/build-types/types';
+import { CurriedSelectorsOf } from '@finpress/data/build-types/types';
 
 /**
  * Internal dependencies

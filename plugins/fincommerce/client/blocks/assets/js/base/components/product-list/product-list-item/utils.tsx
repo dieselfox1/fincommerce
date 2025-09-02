@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { getBlockMap } from '@fincommerce/atomic-utils';
-import { Suspense } from '@wordpress/element';
+import { Suspense } from '@finpress/element';
 import { ProductResponseItem } from '@fincommerce/types';
 
 /**

@@ -5,9 +5,9 @@ import {
 	createElement,
 	createInterpolateElement,
 	isValidElement,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Icon, help as helpIcon } from '@wordpress/icons';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Icon, help as helpIcon } from '@finpress/icons';
 import { __experimentalTooltip as Tooltip } from '@fincommerce/components';
 
 /**

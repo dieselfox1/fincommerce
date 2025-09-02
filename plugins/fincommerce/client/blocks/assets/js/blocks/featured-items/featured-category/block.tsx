@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { withCategory } from '@fincommerce/block-hocs';
-import { withSpokenMessages } from '@wordpress/components';
-import { compose } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { withSpokenMessages } from '@finpress/components';
+import { compose } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 import { folderStarred } from '@fincommerce/icons';
 
 /**

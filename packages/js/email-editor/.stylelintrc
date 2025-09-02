@@ -1,5 +1,5 @@
 {
-	"extends": "@wordpress/stylelint-config",
+	"extends": "@finpress/stylelint-config",
 	"customSyntax": "postcss-scss",
 	"rules": {
 		"selector-class-pattern": null,

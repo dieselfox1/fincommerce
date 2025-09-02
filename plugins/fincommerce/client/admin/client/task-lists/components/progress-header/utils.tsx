@@ -2,7 +2,7 @@
 /**
  * External dependencies
  */
-import { Slot, Fill } from '@wordpress/components';
+import { Slot, Fill } from '@finpress/components';
 import {
 	createOrderedChildren,
 	sortFillsByOrder,

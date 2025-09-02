@@ -133,8 +133,8 @@ class WC_Brands {
 	 * @return array
 	 */
 	public function update_product_query_tax_query( array $tax_query ) {
-		if ( isset( $_GET['filter_product_brand'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$filter_product_brand = wc_clean( wp_unslash( $_GET['filter_product_brand'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET['filter_product_brand'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$filter_product_brand = wc_clean( wp_unslash( $_GET['filter_product_brand'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$brands_filter        = array_filter( array_map( 'absint', explode( ',', $filter_product_brand ) ) );
 
 			if ( $brands_filter ) {
@@ -407,7 +407,7 @@ class WC_Brands {
 			 * @param array  $terms        Array of brand term objects.
 			 * @param int    $post_id      The product ID.
 			 */
-			echo apply_filters( 'fincommerce_product_brands_output', $brand_output, $terms, $post->ID ); // phpcs:ignore WordPress.Security.EscapeOutput
+			echo apply_filters( 'fincommerce_product_brands_output', $brand_output, $terms, $post->ID ); // phpcs:ignore finpress.Security.EscapeOutput
 		}
 	}
 
@@ -935,11 +935,11 @@ class WC_Brands {
 	 * @version 9.4.0
 	 */
 	public function fincommerce_brands_update_layered_nav_link( $term_html, $term, $link, $count ) {
-		if ( empty( $_GET['filter_product_brand'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( empty( $_GET['filter_product_brand'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return $term_html;
 		}
 
-		$filter_product_brand = wc_clean( wp_unslash( $_GET['filter_product_brand'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$filter_product_brand = wc_clean( wp_unslash( $_GET['filter_product_brand'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$current_attributes   = array_map( 'intval', explode( ',', $filter_product_brand ) );
 		$current_values       = ! empty( $current_attributes ) ? $current_attributes : array();
 		$link                 = add_query_arg(

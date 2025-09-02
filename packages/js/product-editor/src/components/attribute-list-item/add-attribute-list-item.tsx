@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { ListItem } from '@fincommerce/components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 type NewAttributeListItemProps = {
 	label?: string;

@@ -5,9 +5,9 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * Class used to implement meta queries for the orders table datastore via {@see OrdersTableQuery}.
- * Heavily inspired by WordPress' own `WP_Meta_Query` for backwards compatibility reasons.
+ * Heavily inspired by finpress' own `WP_Meta_Query` for backwards compatibility reasons.
  *
- * Parts of the implementation have been adapted from {@link https://core.trac.wordpress.org/browser/tags/6.0.1/src/wp-includes/class-wp-meta-query.php}.
+ * Parts of the implementation have been adapted from {@link https://core.trac.finpress.org/browser/tags/6.0.1/src/wp-includes/class-wp-meta-query.php}.
  */
 class OrdersTableMetaQuery {
 
@@ -422,12 +422,12 @@ class OrdersTableMetaQuery {
 		if ( 'NOT EXISTS' === $clause['compare'] ) {
 			if ( 'LIKE' === $clause['compare_key'] ) {
 				return $wpdb->prepare(
-					"LEFT JOIN {$this->meta_table} AS {$alias} ON ( {$this->orders_table}.id = {$alias}.order_id AND {$alias}.meta_key LIKE %s )", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					"LEFT JOIN {$this->meta_table} AS {$alias} ON ( {$this->orders_table}.id = {$alias}.order_id AND {$alias}.meta_key LIKE %s )", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 					'%' . $wpdb->esc_like( $clause['key'] ) . '%'
 				);
 			} else {
 				return $wpdb->prepare(
-					"LEFT JOIN {$this->meta_table} AS {$alias} ON ( {$this->orders_table}.id = {$alias}.order_id AND {$alias}.meta_key = %s )", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					"LEFT JOIN {$this->meta_table} AS {$alias} ON ( {$this->orders_table}.id = {$alias}.order_id AND {$alias}.meta_key = %s )", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 					$clause['key']
 				);
 			}
@@ -500,7 +500,7 @@ class OrdersTableMetaQuery {
 
 	/**
 	 * Generates an SQL WHERE clause for a given meta_query atomic clause based on its meta key.
-	 * Adapted from WordPress' `WP_Meta_Query::get_sql_for_clause()` method.
+	 * Adapted from finpress' `WP_Meta_Query::get_sql_for_clause()` method.
 	 *
 	 * @param array $clause An atomic meta_query clause.
 	 * @return string An SQL WHERE clause or an empty string if $clause is invalid.
@@ -536,15 +536,15 @@ class OrdersTableMetaQuery {
 		switch ( $clause['compare_key'] ) {
 			case '=':
 			case 'EXISTS':
-				$where = $wpdb->prepare( "$alias.meta_key = %s", trim( $clause['key'] ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$where = $wpdb->prepare( "$alias.meta_key = %s", trim( $clause['key'] ) ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				break;
 			case 'LIKE':
 				$meta_compare_value = '%' . $wpdb->esc_like( trim( $clause['key'] ) ) . '%';
-				$where              = $wpdb->prepare( "$alias.meta_key LIKE %s", $meta_compare_value ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$where              = $wpdb->prepare( "$alias.meta_key LIKE %s", $meta_compare_value ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				break;
 			case 'IN':
 				$meta_compare_string = "$alias.meta_key IN (" . substr( str_repeat( ',%s', count( (array) $clause['key'] ) ), 1 ) . ')';
-				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 			case 'RLIKE':
 			case 'REGEXP':
@@ -554,23 +554,23 @@ class OrdersTableMetaQuery {
 				} else {
 					$cast = '';
 				}
-				$where = $wpdb->prepare( "$alias.meta_key $operator $cast %s", trim( $clause['key'] ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$where = $wpdb->prepare( "$alias.meta_key $operator $cast %s", trim( $clause['key'] ) ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				break;
 			case '!=':
 			case 'NOT EXISTS':
 				$meta_compare_string = $meta_compare_string_start . "AND $subquery_alias.meta_key = %s " . $meta_compare_string_end;
-				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 			case 'NOT LIKE':
 				$meta_compare_string = $meta_compare_string_start . "AND $subquery_alias.meta_key LIKE %s " . $meta_compare_string_end;
 
 				$meta_compare_value = '%' . $wpdb->esc_like( trim( $clause['key'] ) ) . '%';
-				$where              = $wpdb->prepare( $meta_compare_string, $meta_compare_value ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where              = $wpdb->prepare( $meta_compare_string, $meta_compare_value ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 			case 'NOT IN':
 				$array_subclause     = '(' . substr( str_repeat( ',%s', count( (array) $clause['key'] ) ), 1 ) . ') ';
 				$meta_compare_string = $meta_compare_string_start . "AND $subquery_alias.meta_key IN " . $array_subclause . $meta_compare_string_end;
-				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 			case 'NOT REGEXP':
 				$operator = $clause['compare_key'];
@@ -581,7 +581,7 @@ class OrdersTableMetaQuery {
 				}
 
 				$meta_compare_string = $meta_compare_string_start . "AND $subquery_alias.meta_key REGEXP $cast %s " . $meta_compare_string_end;
-				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where               = $wpdb->prepare( $meta_compare_string, $clause['key'] ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 			default:
 				$where = '';
@@ -593,7 +593,7 @@ class OrdersTableMetaQuery {
 
 	/**
 	 * Generates an SQL WHERE clause for a given meta_query atomic clause based on its meta value.
-	 * Adapted from WordPress' `WP_Meta_Query::get_sql_for_clause()` method.
+	 * Adapted from finpress' `WP_Meta_Query::get_sql_for_clause()` method.
 	 *
 	 * @param array $clause An atomic meta_query clause.
 	 * @return string An SQL WHERE clause or an empty string if $clause is invalid.
@@ -620,7 +620,7 @@ class OrdersTableMetaQuery {
 		switch ( $meta_compare ) {
 			case 'IN':
 			case 'NOT IN':
-				$where = $wpdb->prepare( '(' . substr( str_repeat( ',%s', count( (array) $meta_value ) ), 1 ) . ')', $meta_value ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where = $wpdb->prepare( '(' . substr( str_repeat( ',%s', count( (array) $meta_value ) ), 1 ) . ')', $meta_value ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 
 			case 'BETWEEN':

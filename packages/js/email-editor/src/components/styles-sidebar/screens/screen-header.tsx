@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { chevronLeft } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { chevronLeft } from '@finpress/icons';
 import {
 	__experimentalHStack as HStack, // eslint-disable-line
 	__experimentalVStack as VStack, // eslint-disable-line
 	__experimentalSpacer as Spacer, // eslint-disable-line
 	__experimentalHeading as Heading, // eslint-disable-line
 	__experimentalView as View, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies
@@ -24,7 +24,7 @@ type Props = {
 
 /**
  * Component for displaying the screen header and optional description based on site editor component:
- * https://github.com/WordPress/gutenberg/blob/7fa03fafeb421ab4c3604564211ce6007cc38e84/packages/edit-site/src/components/global-styles/header.js
+ * https://github.com/finpress/gutenberg/blob/7fa03fafeb421ab4c3604564211ce6007cc38e84/packages/edit-site/src/components/global-styles/header.js
  *
  * @param root0
  * @param root0.title

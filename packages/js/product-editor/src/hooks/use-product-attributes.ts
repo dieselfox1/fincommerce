@@ -8,8 +8,8 @@ import {
 	ProductAttributeTerm,
 	ProductDefaultAttribute,
 } from '@fincommerce/data';
-import { resolveSelect } from '@wordpress/data';
-import { useCallback, useState } from '@wordpress/element';
+import { resolveSelect } from '@finpress/data';
+import { useCallback, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

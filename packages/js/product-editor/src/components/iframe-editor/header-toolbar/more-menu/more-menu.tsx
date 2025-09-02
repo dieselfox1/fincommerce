@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { MenuGroup } from '@wordpress/components';
-import { createElement, Fragment } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import ActionItem from '@wordpress/interface/build-module/components/action-item';
+import { MenuGroup } from '@finpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import ActionItem from '@finpress/interface/build-module/components/action-item';
 
 /**
  * Internal dependencies

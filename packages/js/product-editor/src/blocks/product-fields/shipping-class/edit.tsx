@@ -10,17 +10,17 @@ import {
 } from '@fincommerce/data';
 import { getNewPath } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';
-import { BaseControl, SelectControl } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { BaseControl, SelectControl } from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { useSelect, useDispatch } from '@finpress/data';
 import {
 	Fragment,
 	createElement,
 	createInterpolateElement,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { useEntityProp } from '@wordpress/core-data';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

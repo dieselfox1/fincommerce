@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { applyFilters } from '@wordpress/hooks';
-import { useEffect } from '@wordpress/element';
+import { applyFilters } from '@finpress/hooks';
+import { useEffect } from '@finpress/element';
 import { triggerExitPageCesSurvey } from '@fincommerce/customer-effort-score';
 import {
 	LayoutContextProvider,

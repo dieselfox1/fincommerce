@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
-import apiFetch from '@wordpress/api-fetch';
+import { dispatch } from '@finpress/data';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies
@@ -10,8 +10,8 @@ import apiFetch from '@wordpress/api-fetch';
 import { getCartData } from '@fincommerce/block-library/assets/js/data/cart/resolvers';
 import { store as cartStore } from '@fincommerce/block-library/assets/js/data/cart';
 
-jest.mock( '@wordpress/data-controls' );
-jest.mock( '@wordpress/api-fetch' );
+jest.mock( '@finpress/data-controls' );
+jest.mock( '@finpress/api-fetch' );
 
 describe( 'getCartData', () => {
 	it( 'when apiFetch returns a valid response, receives the cart correctly', async () => {

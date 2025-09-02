@@ -9,10 +9,10 @@ on:
     branches: [trunk]
 
 env:
-  GIT_COMMITTER_NAME: 'woocommercebot'
-  GIT_COMMITTER_EMAIL: 'woocommercebot@users.noreply.github.com'
-  GIT_AUTHOR_NAME: 'woocommercebot'
-  GIT_AUTHOR_EMAIL: 'woocommercebot@users.noreply.github.com'
+  GIT_COMMITTER_NAME: 'fincommercebot'
+  GIT_COMMITTER_EMAIL: 'fincommercebot@users.noreply.github.com'
+  GIT_AUTHOR_NAME: 'fincommercebot'
+  GIT_AUTHOR_EMAIL: 'fincommercebot@users.noreply.github.com'
 
 jobs:
   prepare:

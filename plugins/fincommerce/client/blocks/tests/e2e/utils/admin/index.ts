@@ -6,7 +6,7 @@ import {
 	Admin as CoreAdmin,
 	PageUtils,
 	Editor,
-} from '@wordpress/e2e-test-utils-playwright';
+} from '@finpress/e2e-test-utils-playwright';
 
 type AdminConstructorProps = {
 	page: Page;

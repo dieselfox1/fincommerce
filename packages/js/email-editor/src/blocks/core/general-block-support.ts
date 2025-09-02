@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 import {
 	Block as WPBlock,
 	BlockSupports as WPBlockSupports,
-} from '@wordpress/blocks/index';
-import domReady from '@wordpress/dom-ready';
+} from '@finpress/blocks/index';
+import domReady from '@finpress/dom-ready';
 import {
 	store as blocksStore,
 	unregisterBlockStyle,
 	getBlockTypes,
-} from '@wordpress/blocks';
-import { select } from '@wordpress/data';
+} from '@finpress/blocks';
+import { select } from '@finpress/data';
 
 // Extend the BlockSupports type to include shadow
 // The shadow is not included in WP6.4 but it is in WP6.5

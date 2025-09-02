@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useEditorContext } from '@fincommerce/base-context';
 
 /**
@@ -36,7 +36,7 @@ jest.mock( '../../express-payment-methods', () =>
 	) )
 );
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	useSelect: jest.fn(),
 	dispatch: jest.fn(),
 } ) );

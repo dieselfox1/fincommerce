@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -16,7 +16,7 @@ const v1 = {
 
 		return (
 			<div { ...blockProps }>
-				{ /* @ts-expect-error: `InnerBlocks.Content` is a component that is typed in WordPress core*/ }
+				{ /* @ts-expect-error: `InnerBlocks.Content` is a component that is typed in finpress core*/ }
 				<InnerBlocks.Content />
 			</div>
 		);

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import {
 	ONBOARDING_STORE_NAME,
 	getVisibleTasks,

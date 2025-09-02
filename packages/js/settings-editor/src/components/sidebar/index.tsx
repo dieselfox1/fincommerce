@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { addQueryArgs } from '@wordpress/url';
-import { __experimentalItemGroup as ItemGroup } from '@wordpress/components';
-import * as IconPackage from '@wordpress/icons';
+import { createElement } from '@finpress/element';
+import { addQueryArgs } from '@finpress/url';
+import { __experimentalItemGroup as ItemGroup } from '@finpress/components';
+import * as IconPackage from '@finpress/icons';
 import {
 	SidebarNavigationScreen,
 	SidebarNavigationItem,

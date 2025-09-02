@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { withInstanceId } from '@wordpress/compose';
+import { withInstanceId } from '@finpress/compose';
 import type { ChangeEventHandler } from 'react';
 
 /**

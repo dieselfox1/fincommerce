@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Card, CardBody } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Card, CardBody } from '@finpress/components';
 import { Spinner } from '@fincommerce/components';
 import { Text } from '@fincommerce/experimental';
 import { WooHeaderPageTitle } from '@fincommerce/admin-layout';

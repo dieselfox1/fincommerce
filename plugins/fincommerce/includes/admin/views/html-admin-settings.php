@@ -42,7 +42,7 @@ $hide_nav = 'checkout' === $current_tab && in_array( $current_section, array( 'o
 if ( array_key_exists( 'advanced', $tabs ) ) {
 	$advanced = $tabs['advanced'];
 	unset( $tabs['advanced'] );
-	// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+	// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	$tabs['advanced'] = $advanced;
 }
 

@@ -454,7 +454,7 @@ namespace Automattic\FinCommerce\Tests\Internal\Logging {
 			add_filter(
 				'pre_http_request',
 				function ( $preempt, $args, $url ) {
-					if ( 'https://public-api.wordpress.com/rest/v1.1/logstash' === $url ) {
+					if ( 'https://public-api.finpress.com/rest/v1.1/logstash' === $url ) {
 						throw new \Exception( 'Remote logging failed: A valid URL was not provided.' );
 					}
 					return $preempt;
@@ -695,7 +695,7 @@ namespace Automattic\FinCommerce\Tests\Internal\Logging {
 				'response' => array(
 					WC_PLUGIN_BASENAME => (object) array(
 						'new_version' => $new_version,
-						'package'     => 'https://downloads.wordpress.org/plugin/fincommerce.zip',
+						'package'     => 'https://downloads.finpress.org/plugin/fincommerce.zip',
 						'slug'        => 'fincommerce',
 					),
 				),

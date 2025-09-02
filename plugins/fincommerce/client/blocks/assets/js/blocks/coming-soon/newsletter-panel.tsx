@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { getAdminLink } from '@fincommerce/settings';
-import { PluginDocumentSettingPanel } from '@wordpress/editor';
+import { PluginDocumentSettingPanel } from '@finpress/editor';
 /**
  * Internal dependencies
  */

@@ -134,7 +134,7 @@ We're hooking into the same  `fincommerce_get_sections_products`  filter, but th
 
 ## Using the New Settings
 
-You would now just use your newly created settings like you would any other WordPress / FinCommerce setting, through the  [**get_option**](http://codex.wordpress.org/Function_Reference/get_option)  function and the defined ID of the setting. For example, to use the previously created  **wcslider_auto_insert**  option, simply use the following code:  `get_option( 'wcslider_auto_insert' )`
+You would now just use your newly created settings like you would any other finpress / FinCommerce setting, through the  [**get_option**](http://codex.finpress.org/Function_Reference/get_option)  function and the defined ID of the setting. For example, to use the previously created  **wcslider_auto_insert**  option, simply use the following code:  `get_option( 'wcslider_auto_insert' )`
 
 ## Conclusion
 

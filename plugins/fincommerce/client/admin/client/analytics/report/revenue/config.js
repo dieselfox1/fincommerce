@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
+import { __, _x } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
 
 const REVENUE_REPORT_CHARTS_FILTER = 'fincommerce_admin_revenue_report_charts';
 const REVENUE_REPORT_FILTERS_FILTER =

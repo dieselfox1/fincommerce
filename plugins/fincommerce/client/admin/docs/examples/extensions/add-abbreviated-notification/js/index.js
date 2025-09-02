@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { registerPlugin } from '@wordpress/plugins';
-import { Fill as NotificationFill } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { registerPlugin } from '@finpress/plugins';
+import { Fill as NotificationFill } from '@finpress/components';
 import { AbbreviatedCard } from '@fincommerce/components';
-import { page } from '@wordpress/icons';
+import { page } from '@finpress/icons';
 import { Text } from '@fincommerce/experimental';
 
 const MyAbbreviatedNotification = () => {

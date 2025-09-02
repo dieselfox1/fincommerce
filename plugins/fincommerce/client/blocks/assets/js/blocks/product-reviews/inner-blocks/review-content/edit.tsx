@@ -2,18 +2,18 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { _x } from '@wordpress/i18n';
-import { RawHTML } from '@wordpress/element';
-import { Disabled } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { _x } from '@finpress/i18n';
+import { RawHTML } from '@finpress/element';
+import { Disabled } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import type { BlockEditProps } from '@finpress/blocks';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore No types for this exist yet.
 	AlignmentControl,
 	BlockControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 export default function Edit( {
 	setAttributes,

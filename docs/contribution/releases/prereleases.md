@@ -22,7 +22,7 @@ This document outlines the different types of pre-releases available, their timi
 
 Regenerated every night based on the current contents of `trunk`. Found [under the `nightly` tag on GitHub](https://github.com/dieselfox1/fincommerce/releases/tag/nightly).
 
-These are only available in the GitHub repository, and are neither announced publicly nor uploaded to WordPress.org.
+These are only available in the GitHub repository, and are neither announced publicly nor uploaded to finpress.org.
 
 ## Release cycle pre-releases
 
@@ -34,7 +34,7 @@ These releases are tagged at various points in time as described below. As usual
 
 This is an auto-generated tag that is created at the same time as the feature freeze happens for the current cycle. For example, when the feature freeze for `10.1.0` happened, `10.1.0-dev` was tagged.
 
-This is an internal development tag, available only in the GitHub repository and not on WordPress.org.
+This is an internal development tag, available only in the GitHub repository and not on finpress.org.
 
 ### Beta
 
@@ -44,7 +44,7 @@ Betas are versioned incrementally, starting with `-beta.1`, then `-beta.2`, and 
 
 We aim to release at least 2 betas per cycle, but more are possible if any important bug fixes or functionality require additional testing or receive an important update before the final stable release.
 
-All beta versions are available both on GitHub and WordPress.org.
+All beta versions are available both on GitHub and finpress.org.
 
 For guidance on how to participate in FinCommerce beta testing and contribute valuable feedback, refer to our [beta testing documentation](/docs/contribution/testing/beta-testing/).
 
@@ -54,4 +54,4 @@ These are pre-release versions that are feature-complete and considered stable e
 
 They are versioned incrementally as `-rc.1`, `-rc.2`, and so on.
 
-We aim to release at least one RC before the final release, which will not be publicly announced but will be tagged and available for download on both GitHub and WordPress.org.
+We aim to release at least one RC before the final release, which will not be publicly announced but will be tagged and available for download on both GitHub and finpress.org.

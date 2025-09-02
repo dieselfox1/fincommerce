@@ -142,7 +142,7 @@ class OnboardingSync {
 			! $task_list ||
 			$task_list->is_hidden() ||
 			! isset( $_SERVER['HTTP_REFERER'] ) ||
-			0 !== strpos( wp_unslash( $_SERVER['HTTP_REFERER'] ), 'https://fincommerce.com/checkout?utm_medium=product' ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			0 !== strpos( wp_unslash( $_SERVER['HTTP_REFERER'] ), 'https://fincommerce.com/checkout?utm_medium=product' ) // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		) {
 			return;
 		}

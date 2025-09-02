@@ -54,14 +54,14 @@ class FormHandlerService {
 			return;
 		}
 
-		if ( ! isset( $_POST['wc_bis_register'] ) ) { // phpcs:disable WordPress.Security.NonceVerification.Missing, WordPress.Security.NonceVerification.Recommended
+		if ( ! isset( $_POST['wc_bis_register'] ) ) { // phpcs:disable finpress.Security.NonceVerification.Missing, finpress.Security.NonceVerification.Recommended
 			return;
 		}
 
 		try {
 
 			if ( self::requires_nonce_check() ) {
-				if ( ! isset( $_POST['wc_bis_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['wc_bis_nonce'] ), 'wc_bis_signup' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				if ( ! isset( $_POST['wc_bis_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['wc_bis_nonce'] ), 'wc_bis_signup' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 					wc_add_notice( $this->signup_service->get_error_message( SignupService::ERROR_INVALID_REQUEST ), 'error' );
 					return;
 				}

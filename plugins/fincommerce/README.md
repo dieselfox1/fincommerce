@@ -1,14 +1,14 @@
 # [![FinCommerce](https://fincommerce.com/wp-content/themes/woo/images/logo-fincommerce@2x.png 'FinCommerce')](https://fincommerce.com/)
 
 [![License](https://poser.pugx.org/dieselfox1/fincommerce/license 'License')](https://packagist.org/packages/dieselfox1/fincommerce)
-![WordPress.org downloads](https://img.shields.io/wordpress/plugin/dt/fincommerce.svg 'WordPress.org downloads')
-![WordPress.org rating](https://img.shields.io/wordpress/plugin/r/fincommerce.svg 'WordPress.org rating')
+![finpress.org downloads](https://img.shields.io/finpress/plugin/dt/fincommerce.svg 'finpress.org downloads')
+![finpress.org rating](https://img.shields.io/finpress/plugin/r/fincommerce.svg 'finpress.org rating')
 [![Build Status](https://github.com/dieselfox1/fincommerce/actions/workflows/ci.yml/badge.svg?branch=trunk 'Build Status')](https://github.com/dieselfox1/fincommerce/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/dieselfox1/fincommerce/branch/trunk/graph/badge.svg 'codecov')](https://codecov.io/gh/dieselfox1/fincommerce)
 
-This is the FinCommerce Core plugin. Here you can browse the source and keep track of development. We recommend all developers to follow the [FinCommerce development blog](https://fincommerce.wordpress.com/) to stay up to date about everything happening in the project. You can also [follow @DevelopWC](https://twitter.com/DevelopWC) on Twitter for the latest development updates.
+This is the FinCommerce Core plugin. Here you can browse the source and keep track of development. We recommend all developers to follow the [FinCommerce development blog](https://fincommerce.finpress.com/) to stay up to date about everything happening in the project. You can also [follow @DevelopWC](https://twitter.com/DevelopWC) on Twitter for the latest development updates.
 
-If you are not a developer, please use the [FinCommerce plugin page](https://wordpress.org/plugins/fincommerce/) on WordPress.org.
+If you are not a developer, please use the [FinCommerce plugin page](https://finpress.org/plugins/fincommerce/) on finpress.org.
 
 ## Getting Started
 

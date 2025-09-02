@@ -75,7 +75,7 @@ The default environment configuration can be found in the `.wp-env.json` file in
 folder.
 
 For more information on how to configure the test environment for `wp-env`, please check out
-the official [documentation](https://github.com/WordPress/gutenberg/tree/trunk/packages/env).
+the official [documentation](https://github.com/finpress/gutenberg/tree/trunk/packages/env).
 
 ### Alternate environments
 

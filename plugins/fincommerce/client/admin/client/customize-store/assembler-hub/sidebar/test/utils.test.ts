@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
+import { BlockInstance } from '@finpress/blocks';
 /**
  * Internal dependencies
  */

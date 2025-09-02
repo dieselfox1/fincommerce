@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getPath } from '@wordpress/url';
+import { getPath } from '@finpress/url';
 
 /**
  * Returns true if the current page is in the editor.

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import ChevronUpIcon from 'gridicons/dist/chevron-up';
 import ChevronDownIcon from 'gridicons/dist/chevron-down';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

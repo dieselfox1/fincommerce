@@ -2,7 +2,7 @@
 /**
  * External dependencies
  */
-import { select, dispatch } from '@wordpress/data';
+import { select, dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -12,12 +12,12 @@ import { PlainPaymentMethods } from '@fincommerce/block-library/assets/js/types'
 import '@fincommerce/block-library/assets/js/data/checkout';
 import { store as paymentStore } from '@fincommerce/block-library/assets/js/data/payment';
 
-const originalSelect = jest.requireActual( '@wordpress/data' ).select;
-const originalDispatch = jest.requireActual( '@wordpress/data' ).dispatch;
+const originalSelect = jest.requireActual( '@finpress/data' ).select;
+const originalDispatch = jest.requireActual( '@finpress/data' ).dispatch;
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	return {
-		...jest.requireActual( '@wordpress/data' ),
+		...jest.requireActual( '@finpress/data' ),
 		select: jest.fn(),
 		dispatch: jest.fn(),
 	};

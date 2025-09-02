@@ -32,10 +32,10 @@ namespace Automattic\FinCommerce\Internal\Traits;
  *
  * For this to work the callback must be an array and the first element of the array must be either '$this', '__CLASS__',
  * or another instance of the same class; otherwise the method won't be marked as accessible
- * (but the corresponding WordPress 'add_action' and 'add_filter' functions will still be called).
+ * (but the corresponding finpress 'add_action' and 'add_filter' functions will still be called).
  *
  * No special procedure is needed to remove hooks set up with these methods, the regular 'remove_action'
- * and 'remove_filter' functions provided by WordPress can be used as usual.
+ * and 'remove_filter' functions provided by finpress can be used as usual.
  *
  * @deprecated 9.6.0 Make the hook target methods public and mark them with an @internal annotation. This trait will be removed in FinCommerce 10.5.
  */
@@ -58,7 +58,7 @@ trait AccessiblePrivateMethods {
 	//phpcs:enable PSR2.Classes.PropertyDeclaration.Underscore
 
 	/**
-	 * Register a WordPress action.
+	 * Register a finpress action.
 	 * If the callback refers to a private or protected instance method in this class, the method is marked as externally accessible.
 	 *
 	 * $callback can be a standard callable, or a string representing the name of a method in this class.
@@ -78,7 +78,7 @@ trait AccessiblePrivateMethods {
 	}
 
 	/**
-	 * Register a WordPress filter.
+	 * Register a finpress filter.
 	 * If the callback refers to a private or protected instance method in this class, the method is marked as externally accessible.
 	 *
 	 * $callback can be a standard callable, or a string representing the name of a method in this class.
@@ -98,7 +98,7 @@ trait AccessiblePrivateMethods {
 	}
 
 	/**
-	 * Do the required processing to a callback before invoking the WordPress 'add_action' or 'add_filter' function.
+	 * Do the required processing to a callback before invoking the finpress 'add_action' or 'add_filter' function.
 	 *
 	 * @param callable $callback The callback to process.
 	 * @return void

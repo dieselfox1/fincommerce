@@ -70,7 +70,7 @@ class CSVUploadHelper {
 			);
 		}
 
-		$file = $_FILES[ $files_index ] ?? null; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+		$file = $_FILES[ $files_index ] ?? null; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized,finpress.Security.NonceVerification.Missing
 		if ( ! isset( $file['tmp_name'] ) || ! is_uploaded_file( $file['tmp_name'] ) ) {
 			throw new \Exception( esc_html__( 'File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'fincommerce' ) );
 		}
@@ -98,7 +98,7 @@ class CSVUploadHelper {
 		add_filter( 'wp_handle_upload_prefilter', array( $this, 'remove_txt_from_uploaded_file' ), 0 );
 		add_filter( 'wp_check_filetype_and_ext', array( $this, 'filter_fincommerce_check_filetype_for_csv' ), 10, 5 );
 
-		$orig_files_import = $_FILES['import'] ?? null; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+		$orig_files_import = $_FILES['import'] ?? null; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized,finpress.Security.NonceVerification.Missing
 		$_FILES['import']  = $file;  // wp_import_handle_upload() expects the file to be in 'import'.
 
 		$upload = wp_import_handle_upload();
@@ -179,7 +179,7 @@ class CSVUploadHelper {
 	}
 
 	/**
-	 * Filters the WordPress determination of a file's type and extension, specifically to correct
+	 * Filters the finpress determination of a file's type and extension, specifically to correct
 	 * CSV files that are misidentified as 'text/html'.
 	 *
 	 * @param array  $data      An array of file data: ['ext'] (string), ['type'] (string), ['proper_filename'] (string|false).

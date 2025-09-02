@@ -3,12 +3,12 @@
 /**
  * External dependencies
  */
-import { useContext } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { useContext } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import {
 	store as blockEditorStore,
 	// @ts-ignore No types for this exist yet.
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

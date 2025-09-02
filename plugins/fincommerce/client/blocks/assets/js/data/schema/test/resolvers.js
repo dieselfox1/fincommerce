@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { apiFetch } from '@wordpress/data-controls';
-import { controls } from '@wordpress/data';
+import { apiFetch } from '@finpress/data-controls';
+import { controls } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -11,8 +11,8 @@ import { getRoute, getRoutes } from '@fincommerce/block-library/assets/js/data/s
 import { receiveRoutes } from '@fincommerce/block-library/assets/js/data/schema/actions';
 import { STORE_KEY } from '@fincommerce/block-library/assets/js/data/schema/constants';
 
-jest.mock( '@wordpress/data-controls' );
-jest.mock( '@wordpress/data' );
+jest.mock( '@finpress/data-controls' );
+jest.mock( '@finpress/data' );
 
 describe( 'getRoute', () => {
 	it( 'yields select control response', () => {

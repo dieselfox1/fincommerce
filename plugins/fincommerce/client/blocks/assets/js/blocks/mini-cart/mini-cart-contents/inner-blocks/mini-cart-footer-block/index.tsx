@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Icon, payment } from '@wordpress/icons';
-import { createBlock, registerBlockType } from '@wordpress/blocks';
-import { useBlockProps } from '@wordpress/block-editor';
+import { Icon, payment } from '@finpress/icons';
+import { createBlock, registerBlockType } from '@finpress/blocks';
+import { useBlockProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

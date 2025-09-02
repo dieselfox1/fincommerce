@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Component, Fragment } from '@wordpress/element';
-import { Button, Tooltip } from '@wordpress/components';
-import { compose } from '@wordpress/compose';
-import { withSelect, withDispatch } from '@wordpress/data';
+import { Component, Fragment } from '@finpress/element';
+import { Button, Tooltip } from '@finpress/components';
+import { compose } from '@finpress/compose';
+import { withSelect, withDispatch } from '@finpress/data';
 import PropTypes from 'prop-types';
 import StarIcon from 'gridicons/dist/star';
 import StarOutlineIcon from 'gridicons/dist/star-outline';

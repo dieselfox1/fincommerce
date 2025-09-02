@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createElement, createInterpolateElement } from '@finpress/element';
 import { TourKitTypes } from '@fincommerce/components';
 
 export const getSteps = (): TourKitTypes.WooStep[] => {

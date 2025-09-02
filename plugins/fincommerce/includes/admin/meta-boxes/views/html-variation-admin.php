@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 				<option value="">
 					<?php
 					/* translators: %s: attribute label */
-					printf( esc_html__( 'Any %s&hellip;', 'fincommerce' ), wc_attribute_label( $attribute->get_name() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					printf( esc_html__( 'Any %s&hellip;', 'fincommerce' ), wc_attribute_label( $attribute->get_name() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 					?>
 				</option>
 				<?php if ( $attribute->is_taxonomy() ) : ?>

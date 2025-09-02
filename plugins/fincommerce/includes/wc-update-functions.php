@@ -56,7 +56,7 @@ function wc_update_200_file_paths() {
 			$old_file_path = trim( $existing_file_path->meta_value );
 
 			if ( ! empty( $old_file_path ) ) {
-				// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+				// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_serialize
 				$file_paths = serialize( array( md5( $old_file_path ) => $old_file_path ) );
 
 				$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->postmeta} SET meta_key = '_file_paths', meta_value = %s WHERE meta_id = %d", $file_paths, $existing_file_path->meta_id ) );
@@ -420,7 +420,7 @@ function wc_update_200_db_version() {
 function wc_update_209_brazillian_state() {
 	global $wpdb;
 
-	// phpcs:disable WordPress.DB.SlowDBQuery
+	// phpcs:disable finpress.DB.SlowDBQuery
 
 	// Update Brazilian state codes.
 	$wpdb->update(
@@ -464,7 +464,7 @@ function wc_update_209_brazillian_state() {
 		)
 	);
 
-	// phpcs:enable WordPress.DB.SlowDBQuery
+	// phpcs:enable finpress.DB.SlowDBQuery
 }
 
 /**
@@ -523,7 +523,7 @@ function wc_update_210_file_paths() {
 					}
 				}
 				if ( $needs_update ) {
-					// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+					// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_serialize
 					$new_value = serialize( $new_value );
 
 					$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->postmeta} SET meta_key = %s, meta_value = %s WHERE meta_id = %d", '_downloadable_files', $new_value, $existing_file_path->meta_id ) );
@@ -892,7 +892,7 @@ function wc_update_240_api_keys() {
  * @return void
  */
 function wc_update_240_webhooks() {
-	// phpcs:disable WordPress.DB.SlowDBQuery
+	// phpcs:disable finpress.DB.SlowDBQuery
 
 	/**
 	 * Webhooks.
@@ -911,7 +911,7 @@ function wc_update_240_webhooks() {
 		$webhook->set_topic( 'order.updated' );
 	}
 
-	// phpcs:enable WordPress.DB.SlowDBQuery
+	// phpcs:enable finpress.DB.SlowDBQuery
 }
 
 /**
@@ -1032,7 +1032,7 @@ function wc_update_250_currency() {
 		update_option( 'fincommerce_currency', 'LAK' );
 	}
 
-	// phpcs:disable WordPress.DB.SlowDBQuery
+	// phpcs:disable finpress.DB.SlowDBQuery
 
 	// Update LAK currency code.
 	$wpdb->update(
@@ -1046,7 +1046,7 @@ function wc_update_250_currency() {
 		)
 	);
 
-	// phpcs:enable WordPress.DB.SlowDBQuery
+	// phpcs:enable finpress.DB.SlowDBQuery
 }
 
 /**
@@ -1080,7 +1080,7 @@ function wc_update_260_options() {
 function wc_update_260_termmeta() {
 	global $wpdb;
 	/**
-	 * Migrate term meta to WordPress tables.
+	 * Migrate term meta to finpress tables.
 	 */
 	if ( get_option( 'db_version' ) >= 34370 && $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}fincommerce_termmeta';" ) ) {
 		if ( $wpdb->query( "INSERT INTO {$wpdb->termmeta} ( term_id, meta_key, meta_value ) SELECT fincommerce_term_id, meta_key, meta_value FROM {$wpdb->prefix}fincommerce_termmeta;" ) ) {
@@ -1226,7 +1226,7 @@ function wc_update_260_db_version() {
  * @return void
  */
 function wc_update_300_webhooks() {
-	// phpcs:disable WordPress.DB.SlowDBQuery
+	// phpcs:disable finpress.DB.SlowDBQuery
 
 	/**
 	 * Make sure product.update webhooks get the fincommerce_product_quick_edit_save
@@ -1245,7 +1245,7 @@ function wc_update_300_webhooks() {
 		$webhook->set_topic( 'product.updated' );
 	}
 
-	// phpcs:enable WordPress.DB.SlowDBQuery
+	// phpcs:enable finpress.DB.SlowDBQuery
 }
 
 /**
@@ -1636,14 +1636,14 @@ function wc_update_330_product_stock_status() {
 
 	$post_ids = array_map( 'absint', $post_ids );
 
-	// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+	// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 	// Set the status to onbackorder for those products.
 	$wpdb->query(
 		"UPDATE $wpdb->postmeta
 		SET meta_value = 'onbackorder'
 		WHERE meta_key = '_stock_status' AND post_id IN ( " . implode( ',', $post_ids ) . ' )'
 	);
-	// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+	// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 }
 
 /**
@@ -1863,7 +1863,7 @@ function wc_update_343_cleanup_foreign_keys() {
 		// Extract and remove the foreign key constraints matching %wc_download_log_ib%.
 		if ( preg_match_all( '/CONSTRAINT `([^`]*wc_download_log_ib[^`]*)` FOREIGN KEY/', $create_table_sql, $matches ) && ! empty( $matches[1] ) ) {
 			foreach ( $matches[1] as $foreign_key_name ) {
-				$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY `{$foreign_key_name}`" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY `{$foreign_key_name}`" ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			}
 		}
 	}
@@ -1927,7 +1927,7 @@ function wc_update_352_drop_download_log_fk() {
 
 	if ( ! empty( $create_table_sql ) ) {
 		if ( strpos( $create_table_sql, 'CONSTRAINT `fk_wc_download_log_permission_id` FOREIGN KEY' ) !== false ) {
-			$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY fk_wc_download_log_permission_id" ); // phpcs:ignore WordPress.WP.PreparedSQL.NotPrepared
+			$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY fk_wc_download_log_permission_id" ); // phpcs:ignore finpress.WP.PreparedSQL.NotPrepared
 		}
 	}
 }
@@ -2039,11 +2039,11 @@ function wc_update_370_mro_std_currency() {
 	$wpdb->update(
 		$wpdb->postmeta,
 		array(
-			'meta_value' => 'MRU', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_value' => 'MRU', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 		),
 		array(
-			'meta_key'   => '_order_currency', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-			'meta_value' => 'MRO', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_key'   => '_order_currency', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_value' => 'MRO', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 		)
 	);
 
@@ -2051,11 +2051,11 @@ function wc_update_370_mro_std_currency() {
 	$wpdb->update(
 		$wpdb->postmeta,
 		array(
-			'meta_value' => 'STN', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_value' => 'STN', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 		),
 		array(
-			'meta_key'   => '_order_currency', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-			'meta_value' => 'STD', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			'meta_key'   => '_order_currency', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_value' => 'STD', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 		)
 	);
 }
@@ -2085,7 +2085,7 @@ function wc_update_390_move_maxmind_database() {
 	$new_path    = apply_filters( 'fincommerce_geolocation_local_database_path', $new_path, 2 );
 	$new_path    = apply_filters( 'fincommerce_maxmind_geolocation_database_path', $new_path );
 
-	// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+	// phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged
 	@rename( $old_path, $new_path );
 }
 
@@ -2461,7 +2461,7 @@ function wc_update_700_remove_download_log_fk() {
 	if ( ! empty( $create_table_sql ) ) {
 		if ( preg_match_all( '/CONSTRAINT `([^`]*)` FOREIGN KEY/', $create_table_sql, $matches ) && ! empty( $matches[1] ) ) {
 			foreach ( $matches[1] as $foreign_key_name ) {
-				$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY `{$foreign_key_name}`" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY `{$foreign_key_name}`" ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			}
 		}
 	}
@@ -2648,10 +2648,10 @@ INSERT INTO $orders_meta_table (order_id, meta_key, meta_value)
 $select_query
 LIMIT 250
 ";
-	// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- No user input in the query, everything hardcoded.
+	// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- No user input in the query, everything hardcoded.
 	$wpdb->query( $query );
 
-	// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- No user input in the query, everything hardcoded.
+	// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared -- No user input in the query, everything hardcoded.
 	$has_pending = $wpdb->query( "$select_query LIMIT 1;" );
 
 	return ! empty( $has_pending );

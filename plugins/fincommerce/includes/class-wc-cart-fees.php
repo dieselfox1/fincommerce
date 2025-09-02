@@ -58,7 +58,7 @@ final class WC_Cart_Fees {
 	}
 
 	/**
-	 * Register methods for this object on the appropriate WordPress hooks.
+	 * Register methods for this object on the appropriate finpress hooks.
 	 */
 	public function init() {}
 

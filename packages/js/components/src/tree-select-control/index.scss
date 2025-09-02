@@ -1,4 +1,4 @@
-@import "node_modules/@wordpress/base-styles/mixins";
+@import "node_modules/@finpress/base-styles/mixins";
 
 $gap-largest: 40px;
 $gap-larger: 36px;
@@ -218,8 +218,8 @@ $muriel-box-shadow-8dp: 0 5px 5px -3px rgb(0 0 0 / 20%),
 		// the same class names as the WP Components Checkbox, without it being a code dependency.
 		// This caused some visual breakages when changes happened in WP 6.6, and
 		// the rules have been copied over from WP Components styles of 6.5.1.
-		// https://github.com/WordPress/gutenberg/blob/403b4b8d014ef7f6edc15c822e455e109bf49c6d/packages/components/src/checkbox-control/style.scss#L4
-		// mixins were imported from @wordpress/base-styles as there's a significant amount of rules if
+		// https://github.com/finpress/gutenberg/blob/403b4b8d014ef7f6edc15c822e455e109bf49c6d/packages/components/src/checkbox-control/style.scss#L4
+		// mixins were imported from @finpress/base-styles as there's a significant amount of rules if
 		// it were to be copied. I think the risk of them changing is lower than the chance we decide to upstream this component.
 		.components-checkbox-control__input-container {
 			$checkbox-input-size: 20px;

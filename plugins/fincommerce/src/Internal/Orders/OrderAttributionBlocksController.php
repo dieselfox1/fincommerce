@@ -70,7 +70,7 @@ class OrderAttributionBlocksController implements RegisterHooksInterface {
 	}
 
 	/**
-	 * Hook into WordPress on init.
+	 * Hook into finpress on init.
 	 */
 	public function on_init() {
 		// Bail if the feature is not enabled.

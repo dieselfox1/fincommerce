@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { useMemo, memo } from '@wordpress/element';
-import { store as editorStore } from '@wordpress/editor';
-import { useSelect } from '@wordpress/data';
-import { Icon, info, blockDefault } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { useMemo, memo } from '@finpress/element';
+import { store as editorStore } from '@finpress/editor';
+import { useSelect } from '@finpress/data';
+import { Icon, info, blockDefault } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import {
 	__experimentalHStack as HStack, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 // @ts-expect-error No types available for this component
 // eslint-disable-next-line
-import { BlockPreview } from '@wordpress/block-editor';
+import { BlockPreview } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

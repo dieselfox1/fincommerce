@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema for a null.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#primitive-types
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#primitive-types
  */
 class Null_Schema extends Schema {
 	/**

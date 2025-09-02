@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createContext, useContext } from '@wordpress/element';
+import { createContext, useContext } from '@finpress/element';
 
 /**
  * Query state context is the index for used for a query state store. By

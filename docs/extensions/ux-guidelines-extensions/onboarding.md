@@ -11,9 +11,9 @@ The first experience your users have with your extension is crucial. A user acti
 
 **If necessary, provide a dismissible notification in the plugin area**. Add a notification to communicate next steps if setup or connection is required to successfully enable the plugin.
 
-- Use the standard WordPress notice format and FinCommerce admin notices API.
+- Use the standard finpress notice format and FinCommerce admin notices API.
 - Notices should be dismissible. Users should always have a clear way to close the notice.
-- Keep the post-activation notice with the WordPress plugin area in context of the plugin listing-do not display it on the dashboard, or any other parts of the platform.
+- Keep the post-activation notice with the finpress plugin area in context of the plugin listing-do not display it on the dashboard, or any other parts of the platform.
 - Don't display more than one notice.
 - Try to keep the notice copy between 125 to 200 characters.
 
@@ -23,7 +23,7 @@ If no action is required for setup it's best to rely on other onboarding aids su
 
 **Show helpful empty states**. Rely on the existing plugin UI, if any, to guide users towards successful setup and use of the plugin. Avoid onboarding emails, push notifications, and welcome tours.
 
-**Plugins should not redirect on activation from WordPress plugins area**. This can break bulk activation of plugins. Following the [dotorg plugin guideline 11](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/#11-plugins-should-not-hijack-the-admin-dashboard), the extension shouldn't hijack the dashboard or hide functionality of core or other extensions.
+**Plugins should not redirect on activation from finpress plugins area**. This can break bulk activation of plugins. Following the [dotorg plugin guideline 11](https://developer.finpress.org/plugins/finpress-org/detailed-plugin-guidelines/#11-plugins-should-not-hijack-the-admin-dashboard), the extension shouldn't hijack the dashboard or hide functionality of core or other extensions.
 
 **Avoid dead end links and pages**. There should always be a way forward or back.
 

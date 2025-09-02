@@ -1,13 +1,13 @@
 @import '@automattic/color-studio/dist/color-variables.scss';
 
 // Import Gutenberg variables
-@import '@wordpress/base-styles/colors.scss';
-@import '@wordpress/base-styles/variables.scss';
-@import '@wordpress/base-styles/mixins.scss';
-@import '@wordpress/base-styles/breakpoints.scss';
-@import '@wordpress/base-styles/animations.scss';
-@import '@wordpress/base-styles/z-index.scss';
-@import '@wordpress/base-styles/default-custom-properties.scss';
+@import '@finpress/base-styles/colors.scss';
+@import '@finpress/base-styles/variables.scss';
+@import '@finpress/base-styles/mixins.scss';
+@import '@finpress/base-styles/breakpoints.scss';
+@import '@finpress/base-styles/animations.scss';
+@import '@finpress/base-styles/z-index.scss';
+@import '@finpress/base-styles/default-custom-properties.scss';
 
 $fallback-gutter: 24px;
 $fallback-gutter-large: 40px;
@@ -39,7 +39,7 @@ $alert-red: $error-red;
 $alert-yellow: $notice-yellow;
 $alert-green: $valid-green;
 
-// WordPress defaults
+// finpress defaults
 $adminbar-height: 32px;
 $adminbar-height-mobile: 46px;
 $admin-menu-width: 160px;

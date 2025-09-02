@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies
@@ -11,7 +11,7 @@ import metadata from '@fincommerce/block-library/assets/js/blocks/next-previous-
 import { Save } from '@fincommerce/block-library/assets/js/blocks/next-previous-buttons/save';
 import { Icon } from '@fincommerce/block-library/assets/js/blocks/next-previous-buttons/icons';
 
-// @ts-expect-error: `metadata` currently does not have a type definition in WordPress core
+// @ts-expect-error: `metadata` currently does not have a type definition in finpress core
 registerBlockType( metadata, {
 	icon: Icon,
 	edit: Edit,

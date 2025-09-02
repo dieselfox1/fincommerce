@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { store as noticesStore } from '@wordpress/notices';
-import { dispatch, select } from '@wordpress/data';
+import { store as noticesStore } from '@finpress/notices';
+import { dispatch, select } from '@finpress/data';
 import { act, render, screen, waitFor } from '@testing-library/react';
 
 /**

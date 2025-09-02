@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useUser, optionsStore } from '@fincommerce/data';
 
 const SHOW_MARKETPLACE_SUGGESTION_OPTION =

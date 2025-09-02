@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { Spinner } from '@wordpress/components';
-import { useEntityBlockEditor, store as coreStore } from '@wordpress/core-data';
+import { useSelect } from '@finpress/data';
+import { Spinner } from '@finpress/components';
+import { useEntityBlockEditor, store as coreStore } from '@finpress/core-data';
 import {
 	InnerBlocks,
 	useInnerBlocksProps,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { getSetting } from '@fincommerce/settings';
 
 const TemplatePartInnerBlocks = ( {

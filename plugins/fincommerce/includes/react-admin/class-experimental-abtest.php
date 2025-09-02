@@ -174,7 +174,7 @@ final class Experimental_Abtest {
 			$url      = add_query_arg(
 				$args,
 				sprintf(
-					'https://public-api.wordpress.com/wpcom/v2/experiments/0.1.0/assignments/%s',
+					'https://public-api.finpress.com/wpcom/v2/experiments/0.1.0/assignments/%s',
 					$this->platform
 				)
 			);

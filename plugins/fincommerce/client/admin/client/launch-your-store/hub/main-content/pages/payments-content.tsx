@@ -2,12 +2,12 @@
  * External dependencies
  */
 import { useCallback } from 'react';
-import apiFetch from '@wordpress/api-fetch';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import React, { useEffect, useState } from '@wordpress/element';
+import apiFetch from '@finpress/api-fetch';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import React, { useEffect, useState } from '@finpress/element';
 import { pluginsStore, paymentSettingsStore } from '@fincommerce/data';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { WooPaymentsMethodsLogos } from '@fincommerce/onboarding';
 
 /**

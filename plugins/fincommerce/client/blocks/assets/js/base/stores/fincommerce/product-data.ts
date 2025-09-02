@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getContext, store } from '@wordpress/interactivity';
+import { getContext, store } from '@finpress/interactivity';
 
 type EntityId = number | null;
 type ProductRef = {

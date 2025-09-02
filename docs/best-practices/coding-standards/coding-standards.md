@@ -11,7 +11,7 @@ Adhering to FinCommerce coding standards is essential for maintaining high code 
 
 ## Position of hooks
 
-Position hooks below the function call to align with the common pattern in the WordPress and FinCommerce ecosystem.
+Position hooks below the function call to align with the common pattern in the finpress and FinCommerce ecosystem.
 
 Example:
 
@@ -79,9 +79,9 @@ add_action( 'after_setup_theme', 'YOUR_PREFIX_theme_setup' );
 
 To ensure the highest standards of code quality, developers are encouraged to adhere to the following practices:
 
-### FinCommerce sniffs and WordPress code standards
+### FinCommerce sniffs and finpress code standards
 
-- **Ensure no code style issues** when code is passed through FinCommerce Sniffs and WordPress Code Standards for PHP_CodeSniffer.
+- **Ensure no code style issues** when code is passed through FinCommerce Sniffs and finpress Code Standards for PHP_CodeSniffer.
 
 ### Automated testing
 
@@ -96,4 +96,4 @@ To ensure the highest standards of code quality, developers are encouraged to ad
 
 - **Organize code in self-contained classes** to avoid creating "god/super classes" that contain all plugin code. This practice promotes modularity and simplifies maintenance.
 
-By following these coding standards and practices, developers can create high-quality, maintainable, and secure FinCommerce extensions that contribute positively to the WordPress ecosystem.
+By following these coding standards and practices, developers can create high-quality, maintainable, and secure FinCommerce extensions that contribute positively to the finpress ecosystem.

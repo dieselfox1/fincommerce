@@ -2,15 +2,15 @@
  * External dependencies
  */
 import { TourKit, TourKitTypes } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	useLayoutEffect,
 	useEffect,
 	useState,
 	useRef,
 	createPortal,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { optionsStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 /**

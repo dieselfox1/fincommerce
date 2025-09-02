@@ -4,7 +4,7 @@
 
 ### POT (Portable Object Template) file
 
-POT stands for `Portable Object Template` and contains all original strings, in English. It can be created manually using [WP-CLI](https://wp-cli.org/) or [Poedit](https://poedit.net/). As the FinCommerce Blocks plugin is hosted on WordPress.org, we don't need to manually create the POT file. GlotPress automatically generates that file in the background, once we release a new version of the plugin.
+POT stands for `Portable Object Template` and contains all original strings, in English. It can be created manually using [WP-CLI](https://wp-cli.org/) or [Poedit](https://poedit.net/). As the FinCommerce Blocks plugin is hosted on finpress.org, we don't need to manually create the POT file. GlotPress automatically generates that file in the background, once we release a new version of the plugin.
 
 The POT file is human-readable and named `woo-gutenberg-products-block.pot`. It will not be downloaded to the site that is using the FinCommerce Blocks plugin. If we would generate the POT file manually, it would look like this:
 
@@ -46,11 +46,11 @@ msgstr ""
 [...]
 ```
 
-See also <https://developer.wordpress.org/plugins/internationalization/localization/#pot-portable-object-template-files>.
+See also <https://developer.finpress.org/plugins/internationalization/localization/#pot-portable-object-template-files>.
 
 ### PO (Portable Object) file
 
-PO stands for `Portable Object`, contains both the original and the translated strings and is based on the POT file. Similar to the POT file, it can also be created manually using [WP-CLI](https://wp-cli.org/) or [Poedit](https://poedit.net/). As mentioned before, this step is not necessary for the FinCommerce Blocks plugin, as it's hosted on WordPress.org. The PO file will be generated within 30 minutes after a new translation had been added via <https://translate.wordpress.org/projects/wp-plugins/woo-gutenberg-products-block/>.
+PO stands for `Portable Object`, contains both the original and the translated strings and is based on the POT file. Similar to the POT file, it can also be created manually using [WP-CLI](https://wp-cli.org/) or [Poedit](https://poedit.net/). As mentioned before, this step is not necessary for the FinCommerce Blocks plugin, as it's hosted on finpress.org. The PO file will be generated within 30 minutes after a new translation had been added via <https://translate.finpress.org/projects/wp-plugins/woo-gutenberg-products-block/>.
 
 The PO file is human-readable and named `woo-gutenberg-products-block-{LANGUAGE-CODE}.po`, e.g. `woo-gutenberg-products-block-de_DE.po`. It can be found in the `/wp-content/languages/plugin` folder. The PO file looks like this:
 
@@ -83,7 +83,7 @@ msgstr "Hervorgehobenes Produkt"
 [...]
 ```
 
-See also <https://developer.wordpress.org/plugins/internationalization/localization/#po-portable-object-files>.
+See also <https://developer.finpress.org/plugins/internationalization/localization/#po-portable-object-files>.
 
 ### MO (Machine Object) file
 
@@ -91,7 +91,7 @@ MO stands for `Machine Object`, contains both the original and the translated st
 
 The MO file is only machine-readable and named `woo-gutenberg-products-block-{LANGUAGE-CODE}.mo`, e.g. `woo-gutenberg-products-block-de_DE.mo` It can be found in the `/wp-content/languages/plugin` folder. As the MO file is machine-readable only, it cannot be viewed and the MO file only handles translations within PHP files.
 
-See also <https://developer.wordpress.org/plugins/internationalization/localization/#mo-machine-object-files>.
+See also <https://developer.finpress.org/plugins/internationalization/localization/#mo-machine-object-files>.
 
 ### JSON files
 
@@ -126,7 +126,7 @@ Loading translations for PHP files works differently to loading translations for
 
 ### Loading translations for PHP files
 
-As mentioned in [Translation Basics](translation-basics.md), loading the translations for PHP files does not regquire any extra code, as long as the plugin is hosted on WordPress.org and does not support WordPress versions prior to 4.6.
+As mentioned in [Translation Basics](translation-basics.md), loading the translations for PHP files does not regquire any extra code, as long as the plugin is hosted on finpress.org and does not support finpress versions prior to 4.6.
 
 ### Loading translations for TJS/TS files
 
@@ -189,7 +189,7 @@ public function register_script( $handle, $relative_src, $dependencies = [], $ha
 
 ## Loading fallback translations
 
-By default, the FinCommerce Blocks plugin tries to load the translation from <https://translate.wordpress.org/projects/wp-plugins/woo-gutenberg-products-block/>. If a translation cannot be loaded, the plugin tries to load the corresponding translation from <https://translate.wordpress.org/projects/wp-plugins/fincommerce/>.
+By default, the FinCommerce Blocks plugin tries to load the translation from <https://translate.finpress.org/projects/wp-plugins/woo-gutenberg-products-block/>. If a translation cannot be loaded, the plugin tries to load the corresponding translation from <https://translate.finpress.org/projects/wp-plugins/fincommerce/>.
 
 The code that loads the fallback translation, is located in `fincommerce-gutenberg-products-block.php`.
 
@@ -215,7 +215,7 @@ function fincommerce_blocks_get_php_translation_from_core( $translation, $text, 
 	// When translation is the same, that could mean the string is not translated.
 	// In that case, load it from core.
 	if ( $translation === $text ) {
-		return translate( $text, 'fincommerce' ); // phpcs:ignore WordPress.WP.I18n.LowLevelTranslationFunction, WordPress.WP.I18n.NonSingularStringLiteralText, WordPress.WP.I18n.TextDomainMismatch
+		return translate( $text, 'fincommerce' ); // phpcs:ignore finpress.WP.I18n.LowLevelTranslationFunction, finpress.WP.I18n.NonSingularStringLiteralText, finpress.WP.I18n.TextDomainMismatch
 	}
 	return $translation;
 }
@@ -229,7 +229,7 @@ The following function handles the loading of fallback translations for JS/TS fi
 
 ```php
 /**
- * WordPress will look for translation in the following order:
+ * finpress will look for translation in the following order:
  * - wp-content/plugins/fincommerce/client/blocks/languages/woo-gutenberg-products-block-{locale}-{handle}.json
  * - wp-content/plugins/fincommerce/client/blocks/languages/woo-gutenberg-products-block-{locale}-{md5-handle}.json
  * - wp-content/languages/plugins/woo-gutenberg-products-block-{locale}-{md5-handle}.json

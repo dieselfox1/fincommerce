@@ -34,7 +34,7 @@ $customer_orders = get_posts(
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'fincommerce_my_account_my_orders_title', esc_html__( 'Recent orders', 'fincommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+	<h2><?php echo apply_filters( 'fincommerce_my_account_my_orders_title', esc_html__( 'Recent orders', 'fincommerce' ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></h2>
 
 	<table class="shop_table shop_table_responsive my_account_orders">
 
@@ -49,7 +49,7 @@ if ( $customer_orders ) : ?>
 		<tbody>
 			<?php
 			foreach ( $customer_orders as $customer_order ) :
-				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+				$order      = wc_get_order( $customer_order ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 				$item_count = $order->get_item_count();
 				?>
 				<tr class="order">
@@ -60,7 +60,7 @@ if ( $customer_orders ) : ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'fincommerce' ) . $order->get_order_number(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php echo _x( '#', 'hash before order number', 'fincommerce' ) . $order->get_order_number(); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -72,7 +72,7 @@ if ( $customer_orders ) : ?>
 							<?php elseif ( 'order-total' === $column_id ) : ?>
 								<?php
 								/* translators: 1: formatted order total 2: total order items */
-								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'fincommerce' ), $order->get_formatted_order_total(), $item_count ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'fincommerce' ), $order->get_formatted_order_total(), $item_count ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 								?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
@@ -80,7 +80,7 @@ if ( $customer_orders ) : ?>
 								$actions = wc_get_account_orders_actions( $order );
 
 								if ( ! empty( $actions ) ) {
-									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+									foreach ( $actions as $key => $action ) { // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 										echo '<a href="' . esc_url( $action['url'] ) . '" class="button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 									}
 								}

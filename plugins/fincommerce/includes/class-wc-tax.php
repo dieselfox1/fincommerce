@@ -406,7 +406,7 @@ class WC_Tax {
 
 		$criteria_string = implode( ' AND ', $criteria );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$found_rates = $wpdb->get_results(
 			"
 			SELECT tax_rates.*, COUNT( locations.location_id ) as postcode_count, COUNT( locations2.location_id ) as city_count

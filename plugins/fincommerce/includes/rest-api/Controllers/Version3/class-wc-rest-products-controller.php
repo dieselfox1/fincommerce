@@ -227,7 +227,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 
 		// Filter downloadable products.
 		if ( isset( $request['downloadable'] ) ) {
-			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				$args,
 				array(
 					'key'   => '_downloadable',
@@ -238,7 +238,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 
 		// Filter virtual products.
 		if ( isset( $request['virtual'] ) ) {
-			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				$args,
 				array(
 					'key'   => '_virtual',
@@ -381,7 +381,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 
 		if ( ! empty( $request['global_unique_id'] ) ) {
 			$global_unique_ids  = array_map( 'trim', explode( ',', $request['global_unique_id'] ) );
-			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$args['meta_query'] = $this->add_meta_query( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				$args,
 				array(
 					'key'     => '_global_unique_id',
@@ -590,7 +590,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 				}
 
 				$db_column             = $column_map[ $field ];
-				$field_token_clauses[] = $wpdb->prepare( "({$db_column} LIKE %s)", $like_search ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$field_token_clauses[] = $wpdb->prepare( "({$db_column} LIKE %s)", $like_search ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			}
 
 			if ( $field_token_clauses ) {

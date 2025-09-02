@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { PRIVACY_URL, TERMS_URL } from '@fincommerce/block-settings';
 
 const termsPageLink = TERMS_URL

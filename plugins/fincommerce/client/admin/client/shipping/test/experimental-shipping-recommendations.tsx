@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen, fireEvent } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -10,8 +10,8 @@ import { recordEvent } from '@fincommerce/tracks';
  */
 import ShippingRecommendations from '../experimental-shipping-recommendations';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 } ) );
 jest.mock( '../../settings-recommendations/dismissable-list', () => ( {

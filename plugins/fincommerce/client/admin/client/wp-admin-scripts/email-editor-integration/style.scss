@@ -30,7 +30,7 @@
 
 /*
 	There is no easy way to hide the "Edit excerpt" link:
-		https://github.com/WordPress/gutenberg/blob/trunk/packages/editor/src/components/post-excerpt/panel.js#L145C5-L145C17
+		https://github.com/finpress/gutenberg/blob/trunk/packages/editor/src/components/post-excerpt/panel.js#L145C5-L145C17
 	The button is only hidden when editing patterns and templates.
  */
 .editor-post-excerpt__dropdown button {

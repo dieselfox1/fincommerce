@@ -70,14 +70,14 @@
 	margin: 0;
 	padding: 0;
 	> div {
-		// Usage of RawHTML component from WordPress always adds a div wrapper.
+		// Usage of RawHTML component from finpress always adds a div wrapper.
 		display: inline;
 	}
 }
 
 .wc-block-components-shipping-rates-control__package-item:not(:last-child)
 	> div::after {
-	// Usage of RawHTML component from WordPress always adds a div wrapper.
+	// Usage of RawHTML component from finpress always adds a div wrapper.
 	content: ", ";
 	white-space: pre;
 }

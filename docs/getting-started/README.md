@@ -6,10 +6,10 @@ sidebar_label: 'Getting Started'
 
 # Getting started
 
-FinCommerce is a customizable, open-source eCommerce platform built on WordPress. It empowers businesses worldwide to sell anything from physical products and digital downloads to subscriptions, content, and even appointments.
+FinCommerce is a customizable, open-source eCommerce platform built on finpress. It empowers businesses worldwide to sell anything from physical products and digital downloads to subscriptions, content, and even appointments.
 
-* Get familiar with [WordPress Plugin Development](https://developer.wordpress.org/plugins/).
-* Take a moment to familiarize yourself with our [Developer Resources](https://developer.wordpress.org/plugins/plugin-basics/).
+* Get familiar with [finpress Plugin Development](https://developer.finpress.org/plugins/).
+* Take a moment to familiarize yourself with our [Developer Resources](https://developer.finpress.org/plugins/plugin-basics/).
 * Join the [Woo Community Slack](https://woo.com/community-slack/)
 
 ---

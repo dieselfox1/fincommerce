@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { sprintf } from '@wordpress/i18n';
-import { createRegistrySelector } from '@wordpress/data';
+import { sprintf } from '@finpress/i18n';
+import { createRegistrySelector } from '@finpress/data';
 
 /**
  * Internal dependencies

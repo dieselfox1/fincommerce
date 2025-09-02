@@ -3,7 +3,7 @@
  */
 import { render, fireEvent } from '@testing-library/react';
 import { noop } from 'lodash';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

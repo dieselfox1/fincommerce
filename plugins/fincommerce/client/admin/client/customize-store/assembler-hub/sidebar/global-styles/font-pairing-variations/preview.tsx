@@ -7,15 +7,15 @@
 import {
 	__experimentalHStack as HStack,
 	__experimentalVStack as VStack,
-} from '@wordpress/components';
-import { useResizeObserver, useViewportMatch } from '@wordpress/compose';
-import { useMemo, useRef, useState } from '@wordpress/element';
+} from '@finpress/components';
+import { useResizeObserver, useViewportMatch } from '@finpress/compose';
+import { useMemo, useRef, useState } from '@finpress/element';
 import {
 	// @ts-expect-error No types for this exist yet.
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // @ts-expect-error No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 import { GlobalStylesVariationIframe } from '../global-styles-variation-iframe';
 import {
 	FONT_PREVIEW_LARGE_WIDTH,

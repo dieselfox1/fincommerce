@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register } from '@wordpress/data';
-import { controls } from '@wordpress/data-controls';
+import { createReduxStore, register } from '@finpress/data';
+import { controls } from '@finpress/data-controls';
 import { SelectFromMap } from '@automattic/data-stores';
 
 /**

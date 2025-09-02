@@ -217,7 +217,7 @@ class MiniCart extends \WP_UnitTestCase {
 	 * @return void
 	 */
 	public function test_process_template_contents_with_current_template() {
-		$current_template   = file_get_contents( // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$current_template   = file_get_contents( // phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 			Package::get_path() . 'templates/' . BlockTemplateUtils::DIRECTORY_NAMES['TEMPLATE_PARTS'] . '/mini-cart.html'
 		);
 		$processed_template = $this->mock->call_process_template_contents( $current_template );

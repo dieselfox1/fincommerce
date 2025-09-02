@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { optionsStore } from '@fincommerce/data';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { useState } from 'react';
 
 export const CUSTOMIZE_STORE_ONBOARDING_TOUR_HIDDEN =

@@ -5,7 +5,7 @@ import {
 	// @ts-expect-error Missing types for this package.
 	useInnerBlocksProps,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 export default function Save() {
 	const blockProps = useBlockProps.save();

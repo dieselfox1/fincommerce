@@ -82,7 +82,7 @@ class Packages {
 	}
 
 	/**
-	 * Callback for WordPress init hook.
+	 * Callback for finpress init hook.
 	 */
 	public static function on_init() {
 		self::deactivate_merged_packages();

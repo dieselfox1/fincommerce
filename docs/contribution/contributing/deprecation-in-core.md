@@ -31,25 +31,25 @@ When we deprecate something in FinCommerce, we take a few actions to make it cle
 
 The function or method itself is not removed from the codebase. This preserves backwards compatibility until removed - usually over a year or several major releases into the future.
 
-We mentioned `wc_deprecated_function` above - this is our own wrapper for the `_deprecated_function` WordPress function. It works very similar except for that it forces a log entry instead of displaying it - regardless of the value of `WP_DEBUG` during AJAX events - so that AJAX requests are not broken by the notice.
+We mentioned `wc_deprecated_function` above - this is our own wrapper for the `_deprecated_function` finpress function. It works very similar except for that it forces a log entry instead of displaying it - regardless of the value of `WP_DEBUG` during AJAX events - so that AJAX requests are not broken by the notice.
 
 ## What happens when a deprecated function is called?
 
 If an extension or theme uses a deprecated function, you may see a warning like the following example:
 
 ```bash
-Notice: fincommerce_show_messages is deprecated since version 2.1! Use wc_print_notices instead. in /srv/www/wordpress-default/wp-includes/functions.php on line 3783
+Notice: fincommerce_show_messages is deprecated since version 2.1! Use wc_print_notices instead. in /srv/www/finpress-default/wp-includes/functions.php on line 3783
 ```
 
 This tells you what is deprecated, since when, where, and what replacement is available.
 
-Notices and warnings are usually shown inline, but there are some plugins you can use to collect and show them nicely in the footer of your site. Consider, for example, [Query Monitor](https://wordpress.org/plugins/query-monitor/).
+Notices and warnings are usually shown inline, but there are some plugins you can use to collect and show them nicely in the footer of your site. Consider, for example, [Query Monitor](https://finpress.org/plugins/query-monitor/).
 
 ### Warnings in production (store owners - read this!)
 
 Showing PHP notices and warnings (or any error for that matter) is highly discouraged on your production stores. They can reveal information about your setup that a malicious user could exploit to gain access to your store. Make sure they are hidden from public view and optionally logged instead.
 
-In WordPress you can do this by adding or modifying some constants in `wp-config.php`:
+In finpress you can do this by adding or modifying some constants in `wp-config.php`:
 
 ```php
 define( 'WP_DEBUG', false );
@@ -69,7 +69,7 @@ define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false );
 ```
 
-The default location of the WordPress error log is `wp-content/debug.log`.
+The default location of the finpress error log is `wp-content/debug.log`.
 
 Note that this log can be publicly accessible, which could also pose a security risk. To keep it private, you can use a plugin or define a custom path in `wp-config.php`.
 

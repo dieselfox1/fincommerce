@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useState, useEffect } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useState, useEffect } from '@finpress/element';
 import {
 	PaymentGatewayProvider,
 	PaymentsProviderIncentive,
 	woopaymentsOnboardingStore,
 } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

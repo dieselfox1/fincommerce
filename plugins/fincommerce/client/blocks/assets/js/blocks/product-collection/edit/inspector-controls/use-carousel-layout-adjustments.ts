@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useRef, useEffect } from '@wordpress/element';
-import { select as selectData, useSelect, useDispatch } from '@wordpress/data';
-import { createBlock, type BlockInstance } from '@wordpress/blocks';
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { useRef, useEffect } from '@finpress/element';
+import { select as selectData, useSelect, useDispatch } from '@finpress/data';
+import { createBlock, type BlockInstance } from '@finpress/blocks';
+import { store as blockEditorStore } from '@finpress/block-editor';
 import { getInnerBlockBy, getInnerBlockByName } from '@fincommerce/utils';
 
 /**

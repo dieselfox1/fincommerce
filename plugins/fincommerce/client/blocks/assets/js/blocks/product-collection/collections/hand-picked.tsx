@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { SVG, Path } from '@wordpress/primitives';
-import { Icon } from '@wordpress/icons';
+import { SVG, Path } from '@finpress/primitives';
+import { Icon } from '@finpress/icons';
 import type {
 	InnerBlockTemplate,
 	BlockVariationScope,
-} from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

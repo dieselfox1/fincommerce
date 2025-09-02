@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState, useContext, cloneElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useState, useContext, cloneElement } from '@finpress/element';
 import {
 	RangeControl,
 	ToggleControl,
@@ -12,18 +12,18 @@ import {
 	DropdownMenu,
 	MenuGroup,
 	MenuItem,
-} from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useViewportMatch } from '@wordpress/compose';
-import { Icon, upload, moreVertical } from '@wordpress/icons';
-import { store as coreStore } from '@wordpress/core-data';
-import { isBlobURL } from '@wordpress/blob';
+} from '@finpress/components';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useViewportMatch } from '@finpress/compose';
+import { Icon, upload, moreVertical } from '@finpress/icons';
+import { store as coreStore } from '@finpress/core-data';
+import { isBlobURL } from '@finpress/blob';
 import {
 	MediaUpload,
 	MediaUploadCheck,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { store as noticesStore } from '@wordpress/notices';
+} from '@finpress/block-editor';
+import { store as noticesStore } from '@finpress/notices';
 import interpolateComponents from '@automattic/interpolate-components';
 import { Link } from '@fincommerce/components';
 
@@ -167,7 +167,7 @@ const useLogoEdit = ( {
 	};
 };
 
-// Reference: https://github.com/WordPress/gutenberg/blob/83f3fbc740c97afac3474a6c37098e259191dc2c/packages/block-library/src/site-logo/edit.js#L63
+// Reference: https://github.com/finpress/gutenberg/blob/83f3fbc740c97afac3474a6c37098e259191dc2c/packages/block-library/src/site-logo/edit.js#L63
 const LogoSettings = ( {
 	attributes: { width, isLink, shouldSyncIcon, align = '' },
 	canUserEdit,
@@ -247,7 +247,7 @@ const LogoSettings = ( {
 						} }
 						checked={ !! shouldSyncIcon }
 						help={ __(
-							'Site icons are what you see in browser tabs, bookmark bars, and within the WordPress mobile apps.',
+							'Site icons are what you see in browser tabs, bookmark bars, and within the finpress mobile apps.',
 							'fincommerce'
 						) }
 					/>

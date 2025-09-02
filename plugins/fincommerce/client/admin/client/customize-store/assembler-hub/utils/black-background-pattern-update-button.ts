@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
+import { BlockInstance } from '@finpress/blocks';
 
 const updateFeaturedCategoryCoverImagePattern = (
 	featuredCategoryCoverImagePatternParentBlocks: BlockInstance[],
@@ -60,7 +60,7 @@ export const isFeaturedCategoryCoverImagePattern = ( block: BlockInstance ) =>
 
 /**
  * This is temporary solution to change the button color on the cover block when the color palette is New - Neutral.
- * The real fix should be done on Gutenberg side: https://github.com/WordPress/gutenberg/issues/58004
+ * The real fix should be done on Gutenberg side: https://github.com/finpress/gutenberg/issues/58004
  *
  */
 export const findButtonBlockInsideCoverBlockWithBlackBackgroundPatternAndUpdate =

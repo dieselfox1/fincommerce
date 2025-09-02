@@ -1,25 +1,25 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/site-hub/index.js
+// Reference: https://github.com/finpress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/site-hub/index.js
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import {
 	__unstableMotion as motion,
 	__unstableAnimatePresence as AnimatePresence,
 	__experimentalHStack as HStack,
-} from '@wordpress/components';
-import { useReducedMotion } from '@wordpress/compose';
-import { store as coreStore } from '@wordpress/core-data';
-import { decodeEntities } from '@wordpress/html-entities';
-import { forwardRef } from '@wordpress/element';
+} from '@finpress/components';
+import { useReducedMotion } from '@finpress/compose';
+import { store as coreStore } from '@finpress/core-data';
+import { decodeEntities } from '@finpress/html-entities';
+import { forwardRef } from '@finpress/element';
 // @ts-expect-error No types for this exist yet.
-import SiteIcon from '@wordpress/edit-site/build-module/components/site-icon';
+import SiteIcon from '@finpress/edit-site/build-module/components/site-icon';
 import { getNewPath, getPersistedQuery } from '@fincommerce/navigation';
 import { Link } from '@fincommerce/components';
-import WordPressLogo from '~/lib/wordpress-logo';
+import finpressLogo from '~/lib/finpress-logo';
 
 /**
  * Internal dependencies
@@ -86,9 +86,9 @@ export const SiteHub = forwardRef<
 							type="wp-admin"
 						>
 							{ isEntrepreneurFlow() ? (
-								<WordPressLogo
+								<finpressLogo
 									size={ 24 }
-									className="fincommerce-cys-wordpress-header-logo"
+									className="fincommerce-cys-finpress-header-logo"
 								/>
 							) : (
 								<SiteIcon className="fincommerce-edit-site-layout__view-mode-toggle-icon" />

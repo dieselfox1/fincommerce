@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { FormattedMonetaryAmount } from '@fincommerce/blocks-components';
 import clsx from 'clsx';
 import { formatPrice } from '@fincommerce/price-format';
-import { createInterpolateElement } from '@wordpress/element';
+import { createInterpolateElement } from '@finpress/element';
 import type { Currency } from '@fincommerce/types';
 
 /**

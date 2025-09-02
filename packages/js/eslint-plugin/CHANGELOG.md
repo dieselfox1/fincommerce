@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Fixed some i18n related lint rule violations. [#41450]
 -   Minor - Fix node and pnpm versions via engines [#34773]
 -   Minor - Match TypeScript version with syncpack [#34787]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
 -   Patch - Tell eslint-react-plugin to assume React version 17.0.2 [#38512]
 -   Patch - Update eslint to 8.32.0 across the monorepo. [#36700]
 -   Minor - Update pnpm monorepo-wide to 8.6.5 [#38990]

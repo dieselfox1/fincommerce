@@ -2,7 +2,7 @@
 /**
  * Single variation display
  *
- * This is a javascript-based template for single variations (see https://codex.wordpress.org/Javascript_Reference/wp.template).
+ * This is a javascript-based template for single variations (see https://codex.finpress.org/Javascript_Reference/wp.template).
  * The values will be dynamically replaced after selecting attributes.
  *
  * @see https://fincommerce.com/document/template-structure/

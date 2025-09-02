@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { TabPanel } from '@wordpress/components';
-import { addQueryArgs } from '@wordpress/url';
+import { createElement, Fragment } from '@finpress/element';
+import { TabPanel } from '@finpress/components';
+import { addQueryArgs } from '@finpress/url';
 import { useHistory, useLocation } from '@automattic/site-admin';
 
 export const SectionTabs = ( {

@@ -117,7 +117,7 @@ class ProductCategorySchema extends TermSchema {
 			WHERE term_relationships.term_taxonomy_id IN (" . esc_sql( $terms_to_count_str ) . ')
 		';
 
-		$review_count = $wpdb->get_var( $products_of_category_sql ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$review_count = $wpdb->get_var( $products_of_category_sql ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		return (int) $review_count;
 	}

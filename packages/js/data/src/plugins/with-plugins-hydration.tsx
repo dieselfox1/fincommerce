@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createHigherOrderComponent } from '@wordpress/compose';
+import { createHigherOrderComponent } from '@finpress/compose';
 
-import { useSelect, useDispatch } from '@wordpress/data';
-import { createElement, useEffect } from '@wordpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
+import { createElement, useEffect } from '@finpress/element';
 import { SelectFromMap } from '@automattic/data-stores';
 
 /**

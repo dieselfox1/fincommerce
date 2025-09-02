@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useState, useRef } from '@wordpress/element';
+import { useEffect, useState, useRef } from '@finpress/element';
 import { getCategories } from '@fincommerce/editor-components/utils';
 import type {
 	ProductCategoryResponseItem,

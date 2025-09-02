@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
-import type { createRegistry } from '@wordpress/data';
-import type { CurriedSelectorsOf } from '@wordpress/data/build-types/types';
-import type CreateLocksActions from '@wordpress/core-data/build-types/locks/actions';
+import apiFetch from '@finpress/api-fetch';
+import type { createRegistry } from '@finpress/data';
+import type { CurriedSelectorsOf } from '@finpress/data/build-types/types';
+import type CreateLocksActions from '@finpress/core-data/build-types/locks/actions';
 // @ts-expect-error WP core data doesn't explicitly export the actions
 // eslint-disable-next-line @fincommerce/dependency-group
-import createLocksActions from '@wordpress/core-data/build/locks/actions';
+import createLocksActions from '@finpress/core-data/build/locks/actions';
 
 /**
  * Internal dependencies

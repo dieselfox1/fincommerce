@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG, Path } from '@wordpress/components';
+import { SVG, Path } from '@finpress/components';
 
 export const chevron = ( { width, height } ) => {
 	return (

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@finpress/element';
 import { getAttributes, getTerms } from '@fincommerce/editor-components/utils';
 import {
 	AttributeObject,

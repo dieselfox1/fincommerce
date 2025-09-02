@@ -72,7 +72,7 @@ class Table extends WP_List_Table {
 		$enabled_count  = $register->count( true );
 		$disabled_count = $register->count( false );
 		$all_count      = $enabled_count + $disabled_count;
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$selected_view = isset( $_REQUEST['view'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['view'] ) ) : 'all';
 
 		$all_url   = esc_url( add_query_arg( 'view', 'all', $this->get_base_url() ) );
@@ -129,7 +129,7 @@ class Table extends WP_List_Table {
 		foreach ( $views as $slug => $view ) {
 			$views[ $slug ] = "<li class='{$slug}'>{$view}";
 		}
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo implode( ' | </li>', $views ) . "</li>\n";
 		echo '</ul>';
 	}
@@ -286,8 +286,8 @@ class Table extends WP_List_Table {
 	 * Prepare table list items.
 	 */
 	public function prepare_items() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		$current_page = $this->get_pagenum();
 		$per_page     = $this->get_items_per_page( 'edit_approved_directories_per_page' );
 		$search       = sanitize_text_field( wp_unslash( $_REQUEST['s'] ?? '' ) );

@@ -2,15 +2,15 @@
  * External dependencies
  */
 import { CURRENT_USER_IS_ADMIN } from '@fincommerce/settings';
-import { Children, cloneElement } from '@wordpress/element';
+import { Children, cloneElement } from '@finpress/element';
 // It is very important to export this directly from the build module to avoid introducing side-effects
-// from importing the index of the @wordpress/components package.
+// from importing the index of the @finpress/components package.
 // eslint-disable-next-line -- When adding comments to imports it breaks the external/internal dependencies lint.
 import {
 	createSlotFill as baseCreateSlotFill,
 	useSlot,
 	useSlotFills,
-} from 'wordpress-components-slotfill/build-module/slot-fill';
+} from 'finpress-components-slotfill/build-module/slot-fill';
 
 /**
  * Internal dependencies
@@ -44,7 +44,7 @@ type SlotFill = {
 };
 
 /**
- * Abstracts @wordpress/components createSlotFill, wraps Fill in an error boundary and passes down fillProps.
+ * Abstracts @finpress/components createSlotFill, wraps Fill in an error boundary and passes down fillProps.
  *
  * @param {string}                         slotName  The generated slotName, based down to createSlotFill.
  * @param {null|function(Element):Element} [onError] Returns an element to display the error if the current use is an admin.

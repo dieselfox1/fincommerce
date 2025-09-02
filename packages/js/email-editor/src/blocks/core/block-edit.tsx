@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
-import { useCallback } from '@wordpress/element';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { addFilter } from '@finpress/hooks';
+import { useCallback } from '@finpress/element';
+import type { BlockEditProps } from '@finpress/blocks';
 
 interface UrlAttributes {
 	url?: string;

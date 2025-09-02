@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { compose } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { compose } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { withDispatch, withSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { withDispatch, withSelect } from '@finpress/data';
+import { useState } from '@finpress/element';
 import PropTypes from 'prop-types';
 import { Pagination, EmptyContent } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';

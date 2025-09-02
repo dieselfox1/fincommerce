@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { _n, sprintf } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
+import { _n, sprintf } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
 
 export const speakFoundShippingOptions = (
 	packageCount: number,

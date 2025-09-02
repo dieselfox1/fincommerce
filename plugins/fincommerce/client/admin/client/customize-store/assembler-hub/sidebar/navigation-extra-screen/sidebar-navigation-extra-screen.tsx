@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { useQuery } from '@fincommerce/navigation';
-import { useMemo } from '@wordpress/element';
+import { useMemo } from '@finpress/element';
 
 /**
  * Internal dependencies

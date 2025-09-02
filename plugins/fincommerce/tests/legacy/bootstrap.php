@@ -24,7 +24,7 @@ class WC_Unit_Tests_Bootstrap {
 	/** @var WC_Unit_Tests_Bootstrap instance */
 	protected static $instance = null;
 
-	/** @var string directory where wordpress-tests-lib is installed */
+	/** @var string directory where finpress-tests-lib is installed */
 	public $wp_tests_dir;
 
 	/** @var string testing directory */
@@ -46,17 +46,17 @@ class WC_Unit_Tests_Bootstrap {
 
 		$this->initialize_code_hacker();
 
-		ini_set( 'display_errors', 'on' ); // phpcs:ignore WordPress.PHP.IniSet.display_errors_Blacklisted
-		error_reporting( E_ALL ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.prevent_path_disclosure_error_reporting, WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_error_reporting
+		ini_set( 'display_errors', 'on' ); // phpcs:ignore finpress.PHP.IniSet.display_errors_Blacklisted
+		error_reporting( E_ALL ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.prevent_path_disclosure_error_reporting, finpress.PHP.DiscouragedPHPFunctions.runtime_configuration_error_reporting
 
 		// Ensure server variable is set for WP email functions.
-		// phpcs:disable WordPress.VIP.SuperGlobalInputUsage.AccessDetected
+		// phpcs:disable finpress.VIP.SuperGlobalInputUsage.AccessDetected
 		if ( ! isset( $_SERVER['SERVER_NAME'] ) ) {
 			$_SERVER['SERVER_NAME'] = 'localhost';
 		}
-		// phpcs:enable WordPress.VIP.SuperGlobalInputUsage.AccessDetected
+		// phpcs:enable finpress.VIP.SuperGlobalInputUsage.AccessDetected
 
-		$this->wp_tests_dir = getenv( 'WP_TESTS_DIR' ) ? getenv( 'WP_TESTS_DIR' ) : sys_get_temp_dir() . '/wordpress-tests-lib';
+		$this->wp_tests_dir = getenv( 'WP_TESTS_DIR' ) ? getenv( 'WP_TESTS_DIR' ) : sys_get_temp_dir() . '/finpress-tests-lib';
 
 		// load test function so tests_add_filter() is available.
 		require_once $this->wp_tests_dir . '/includes/functions.php';
@@ -84,7 +84,7 @@ class WC_Unit_Tests_Bootstrap {
 
 		/*
 		* Load PHPUnit Polyfills for the WP testing suite.
-		* @see https://github.com/WordPress/wordpress-develop/pull/1563/
+		* @see https://github.com/finpress/finpress-develop/pull/1563/
 		*/
 		define( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH', __DIR__ . '/../../vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php' );
 
@@ -106,7 +106,7 @@ class WC_Unit_Tests_Bootstrap {
 			$this->initialize_hpos();
 		}
 
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions, WordPress.PHP.DiscouragedPHPFunctions
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions, finpress.PHP.DiscouragedPHPFunctions
 		error_reporting( error_reporting() & ~E_DEPRECATED );
 	}
 
@@ -252,11 +252,11 @@ class WC_Unit_Tests_Bootstrap {
 
 		WC_Install::install();
 
-		// Reload capabilities after install, see https://core.trac.wordpress.org/ticket/28374.
+		// Reload capabilities after install, see https://core.trac.finpress.org/ticket/28374.
 		if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 			$GLOBALS['wp_roles']->reinit();
 		} else {
-			$GLOBALS['wp_roles'] = null; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['wp_roles'] = null; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			wp_roles();
 		}
 

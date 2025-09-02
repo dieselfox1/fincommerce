@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useInstanceId } from '@wordpress/compose';
-import { useMemo } from '@wordpress/element';
+import { useInstanceId } from '@finpress/compose';
+import { useMemo } from '@finpress/element';
 
 /**
  * Internal dependencies

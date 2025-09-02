@@ -3,7 +3,7 @@
  */
 import { useMachine } from '@xstate5/react';
 import { useEffect, useState } from 'react';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { onboardingStore } from '@fincommerce/data';
 import clsx from 'clsx';
 

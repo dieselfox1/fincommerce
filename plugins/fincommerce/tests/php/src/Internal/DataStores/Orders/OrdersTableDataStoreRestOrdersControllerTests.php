@@ -30,7 +30,7 @@ class OrdersTableDataStoreRestOrdersControllerTests extends \WC_REST_Orders_Cont
 
 		add_filter( 'wc_allow_changing_orders_storage_while_sync_is_pending', '__return_true' );
 
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		remove_filter( 'query', array( $this, '_create_temporary_tables' ) );
 		remove_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 		OrderHelper::delete_order_custom_tables();
@@ -85,7 +85,7 @@ class OrdersTableDataStoreRestOrdersControllerTests extends \WC_REST_Orders_Cont
 		foreach ( $meta_data_cot_by_key as $key => $meta_data_cot ) {
 			$meta_values_cot = ArrayUtilAlias::select( $meta_data_cot, 'value' );
 			$meta_values_cpt = ArrayUtilAlias::select( $meta_data_cpt_by_key[ $key ], 'value' );
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r -- This is a test.
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r -- This is a test.
 			$this->assertEquals( $meta_values_cot, $meta_values_cpt, "Different values for meta $key: " . print_r( array( $meta_values_cot, $meta_values_cpt ), true ) );
 		}
 		// Exclude metadata since ids of meta data are different.

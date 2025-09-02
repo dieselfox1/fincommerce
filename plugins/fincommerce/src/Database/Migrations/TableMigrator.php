@@ -63,7 +63,7 @@ abstract class TableMigrator {
 	protected function db_query( string $query ) {
 		$wpdb = WC()->get_global( 'wpdb' );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$result = $wpdb->query( $query );
 
 		if ( '' !== $wpdb->last_error ) {
@@ -83,7 +83,7 @@ abstract class TableMigrator {
 	protected function db_get_results( ?string $query = null, string $output = OBJECT ) {
 		$wpdb = WC()->get_global( 'wpdb' );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$result = $wpdb->get_results( $query, $output );
 
 		if ( '' !== $wpdb->last_error ) {

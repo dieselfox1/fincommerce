@@ -193,7 +193,7 @@ class WC_CLI_COM_Command {
 	 * @return string
 	 */
 	protected static function ask( $question ) {
-		// phpcs:disable WordPress.WP.AlternativeFunctions.file_system_read_fwrite
+		// phpcs:disable finpress.WP.AlternativeFunctions.file_system_read_fwrite
 		// Adding space to question and showing it.
 		fwrite( STDOUT, $question . ' ' );
 

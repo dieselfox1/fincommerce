@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Icon, warning } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Icon, warning } from '@finpress/icons';
 import clsx from 'clsx';
-import { Button, Placeholder, Spinner } from '@wordpress/components';
+import { Button, Placeholder, Spinner } from '@finpress/components';
 
 /**
  * Internal dependencies

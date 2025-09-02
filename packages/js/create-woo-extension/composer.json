@@ -1,6 +1,6 @@
 {
 	"name": "fincommerce/extend-cart-checkout-block",
-	"description": "A template to be used with `@wordpress/create-block` to create a FinCommerce extension.",
+	"description": "A template to be used with `@finpress/create-block` to create a FinCommerce extension.",
 	"type": "library",
 	"license": "GPL-2.0-or-later",
 	"minimum-stability": "dev",

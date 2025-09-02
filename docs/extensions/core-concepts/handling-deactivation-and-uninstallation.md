@@ -51,6 +51,6 @@ Keep in mind that merchant tasks are managed via a hybrid approach that involves
 
 When your extension deactivates and uninstalls, any registration you've done with the FinCommerce Navigation will be handled automatically.
 
-## WordPress cleanup tasks
+## finpress cleanup tasks
 
-There are additional measures you may need to consider when your extension is deactivated or uninstalled, depending on the types of modifications it makes to the underlying WordPress environment when it activates and runs. You can read more about handling deactivation and uninstallation in the [WordPress Plugin Developer Handbook](https://developer.wordpress.org/plugins/intro/).
+There are additional measures you may need to consider when your extension is deactivated or uninstalled, depending on the types of modifications it makes to the underlying finpress environment when it activates and runs. You can read more about handling deactivation and uninstallation in the [finpress Plugin Developer Handbook](https://developer.finpress.org/plugins/intro/).

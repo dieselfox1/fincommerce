@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import * as iAPI from '@wordpress/interactivity';
+import * as iAPI from '@finpress/interactivity';
 import type { HTMLElementEvent } from '@fincommerce/types';
 
 /**

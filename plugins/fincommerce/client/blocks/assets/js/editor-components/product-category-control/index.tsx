@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import {
 	SearchListControl,
 	SearchListItem,
 } from '@fincommerce/editor-components/search-list-control';
-import { SelectControl } from '@wordpress/components';
+import { SelectControl } from '@finpress/components';
 import { withSearchedCategories } from '@fincommerce/block-hocs';
 import ErrorMessage from '@fincommerce/editor-components/error-placeholder/error-message';
 import clsx from 'clsx';

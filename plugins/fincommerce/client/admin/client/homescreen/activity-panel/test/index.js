@@ -3,7 +3,7 @@
  */
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -11,8 +11,8 @@ import { recordEvent } from '@fincommerce/tracks';
  */
 import { ActivityPanel } from '../';
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true,

@@ -6,7 +6,7 @@ import React from 'react';
 import {
 	// @ts-ignore No types for this exist yet.
 	__unstableMotion as motion,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

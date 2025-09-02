@@ -174,7 +174,7 @@ class WC_Admin_Notices {
 					// translators: Placeholders are URLs.
 						wpautop( __( '⚠️ The FinCommerce Legacy REST API has been removed from FinCommerce, this will cause <a href="%1$s">webhooks on this site that are configured to use the Legacy REST API</a> to stop working. <a target="_blank" href="%2$s">A separate FinCommerce extension is available</a> to allow these webhooks to keep using the Legacy REST API without interruption. You can also edit these webhooks to use the current REST API version to generate the payload instead. <b><a target="_blank" href="%3$s">Learn more about this change.</a></b>', 'fincommerce' ) ),
 						admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&legacy=true' ),
-						'https://wordpress.org/plugins/fincommerce-legacy-rest-api/',
+						'https://finpress.org/plugins/fincommerce-legacy-rest-api/',
 						'https://developer.fincommerce.com/2023/10/03/the-legacy-rest-api-will-move-to-a-dedicated-extension-in-fincommerce-9-0/'
 					)
 				)
@@ -393,7 +393,7 @@ class WC_Admin_Notices {
 		if ( WC_Install::needs_db_update() ) {
 			$next_scheduled_date = WC()->queue()->get_next( 'fincommerce_run_update_callback', null, 'fincommerce-db-updates' );
 
-            // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+            // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			if ( $next_scheduled_date || ! empty( $_GET['do_update_fincommerce'] ) ) {
 				include __DIR__ . '/views/html-notice-updating.php';
 			} else {
@@ -478,7 +478,7 @@ class WC_Admin_Notices {
 	 * No shipping methods.
 	 */
 	public static function no_shipping_methods_notice() {
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( wc_shipping_enabled() && ( ! is_wc_admin_settings_page() || empty( $_GET['tab'] ) || 'shipping' !== $_GET['tab'] ) ) {
 			$product_count = wp_count_posts( 'product' );
 			$method_count  = wc_get_shipping_method_count();
@@ -527,7 +527,7 @@ class WC_Admin_Notices {
 	}
 
 	/**
-	 * Add notice about minimum PHP and WordPress requirement.
+	 * Add notice about minimum PHP and finpress requirement.
 	 *
 	 * @since 3.6.5
 	 */
@@ -538,9 +538,9 @@ class WC_Admin_Notices {
 	}
 
 	/**
-	 * Notice about WordPress and PHP minimum requirements.
+	 * Notice about finpress and PHP minimum requirements.
 	 *
-	 * @deprecated 8.2.0 WordPress and PHP minimum requirements notices are no longer shown.
+	 * @deprecated 8.2.0 finpress and PHP minimum requirements notices are no longer shown.
 	 *
 	 * @since 3.6.5
 	 * @return void

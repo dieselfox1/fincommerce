@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, Icon } from '@wordpress/components';
-import { close } from '@wordpress/icons';
+import { Button, Icon } from '@finpress/components';
+import { close } from '@finpress/icons';
 
 /**
  * Internal dependencies

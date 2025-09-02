@@ -127,7 +127,7 @@ class WC_Helper {
 	 * @return string
 	 */
 	private static function get_source_page() {
-		$page = wc_clean( wp_unslash( $_GET['page'] ?? 'wc-admin' ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$page = wc_clean( wp_unslash( $_GET['page'] ?? 'wc-admin' ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		return in_array( $page, array( 'wc-admin', 'wc-addons' ), true ) ? $page : 'wc-admin';
 	}
 
@@ -576,7 +576,7 @@ class WC_Helper {
 		$screen_id    = $screen ? $screen->id : '';
 		$wc_screen_id = 'fincommerce';
 
-		if ( ( $wc_screen_id . '_page_wc-addons' === $screen_id || $wc_screen_id . '_page_wc-admin' === $screen_id ) && isset( $_GET['section'] ) && 'helper' === $_GET['section'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ( $wc_screen_id . '_page_wc-addons' === $screen_id || $wc_screen_id . '_page_wc-admin' === $screen_id ) && isset( $_GET['section'] ) && 'helper' === $_GET['section'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			wp_enqueue_style( 'fincommerce-helper', WC()->plugin_url() . '/assets/css/helper.css', array(), Constants::get_constant( 'WC_VERSION' ) );
 			wp_style_add_data( 'fincommerce-helper', 'rtl', 'replace' );
 		}
@@ -774,7 +774,7 @@ class WC_Helper {
 	 * Maybe redirect to the new Marketplace installer.
 	 */
 	private static function maybe_redirect_to_new_marketplace_installer() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		// Redirect requires the "install" URL parameter to be passed.
 		if ( empty( $_GET['install'] ) ) {
 			return;
@@ -799,17 +799,17 @@ class WC_Helper {
 	private static function get_helper_redirect_url( $args = array() ) {
 		global $current_screen;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$redirect_admin_url = isset( $_GET['redirect_admin_url'] )
 			? esc_url_raw(
 				urldecode(
-					// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 					wp_unslash( $_GET['redirect_admin_url'] )
 				)
 			)
 			: '';
 		$install_product_key = isset( $_GET['install'] ) ? sanitize_text_field( wp_unslash( $_GET['install'] ) ) : '';
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		if (
 			( 'fincommerce_page_wc-addons' === $current_screen->id ||
@@ -854,7 +854,7 @@ class WC_Helper {
 	 * Initiate a new OAuth connection.
 	 */
 	private static function _helper_auth_connect() {
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'connect' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'connect' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in _helper_auth_connect' );
 			wp_die( 'Could not verify nonce' );
 		}
@@ -923,7 +923,7 @@ class WC_Helper {
 					? rawurlencode(
 						esc_url_raw(
 							urldecode(
-								// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+								// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 								wp_unslash( $_GET['redirect_admin_url'] )
 							)
 						)
@@ -942,7 +942,7 @@ class WC_Helper {
 	 * Return from FinCommerce.com OAuth flow.
 	 */
 	private static function _helper_auth_return() {
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'connect' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'connect' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in _helper_auth_return' );
 			wp_die( 'Something went wrong' );
 		}
@@ -977,7 +977,7 @@ class WC_Helper {
 			array(
 				'timeout' => 30,
 				'body'    => array(
-					'request_token' => wp_unslash( $_GET['request_token'] ), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					'request_token' => wp_unslash( $_GET['request_token'] ), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 					'home_url'      => home_url(),
 				),
 			)
@@ -1038,7 +1038,7 @@ class WC_Helper {
 	 * Disconnect from FinCommerce.com, clear OAuth tokens.
 	 */
 	private static function _helper_auth_disconnect() {
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'disconnect' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'disconnect' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in _helper_auth_disconnect' );
 			wp_die( 'Could not verify nonce' );
 		}
@@ -1066,7 +1066,7 @@ class WC_Helper {
 	 * User hit the Refresh button, clear all caches.
 	 */
 	private static function _helper_auth_refresh() {
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'refresh' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'refresh' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in _helper_auth_refresh' );
 			wp_die( 'Could not verify nonce' );
 		}
@@ -1111,7 +1111,7 @@ class WC_Helper {
 		$product_key = isset( $_GET['wc-helper-product-key'] ) ? wc_clean( wp_unslash( $_GET['wc-helper-product-key'] ) ) : '';
 		$product_id  = isset( $_GET['wc-helper-product-id'] ) ? absint( $_GET['wc-helper-product-id'] ) : 0;
 
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'activate:' . $product_key ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'activate:' . $product_key ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in _helper_subscription_activate' );
 			wp_die( 'Could not verify nonce' );
 		}
@@ -1229,7 +1229,7 @@ class WC_Helper {
 		$product_key = isset( $_GET['wc-helper-product-key'] ) ? wc_clean( wp_unslash( $_GET['wc-helper-product-key'] ) ) : '';
 		$product_id  = isset( $_GET['wc-helper-product-id'] ) ? absint( $_GET['wc-helper-product-id'] ) : 0;
 
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'deactivate:' . $product_key ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'deactivate:' . $product_key ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in helper_subscription_deactivate' );
 			wp_die( 'Could not verify nonce' );
 		}
@@ -1339,7 +1339,7 @@ class WC_Helper {
 		$product_id  = isset( $_GET['wc-helper-product-id'] ) ? absint( $_GET['wc-helper-product-id'] ) : 0;
 		$deactivated = false;
 
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'deactivate-plugin:' . $product_id ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['wc-helper-nonce'] ), 'deactivate-plugin:' . $product_id ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			self::log( 'Could not verify nonce in _helper_plugin_deactivate' );
 			wp_die( 'Could not verify nonce' );
 		}
@@ -1839,7 +1839,7 @@ class WC_Helper {
 		}
 
 		try {
-			$request_uri = wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$request_uri = wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$source      = '';
 			if ( stripos( $request_uri, 'wc-addons' ) ) :
 				$source = 'my-subscriptions';
@@ -2422,7 +2422,7 @@ class WC_Helper {
 		// Add a note about available extension updates if Woo core has an update available.
 		$notice = self::_get_extensions_update_notice();
 		if ( ! empty( $notice ) ) {
-			echo '<div class="updated fincommerce-message"><p>' . $notice . '</p></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<div class="updated fincommerce-message"><p>' . $notice . '</p></div>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
 

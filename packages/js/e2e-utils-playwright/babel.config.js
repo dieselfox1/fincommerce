@@ -1,6 +1,6 @@
 module.exports = {
 	"presets": [
-		"@wordpress/babel-preset-default",
+		"@finpress/babel-preset-default",
 		[
 			"@babel/preset-env",
 			{

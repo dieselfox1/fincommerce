@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { Button, Modal } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { Button, Modal } from '@finpress/components';
 import { find } from 'lodash';
-import { decodeEntities } from '@wordpress/html-entities';
-import { withSelect } from '@wordpress/data';
+import { decodeEntities } from '@finpress/html-entities';
+import { withSelect } from '@finpress/data';
 import { List } from '@fincommerce/components';
 import { onboardingStore, pluginsStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';

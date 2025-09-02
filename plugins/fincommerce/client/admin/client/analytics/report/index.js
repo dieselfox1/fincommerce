@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { withSelect } from '@wordpress/data';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { withSelect } from '@finpress/data';
 import PropTypes from 'prop-types';
 import { find } from 'lodash';
 import { getQuery, getSearchWords } from '@fincommerce/navigation';

@@ -115,7 +115,7 @@ The FinCommerce Blocks Handbook provides documentation for designers and develop
 
 ### Tools
 
--   [@fincommerce/extend-cart-checkout-block](https://www.npmjs.com/package/@fincommerce/extend-cart-checkout-block) This is a template to be used with @wordpress/create-block to create a FinCommerce Blocks extension starting point. It also showcases how to use some extensibility points, e.g. registering an inner block in the Checkout Block, applying filters to certain texts such as the place order button, using Slot/Fill and how to change the behaviour of the Store API.
+-   [@fincommerce/extend-cart-checkout-block](https://www.npmjs.com/package/@fincommerce/extend-cart-checkout-block) This is a template to be used with @finpress/create-block to create a FinCommerce Blocks extension starting point. It also showcases how to use some extensibility points, e.g. registering an inner block in the Checkout Block, applying filters to certain texts such as the place order button, using Slot/Fill and how to change the behaviour of the Store API.
 
 ### Articles
 
@@ -124,7 +124,7 @@ The following posts from [developer.woo.com](https://developer.fincommerce.com/c
 -   [Store API is now considered stable](https://developer.fincommerce.com/2022/03/25/store-api-is-now-considered-stable/)
 -   [Available Extensibility Interfaces for The Cart and Checkout Blocks](https://developer.fincommerce.com/2021/11/09/available-extensibility-interfaces-for-the-cart-and-checkout-blocks/)
 -   [How The Checkout Block Processes An Order](https://developer.fincommerce.com/2022/10/06/how-the-checkout-block-processes-an-order/)
--   [New @wordpress/data stores in FinCommerce Blocks](https://developer.fincommerce.com/2022/10/17/new-wordpress-data-stores-in-fincommerce-blocks/)
+-   [New @finpress/data stores in FinCommerce Blocks](https://developer.fincommerce.com/2022/10/17/new-finpress-data-stores-in-fincommerce-blocks/)
 
 ### Tutorials
 

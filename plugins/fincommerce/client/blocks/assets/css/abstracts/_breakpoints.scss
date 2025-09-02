@@ -7,11 +7,11 @@
 
 // Think very carefully before adding a new breakpoint.
 // The list below is based on wp-admin's main breakpoints
-// See https://github.com/WordPress/gutenberg/tree/master/packages/viewport#usage
+// See https://github.com/finpress/gutenberg/tree/master/packages/viewport#usage
 $breakpoints: 480px, 600px, 782px, 960px, 1280px, 1440px;
 
 // @todo refactor breakpoints so they use the mixins from Gutenberg
-// https://github.com/WordPress/gutenberg/blob/master/packages/base-styles/_mixins.scss
+// https://github.com/finpress/gutenberg/blob/master/packages/base-styles/_mixins.scss
 @mixin breakpoint($sizes...) {
 	@each $size in $sizes {
 		@if meta.type-of($size) == string {

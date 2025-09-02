@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Pill } from '@fincommerce/components';
-import { Popover } from '@wordpress/components';
-import { useState, useRef } from '@wordpress/element';
-import { Icon, info } from '@wordpress/icons';
+import { Popover } from '@finpress/components';
+import { useState, useRef } from '@finpress/element';
+import { Icon, info } from '@finpress/icons';
 
 /**
  * Internal dependencies

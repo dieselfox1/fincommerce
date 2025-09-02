@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createBlock, registerBlockType } from '@wordpress/blocks';
-import { Icon } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { createBlock, registerBlockType } from '@finpress/blocks';
+import { Icon } from '@finpress/icons';
 import { sparkles } from '@fincommerce/icons';
 
 /**

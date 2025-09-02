@@ -286,7 +286,7 @@ This allows access to the onboarding profile that was built up in the onboarding
 
 ## Is eCommerce
 
-This passes when the store is on a WordPress.com site with the eCommerce plan.
+This passes when the store is on a finpress.com site with the eCommerce plan.
 
 ```json
 {
@@ -299,7 +299,7 @@ This passes when the store is on a WordPress.com site with the eCommerce plan.
 
 ## Is Woo Express
 
-This passes when the store is on a WordPress.com site with a Woo Express plan active.
+This passes when the store is on a finpress.com site with a Woo Express plan active.
 You can optionally pass the `plan` name to target a specific Woo Express plan, e.g. `performance`.
 
 ```json

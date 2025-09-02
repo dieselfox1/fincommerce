@@ -634,7 +634,7 @@ class CustomerEffortScoreTracks {
 		}
 
 		// Determine whether request is search by "s" GET parameter.
-		if ( empty( $_GET['s'] ) ) { // phpcs:disable WordPress.Security.NonceVerification.Recommended
+		if ( empty( $_GET['s'] ) ) { // phpcs:disable finpress.Security.NonceVerification.Recommended
 			return;
 		}
 

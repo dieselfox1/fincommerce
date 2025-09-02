@@ -10,7 +10,7 @@ import useProductEntityProp from '../use-product-entity-prop';
 
 const mockFnMetadataProp = jest.fn();
 const mockFnRegularProp = jest.fn();
-jest.mock( '@wordpress/core-data', () => ( {
+jest.mock( '@finpress/core-data', () => ( {
 	useEntityProp: jest
 		.fn()
 		.mockImplementation( ( _postType, _product, property ) => {
@@ -31,11 +31,11 @@ describe( 'useProductEntityProp', () => {
 			useProductEntityProp( 'meta_data.email', { fallbackValue: '' } )
 		).result.current;
 		expect( email ).toBe( '' );
-		setEmail( 'someone@wordpress.com' );
+		setEmail( 'someone@finpress.com' );
 		expect( mockFnMetadataProp ).toHaveBeenCalledWith( [
 			{
 				key: 'email',
-				value: 'someone@wordpress.com',
+				value: 'someone@finpress.com',
 			},
 		] );
 	} );
@@ -44,9 +44,9 @@ describe( 'useProductEntityProp', () => {
 			useProductEntityProp( 'regular_prop', { fallbackValue: '' } )
 		).result.current;
 		expect( value ).toBe( '' );
-		setValue( 'someone@wordpress.com' );
+		setValue( 'someone@finpress.com' );
 		expect( mockFnRegularProp ).toHaveBeenCalledWith(
-			'someone@wordpress.com'
+			'someone@finpress.com'
 		);
 	} );
 } );

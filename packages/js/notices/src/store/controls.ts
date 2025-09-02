@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { speak } from '@wordpress/a11y';
+import { speak } from '@finpress/a11y';
 
 export type Action = {
 	message: string;

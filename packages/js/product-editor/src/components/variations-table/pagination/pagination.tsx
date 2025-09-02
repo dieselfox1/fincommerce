@@ -2,13 +2,13 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	PaginationPageSizePicker,
 	PaginationPageArrowsWithPicker,
 	usePagination,
 } from '@fincommerce/components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

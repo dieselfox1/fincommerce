@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Fragment } from '@wordpress/element';
-import { CardBody, CardMedia, CardDivider } from '@wordpress/components';
+import { Fragment } from '@finpress/element';
+import { CardBody, CardMedia, CardDivider } from '@finpress/components';
 import { SetupRequired } from '@fincommerce/onboarding';
 import { Pill } from '@fincommerce/components';
 import { Text, useSlot } from '@fincommerce/experimental';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

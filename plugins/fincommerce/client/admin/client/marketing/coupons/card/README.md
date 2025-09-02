@@ -1,7 +1,7 @@
 Card
 ===
 
-This component is a simple wrapper around the Card component from `@wordpress/components`. It supports `title` and `description` props to be displayed in the card header.
+This component is a simple wrapper around the Card component from `@finpress/components`. It supports `title` and `description` props to be displayed in the card header.
 
 ## Usage
 

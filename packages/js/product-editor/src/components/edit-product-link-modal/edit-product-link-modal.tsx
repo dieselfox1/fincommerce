@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Modal, TextControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, Modal, TextControl } from '@finpress/components';
 import {
 	useState,
 	createElement,
 	createInterpolateElement,
-} from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
-import { cleanForSlug } from '@wordpress/url';
+} from '@finpress/element';
+import { useDispatch } from '@finpress/data';
+import { cleanForSlug } from '@finpress/url';
 import { Product } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 

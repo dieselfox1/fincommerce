@@ -1,5 +1,5 @@
 /**
- * Origin: https://www.npmjs.com/package/@wordpress/custom-templated-path-webpack-plugin
+ * Origin: https://www.npmjs.com/package/@finpress/custom-templated-path-webpack-plugin
  * The package has been deprecated, and not used by other packages, so we get its copy here.
  */
 

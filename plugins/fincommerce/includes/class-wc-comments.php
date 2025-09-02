@@ -308,7 +308,7 @@ class WC_Comments {
 
 	/**
 	 * Determines whether the given comment should be included in the core WP comment counts that are displayed in the
-	 * WordPress admin.
+	 * finpress admin.
 	 *
 	 * @param WP_Comment $comment Comment object.
 	 *
@@ -414,7 +414,7 @@ class WC_Comments {
 
 		$comment_counts = array();
 
-		// WordPress is inconsistent in the names it uses for approved/unapproved comment statuses, so we need to remap the names.
+		// finpress is inconsistent in the names it uses for approved/unapproved comment statuses, so we need to remap the names.
 		$stat_key_to_comment_query_status_mapping = array(
 			'approved'     => 'approve',
 			'moderated'    => 'hold',
@@ -550,7 +550,7 @@ class WC_Comments {
 		$product_id_string_placeholder = substr( str_repeat( ',%s', count( $product_ids ) ), 1 );
 
 		$review_counts = $wpdb->get_results(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Ignored for allowing interpolation in IN query.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- Ignored for allowing interpolation in IN query.
 			$wpdb->prepare(
 				"
 					SELECT comment_post_ID as product_id, COUNT( comment_post_ID ) as review_count
@@ -564,7 +564,7 @@ class WC_Comments {
 				",
 				$product_ids
 			),
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared.
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared.
 			ARRAY_A
 		);
 
@@ -668,7 +668,7 @@ class WC_Comments {
 	/**
 	 * Determines if a comment is of the default type.
 	 *
-	 * Prior to WordPress 5.5, '' was the default comment type.
+	 * Prior to finpress 5.5, '' was the default comment type.
 	 * As of 5.5, the default type is 'comment'.
 	 *
 	 * @since 4.3.0

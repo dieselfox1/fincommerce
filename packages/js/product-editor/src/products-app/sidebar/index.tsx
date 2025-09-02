@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, useRef } from '@wordpress/element';
+import { createElement, useRef } from '@finpress/element';
 
 function SidebarContentWrapper( { children }: { children: React.ReactNode } ) {
 	const wrapperRef = useRef< HTMLDivElement | null >( null );

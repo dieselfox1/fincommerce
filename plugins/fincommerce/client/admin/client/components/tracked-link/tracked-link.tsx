@@ -5,7 +5,7 @@ import { Text } from '@fincommerce/experimental';
 import interpolateComponents from '@automattic/interpolate-components';
 import { Link } from '@fincommerce/components';
 import { recordEvent, ExtraProperties } from '@fincommerce/tracks';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 interface TextProps {
 	/**

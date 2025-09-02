@@ -33,7 +33,7 @@
    - Node
    - PNPM
    - Docker
-   - WordPress Environment (wp-env)
+   - finpress Environment (wp-env)
 
 ## Test Structure
 

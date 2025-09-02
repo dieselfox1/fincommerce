@@ -137,7 +137,7 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		$this->assertEquals( 0, $current_user->ID );
 		wp_set_current_user( self::$created_user_id );
 		$this->assertEquals( self::$created_user_id, get_current_user_id() );
-		$this->assertFalse( current_user_can( 'manage_fincommerce' ) ); // phpcs:ignore WordPress.WP.Capabilities.Unknown
+		$this->assertFalse( current_user_can( 'manage_fincommerce' ) ); // phpcs:ignore finpress.WP.Capabilities.Unknown
 
 		// Do the request as a non-admin user, for another user's order.
 		$request  = new WP_REST_Request( 'GET', '/wc/v3/orders/' . self::$created_order_ids[0] . '/fulfillments' );
@@ -165,9 +165,9 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		// Prepare the test environment.
 		$current_user = wp_get_current_user();
 		$this->assertEquals( 0, $current_user->ID );
-		$this->assertFalse( current_user_can( 'manage_fincommerce' ) ); // phpcs:ignore WordPress.WP.Capabilities.Unknown
+		$this->assertFalse( current_user_can( 'manage_fincommerce' ) ); // phpcs:ignore finpress.WP.Capabilities.Unknown
 		wp_set_current_user( 1 );
-		$this->assertTrue( current_user_can( 'manage_fincommerce' ) ); // phpcs:ignore WordPress.WP.Capabilities.Unknown
+		$this->assertTrue( current_user_can( 'manage_fincommerce' ) ); // phpcs:ignore finpress.WP.Capabilities.Unknown
 		$this->assertEquals( 1, get_current_user_id() );
 
 		// Do the request as an admin user, for another user's order.
@@ -1811,7 +1811,7 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		$request->set_body(
 			wp_json_encode(
 				array(
-					'meta_key' => 'test_meta_key', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_key' => 'test_meta_key', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				),
 			)
 		);
@@ -1852,7 +1852,7 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		$request->set_body(
 			wp_json_encode(
 				array(
-					'meta_key' => 'test_meta_key', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_key' => 'test_meta_key', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				),
 			)
 		);
@@ -1887,7 +1887,7 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		$request->set_body(
 			wp_json_encode(
 				array(
-					'meta_key' => 'test_meta_key', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_key' => 'test_meta_key', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				),
 			)
 		);
@@ -1928,7 +1928,7 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		$request->set_body(
 			wp_json_encode(
 				array(
-					'meta_key' => 'test_meta_key', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_key' => 'test_meta_key', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				),
 			)
 		);
@@ -1974,7 +1974,7 @@ class OrderFulfillmentsRestControllerTest extends WC_REST_Unit_Test_Case {
 		$request->set_body(
 			wp_json_encode(
 				array(
-					'meta_key' => 'test_meta_key', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_key' => 'test_meta_key', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				),
 			)
 		);

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
-import { useCallback, useMemo, useEffect, useRef } from '@wordpress/element';
+import { decodeEntities } from '@finpress/html-entities';
+import { useCallback, useMemo, useEffect, useRef } from '@finpress/element';
 import { ValidatedTextInput } from '@fincommerce/blocks-components';
 import { clsx } from 'clsx';
 

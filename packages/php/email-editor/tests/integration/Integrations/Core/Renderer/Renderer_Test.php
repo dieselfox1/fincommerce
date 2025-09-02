@@ -288,8 +288,8 @@ class Renderer_Test extends \Email_Editor_Integration_Test_Case {
 			$block = $nodes->item( 0 );
 		}
 		$this->assertInstanceOf( \DOMElement::class, $block );
-		$this->assertInstanceOf( \DOMDocument::class, $block->ownerDocument ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		return (string) $block->ownerDocument->saveHTML( $block ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->assertInstanceOf( \DOMDocument::class, $block->ownerDocument ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		return (string) $block->ownerDocument->saveHTML( $block ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 	}
 
 	/**

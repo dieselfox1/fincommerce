@@ -70,7 +70,7 @@ class File {
 	 */
 	public function __destruct() {
 		if ( is_resource( $this->stream ) ) {
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose -- No suitable alternative.
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fclose -- No suitable alternative.
 			fclose( $this->stream );
 		}
 	}
@@ -270,7 +270,7 @@ class File {
 		}
 
 		if ( ! is_resource( $this->stream ) ) {
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen -- No suitable alternative.
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fopen -- No suitable alternative.
 			$this->stream = fopen( $this->path, 'rb' );
 		}
 
@@ -286,7 +286,7 @@ class File {
 	 * @return bool
 	 */
 	public function close_stream(): bool {
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose -- No suitable alternative.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fclose -- No suitable alternative.
 		return fclose( $this->stream );
 	}
 
@@ -448,15 +448,15 @@ class File {
 			$text .= PHP_EOL;
 		}
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen -- No suitable alternative.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fopen -- No suitable alternative.
 		$resource = fopen( $this->path, 'ab' );
 
 		mbstring_binary_safe_encoding();
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite -- No suitable alternative.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite -- No suitable alternative.
 		$bytes_written = fwrite( $resource, $text );
 		reset_mbstring_encoding();
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose -- No suitable alternative.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fclose -- No suitable alternative.
 		fclose( $resource );
 
 		if ( strlen( $text ) !== $bytes_written ) {

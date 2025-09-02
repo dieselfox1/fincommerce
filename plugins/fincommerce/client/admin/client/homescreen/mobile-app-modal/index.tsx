@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useCallback } from '@wordpress/element';
-import { Guide } from '@wordpress/components';
+import { useState, useEffect, useCallback } from '@finpress/element';
+import { Guide } from '@finpress/components';
 import { useSearchParams } from 'react-router-dom';
 import { updateQueryString } from '@fincommerce/navigation';
-import { registerPlugin } from '@wordpress/plugins';
-import { addFilter, removeFilter } from '@wordpress/hooks';
+import { registerPlugin } from '@finpress/plugins';
+import { addFilter, removeFilter } from '@finpress/hooks';
 import { getAdminLink } from '@fincommerce/settings';
-import { __ } from '@wordpress/i18n';
-import { useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch } from '@finpress/data';
 import { optionsStore, onboardingStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 
@@ -29,7 +29,7 @@ import { SETUP_TASK_HELP_ITEMS_FILTER } from '../../activity-panel/panels/help';
 
 export const MobileAppModal = () => {
 	const [ guideIsOpen, setGuideIsOpen ] = useState( false );
-	const [ isReturningFromWordpressConnection, setIsReturning ] =
+	const [ isReturningFromfinpressConnection, setIsReturning ] =
 		useState( false );
 
 	const { state, jetpackConnectionData } = useJetpackPluginState();
@@ -94,14 +94,14 @@ export const MobileAppModal = () => {
 					jetpackConnectionData?.currentUser?.wpcomUser?.email !==
 						undefined ) ??
 				false;
-			const wordpressAccountEmailAddress =
+			const finpressAccountEmailAddress =
 				jetpackConnectionData?.currentUser?.wpcomUser?.email;
 			setPageContent(
 				<MobileAppLoginStepperPage
 					appInstalledClicked={ appInstalledClicked }
 					isJetpackPluginInstalled={ isJetpackPluginInstalled }
-					wordpressAccountEmailAddress={
-						wordpressAccountEmailAddress
+					finpressAccountEmailAddress={
+						finpressAccountEmailAddress
 					}
 					completeInstallationHandler={ completeAppInstallationStep }
 					sendMagicLinkHandler={ sendMagicLink }
@@ -113,7 +113,7 @@ export const MobileAppModal = () => {
 		appInstalledClicked,
 		sendMagicLink,
 		hasSentEmail,
-		isReturningFromWordpressConnection,
+		isReturningFromfinpressConnection,
 		jetpackConnectionData?.currentUser?.wpcomUser?.email,
 		state,
 		isRetryingMagicLinkSend,

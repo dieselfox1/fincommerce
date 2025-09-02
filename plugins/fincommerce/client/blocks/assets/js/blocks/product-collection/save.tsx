@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useInnerBlocksProps, useBlockProps } from '@wordpress/block-editor';
+import { useInnerBlocksProps, useBlockProps } from '@finpress/block-editor';
 
 export default function QuerySave( { attributes: { tagName: Tag = 'div' } } ) {
 	const blockProps = useBlockProps.save();

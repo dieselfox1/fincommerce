@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import clsx from 'clsx';
 
 type Props = {

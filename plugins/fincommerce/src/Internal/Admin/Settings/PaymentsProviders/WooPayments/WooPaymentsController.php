@@ -51,20 +51,20 @@ class WooPaymentsController {
 	}
 
 	/**
-	 * Handle returns from WordPress.com after the user has accepted or declined the WPCOM connection.
+	 * Handle returns from finpress.com after the user has accepted or declined the WPCOM connection.
 	 *
 	 * @internal
 	 */
 	public function handle_returns_from_wpcom(): void {
-		// Handle the return from WPCOM after the user has accepted or declined the WordPress.com connection.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// Handle the return from WPCOM after the user has accepted or declined the finpress.com connection.
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET[ WooPaymentsService::WPCOM_CONNECTION_RETURN_PARAM ] ) ) {
 			// We are only interested in connection flows that are initiated from NOX session entry points.
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			if ( empty( $_GET['source'] ) ) {
 				return;
 			}
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$source = sanitize_text_field( wp_unslash( $_GET['source'] ) );
 			if ( ! in_array( $source, array( WooPaymentsService::SESSION_ENTRY_DEFAULT, WooPaymentsService::SESSION_ENTRY_LYS ), true ) ) {
 				return;

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import { createElement, Component, createRef } from '@wordpress/element';
-import { withInstanceId } from '@wordpress/compose';
+import { createElement, Component, createRef } from '@finpress/element';
+import { withInstanceId } from '@finpress/compose';
 import PropTypes from 'prop-types';
 
 /**

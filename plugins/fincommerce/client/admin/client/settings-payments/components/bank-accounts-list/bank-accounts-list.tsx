@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, MenuGroup, MenuItem, Modal } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, MenuGroup, MenuItem, Modal } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { EllipsisMenu } from '@fincommerce/components';
 import { useState, useEffect } from 'react';
 

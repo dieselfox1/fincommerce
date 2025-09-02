@@ -17,7 +17,7 @@ The FinCommerce Remote Logging package offers the following features:
 - Rate limiting to prevent API flooding
 - Automatic capture of unhandled errors and promise rejections
 - Filtering of errors based on FinCommerce asset paths
-- Extensibility through WordPress filters
+- Extensibility through finpress filters
 
 ## Usage
 
@@ -71,7 +71,7 @@ For more detailed information about types and interfaces, refer to the source co
 ## Customization
 
 
-You can customize the behavior of the remote logger using WordPress filters. Here are the available filters:
+You can customize the behavior of the remote logger using finpress filters. Here are the available filters:
 
 ### `fincommerce_remote_logging_should_send_error`
 
@@ -88,7 +88,7 @@ Control whether an error should be sent to the remote API.
 **Usage example:**
 
 ```js
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter(
   'fincommerce_remote_logging_should_send_error',
@@ -116,7 +116,7 @@ Modify the error data before sending it to the remote API.
 **Usage example:**
 
 ```js
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter(
   'fincommerce_remote_logging_error_data',
@@ -142,7 +142,7 @@ Modify the URL of the remote logging API endpoint.
 **Usage example:**
 
 ```js
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter(
   'fincommerce_remote_logging_log_endpoint',
@@ -164,7 +164,7 @@ Modify the URL of the remote logging API endpoint for JavaScript errors.
 **Usage example:**
 
 ```js
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter(
   'fincommerce_remote_logging_js_error_endpoint',
@@ -186,7 +186,7 @@ Modifies the list of whitelisted query parameters that won't be masked in the lo
 **Usage example:**
 
 ```js
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter(
   'fincommerce_remote_logging_request_uri_whitelist',

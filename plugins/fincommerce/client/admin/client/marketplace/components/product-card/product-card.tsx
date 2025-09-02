@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Card } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Card } from '@finpress/components';
 import clsx from 'clsx';
 import { ExtraProperties, queueRecordEvent } from '@fincommerce/tracks';
 import { useQuery } from '@fincommerce/navigation';
-import { decodeEntities } from '@wordpress/html-entities';
-import { useState, useContext, useRef } from '@wordpress/element';
+import { decodeEntities } from '@finpress/html-entities';
+import { useState, useContext, useRef } from '@finpress/element';
 
 /**
  * Internal dependencies

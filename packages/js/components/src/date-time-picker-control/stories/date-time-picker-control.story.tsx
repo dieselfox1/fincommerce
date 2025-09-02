@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, Popover, SlotFillProvider } from '@wordpress/components';
-import { createElement, useCallback, useState } from '@wordpress/element';
+import { Button, Popover, SlotFillProvider } from '@finpress/components';
+import { createElement, useCallback, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -160,7 +160,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 				usleep( 10000 );
 			}
 
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$result = $wpdb->query( $query );
 			if ( false !== $result ) {
 				break;
@@ -1022,7 +1022,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 					);
 				}
 			}
-			// Note, we use wp_slash to add extra level of escaping. See https://codex.wordpress.org/Function_Reference/update_post_meta#Workaround.
+			// Note, we use wp_slash to add extra level of escaping. See https://codex.finpress.org/Function_Reference/update_post_meta#Workaround.
 			$this->update_or_delete_post_meta( $product, '_product_attributes', wp_slash( $meta_values ) );
 
 			/**
@@ -1136,7 +1136,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 			$outofstock_where = ' AND exclude_join.object_id IS NULL';
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return $wpdb->get_results(
 			"
 			SELECT posts.ID as id, posts.post_parent as parent_id
@@ -1156,7 +1156,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 			GROUP BY posts.ID
 			"
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 
 	/**
@@ -1175,7 +1175,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 				'post_type'      => array( 'product', 'product_variation' ),
 				'posts_per_page' => -1,
 				'post_status'    => 'publish',
-				'tax_query'      => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				'tax_query'      => array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 					'relation' => 'AND',
 					array(
 						'taxonomy' => 'product_visibility',
@@ -1199,13 +1199,13 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	 *
 	 * @since 3.0.0
 	 * @param int    $product_id Product ID.
-	 * @param string $sku Will be slashed to work around https://core.trac.wordpress.org/ticket/27421.
+	 * @param string $sku Will be slashed to work around https://core.trac.finpress.org/ticket/27421.
 	 * @return bool
 	 */
 	public function is_existing_sku( $product_id, $sku ) {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		return (bool) $wpdb->get_var(
 			$wpdb->prepare(
 				"
@@ -1230,13 +1230,13 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	 *
 	 * @since 9.1.0
 	 * @param int    $product_id Product ID.
-	 * @param string $global_unique_id Will be slashed to work around https://core.trac.wordpress.org/ticket/27421.
+	 * @param string $global_unique_id Will be slashed to work around https://core.trac.finpress.org/ticket/27421.
 	 * @return bool
 	 */
 	public function is_existing_global_unique_id( $product_id, $global_unique_id ) {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		return (bool) $wpdb->get_var(
 			$wpdb->prepare(
 				"
@@ -1266,7 +1266,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	public function get_product_id_by_sku( $sku ) {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		$id = $wpdb->get_var(
 			$wpdb->prepare(
 				"
@@ -1296,7 +1296,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	public function get_product_id_by_global_unique_id( $global_unique_id ) {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		$id = $wpdb->get_var(
 			$wpdb->prepare(
 				"
@@ -1331,7 +1331,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	public function get_starting_sales() {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		return $wpdb->get_col(
 			$wpdb->prepare(
 				"SELECT postmeta.post_id FROM {$wpdb->postmeta} as postmeta
@@ -1357,7 +1357,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	public function get_ending_sales() {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		return $wpdb->get_col(
 			$wpdb->prepare(
 				"SELECT postmeta.post_id FROM {$wpdb->postmeta} as postmeta
@@ -1419,7 +1419,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 
 		$query .= ' ORDER BY posts.menu_order ASC, postmeta.post_id ASC;';
 
-		$attributes = $wpdb->get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$attributes = $wpdb->get_results( $query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		if ( ! $attributes ) {
 			return 0;
@@ -1428,7 +1428,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 		$sorted_meta = array();
 
 		foreach ( $attributes as $m ) {
-			$sorted_meta[ $m->post_id ][ $m->meta_key ] = $m->meta_value; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			$sorted_meta[ $m->post_id ][ $m->meta_key ] = $m->meta_value; // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		}
 
 		/**
@@ -1506,7 +1506,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 
 		foreach ( $possible_attributes as $possible_attribute ) {
 			// Allow any order if key/values -- do not use strict mode.
-			if ( in_array( $possible_attribute, $existing_attributes ) ) { // phpcs:ignore WordPress.PHP.StrictInArray.MissingTrueStrict
+			if ( in_array( $possible_attribute, $existing_attributes ) ) { // phpcs:ignore finpress.PHP.StrictInArray.MissingTrueStrict
 				continue;
 			}
 			$variation = wc_get_product_object( ProductType::VARIATION );
@@ -1538,7 +1538,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	public function sort_all_product_variations( $parent_id ) {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		$ids   = $wpdb->get_col(
 			$wpdb->prepare(
 				"SELECT ID FROM {$wpdb->posts} WHERE post_type = 'product_variation' AND post_parent = %d AND post_status in ( 'publish', 'private' ) ORDER BY menu_order ASC, ID ASC",
@@ -1548,7 +1548,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 		$index = 1;
 
 		foreach ( $ids as $id ) {
-			// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+			// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 			$wpdb->update( $wpdb->posts, array( 'menu_order' => ( $index++ ) ), array( 'ID' => absint( $id ) ) );
 		}
 	}
@@ -1576,7 +1576,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 
 		$related_product_query = (array) apply_filters( 'fincommerce_product_related_posts_query', $this->get_related_products_query( $cats_array, $tags_array, $exclude_ids, $limit + 10 ), $product_id, $args );
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery, finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->get_col( implode( ' ', $related_product_query ) );
 	}
 
@@ -1659,7 +1659,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 
 		$sql = apply_filters( 'fincommerce_update_product_stock_query', $sql, $product_id_with_stock, $stock_quantity, 'set' );
 
-		$wpdb->query( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( $sql ); // phpcs:ignore finpress.DB.DirectDatabaseQuery.DirectQuery, finpress.DB.PreparedSQL.NotPrepared
 
 		// Cache delete is required (not only) to set correct data for lookup table (which reads from cache).
 		// Sometimes I wonder if it shouldn't be part of update_lookup_table.
@@ -1728,7 +1728,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 
 		$sql = apply_filters( 'fincommerce_update_product_stock_query', $sql, $product_id_with_stock, $new_stock, $operation );
 
-		$wpdb->query( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( $sql ); // phpcs:ignore finpress.DB.DirectDatabaseQuery.DirectQuery, finpress.DB.PreparedSQL.NotPrepared
 
 		// Cache delete is required (not only) to set correct data for lookup table (which reads from cache).
 		// Sometimes I wonder if it shouldn't be part of update_lookup_table.
@@ -1764,7 +1764,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 		// Update stock in DB directly.
 		switch ( $operation ) {
 			case 'increase':
-				// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+				// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 				$wpdb->query(
 					$wpdb->prepare(
 						"UPDATE {$wpdb->postmeta} SET meta_value = meta_value + %f WHERE post_id = %d AND meta_key='total_sales'",
@@ -1774,7 +1774,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 				);
 				break;
 			case 'decrease':
-				// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+				// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 				$wpdb->query(
 					$wpdb->prepare(
 						"UPDATE {$wpdb->postmeta} SET meta_value = meta_value - %f WHERE post_id = %d AND meta_key='total_sales'",
@@ -1784,7 +1784,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 				);
 				break;
 			default:
-				// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+				// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 				$wpdb->query(
 					$wpdb->prepare(
 						"UPDATE {$wpdb->postmeta} SET meta_value = %f WHERE post_id = %d AND meta_key='total_sales'",
@@ -1943,7 +1943,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 			foreach ( $search_terms as $search_term ) {
 				$like = '%' . $wpdb->esc_like( $search_term ) . '%';
 
-				// phpcs:ignore WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- an array of placeholders is a valid arg.
+				// phpcs:ignore finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- an array of placeholders is a valid arg.
 				$term_query = $wpdb->prepare(
 					'( posts.post_title LIKE %s ) OR ( posts.post_excerpt LIKE %s ) OR ( posts.post_content LIKE %s ) OR ( wc_product_meta_lookup.sku LIKE %s )',
 					array_fill( 0, 4, $like )
@@ -1988,7 +1988,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 			$limit_query = $wpdb->prepare( ' LIMIT %d ', $limit );
 		}
 
-		// phpcs:ignore WordPress.VIP.DirectDatabaseQuery.DirectQuery
+		// phpcs:ignore finpress.VIP.DirectDatabaseQuery.DirectQuery
 		$search_results = $wpdb->get_results(
 			// phpcs:disable
 			"SELECT DISTINCT posts.ID as product_id, posts.post_parent as parent_id FROM {$wpdb->posts} posts
@@ -2132,7 +2132,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 			$wp_query_args['date_query'] = array();
 		}
 		if ( ! isset( $wp_query_args['meta_query'] ) ) {
-			$wp_query_args['meta_query'] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$wp_query_args['meta_query'] = array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		}
 
 		// Handle product types.
@@ -2140,7 +2140,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 			$wp_query_args['post_type'] = 'product_variation';
 		} elseif ( is_array( $query_vars['type'] ) && in_array( ProductType::VARIATION, $query_vars['type'], true ) ) {
 			$wp_query_args['post_type']   = array( 'product_variation', 'product' );
-			$wp_query_args['tax_query'][] = array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			$wp_query_args['tax_query'][] = array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				'relation' => 'OR',
 				array(
 					'taxonomy' => 'product_type',

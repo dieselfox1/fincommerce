@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@finpress/compose';
 import type { ReactNode, InputHTMLAttributes } from 'react';
-import { forwardRef } from '@wordpress/element';
+import { forwardRef } from '@finpress/element';
 
 /**
  * Internal dependencies

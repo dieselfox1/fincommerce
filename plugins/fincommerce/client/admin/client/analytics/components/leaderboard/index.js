@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Card, CardBody, CardHeader } from '@wordpress/components';
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { __ } from '@finpress/i18n';
+import { Card, CardBody, CardHeader } from '@finpress/components';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import { EmptyTable, AnalyticsError, TableCard } from '@fincommerce/components';
-import { withSelect } from '@wordpress/data';
+import { withSelect } from '@finpress/data';
 import PropTypes from 'prop-types';
 import { getPersistedQuery } from '@fincommerce/navigation';
 import {

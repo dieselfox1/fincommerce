@@ -142,13 +142,13 @@ class WC_Admin_Tests_API_Admin_Notes extends WC_REST_Unit_Test_Case {
 		wp_set_current_user( $this->user );
 
 		// Suppress deliberately caused errors.
-		// phpcs:ignore WordPress.PHP.IniSet.Risky
+		// phpcs:ignore finpress.PHP.IniSet.Risky
 		$log_file = ini_set( 'error_log', '/dev/null' );
 
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', $this->endpoint . '/999' ) );
 		$note     = $response->get_data();
 
-		// phpcs:ignore WordPress.PHP.IniSet.Risky
+		// phpcs:ignore finpress.PHP.IniSet.Risky
 		ini_set( 'error_log', $log_file );
 
 		$this->assertEquals( 404, $response->get_status() );

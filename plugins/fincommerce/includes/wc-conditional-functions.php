@@ -140,7 +140,7 @@ if ( ! function_exists( 'is_checkout_pay_page' ) ) {
 
 		// Use-case: check for the presence of a specific query parameter when globals are not available.
 		if ( $use_query_params ) {
-			return isset( $_GET['pay_for_order'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			return isset( $_GET['pay_for_order'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
 		return false;
@@ -300,7 +300,7 @@ if ( ! function_exists( 'is_wc_admin_settings_page' ) ) {
 	 * @return bool
 	 */
 	function is_wc_admin_settings_page(): bool {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		return isset( $_REQUEST['page'] ) && 'wc-settings' === wp_unslash( $_REQUEST['page'] ) && is_admin();
 	}
 }
@@ -310,7 +310,7 @@ if ( ! function_exists( 'is_ajax' ) ) {
 	/**
 	 * Is_ajax - Returns true when the page is loaded via ajax.
 	 *
-	 * @see wp_doing_ajax() for an equivalent function provided by WordPress since 4.7.0
+	 * @see wp_doing_ajax() for an equivalent function provided by finpress since 4.7.0
 	 * @return bool
 	 */
 	function is_ajax() {
@@ -461,7 +461,7 @@ function wc_site_is_https() {
  * @return bool
  */
 function wc_checkout_is_https() {
-	return wc_site_is_https() || 'yes' === get_option( 'fincommerce_force_ssl_checkout' ) || class_exists( 'WordPressHTTPS' ) || strstr( wc_get_page_permalink( 'checkout' ), 'https:' );
+	return wc_site_is_https() || 'yes' === get_option( 'fincommerce_force_ssl_checkout' ) || class_exists( 'finpressHTTPS' ) || strstr( wc_get_page_permalink( 'checkout' ), 'https:' );
 }
 
 /**

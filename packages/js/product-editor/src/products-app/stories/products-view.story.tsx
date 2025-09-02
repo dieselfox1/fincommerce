@@ -6,7 +6,7 @@ import {
 	FieldType,
 	SupportedLayouts,
 	View,
-} from '@wordpress/dataviews';
+} from '@finpress/dataviews';
 
 /**
  * Internal dependencies

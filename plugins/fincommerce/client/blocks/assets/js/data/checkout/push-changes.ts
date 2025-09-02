@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { debounce } from '@fincommerce/base-utils';
-import { select, dispatch } from '@wordpress/data';
+import { select, dispatch } from '@finpress/data';
 import type { OrderFormValues } from '@fincommerce/settings';
 import { ApiErrorResponse } from '@fincommerce/types';
 import { getSetting } from '@fincommerce/settings';

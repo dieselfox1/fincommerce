@@ -5,7 +5,7 @@
 	"author": "Automattic",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce",
 		"expression",
 		"evaluation"
@@ -31,7 +31,7 @@
 		"build-types"
 	],
 	"dependencies": {
-		"@wordpress/i18n": "wp-6.6",
+		"@finpress/i18n": "wp-6.6",
 		"peggy": "^3.0.2"
 	},
 	"publishConfig": {

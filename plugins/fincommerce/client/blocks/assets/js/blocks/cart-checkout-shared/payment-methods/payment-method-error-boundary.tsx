@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Component } from '@finpress/element';
 import { CURRENT_USER_IS_ADMIN } from '@fincommerce/settings';
 import { StoreNoticesContainer } from '@fincommerce/blocks-components';
 import { noticeContexts } from '@fincommerce/base-context';

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Action Queue
  *
- * A job queue using WordPress actions.
+ * A job queue using finpress actions.
  *
  * @version 3.5.0
  */

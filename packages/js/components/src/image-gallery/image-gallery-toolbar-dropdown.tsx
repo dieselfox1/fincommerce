@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { DropdownMenu, MenuGroup, MenuItem } from '@wordpress/components';
-import { moreVertical } from '@wordpress/icons';
+import { DropdownMenu, MenuGroup, MenuItem } from '@finpress/components';
+import { moreVertical } from '@finpress/icons';
 import {
 	Children,
 	cloneElement,
 	createElement,
 	Fragment,
 	isValidElement,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { MediaItem, MediaUpload } from '@wordpress/media-utils';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { MediaItem, MediaUpload } from '@finpress/media-utils';
 
 /**
  * Internal dependencies

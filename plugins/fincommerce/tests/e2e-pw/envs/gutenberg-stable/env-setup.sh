@@ -7,4 +7,4 @@ SCRIPT_PATH=$(
   pwd -P
 )
 
-PLUGIN_REPOSITORY='WordPress/gutenberg' PLUGIN_NAME=Gutenberg PLUGIN_SLUG=gutenberg "$SCRIPT_PATH"/../../bin/install-plugin.sh
+PLUGIN_REPOSITORY='finpress/gutenberg' PLUGIN_NAME=Gutenberg PLUGIN_SLUG=gutenberg "$SCRIPT_PATH"/../../bin/install-plugin.sh

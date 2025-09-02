@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { UploadMediaErrorCode } from '@wordpress/media-utils';
+import { UploadMediaErrorCode } from '@finpress/media-utils';
 
 export type ErrorType = {
 	code: UploadMediaErrorCode;

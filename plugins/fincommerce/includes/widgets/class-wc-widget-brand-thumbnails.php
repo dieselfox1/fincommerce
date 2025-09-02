@@ -112,9 +112,9 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 		 */
 		$title = apply_filters( 'widget_title', $instance['title'], $instance, $this->woo_widget_idbase );
 
-		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo $args['before_widget']; // phpcs:ignore finpress.Security.EscapeOutput
 		if ( '' !== $title ) {
-			echo $args['before_title'] . $title . $args['after_title']; // phpcs:ignore WordPress.Security.EscapeOutput
+			echo $args['before_title'] . $title . $args['after_title']; // phpcs:ignore finpress.Security.EscapeOutput
 		}
 
 		wc_get_template(
@@ -128,7 +128,7 @@ class WC_Widget_Brand_Thumbnails extends WP_Widget {
 			WC()->plugin_path() . '/templates/brands/'
 		);
 
-		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo $args['after_widget']; // phpcs:ignore finpress.Security.EscapeOutput
 	}
 
 	/**

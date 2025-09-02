@@ -6,7 +6,7 @@ import '../../test/__mocks__/setup-shared-mocks';
  */
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import * as dataModule from '@wordpress/data';
+import * as dataModule from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -18,13 +18,13 @@ const updateBlockAttributes = jest.fn();
 const useDispatchMock = dataModule.useDispatch as jest.Mock;
 const useSelectMock = dataModule.useSelect as jest.Mock;
 
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	Button: ( props: React.ComponentProps< 'button' > ) => (
 		<button onClick={ props.onClick }>{ props.children }</button>
 	),
 } ) );
 
-jest.mock( '@wordpress/block-editor', () => ( {
+jest.mock( '@finpress/block-editor', () => ( {
 	store: {},
 } ) );
 

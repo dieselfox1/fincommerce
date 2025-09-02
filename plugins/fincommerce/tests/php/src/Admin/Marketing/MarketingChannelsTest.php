@@ -53,7 +53,7 @@ class MarketingChannelsTest extends WC_Unit_Test_Case {
 	}
 
 	/**
-	 * @testdox A marketing channel can be registered using the `fincommerce_marketing_channels` WordPress filter if the same channel slug is NOT previously registered.
+	 * @testdox A marketing channel can be registered using the `fincommerce_marketing_channels` finpress filter if the same channel slug is NOT previously registered.
 	 */
 	public function test_registers_channel_using_wp_filter() {
 		$test_channel = $this->createMock( MarketingChannelInterface::class );
@@ -75,7 +75,7 @@ class MarketingChannelsTest extends WC_Unit_Test_Case {
 	}
 
 	/**
-	 * @testdox A marketing channel can NOT be registered using the `fincommerce_marketing_channels` WordPress filter if it is previously registered.
+	 * @testdox A marketing channel can NOT be registered using the `fincommerce_marketing_channels` finpress filter if it is previously registered.
 	 */
 	public function test_overrides_existing_channel_if_registered_using_wp_filter() {
 		$marketing_channels = new MarketingChannels();

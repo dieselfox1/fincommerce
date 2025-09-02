@@ -82,7 +82,7 @@ const webpackConfig = {
 		alias: {
 			'gutenberg-components': path.resolve(
 				__dirname,
-				'../../../node_modules/@wordpress/components/src'
+				'../../../node_modules/@finpress/components/src'
 			),
 		},
 	},

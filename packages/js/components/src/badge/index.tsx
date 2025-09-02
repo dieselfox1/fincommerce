@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export type BadgeProps = {
 	count: number;

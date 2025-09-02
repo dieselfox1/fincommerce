@@ -3,9 +3,9 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 // @ts-ignore No types for this exist yet.
-import { useIsSiteEditorLoading } from '@wordpress/edit-site/build-module/components/layout/hooks';
+import { useIsSiteEditorLoading } from '@finpress/edit-site/build-module/components/layout/hooks';
 
 type ScrollDirection = 'topDown' | 'bottomUp';
 

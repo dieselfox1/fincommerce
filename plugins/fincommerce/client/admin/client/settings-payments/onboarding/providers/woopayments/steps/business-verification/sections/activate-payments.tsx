@@ -2,8 +2,8 @@
  * External dependencies
  */
 import React, { useState } from 'react';
-import { Button } from '@wordpress/components';
-import apiFetch from '@wordpress/api-fetch';
+import { Button } from '@finpress/components';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

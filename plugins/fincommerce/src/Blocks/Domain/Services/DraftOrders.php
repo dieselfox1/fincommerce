@@ -233,7 +233,7 @@ class DraftOrders {
 			return;
 		}
 
-		$suffix = ' This is an indicator that something is filtering FinCommerce or WordPress queries and modifying the query parameters.';
+		$suffix = ' This is an indicator that something is filtering FinCommerce or finpress queries and modifying the query parameters.';
 
 		// if count is greater than our expected batch size, then that's a problem.
 		if ( count( $order_results ) > 20 ) {

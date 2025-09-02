@@ -1,31 +1,31 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useCallback } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useCallback } from '@finpress/element';
 import {
 	FontSizePicker,
 	__experimentalToolsPanel as ToolsPanel, // eslint-disable-line
 	__experimentalToolsPanelItem as ToolsPanelItem, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 // eslint-disable-next-line
 import {
 	useSettings,
 	// We can remove the ts-expect-error comments once the types are available.
 	// @see packages/block-editor/src/components/index.js
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	__experimentalFontAppearanceControl as FontAppearanceControl, // eslint-disable-line
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	__experimentalLetterSpacingControl as LetterSpacingControl, // eslint-disable-line
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	__experimentalFontFamilyControl as FontFamilyControl, // eslint-disable-line
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	LineHeightControl,
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	__experimentalTextDecorationControl as TextDecorationControl, // eslint-disable-line
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	__experimentalTextTransformControl as TextTransformControl, // eslint-disable-line
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -60,7 +60,7 @@ export function TypographyElementPanel( {
 		'typography.fontFamilies'
 	);
 
-	// Ref: https://github.com/WordPress/gutenberg/issues/59778
+	// Ref: https://github.com/finpress/gutenberg/issues/59778
 	const fontFamilies = blockLevelFontFamilies?.default || [];
 	const { styles, defaultStyles, updateStyleProp } = useEmailStyles();
 	const elementStyles = getElementStyles( styles, element, headingLevel );

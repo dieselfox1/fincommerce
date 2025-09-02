@@ -4,13 +4,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { WooFooterItem } from '@fincommerce/admin-layout';
 import { PostTypeContext } from '@fincommerce/product-editor';
-import { Button, NavigableMenu } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { closeSmall } from '@wordpress/icons';
-import { useSelect } from '@wordpress/data';
-import { useEntityProp, store as coreDataStore } from '@wordpress/core-data';
+import { Button, NavigableMenu } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { closeSmall } from '@finpress/icons';
+import { useSelect } from '@finpress/data';
+import { useEntityProp, store as coreDataStore } from '@finpress/core-data';
 
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { store as blockEditorStore } from '@finpress/block-editor';
 import { Product } from '@fincommerce/data';
 
 /**

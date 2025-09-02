@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
 import { CURRENT_USER_IS_ADMIN } from '@fincommerce/settings';
 import BlockErrorBoundary from '@fincommerce/base-components/block-error-boundary';
 import { translateJQueryEventToNative } from '@fincommerce/base-utils';

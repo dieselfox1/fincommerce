@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { WooPaymentsMethodsLogos } from '@fincommerce/onboarding';
-import { __ } from '@wordpress/i18n';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __ } from '@finpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
 import { PaymentGatewayProvider } from '@fincommerce/data';
-import { Tooltip } from '@wordpress/components';
+import { Tooltip } from '@finpress/components';
 
 /**
  * Internal dependencies

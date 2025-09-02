@@ -1,10 +1,10 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/sidebar/index.js
+// Reference: https://github.com/finpress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/sidebar/index.js
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * External dependencies
  */
-import { memo, useCallback, useContext } from '@wordpress/element';
+import { memo, useCallback, useContext } from '@finpress/element';
 
 /**
  * Internal dependencies

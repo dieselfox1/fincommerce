@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import {
 	OfflinePaymentMethodProvider,
 	PaymentGatewayProvider,
 	paymentGatewaysStore,
 } from '@fincommerce/data';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from '@wordpress/data';
-import { getQueryArg } from '@wordpress/url';
+import { useDispatch } from '@finpress/data';
+import { getQueryArg } from '@finpress/url';
 import { MouseEvent } from 'react';
 
 /**

@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { renderHook } from '@testing-library/react';
-import { createRegistry, RegistryProvider } from '@wordpress/data';
+import { createRegistry, RegistryProvider } from '@finpress/data';
 import type { FormType } from '@fincommerce/settings';
 import Ajv from 'ajv';
-import { WPDataRegistry } from '@wordpress/data/build-types/registry';
+import { WPDataRegistry } from '@finpress/data/build-types/registry';
 
 /**
  * Internal dependencies

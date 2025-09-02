@@ -1,6 +1,6 @@
 # Dependency Extraction Webpack Plugin
 
-Extends Wordpress [Dependency Extraction Webpack Plugin](https://github.com/WordPress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin) to automatically include FinCommerce dependencies in addition to WordPress dependencies.
+Extends finpress [Dependency Extraction Webpack Plugin](https://github.com/finpress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin) to automatically include FinCommerce dependencies in addition to finpress dependencies.
 
 ## Installation
 
@@ -12,7 +12,7 @@ pnpm install @fincommerce/dependency-extraction-webpack-plugin --save-dev
 
 ## Usage
 
-Use this as you would [Dependency Extraction Webpack Plugin](https://github.com/WordPress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin). The API is exactly the same, except that FinCommerce packages are also handled automatically.
+Use this as you would [Dependency Extraction Webpack Plugin](https://github.com/finpress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin). The API is exactly the same, except that FinCommerce packages are also handled automatically.
 
 ```js
 // webpack.config.js
@@ -24,10 +24,10 @@ module.exports = {
 };
 ```
 
-**Note:** If you plan to extend the webpack configuration from `@wordpress/scripts` with `fincommerceDependencyExtractionWebpackPlugin`, be sure to remove the default instance of the plugin:
+**Note:** If you plan to extend the webpack configuration from `@finpress/scripts` with `fincommerceDependencyExtractionWebpackPlugin`, be sure to remove the default instance of the plugin:
 
 ```js
-const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const defaultConfig = require( '@finpress/scripts/config/webpack.config' );
 const webpackConfig = {
 	...defaultConfig,
 	plugins: [
@@ -40,7 +40,7 @@ const webpackConfig = {
 };
 ```
 
-Additional module requests on top of Wordpress [Dependency Extraction Webpack Plugin](https://github.com/WordPress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin) are:
+Additional module requests on top of finpress [Dependency Extraction Webpack Plugin](https://github.com/finpress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin) are:
 
 | Request                        | Global                   | Script handle          | Notes                                                   |
 | ------------------------------ | ------------------------ | ---------------------- | --------------------------------------------------------|
@@ -72,4 +72,4 @@ module.exports = {
 
 A list of potential FinCommerce excluded packages, this will include the excluded package within the bundle (example above).
 
-For more supported options see the original [dependency extraction plugin](https://github.com/WordPress/gutenberg/blob/trunk/packages/dependency-extraction-webpack-plugin/README.md#options).
+For more supported options see the original [dependency extraction plugin](https://github.com/finpress/gutenberg/blob/trunk/packages/dependency-extraction-webpack-plugin/README.md#options).

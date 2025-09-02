@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { select, dispatch } from '@wordpress/data';
-import { store as coreDataStore, useEntityProp } from '@wordpress/core-data';
+import { select, dispatch } from '@finpress/data';
+import { store as coreDataStore, useEntityProp } from '@finpress/core-data';
 import {
 	BaseControl,
 	PanelRow,
 	TextControl,
 	ToggleControl,
-} from '@wordpress/components';
-import { addFilter } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { addFilter } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -285,7 +285,7 @@ function wc_get_attribute_type_label( $type ) {
 
 /**
  * Check if attribute name is reserved.
- * https://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms.
+ * https://codex.finpress.org/Function_Reference/register_taxonomy#Reserved_Terms.
  *
  * @since  2.4.0
  * @param  string $attribute_name Attribute name.
@@ -571,7 +571,7 @@ function wc_create_attribute( $args ) {
 			// Update taxonomy ordering term meta.
 			$wpdb->update(
 				$wpdb->termmeta,
-				array( 'meta_key' => 'order' ), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				array( 'meta_key' => 'order' ), // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				array( 'meta_key' => 'order_pa_' . sanitize_title( $old_slug ) ) // WPCS: slow query ok.
 			);
 
@@ -616,7 +616,7 @@ function wc_create_attribute( $args ) {
 			}
 			global $wp_taxonomies;
 			if ( isset( $wp_taxonomies[ $old_taxonomy_name ] ) && ! isset( $wp_taxonomies[ $new_taxonomy_name ] ) ) {
-				$wp_taxonomies[ $new_taxonomy_name ] = $wp_taxonomies[ $old_taxonomy_name ]; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+				$wp_taxonomies[ $new_taxonomy_name ] = $wp_taxonomies[ $old_taxonomy_name ]; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			}
 		}
 	}

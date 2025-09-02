@@ -144,7 +144,7 @@ class WC_Admin_Meta_Boxes {
 		add_meta_box( 'fincommerce-coupon-data', __( 'Coupon data', 'fincommerce' ), 'WC_Meta_Box_Coupon_Data::output', 'shop_coupon', 'normal', 'high' );
 
 		// Comment rating.
-		if ( 'comment' === $screen_id && isset( $_GET['c'] ) && metadata_exists( 'comment', wc_clean( wp_unslash( $_GET['c'] ) ), 'rating' ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( 'comment' === $screen_id && isset( $_GET['c'] ) && metadata_exists( 'comment', wc_clean( wp_unslash( $_GET['c'] ) ), 'rating' ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			add_meta_box( 'fincommerce-rating', __( 'Rating', 'fincommerce' ), 'WC_Meta_Box_Product_Reviews::output', 'comment', 'normal', 'high' );
 		}
 	}
@@ -225,7 +225,7 @@ class WC_Admin_Meta_Boxes {
 		}
 
 		// Check the nonce.
-		if ( empty( $_POST['fincommerce_meta_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['fincommerce_meta_nonce'] ), 'fincommerce_save_data' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( empty( $_POST['fincommerce_meta_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['fincommerce_meta_nonce'] ), 'fincommerce_save_data' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			return;
 		}
 

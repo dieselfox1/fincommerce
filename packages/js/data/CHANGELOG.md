@@ -84,7 +84,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Set some fields as optional on ProductVariationImage type [#47065]
 -   Minor - Update generateProductVariations action to add support for default_attributes and allowing to disable the product saving. [#39938]
 -   Patch - Update Payfast title [#38090]
--   Patch - Update ProductAttributeTerms action types and include it as part of @wordpress/data module [#39620]
+-   Patch - Update ProductAttributeTerms action types and include it as part of @finpress/data module [#39620]
 -   Minor - Update product attribute type name and export the product attribute types. [#34999]
 -   Patch - Update TaskItem type to include `badge` prop. [#40034]
 -   Patch - Use products data store for getPermalinkParts selector. [#36706]
@@ -116,8 +116,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Migrate reports to TS [#35048]
 -   Patch - Migrate setting store to TS [#34184]
 -   Patch - Rewrite usePluginsHydration hook to not dispatch inside useSelect [#37896]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
--   Patch - Update @wordpress/data to ^6.15.0 [#34428]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
+-   Patch - Update @finpress/data to ^6.15.0 [#34428]
 -   Minor - Update attributes type for product variations data store [#35889]
 -   Patch - Update eslint to 8.32.0 across the monorepo. [#36700]
 -   Patch - Update events that should trigger the test job(s) [#47612]
@@ -161,7 +161,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Add Jetpack Changelogger
 -   Minor - Added TypeScript options selectors and action in onboarding store for keeping the completed task list. #32158
 -   Minor - Add product data store for retrieving product list.
--   Minor - Update dependency `@wordpress/hooks` to ^3.5.0
+-   Minor - Update dependency `@finpress/hooks` to ^3.5.0
 -   Minor - Add `is_offline` attribute for `Plugin` type. #32467
 -   Minor - Added Typescript type declarations. #32615
 -   Minor - Update type definitions. #32683, #32695, #32698, #32712
@@ -173,7 +173,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Export `InstallPluginsResponse` type
 -   Minor - Convert `use-user-preferences.js` to TS. #32695
 -   Minor - Added PaymentGateway type to exports #32697
--   Minor - Add `@types/wordpress__compose`, `@types/wordpress__data`, `redux` types and fix related type errors. #32735
+-   Minor - Add `@types/finpress__compose`, `@types/finpress__data`, `redux` types and fix related type errors. #32735
 -   Minor - Fix issue in `onboarding` data package for the unhide and hide success actions. #32926
 -   Patch - Migrate options store to TS
 -   Patch - Migrate woo.data export & import store to TS

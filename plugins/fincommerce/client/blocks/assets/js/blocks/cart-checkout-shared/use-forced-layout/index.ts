@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useRef, useEffect } from '@wordpress/element';
-import { useRegistry, dispatch } from '@wordpress/data';
+import { useRef, useEffect } from '@finpress/element';
+import { useRegistry, dispatch } from '@finpress/data';
 import { useEditorContext } from '@fincommerce/base-context';
 import {
 	createBlock,
@@ -10,7 +10,7 @@ import {
 	// @ts-expect-error Type definitions for this function are missing in Gutenberg
 	createBlocksFromInnerBlocksTemplate,
 	TemplateArray,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

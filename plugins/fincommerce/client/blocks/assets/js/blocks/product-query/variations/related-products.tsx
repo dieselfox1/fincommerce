@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BlockAttributes, InnerBlockTemplate } from '@wordpress/blocks';
-import { Icon } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { BlockAttributes, InnerBlockTemplate } from '@finpress/blocks';
+import { Icon } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { stacks } from '@fincommerce/icons';
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
 import { getSettingWithCoercion } from '@fincommerce/settings';
@@ -131,7 +131,7 @@ const blockConfig = {
 	),
 	attributes: BLOCK_ATTRIBUTES,
 	// Gutenberg doesn't support this type yet, discussion here:
-	// https://github.com/WordPress/gutenberg/pull/43632
+	// https://github.com/finpress/gutenberg/pull/43632
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
 	allowedControls: [],

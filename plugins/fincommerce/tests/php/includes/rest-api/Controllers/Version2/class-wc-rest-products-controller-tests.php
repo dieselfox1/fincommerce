@@ -142,11 +142,11 @@ class WC_REST_Products_V2_Controller_Test extends WC_REST_Unit_Test_Case {
 
 		$response_fields = array_keys( $response->get_data() );
 
-		// phpcs:disable WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:disable finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertEmpty( array_diff( $expected_response_fields, $response_fields ), 'These fields were expected but not present in API V2 response: ' . print_r( array_diff( $expected_response_fields, $response_fields ), true ) );
 
 		$this->assertEmpty( array_diff( $response_fields, $expected_response_fields ), 'These fields were not expected in the API V2 response: ' . print_r( array_diff( $response_fields, $expected_response_fields ), true ) );
-		// phpcs:enable WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:enable finpress.PHP.DevelopmentFunctions.error_log_print_r
 	}
 
 	/**

@@ -174,9 +174,9 @@ class ProductTemplate {
 	/**
 	 * Set the template icon.
 	 *
-	 * @see https://github.com/WordPress/gutenberg/tree/trunk/packages/icons.
+	 * @see https://github.com/finpress/gutenberg/tree/trunk/packages/icons.
 	 *
-	 * @param string $icon The icon name from the @wordpress/components or a url for an external image resource.
+	 * @param string $icon The icon name from the @finpress/components or a url for an external image resource.
 	 */
 	public function set_icon( string $icon ) {
 		$this->icon = $icon;

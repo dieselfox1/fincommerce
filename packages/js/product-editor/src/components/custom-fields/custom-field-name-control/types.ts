@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { ComboboxControl } from '@wordpress/components';
+import { ComboboxControl } from '@finpress/components';
 
 export type CustomFieldNameControlProps = Omit<
 	React.ComponentProps< typeof ComboboxControl >,

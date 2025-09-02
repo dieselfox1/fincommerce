@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useCallback } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useCallback } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import {
 	InnerBlockLayoutContextProvider,
 	ProductDataContextProvider,
 } from '@fincommerce/shared-context';
-import { PanelBody, Button } from '@wordpress/components';
-import { backup } from '@wordpress/icons';
+import { PanelBody, Button } from '@finpress/components';
+import { backup } from '@finpress/icons';
 import { ProductResponseItem } from '@fincommerce/types';
 import {
 	InnerBlocks,
@@ -17,12 +17,12 @@ import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
 	BlockContextProvider,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	// @ts-expect-error Type definitions for this function are missing in Gutenberg
 	createBlocksFromInnerBlocksTemplate,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

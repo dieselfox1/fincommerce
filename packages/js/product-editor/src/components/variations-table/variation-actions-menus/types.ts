@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { PartialProductVariation, ProductVariation } from '@fincommerce/data';
-import { MenuItem } from '@wordpress/components';
+import { MenuItem } from '@finpress/components';
 
 export type VariationActionsMenuProps = {
 	disabled?: boolean;

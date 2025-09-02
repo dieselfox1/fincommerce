@@ -26,9 +26,9 @@ defined( 'ABSPATH' ) || exit();
 				" style="width:180px;">
 
 			<?php
-			// phpcs:disable WordPress.Security.NonceVerification.Recommended
+			// phpcs:disable finpress.Security.NonceVerification.Recommended
 			if ( ! empty( $_GET['wc-helper-status'] ) && 'helper-disconnected' === $_GET['wc-helper-status'] ) :
-				// phpcs:enable WordPress.Security.NonceVerification.Recommended
+				// phpcs:enable finpress.Security.NonceVerification.Recommended
 				?>
 					<p><strong><?php esc_html_e( 'Sorry to see you go.', 'fincommerce' ); ?></strong> <?php esc_html_e( 'Feel free to reconnect again using the button below.', 'fincommerce' ); ?></p>
 				<?php endif; ?>

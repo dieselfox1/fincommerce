@@ -3,9 +3,9 @@
  */
 import { productFilterAttribute } from '@fincommerce/icons';
 import { getSetting } from '@fincommerce/settings';
-import { registerBlockType } from '@wordpress/blocks';
-import { __, sprintf } from '@wordpress/i18n';
-import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
+import { registerBlockType } from '@finpress/blocks';
+import { __, sprintf } from '@finpress/i18n';
+import { useBlockProps, useInnerBlocksProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

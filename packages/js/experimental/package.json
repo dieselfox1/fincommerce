@@ -8,7 +8,7 @@
 		"node": "^20.11.1"
 	},
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce",
 		"experimental"
 	],
@@ -36,11 +36,11 @@
 	],
 	"dependencies": {
 		"@fincommerce/components": "workspace:*",
-		"@wordpress/components": "wp-6.6",
-		"@wordpress/element": "wp-6.6",
-		"@wordpress/i18n": "wp-6.6",
-		"@wordpress/icons": "wp-6.6",
-		"@wordpress/keycodes": "wp-6.6",
+		"@finpress/components": "wp-6.6",
+		"@finpress/element": "wp-6.6",
+		"@finpress/i18n": "wp-6.6",
+		"@finpress/icons": "wp-6.6",
+		"@finpress/keycodes": "wp-6.6",
 		"clsx": "2.1.x",
 		"dompurify": "^2.5.7",
 		"gridicons": "^3.4.2",
@@ -67,7 +67,7 @@
 		"@fincommerce/eslint-plugin": "workspace:*",
 		"@fincommerce/internal-js-tests": "workspace:*",
 		"@fincommerce/internal-style-build": "workspace:*",
-		"@wordpress/browserslist-config": "wp-6.6",
+		"@finpress/browserslist-config": "wp-6.6",
 		"css-loader": "6.11.x",
 		"eslint": "^8.55.0",
 		"jest": "27.5.x",

@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { Button, Modal, TextControl } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { check, Icon } from '@wordpress/icons';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button, Modal, TextControl } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
+import { check, Icon } from '@finpress/icons';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	useEffect,
 	useRef,
 	createInterpolateElement,
 	memo,
 	useMemo,
-} from '@wordpress/element';
-import { ENTER } from '@wordpress/keycodes';
-import { isEmail } from '@wordpress/url';
-import { applyFilters } from '@wordpress/hooks';
+} from '@finpress/element';
+import { ENTER } from '@finpress/keycodes';
+import { isEmail } from '@finpress/url';
+import { applyFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies

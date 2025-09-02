@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { noop } from 'lodash';
-import { Flex } from '@wordpress/components';
-import { Icon, chevronUp, chevronDown } from '@wordpress/icons';
+import { Flex } from '@finpress/components';
+import { Icon, chevronUp, chevronDown } from '@finpress/icons';
 import clsx from 'clsx';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import type { TemplateArray } from '@wordpress/blocks';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
+import type { TemplateArray } from '@finpress/blocks';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
 import { TotalsFooterItem } from '@fincommerce/base-components/cart-checkout';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import { useStoreCart } from '@fincommerce/base-context/hooks';
-import { __ } from '@wordpress/i18n';
-import { useId, useState } from '@wordpress/element';
-import { Icon } from '@wordpress/components';
-import { chevronDown, chevronUp } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { useId, useState } from '@finpress/element';
+import { Icon } from '@finpress/components';
+import { chevronDown, chevronUp } from '@finpress/icons';
 import clsx from 'clsx';
 import { FormattedMonetaryAmount } from '@fincommerce/blocks-components';
 import { useContainerWidthContext } from '@fincommerce/base-context';

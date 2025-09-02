@@ -6,7 +6,7 @@
  * External dependencies
  */
 import { CustomerEffortScoreTracksContainer } from '@fincommerce/customer-effort-score';
-import { createRoot } from '@wordpress/element';
+import { createRoot } from '@finpress/element';
 import debugFactory from 'debug';
 
 const debug = debugFactory( 'wc-admin:client' );

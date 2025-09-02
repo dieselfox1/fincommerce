@@ -2,19 +2,19 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
-import { store as blockEditorStore, Warning } from '@wordpress/block-editor';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { Icon, search } from '@wordpress/icons';
-import { Button } from '@wordpress/components';
-import type { Block as BlockType } from '@wordpress/blocks';
+import { addFilter } from '@finpress/hooks';
+import { store as blockEditorStore, Warning } from '@finpress/block-editor';
+import { useDispatch, useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { Icon, search } from '@finpress/icons';
+import { Button } from '@finpress/components';
+import type { Block as BlockType } from '@finpress/blocks';
 import {
-	// @ts-ignore waiting for @types/wordpress__blocks update
+	// @ts-ignore waiting for @types/finpress__blocks update
 	registerBlockVariation,
 	registerBlockType,
 	createBlock,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies
@@ -69,7 +69,7 @@ const PRODUCT_SEARCH_ATTRIBUTES = {
 };
 
 const DeprecatedBlockEdit = ( { clientId }: { clientId: string } ) => {
-	// @ts-ignore @wordpress/block-editor/store types not provided
+	// @ts-ignore @finpress/block-editor/store types not provided
 	const { replaceBlocks } = useDispatch( blockEditorStore );
 
 	const currentBlockAttributes = useSelect(
@@ -200,7 +200,7 @@ registerBlockVariation( 'core/search', {
 			/>
 		),
 	},
-	// @ts-ignore waiting for @types/wordpress__blocks update
+	// @ts-ignore waiting for @types/finpress__blocks update
 	isActive: ( blockAttributes, variationAttributes ) => {
 		return (
 			blockAttributes.query?.post_type ===

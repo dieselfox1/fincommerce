@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockControls } from '@wordpress/block-editor';
+import { BlockControls } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

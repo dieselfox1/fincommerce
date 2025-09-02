@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { store as coreStore } from '@wordpress/core-data';
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { store as noticesStore } from '@wordpress/notices';
-import { trash } from '@wordpress/icons';
-import { useState } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { store as coreStore } from '@finpress/core-data';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { store as noticesStore } from '@finpress/notices';
+import { trash } from '@finpress/icons';
+import { useState } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	Button,
 	__experimentalText as Text,
 	__experimentalHStack as HStack,
 	__experimentalVStack as VStack,
-} from '@wordpress/components';
-import { decodeEntities } from '@wordpress/html-entities';
-import { applyFilters } from '@wordpress/hooks';
+} from '@finpress/components';
+import { decodeEntities } from '@finpress/html-entities';
+import { applyFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies
@@ -93,7 +93,7 @@ const getTrashEmailPostAction = () => {
 	/**
 	 * Trash email post action.
 	 * A custom action to permanently delete or move to trash email posts.
-	 * Cloned from core: https://github.com/WordPress/gutenberg/blob/da7adc0975d4736e555c7f81b8820b0cc4439d6c/packages/fields/src/actions/permanently-delete-post.tsx
+	 * Cloned from core: https://github.com/finpress/gutenberg/blob/da7adc0975d4736e555c7f81b8820b0cc4439d6c/packages/fields/src/actions/permanently-delete-post.tsx
 	 */
 	const trashEmailPost = {
 		id: 'trash-email-post',

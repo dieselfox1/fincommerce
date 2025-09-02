@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { MenuGroup } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { MenuGroup } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { Product, ProductVariation } from '@fincommerce/data';
-import { store as coreStore, useEntityProp } from '@wordpress/core-data';
+import { store as coreStore, useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button, Modal } from '@wordpress/components';
-import { createElement, useState, useRef, useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { closeSmall } from '@wordpress/icons';
+import { Button, Modal } from '@finpress/components';
+import { createElement, useState, useRef, useEffect } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { closeSmall } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 import clsx from 'clsx';
 import type { FocusEvent } from 'react';

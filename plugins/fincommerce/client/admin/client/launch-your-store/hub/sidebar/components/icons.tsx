@@ -8,7 +8,7 @@ import {
 	tag,
 	payment,
 	check,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 /**
  * Internal dependencies
  */

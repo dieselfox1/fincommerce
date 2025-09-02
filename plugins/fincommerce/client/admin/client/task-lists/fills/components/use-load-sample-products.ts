@@ -2,11 +2,11 @@
  * External dependencies
  */
 
-import { __ } from '@wordpress/i18n';
-import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@finpress/i18n';
+import apiFetch from '@finpress/api-fetch';
 import { WC_ADMIN_NAMESPACE } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { useDispatch } from '@finpress/data';
+import { useState } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

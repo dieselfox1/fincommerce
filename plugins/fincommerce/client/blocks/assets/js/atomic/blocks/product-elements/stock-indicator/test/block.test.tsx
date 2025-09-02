@@ -11,8 +11,8 @@ import { getSetting } from '@fincommerce/settings';
  */
 import { Block } from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/stock-indicator/block';
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	return {
 		...originalModule,
 		useSelect: jest.fn( () => ( {

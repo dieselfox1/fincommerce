@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { ProgressBar } from '@fincommerce/components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export const Basic = () => (
 	<div style={ { background: '#fff', height: '200px', padding: '20px' } }>

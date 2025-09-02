@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { store as coreDataStore, Page } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
+import { useMemo } from '@finpress/element';
+import { store as coreDataStore, Page } from '@finpress/core-data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

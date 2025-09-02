@@ -64,17 +64,17 @@ class SafeGlobalFunctionProxy {
 	 * @return mixed The result of the function call, or null if an error occurs.
 	 */
 	public static function __callStatic( $name, $arguments ) {
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- Custom error handler is necessary to convert errors to exceptions
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_set_error_handler -- Custom error handler is necessary to convert errors to exceptions
 		set_error_handler(
 			static function ( int $type, string $message, string $file, int $line ) {
 				if ( __FILE__ === $file ) {
-					// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- Used to adjust file and line number for accurate error reporting
+					// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- Used to adjust file and line number for accurate error reporting
 					$trace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 3 );
 					$file  = $trace[2]['file'] ?? $file;
 					$line  = $trace[2]['line'] ?? $line;
 				}
 				$sanitized_message = filter_var( $message, FILTER_SANITIZE_FULL_SPECIAL_CHARS );
-				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- $message sanitised above. we don't want to rely on esc_html since it's not a PHP built-in
+				// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped -- $message sanitised above. we don't want to rely on esc_html since it's not a PHP built-in
 				throw new \ErrorException( $sanitized_message, 0, $type, $file, $line );
 			}
 		);

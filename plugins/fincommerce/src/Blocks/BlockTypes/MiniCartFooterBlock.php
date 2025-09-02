@@ -55,7 +55,7 @@ class MiniCartFooterBlock extends AbstractInnerBlock {
 		);
 
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div class="wc-block-components-totals-item wc-block-mini-cart__footer-subtotal">
 				<span class="wc-block-components-totals-item__label">
 					<?php echo esc_html( $subtotal_label ); ?>
@@ -68,7 +68,7 @@ class MiniCartFooterBlock extends AbstractInnerBlock {
 			</div>
 			<div class="wc-block-mini-cart__footer-actions">
 				<?php
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 					echo $content;
 				?>
 			</div>

@@ -681,7 +681,7 @@ class ProductSchema extends AbstractSchema {
 
 		if ( false === $cache_value || $last_modified !== $cache_value['last_modified'] ) {
 			global $wpdb;
-			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 			$variation_meta_data = $wpdb->get_results(
 				"
 				SELECT post_id as variation_id, meta_key as attribute_key, meta_value as attribute_value

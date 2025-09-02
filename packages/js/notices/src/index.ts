@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import '@wordpress/notices';
+import '@finpress/notices';
 
 /**
  * Internal dependencies

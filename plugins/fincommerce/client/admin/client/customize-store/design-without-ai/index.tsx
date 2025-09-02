@@ -3,7 +3,7 @@
  */
 import { useMachine, useSelector } from '@xstate/react';
 import { AnyInterpreter, Sender } from 'xstate';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

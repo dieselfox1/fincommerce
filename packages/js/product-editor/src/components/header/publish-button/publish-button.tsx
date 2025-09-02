@@ -2,10 +2,10 @@
  * External dependencies
  */
 import type { MouseEvent } from 'react';
-import { Button } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { useDispatch } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
+import { Button } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { useDispatch } from '@finpress/data';
+import { createElement } from '@finpress/element';
 import { type Product } from '@fincommerce/data';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';

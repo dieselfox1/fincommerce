@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { setLocaleData } from '@wordpress/i18n';
-import { registerStore } from '@wordpress/data';
+import { setLocaleData } from '@finpress/i18n';
+import { registerStore } from '@finpress/data';
 import 'regenerator-runtime/runtime';
 
-// Due to the dependency @wordpress/compose which introduces the use of
+// Due to the dependency @finpress/compose which introduces the use of
 // ResizeObserver this global mock is required for some tests to work.
 global.ResizeObserver = require( 'resize-observer-polyfill' );
 
@@ -20,7 +20,7 @@ global.wp = {
 
 global.wc = {};
 
-const wordPressPackages = [ 'element', 'date', 'data' ];
+const finpressPackages = [ 'element', 'date', 'data' ];
 
 const fincommercePackages = [
 	'components',
@@ -99,9 +99,9 @@ global.wcSettings = {
 	},
 };
 
-wordPressPackages.forEach( ( lib ) => {
+finpressPackages.forEach( ( lib ) => {
 	Object.defineProperty( global.wp, lib, {
-		get: () => require( `@wordpress/${ lib }` ),
+		get: () => require( `@finpress/${ lib }` ),
 	} );
 } );
 

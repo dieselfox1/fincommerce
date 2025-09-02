@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import { Text } from '@fincommerce/experimental';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

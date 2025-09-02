@@ -3,9 +3,9 @@
  */
 import { notesStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDispatch } from '@wordpress/data';
-import { Button, Modal } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@finpress/data';
+import { Button, Modal } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 const DismissAllModal = ( { onClose } ) => {
 	const { createNotice } = useDispatch( 'core/notices' );

@@ -16,9 +16,9 @@ import {
 	OrderFormValues,
 } from '@fincommerce/settings';
 import { nonNullable } from '@fincommerce/types';
-import { useRef } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { isEmail } from '@wordpress/url';
+import { useRef } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { isEmail } from '@finpress/url';
 import type { ErrorObject, JSONSchemaType } from 'ajv';
 import fastDeepEqual from 'fast-deep-equal/es6';
 

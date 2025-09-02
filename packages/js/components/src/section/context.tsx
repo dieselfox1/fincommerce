@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createContext } from '@wordpress/element';
+import { createContext } from '@finpress/element';
 
 /**
  * Context container for heading level. We start at 2 because the `h1` is defined in <Header />

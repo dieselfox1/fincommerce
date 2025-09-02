@@ -52,8 +52,8 @@ class WC_Admin_Reports {
 		include_once __DIR__ . '/reports/class-wc-report-sales-by-date.php';
 
 		$sales_by_date                 = new WC_Report_Sales_By_Date();
-		$sales_by_date->start_date     = strtotime( gmdate( 'Y-m-01', current_time( 'timestamp' ) ) ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
-		$sales_by_date->end_date       = strtotime( gmdate( 'Y-m-d', current_time( 'timestamp' ) ) ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
+		$sales_by_date->start_date     = strtotime( gmdate( 'Y-m-01', current_time( 'timestamp' ) ) ); // phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested
+		$sales_by_date->end_date       = strtotime( gmdate( 'Y-m-d', current_time( 'timestamp' ) ) ); // phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested
 		$sales_by_date->chart_groupby  = 'day';
 		$sales_by_date->group_by_query = 'YEAR(posts.post_date), MONTH(posts.post_date), DAY(posts.post_date)';
 

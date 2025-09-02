@@ -95,7 +95,7 @@ class LookupDataStore {
 
 		$query = $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $this->lookup_table_name ) );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		return $this->lookup_table_name === $wpdb->get_var( $query );
 	}
 
@@ -265,7 +265,7 @@ class LookupDataStore {
 
 		$in_stock = $product->is_in_stock();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query(
 			$wpdb->prepare(
 				'UPDATE ' . $this->lookup_table_name . ' SET in_stock = %d WHERE product_id = %d',
@@ -273,7 +273,7 @@ class LookupDataStore {
 				$product->get_id()
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -359,7 +359,7 @@ class LookupDataStore {
 	private function delete_data_for( int $product_id ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query(
 			$wpdb->prepare(
 				'DELETE FROM ' . $this->lookup_table_name . ' WHERE product_id = %d OR product_or_parent_id = %d',
@@ -367,7 +367,7 @@ class LookupDataStore {
 				$product_id
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -438,7 +438,7 @@ class LookupDataStore {
 	private function create_data_for_variation( \WC_Product_Variation $variation ) {
 		$main_product = WC()->call_function( 'wc_get_product', $variation->get_parent_id() );
 		if ( false === $main_product ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 			throw new \Exception( "The product is a variation, and the retrieval of data for the parent product (id {$variation->get_parent_id()}) failed." );
 		}
 
@@ -611,7 +611,7 @@ class LookupDataStore {
 	private function insert_lookup_table_data( int $product_id, int $product_or_parent_id, string $taxonomy, int $term_id, bool $is_variation_attribute, bool $has_stock ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query(
 			$wpdb->prepare(
 				'INSERT INTO ' . $this->lookup_table_name . ' (
@@ -631,7 +631,7 @@ class LookupDataStore {
 				$has_stock ? 1 : 0
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -705,7 +705,7 @@ class LookupDataStore {
 	public function lookup_table_has_data(): bool {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return ( (int) $wpdb->get_var( "SELECT EXISTS (SELECT 1 FROM {$this->lookup_table_name})" ) ) !== 0;
 	}
 
@@ -843,13 +843,13 @@ class LookupDataStore {
 	private function create_data_for_product_cpt_core( int $product_id ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL
+		// phpcs:disable finpress.DB.PreparedSQL
 		$sql = $wpdb->prepare(
 			"delete from {$this->lookup_table_name} where product_or_parent_id=%d",
 			$product_id
 		);
 		$wpdb->query( $sql );
-		// phpcs:enable WordPress.DB.PreparedSQL
+		// phpcs:enable finpress.DB.PreparedSQL
 
 		// * Obtain list of product variations, together with stock statuses; also get the product type.
 		// For a variation this will return just one entry, with type 'variation'.
@@ -882,7 +882,7 @@ class LookupDataStore {
 			$product_id
 		);
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$product_ids_with_stock_status = $wpdb->get_results( $sql, ARRAY_A );
 
 		$main_product_row = array_filter( $product_ids_with_stock_status, fn( $item ) => ProductType::VARIATION !== $item['product_type'] );
@@ -910,7 +910,7 @@ class LookupDataStore {
 			'_product_attributes'
 		);
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$temp = $wpdb->get_var( $sql );
 
 		if ( is_null( $temp ) ) {
@@ -918,7 +918,7 @@ class LookupDataStore {
 			return;
 		}
 
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize
+		// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_unserialize
 		$temp = unserialize( $temp );
 		if ( false === $temp ) {
 			throw new \WC_Data_Exception( 0, 'The product attributes metadata row is not properly serialized' );
@@ -952,7 +952,7 @@ class LookupDataStore {
 			'pa_%'
 		);
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$terms_used_per_attribute = $wpdb->get_results( $sql, ARRAY_A );
 		foreach ( $terms_used_per_attribute as &$term ) {
 			$term['attribute'] = strtolower( rawurlencode( $term['attribute'] ) );
@@ -985,7 +985,7 @@ class LookupDataStore {
 				$product_id,
 				'attribute_pa_%'
 			);
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$variations_defined = $wpdb->get_results( $sql, ARRAY_A );
 			$variations_defined = ArrayUtil::group_by_column( $variations_defined, 'variation_id' );
 		}
@@ -1066,7 +1066,7 @@ class LookupDataStore {
 
 			$sql .= implode( '),(', $values_strings ) . ')';
 
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$result = $wpdb->query( $sql );
 			if ( false === $result ) {
 				throw new \WC_Data_Exception(

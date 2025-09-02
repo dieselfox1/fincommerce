@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Component, Suspense, lazy } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { Component, Suspense, lazy } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { Spinner } from '@fincommerce/components';
 
 /**

@@ -29,7 +29,7 @@ class DownloadsWrapper extends AbstractOrderConfirmationBlock {
 					'numberposts' => 1,
 					'post_status' => 'publish',
 					'fields'      => 'ids',
-					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+					// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 					'meta_query'  => array(
 						array(
 							'key'     => '_downloadable',

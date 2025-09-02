@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { useRef, useEffect, RawHTML } from '@wordpress/element';
+import { useRef, useEffect, RawHTML } from '@finpress/element';
 import { sanitizeHTML } from '@fincommerce/utils';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { usePrevious } from '@fincommerce/base-hooks';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import type { NoticeStatus, NoticeType } from '@fincommerce/types';
 import type { NoticeBannerProps } from '@fincommerce/base-components/notice-banner';
 

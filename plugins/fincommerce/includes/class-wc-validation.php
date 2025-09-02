@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 class WC_Validation {
 
 	/**
-	 * Validates an email using WordPress native is_email function.
+	 * Validates an email using finpress native is_email function.
 	 *
 	 * @param  string $email Email address to validate.
 	 * @return bool

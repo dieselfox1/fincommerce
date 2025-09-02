@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Fragment } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { Fragment } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import { PLACEHOLDER_IMG_SRC, getSetting } from '@fincommerce/settings';
 import {
@@ -13,7 +13,7 @@ import { useStyleProps } from '@fincommerce/base-hooks';
 import { withProductDataContext } from '@fincommerce/shared-hocs';
 import { useStoreEvents } from '@fincommerce/base-context/hooks';
 import type { HTMLAttributes } from 'react';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import {
 	isString,
 	objectHasProp,

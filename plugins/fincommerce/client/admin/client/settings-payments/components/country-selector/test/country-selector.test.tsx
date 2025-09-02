@@ -3,7 +3,7 @@
  */
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

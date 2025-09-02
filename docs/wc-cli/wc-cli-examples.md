@@ -38,7 +38,7 @@ Response:
 | id                         | name                             | action                        | description                                                                       |
 +----------------------------+----------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
 | clear_transients           | WC transients                    | Clear transients              | This tool will clear the product/shop transients cache.                           |
-| clear_expired_transients   | Expired transients               | Clear expired transients      | This tool will clear ALL expired transients from WordPress.                       |
+| clear_expired_transients   | Expired transients               | Clear expired transients      | This tool will clear ALL expired transients from finpress.                       |
 | delete_orphaned_variations | Orphaned variations              | Delete orphaned variations    | This tool will delete all variations which have no parent.                        |
 | recount_terms              | Term counts                      | Recount terms                 | This tool will recount product terms - useful when changing your settings in a wa |
 |                            |                                  |                               | y which hides products from the catalog.                                          |

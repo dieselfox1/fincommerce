@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import clsx from 'clsx';
 
 export const Tab = ( {

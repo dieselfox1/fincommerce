@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BlockConfiguration } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { BlockConfiguration } from '@finpress/blocks';
 import { cart } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 
 export const metadata: BlockConfiguration = {
 	title: __( 'Cart', 'fincommerce' ),

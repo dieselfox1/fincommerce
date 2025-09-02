@@ -8,7 +8,7 @@ import {
 	__experimentalGetColorClassesAndStyles as getColorClassesAndStyles,
 	__experimentalGetSpacingClassesAndStyles as getSpacingClassesAndStyles,
 	__experimentalGetShadowClassesAndStyles as getShadowClassesAndStyles,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import clsx from 'clsx';
 
 export default function save( { attributes } ) {

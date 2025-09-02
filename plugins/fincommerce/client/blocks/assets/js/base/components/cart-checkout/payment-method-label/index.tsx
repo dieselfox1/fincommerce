@@ -8,9 +8,9 @@ import {
 	institution as bank,
 	currencyDollar as bill,
 	payment as card,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 import { isString, objectHasProp } from '@fincommerce/types';
-import { useCallback } from '@wordpress/element';
+import { useCallback } from '@finpress/element';
 
 /**
  * Internal dependencies

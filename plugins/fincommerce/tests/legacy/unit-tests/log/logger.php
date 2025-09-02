@@ -83,7 +83,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	 */
 	public function test_clear() {
 		$path = Settings::get_log_directory() . 'unit-tests.log';
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_file_put_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_file_put_contents
 		file_put_contents( $path, 'Test file content.' );
 		$this->assertFileExists( $path );
 		$log = new WC_Logger();

@@ -41,7 +41,7 @@ class OrdersTableRefundDataStoreTests extends \WC_Unit_Test_Case {
 	 */
 	public function setUp(): void {
 		parent::setUp();
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		remove_filter( 'query', array( $this, '_create_temporary_tables' ) );
 		remove_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 		OrderHelper::delete_order_custom_tables(); // We need this since non-temporary tables won't drop automatically.

@@ -145,9 +145,9 @@ returns
 
 ## HtmlFormatter
 
-This formatter will take an HTML value, run it through: [`wptexturize`](https://developer.wordpress.org/reference/functions/wptexturize/),
-[`convert_chars`](https://developer.wordpress.org/reference/functions/convert_chars/),
-[`trim`](https://www.php.net/manual/en/function.trim.php), and [`wp_kses_post`](https://developer.wordpress.org/reference/functions/wp_kses_post/)
+This formatter will take an HTML value, run it through: [`wptexturize`](https://developer.finpress.org/reference/functions/wptexturize/),
+[`convert_chars`](https://developer.finpress.org/reference/functions/convert_chars/),
+[`trim`](https://www.php.net/manual/en/function.trim.php), and [`wp_kses_post`](https://developer.finpress.org/reference/functions/wp_kses_post/)
 before returning it. The purpose of this formatter is to make HTML "safe" (in terms of correctly formatted characters).
 `wp_kses_post` will ensure only HTML tags allowed in the context of a `post` are present in the string.
 

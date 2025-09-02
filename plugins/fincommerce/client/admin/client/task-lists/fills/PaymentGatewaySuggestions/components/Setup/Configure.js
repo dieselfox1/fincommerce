@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 import { PAYMENT_GATEWAYS_STORE_NAME } from '@fincommerce/data';
 import { DynamicForm } from '@fincommerce/components';
 import { WooPaymentGatewayConfigure } from '@fincommerce/onboarding';

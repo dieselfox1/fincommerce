@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { EmptyTable } from '@fincommerce/components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export const Basic = () => <EmptyTable>There are no entries.</EmptyTable>;
 

@@ -2,16 +2,16 @@
  * External dependencies
  */
 import { optionsStore } from '@fincommerce/data';
-import apiFetch from '@wordpress/api-fetch';
-import { dispatch, resolveSelect, select, useSelect } from '@wordpress/data';
-import { useContext, useEffect } from '@wordpress/element';
-import { store as coreStore } from '@wordpress/core-data';
+import apiFetch from '@finpress/api-fetch';
+import { dispatch, resolveSelect, select, useSelect } from '@finpress/data';
+import { useContext, useEffect } from '@finpress/element';
+import { store as coreStore } from '@finpress/core-data';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { privateApis as blockEditorPrivateApis } from '@wordpress/block-editor';
+import { privateApis as blockEditorPrivateApis } from '@finpress/block-editor';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies

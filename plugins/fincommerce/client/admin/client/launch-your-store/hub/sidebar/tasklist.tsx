@@ -5,11 +5,11 @@
  */
 import { onboardingStore, TaskType } from '@fincommerce/data';
 import { navigateTo, getNewPath } from '@fincommerce/navigation';
-import { resolveSelect } from '@wordpress/data';
-import { applyFilters } from '@wordpress/hooks';
+import { resolveSelect } from '@finpress/data';
+import { applyFilters } from '@finpress/hooks';
 import clsx from 'clsx';
 // @ts-ignore No types for this exist yet.
-import SidebarNavigationItem from '@wordpress/edit-site/build-module/components/sidebar-navigation-item';
+import SidebarNavigationItem from '@finpress/edit-site/build-module/components/sidebar-navigation-item';
 
 /**
  * Internal dependencies

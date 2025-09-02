@@ -93,7 +93,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 		if ( isset( $query_args['taxes'] ) && ! empty( $query_args['taxes'] ) ) {
 			$allowed_taxes = self::get_filtered_ids( $query_args, 'taxes' );
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- `$allowed_taxes` was prepared by get_filtered_ids above. */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- `$allowed_taxes` was prepared by get_filtered_ids above. */
 			$taxes_where_clause .= " AND {$order_tax_lookup_table}.tax_rate_id IN ({$allowed_taxes})";
 			/* phpcs:enable */
 		}
@@ -129,7 +129,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		";
 		if ( ! empty( $args['include'] ) ) {
 			$args['include'] = (array) $args['include'];
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 			$tax_placeholders = implode( ',', array_fill( 0, count( $args['include'] ), '%d' ) );
 			$query           .= $wpdb->prepare( " WHERE tax_rate_id IN ({$tax_placeholders})", $args['include'] );
 			/* phpcs:enable */
@@ -180,7 +180,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->interval_query->add_sql_clause( 'join', $order_stats_join );
 
 		$db_intervals = $wpdb->get_col(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->interval_query->get_query_statement()
 		);
 		$db_interval_count = count( $db_intervals );
@@ -190,7 +190,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->total_query->add_sql_clause( 'where_time', $this->get_sql_clause( 'where_time' ) );
 
 		$totals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->total_query->get_query_statement(),
 			ARRAY_A
 		);
@@ -226,7 +226,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->interval_query->add_sql_clause( 'limit', $this->get_sql_clause( 'limit' ) );
 
 		$intervals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->interval_query->get_query_statement(),
 			ARRAY_A
 		);

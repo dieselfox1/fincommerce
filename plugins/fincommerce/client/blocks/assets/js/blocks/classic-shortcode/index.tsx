@@ -5,25 +5,25 @@ import {
 	BlockInstance,
 	createBlock,
 	registerBlockType,
-} from '@wordpress/blocks';
-import type { BlockEditProps } from '@wordpress/blocks';
+} from '@finpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 import {
 	useBlockProps,
 	BlockPreview,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	Button,
 	Placeholder,
 	Popover,
 	ExternalLink,
 	TabbableContainer,
-} from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { shortcode, Icon } from '@wordpress/icons';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useState, createInterpolateElement } from '@wordpress/element';
-import { store as noticesStore } from '@wordpress/notices';
+} from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { shortcode, Icon } from '@finpress/icons';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useState, createInterpolateElement } from '@finpress/element';
+import { store as noticesStore } from '@finpress/notices';
 import { findBlock } from '@fincommerce/utils';
 
 /**

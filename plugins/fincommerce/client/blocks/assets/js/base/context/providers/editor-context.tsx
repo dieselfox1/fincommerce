@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createContext, useContext, useCallback } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { createContext, useContext, useCallback } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 
 interface EditorContextType {
 	// Indicates whether in the editor context.

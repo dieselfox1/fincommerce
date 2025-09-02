@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Card, CardBody, Button, CardDivider } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { Card, CardBody, Button, CardDivider } from '@finpress/components';
+import { useState } from '@finpress/element';
 import { WooPaymentsMethodsLogos } from '@fincommerce/onboarding';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { paymentSettingsStore } from '@fincommerce/data';
 
 /**

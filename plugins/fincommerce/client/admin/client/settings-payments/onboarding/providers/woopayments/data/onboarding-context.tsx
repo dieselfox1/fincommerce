@@ -7,8 +7,8 @@ import {
 	useCallback,
 	useState,
 	useEffect,
-} from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
+} from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	woopaymentsOnboardingStore,
 	WooPaymentsOnboardingStepContent,

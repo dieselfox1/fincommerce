@@ -101,7 +101,7 @@
 		}
 
 		&.has-unread::after,
-		&.fincommerce-layout__activity-panel-tab-wordpress-notices::after {
+		&.fincommerce-layout__activity-panel-tab-finpress-notices::after {
 			content: " ";
 			position: absolute;
 			padding: 1px;
@@ -132,7 +132,7 @@
 			box-shadow: none;
 
 			&.has-unread::after,
-			&.fincommerce-layout__activity-panel-tab-wordpress-notices::after {
+			&.fincommerce-layout__activity-panel-tab-finpress-notices::after {
 				border-color: $gray-200;
 			}
 		}

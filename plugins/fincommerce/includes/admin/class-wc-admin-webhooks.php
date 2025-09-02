@@ -30,7 +30,7 @@ class WC_Admin_Webhooks {
 	 * @return bool
 	 */
 	public function allow_save_settings( $allow ) {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! isset( $_GET['edit-webhook'] ) ) {
 			return false;
 		}
@@ -44,7 +44,7 @@ class WC_Admin_Webhooks {
 	 * @return bool
 	 */
 	private function is_webhook_settings_page() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		return is_wc_admin_settings_page() && isset( $_GET['tab'], $_GET['section'] ) && 'advanced' === $_GET['tab'] && 'webhooks' === $_GET['section'];
 	}
 
@@ -59,14 +59,14 @@ class WC_Admin_Webhooks {
 		}
 
 		$errors = array();
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$webhook_id = isset( $_POST['webhook_id'] ) ? absint( $_POST['webhook_id'] ) : 0;
 		$webhook    = new WC_Webhook( $webhook_id );
 
 		// Name.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_POST['webhook_name'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$name = sanitize_text_field( wp_unslash( $_POST['webhook_name'] ) );
 		} else {
 			$name = sprintf(
@@ -85,11 +85,11 @@ class WC_Admin_Webhooks {
 		}
 
 		// Status.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$webhook->set_status( ! empty( $_POST['webhook_status'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_status'] ) ) : 'disabled' );
 
 		// Delivery URL.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$delivery_url = ! empty( $_POST['webhook_delivery_url'] ) ? esc_url_raw( wp_unslash( $_POST['webhook_delivery_url'] ) ) : '';
 
 		if ( wc_is_valid_url( $delivery_url ) ) {
@@ -97,26 +97,26 @@ class WC_Admin_Webhooks {
 		}
 
 		// Secret.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$secret = ! empty( $_POST['webhook_secret'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_secret'] ) ) : wp_generate_password( 50, true, true );
 		$webhook->set_secret( $secret );
 
 		// Topic.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_POST['webhook_topic'] ) ) {
 			$resource = '';
 			$event    = '';
 
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			switch ( $_POST['webhook_topic'] ) {
 				case 'action':
 					$resource = 'action';
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					// phpcs:ignore finpress.Security.NonceVerification.Recommended
 					$event = ! empty( $_POST['webhook_action_event'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_action_event'] ) ) : '';
 					break;
 
 				default:
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					// phpcs:ignore finpress.Security.NonceVerification.Recommended
 					list( $resource, $event ) = explode( '.', sanitize_text_field( wp_unslash( $_POST['webhook_topic'] ) ) );
 					break;
 			}
@@ -132,7 +132,7 @@ class WC_Admin_Webhooks {
 
 		// API version.
 		$rest_api_versions = wc_get_webhook_rest_api_versions();
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$webhook->set_api_version( ! empty( $_POST['webhook_api_version'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_api_version'] ) ) : end( $rest_api_versions ) );
 
 		$webhook->save();
@@ -143,7 +143,7 @@ class WC_Admin_Webhooks {
 			// Redirect to webhook edit page to avoid settings save actions.
 			wp_safe_redirect( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&edit-webhook=' . $webhook->get_id() . '&error=' . rawurlencode( implode( '|', $errors ) ) ) );
 			exit();
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		} elseif ( isset( $_POST['webhook_status'] ) && 'active' === $_POST['webhook_status'] && $webhook->get_pending_delivery() ) {
 			// Ping the webhook at the first time that is activated.
 			$result = $webhook->deliver_ping();
@@ -172,7 +172,7 @@ class WC_Admin_Webhooks {
 		}
 
 		$qty = count( $webhooks );
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$status = isset( $_GET['status'] ) ? '&status=' . sanitize_text_field( wp_unslash( $_GET['status'] ) ) : '';
 
 		// Redirect to webhooks page.
@@ -186,9 +186,9 @@ class WC_Admin_Webhooks {
 	private function delete() {
 		check_admin_referer( 'delete-webhook' );
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['delete'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$webhook_id = absint( $_GET['delete'] );
 
 			if ( $webhook_id ) {
@@ -203,13 +203,13 @@ class WC_Admin_Webhooks {
 	public function actions() {
 		if ( $this->is_webhook_settings_page() ) {
 			// Save.
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing
+			// phpcs:ignore finpress.Security.NonceVerification.Missing
 			if ( isset( $_POST['save'] ) && isset( $_POST['webhook_id'] ) ) {
 				$this->save();
 			}
 
 			// Delete webhook.
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			if ( isset( $_GET['delete'] ) ) {
 				$this->delete();
 			}
@@ -223,9 +223,9 @@ class WC_Admin_Webhooks {
 		// Hide the save button.
 		$GLOBALS['hide_save_button'] = true;
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['edit-webhook'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$webhook_id = absint( $_GET['edit-webhook'] );
 			$webhook    = new WC_Webhook( $webhook_id );
 
@@ -240,28 +240,28 @@ class WC_Admin_Webhooks {
 	 * Notices.
 	 */
 	public static function notices() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['deleted'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$deleted = absint( $_GET['deleted'] );
 
 			/* translators: %d: count */
 			WC_Admin_Settings::add_message( sprintf( _n( '%d webhook permanently deleted.', '%d webhooks permanently deleted.', $deleted, 'fincommerce' ), $deleted ) );
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['updated'] ) ) {
 			WC_Admin_Settings::add_message( __( 'Webhook updated successfully.', 'fincommerce' ) );
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['created'] ) ) {
 			WC_Admin_Settings::add_message( __( 'Webhook created successfully.', 'fincommerce' ) );
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['error'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			foreach ( explode( '|', sanitize_text_field( wp_unslash( $_GET['error'] ) ) ) as $message ) {
 				WC_Admin_Settings::add_error( trim( $message ) );
 			}
@@ -274,7 +274,7 @@ class WC_Admin_Webhooks {
 	public function screen_option() {
 		global $webhooks_table_list;
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! isset( $_GET['edit-webhook'] ) && $this->is_webhook_settings_page() ) {
 			$webhooks_table_list = new WC_Admin_Webhooks_Table_List();
 
@@ -374,7 +374,7 @@ class WC_Admin_Webhooks {
 							$legacy_api_webhooks_count,
 							'fincommerce'
 						),
-						'https://wordpress.org/plugins/fincommerce-legacy-rest-api/'
+						'https://finpress.org/plugins/fincommerce-legacy-rest-api/'
 					),
 					array(
 						'a' => array(

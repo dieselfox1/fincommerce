@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export const CoverImageIcon = () => (
 	<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

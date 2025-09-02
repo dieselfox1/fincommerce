@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, sprintf } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
+import { __, sprintf } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
 import QuantitySelector from '@fincommerce/base-components/quantity-selector';
 import ProductPrice from '@fincommerce/base-components/product-price';
 import ProductName from '@fincommerce/base-components/product-name';
@@ -18,7 +18,7 @@ import {
 	productPriceValidation,
 } from '@fincommerce/blocks-checkout';
 import Dinero from 'dinero.js';
-import { forwardRef, useMemo } from '@wordpress/element';
+import { forwardRef, useMemo } from '@finpress/element';
 import type { CartItem } from '@fincommerce/types';
 import { objectHasProp, Currency } from '@fincommerce/types';
 import { getSetting } from '@fincommerce/settings';

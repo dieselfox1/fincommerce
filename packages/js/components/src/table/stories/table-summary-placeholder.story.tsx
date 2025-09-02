@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Card, CardFooter } from '@wordpress/components';
+import { Card, CardFooter } from '@finpress/components';
 import { TableSummaryPlaceholder } from '@fincommerce/components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export const Basic = () => {
 	return (

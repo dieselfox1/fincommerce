@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
-import { type BlockEditProps } from '@wordpress/blocks';
+import { useBlockProps, useInnerBlocksProps } from '@finpress/block-editor';
+import { type BlockEditProps } from '@finpress/blocks';
 
 /**
  * Internal dependencies

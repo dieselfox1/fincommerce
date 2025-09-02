@@ -16,7 +16,7 @@ export function getUnapprovedReviews( select ) {
 	const { getReviewsTotalCount, getReviewsError, isResolving } =
 		select( reviewsStore );
 
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const totalReviews = getReviewsTotalCount( unapprovedReviewsQuery );
 	const isError = Boolean( getReviewsError( unapprovedReviewsQuery ) );
 	const isRequesting = isResolving( 'getReviewsTotalCount', [

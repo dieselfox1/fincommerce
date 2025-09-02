@@ -116,7 +116,7 @@ final class StringUtil {
 	 */
 	public static function to_sql_list( array $values ) {
 		if ( empty( $values ) ) {
-            // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+            // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 			throw new \InvalidArgumentException( self::class_name_without_namespace( __CLASS__ ) . '::' . __FUNCTION__ . ': the values array is empty' );
 		}
 

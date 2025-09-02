@@ -32,8 +32,8 @@ jest.mock( '@fincommerce/components', () => {
 	};
 } );
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useDispatch: jest.fn().mockImplementation( () => {
 		return {
 			createNotice: jest.fn(),

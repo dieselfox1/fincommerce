@@ -32,11 +32,11 @@ const { checkoutStore } = window.wc.wcBlocksData
 
 ### getCustomerId
 
-Returns the WordPress user ID of the customer whose order is currently processed by the Checkout block.
+Returns the finpress user ID of the customer whose order is currently processed by the Checkout block.
 
 #### _Returns_ <!-- omit in toc -->
 
--   `number`: The WordPress user ID of the customer.
+-   `number`: The finpress user ID of the customer.
 
 #### _Example_ <!-- omit in toc -->
 

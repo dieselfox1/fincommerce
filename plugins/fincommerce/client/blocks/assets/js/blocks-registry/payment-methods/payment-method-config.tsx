@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 import type { ReactNode } from 'react';
 import type {
 	PaymentMethodConfiguration,

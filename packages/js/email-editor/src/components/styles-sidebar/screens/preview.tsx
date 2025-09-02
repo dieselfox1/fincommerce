@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { useState, useMemo } from '@wordpress/element';
+import { useSelect } from '@finpress/data';
+import { useState, useMemo } from '@finpress/element';
 import {
 	__experimentalHStack as HStack, // eslint-disable-line
 	__experimentalVStack as VStack, // eslint-disable-line
 	__unstableMotion as motion, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies
@@ -60,7 +60,7 @@ type Props = {
 
 /**
  * Component to render the styles preview based on the component from the site editor:
- * https://github.com/WordPress/gutenberg/blob/5c7c4e7751df5e05fc70a354cd0d81414ac9c7e7/packages/edit-site/src/components/global-styles/preview-styles.js
+ * https://github.com/finpress/gutenberg/blob/5c7c4e7751df5e05fc70a354cd0d81414ac9c7e7/packages/edit-site/src/components/global-styles/preview-styles.js
  *
  * @param root0
  * @param root0.label
@@ -116,7 +116,7 @@ export function Preview( {
 			);
 
 			// We pick the colors for the highlighted colors the same way as the site editor
-			// https://github.com/WordPress/gutenberg/blob/7b3850b6a39ce45948f09efe750451c6323a4613/packages/edit-site/src/components/global-styles/hooks.js#L83-L95
+			// https://github.com/finpress/gutenberg/blob/7b3850b6a39ce45948f09efe750451c6323a4613/packages/edit-site/src/components/global-styles/hooks.js#L83-L95
 			const highlightedColorsObj = [
 				...( textColorPaletteObj
 					? [ textColorPaletteObj ]

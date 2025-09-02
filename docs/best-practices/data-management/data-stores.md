@@ -8,11 +8,11 @@ sidebar_label: Manage data stores
 
 ## Introduction
 
-Data store classes act as a bridge between FinCommerce's data CRUD classes (`WC_Product`, `WC_Order`, `WC_Customer`, etc) and the database layer. With the database logic separate from data, FinCommerce becomes more flexible. The data stores shipped with FinCommerce core (powered by WordPress' custom posts system and some custom tables) can be swapped out for a different database structure, type, or even be powered by an external API.
+Data store classes act as a bridge between FinCommerce's data CRUD classes (`WC_Product`, `WC_Order`, `WC_Customer`, etc) and the database layer. With the database logic separate from data, FinCommerce becomes more flexible. The data stores shipped with FinCommerce core (powered by finpress' custom posts system and some custom tables) can be swapped out for a different database structure, type, or even be powered by an external API.
 
 This guide will walk through the structure of a data store class, how to create a new data store, how to replace a core data store, and how to call a data store from your own code.
 
-The examples in this guide will look at the [`WC_Coupon`](https://github.com/dieselfox1/fincommerce/blob/dcecf0f22890f3cd92fbea13a98c11b2537df2a8/includes/class-wc-coupon.php#L19) CRUD data class and [`WC_Coupon_Data_Store_CPT`](https://github.com/dieselfox1/fincommerce/blob/dcecf0f22890f3cd92fbea13a98c11b2537df2a8/includes/data-stores/class-wc-coupon-data-store-cpt.php), an implementation of a coupon data store using WordPress custom post types. This is how coupons are currently stored in FinCommerce.
+The examples in this guide will look at the [`WC_Coupon`](https://github.com/dieselfox1/fincommerce/blob/dcecf0f22890f3cd92fbea13a98c11b2537df2a8/includes/class-wc-coupon.php#L19) CRUD data class and [`WC_Coupon_Data_Store_CPT`](https://github.com/dieselfox1/fincommerce/blob/dcecf0f22890f3cd92fbea13a98c11b2537df2a8/includes/data-stores/class-wc-coupon-data-store-cpt.php), an implementation of a coupon data store using finpress custom post types. This is how coupons are currently stored in FinCommerce.
 
 The important thing to know about `WC_Coupon` or any other CRUD data class when working with data stores is which props (properties) they contain. This is defined in the [`data`](https://github.com/dieselfox1/fincommerce/blob/dcecf0f22890f3cd92fbea13a98c11b2537df2a8/includes/class-wc-coupon.php#L26) array of each class.
 
@@ -42,7 +42,7 @@ All data stores must implement handling for these methods.
 
 In addition to handling your props, other custom data can be passed. This is considered `meta`. For example, coupons can have custom data provided by plugins.
 
-The `read_meta`, `delete_meta`, `add_meta`, and `update_meta` methods should be defined so meta can be read and managed from the correct source. In the case of our FinCommerce core classes, we define them in `WC_Data_Store_WP` and then use the same code for all of our data stores. They all use the WordPress meta system. You can redefine these if meta should come from a different source.
+The `read_meta`, `delete_meta`, `add_meta`, and `update_meta` methods should be defined so meta can be read and managed from the correct source. In the case of our FinCommerce core classes, we define them in `WC_Data_Store_WP` and then use the same code for all of our data stores. They all use the finpress meta system. You can redefine these if meta should come from a different source.
 
 Your data store can also implement other methods to replace direct queries. For example, the coupons data store has a public `get_usage_by_user_id` method. Data stores should always define and implement an interface for the methods they expect, so other developers know what methods they need to write. Put another way, in addition to the `WC_Object_Data_Store_Interface` interface, `WC_Coupon_Data_Store_CPT` also implements `WC_Coupon_Data_Store_Interface`.
 
@@ -145,7 +145,7 @@ public function update( &$coupon ) {
  * @param array $args Array of args to pass to the delete method.
  */
 public function delete( &$coupon, $args = array() ) {
-	// A lot of objects in WordPress and FinCommerce support
+	// A lot of objects in finpress and FinCommerce support
 	// the concept of trashing. This usually is a flag to move the object
 	// to a "recycling bin". Since coupons support trashing, your layer should too.
 	// If an actual delete occurs, set the coupon ID to 0.
@@ -167,7 +167,7 @@ public function delete( &$coupon, $args = array() ) {
 }
 ```
 
-We are extending `WC_Data_Store_WP` so our classes will continue to use WordPress' meta system.
+We are extending `WC_Data_Store_WP` so our classes will continue to use finpress' meta system.
 
 As mentioned in the structure section, we are responsible for implementing the methods defined by `WC_Coupon_Data_Store_Interface`. Each interface describes the methods and parameters it accepts, and what your function should do.
 
@@ -318,6 +318,6 @@ $data_store = WC_Data_Store::load( 'mycustomdata' );
 
 ## Data store limitations and WP Admin
 
-Currently, several FinCommerce screens still rely on WordPress to list objects. Examples of this include coupons and products.
+Currently, several FinCommerce screens still rely on finpress to list objects. Examples of this include coupons and products.
 
-If you replace data via a data store, some parts of the existing UI may fail. An example of this may be lists of coupons when using the `type` filter. This filter uses meta data, and is in turn passed to WordPress which runs a query using the `WP_Query` class. This cannot handle data outside of the regular meta tables (Ref #19937). To get around this, usage of `WP_Query` would need to be deprecated and replaced with custom query classes and functions.
+If you replace data via a data store, some parts of the existing UI may fail. An example of this may be lists of coupons when using the `type` filter. This filter uses meta data, and is in turn passed to finpress which runs a query using the `WP_Query` class. This cannot handle data outside of the regular meta tables (Ref #19937). To get around this, usage of `WP_Query` would need to be deprecated and replaced with custom query classes and functions.

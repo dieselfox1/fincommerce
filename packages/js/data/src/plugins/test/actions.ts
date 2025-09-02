@@ -2,11 +2,11 @@
  * @jest-environment node
  */
 
-jest.mock( '@wordpress/data-controls', () => ( {
+jest.mock( '@finpress/data-controls', () => ( {
 	apiFetch: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	controls: {
 		dispatch: jest.fn(),
 		select: jest.fn(),
@@ -16,7 +16,7 @@ jest.mock( '@wordpress/data', () => ( {
 /**
  * External dependencies
  */
-import { controls } from '@wordpress/data';
+import { controls } from '@finpress/data';
 
 /**
  * Internal dependencies

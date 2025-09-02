@@ -18,7 +18,7 @@ jest.mock( '@fincommerce/navigation', () => ( {
 	navigateTo: jest.fn( ( args ) => mockNavigateTo( args ) ),
 } ) );
 
-jest.mock( '@wordpress/i18n', () => ( {
+jest.mock( '@finpress/i18n', () => ( {
 	__: jest.fn( ( msg ) => msg ),
 } ) );
 
@@ -33,7 +33,7 @@ jest.mock( '../../contexts/validation-context', () => ( {
 	} ),
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	select: jest.fn().mockReturnValue( {
 		getBlockParentsByBlockName: jest.fn().mockReturnValue( [ 'parent' ] ),
 	} ),

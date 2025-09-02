@@ -9,10 +9,10 @@ test( 'Load the home page', async ( { page } ) => {
 			.getByRole( 'link', { name: 'FinCommerce Core E2E Test' } )
 			.count()
 	).toBeGreaterThan( 0 );
-	await expect( page.getByText( /powered by WordPress/i ) ).toBeVisible();
+	await expect( page.getByText( /powered by finpress/i ) ).toBeVisible();
 	expect( await page.title() ).toBe( 'FinCommerce Core E2E Test Suite' );
 	await expect(
-		page.getByRole( 'link', { name: 'WordPress' } )
+		page.getByRole( 'link', { name: 'finpress' } )
 	).toBeVisible();
 } );
 

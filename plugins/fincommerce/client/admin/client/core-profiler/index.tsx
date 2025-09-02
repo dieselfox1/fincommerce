@@ -14,9 +14,9 @@ import {
 	or,
 } from 'xstate5';
 import { useMachine, useSelector } from '@xstate5/react';
-import { useMemo } from '@wordpress/element';
-import { resolveSelect, dispatch } from '@wordpress/data';
-import { store as coreStore, Settings } from '@wordpress/core-data';
+import { useMemo } from '@finpress/element';
+import { resolveSelect, dispatch } from '@finpress/data';
+import { store as coreStore, Settings } from '@finpress/core-data';
 import {
 	updateQueryString,
 	getQuery,
@@ -280,7 +280,7 @@ const assignCurrentUserEmail = assign( {
 		if (
 			event.output &&
 			event.output.length > 0 &&
-			event.output !== 'wordpress@example.com' // wordpress default prefilled email address
+			event.output !== 'finpress@example.com' // finpress default prefilled email address
 		) {
 			return event.output;
 		}

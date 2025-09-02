@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { ToolbarGroup } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { ToolbarGroup } from '@finpress/components';
 
 /**
  * Internal dependencies

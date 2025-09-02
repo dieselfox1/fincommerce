@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
-import { loop as loopIcon } from '@wordpress/icons';
+import { registerBlockType } from '@finpress/blocks';
+import { loop as loopIcon } from '@finpress/icons';
 
 /**
  * Internal dependencies

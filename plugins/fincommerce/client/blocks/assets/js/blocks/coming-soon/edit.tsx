@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	InspectorControls,
 	useBlockProps,
 	InnerBlocks,
-} from '@wordpress/block-editor';
-import { PanelBody, ColorPicker } from '@wordpress/components';
-import { type BlockEditProps } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { PanelBody, ColorPicker } from '@finpress/components';
+import { type BlockEditProps } from '@finpress/blocks';
 
 export type Attributes = {
 	color?: string;

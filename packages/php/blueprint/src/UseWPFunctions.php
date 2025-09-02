@@ -78,7 +78,7 @@ trait UseWPFunctions {
 	}
 
 	/**
-	 * Retrieves plugin information from the WordPress Plugin API.
+	 * Retrieves plugin information from the finpress Plugin API.
 	 *
 	 * @param string $action The type of information to retrieve from the API.
 	 * @param array  $args Optional. Arguments to pass to the API.
@@ -129,7 +129,7 @@ trait UseWPFunctions {
 	}
 
 	/**
-	 * Retrieves theme information from the WordPress Theme API.
+	 * Retrieves theme information from the finpress Theme API.
 	 *
 	 * @param string $action The type of information to retrieve from the API.
 	 * @param array  $args Optional. Arguments to pass to the API.
@@ -178,7 +178,7 @@ trait UseWPFunctions {
 	 *
 	 * @param string      $option Name of the option to update.
 	 * @param mixed       $value New value for the option.
-	 * @param string|null $autoload Optional. Whether to load the option when WordPress starts up.
+	 * @param string|null $autoload Optional. Whether to load the option when finpress starts up.
 	 * @return bool True if option was updated, false otherwise.
 	 */
 	public function wp_update_option( $option, $value, $autoload = null ) {
@@ -209,7 +209,7 @@ trait UseWPFunctions {
 	}
 
 	/**
-	 * Initializes the WordPress filesystem.
+	 * Initializes the finpress filesystem.
 	 *
 	 * @return bool
 	 */

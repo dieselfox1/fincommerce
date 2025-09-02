@@ -1,22 +1,22 @@
 /**
  * External dependencies
  */
-import { useEntityProp } from '@wordpress/core-data';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { useEntityProp } from '@finpress/core-data';
+import type { BlockEditProps } from '@finpress/blocks';
 import {
 	dateI18n,
 	humanTimeDiff,
 	getSettings as getDateSettings,
-} from '@wordpress/date';
-import { PanelBody, ToggleControl } from '@wordpress/components';
-import { __, _x } from '@wordpress/i18n';
+} from '@finpress/date';
+import { PanelBody, ToggleControl } from '@finpress/components';
+import { __, _x } from '@finpress/i18n';
 import {
 	InspectorControls,
 	useBlockProps,
 	// @ts-expect-error - Experimental component
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalDateFormatPicker as DateFormatPicker,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 export default function Edit( {
 	attributes: { format, isLink },

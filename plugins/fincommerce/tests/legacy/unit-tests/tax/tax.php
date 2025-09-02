@@ -108,7 +108,7 @@ class WC_Tests_Tax extends WC_Unit_Test_Case {
 					'compound' => 'no',
 				),
 			),
-			print_r( $tax_rates, true ) // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			print_r( $tax_rates, true ) // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		);
 	}
 

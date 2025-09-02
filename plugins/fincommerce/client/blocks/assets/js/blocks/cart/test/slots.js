@@ -4,11 +4,11 @@
  */
 import { render, screen, waitFor, act } from '@testing-library/react';
 import { previewCart } from '@fincommerce/resource-previews';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { CART_STORE_KEY as storeKey } from '@fincommerce/block-data';
 import { server, http, HttpResponse } from '@fincommerce/test-utils/msw';
 import { ExperimentalOrderMeta } from '@fincommerce/blocks-checkout';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 /**
  * Internal dependencies
  */

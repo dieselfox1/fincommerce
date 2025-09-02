@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useMemo, useCallback, useState } from '@wordpress/element';
-import type { Field, FormField } from '@wordpress/dataviews';
+import { useMemo, useCallback, useState } from '@finpress/element';
+import type { Field, FormField } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

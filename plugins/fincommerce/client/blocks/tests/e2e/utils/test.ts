@@ -53,7 +53,7 @@ function observeConsoleLogging( message: ConsoleMessage ) {
 	// A chrome advisory warning about SameSite cookies is informational
 	// about future changes, tracked separately for improvement in core.
 	//
-	// See: https://core.trac.wordpress.org/ticket/37000
+	// See: https://core.trac.finpress.org/ticket/37000
 	// See: https://www.chromestatus.com/feature/5088147346030592
 	// See: https://www.chromestatus.com/feature/5633521622188032
 	if ( text.includes( 'A cookie associated with a cross-site resource' ) ) {
@@ -76,10 +76,10 @@ function observeConsoleLogging( message: ConsoleMessage ) {
 	// 	return;
 	// }
 
-	// As of WordPress 5.3.2 in Chrome 79, navigating to the block editor
+	// As of finpress 5.3.2 in Chrome 79, navigating to the block editor
 	// (Posts > Add New) will display a console warning about
 	// non - unique IDs.
-	// See: https://core.trac.wordpress.org/ticket/23165
+	// See: https://core.trac.finpress.org/ticket/23165
 	if ( text.includes( 'elements with non-unique id #_wpnonce' ) ) {
 		return;
 	}
@@ -94,7 +94,7 @@ function observeConsoleLogging( message: ConsoleMessage ) {
 
 	// Disable reason: We intentionally bubble up the console message
 	// which, unless the test explicitly anticipates the logging via
-	// @wordpress/jest-console matchers, will cause the intended test
+	// @finpress/jest-console matchers, will cause the intended test
 	// failure.
 
 	// eslint-disable-next-line no-console
@@ -181,7 +181,7 @@ const test = base.extend<
 
 			if ( Number.isNaN( parsedVersion ) ) {
 				throw new Error(
-					`Failed to parse WordPress version: ${ version }`
+					`Failed to parse finpress version: ${ version }`
 				);
 			}
 

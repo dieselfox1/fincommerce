@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { compose } from '@wordpress/compose';
-import { useSelect } from '@wordpress/data';
+import { compose } from '@finpress/compose';
+import { useSelect } from '@finpress/data';
 import {
 	unstable_HistoryRouter as HistoryRouter,
 	Route,
@@ -25,14 +25,14 @@ import {
 	withOptionsHydration,
 } from '@fincommerce/data';
 import '@fincommerce/notices';
-import { SlotFillProvider } from '@wordpress/components';
-import { useEffect } from '@wordpress/element';
+import { SlotFillProvider } from '@finpress/components';
+import { useEffect } from '@finpress/element';
 import {
 	CustomerEffortScoreModalContainer,
 	triggerExitPageCesSurvey,
 } from '@fincommerce/customer-effort-score';
 import { recordPageView } from '@fincommerce/tracks';
-import { PluginArea } from '@wordpress/plugins';
+import { PluginArea } from '@finpress/plugins';
 import {
 	LayoutContextProvider,
 	getLayoutContextValue,

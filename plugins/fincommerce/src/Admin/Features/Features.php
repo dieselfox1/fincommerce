@@ -181,7 +181,7 @@ class Features {
 					'no';
 
 				// Check if the feature is currently being enabled, if it is continue.
-				/* phpcs:disable WordPress.Security.NonceVerification */
+				/* phpcs:disable finpress.Security.NonceVerification */
 				$feature_option = $feature_class::TOGGLE_OPTION_NAME;
 				if ( isset( $_POST[ $feature_option ] ) && '1' === $_POST[ $feature_option ] ) {
 					continue;

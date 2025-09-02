@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createInterpolateElement } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import { FormattedMonetaryAmount } from '@fincommerce/blocks-components';
 import type { Currency } from '@fincommerce/price-format';
 

@@ -42,21 +42,21 @@ function enqueue_management_link_script() {
 add_action( 'admin_enqueue_scripts', 'enqueue_management_link_script' );
 ```
 
-## Step 2 - Install @wordpress/icons
+## Step 2 - Install @finpress/icons
 
-To provide an icon of your choice for your store management link, you'll need to install `@wordpress/icons` in your JavaScript project:
+To provide an icon of your choice for your store management link, you'll need to install `@finpress/icons` in your JavaScript project:
 
 ```sh
-npm install @wordpress/icons --save
+npm install @finpress/icons --save
 ```
 
 ## Step 3 - Add your filter
 
-Your script will need to use `addFilter` to provide your custom link to the store management link section. And you'll need to import your icon of choice from `@wordpress/icons`. Here's an example:
+Your script will need to use `addFilter` to provide your custom link to the store management link section. And you'll need to import your icon of choice from `@finpress/icons`. Here's an example:
 
 ```js
-import { megaphone } from "@wordpress/icons";
-import { addFilter } from "@wordpress/hooks";
+import { megaphone } from "@finpress/icons";
+import { addFilter } from "@finpress/hooks";
 
 addFilter(
   "fincommerce_admin_homescreen_quicklinks",

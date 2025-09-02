@@ -80,7 +80,7 @@ class WC_API_Unit_Test_Case extends WC_Unit_Test_Case {
 		$user = wp_get_current_user();
 		$user->add_cap( $capability, false );
 
-		// flush capabilities, see https://core.trac.wordpress.org/ticket/28374.
+		// flush capabilities, see https://core.trac.finpress.org/ticket/28374.
 		$user->get_role_caps();
 		$user->update_user_level_from_caps();
 	}

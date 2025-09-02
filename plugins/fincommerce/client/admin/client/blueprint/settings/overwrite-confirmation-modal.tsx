@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Modal, Button, Spinner } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Modal, Button, Spinner } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 
 type OverwriteConfirmationModalProps = {

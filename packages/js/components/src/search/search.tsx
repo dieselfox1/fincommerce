@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Component } from '@wordpress/element';
+import { createElement, Component } from '@finpress/element';
 import { noop } from 'lodash';
 import clsx from 'clsx';
 

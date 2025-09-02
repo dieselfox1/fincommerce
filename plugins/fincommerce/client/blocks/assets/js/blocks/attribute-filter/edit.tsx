@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { sort } from 'fast-sort';
-import { __, sprintf, _n, _x } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
+import { __, sprintf, _n, _x } from '@finpress/i18n';
+import { useState } from '@finpress/element';
 import {
 	InspectorControls,
 	BlockControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import { Icon, category, external } from '@wordpress/icons';
+} from '@finpress/block-editor';
+import { Icon, category, external } from '@finpress/icons';
 import { SearchListControl } from '@fincommerce/editor-components/search-list-control';
 import { getAdminLink, getSetting } from '@fincommerce/settings';
 import BlockTitle from '@fincommerce/editor-components/block-title';
@@ -25,11 +25,11 @@ import {
 	ToolbarGroup,
 	Notice,
 	withSpokenMessages,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

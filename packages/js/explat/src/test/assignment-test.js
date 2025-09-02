@@ -5,7 +5,7 @@ global.wcTracks.isEnabled = true;
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Internal dependencies
@@ -41,7 +41,7 @@ describe( 'fetchExperimentAssignment', () => {
 		Promise.resolve( fetchPromise );
 
 		expect( fetchMock ).toHaveBeenCalledWith(
-			'https://public-api.wordpress.com/wpcom/v2/experiments/0.1.0/assignments/fincommerce?experiment_name=123&anon_id=abc&test=test'
+			'https://public-api.finpress.com/wpcom/v2/experiments/0.1.0/assignments/fincommerce?experiment_name=123&anon_id=abc&test=test'
 		);
 	} );
 

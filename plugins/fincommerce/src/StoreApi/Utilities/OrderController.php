@@ -328,7 +328,7 @@ class OrderController {
 				);
 			}
 
-			throw new RouteException( $error_code, $error_message, 409, array( 'removed_coupons' => $coupon_errors ) ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new RouteException( $error_code, $error_message, 409, array( 'removed_coupons' => $coupon_errors ) ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 	}
 
@@ -443,7 +443,7 @@ class OrderController {
 				),
 				400,
 				array(
-					'errors' => $errors_by_code, // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					'errors' => $errors_by_code, // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 				)
 			);
 		}
@@ -527,7 +527,7 @@ class OrderController {
 		$billing_email = strtolower( $order->get_billing_email() );
 
 		if ( ! empty( $restrictions ) && $billing_email && ! DiscountsUtil::is_coupon_emails_allowed( array( $billing_email ), $restrictions ) ) {
-			// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 			throw new Exception( $coupon->get_coupon_error( \WC_Coupon::E_WC_COUPON_NOT_YOURS_REMOVED ) );
 		}
 	}
@@ -616,7 +616,7 @@ class OrderController {
 		$aliases_string = "('" . implode( "','", array_map( 'esc_sql', $aliases ) ) . "')";
 		$usage_count    = $wpdb->get_var(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT COUNT( meta_id ) FROM {$wpdb->postmeta} WHERE post_id = %d AND meta_key = '_used_by' AND meta_value IN {$aliases_string};",
 				$coupon->get_id(),
 			)

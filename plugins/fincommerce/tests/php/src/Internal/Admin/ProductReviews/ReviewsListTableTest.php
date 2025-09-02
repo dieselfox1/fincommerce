@@ -98,7 +98,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 	public function test_handle_row_actions( string $review_status, string $column_name, string $primary_column, bool $user_can_edit ): void {
 		global $comment_status;
 
-		$comment_status = 'test'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = 'test'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$reflection = new ReflectionClass( $list_table );
@@ -224,7 +224,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 	}
 
 	/**
-	 * @testodx `cb` outputs the WordPress standard checkbox HTML for the product reviews page list table.
+	 * @testodx `cb` outputs the finpress standard checkbox HTML for the product reviews page list table.
 	 *
 	 * @covers \Automattic\FinCommerce\Internal\Admin\ProductReviews\ReviewsListTable::cb()
 	 *
@@ -376,7 +376,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 			)
 		);
 
-		$comment = $review; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment = $review; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$method     = ( new ReflectionClass( $list_table ) )->getMethod( 'column_author' );
@@ -436,7 +436,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 			)
 		);
 
-		$comment = $the_comment; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment = $the_comment; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$this->assertSame( $expected_author_url, $method->invoke( $list_table ) );
 	}
@@ -557,7 +557,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 			)
 		);
 
-		$post = $product; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$post = $product; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$method     = ( new ReflectionClass( $list_table ) )->getMethod( 'column_response' );
@@ -686,7 +686,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 		$method->setAccessible( true );
 
 		global $comment_status;
-		$comment_status = $current_comment_status; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = $current_comment_status; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$this->assertEqualsCanonicalizing(
 			$expected_actions,
@@ -1096,7 +1096,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 	 */
 	public function test_get_status_arguments( string $status, array $expected_args ): void {
 		global $comment_status;
-		$comment_status = $status; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = $status; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$method     = ( new ReflectionClass( $list_table ) )->getMethod( 'get_status_arguments' );
@@ -1156,7 +1156,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 	 */
 	public function test_no_items( string $status, string $expected ): void {
 		global $comment_status;
-		$comment_status = $status; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = $status; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		ob_start();
 
@@ -1192,7 +1192,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 	 */
 	public function test_extra_tablenav( string $position, bool $has_items, bool $current_user_can_moderate, string $status, string $expected_start, array $expected_elements, string $expected_end, array $not_expected_elements ): void {
 		global $comment_status;
-		$comment_status = $status; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = $status; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$method     = ( new ReflectionClass( $list_table ) )->getMethod( 'extra_tablenav' );
@@ -1782,7 +1782,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 	 */
 	public function test_get_views(): void {
 		global $comment_status;
-		$comment_status = 'all'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$comment_status = 'all'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$method     = ( new ReflectionClass( $list_table ) )->getMethod( 'get_views' );
@@ -1919,7 +1919,7 @@ class ReviewsListTableTest extends WC_Unit_Test_Case {
 			);
 		}
 
-		$post = get_post( $product_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$post = get_post( $product_id ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = $this->get_reviews_list_table();
 		$method     = ( new ReflectionClass( $list_table ) )->getMethod( 'comments_bubble' );

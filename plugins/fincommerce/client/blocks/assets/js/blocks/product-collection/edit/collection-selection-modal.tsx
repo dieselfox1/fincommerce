@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
-import { Modal, Button } from '@wordpress/components';
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
+import { Modal, Button } from '@finpress/components';
+import { store as blockEditorStore } from '@finpress/block-editor';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -24,7 +24,7 @@ const PatternSelectionModal = ( props: {
 		props;
 	const { collection } = attributes;
 	// @ts-expect-error Type definitions for this function are missing
-	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/wordpress__blocks/store/actions.d.ts
+	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/finpress__blocks/store/actions.d.ts
 	const { replaceBlock } = useDispatch( blockEditorStore );
 
 	const [ chosenCollection, selectCollectionName ] = useState( collection );

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import type { FunctionComponent } from 'react';
 
 export function Edit< T >( Block: FunctionComponent< T > ) {

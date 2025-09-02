@@ -432,17 +432,17 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 
 		static::log( 'Refund Result: ' . wc_print_r( $result, true ) );
 
-		switch ( strtolower( $result->ACK ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		switch ( strtolower( $result->ACK ) ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			case 'success':
 			case 'successwithwarning':
 				$order->add_order_note(
 					/* translators: 1: Refund amount, 2: Refund ID */
-					sprintf( __( 'Refunded %1$s - Refund ID: %2$s', 'fincommerce' ), $result->GROSSREFUNDAMT, $result->REFUNDTRANSACTIONID ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+					sprintf( __( 'Refunded %1$s - Refund ID: %2$s', 'fincommerce' ), $result->GROSSREFUNDAMT, $result->REFUNDTRANSACTIONID ) // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 				);
 				return true;
 		}
 
-		return isset( $result->L_LONGMESSAGE0 ) ? new WP_Error( 'error', $result->L_LONGMESSAGE0 ) : false; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		return isset( $result->L_LONGMESSAGE0 ) ? new WP_Error( 'error', $result->L_LONGMESSAGE0 ) : false; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 	}
 
 	/**
@@ -466,7 +466,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 
 			static::log( 'Capture Result: ' . wc_print_r( $result, true ) );
 
-			// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:disable finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			if ( ! empty( $result->PAYMENTSTATUS ) ) {
 				switch ( $result->PAYMENTSTATUS ) {
 					case 'Completed':

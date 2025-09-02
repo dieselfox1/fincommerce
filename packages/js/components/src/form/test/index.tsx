@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import { render, waitFor, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { TextControl } from '@wordpress/components';
+import { TextControl } from '@finpress/components';
 
 /**
  * Internal dependencies

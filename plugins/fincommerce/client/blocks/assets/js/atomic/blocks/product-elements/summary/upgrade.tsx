@@ -1,22 +1,22 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { addFilter } from '@wordpress/hooks';
+import { __ } from '@finpress/i18n';
+import { addFilter } from '@finpress/hooks';
 import {
 	store as blockEditorStore,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	createBlock,
 	type BlockEditProps,
 	type BlockInstance,
-} from '@wordpress/blocks';
-import { select, dispatch } from '@wordpress/data';
+} from '@finpress/blocks';
+import { select, dispatch } from '@finpress/data';
 import {
 	createInterpolateElement,
 	type ComponentType,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { type EditorBlock } from '@fincommerce/types';
 import { VARIATION_NAME as PQ_PRODUCT_SUMMARY_VARIATION_NAME } from '@fincommerce/blocks/product-query/variations/elements/product-summary';
 import { VARIATION_NAME as PC_PRODUCT_SUMMARY_VARIATION_NAME } from '@fincommerce/blocks/product-collection/variations/elements/product-summary';

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { registerBlockType } from '@wordpress/blocks';
-import { registerPlugin } from '@wordpress/plugins';
+import { __ } from '@finpress/i18n';
+import { registerBlockType } from '@finpress/blocks';
+import { registerPlugin } from '@finpress/plugins';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useState, createPortal } from '@wordpress/element';
+import { useEffect, useState, createPortal } from '@finpress/element';
 
 /**
  * Renders a portal for rendering notices before the visual editor.

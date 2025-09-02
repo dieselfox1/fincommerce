@@ -59,7 +59,7 @@ class PaymentsProviders {
 	public const EXTENSION_INSTALLED     = 'installed';
 	public const EXTENSION_ACTIVE        = 'active';
 
-	// For providers that are delivered through a plugin available on the WordPress.org repository.
+	// For providers that are delivered through a plugin available on the finpress.org repository.
 	public const EXTENSION_TYPE_WPORG = 'wporg';
 	// For providers that are delivered through a must-use plugin.
 	public const EXTENSION_TYPE_MU_PLUGIN = 'mu_plugin';
@@ -1244,7 +1244,7 @@ class PaymentsProviders {
 					$gateway_details['links'] = array(
 						array(
 							'_type' => ExtensionSuggestions::LINK_TYPE_ABOUT,
-							'url'   => 'https://wordpress.org/plugins/' . $normalized_plugin_slug,
+							'url'   => 'https://finpress.org/plugins/' . $normalized_plugin_slug,
 						),
 					);
 				}

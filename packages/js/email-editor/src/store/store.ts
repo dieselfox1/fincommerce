@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register } from '@wordpress/data';
+import { createReduxStore, register } from '@finpress/data';
 import {
 	ReduxStoreConfig,
 	StoreDescriptor as GenericStoreDescriptor,
-} from '@wordpress/data/build-types/types';
-import { controls } from '@wordpress/data-controls';
+} from '@finpress/data/build-types/types';
+import { controls } from '@finpress/data-controls';
 
 /**
  * Internal dependencies
@@ -41,7 +41,7 @@ export interface EmailEditorStore {
 	getSelectors: () => EditorStoreConfig[ 'selectors' ];
 }
 
-declare module '@wordpress/data' {
+declare module '@finpress/data' {
 	interface StoreMap {
 		[ storeName ]: GenericStoreDescriptor<
 			ReduxStoreConfig<

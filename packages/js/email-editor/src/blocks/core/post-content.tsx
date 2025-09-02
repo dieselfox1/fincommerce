@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
-import { Block } from '@wordpress/blocks/index';
-import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { addFilter } from '@finpress/hooks';
+import { Block } from '@finpress/blocks/index';
+import { __ } from '@finpress/i18n';
+import { useBlockProps } from '@finpress/block-editor';
 
 function Placeholder( { layoutClassNames } ) {
 	const blockProps = useBlockProps( { className: layoutClassNames } );

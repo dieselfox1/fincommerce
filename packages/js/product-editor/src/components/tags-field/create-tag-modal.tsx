@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Modal, TextControl } from '@wordpress/components';
-import { useState, createElement } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Button, Modal, TextControl } from '@finpress/components';
+import { useState, createElement } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { experimentalProductTagsStore } from '@fincommerce/data';
 

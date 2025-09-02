@@ -40,6 +40,6 @@ if ( $attachment_ids && $product->get_image_id() ) {
 		 * @param string $html          Product image thumbnail HTML string.
 		 * @param int    $attachment_id Attachment ID.
 		 */
-		echo apply_filters( 'fincommerce_single_product_image_thumbnail_html', wc_get_gallery_image_html( $attachment_id, false, $key ), $attachment_id ); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_single_product_image_thumbnail_html', wc_get_gallery_image_html( $attachment_id, false, $key ), $attachment_id ); // PHPCS:Ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 }

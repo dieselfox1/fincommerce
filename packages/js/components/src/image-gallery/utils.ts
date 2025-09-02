@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { cloneElement } from '@wordpress/element';
+import { cloneElement } from '@finpress/element';
 
 /**
  * Remove the item with the selected index from an array of items.

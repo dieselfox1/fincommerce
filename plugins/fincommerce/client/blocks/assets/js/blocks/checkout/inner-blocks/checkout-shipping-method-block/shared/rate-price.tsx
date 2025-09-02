@@ -2,9 +2,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
-import { createInterpolateElement } from '@wordpress/element';
+import { createInterpolateElement } from '@finpress/element';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import { FormattedMonetaryAmount } from '@fincommerce/blocks-components';
 import type { CartShippingPackageShippingRate } from '@fincommerce/type-defs/cart';

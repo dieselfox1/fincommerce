@@ -61,12 +61,12 @@ class ClassExtractor {
 	}
 
 	/**
-	 * Adds a prefix to include the WordPress wp-load.php file.
+	 * Adds a prefix to include the finpress wp-load.php file.
 	 *
 	 * @return $this
 	 */
 	public function with_wp_load() {
-		$this->prefix .= "<?php require_once 'wordpress/wp-load.php'; ";
+		$this->prefix .= "<?php require_once 'finpress/wp-load.php'; ";
 		return $this;
 	}
 
@@ -108,7 +108,7 @@ class ClassExtractor {
 	 */
 	public function get_code() {
 		// Security check: Check if we can replace this with a more secure function.
-		$file_content = file_get_contents( $this->file_path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$file_content = file_get_contents( $this->file_path ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 
 		$file_content = preg_replace( '/<\?php\s*/', '', $file_content );
 
@@ -146,7 +146,7 @@ class ClassExtractor {
 	 */
 	private function apply_class_variable_replacement( $file_content, $variable_name, $new_value ) {
 		// Security check: Check if it's necessary to use var_export.
-		$replacement_value = var_export( $new_value, true ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export
+		$replacement_value = var_export( $new_value, true ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_var_export
 
 		$pattern = '/(protected|private|public)\s+\$' . preg_quote( $variable_name, '/' ) . '\s*=\s*.*?;|'
 			. '(protected|private|public)\s+\$' . preg_quote( $variable_name, '/' ) . '\s*;?/';
@@ -171,7 +171,7 @@ class ClassExtractor {
 			$method_body = $matches[1];
 
 			// Security check: Check if it's necessary to use var_export.
-			$new_value_exported = var_export( $new_value, true ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export
+			$new_value_exported = var_export( $new_value, true ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_var_export
 			$variable_pattern   = '/\$' . preg_quote( $variable_name, '/' ) . '\s*=\s*[^;]+;/';
 			$replacement        = '$' . $variable_name . ' = ' . $new_value_exported . ';';
 

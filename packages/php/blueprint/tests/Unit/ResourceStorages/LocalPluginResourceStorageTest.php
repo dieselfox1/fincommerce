@@ -25,11 +25,11 @@ class LocalPluginResourceStorageTest extends TestCase {
 		parent::setUp();
 		// Setup a temporary directory for testing.
 		$this->test_path = sys_get_temp_dir() . '/test_plugins';
-		mkdir( $this->test_path, 0777, true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
-		mkdir( "{$this->test_path}/plugins", 0777, true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_mkdir
+		mkdir( $this->test_path, 0777, true ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_mkdir
+		mkdir( "{$this->test_path}/plugins", 0777, true ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_mkdir
 
 		// Create a sample plugin file.
-		file_put_contents( "{$this->test_path}/plugins/sample-plugin.zip", 'dummy content' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+		file_put_contents( "{$this->test_path}/plugins/sample-plugin.zip", 'dummy content' ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_file_put_contents
 	}
 
 	/**
@@ -40,9 +40,9 @@ class LocalPluginResourceStorageTest extends TestCase {
 	protected function tearDown(): void {
 		// Cleanup temporary directory after test.
 		if ( is_dir( $this->test_path ) ) {
-			array_map( 'unlink', glob( "{$this->test_path}/plugins/*" ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_glob
-			rmdir( "{$this->test_path}/plugins" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_rmdir
-			rmdir( $this->test_path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_rmdir
+			array_map( 'unlink', glob( "{$this->test_path}/plugins/*" ) ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_glob
+			rmdir( "{$this->test_path}/plugins" ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_rmdir
+			rmdir( $this->test_path ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_rmdir
 		}
 
 		parent::tearDown();

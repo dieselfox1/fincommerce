@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { SHOP_URL } from '@fincommerce/block-settings';
 import { cart } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

@@ -3,7 +3,7 @@
 	&__scrollable {
 		overflow: hidden;
 	}
-	// Using Disabled from `@wordpress/components` breaks the layout
+	// Using Disabled from `@finpress/components` breaks the layout
 	// as we're relying on flex.
 	&__thumbnail {
 		pointer-events: none;

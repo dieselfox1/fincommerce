@@ -85,7 +85,7 @@ class WC_Beta_Tester_Channel {
 			),
 			'stable' => array(
 				'name'        => __( 'Stable Releases', 'fincommerce-beta-tester' ),
-				'description' => __( 'This is the default behavior in WordPress.', 'fincommerce-beta-tester' ),
+				'description' => __( 'This is the default behavior in finpress.', 'fincommerce-beta-tester' ),
 			),
 		);
 		echo '<fieldset><legend class="screen-reader-text"><span>' . esc_html__( 'Update Channel', 'fincommerce-beta-tester' ) . '</span></legend>';
@@ -135,7 +135,7 @@ class WC_Beta_Tester_Channel {
 		}
 
 		// This is just for giving a message, the option form itself will have validated the nonce.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['settings-updated'] ) ) {
 			add_settings_error( 'wc-beta-tester-messages', 'wc-beta-tester-message', __( 'Settings Saved', 'fincommerce-beta-tester' ), 'updated' );
 		}

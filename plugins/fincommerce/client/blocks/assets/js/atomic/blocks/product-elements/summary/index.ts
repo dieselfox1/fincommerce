@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
 import { isEmptyObject } from '@fincommerce/types';
 

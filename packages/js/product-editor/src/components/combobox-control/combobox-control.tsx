@@ -2,15 +2,15 @@
  * External dependencies
  */
 import type { ForwardedRef } from 'react';
-import { ComboboxControl as CoreCombobox } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
+import { ComboboxControl as CoreCombobox } from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
 import {
 	createElement,
 	forwardRef,
 	useEffect,
 	useLayoutEffect,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 
 /**

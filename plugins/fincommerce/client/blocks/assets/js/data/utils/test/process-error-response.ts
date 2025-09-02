@@ -12,7 +12,7 @@ import {
 	processErrorResponse,
 } from '@fincommerce/block-library/assets/js/data/utils/process-error-response';
 
-jest.mock( '@wordpress/notices', () => ( {
+jest.mock( '@finpress/notices', () => ( {
 	createNotice: jest.fn(),
 } ) );
 

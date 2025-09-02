@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { ordersStore } from '@fincommerce/data';
-import { ToggleControl } from '@wordpress/components';
-import apiFetch from '@wordpress/api-fetch';
+import { ToggleControl } from '@finpress/components';
+import apiFetch from '@finpress/api-fetch';
 
 const metaKey = '_wcpay_mode';
 

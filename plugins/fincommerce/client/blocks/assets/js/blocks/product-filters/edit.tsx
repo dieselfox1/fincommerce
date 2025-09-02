@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
-import { BlockEditProps, InnerBlockTemplate } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
-import { Icon, close } from '@wordpress/icons';
-import { useState } from '@wordpress/element';
+import { InnerBlocks, useBlockProps } from '@finpress/block-editor';
+import { BlockEditProps, InnerBlockTemplate } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
+import { Icon, close } from '@finpress/icons';
+import { useState } from '@finpress/element';
 import { filterThreeLines } from '@fincommerce/icons';
 import clsx from 'clsx';
 

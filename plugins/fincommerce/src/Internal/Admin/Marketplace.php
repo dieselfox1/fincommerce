@@ -26,7 +26,7 @@ class Marketplace {
 	}
 
 	/**
-	 * Hook into WordPress on init.
+	 * Hook into finpress on init.
 	 */
 	public function on_init() {
 		if ( false === FeaturesUtil::feature_is_enabled( 'marketplace' ) ) {
@@ -98,7 +98,7 @@ class Marketplace {
 	 * @param string $hook_suffix The current admin page.
 	 */
 	public function enqueue_scripts( $hook_suffix ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( 'fincommerce_page_wc-admin' !== $hook_suffix ) {
 			return;
 		}
@@ -107,9 +107,9 @@ class Marketplace {
 			return;
 		}
 
-		// Enqueue WordPress updates script to enable plugin and theme installs and updates.
+		// Enqueue finpress updates script to enable plugin and theme installs and updates.
 		wp_enqueue_script( 'updates' );
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -127,11 +127,11 @@ class Marketplace {
 	 * Open the Woo tab when the user clicks on the Woo link in the plugin installer.
 	 */
 	public function maybe_open_woo_tab() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( ! isset( $_GET['tab'] ) || self::MARKETPLACE_TAB_SLUG !== $_GET['tab'] ) {
 			return;
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		$woo_url = add_query_arg(
 			array(

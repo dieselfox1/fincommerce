@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render } from '@testing-library/react';
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Internal dependencies
@@ -12,8 +12,8 @@ import { EmbeddedBodyLayout } from '../embedded-body-layout';
 jest.mock( '@fincommerce/customer-effort-score', () => ( {
 	triggerExitPageCesSurvey: jest.fn(),
 } ) );
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	resolveSelect: jest.fn().mockReturnValue( {
 		getOption: jest.fn(),
 	} ),

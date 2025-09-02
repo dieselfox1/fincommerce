@@ -684,7 +684,7 @@ class WC_Meta_Box_Order_Data {
 	 * @throws Exception Required request data is missing.
 	 */
 	public static function save( $order_id ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 
 		if ( ! isset( $_POST['order_status'] ) ) {
 			throw new Exception( __( 'Order status is missing.', 'fincommerce' ), 400 );
@@ -806,7 +806,7 @@ class WC_Meta_Box_Order_Data {
 			if ( ! isset( $_POST['order_date_hour'] ) || ! isset( $_POST['order_date_minute'] ) || ! isset( $_POST['order_date_second'] ) ) {
 				throw new Exception( __( 'Order date, hour, minute and/or second are missing.', 'fincommerce' ), 400 );
 			}
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+			// phpcs:ignore finpress.Security.ValidatedSanitizedInput
 			$date = gmdate( 'Y-m-d H:i:s', strtotime( $_POST['order_date'] . ' ' . (int) $_POST['order_date_hour'] . ':' . (int) $_POST['order_date_minute'] . ':' . (int) $_POST['order_date_second'] ) );
 		}
 
@@ -827,6 +827,6 @@ class WC_Meta_Box_Order_Data {
 		$order->set_status( wc_clean( wp_unslash( $_POST['order_status'] ) ), '', true );
 		$order->save();
 
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 }

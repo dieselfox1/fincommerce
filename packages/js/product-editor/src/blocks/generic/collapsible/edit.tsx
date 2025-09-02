@@ -3,9 +3,9 @@
  */
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { CollapsibleContent } from '@fincommerce/components';
-import type { BlockAttributes } from '@wordpress/blocks';
-import { createElement } from '@wordpress/element';
-import { InnerBlocks } from '@wordpress/block-editor';
+import type { BlockAttributes } from '@finpress/blocks';
+import { createElement } from '@finpress/element';
+import { InnerBlocks } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

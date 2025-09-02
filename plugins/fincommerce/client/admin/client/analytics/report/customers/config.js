@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
-import { decodeEntities } from '@wordpress/html-entities';
-import { applyFilters } from '@wordpress/hooks';
-import { resolveSelect } from '@wordpress/data';
+import { __, _x } from '@finpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
+import { applyFilters } from '@finpress/hooks';
+import { resolveSelect } from '@finpress/data';
 import { NAMESPACE, COUNTRIES_STORE_NAME } from '@fincommerce/data';
 
 /**

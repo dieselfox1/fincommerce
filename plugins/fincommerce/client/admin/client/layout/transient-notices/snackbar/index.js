@@ -3,20 +3,20 @@
  */
 import { noop } from 'lodash';
 import clsx from 'clsx';
-import { speak } from '@wordpress/a11y';
+import { speak } from '@finpress/a11y';
 import {
 	RawHTML,
 	useEffect,
 	forwardRef,
 	renderToString,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import warning from '@wordpress/warning';
-import { Button } from '@wordpress/components';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import warning from '@finpress/warning';
+import { Button } from '@finpress/components';
 
 const NOTICE_TIMEOUT = 10000;
 
-/** @typedef {import('@wordpress/element').WPElement} WPElement */
+/** @typedef {import('@finpress/element').WPElement} WPElement */
 
 /**
  * Custom hook which announces the message with the given politeness, if a

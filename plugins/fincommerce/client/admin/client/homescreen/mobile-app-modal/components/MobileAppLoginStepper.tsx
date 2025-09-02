@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import React, { useState, useEffect } from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { sprintf, __ } from '@wordpress/i18n';
+import React, { useState, useEffect } from '@finpress/element';
+import { Button } from '@finpress/components';
+import { sprintf, __ } from '@finpress/i18n';
 import { Stepper, StepperProps } from '@fincommerce/components';
 
 /**
@@ -17,14 +17,14 @@ import { MobileAppLoginInfo } from '../components/MobileAppLoginInfo';
 export const MobileAppLoginStepper = ( {
 	step,
 	isJetpackPluginInstalled,
-	wordpressAccountEmailAddress,
+	finpressAccountEmailAddress,
 	completeInstallationStepHandler,
 	sendMagicLinkHandler,
 	sendMagicLinkStatus,
 }: {
 	step: 'first' | 'second';
 	isJetpackPluginInstalled: boolean;
-	wordpressAccountEmailAddress: string | undefined;
+	finpressAccountEmailAddress: string | undefined;
 	completeInstallationStepHandler: () => void;
 	sendMagicLinkHandler: () => void;
 	sendMagicLinkStatus: SendMagicLinkStates;
@@ -69,7 +69,7 @@ export const MobileAppLoginStepper = ( {
 		} else if ( step === 'second' ) {
 			if (
 				isJetpackPluginInstalled &&
-				wordpressAccountEmailAddress !== undefined
+				finpressAccountEmailAddress !== undefined
 			) {
 				setStepsToDisplay( [
 					{
@@ -82,12 +82,12 @@ export const MobileAppLoginStepper = ( {
 						key: 'second',
 						label: 'Sign into the app',
 						description: sprintf(
-							/* translators: Reflecting to the user that the magic link has been sent to their WordPress account email address */
+							/* translators: Reflecting to the user that the magic link has been sent to their finpress account email address */
 							__(
 								'We’ll send a magic link to %s. Open it on your smartphone or tablet to sign into your store instantly.',
 								'fincommerce'
 							),
-							wordpressAccountEmailAddress
+							finpressAccountEmailAddress
 						),
 						content: (
 							<SendMagicLinkButton
@@ -134,7 +134,7 @@ export const MobileAppLoginStepper = ( {
 	}, [
 		step,
 		isJetpackPluginInstalled,
-		wordpressAccountEmailAddress,
+		finpressAccountEmailAddress,
 		completeInstallationStepHandler,
 		sendMagicLinkHandler,
 		sendMagicLinkStatus,

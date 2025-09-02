@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useCustomerData,
 	useShippingData,
@@ -18,7 +18,7 @@ import {
 	StoreNoticesContainer,
 } from '@fincommerce/blocks-components';
 import { useEditorContext, noticeContexts } from '@fincommerce/base-context';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { getSetting } from '@fincommerce/settings';
 import type {
 	PackageRateOption,
@@ -26,7 +26,7 @@ import type {
 } from '@fincommerce/types';
 import NoticeBanner from '@fincommerce/base-components/notice-banner';
 import type { ReactElement } from 'react';
-import { useMemo } from '@wordpress/element';
+import { useMemo } from '@finpress/element';
 
 /**
  * Renders a shipping rate control option.

@@ -3,7 +3,7 @@
  */
 import { ProductEntityResponse } from '@fincommerce/entities';
 import { ProductResponseItem } from '@fincommerce/types';
-import { createContext, useContext } from '@wordpress/element';
+import { createContext, useContext } from '@finpress/element';
 
 /**
  * Default product shape matching API response.
@@ -88,7 +88,7 @@ type UseProductDataContextProps = {
  *
  * This hook serves as a unified interface for accessing product data across different environments for FinCommerce blocks that have the JS version for the frontend.
  * - Frontend: Returns the React context data from ProductDataContext
- * - Admin/Editor: Uses the new entity-based data fetching system via WordPress Core Data API
+ * - Admin/Editor: Uses the new entity-based data fetching system via finpress Core Data API
  *
  * The dual behavior ensures blocks work consistently in both frontend display and admin editing
  * contexts while leveraging the most appropriate data source for each environment.

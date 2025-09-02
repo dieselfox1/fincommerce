@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { store as editorStore } from '@wordpress/editor';
-import triggerFetch from '@wordpress/api-fetch';
-import { store as coreStore } from '@wordpress/core-data';
-import { Notice } from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { store as editorStore } from '@finpress/editor';
+import triggerFetch from '@finpress/api-fetch';
+import { store as coreStore } from '@finpress/core-data';
+import { Notice } from '@finpress/components';
+import { useSelect, useDispatch } from '@finpress/data';
 import { CHECKOUT_PAGE_ID, CART_PAGE_ID } from '@fincommerce/block-settings';
 import {
 	useCallback,
 	useState,
 	createInterpolateElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

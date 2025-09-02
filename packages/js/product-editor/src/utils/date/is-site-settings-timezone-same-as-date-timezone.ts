@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { DateSettings, getSettings } from '@wordpress/date';
+import { DateSettings, getSettings } from '@finpress/date';
 
 export function isSiteSettingsTimezoneSameAsDateTimezone( date: Date ) {
 	const { timezone } = getSettings() as DateSettings;

@@ -67,7 +67,7 @@ echo wp_kses_post(
 	)
 );
 echo "\n\n\n";
-echo wc_get_email_fulfillment_items( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+echo wc_get_email_fulfillment_items( // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	$order,
 	$fulfillment,
 	array(

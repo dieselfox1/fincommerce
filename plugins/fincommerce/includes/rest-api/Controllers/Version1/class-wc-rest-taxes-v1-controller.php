@@ -258,14 +258,14 @@ class WC_REST_Taxes_V1_Controller extends WC_REST_Controller {
 		}
 
 		// Query taxes.
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$results = $wpdb->get_results(
 			$wpdb->prepare(
 				$query,
 				$wpdb_prepare_args
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$taxes = array();
 		foreach ( $results as $tax ) {
@@ -294,9 +294,9 @@ class WC_REST_Taxes_V1_Controller extends WC_REST_Controller {
 			$query
 		);
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$total_taxes = (int) $wpdb->get_var( empty( $wpdb_prepare_args ) ? $query : $wpdb->prepare( $query, $wpdb_prepare_args ) );
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		// Calculate totals.
 		$response->header( 'X-WP-Total', $total_taxes );

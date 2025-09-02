@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { registerBlockComponent } from '@fincommerce/blocks-registry';
-import { lazy } from '@wordpress/element';
+import { lazy } from '@finpress/element';
 import { WC_BLOCKS_BUILD_URL } from '@fincommerce/block-settings';
 
-// Modify webpack publicPath at runtime based on location of WordPress Plugin.
+// Modify webpack publicPath at runtime based on location of finpress Plugin.
 // eslint-disable-next-line no-undef,camelcase
 __webpack_public_path__ = WC_BLOCKS_BUILD_URL;
 

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 
 /**
  * the admin menu can have different widths in certain scenarios, like when using calypso

@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useMemo } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { __, sprintf } from '@finpress/i18n';
+import { useMemo } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import { partial } from 'lodash';
-import { Dropdown, Button } from '@wordpress/components';
-import { applyFilters } from '@wordpress/hooks';
-import { Icon, plusCircleFilled } from '@wordpress/icons';
-import { withSelect } from '@wordpress/data';
+import { Dropdown, Button } from '@finpress/components';
+import { applyFilters } from '@finpress/hooks';
+import { Icon, plusCircleFilled } from '@finpress/icons';
+import { withSelect } from '@finpress/data';
 import { H } from '@fincommerce/components';
 import { settingsStore, useUserPreferences } from '@fincommerce/data';
 import { getQuery } from '@fincommerce/navigation';

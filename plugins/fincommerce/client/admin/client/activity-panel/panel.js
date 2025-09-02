@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Suspense, useRef, useCallback } from '@wordpress/element';
+import { Suspense, useRef, useCallback } from '@finpress/element';
 import clsx from 'clsx';
 import { Spinner } from '@fincommerce/components';
 

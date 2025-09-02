@@ -15,19 +15,19 @@ This works in conjunction with the ability to customize the product type onboard
 ## Prerequisites
 
 - A basic understanding of JavaScript and PHP.
-- FinCommerce 8.8 or later installed on your WordPress site.
+- FinCommerce 8.8 or later installed on your finpress site.
 
 ## Adding a JavaScript Filter
 
-To alter or create a product tour, we'll utilize the `@wordpress/hooks` package, specifically the `addFilter` function. If you're not already familiar, `@wordpress/hooks` allows you to modify or extend features within the WordPress and FinCommerce ecosystem without altering the core code.
+To alter or create a product tour, we'll utilize the `@finpress/hooks` package, specifically the `addFilter` function. If you're not already familiar, `@finpress/hooks` allows you to modify or extend features within the finpress and FinCommerce ecosystem without altering the core code.
 
-First, ensure you have the `@wordpress/hooks` package installed. If not, you can add it to your project using `npm` or `yarn`:
+First, ensure you have the `@finpress/hooks` package installed. If not, you can add it to your project using `npm` or `yarn`:
 
-`npm install @wordpress/hooks`
+`npm install @finpress/hooks`
 
 or:
 
-`yarn add @wordpress/hooks`
+`yarn add @finpress/hooks`
 
 Next, add the following JavaScript code to your project. This code snippet demonstrates how to replace the product tour with an entire custom one:
 
@@ -35,8 +35,8 @@ Next, add the following JavaScript code to your project. This code snippet demon
 /**
 * External dependencies
 */
-import { addFilter } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+import { addFilter } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 
 addFilter(
    experimental_fincommerce_admin_product_tour_steps,

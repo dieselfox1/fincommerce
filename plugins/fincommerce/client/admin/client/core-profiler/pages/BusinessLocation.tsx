@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Notice } from '@wordpress/components';
-import { useState, createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, Notice } from '@finpress/components';
+import { useState, createInterpolateElement } from '@finpress/element';
 
 /**
  * Internal dependencies

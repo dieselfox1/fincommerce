@@ -2,9 +2,9 @@
  * External dependencies
  */
 
-import { addFilter } from '@wordpress/hooks';
-import { Fragment } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { addFilter } from '@finpress/hooks';
+import { Fragment } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 /**
  * FinCommerce dependencies

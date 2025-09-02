@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import type { InnerBlockTemplate } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
-import { Icon, loop } from '@wordpress/icons';
+import type { InnerBlockTemplate } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
+import { Icon, loop } from '@finpress/icons';
 
 /**
  * Internal dependencies

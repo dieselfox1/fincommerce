@@ -31,7 +31,7 @@ $untested_plugins   = $plugin_updates->get_untested_plugins( WC()->version, Cons
 $active_plugins_count   = is_countable( $active_plugins ) ? count( $active_plugins ) : 0;
 $inactive_plugins_count = is_countable( $inactive_plugins ) ? count( $inactive_plugins ) : 0;
 
-// Include necessary WordPress file to use get_plugin_data().
+// Include necessary finpress file to use get_plugin_data().
 if ( ! function_exists( 'get_plugin_data' ) ) {
 	require_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
@@ -77,23 +77,23 @@ if ( file_exists( $plugin_path ) ) {
 <table class="wc_status_table widefat" cellspacing="0" id="status">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="WordPress Environment"><h2><?php esc_html_e( 'WordPress environment', 'fincommerce' ); ?></h2></th>
+			<th colspan="3" data-export-label="finpress Environment"><h2><?php esc_html_e( 'finpress environment', 'fincommerce' ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td data-export-label="WordPress address (URL)"><?php esc_html_e( 'WordPress address (URL)', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The root URL of your site.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="finpress address (URL)"><?php esc_html_e( 'finpress address (URL)', 'fincommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The root URL of your site.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['site_url'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Site address (URL)"><?php esc_html_e( 'Site address (URL)', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The homepage URL of your site.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The homepage URL of your site.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['home_url'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="WC Version"><?php esc_html_e( 'FinCommerce version', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of FinCommerce installed on your site.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of FinCommerce installed on your site.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( ! empty( $wc_version ) ? $wc_version : $environment['version'] ); ?></td>
 
 		</tr>
@@ -119,7 +119,7 @@ if ( file_exists( $plugin_path ) ) {
 				<?php
 				if ( class_exists( 'ActionScheduler_Versions' ) && class_exists( 'ActionScheduler' ) ) {
 					$version = ActionScheduler_Versions::instance()->latest_version();
-					$path    = ActionScheduler::plugin_path( '' ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					$path    = ActionScheduler::plugin_path( '' ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 				} else {
 					$version = null;
 				}
@@ -134,7 +134,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="Log Directory Writable"><?php esc_html_e( 'Log directory writable', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Several FinCommerce extensions can write logs which makes debugging problems easier. The directory must be writable for this to happen.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Several FinCommerce extensions can write logs which makes debugging problems easier. The directory must be writable for this to happen.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['log_directory_writable'] ) {
@@ -153,14 +153,14 @@ if ( file_exists( $plugin_path ) ) {
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Version"><?php esc_html_e( 'WordPress version', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WordPress installed on your site.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="WP Version"><?php esc_html_e( 'finpress version', 'fincommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of finpress installed on your site.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				$latest_version = get_transient( 'fincommerce_system_status_wp_version_check' );
 
 				if ( false === $latest_version ) {
-					$version_check = wp_remote_get( 'https://api.wordpress.org/core/version-check/1.7/' );
+					$version_check = wp_remote_get( 'https://api.finpress.org/core/version-check/1.7/' );
 					$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
 
 					if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
@@ -173,7 +173,7 @@ if ( file_exists( $plugin_path ) ) {
 
 				if ( version_compare( $environment['wp_version'], $latest_version, '<' ) ) {
 					/* Translators: %1$s: Current version, %2$s: New version */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'fincommerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of finpress available (%2$s)', 'fincommerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
 				} else {
 					echo '<mark class="yes">' . esc_html( $environment['wp_version'] ) . '</mark>';
 				}
@@ -181,18 +181,18 @@ if ( file_exists( $plugin_path ) ) {
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Multisite"><?php esc_html_e( 'WordPress multisite', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Whether or not you have WordPress Multisite enabled.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="WP Multisite"><?php esc_html_e( 'finpress multisite', 'fincommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Whether or not you have finpress Multisite enabled.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo ( $environment['wp_multisite'] ) ? '<span class="dashicons dashicons-yes"></span>' : '&ndash;'; ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Memory Limit"><?php esc_html_e( 'WordPress memory limit', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="WP Memory Limit"><?php esc_html_e( 'finpress memory limit', 'fincommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['wp_memory_limit'] < 67108864 ) {
 					/* Translators: %1$s: Memory limit, %2$s: Docs link. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend setting memory to at least 64MB. See: %2$s', 'fincommerce' ), esc_html( size_format( $environment['wp_memory_limit'] ) ), '<a href="https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php" target="_blank">' . esc_html__( 'Increasing memory allocated to PHP', 'fincommerce' ) . '</a>' ) . '</mark>';
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend setting memory to at least 64MB. See: %2$s', 'fincommerce' ), esc_html( size_format( $environment['wp_memory_limit'] ) ), '<a href="https://finpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php" target="_blank">' . esc_html__( 'Increasing memory allocated to PHP', 'fincommerce' ) . '</a>' ) . '</mark>';
 				} else {
 					echo '<mark class="yes">' . esc_html( size_format( $environment['wp_memory_limit'] ) ) . '</mark>';
 				}
@@ -200,8 +200,8 @@ if ( file_exists( $plugin_path ) ) {
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Debug Mode"><?php esc_html_e( 'WordPress debug mode', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WordPress is in Debug Mode.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="WP Debug Mode"><?php esc_html_e( 'finpress debug mode', 'fincommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not finpress is in Debug Mode.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $environment['wp_debug_mode'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -211,8 +211,8 @@ if ( file_exists( $plugin_path ) ) {
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Cron"><?php esc_html_e( 'WordPress cron', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WP Cron Jobs are enabled.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="WP Cron"><?php esc_html_e( 'finpress cron', 'fincommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WP Cron Jobs are enabled.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $environment['wp_cron'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -223,12 +223,12 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="Language"><?php esc_html_e( 'Language', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The current language used by WordPress. Default = English', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The current language used by finpress. Default = English', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['language'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="External object cache"><?php esc_html_e( 'External object cache', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WordPress is using an external object cache.', 'fincommerce' ) ); ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not finpress is using an external object cache.', 'fincommerce' ) ); ?></td>
 			<td>
 				<?php if ( $environment['external_object_cache'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -248,17 +248,17 @@ if ( file_exists( $plugin_path ) ) {
 	<tbody>
 		<tr>
 			<td data-export-label="Server Info"><?php esc_html_e( 'Server info', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Information about the web server that is currently hosting your site.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Information about the web server that is currently hosting your site.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['server_info'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Server Architecture"><?php esc_html_e( 'Server architecture', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Information about the operating system your server is running.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Information about the operating system your server is running.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo ! empty( $environment['server_architecture'] ) ? esc_html( $environment['server_architecture'] ) : esc_html__( 'Unable to determine server architecture.  Please ask your hosting provider for this information.', 'fincommerce' ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="PHP Version"><?php esc_html_e( 'PHP version', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of PHP installed on your hosting server.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of PHP installed on your hosting server.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php echo '<mark class="yes">' . esc_html( $environment['php_version'] ) . '</mark>'; ?>
 			</td>
@@ -266,27 +266,27 @@ if ( file_exists( $plugin_path ) ) {
 		<?php if ( function_exists( 'ini_get' ) ) : ?>
 			<tr>
 				<td data-export-label="PHP Post Max Size"><?php esc_html_e( 'PHP post max size', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be contained in one post.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be contained in one post.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo esc_html( size_format( $environment['php_post_max_size'] ) ); ?></td>
 			</tr>
 			<tr>
 				<td data-export-label="PHP Time Limit"><?php esc_html_e( 'PHP time limit', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The amount of time (in seconds) that your site will spend on a single operation before timing out (to avoid server lockups)', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The amount of time (in seconds) that your site will spend on a single operation before timing out (to avoid server lockups)', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo esc_html( $environment['php_max_execution_time'] ); ?></td>
 			</tr>
 			<tr>
 				<td data-export-label="PHP Max Input Vars"><?php esc_html_e( 'PHP max input vars', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum number of variables your server can use for a single function to avoid overloads.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum number of variables your server can use for a single function to avoid overloads.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo esc_html( $environment['php_max_input_vars'] ); ?></td>
 			</tr>
 			<tr>
 				<td data-export-label="cURL Version"><?php esc_html_e( 'cURL version', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of cURL installed on your server.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of cURL installed on your server.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo esc_html( $environment['curl_version'] ); ?></td>
 			</tr>
 			<tr>
 				<td data-export-label="SUHOSIN Installed"><?php esc_html_e( 'SUHOSIN installed', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'Suhosin is an advanced protection system for PHP installations. It was designed to protect your servers on the one hand against a number of well known problems in PHP applications and on the other hand against potential unknown vulnerabilities within these applications or the PHP core itself. If enabled on your server, Suhosin may need to be configured to increase its data submission limits.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'Suhosin is an advanced protection system for PHP installations. It was designed to protect your servers on the one hand against a number of well known problems in PHP applications and on the other hand against potential unknown vulnerabilities within these applications or the PHP core itself. If enabled on your server, Suhosin may need to be configured to increase its data submission limits.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo $environment['suhosin_installed'] ? '<span class="dashicons dashicons-yes"></span>' : '&ndash;'; ?></td>
 			</tr>
 		<?php endif; ?>
@@ -297,12 +297,12 @@ if ( file_exists( $plugin_path ) ) {
 			?>
 			<tr>
 				<td data-export-label="MySQL Version"><?php esc_html_e( 'MySQL version', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of MySQL installed on your hosting server.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of MySQL installed on your hosting server.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td>
 					<?php
 					if ( version_compare( $environment['mysql_version'], '5.6', '<' ) && ! strstr( $environment['mysql_version_string'], 'MariaDB' ) ) {
 						/* Translators: %1$s: MySQL version, %2$s: Recommended MySQL version. */
-						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend a minimum MySQL version of 5.6. See: %2$s', 'fincommerce' ), esc_html( $environment['mysql_version_string'] ), '<a href="https://wordpress.org/about/requirements/" target="_blank">' . esc_html__( 'WordPress requirements', 'fincommerce' ) . '</a>' ) . '</mark>';
+						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend a minimum MySQL version of 5.6. See: %2$s', 'fincommerce' ), esc_html( $environment['mysql_version_string'] ), '<a href="https://finpress.org/about/requirements/" target="_blank">' . esc_html__( 'finpress requirements', 'fincommerce' ) . '</a>' ) . '</mark>';
 					} else {
 						echo '<mark class="yes">' . esc_html( $environment['mysql_version_string'] ) . '</mark>';
 					}
@@ -312,12 +312,12 @@ if ( file_exists( $plugin_path ) ) {
 		<?php endif; ?>
 		<tr>
 			<td data-export-label="Max Upload Size"><?php esc_html_e( 'Max upload size', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be uploaded to your WordPress installation.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be uploaded to your finpress installation.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( size_format( $environment['max_upload_size'] ) ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Default Timezone is UTC"><?php esc_html_e( 'Default timezone is UTC', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The default timezone for your server.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The default timezone for your server.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( 'UTC' !== $environment['default_timezone'] ) {
@@ -331,7 +331,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="fsockopen/cURL"><?php esc_html_e( 'fsockopen/cURL', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Payment gateways can use cURL to communicate with remote servers to authorize payments, other plugins may also use it when communicating with remote services.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Payment gateways can use cURL to communicate with remote servers to authorize payments, other plugins may also use it when communicating with remote services.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['fsockopen_or_curl_enabled'] ) {
@@ -344,7 +344,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="SoapClient"><?php esc_html_e( 'SoapClient', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Some webservices like shipping use SOAP to get information from remote servers, for example, live shipping quotes from FedEx require SOAP to be installed.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Some webservices like shipping use SOAP to get information from remote servers, for example, live shipping quotes from FedEx require SOAP to be installed.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['soapclient_enabled'] ) {
@@ -358,7 +358,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="DOMDocument"><?php esc_html_e( 'DOMDocument', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'HTML/Multipart emails use DOMDocument to generate inline CSS in templates.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'HTML/Multipart emails use DOMDocument to generate inline CSS in templates.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['domdocument_enabled'] ) {
@@ -372,7 +372,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="GZip"><?php esc_html_e( 'GZip', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'GZip (gzopen) is used to open the GEOIP database from MaxMind.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'GZip (gzopen) is used to open the GEOIP database from MaxMind.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['gzip_enabled'] ) {
@@ -386,7 +386,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="Multibyte String"><?php esc_html_e( 'Multibyte string', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Multibyte String (mbstring) is used to convert character encoding, like for emails or converting characters to lowercase.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Multibyte String (mbstring) is used to convert character encoding, like for emails or converting characters to lowercase.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['mbstring_enabled'] ) {
@@ -400,7 +400,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="Remote Post"><?php esc_html_e( 'Remote post', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'PayPal uses this method of communicating when sending back transaction information.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'PayPal uses this method of communicating when sending back transaction information.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['remote_post_successful'] ) {
@@ -414,7 +414,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="Remote Get"><?php esc_html_e( 'Remote get', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'FinCommerce plugins may use this method of communication when checking for plugin updates.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'FinCommerce plugins may use this method of communication when checking for plugin updates.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['remote_get_successful'] ) {
@@ -472,7 +472,7 @@ if ( file_exists( $plugin_path ) ) {
 	<tbody>
 		<tr>
 			<td data-export-label="WC Database Version"><?php esc_html_e( 'FinCommerce database version', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The database version for FinCommerce. This should be the same as your FinCommerce version.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The database version for FinCommerce. This should be the same as your FinCommerce version.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $database['wc_database_version'] ); ?></td>
 		</tr>
 		<tr>
@@ -545,7 +545,7 @@ if ( file_exists( $plugin_path ) ) {
 				<td>
 					<?php
 					esc_html_e(
-						'Unable to retrieve database information. Usually, this is not a problem, and it only means that your install is using a class that replaces the WordPress database class (e.g., HyperDB) and FinCommerce is unable to get database information.',
+						'Unable to retrieve database information. Usually, this is not a problem, and it only means that your install is using a class that replaces the finpress database class (e.g., HyperDB) and FinCommerce is unable to get database information.',
 						'fincommerce'
 					);
 					?>
@@ -585,7 +585,7 @@ if ( file_exists( $plugin_path ) ) {
 	<tbody>
 		<tr>
 			<td data-export-label="Secure connection (HTTPS)"><?php esc_html_e( 'Secure connection (HTTPS)', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Is the connection to your store secure?', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Is the connection to your store secure?', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $security['secure_connection'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -601,7 +601,7 @@ if ( file_exists( $plugin_path ) ) {
 		</tr>
 		<tr>
 			<td data-export-label="Hide errors from visitors"><?php esc_html_e( 'Hide errors from visitors', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Error messages can contain sensitive information about your store environment. These should be hidden from untrusted visitors.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Error messages can contain sensitive information about your store environment. These should be hidden from untrusted visitors.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $security['hide_errors'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -670,7 +670,7 @@ if ( 0 < $mu_plugins_count ) :
 		</thead>
 		<tbody>
 			<?php
-			foreach ( $dropins_mu_plugins['mu_plugins'] as $mu_plugin ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			foreach ( $dropins_mu_plugins['mu_plugins'] as $mu_plugin ) { // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 				$plugin_name = esc_html( $mu_plugin['name'] );
 				if ( ! empty( $mu_plugin['url'] ) ) {
 					$plugin_name = '<a href="' . esc_url( $mu_plugin['url'] ) . '" aria-label="' . esc_attr__( 'Visit plugin homepage', 'fincommerce' ) . '" target="_blank">' . $plugin_name . '</a>';
@@ -701,42 +701,42 @@ if ( 0 < $mu_plugins_count ) :
 	<tbody>
 		<tr>
 			<td data-export-label="Legacy API Enabled"><?php esc_html_e( 'Legacy API enabled', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Does your site have the Legacy REST API enabled?', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Does your site have the Legacy REST API enabled?', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo $settings['api_enabled'] ? '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>' : '<mark class="no">&ndash;</mark>'; ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Force SSL"><?php esc_html_e( 'Force SSL', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Does your site force a SSL Certificate for transactions?', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Does your site force a SSL Certificate for transactions?', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo $settings['force_ssl'] ? '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>' : '<mark class="no">&ndash;</mark>'; ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Currency"><?php esc_html_e( 'Currency', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'What currency prices are listed at in the catalog and which currency gateways will take payments in.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'What currency prices are listed at in the catalog and which currency gateways will take payments in.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $settings['currency'] ); ?> (<?php echo esc_html( $settings['currency_symbol'] ); ?>)</td>
 		</tr>
 		<tr>
 			<td data-export-label="Currency Position"><?php esc_html_e( 'Currency position', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The position of the currency symbol.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The position of the currency symbol.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $settings['currency_position'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Thousand Separator"><?php esc_html_e( 'Thousand separator', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The thousand separator of displayed prices.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The thousand separator of displayed prices.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $settings['thousand_separator'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Decimal Separator"><?php esc_html_e( 'Decimal separator', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The decimal separator of displayed prices.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The decimal separator of displayed prices.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $settings['decimal_separator'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Number of Decimals"><?php esc_html_e( 'Number of decimals', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The number of decimal points shown in displayed prices.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The number of decimal points shown in displayed prices.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $settings['number_of_decimals'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Taxonomies: Product Types"><?php esc_html_e( 'Taxonomies: Product types', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'A list of taxonomy terms that can be used in regard to order/product statuses.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'A list of taxonomy terms that can be used in regard to order/product statuses.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				$display_terms = array();
@@ -749,7 +749,7 @@ if ( 0 < $mu_plugins_count ) :
 		</tr>
 		<tr>
 			<td data-export-label="Taxonomies: Product Visibility"><?php esc_html_e( 'Taxonomies: Product visibility', 'fincommerce' ); ?></td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'A list of taxonomy terms used for product visibility.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'A list of taxonomy terms used for product visibility.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				$display_terms = array();
@@ -762,12 +762,12 @@ if ( 0 < $mu_plugins_count ) :
 		</tr>
 		<tr>
 			<td data-export-label="Connected to FinCommerce.com"><?php esc_html_e( 'Connected to FinCommerce.com', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Is your site connected to FinCommerce.com?', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Is your site connected to FinCommerce.com?', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo 'yes' === $settings['fincommerce_com_connected'] ? '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>' : '<mark class="no">&ndash;</mark>'; ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Enforce Approved Product Download Directories"><?php esc_html_e( 'Enforce Approved Product Download Directories', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Is your site enforcing the use of Approved Product Download Directories?', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Is your site enforcing the use of Approved Product Download Directories?', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo $settings['enforce_approved_download_dirs'] ? '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>' : '<mark class="no">&ndash;</mark>'; ?></td>
 		</tr>
 
@@ -876,20 +876,20 @@ if ( 0 < $mu_plugins_count ) :
 				$found_error = true;
 			} elseif ( ! $_page['page_visible'] ) {
 				/* Translators: %s: docs link. */
-				echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . wp_kses_post( sprintf( __( 'Page visibility should be <a href="%s" target="_blank">public</a>', 'fincommerce' ), 'https://wordpress.org/support/article/content-visibility/' ) ) . '</mark>';
+				echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . wp_kses_post( sprintf( __( 'Page visibility should be <a href="%s" target="_blank">public</a>', 'fincommerce' ), 'https://finpress.org/support/article/content-visibility/' ) ) . '</mark>';
 				$found_error = true;
 			} elseif ( $_page['shortcode_required'] || $_page['block_required'] ) {
 				// Shortcode and block check.
 				if ( ! $_page['shortcode_present'] && ! $_page['block_present'] ) {
 					/* Translators: %1$s: shortcode text, %2$s: block slug. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . ( $_page['block_required'] ? sprintf( esc_html__( 'Page does not contain the %1$s shortcode or the %2$s block.', 'fincommerce' ), esc_html( $_page['shortcode'] ), esc_html( $_page['block'] ) ) : sprintf( esc_html__( 'Page does not contain the %s shortcode.', 'fincommerce' ), esc_html( $_page['shortcode'] ) ) ) . '</mark>'; /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . ( $_page['block_required'] ? sprintf( esc_html__( 'Page does not contain the %1$s shortcode or the %2$s block.', 'fincommerce' ), esc_html( $_page['shortcode'] ), esc_html( $_page['block'] ) ) : sprintf( esc_html__( 'Page does not contain the %s shortcode.', 'fincommerce' ), esc_html( $_page['shortcode'] ) ) ) . '</mark>'; /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */
 					$found_error = true;
 				}
 
 				// Warn merchants if both the shortcode and block are present, which will be a confusing shopper experience.
 				if ( $_page['shortcode_present'] && $_page['block_present'] ) {
 					/* Translators: %1$s: shortcode text, %2$s: block slug. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( 'Page contains both the %1$s shortcode and the %2$s block.', 'fincommerce' ), esc_html( $_page['shortcode'] ), esc_html( $_page['block'] ) ) . '</mark>'; /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( 'Page contains both the %1$s shortcode and the %2$s block.', 'fincommerce' ), esc_html( $_page['shortcode'] ), esc_html( $_page['block'] ) ) . '</mark>'; /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */
 					$found_error = true;
 				}
 			}
@@ -920,7 +920,7 @@ if ( 0 < $mu_plugins_count ) :
 					}
 				}
 
-				echo '<mark class="yes">#' . absint( $_page['page_id'] ) . ' - ' . esc_html( str_replace( home_url(), '', get_permalink( $_page['page_id'] ) ) ) . '</mark>' . $additional_info; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
+				echo '<mark class="yes">#' . absint( $_page['page_id'] ) . ' - ' . esc_html( str_replace( home_url(), '', get_permalink( $_page['page_id'] ) ) ) . '</mark>' . $additional_info; /* phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped */
 			}
 
 			echo '</td></tr>';
@@ -937,12 +937,12 @@ if ( 0 < $mu_plugins_count ) :
 	<tbody>
 		<tr>
 			<td data-export-label="Name"><?php esc_html_e( 'Name', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The name of the current active theme.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The name of the current active theme.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $theme['name'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Version"><?php esc_html_e( 'Version', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The installed version of the current active theme.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The installed version of the current active theme.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( version_compare( $theme['version'], $theme['version_latest'], '<' ) ) {
@@ -956,19 +956,19 @@ if ( 0 < $mu_plugins_count ) :
 		</tr>
 		<tr>
 			<td data-export-label="Author URL"><?php esc_html_e( 'Author URL', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The theme developers URL.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The theme developers URL.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $theme['author_url'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Child Theme"><?php esc_html_e( 'Child theme', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current theme is a child theme.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current theme is a child theme.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $theme['is_child_theme'] ) {
 					echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
 				} else {
 					/* Translators: %s docs link. */
-					echo '<span class="dashicons dashicons-no-alt"></span> &ndash; ' . wp_kses_post( sprintf( __( 'If you are modifying FinCommerce on a parent theme that you did not build personally we recommend using a child theme. See: <a href="%s" target="_blank">How to create a child theme</a>', 'fincommerce' ), 'https://developer.wordpress.org/themes/advanced-topics/child-themes/' ) );
+					echo '<span class="dashicons dashicons-no-alt"></span> &ndash; ' . wp_kses_post( sprintf( __( 'If you are modifying FinCommerce on a parent theme that you did not build personally we recommend using a child theme. See: <a href="%s" target="_blank">How to create a child theme</a>', 'fincommerce' ), 'https://developer.finpress.org/themes/advanced-topics/child-themes/' ) );
 				}
 				?>
 				</td>
@@ -976,12 +976,12 @@ if ( 0 < $mu_plugins_count ) :
 		<?php if ( $theme['is_child_theme'] ) : ?>
 			<tr>
 				<td data-export-label="Parent Theme Name"><?php esc_html_e( 'Parent theme name', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The name of the parent theme.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The name of the parent theme.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo esc_html( $theme['parent_name'] ); ?></td>
 			</tr>
 			<tr>
 				<td data-export-label="Parent Theme Version"><?php esc_html_e( 'Parent theme version', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The installed version of the parent theme.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The installed version of the parent theme.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td>
 					<?php
 					echo esc_html( $theme['parent_version'] );
@@ -994,14 +994,14 @@ if ( 0 < $mu_plugins_count ) :
 			</tr>
 			<tr>
 				<td data-export-label="Parent Theme Author URL"><?php esc_html_e( 'Parent theme author URL', 'fincommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The parent theme developers URL.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The parent theme developers URL.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 				<td><?php echo esc_html( $theme['parent_author_url'] ); ?></td>
 			</tr>
 		<?php endif ?>
 		<?php if ( isset( $theme['is_block_theme'] ) ) : ?>
 		<tr>
 			<td data-export-label="Theme type"><?php esc_html_e( 'Theme type', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether the current active theme is a block theme or a classic theme.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether the current active theme is a block theme or a classic theme.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $theme['is_block_theme'] ) {
@@ -1015,7 +1015,7 @@ if ( 0 < $mu_plugins_count ) :
 		<?php endif ?>
 		<tr>
 			<td data-export-label="FinCommerce Support"><?php esc_html_e( 'FinCommerce support', 'fincommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares FinCommerce support.', 'fincommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares FinCommerce support.', 'fincommerce' ) ); /* phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( ! $theme['has_fincommerce_support'] ) {

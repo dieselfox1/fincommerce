@@ -1,11 +1,11 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/f9e405e0e53d61cd36af4f3b34f2de75874de1e1/packages/edit-site/src/components/global-styles/screen-colors.js#L23
+// Reference: https://github.com/finpress/gutenberg/blob/f9e405e0e53d61cd36af4f3b34f2de75874de1e1/packages/edit-site/src/components/global-styles/screen-colors.js#L23
 /**
  * External dependencies
  */
-import { privateApis as blockEditorPrivateApis } from '@wordpress/block-editor';
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
-import { useContext } from '@wordpress/element';
-import { mergeBaseAndUserConfigs } from '@wordpress/edit-site/build-module/components/global-styles/global-styles-provider';
+import { privateApis as blockEditorPrivateApis } from '@finpress/block-editor';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
+import { useContext } from '@finpress/element';
+import { mergeBaseAndUserConfigs } from '@finpress/edit-site/build-module/components/global-styles/global-styles-provider';
 import { debounce } from 'lodash';
 
 const {

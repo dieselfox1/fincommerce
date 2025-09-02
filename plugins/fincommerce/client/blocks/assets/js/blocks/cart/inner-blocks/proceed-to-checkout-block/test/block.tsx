@@ -5,7 +5,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { registerCheckoutFilters } from '@fincommerce/blocks-checkout';
 import { useCartEventsContext } from '@fincommerce/base-context';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 jest.mock( '@fincommerce/base-context/hooks', () => ( {
 	useStoreCart: jest.fn( () => ( {
@@ -57,7 +57,7 @@ describe( 'Proceed to checkout block', () => {
 		render(
 			<Block checkoutPageId={ 0 } buttonLabel={ '' } className={ '' } />
 		);
-		//@todo When https://github.com/WordPress/gutenberg/issues/22850 is complete use that new matcher here for more specific error message assertion.
+		//@todo When https://github.com/finpress/gutenberg/issues/22850 is complete use that new matcher here for more specific error message assertion.
 		expect( console ).toHaveErrored();
 	} );
 	it( 'dispatches the onProceedToCheckout event when the button is clicked', async () => {

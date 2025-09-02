@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
-import { __experimentalItemGroup as ItemGroup } from '@wordpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import { privateApis as routerPrivateApis } from '@finpress/router';
+import { __experimentalItemGroup as ItemGroup } from '@finpress/components';
 
 /**
  * Internal dependencies

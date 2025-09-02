@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Children, isValidElement, createElement } from '@wordpress/element';
+import { Children, isValidElement, createElement } from '@finpress/element';
 import { FormSection } from '@fincommerce/components';
 
 interface ProductSectionLayoutProps {

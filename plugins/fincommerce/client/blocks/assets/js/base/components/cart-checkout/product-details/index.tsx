@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { paramCase as kebabCase } from 'change-case';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import type { ProductResponseItemData } from '@fincommerce/types';
 
 /**

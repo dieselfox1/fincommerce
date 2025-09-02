@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { createReduxStore, register } from '@wordpress/data';
+import { createReduxStore, register } from '@finpress/data';
 import { SelectFromMap } from '@automattic/data-stores';
 
 /**
@@ -46,7 +46,7 @@ export type ReportsSelect = WPDataSelectors &
 		) => ReturnType< typeof selectors.getReportStats< T > >;
 	};
 
-declare module '@wordpress/data' {
+declare module '@finpress/data' {
 	function select( key: typeof STORE_NAME | typeof store ): ReportsSelect;
 	function resolveSelect(
 		key: typeof STORE_NAME | typeof store

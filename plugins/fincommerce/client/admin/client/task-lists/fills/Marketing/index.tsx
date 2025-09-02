@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Card, CardHeader, Spinner } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Card, CardHeader, Spinner } from '@finpress/components';
 import {
 	onboardingStore,
 	pluginsStore,
@@ -11,9 +11,9 @@ import {
 } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { Text } from '@fincommerce/experimental';
-import { useMemo, useState } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { registerPlugin } from '@wordpress/plugins';
+import { useMemo, useState } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 import { getNewPath } from '@fincommerce/navigation';
 import { getAdminLink } from '@fincommerce/settings';

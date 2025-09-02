@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { apiFetch } from '@wordpress/data-controls';
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { apiFetch } from '@finpress/data-controls';
+import { __, _n, sprintf } from '@finpress/i18n';
 import { DispatchFromMap } from '@automattic/data-stores';
-import { controls } from '@wordpress/data';
+import { controls } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 /**
  * Internal dependencies

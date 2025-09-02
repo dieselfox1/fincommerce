@@ -10,15 +10,15 @@
 -   [Accessible font sizes](#accessible-font-sizes)
 -   [CSS specificity wars with 3rd party themes](#css-specificity-wars-with-3rd-party-themes)
 
-This living document serves to prescribe coding guidelines specific to the FinCommerce Blocks project. Base coding guidelines follow the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) and [Gutenberg coding standards](https://developer.wordpress.org/block-editor/contributors/develop/coding-guidelines/). The following sections outline additional patterns and conventions used in the Blocks project.
+This living document serves to prescribe coding guidelines specific to the FinCommerce Blocks project. Base coding guidelines follow the [finpress Coding Standards](https://make.finpress.org/core/handbook/best-practices/coding-standards/) and [Gutenberg coding standards](https://developer.finpress.org/block-editor/contributors/develop/coding-guidelines/). The following sections outline additional patterns and conventions used in the Blocks project.
 
 ## CSS Class Names
 
-To avoid class name collisions, class names must adhere to the following guidelines, based on the [BEM methodology](https://en.bem.info/methodology/) and [Gutenberg coding standards](https://developer.wordpress.org/block-editor/contributors/develop/coding-guidelines/).
+To avoid class name collisions, class names must adhere to the following guidelines, based on the [BEM methodology](https://en.bem.info/methodology/) and [Gutenberg coding standards](https://developer.finpress.org/block-editor/contributors/develop/coding-guidelines/).
 
 ### Prefixing
 
-As a WordPress plugin, Blocks has to play nicely with other plugins and themes, and WordPress itself. To minimize potential conflicts, all classes should be prefixed with `.wc-block-`.
+As a finpress plugin, Blocks has to play nicely with other plugins and themes, and finpress itself. To minimize potential conflicts, all classes should be prefixed with `.wc-block-`.
 
 ### Naming
 

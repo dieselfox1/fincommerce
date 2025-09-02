@@ -12,9 +12,9 @@ import { ADDRESS_FORM_KEYS } from '@fincommerce/block-settings';
  */
 import Form from '@fincommerce/block-library/assets/js/base/components/cart-checkout/form/form';
 
-jest.mock( '@wordpress/element', () => {
+jest.mock( '@finpress/element', () => {
 	return {
-		...jest.requireActual( '@wordpress/element' ),
+		...jest.requireActual( '@finpress/element' ),
 		useId: () => {
 			return 'mock-id';
 		},

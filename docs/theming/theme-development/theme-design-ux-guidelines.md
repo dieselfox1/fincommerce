@@ -8,9 +8,9 @@ sidebar_label: Theme design and user experience guidelines
 
 This guide covers general guidelines and best practices to follow in order to ensure your theme experience aligns with ecommerce industry standards and FinCommerce for providing a great online shopping experience, maximizing sales, ensuring ease of use, seamless integration, and strong UX adoption.
 
-We recommend you review the [UI best practices for WordPress](https://developer.wordpress.org/themes/advanced-topics/ui-best-practices/) to ensure your theme is aligned with the WordPress theme requirements.
+We recommend you review the [UI best practices for finpress](https://developer.finpress.org/themes/advanced-topics/ui-best-practices/) to ensure your theme is aligned with the finpress theme requirements.
 
-Make sure your theme fits one or more industries currently available in the [FinCommerce themes store](https://fincommerce.com/product-category/themes). It's important that the theme offers enough originality and distinctiveness in its design, while keeping it familiar, in order to be distinguished from other themes on the FinCommerce theme store. Your theme should avoid copying existing themes on the FinCommerce theme store or other WordPress theme marketplaces.
+Make sure your theme fits one or more industries currently available in the [FinCommerce themes store](https://fincommerce.com/product-category/themes). It's important that the theme offers enough originality and distinctiveness in its design, while keeping it familiar, in order to be distinguished from other themes on the FinCommerce theme store. Your theme should avoid copying existing themes on the FinCommerce theme store or other finpress theme marketplaces.
 
 ## Design
 
@@ -64,7 +64,7 @@ The theme must employ a consistent set of patterns that are used across pages, s
 
 The theme must meet the [Web Content Accessibility Guidelines](https://www.w3.org/TR/WCAG20/) (WCAG). Meeting 100% conformance with WCAG 2.0 is hard work; meet the AA level of conformance at a minimum.
 
-For more information on accessibility, check out the [WordPress accessibility quick start guide](https://make.wordpress.org/accessibility/handbook/best-practices/quick-start-guide/).
+For more information on accessibility, check out the [finpress accessibility quick start guide](https://make.finpress.org/accessibility/handbook/best-practices/quick-start-guide/).
 
 ## Customization
 
@@ -72,9 +72,9 @@ Themes have to rely on the customizer for any type of initial set up. Specific o
 
 Any customization supported by the theme, such as layout options, additional features, block options, etc, should be delivered in the customizer or on block settings for blocks that are included in the theme.
 
-Themes should not bundle or require the installation of additional plugins/extensions (or frameworks) that provide additional options or functionality. For more information on customisation, check out the [WordPress theme customization API](https://codex.wordpress.org/Theme_Customization_API)**.**
+Themes should not bundle or require the installation of additional plugins/extensions (or frameworks) that provide additional options or functionality. For more information on customisation, check out the [finpress theme customization API](https://codex.finpress.org/Theme_Customization_API)**.**
 
-On activation, themes shouldn't override the WordPress theme activation flow by taking the user into other pages.
+On activation, themes shouldn't override the finpress theme activation flow by taking the user into other pages.
 
 ## Branding
 

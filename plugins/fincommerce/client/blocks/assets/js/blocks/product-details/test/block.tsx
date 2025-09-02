@@ -3,10 +3,10 @@
  */
 import '@testing-library/jest-dom';
 import { screen, waitFor, within } from '@testing-library/react';
-import { createBlock, type BlockAttributes } from '@wordpress/blocks';
+import { createBlock, type BlockAttributes } from '@finpress/blocks';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -49,8 +49,8 @@ async function setupWithSingleProduct(
 	return initializeEditor( singleProductBlock );
 }
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 } ) );
 
@@ -89,7 +89,7 @@ describe( 'Product Details block', () => {
 			( useSelect as jest.Mock ).mockImplementation(
 				( callback, deps ) => {
 					const originalUseSelect =
-						jest.requireActual( '@wordpress/data' ).useSelect;
+						jest.requireActual( '@finpress/data' ).useSelect;
 					const originalResult = originalUseSelect( callback, deps );
 
 					if (

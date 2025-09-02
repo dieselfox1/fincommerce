@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { ComboboxControl, TextControl } from '@wordpress/components';
-import { ComboboxControlOption } from '@wordpress/components/build-types/combobox-control/types';
-import { __ } from '@wordpress/i18n';
+import { ComboboxControl, TextControl } from '@finpress/components';
+import { ComboboxControlOption } from '@finpress/components/build-types/combobox-control/types';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

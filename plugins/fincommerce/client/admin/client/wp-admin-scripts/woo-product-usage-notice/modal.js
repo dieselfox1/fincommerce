@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { useEffect, useState } from '@finpress/element';
 import {
 	Button,
 	Card,
@@ -15,8 +15,8 @@ import {
 	Icon,
 	Modal,
 	ResponsiveWrapper,
-} from '@wordpress/components';
-import { commentContent, people, reusableBlock } from '@wordpress/icons';
+} from '@finpress/components';
+import { commentContent, people, reusableBlock } from '@finpress/icons';
 import { Text } from '@fincommerce/experimental';
 import { recordEvent } from '@fincommerce/tracks';
 

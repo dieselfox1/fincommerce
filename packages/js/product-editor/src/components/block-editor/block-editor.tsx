@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { parse, synchronizeBlocksWithTemplate } from '@wordpress/blocks';
+import { parse, synchronizeBlocksWithTemplate } from '@finpress/blocks';
 import {
 	createElement,
 	useMemo,
@@ -10,12 +10,12 @@ import {
 	useState,
 	lazy,
 	Suspense,
-} from '@wordpress/element';
-import { dispatch, select, useDispatch, useSelect } from '@wordpress/data';
-import { uploadMedia } from '@wordpress/media-utils';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { dispatch, select, useDispatch, useSelect } from '@finpress/data';
+import { uploadMedia } from '@finpress/media-utils';
+import { __ } from '@finpress/i18n';
 import { useLayoutTemplate } from '@fincommerce/block-templates';
-import { store as keyboardShortcutsStore } from '@wordpress/keyboard-shortcuts';
+import { store as keyboardShortcutsStore } from '@finpress/keyboard-shortcuts';
 import { Product } from '@fincommerce/data';
 import { getPath, getQuery } from '@fincommerce/navigation';
 import {
@@ -29,7 +29,7 @@ import {
 	// @ts-ignore No types for this exist yet.
 	BlockTools,
 	ObserveTyping,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // It doesn't seem to notice the External dependency block when @ts-ignore is added.
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
@@ -39,7 +39,7 @@ import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore store should be included.
 	useEntityRecord,
-} from '@wordpress/core-data';
+} from '@finpress/core-data';
 
 /**
  * Internal dependencies
@@ -55,7 +55,7 @@ import type { ProductFormPostProps, ProductTemplate } from '../../types';
 import isProductFormTemplateSystemEnabled from '../../utils/is-product-form-template-system-enabled';
 
 const PluginArea = lazy( () =>
-	import( '@wordpress/plugins' ).then( ( module ) => ( {
+	import( '@finpress/plugins' ).then( ( module ) => ( {
 		default: module.PluginArea,
 	} ) )
 );

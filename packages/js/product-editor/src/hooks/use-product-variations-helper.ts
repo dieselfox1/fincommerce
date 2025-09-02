@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { dispatch, resolveSelect, useSelect } from '@wordpress/data';
-import { useCallback, useMemo, useState } from '@wordpress/element';
+import { dispatch, resolveSelect, useSelect } from '@finpress/data';
+import { useCallback, useMemo, useState } from '@finpress/element';
 import { getNewPath, getPath, navigateTo } from '@fincommerce/navigation';
 import {
 	Product,
@@ -10,12 +10,12 @@ import {
 	ProductVariation,
 	experimentalProductVariationsStore,
 } from '@fincommerce/data';
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 import {
 	useEntityProp,
 	useEntityRecord,
 	store as coreStore,
-} from '@wordpress/core-data';
+} from '@finpress/core-data';
 
 /**
  * Internal dependencies

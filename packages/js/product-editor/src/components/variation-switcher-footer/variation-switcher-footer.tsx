@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { arrowLeft, arrowRight, Icon } from '@wordpress/icons';
-import { useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { arrowLeft, arrowRight, Icon } from '@finpress/icons';
+import { useSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

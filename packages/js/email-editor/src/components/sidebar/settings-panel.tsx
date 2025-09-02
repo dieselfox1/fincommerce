@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
-import { useMemo } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
+import { useMemo } from '@finpress/element';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	ErrorBoundary,
-	// @ts-expect-error Type for PluginDocumentSettingPanel is missing in @types/wordpress__editor
+	// @ts-expect-error Type for PluginDocumentSettingPanel is missing in @types/finpress__editor
 	PluginDocumentSettingPanel,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -57,7 +57,7 @@ export function SettingsPanel() {
 		>
 			{ <EmailStatusComponent /> }
 			{ <TemplateSelection /> }
-			{ /* @ts-expect-error canCopyContent is missing in @types/wordpress__editor */ }
+			{ /* @ts-expect-error canCopyContent is missing in @types/finpress__editor */ }
 			<ErrorBoundary canCopyContent>
 				{ <SidebarExtensionComponent /> }
 			</ErrorBoundary>

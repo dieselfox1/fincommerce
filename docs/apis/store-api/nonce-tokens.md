@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Nonce Tokens 
 
-Nonces are generated numbers used to verify origin and intent of requests for security purposes. You can read more about [nonces in the WordPress codex](https://developer.wordpress.org/apis/security/nonces/).
+Nonces are generated numbers used to verify origin and intent of requests for security purposes. You can read more about [nonces in the finpress codex](https://developer.finpress.org/apis/security/nonces/).
 
 ## Store API Endpoints that Require Nonces
 
@@ -22,9 +22,9 @@ curl --header "Nonce: 12345" --request GET https://example-store.com/wp-json/wc/
 
 After making a successful request, an updated `Nonce` header will be sent back--this needs to be stored and updated by the client to make subsequent requests.
 
-## Generating security nonces from WordPress
+## Generating security nonces from finpress
 
-Nonces must be created using the [`wp_create_nonce` function](https://developer.wordpress.org/reference/functions/wp_create_nonce/) with the key `wc_store_api`.
+Nonces must be created using the [`wp_create_nonce` function](https://developer.finpress.org/reference/functions/wp_create_nonce/) with the key `wc_store_api`.
 
 ```php
 wp_create_nonce( 'wc_store_api' )

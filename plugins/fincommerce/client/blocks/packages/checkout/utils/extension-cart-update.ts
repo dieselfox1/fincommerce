@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { CartResponse, ExtensionCartUpdateArgs } from '@fincommerce/types';
 import { processErrorResponse } from '@fincommerce/block-data';
 

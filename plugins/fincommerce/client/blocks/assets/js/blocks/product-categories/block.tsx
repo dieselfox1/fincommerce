@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import ServerSideRender from '@wordpress/server-side-render';
-import { Icon, listView } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
+import ServerSideRender from '@finpress/server-side-render';
+import { Icon, listView } from '@finpress/icons';
 import { isSiteEditorPage, isWidgetEditorPage } from '@fincommerce/utils';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import {
 	Disabled,
 	PanelBody,
@@ -14,13 +14,13 @@ import {
 	Placeholder,
 
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
 
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 /**
  * Internal dependencies
  */

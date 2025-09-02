@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { lazy, Suspense } from '@wordpress/element';
+import { lazy, Suspense } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -21,11 +21,11 @@ class WC_Tests_Install extends WC_Unit_Test_Case {
 		// Reinstall FinCommerce to ensure test environment is clean.
 		WC_Install::install();
 
-		// Reload capabilities after install, see https://core.trac.wordpress.org/ticket/28374.
+		// Reload capabilities after install, see https://core.trac.finpress.org/ticket/28374.
 		if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 			$GLOBALS['wp_roles']->reinit();
 		} else {
-			$GLOBALS['wp_roles'] = null; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['wp_roles'] = null; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			wp_roles();
 		}
 	}

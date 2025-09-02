@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+import { useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -32,7 +32,7 @@ export function useIsEmailEditor(): boolean {
 		const emailPostId = emailEditorStore.getEmailPostId();
 		const emailPostType = emailEditorStore.getEmailPostType();
 
-		// Get the current post information from the WordPress editor
+		// Get the current post information from the finpress editor
 		const currentPostId = select( editorStore ).getCurrentPostId();
 		const currentPostType = select( editorStore ).getCurrentPostType();
 

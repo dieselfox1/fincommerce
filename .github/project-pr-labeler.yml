@@ -1,64 +1,64 @@
-'package: @woocommerce/e2e-utils-playwright':
+'package: @fincommerce/e2e-utils-playwright':
   - packages/js/e2e-utils-playwright/**/*
 
-'package: @woocommerce/components':
+'package: @fincommerce/components':
   - packages/js/components/**/*
 
-'package: @woocommerce/csv-export':
+'package: @fincommerce/csv-export':
   - packages/js/csv-export/**/*
 
-'package: @woocommerce/currency':
+'package: @fincommerce/currency':
   - packages/js/currency/**/*
 
-'package: @woocommerce/customer-effort-score':
+'package: @fincommerce/customer-effort-score':
   - packages/js/customer-effort-score/**/*
 
-'package: @woocommerce/data':
+'package: @fincommerce/data':
   - packages/js/data/**/*
 
-'package: @woocommerce/date':
+'package: @fincommerce/date':
   - packages/js/date/**/*
 
 'package: dependency-extraction-webpack-plugin':
   - packages/js/dependency-extraction-webpack-plugin/**/*
 
-'package: @woocommerce/eslint-plugin':
+'package: @fincommerce/eslint-plugin':
   - packages/js/eslint-plugin/**/*
 
-'package: @woocommerce/experimental':
+'package: @fincommerce/experimental':
   - packages/js/experimental/**/*
 
-'package: @woocommerce/explat':
+'package: @fincommerce/explat':
   - packages/js/explat/**/*
 
-'package: @woocommerce/navigation':
+'package: @fincommerce/navigation':
   - packages/js/navigation/**/*
 
-'package: @woocommerce/number':
+'package: @fincommerce/number':
   - packages/js/number/**/*
 
-'package: @woocommerce/onboarding':
+'package: @fincommerce/onboarding':
   - packages/js/onboarding/**/*
 
-'package: @woocommerce/tracks':
+'package: @fincommerce/tracks':
   - packages/js/tracks/**/*
 
-'plugin: woocommerce':
-  - plugins/woocommerce/**/*
+'plugin: fincommerce':
+  - plugins/fincommerce/**/*
 
-'plugin: woocommerce beta tester':
-  - plugins/woocommerce-beta-tester/**/*
+'plugin: fincommerce beta tester':
+  - plugins/fincommerce-beta-tester/**/*
 
 'focus: performance tests':
-  - plugins/woocommerce/tests/performance/**/*
-  - plugins/woocommerce/tests/metrics/**/*
+  - plugins/fincommerce/tests/performance/**/*
+  - plugins/fincommerce/tests/metrics/**/*
 
 'focus: api tests':
-  - plugins/woocommerce/tests/e2e-pw/tests/api-tests/**/*
+  - plugins/fincommerce/tests/e2e-pw/tests/api-tests/**/*
 
 'focus: e2e tests':
-  - plugins/woocommerce/tests/e2e-pw/**/*
-  - plugins/woocommerce/client/blocks/tests/e2e/**/*
+  - plugins/fincommerce/tests/e2e-pw/**/*
+  - plugins/fincommerce/client/blocks/tests/e2e/**/*
 
 'Documentation':
   - docs/**/*

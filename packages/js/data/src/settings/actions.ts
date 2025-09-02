@@ -2,9 +2,9 @@
  * External dependencies
  */
 
-import { __ } from '@wordpress/i18n';
-import { apiFetch, select } from '@wordpress/data-controls';
-import { controls } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { apiFetch, select } from '@finpress/data-controls';
+import { controls } from '@finpress/data';
 import { concat } from 'lodash';
 import { DispatchFromMap } from '@automattic/data-stores';
 

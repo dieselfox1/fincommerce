@@ -46,10 +46,10 @@ const defaultUseStoreCartValue = {
 	cartHasCalculatedShipping: mockPreviewCart.has_calculated_shipping,
 };
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	return {
 		__esModule: true,
-		...jest.requireActual( 'wordpress-data-wp-6-7' ),
+		...jest.requireActual( 'finpress-data-wp-6-7' ),
 	};
 } );
 

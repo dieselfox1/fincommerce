@@ -259,9 +259,9 @@ class WC_Log_Handler_File extends WC_Log_Handler {
 
 		if ( isset( $logs[ $handle ] ) && $logs[ $handle ] ) {
 			$file = realpath( trailingslashit( $log_directory ) . $logs[ $handle ] );
-			if ( 0 === stripos( $file, realpath( trailingslashit( $log_directory ) ) ) && is_file( $file ) && is_writable( $file ) ) { // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable
+			if ( 0 === stripos( $file, realpath( trailingslashit( $log_directory ) ) ) && is_file( $file ) && is_writable( $file ) ) { // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writable
 				$this->close( $file ); // Close first to be certain no processes keep it alive after it is unlinked.
-				$removed = unlink( $file ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_unlink
+				$removed = unlink( $file ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_unlink
 			}
 			do_action( 'fincommerce_log_remove', $handle, $removed );
 		}
@@ -336,8 +336,8 @@ class WC_Log_Handler_File extends WC_Log_Handler {
 			$this->close( $rename_from );
 		}
 
-		if ( is_writable( $rename_from ) ) { // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable
-			return rename( $rename_from, $rename_to ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_rename
+		if ( is_writable( $rename_from ) ) { // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writable
+			return rename( $rename_from, $rename_to ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_rename
 		} else {
 			return false;
 		}

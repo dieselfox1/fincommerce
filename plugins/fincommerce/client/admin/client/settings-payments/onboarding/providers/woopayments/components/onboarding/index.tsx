@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 

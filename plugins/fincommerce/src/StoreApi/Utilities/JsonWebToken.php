@@ -185,7 +185,7 @@ final class JsonWebToken {
 		return str_replace(
 			array( '+', '/', '=' ),
 			array( '-', '_', '' ),
-			base64_encode( $string ) // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+			base64_encode( $string ) // phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 		);
 	}
 
@@ -206,7 +206,7 @@ final class JsonWebToken {
 			return self::from_base_64_url( $string . '=' );
 		}
 
-		return base64_decode( // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode
+		return base64_decode( // phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode
 			str_replace(
 				array( '-', '_' ),
 				array( '+', '/' ),

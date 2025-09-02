@@ -86,7 +86,7 @@ final class StaticMockerHack extends CodeHack {
 		$code          = '';
 		$current_token = null;
 
-		// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+		// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while ( $current_token = current( $tokens ) ) {
 			if ( $this->is_token_of_type( $current_token, T_STRING ) && in_array( $current_token[1], $this->mockable_classes, true ) ) {
 				$class_name = $current_token[1];

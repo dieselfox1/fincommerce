@@ -134,7 +134,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 			'clear_expired_transients'             => array(
 				'name'   => __( 'Expired transients', 'fincommerce' ),
 				'button' => __( 'Clear transients', 'fincommerce' ),
-				'desc'   => __( 'This tool will clear ALL expired transients from WordPress.', 'fincommerce' ),
+				'desc'   => __( 'This tool will clear ALL expired transients from finpress.', 'fincommerce' ),
 			),
 			'delete_orphaned_variations'           => array(
 				'name'   => __( 'Orphaned variations', 'fincommerce' ),
@@ -548,7 +548,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 
 			case 'clear_sessions':
 				$wpdb->query( "TRUNCATE {$wpdb->prefix}fincommerce_sessions" );
-				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				$result = absint( $wpdb->query( "DELETE FROM {$wpdb->usermeta} WHERE meta_key='_fincommerce_persistent_cart_" . get_current_blog_id() . "';" ) ); // WPCS: unprepared SQL ok.
 				wp_cache_flush();
 				/* translators: %d: number of saved carts */

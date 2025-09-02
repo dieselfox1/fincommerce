@@ -27,7 +27,7 @@ class EmailPreviewRestControllerTest extends WC_REST_Unit_Test_Case {
 	 *
 	 * @var string
 	 */
-	const EMAIL = 'example@wordpress.com';
+	const EMAIL = 'example@finpress.com';
 
 	/**
 	 * Site title.

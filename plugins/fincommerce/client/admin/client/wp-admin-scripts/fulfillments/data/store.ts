@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
-import { createReduxStore, register } from '@wordpress/data';
+import apiFetch from '@finpress/api-fetch';
+import { createReduxStore, register } from '@finpress/data';
 
 /**
  * Internal dependencies

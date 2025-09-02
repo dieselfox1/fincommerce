@@ -40,7 +40,7 @@ concurrency:
 jobs:
   verify:
     name: 'Pre-build verification'
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     permissions:
       contents: write # Required to fetch draft releases for some reason. See https://github.com/cli/cli/issues/9076#issuecomment-2146148572.
     steps:
@@ -79,8 +79,8 @@ jobs:
           ref: ${{ inputs.branch || github.ref }}
           path: checkout-branch
           sparse-checkout: |
-            /plugins/woocommerce/woocommerce.php
-            /plugins/woocommerce/readme.txt
+            /plugins/fincommerce/fincommerce.php
+            /plugins/fincommerce/readme.txt
           sparse-checkout-cone-mode: false
         if: ${{ ! inputs.skip_verify }}
 
@@ -107,7 +107,7 @@ jobs:
             fi
 
             # Version number in branch name and plugin main version must match.
-            branch_plugin_version=$( cat checkout-branch/plugins/woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
+            branch_plugin_version=$( cat checkout-branch/plugins/fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
             version_prefix=${branch_name/"release/"/""}
             if [[ $branch_plugin_version != "$version_prefix."* ]] ; then
                 echo "::error::Pre-build verification: release version in branch ($branch_plugin_version) is not matching '$version_prefix.*' pattern."
@@ -121,15 +121,15 @@ jobs:
             fi
 
             # Release should not already exist on wporg.
-            tag_exists=$(curl -s 'https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request\[slug\]=woocommerce' | jq "(.versions | has(\"$branch_plugin_version\"))")
+            tag_exists=$(curl -s 'https://api.finpress.org/plugins/info/1.2/?action=plugin_information&request\[slug\]=fincommerce' | jq "(.versions | has(\"$branch_plugin_version\"))")
             if [ "$tag_exists" == "true" ]; then
-              echo "::error::Tag '$branch_plugin_version' already exists on WordPress.org."
+              echo "::error::Tag '$branch_plugin_version' already exists on finpress.org."
               exit 1
             fi
 
             # Stable version in release branch should match wporg.
-            svn_stable_version=$( wget --quiet https://plugins.svn.wordpress.org/woocommerce/trunk/readme.txt -O /dev/stdout |  grep -oP '(?<=Stable tag: )(.+)' | head -n1 )
-            branch_stable_version=$( cat checkout-branch/plugins/woocommerce/readme.txt | grep -oP '(?<=Stable tag: )(.+)' | head -n1 )
+            svn_stable_version=$( wget --quiet https://plugins.svn.finpress.org/fincommerce/trunk/readme.txt -O /dev/stdout |  grep -oP '(?<=Stable tag: )(.+)' | head -n1 )
+            branch_stable_version=$( cat checkout-branch/plugins/fincommerce/readme.txt | grep -oP '(?<=Stable tag: )(.+)' | head -n1 )
             if [[ $branch_stable_version != $svn_stable_version ]] ; then
                 echo "::error::Pre-build verification: stable version in release branch ($branch_stable_version) is not matching the one in SVN trunk ($svn_stable_version)."
                 exit 1
@@ -162,7 +162,7 @@ jobs:
 
   build:
     name: Build release zip file
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-4vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-4vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs: [ verify ]
     outputs:
       artifact-url: ${{ steps.fetch-build-details.outputs.artifact-url }}
@@ -183,17 +183,17 @@ jobs:
         with:
           ref: ${{ inputs.branch || github.ref }}
 
-      - name: Setup WooCommerce Monorepo
-        uses: ./.github/actions/setup-woocommerce-monorepo
+      - name: Setup fincommerce Monorepo
+        uses: ./.github/actions/setup-fincommerce-monorepo
         with:
-          pull-package-deps: '@woocommerce/plugin-woocommerce'
+          pull-package-deps: '@fincommerce/plugin-fincommerce'
 
       - name: Build zip
-        working-directory: plugins/woocommerce
+        working-directory: plugins/fincommerce
         run: bash bin/build-zip.sh
 
       - name: Unzip the file (prevents double zip problem)
-        run: unzip plugins/woocommerce/woocommerce.zip -d zipfile
+        run: unzip plugins/fincommerce/fincommerce.zip -d zipfile
 
       - name: Upload the zip file as an artifact
         id: artifact-upload
@@ -201,7 +201,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: woocommerce
+          name: fincommerce
           path: zipfile
           retention-days: 1
 
@@ -217,7 +217,7 @@ jobs:
 
   create-release:
     name: Create GitHub release
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs: [ build ]
     if: ${{ inputs.create_github_release }}
     permissions:
@@ -226,17 +226,17 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: woocommerce
+          name: fincommerce
 
       - name: Get version from plugin file
         id: get_version
         run: |
-          version=$(cat ./woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1)
+          version=$(cat ./fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1)
           echo "version=$version" >> $GITHUB_OUTPUT
 
       - name: Generate release ZIP file
         run: |
-          zip -q -9 -r ./woocommerce.zip ./woocommerce/
+          zip -q -9 -r ./fincommerce.zip ./fincommerce/
 
       - name: Create draft release
         id: create_release
@@ -251,7 +251,7 @@ jobs:
           fi
 
           gh release create ${{ steps.get_version.outputs.version }} \
-            './woocommerce.zip' \
+            './fincommerce.zip' \
             --title '${{ steps.get_version.outputs.version }}' \
             --notes '${{ steps.get_version.outputs.version }}' \
             --target '${{ needs.build.outputs.commit-hash }}' \

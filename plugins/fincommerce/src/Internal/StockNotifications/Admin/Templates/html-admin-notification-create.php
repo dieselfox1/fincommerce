@@ -78,7 +78,7 @@ use Automattic\FinCommerce\Internal\StockNotifications\Admin\NotificationsPage;
 							$user_string = '';
 							$user_id     = 0;
 
-							// phpcs:disable WordPress.Security.NonceVerification.Recommended
+							// phpcs:disable finpress.Security.NonceVerification.Recommended
 							if ( ! empty( $_REQUEST['user_id'] ) ) {
 
 								$user_id = absint( wp_unslash( $_REQUEST['user_id'] ) );
@@ -96,7 +96,7 @@ use Automattic\FinCommerce\Internal\StockNotifications\Admin\NotificationsPage;
 								}
 							}
 
-							$email = isset( $_REQUEST['user_email'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['user_email'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+							$email = isset( $_REQUEST['user_email'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['user_email'] ) ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 							?>
 							<select class="wc-customer-search" name="user_id" data-placeholder="<?php esc_attr_e( 'Search for a customer&hellip;', 'fincommerce' ); ?>" data-allow_clear="true">
 								<?php if ( $user_string && $user_id ) { ?>
@@ -117,7 +117,7 @@ use Automattic\FinCommerce\Internal\StockNotifications\Admin\NotificationsPage;
 							$product_string = '';
 							$product_id     = 0;
 
-							// phpcs:disable WordPress.Security.NonceVerification.Recommended
+							// phpcs:disable finpress.Security.NonceVerification.Recommended
 							if ( ! empty( $_REQUEST['product_id'] ) ) {
 
 								$product_id = absint( wp_unslash( $_REQUEST['product_id'] ) );
@@ -133,7 +133,7 @@ use Automattic\FinCommerce\Internal\StockNotifications\Admin\NotificationsPage;
 									}
 								}
 							}
-							// phpcs:enable WordPress.Security.NonceVerification.Recommended
+							// phpcs:enable finpress.Security.NonceVerification.Recommended
 							$excluded_product_types = array_diff( array_keys( wc_get_product_types() ), array( 'simple', 'variable' ) );
 							?>
 							<select class="wc-product-search" name="product_id" data-action="fincommerce_json_search_products_and_variations" data-exclude_type="<?php echo esc_attr( implode( ',', $excluded_product_types ) ); ?>" data-display_stock="true"data-placeholder="<?php esc_attr_e( 'Select product&hellip;', 'fincommerce' ); ?>" data-allow_clear="true">

@@ -65,13 +65,13 @@ class WC_Query_Test extends \WC_Unit_Test_Case {
 		);
 		global $wp_the_query;
 		$previous_wp_the_query = $wp_the_query;
-		$wp_the_query          = $query; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_the_query          = $query; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$query->get_posts();
 
 		$this->assertTrue( defined( 'SHOP_IS_ON_FRONT' ) && SHOP_IS_ON_FRONT );
 
 		// Reset main query, options and delete the page we created.
-		$wp_the_query = $previous_wp_the_query; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$wp_the_query = $previous_wp_the_query; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		update_option( 'fincommerce_shop_page_id', $default_fincommerce_shop_page_id );
 		update_option( 'show_on_front', $default_show_on_front );
 		update_option( 'page_on_front', $default_page_on_front );

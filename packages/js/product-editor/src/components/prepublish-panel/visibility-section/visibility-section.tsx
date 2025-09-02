@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { Product } from '@fincommerce/data';
-import { useEntityProp } from '@wordpress/core-data';
+import { useEntityProp } from '@finpress/core-data';
 import { recordEvent } from '@fincommerce/tracks';
-import { CheckboxControl, PanelBody } from '@wordpress/components';
+import { CheckboxControl, PanelBody } from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -4,10 +4,10 @@
 import { DragEventHandler } from 'react';
 import { ListItem, Tag } from '@fincommerce/components';
 import { ProductProductAttribute } from '@fincommerce/data';
-import { sprintf, __ } from '@wordpress/i18n';
-import { Button, Tooltip } from '@wordpress/components';
-import { closeSmall } from '@wordpress/icons';
-import { createElement } from '@wordpress/element';
+import { sprintf, __ } from '@finpress/i18n';
+import { Button, Tooltip } from '@finpress/components';
+import { closeSmall } from '@finpress/icons';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

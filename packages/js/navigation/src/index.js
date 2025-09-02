@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useLayoutEffect } from '@wordpress/element';
-import { addQueryArgs } from '@wordpress/url';
+import { useState, useEffect, useLayoutEffect } from '@finpress/element';
+import { addQueryArgs } from '@finpress/url';
 import { parse } from 'qs';
 import { pick } from 'lodash';
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 import { getAdminLink } from '@fincommerce/settings';
 
 /**

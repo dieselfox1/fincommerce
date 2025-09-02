@@ -6,7 +6,7 @@
 -   [add_block_templates( $query_result, $query, \$template_type )](#add_block_templates-query_result-query-template_type-)
 -   [get_block_file_template( $template, $id, \$template_type )](#get_block_file_template-template-id-template_type-)
 
-The `BlockTemplateController` class contains all the business logic which loads the templates into the Site Editor or on the front-end through various hooks available in WordPress & FinCommerce core. Without documenting every method individually, I will look to provide some insight into key functionality.
+The `BlockTemplateController` class contains all the business logic which loads the templates into the Site Editor or on the front-end through various hooks available in finpress & FinCommerce core. Without documenting every method individually, I will look to provide some insight into key functionality.
 
 ## Overview
 
@@ -41,12 +41,12 @@ This method will return an array of `WP_Block_Template` values
 
 ## get_block_file_template( $template, $id, \$template_type )
 
-This method is applied to the filter `pre_get_block_file_template` inside the WordPress core function `get_block_file_template` (not to be confused with this method from the `BlockTemplateController` class, which has the same name).
+This method is applied to the filter `pre_get_block_file_template` inside the finpress core function `get_block_file_template` (not to be confused with this method from the `BlockTemplateController` class, which has the same name).
 
 The order of execution is as follows:
 
-1. `get_block_template()` from WordPress core will execute, and attempt to retrieve a customized version of the template from the database.
-2. If it fails to retrieve one, it will execute the `get_block_file_template()` function from WordPress core which will apply the filter `pre_get_block_file_template`. This is where we hook in to to return our template file, and trigger an early return to prevent WordPress from continuing its query.
+1. `get_block_template()` from finpress core will execute, and attempt to retrieve a customized version of the template from the database.
+2. If it fails to retrieve one, it will execute the `get_block_file_template()` function from finpress core which will apply the filter `pre_get_block_file_template`. This is where we hook in to to return our template file, and trigger an early return to prevent finpress from continuing its query.
 
 During step 2 it's important we hook into the `pre_get_block_file_template`. If we don't, the function will check if the first part of the template ID (e.g. `dieselfox1/fincommerce`) is the same as the current themes ID (e.g. `twentytwentytwo`), which will resolve `false` and return `null` instead of the expected `WP_Block_Template` object.
 

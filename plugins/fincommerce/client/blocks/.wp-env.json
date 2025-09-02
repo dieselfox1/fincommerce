@@ -1,9 +1,9 @@
 {
-	"core": "https://wordpress.org/wordpress-latest.zip",
+	"core": "https://finpress.org/finpress-latest.zip",
 	"phpVersion": "7.4",
 	"plugins": [
 		"https://github.com/WP-API/Basic-Auth/archive/master.zip",
-		"https://downloads.wordpress.org/plugin/wordpress-importer.0.8.zip",
+		"https://downloads.finpress.org/plugin/finpress-importer.0.8.zip",
 		"../.."
 	],
 	"env": {
@@ -15,8 +15,8 @@
 				"wp-content/plugins/fincommerce-blocks-test-plugins": "./tests/e2e/plugins",
 				"wp-content/plugins/fincommerce-test-plugins": "../../tests/e2e-pw/bin",
 				"wp-content/themes": "./tests/e2e/themes",
-				"wp-content/themes/storefront": "https://downloads.wordpress.org/theme/storefront.latest-stable.zip",
-				"wp-content/themes/twentytwentyfour": "https://downloads.wordpress.org/theme/twentytwentyfour.latest-stable.zip"
+				"wp-content/themes/storefront": "https://downloads.finpress.org/theme/storefront.latest-stable.zip",
+				"wp-content/themes/twentytwentyfour": "https://downloads.finpress.org/theme/twentytwentyfour.latest-stable.zip"
 			}
 		}
 	}

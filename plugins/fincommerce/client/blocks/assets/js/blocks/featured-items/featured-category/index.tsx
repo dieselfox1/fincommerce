@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { folderStarred } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { Spinner, Button } from '@wordpress/components';
-import { close } from '@wordpress/icons';
+import { createElement } from '@finpress/element';
+import { Spinner, Button } from '@finpress/components';
+import { close } from '@finpress/icons';
 
 type SuffixProps = {
 	value: string;

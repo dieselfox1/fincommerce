@@ -199,13 +199,13 @@ class WC_Customer_Download_Log_Data_Store implements WC_Customer_Download_Log_Da
 			$query[] = $wpdb->prepare( 'LIMIT %d, %d', absint( $args['limit'] ) * absint( $args['page'] - 1 ), absint( $args['limit'] ) );
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		if ( $is_count ) {
 			return absint( $wpdb->get_var( implode( ' ', $query ) ) );
 		}
 
 		$raw_download_logs = $wpdb->get_results( implode( ' ', $query ) );
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		switch ( $args['return'] ) {
 			case 'ids':

@@ -70,7 +70,7 @@ class StyleAttributesUtils {
 	 * @return (string)
 	 */
 	public static function get_spacing_value( $spacing_value ) {
-		// Used following code as reference: https://github.com/WordPress/gutenberg/blob/cff6d70d6ff5a26e212958623dc3130569f95685/lib/block-supports/layout.php/#L219-L225.
+		// Used following code as reference: https://github.com/finpress/gutenberg/blob/cff6d70d6ff5a26e212958623dc3130569f95685/lib/block-supports/layout.php/#L219-L225.
 		if ( is_string( $spacing_value ) && strpos( $spacing_value, 'var:preset|spacing|' ) !== false ) {
 			$spacing_value = str_replace( 'var:preset|spacing|', '', $spacing_value );
 			return sprintf( 'var(--wp--preset--spacing--%s)', $spacing_value );

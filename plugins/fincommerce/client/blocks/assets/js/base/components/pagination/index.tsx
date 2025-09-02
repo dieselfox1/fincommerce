@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import { Label } from '@fincommerce/blocks-components';
 

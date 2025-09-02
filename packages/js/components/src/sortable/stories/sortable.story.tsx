@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import { DragEventHandler } from 'react';
-import { Icon, wordpress } from '@wordpress/icons';
+import { Icon, finpress } from '@finpress/icons';
 
 /**
  * Internal dependencies
@@ -40,7 +40,7 @@ export const CustomHandle = () => {
 		return (
 			<>
 				<SortableHandle>
-					<Icon icon={ wordpress } size={ 16 } />
+					<Icon icon={ finpress } size={ 16 } />
 				</SortableHandle>
 				{ children }
 			</>

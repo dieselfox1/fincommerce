@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createRegistry } from '@wordpress/data';
-import { controls } from '@wordpress/data-controls';
+import { createRegistry } from '@finpress/data';
+import { controls } from '@finpress/data-controls';
 
 /**
  * Internal dependencies
@@ -15,7 +15,7 @@ import type { SettingsState } from '../types';
 import { Setting, SettingsGroup } from '../types';
 // @ts-expect-error WP core data doesn't explicitly export the actions
 // eslint-disable-next-line @fincommerce/dependency-group
-import createLocksActions from '@wordpress/core-data/build/locks/actions';
+import createLocksActions from '@finpress/core-data/build/locks/actions';
 
 /**
  * Creates a fresh registry and store for testing.

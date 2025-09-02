@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { addQueryArgs } from '@wordpress/url';
-import apiFetch from '@wordpress/api-fetch';
+import { addQueryArgs } from '@finpress/url';
+import apiFetch from '@finpress/api-fetch';
 
 import {
 	apiFetch as controlsApiFetch,
 	dispatch as deprecatedDispatch,
 	select,
-} from '@wordpress/data-controls';
-import { controls } from '@wordpress/data';
+} from '@finpress/data-controls';
+import { controls } from '@finpress/data';
 
 /**
  * Internal dependencies

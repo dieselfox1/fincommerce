@@ -1,4 +1,4 @@
-FROM wordpress:cli-php7.4
+FROM finpress:cli-php7.4
 
 USER root
 

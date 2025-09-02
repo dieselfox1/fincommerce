@@ -3,7 +3,7 @@
  */
 import { Text } from '@fincommerce/experimental';
 import interpolateComponents from '@automattic/interpolate-components';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { Link } from '@fincommerce/components';
 
 export const TermsOfService = ( { buttonText } ) => (
@@ -26,7 +26,7 @@ export const TermsOfService = ( { buttonText } ) => (
 			components: {
 				tosLink: (
 					<Link
-						href={ 'https://wordpress.com/tos/' }
+						href={ 'https://finpress.com/tos/' }
 						target="_blank"
 						type="external"
 					>

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useContext, useMemo, useState, useEffect } from '@wordpress/element';
+import { useContext, useMemo, useState, useEffect } from '@finpress/element';
 import { DependencyList } from 'react';
 
 /**

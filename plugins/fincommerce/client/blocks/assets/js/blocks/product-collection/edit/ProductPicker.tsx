@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Icon, info } from '@wordpress/icons';
+import { __, sprintf } from '@finpress/i18n';
+import { Icon, info } from '@finpress/icons';
 import ProductControl from '@fincommerce/editor-components/product-control';
 import type { SelectedOption } from '@fincommerce/block-hocs';
-import { createInterpolateElement } from '@wordpress/element';
+import { createInterpolateElement } from '@finpress/element';
 import {
 	Placeholder,
 	__experimentalHStack as HStack,
 	__experimentalText as Text,
-} from '@wordpress/components';
-import { useBlockProps } from '@wordpress/block-editor';
+} from '@finpress/components';
+import { useBlockProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

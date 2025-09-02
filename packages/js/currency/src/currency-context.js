@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createContext } from '@wordpress/element';
-import { applyFilters } from '@wordpress/hooks';
+import { createContext } from '@finpress/element';
+import { applyFilters } from '@finpress/hooks';
 import { getSetting } from '@fincommerce/settings';
 
 /**

@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { PanelBody } from '@wordpress/components';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { PanelBody } from '@finpress/components';
+import type { BlockEditProps } from '@finpress/blocks';
 import {
 	InspectorControls,
 	useBlockProps,
-	// @ts-expect-error useInnerBlocksProps is not exported from @wordpress/block-editor
+	// @ts-expect-error useInnerBlocksProps is not exported from @finpress/block-editor
 	useInnerBlocksProps,
 	store as blockEditorStore,
 	Warning,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -35,8 +35,8 @@ export default function Edit( {
 }: Props ) {
 	const hasNextPreviousBlocks = useSelect(
 		( select ) => {
-			// TODO: remove the @ts-expect-error comment and typecast for innerBlock once we upgrade @wordpress/block-editor types version.
-			// @ts-expect-error We're using an outdated types of `@wordpress/block-editor`, so the property 'getBlocks' does not exist on type returned by select.
+			// TODO: remove the @ts-expect-error comment and typecast for innerBlock once we upgrade @finpress/block-editor types version.
+			// @ts-expect-error We're using an outdated types of `@finpress/block-editor`, so the property 'getBlocks' does not exist on type returned by select.
 			const { getBlocks } = select( blockEditorStore );
 			const innerBlocks = getBlocks( clientId );
 			/**
@@ -61,7 +61,7 @@ export default function Edit( {
 
 	// Get the Discussion settings
 	const pageComments = useSelect( ( select ) => {
-		// @ts-expect-error We're using an outdated types of `@wordpress/block-editor`, so the property 'getSettings' does not exist on type returned by select.
+		// @ts-expect-error We're using an outdated types of `@finpress/block-editor`, so the property 'getSettings' does not exist on type returned by select.
 		const { getSettings } = select( blockEditorStore );
 		const { __experimentalDiscussionSettings } = getSettings();
 		return __experimentalDiscussionSettings?.pageComments;

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __ } from '@finpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Parse a string suggestion, split apart by where the first matching query is.

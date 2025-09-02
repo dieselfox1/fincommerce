@@ -7,7 +7,7 @@ import {
 	WCUser,
 } from '@fincommerce/data';
 import debugFactory from 'debug';
-import { createRoot } from '@wordpress/element';
+import { createRoot } from '@finpress/element';
 
 /**
  * Internal dependencies

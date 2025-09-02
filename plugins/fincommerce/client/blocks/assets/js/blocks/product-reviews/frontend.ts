@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getElement, store } from '@wordpress/interactivity';
+import { getElement, store } from '@finpress/interactivity';
 
 function isValidLink( ref: HTMLElement | null ): ref is HTMLAnchorElement {
 	return (
@@ -24,7 +24,7 @@ const productReviewsStore = {
 			}
 
 			const { actions } = yield import(
-				'@wordpress/interactivity-router'
+				'@finpress/interactivity-router'
 			);
 
 			yield actions.navigate( ref.href );

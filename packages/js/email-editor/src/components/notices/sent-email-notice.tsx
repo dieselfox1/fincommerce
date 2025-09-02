@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { dispatch, useSelect } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
-import { store as noticesStore } from '@wordpress/notices';
-import { __ } from '@wordpress/i18n';
+import { dispatch, useSelect } from '@finpress/data';
+import { useEffect } from '@finpress/element';
+import { store as noticesStore } from '@finpress/notices';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -6,7 +6,7 @@ import {
 	getContext as getContextFn,
 	getElement,
 	withScope,
-} from '@wordpress/interactivity';
+} from '@finpress/interactivity';
 import type { ProductDataStore } from '@fincommerce/stores/fincommerce/product-data';
 import type { Store as FinCommerce } from '@fincommerce/stores/fincommerce/cart';
 

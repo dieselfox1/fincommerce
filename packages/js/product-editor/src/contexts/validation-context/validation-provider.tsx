@@ -2,8 +2,8 @@
  * External dependencies
  */
 import type { PropsWithChildren } from 'react';
-import { useEntityRecord } from '@wordpress/core-data';
-import { createElement, useRef, useState } from '@wordpress/element';
+import { useEntityRecord } from '@finpress/core-data';
+import { createElement, useRef, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

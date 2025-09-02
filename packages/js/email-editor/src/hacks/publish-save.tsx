@@ -6,9 +6,9 @@ import {
 	createPortal,
 	useCallback,
 	useRef,
-} from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+} from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -44,7 +44,7 @@ export function PublishSave() {
 		useSelect(
 			( select ) => ( {
 				hasNonPostEntityChanges:
-					// @ts-expect-error hasNonPostEntityChanges is not typed in @types/wordpress__editor
+					// @ts-expect-error hasNonPostEntityChanges is not typed in @types/finpress__editor
 					select( editorStore ).hasNonPostEntityChanges(),
 				isEditedPostDirty: select( editorStore ).isEditedPostDirty(),
 				isEditingTemplate:

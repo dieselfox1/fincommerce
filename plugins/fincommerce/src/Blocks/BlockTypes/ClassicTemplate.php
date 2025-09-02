@@ -216,7 +216,7 @@ class ClassicTemplate extends AbstractDynamicBlock {
 		printf(
 			'<%1$s %2$s>%3$s</%1$s>',
 			'h1',
-			get_block_wrapper_attributes(), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			get_block_wrapper_attributes(), // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			esc_html__( 'Order confirmation', 'fincommerce' )
 		);
 

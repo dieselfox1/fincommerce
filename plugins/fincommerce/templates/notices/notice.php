@@ -26,7 +26,7 @@ if ( ! $notices ) {
 ?>
 
 <?php foreach ( $notices as $notice ) : ?>
-	<div class="fincommerce-info"<?php echo wc_get_notice_data_attr( $notice ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> role="status">
+	<div class="fincommerce-info"<?php echo wc_get_notice_data_attr( $notice ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?> role="status">
 		<?php echo wc_kses_notice( $notice['notice'] ); ?>
 	</div>
 <?php endforeach; ?>

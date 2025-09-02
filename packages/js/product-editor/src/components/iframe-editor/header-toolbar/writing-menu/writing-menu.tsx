@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { useDispatch } from '@wordpress/data';
-import { MenuGroup } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { useViewportMatch } from '@wordpress/compose';
-import { createElement } from '@wordpress/element';
+import { useDispatch } from '@finpress/data';
+import { MenuGroup } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { useViewportMatch } from '@finpress/compose';
+import { createElement } from '@finpress/element';
 import {
 	PreferenceToggleMenuItem,
 	store as preferencesStore,
 	// @ts-expect-error missing types.
-} from '@wordpress/preferences';
+} from '@finpress/preferences';
 
 export function WritingMenu() {
 	const { set: setPreference } = useDispatch( preferencesStore );

@@ -31,7 +31,7 @@ class Loader {
 	protected static $classes = array();
 
 	/**
-	 * WordPress capability required to use analytics features.
+	 * finpress capability required to use analytics features.
 	 *
 	 * @var string
 	 */
@@ -86,7 +86,7 @@ class Loader {
 
 		/*
 		* Remove the emoji script as it always defaults to replacing emojis with Twemoji images.
-		* Gutenberg has also disabled emojis. More on that here -> https://github.com/WordPress/gutenberg/pull/6151
+		* Gutenberg has also disabled emojis. More on that here -> https://github.com/finpress/gutenberg/pull/6151
 		*/
 		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 
@@ -244,19 +244,19 @@ class Loader {
 		}
 
 		// The JITMs won't be shown in the Onboarding Wizard.
-		$is_onboarding   = isset( $_GET['path'] ) && '/setup-wizard' === wc_clean( wp_unslash( $_GET['path'] ) ); // phpcs:ignore WordPress.Security.NonceVerification
+		$is_onboarding   = isset( $_GET['path'] ) && '/setup-wizard' === wc_clean( wp_unslash( $_GET['path'] ) ); // phpcs:ignore finpress.Security.NonceVerification
 		$maybe_hide_jitm = $is_onboarding ? '-hide' : '';
 
 		echo '<div class="fincommerce-layout__jitm' . sanitize_html_class( $maybe_hide_jitm ) . '" id="jp-admin-notices"></div>';
 
 		// Wrap the notices in a hidden div to prevent flickering before
-		// they are moved elsewhere in the page by WordPress Core.
+		// they are moved elsewhere in the page by finpress Core.
 		echo '<div class="fincommerce-layout__notice-list-hide" id="wp__notice-list">';
 
 		if ( PageController::is_admin_page() ) {
-			// Capture all notices and hide them. WordPress Core looks for
+			// Capture all notices and hide them. finpress Core looks for
 			// `.wp-header-end` and appends notices after it if found.
-			// https://github.com/WordPress/WordPress/blob/f6a37e7d39e2534d05b9e542045174498edfe536/wp-admin/js/common.js#L737 .
+			// https://github.com/finpress/finpress/blob/f6a37e7d39e2534d05b9e542045174498edfe536/wp-admin/js/common.js#L737 .
 			echo '<div class="wp-header-end" id="fincommerce-layout__notice-catcher"></div>';
 		}
 	}

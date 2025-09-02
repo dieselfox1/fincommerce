@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { type BlockInstance } from '@wordpress/blocks';
+import { type BlockInstance } from '@finpress/blocks';
 
 export type GetBlocksClientIds = ( blocks: BlockInstance[] ) => string[];
 export type IsBlockType = ( block: BlockInstance ) => boolean;

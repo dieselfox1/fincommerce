@@ -1,4 +1,4 @@
-name: 'Release: Upload release to WordPress.org'
+name: 'Release: Upload release to finpress.org'
 on:
   workflow_dispatch:
     inputs:
@@ -7,7 +7,7 @@ on:
         required: true
         default: ''
       confirm-update:
-        description: 'I confirm that I want to upload a release to WordPress.org.'
+        description: 'I confirm that I want to upload a release to finpress.org.'
         type: boolean
         required: true
         default: false
@@ -20,7 +20,7 @@ concurrency:
 jobs:
   get-and-validate-release-asset:
     name: Get intended release details
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     permissions:
       contents: write # Required to fetch draft releases for some reason. See https://github.com/cli/cli/issues/9076#issuecomment-2146148572.
     outputs:
@@ -68,9 +68,9 @@ jobs:
             }
 
             // Find asset.
-            const asset = release.assets.find( asset => 'woocommerce.zip' === asset.name );
+            const asset = release.assets.find( asset => 'fincommerce.zip' === asset.name );
             if ( ! asset ) {
-              core.setFailed( `No 'woocommerce.zip' asset found for release '${ release.tag_name }'.` );
+              core.setFailed( `No 'fincommerce.zip' asset found for release '${ release.tag_name }'.` );
               return;
             }
 
@@ -91,24 +91,24 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh release download "$RELEASE_TAG" --pattern "woocommerce.zip" --output woocommerce.zip
+          gh release download "$RELEASE_TAG" --pattern "fincommerce.zip" --output fincommerce.zip
 
-          if [ ! -e "woocommerce.zip" ]; then
-            echo "::error::Could not download 'woocommerce.zip' for release '$RELEASE_TAG'."
+          if [ ! -e "fincommerce.zip" ]; then
+            echo "::error::Could not download 'fincommerce.zip' for release '$RELEASE_TAG'."
             exit 1
           fi
 
           # Unzip asset.
-          unzip -qq woocommerce.zip
+          unzip -qq fincommerce.zip
 
           # Check that asset matches the release tag name.
-          if [ ! -e "woocommerce/woocommerce.php" ]; then
-            echo "::error::Asset in release tag '$RELEASE_TAG' is not a valid WooCommerce build."
+          if [ ! -e "fincommerce/fincommerce.php" ]; then
+            echo "::error::Asset in release tag '$RELEASE_TAG' is not a valid fincommerce build."
             exit 1
           fi
 
           # Check that version in ZIP matches tag.
-          version_in_zip=$(cat woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1)
+          version_in_zip=$(cat fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1)
           if [ "$version_in_zip" != "$RELEASE_TAG" ]; then
             echo "::error::Version in ZIP ($version_in_zip) does not match release number ($RELEASE_TAG)."
             exit 1
@@ -125,7 +125,7 @@ jobs:
           fi
 
           # Check whether this release should replace trunk in SVN.
-          svn_plugin_version=$( svn cat "$SVN_URL/trunk/woocommerce.php" --username "$SVN_USERNAME" --password "$SVN_PASSWORD" |  grep -oP '(?<=Version: )(.+)' | head -n1 )
+          svn_plugin_version=$( svn cat "$SVN_URL/trunk/fincommerce.php" --username "$SVN_USERNAME" --password "$SVN_PASSWORD" |  grep -oP '(?<=Version: )(.+)' | head -n1 )
           if [ -z "$svn_plugin_version" ]; then
             echo "::error::Could not determine current version number in SVN."
             exit 1
@@ -138,8 +138,8 @@ jobs:
           fi
 
   commit:
-    name: Commit release to WordPress.org
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    name: Commit release to finpress.org
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs: [get-and-validate-release-asset]
     permissions:
       contents: write # Required to fetch draft releases for some reason. See https://github.com/cli/cli/issues/9076#issuecomment-2146148572.
@@ -154,18 +154,18 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh release download "$RELEASE_TAG" --pattern "woocommerce.zip" --output woocommerce.zip
+          gh release download "$RELEASE_TAG" --pattern "fincommerce.zip" --output fincommerce.zip
 
-          if [[ ! -e "woocommerce.zip" ]]; then
-            echo "::error::Could not download 'woocommerce.zip' for release '$RELEASE_TAG'."
+          if [[ ! -e "fincommerce.zip" ]]; then
+            echo "::error::Could not download 'fincommerce.zip' for release '$RELEASE_TAG'."
             exit 1
           fi
 
           # Unzip asset.
-          unzip -qq woocommerce.zip -d release/
+          unzip -qq fincommerce.zip -d release/
 
           # One last sanity check.
-          if [[ ! -e "release/woocommerce/woocommerce.php" ]]; then
+          if [[ ! -e "release/fincommerce/fincommerce.php" ]]; then
             echo "::error::Incorrect release asset."
             exit 1
           fi
@@ -195,7 +195,7 @@ jobs:
 
           # Remove previous trunk files.
           rm -rf trunk/*
-          cp -a ../release/woocommerce/. trunk
+          cp -a ../release/fincommerce/. trunk
 
           # SVN add/delete new or removed files as needed.
           svn status | grep '^?' | awk '{print $2}' | xargs -r svn add
@@ -231,7 +231,7 @@ jobs:
           fi
 
           svn import \
-            ../release/woocommerce \
+            ../release/fincommerce \
             "$SVN_URL/tags/$RELEASE_TAG" \
             --username "$SVN_USERNAME" \
             --password "$SVN_PASSWORD" \

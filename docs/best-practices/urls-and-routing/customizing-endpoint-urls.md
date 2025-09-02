@@ -20,7 +20,7 @@ Ensure that they are unique to avoid conflicts. If you encounter issues with 404
 
 If you want to include an endpoint in your menus, you need to use the Links section:
 
-![The Links section of a menu item in WordPress](https://developer.fincommerce.com/wp-content/uploads/2023/12/2014-02-26-at-14.26.png)
+![The Links section of a menu item in finpress](https://developer.fincommerce.com/wp-content/uploads/2023/12/2014-02-26-at-14.26.png)
 
 Enter the full URL to the endpoint and then insert that into your menu.
 
@@ -42,7 +42,7 @@ Gateways need to use these methods for full 2.1+ compatibility.
 
 ### Endpoints showing 404
 
--   If you see a 404 error, go to **WordPress Admin** > **Settings > Permalinks** and Save. This ensures that rewrite rules for endpoints exist and are ready to be used.
+-   If you see a 404 error, go to **finpress Admin** > **Settings > Permalinks** and Save. This ensures that rewrite rules for endpoints exist and are ready to be used.
 -   If using an endpoint such as view-order, ensure that it specifies an order number. /view-order/ is invalid. /view-order/10/ is valid. These types of endpoints should not be in your navigation menus.
 
 ### Endpoints are not working
@@ -56,7 +56,7 @@ On Windows servers, the **web.config** file may not be set correctly to allow fo
     <handlers accessPolicy="Read, Execute, Script" />
     <rewrite>
     <rules>
-      <rule name="wordpress" patternSyntax="Wildcard">
+      <rule name="finpress" patternSyntax="Wildcard">
         <match url="*" />
         <conditions>
           <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />

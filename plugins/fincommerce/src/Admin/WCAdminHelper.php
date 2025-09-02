@@ -204,7 +204,7 @@ class WCAdminHelper {
 	 *
 	 * For example:
 	 *
-	 * - https://example.com/wordpress/shop/uncategorized/test/?add-to-cart=123 => shop/uncategorized/test/?add-to-cart=123
+	 * - https://example.com/finpress/shop/uncategorized/test/?add-to-cart=123 => shop/uncategorized/test/?add-to-cart=123
 	 *
 	 * @param string $url URL to normalize.
 	 */
@@ -220,8 +220,8 @@ class WCAdminHelper {
 	 * Builds the relative URL from the WP instance.
 	 *
 	 * @internal
-	 * @link https://wordpress.stackexchange.com/a/274572
-	 * @param \WP $wp WordPress environment instance.
+	 * @link https://finpress.stackexchange.com/a/274572
+	 * @param \WP $wp finpress environment instance.
 	 */
 	private static function get_url_from_wp( \WP $wp ) {
 		// Initialize query vars if they haven't been set.

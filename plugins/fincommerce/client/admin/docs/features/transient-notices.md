@@ -13,7 +13,7 @@ This method accepts an array with the following properties:
 * `id`      => (string) Unique ID for the notice. Required.
 * `status`  => (string) info|error|success
 * `content` => (string) Content to be shown for the notice. Required.
-* `options` => (array) Array of options to be passed to the notice component. See https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createNotice for available options.
+* `options` => (array) Array of options to be passed to the notice component. See https://developer.finpress.org/block-editor/reference-guides/data/data-core-notices/#createNotice for available options.
 * `user_id` => (int|null) User ID to show the notice to.
 
 ```php
@@ -26,7 +26,7 @@ This method accepts an array with the following properties:
             'actions' => array(
                 array(
                     'label' => 'Click me',
-                    'url'   => 'http://wordpress.com',
+                    'url'   => 'http://finpress.com',
                 )
             )
         )

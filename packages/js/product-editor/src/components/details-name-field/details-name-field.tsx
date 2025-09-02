@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { Button, TextControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { cleanForSlug } from '@wordpress/url';
+import { Button, TextControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { cleanForSlug } from '@finpress/url';
 import { useFormContext } from '@fincommerce/components';
 import { Product } from '@fincommerce/data';
 import {
 	useState,
 	createElement,
 	createInterpolateElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

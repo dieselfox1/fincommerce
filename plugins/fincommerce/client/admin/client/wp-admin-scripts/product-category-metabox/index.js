@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createRoot, Suspense, lazy } from '@wordpress/element';
+import { createRoot, Suspense, lazy } from '@finpress/element';
 
 /**
  * Internal dependencies

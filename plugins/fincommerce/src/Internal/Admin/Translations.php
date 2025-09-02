@@ -246,7 +246,7 @@ class Translations {
 	 *
 	 * This function combines JSON translation data auto-extracted by GlotPress
 	 * from Webpack-generated JS chunks into a single file. This is necessary
-	 * since the JS chunks are not known to WordPress via wp_register_script()
+	 * since the JS chunks are not known to finpress via wp_register_script()
 	 * and wp_set_script_translations().
 	 */
 	private function generate_translation_strings() {
@@ -331,7 +331,7 @@ class Translations {
 	 * This function combines JSON translation data auto-extracted by GlotPress
 	 * from Webpack-generated JS chunks into a single file that can be used in
 	 * subsequent requests. This is necessary since the JS chunks are not known
-	 * to WordPress via wp_register_script() and wp_set_script_translations().
+	 * to finpress via wp_register_script() and wp_set_script_translations().
 	 *
 	 * @param Language_Pack_Upgrader $instance Upgrader instance.
 	 * @param array                  $hook_extra Info about the upgraded language packs.

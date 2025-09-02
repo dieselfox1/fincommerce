@@ -244,7 +244,7 @@ class AssetDataRegistry {
 		if ( has_filter( 'fincommerce_shared_settings' ) ) {
 			$error_handle  = 'deprecated-shared-settings-error';
 			$error_message = '`fincommerce_shared_settings` filter in Blocks is deprecated. See https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/docs/contributors/block-assets.md';
-			// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter,WordPress.WP.EnqueuedResourceParameters.MissingVersion
+			// phpcs:ignore finpress.WP.EnqueuedResourceParameters.NotInFooter,finpress.WP.EnqueuedResourceParameters.MissingVersion
 			wp_register_script( $error_handle, '' );
 			wp_enqueue_script( $error_handle );
 			wp_add_inline_script(
@@ -360,7 +360,7 @@ class AssetDataRegistry {
 	}
 
 	/**
-	 * Callback for registering the data script via WordPress API.
+	 * Callback for registering the data script via finpress API.
 	 *
 	 * @return void
 	 */
@@ -411,7 +411,7 @@ class AssetDataRegistry {
 	 */
 	protected function add_data( $key, $data ) {
 		if ( ! is_string( $key ) ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error( esc_html__( 'Key for the data being registered must be a string', 'fincommerce' ), E_USER_WARNING );
 			return;
 		}
@@ -419,7 +419,7 @@ class AssetDataRegistry {
 			return;
 		}
 		if ( isset( $this->data[ $key ] ) ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error( esc_html__( 'Overriding existing data with an already registered key is not allowed', 'fincommerce' ), E_USER_WARNING );
 			return;
 		}

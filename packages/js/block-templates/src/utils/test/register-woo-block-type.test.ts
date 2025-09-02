@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 /**
  * Internal dependencies
  */
 import { registerWooBlockType } from '../register-woo-block-type';
 
-jest.mock( '@wordpress/blocks', () => ( {
+jest.mock( '@finpress/blocks', () => ( {
 	registerBlockType: jest.fn(),
 } ) );
 

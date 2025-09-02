@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockEditProps } from '@wordpress/blocks';
+import { BlockEditProps } from '@finpress/blocks';
 
 /**
  * Internal dependencies

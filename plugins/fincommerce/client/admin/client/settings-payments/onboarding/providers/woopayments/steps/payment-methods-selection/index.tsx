@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button, Icon } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Button, Icon } from '@finpress/components';
 import { RecommendedPaymentMethod } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useState, useEffect, useMemo, useRef } from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
-import { close } from '@wordpress/icons';
+import { useState, useEffect, useMemo, useRef } from '@finpress/element';
+import apiFetch from '@finpress/api-fetch';
+import { close } from '@finpress/icons';
 import clsx from 'clsx';
 
 /**

@@ -3,7 +3,7 @@
  */
 import { renderHook } from '@testing-library/react-hooks/dom';
 import { waitFor } from '@testing-library/react';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import 'whatwg-fetch'; /* eslint-disable-line import/no-unresolved */ /* To make sure Response is available */
 
 /**
@@ -18,7 +18,7 @@ import '../../data-multichannel'; // To ensure the store is registered
 
 type Channel = Pick< RegisteredChannel, 'slug' | 'title' | 'icon' >;
 
-jest.mock( '@wordpress/api-fetch', () =>
+jest.mock( '@finpress/api-fetch', () =>
 	jest.fn( ( { path } ) => {
 		const total = 9;
 

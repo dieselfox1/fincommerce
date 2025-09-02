@@ -107,7 +107,7 @@ test.describe(
 					.click();
 
 				await page
-					.getByPlaceholder( 'wordpress@example.com' )
+					.getByPlaceholder( 'finpress@example.com' )
 					.fill( 'merchant@example.com' );
 				await page.getByLabel( 'Opt-in to receive tips,' ).uncheck();
 				await page.getByRole( 'button', { name: 'Continue' } ).click();
@@ -271,7 +271,7 @@ test.describe(
 					.click();
 
 				await page
-					.getByPlaceholder( 'wordpress@example.com' )
+					.getByPlaceholder( 'finpress@example.com' )
 					.fill( 'merchant@example.com' );
 				await page.getByLabel( 'Opt-in to receive tips,' ).uncheck();
 				await page.getByRole( 'button', { name: 'Continue' } ).click();

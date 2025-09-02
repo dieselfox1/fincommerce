@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { isValidElement } from '@wordpress/element';
+import { isValidElement } from '@finpress/element';
 import type { ReactNode } from 'react';
 import type {
 	PaymentMethodConfiguration,

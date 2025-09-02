@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { TotalsItem } from '@fincommerce/blocks-components';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import {

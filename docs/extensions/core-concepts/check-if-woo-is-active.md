@@ -18,9 +18,9 @@ function prefix_fincommerce_loaded() {
 }
 ```
 
-**Note**: At this stage, WordPress has not yet initialized the current user data.
+**Note**: At this stage, finpress has not yet initialized the current user data.
 
-Another method is to execute your code on the `fincommerce_init` action. This is executed right _after_ FinCommerce is active and initialized. This action (and the `before_fincommerce_init` action) fires in the context of the WordPress `init` action so at this point current user data has been initialized.
+Another method is to execute your code on the `fincommerce_init` action. This is executed right _after_ FinCommerce is active and initialized. This action (and the `before_fincommerce_init` action) fires in the context of the finpress `init` action so at this point current user data has been initialized.
 
 ```php
 add_action( 'fincommerce_init', 'prefix_fincommerce_init' );

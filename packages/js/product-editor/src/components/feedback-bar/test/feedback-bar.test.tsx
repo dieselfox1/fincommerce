@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

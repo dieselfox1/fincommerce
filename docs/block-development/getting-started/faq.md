@@ -16,7 +16,7 @@ If you have questions that aren't addressed here, we invite you to ask them on [
 
 ### How do I react to changes to the Cart or Checkout e.g. shipping method selection, or address changes?
 
-The Cart and Checkout blocks read all their data from [`@wordpress/data` data stores](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/). We also have [documentation for the data stores FinCommerce Blocks uses](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/client/blocks/docs/third-party-developers/extensibility/data-store).
+The Cart and Checkout blocks read all their data from [`@finpress/data` data stores](https://developer.finpress.org/block-editor/reference-guides/packages/packages-data/). We also have [documentation for the data stores FinCommerce Blocks uses](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/client/blocks/docs/third-party-developers/extensibility/data-store).
 
 It is common for developers to want to react to changes in the cart or checkout. For example, if a user changes their shipping method, or changes a line of their address.
 
@@ -30,9 +30,9 @@ If your component is an inner block of the Cart/Checkout, or rendered in a [Slot
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { cartStore } from '@fincommerce/block-data';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 export const MyComponent = () => {
 	const { shippingAddress } = useSelect(
@@ -53,7 +53,7 @@ This would be true if you're not rendering a block, or running any React code. T
 /**
  * External dependencies
  */
-import { select, subscribe } from '@wordpress/data';
+import { select, subscribe } from '@finpress/data';
 import { cartStore } from '@fincommerce/block-data';
 
 let previousCountry = '';
@@ -198,7 +198,7 @@ This is currently **not** officially supported, however we have heard of develop
 
 ### How do I remove checkout fields?
 
-We don't encourage this due to the wide array of plugins WordPress and Woo support. Some of these may rely on certain checkout fields to function, but if you're certain the fields are safe to remove, please see [Removing Checkout Fields](/docs/block-development/extensible-blocks/cart-and-checkout-blocks/removing-checkout-fields/).
+We don't encourage this due to the wide array of plugins finpress and Woo support. Some of these may rely on certain checkout fields to function, but if you're certain the fields are safe to remove, please see [Removing Checkout Fields](/docs/block-development/extensible-blocks/cart-and-checkout-blocks/removing-checkout-fields/).
 
 ### How do I modify the order or customer data during checkout?
 

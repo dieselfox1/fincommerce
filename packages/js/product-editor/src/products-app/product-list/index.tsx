@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { DataViews, View } from '@wordpress/dataviews';
+import { DataViews, View } from '@finpress/dataviews';
 import {
 	createElement,
 	useState,
@@ -9,13 +9,13 @@ import {
 	useCallback,
 	useEffect,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { Product, ProductQuery, productsStore } from '@fincommerce/data';
-import { drawerRight, seen, unseen } from '@wordpress/icons';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
-import { store as coreStore } from '@wordpress/core-data';
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
+import { drawerRight, seen, unseen } from '@finpress/icons';
+import { privateApis as routerPrivateApis } from '@finpress/router';
+import { store as coreStore } from '@finpress/core-data';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
 import clsx from 'clsx';
 import {
 	__experimentalHeading as Heading,
@@ -24,10 +24,10 @@ import {
 	__experimentalVStack as VStack,
 	FlexItem,
 	Button,
-} from '@wordpress/components';
+} from '@finpress/components';
 // @ts-expect-error missing type.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { privateApis as editorPrivateApis } from '@wordpress/editor';
+import { privateApis as editorPrivateApis } from '@finpress/editor';
 
 /**
  * Internal dependencies

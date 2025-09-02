@@ -5,11 +5,11 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { useInstanceId } from '@wordpress/compose';
-import { useEffect, useRef, useMemo } from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/block-editor';
+import { useInstanceId } from '@finpress/compose';
+import { useEffect, useRef, useMemo } from '@finpress/element';
+import { Button } from '@finpress/components';
+import { useSelect } from '@finpress/data';
 import fastDeepEqual from 'fast-deep-equal/es6';
 
 /**
@@ -133,7 +133,7 @@ const ProductCollectionContent = ( {
 	}
 
 	/**
-	 * Because of issue https://github.com/WordPress/gutenberg/issues/7342,
+	 * Because of issue https://github.com/finpress/gutenberg/issues/7342,
 	 * We are using this workaround to set default attributes.
 	 */
 	useEffect(

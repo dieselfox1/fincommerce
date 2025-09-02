@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { TaskType } from '@fincommerce/data';
 /**
  * Internal dependencies

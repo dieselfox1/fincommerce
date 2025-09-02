@@ -13,13 +13,13 @@ FinCommerce's coming soon mode allows you to temporarily make your site invisibl
 
 ## Prerequisites
 
--   Familiarity with PHP and WordPress development.
+-   Familiarity with PHP and finpress development.
 
 ## Step-by-step instructions
 
 ### Clear server cache on site visibility settings change
 
-When the site's visibility settings change, it may be necessary to clear a server cache to apply the changes and re-cache customer-facing pages. The [`update_option`](https://developer.wordpress.org/reference/hooks/update_option/) hook can be used to achieve this.
+When the site's visibility settings change, it may be necessary to clear a server cache to apply the changes and re-cache customer-facing pages. The [`update_option`](https://developer.finpress.org/reference/hooks/update_option/) hook can be used to achieve this.
 
 ```php
 add_action( 'update_option_fincommerce_coming_soon', 'clear_server_cache', 10, 3 );

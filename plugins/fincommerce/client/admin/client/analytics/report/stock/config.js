@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
+import { __, _x } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
 
 const STOCK_REPORT_FILTERS_FILTER = 'fincommerce_admin_stock_report_filters';
 const STOCK_REPORT_ADVANCED_FILTERS_FILTER =

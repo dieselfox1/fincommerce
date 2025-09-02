@@ -24,7 +24,7 @@ import {
 	fetchWpComPost,
 	editWpComPostContent,
 } from '../../lib/draft-post';
-import { getWordpressComAuthToken } from '../../lib/oauth-helper';
+import { getfinpressComAuthToken } from '../../lib/oauth-helper';
 import { generateContributors } from '../../lib/contributors';
 import { editPostHTML } from '../../lib/edit-post';
 
@@ -88,7 +88,7 @@ const program = new Command()
 			'http://localhost:3000/oauth';
 		const authToken =
 			isOutputOnly ||
-			( await getWordpressComAuthToken(
+			( await getfinpressComAuthToken(
 				clientId,
 				clientSecret,
 				siteId,

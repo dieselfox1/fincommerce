@@ -246,7 +246,7 @@ class ListTable extends WP_List_Table {
 			$search_label .= '</span>';
 		}
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo wp_kses_post(
 			"
 			<div class='wrap'>
@@ -511,7 +511,7 @@ class ListTable extends WP_List_Table {
 	 * Implements filtering of orders by customer.
 	 */
 	private function set_customer_args() {
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$customer = (int) wp_unslash( $_GET['_customer_user'] ?? '' );
 
 		if ( $customer < 1 ) {
@@ -571,7 +571,7 @@ class ListTable extends WP_List_Table {
 	 * Implements filtering of orders by created_via value.
 	 */
 	private function set_created_via_args(): void {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$created_via = sanitize_text_field( wp_unslash( $_GET['_created_via'] ?? '' ) );
 
 		if ( empty( $created_via ) ) {
@@ -589,7 +589,7 @@ class ListTable extends WP_List_Table {
 	 * @return void
 	 */
 	public function created_via_filter() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$current_created_via = isset( $_GET['_created_via'] ) ? sanitize_text_field( wp_unslash( $_GET['_created_via'] ) ) : '';
 
 		$created_via_options = array(
@@ -777,7 +777,7 @@ class ListTable extends WP_List_Table {
 			$output = ob_get_clean();
 
 			if ( ! empty( $output ) ) {
-				echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo $output; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				submit_button( __( 'Filter', 'fincommerce' ), '', 'filter_action', false, array( 'id' => 'order-query-submit' ) );
 			}
 		}
@@ -858,7 +858,7 @@ class ListTable extends WP_List_Table {
 
 		$orders_table   = esc_sql( OrdersTableDataStore::get_orders_table_name() );
 		$min_max_months = $wpdb->get_row(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is escaped above.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is escaped above.
 			$wpdb->prepare(
 				"
 					SELECT MIN( t.date_created_gmt ) as min_date_gmt,
@@ -870,7 +870,7 @@ class ListTable extends WP_List_Table {
 				$this->order_type,
 				OrderStatus::TRASH
 			)
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		);
 
 		/**
@@ -963,7 +963,7 @@ class ListTable extends WP_List_Table {
 		$user_string = '';
 		$user_id     = '';
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['_customer_user'] ) ) {
 			$user_id = absint( $_GET['_customer_user'] );
 			$user    = get_user_by( 'id', $user_id );
@@ -980,7 +980,7 @@ class ListTable extends WP_List_Table {
 		// Note: use of htmlspecialchars (below) is to prevent XSS when rendered by selectWoo.
 		?>
 		<select class="wc-customer-search" name="_customer_user" data-placeholder="<?php esc_attr_e( 'Filter by registered customer', 'fincommerce' ); ?>" data-allow_clear="true">
-			<option value="<?php echo esc_attr( $user_id ); ?>" selected="selected"><?php echo htmlspecialchars( wp_kses_post( $user_string ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></option>
+			<option value="<?php echo esc_attr( $user_id ); ?>" selected="selected"><?php echo htmlspecialchars( wp_kses_post( $user_string ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></option>
 		</select>
 		<?php
 	}
@@ -1337,7 +1337,7 @@ class ListTable extends WP_List_Table {
 		 */
 		$actions = apply_filters( 'fincommerce_admin_order_actions', $actions, $order );
 
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo wc_render_action_buttons( $actions );
 
 		/**
@@ -1358,7 +1358,7 @@ class ListTable extends WP_List_Table {
 	 * @return void
 	 */
 	private function print_hidden_form_fields(): void {
-		echo '<input type="hidden" name="page" value="wc-orders' . ( 'shop_order' === $this->order_type ? '' : '--' . $this->order_type ) . '" >'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<input type="hidden" name="page" value="wc-orders' . ( 'shop_order' === $this->order_type ? '' : '--' . $this->order_type ) . '" >'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 		$state_params = array(
 			'paged',
@@ -1470,7 +1470,7 @@ class ListTable extends WP_List_Table {
 			$screen = get_current_screen()->id;
 
 			/**
-			 * This action is documented in /wp-admin/edit.php (it is a core WordPress hook).
+			 * This action is documented in /wp-admin/edit.php (it is a core finpress hook).
 			 *
 			 * @since 7.2.0
 			 *
@@ -1478,7 +1478,7 @@ class ListTable extends WP_List_Table {
 			 * @param string $action      The current bulk action.
 			 * @param int[]  $ids         IDs for the orders to be processed.
 			 */
-			$custom_sendback = apply_filters( "handle_bulk_actions-{$screen}", $redirect_to, $action, $ids ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+			$custom_sendback = apply_filters( "handle_bulk_actions-{$screen}", $redirect_to, $action, $ids ); // phpcs:ignore finpress.NamingConventions.ValidHookName.UseUnderscores
 		}
 
 		if ( ! empty( $custom_sendback ) ) {
@@ -1649,7 +1649,7 @@ class ListTable extends WP_List_Table {
 	 * @return void
 	 */
 	public function enqueue_scripts(): void {
-		echo $this->get_order_preview_template(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $this->get_order_preview_template(); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		wp_enqueue_script( 'wc-orders' );
 	}
 
@@ -1738,7 +1738,7 @@ class ListTable extends WP_List_Table {
 							<div class="inner">
 								{{{ data.actions_html }}}
 
-								<a class="button button-primary button-large" aria-label="<?php esc_attr_e( 'Edit this order', 'fincommerce' ); ?>" href="<?php echo $order_edit_url_placeholder; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>"><?php esc_html_e( 'Edit', 'fincommerce' ); ?></a>
+								<a class="button button-primary button-large" aria-label="<?php esc_attr_e( 'Edit this order', 'fincommerce' ); ?>" href="<?php echo $order_edit_url_placeholder; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>"><?php esc_html_e( 'Edit', 'fincommerce' ); ?></a>
 							</div>
 						</footer>
 					</section>

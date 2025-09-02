@@ -5,11 +5,11 @@ import {
 	usePaymentMethodInterface,
 	useStoreEvents,
 } from '@fincommerce/base-context/hooks';
-import { cloneElement, useCallback } from '@wordpress/element';
+import { cloneElement, useCallback } from '@finpress/element';
 import { useEditorContext } from '@fincommerce/base-context';
 import clsx from 'clsx';
 import { RadioControlAccordion } from '@fincommerce/blocks-components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { getPaymentMethods } from '@fincommerce/blocks-registry';
 import { paymentStore } from '@fincommerce/block-data';
 

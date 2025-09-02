@@ -46,7 +46,7 @@ class WC_Tests_Payment_Gateway_COD extends WC_Unit_Test_Case {
 		$form_fields = $gateway->get_form_fields();
 
 		// Clean up!
-		$GLOBALS['current_screen'] = null; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['current_screen'] = null; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		unset( $_REQUEST['page'] );
 		unset( $_REQUEST['tab'] );
 		unset( $_REQUEST['section'] );

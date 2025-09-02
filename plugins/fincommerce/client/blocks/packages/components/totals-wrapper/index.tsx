@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Children } from '@wordpress/element';
+import { Children } from '@finpress/element';
 import type { ReactNode } from 'react';
 
 /**

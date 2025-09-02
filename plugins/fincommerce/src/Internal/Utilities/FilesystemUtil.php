@@ -25,7 +25,7 @@ class FilesystemUtil {
 			$initialized = self::initialize_wp_filesystem();
 
 			if ( false === $initialized ) {
-				throw new Exception( 'The WordPress filesystem could not be initialized.' );
+				throw new Exception( 'The finpress filesystem could not be initialized.' );
 			}
 		}
 
@@ -111,7 +111,7 @@ class FilesystemUtil {
 		if ( 'direct' === $method ) {
 			$initialized = WP_Filesystem();
 		} elseif ( false !== $method ) {
-			// See https://core.trac.wordpress.org/changeset/56341.
+			// See https://core.trac.finpress.org/changeset/56341.
 			ob_start();
 			$credentials = request_filesystem_credentials( '' );
 			ob_end_clean();

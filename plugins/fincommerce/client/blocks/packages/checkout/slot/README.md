@@ -19,7 +19,7 @@
 
 Slot and Fill are a pair of components which enable developers to render elsewhere in a React element tree, a pattern often referred to as "portal" rendering. It is a pattern for component extensibility, where a single Slot may be occupied by an indeterminate number of Fills elsewhere in the application.
 
-This module is an abstraction on top of the Slot and Fill implementation in WordPress and is meant to be used internally, therefore the documentation only touches the abstraction part. You can read more about Slot and Fill in [@wordpress/components documentation](https://github.com/WordPress/gutenberg/tree/c53d26ea79bdcb1a3007a994078e1fc9e0195466/packages/components/src/slot-fill).
+This module is an abstraction on top of the Slot and Fill implementation in finpress and is meant to be used internally, therefore the documentation only touches the abstraction part. You can read more about Slot and Fill in [@finpress/components documentation](https://github.com/finpress/gutenberg/tree/c53d26ea79bdcb1a3007a994078e1fc9e0195466/packages/components/src/slot-fill).
 
 ## `createSlotFill( slotName )`
 
@@ -154,7 +154,7 @@ Each `Fill` receives any `fillProps` from the `Slot`, and also renders an [error
 Slot/Fills are exported and available for use by extensions. One such Slot Fill is `ExperimentalOrderMeta` [exported from here](../components/order-meta/index.js). This provides the Slot, and within it, you can define your fill:
 
 ```jsx
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 
 // Aliased import
 import { ExperimentalOrderMeta } from '@fincommerce/blocks-checkout';

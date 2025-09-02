@@ -971,7 +971,7 @@ class PaymentGateway {
 
 		// Test for regular plugins.
 		if ( str_starts_with( $gateway_class_filename, wp_normalize_path( WP_PLUGIN_DIR ) ) ) {
-			// For now, all plugins are considered WordPress.org plugins.
+			// For now, all plugins are considered finpress.org plugins.
 			return PaymentsProviders::EXTENSION_TYPE_WPORG;
 		}
 

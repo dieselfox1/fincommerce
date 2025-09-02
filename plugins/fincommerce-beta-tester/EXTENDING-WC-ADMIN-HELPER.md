@@ -6,7 +6,7 @@ helper with your own plugin's test setup code.
 This example adds a new tab:
 
 ```
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 const SuperSekret = () => (
 	<>
@@ -32,7 +32,7 @@ addFilter(
 This example adds a new tool to the existing Options tab:
 
 ```
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 const NewTool = () => (
 	<>
@@ -82,7 +82,7 @@ function your_plugin_area_action() {
 This would be used on the client like this:
 
 ```
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 ...
 const response = await apiFetch( {
     path: '/your-plugin/v1/area/action',

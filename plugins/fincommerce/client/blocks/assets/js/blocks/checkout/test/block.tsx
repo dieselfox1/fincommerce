@@ -4,7 +4,7 @@
 import { render, screen, waitFor, act, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { previewCart } from '@fincommerce/resource-previews';
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 import {
 	cartStore,
 	checkoutStore,
@@ -43,16 +43,16 @@ import Taxes from '@fincommerce/block-library/assets/js/blocks/checkout/inner-bl
 import { defaultCartState } from '@fincommerce/block-library/assets/js/data/cart/default-state';
 import Checkout from '@fincommerce/block-library/assets/js/blocks/checkout/block';
 
-jest.mock( '@wordpress/data', () => {
-	const wpData = jest.requireActual( 'wordpress-data-wp-6-7' );
+jest.mock( '@finpress/data', () => {
+	const wpData = jest.requireActual( 'finpress-data-wp-6-7' );
 	return {
 		__esModule: true,
 		...wpData,
 	};
 } );
 
-jest.mock( '@wordpress/compose', () => ( {
-	...jest.requireActual( '@wordpress/compose' ),
+jest.mock( '@finpress/compose', () => ( {
+	...jest.requireActual( '@finpress/compose' ),
 	useResizeObserver: jest.fn().mockReturnValue( [ null, { width: 0 } ] ),
 } ) );
 
@@ -68,9 +68,9 @@ global.IntersectionObserver = jest.fn().mockImplementation( () => ( {
 	disconnect: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/element', () => {
+jest.mock( '@finpress/element', () => {
 	return {
-		...jest.requireActual( '@wordpress/element' ),
+		...jest.requireActual( '@finpress/element' ),
 		useId: () => {
 			return 'mock-id';
 		},

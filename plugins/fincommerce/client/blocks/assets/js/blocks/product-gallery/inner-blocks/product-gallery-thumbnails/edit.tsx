@@ -3,9 +3,9 @@
  */
 import { PLACEHOLDER_IMG_SRC } from '@fincommerce/settings';
 import type { ProductResponseImageItem } from '@fincommerce/types';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import type { BlockEditProps } from '@wordpress/blocks';
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
+import type { BlockEditProps } from '@finpress/blocks';
+import { useEffect, useRef, useState } from '@finpress/element';
 import { useProduct } from '@fincommerce/entities';
 import clsx from 'clsx';
 

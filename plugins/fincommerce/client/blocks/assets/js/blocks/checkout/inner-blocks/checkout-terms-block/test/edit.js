@@ -8,8 +8,8 @@ import { render, queryByText } from '@testing-library/react';
  */
 import { Edit } from '@fincommerce/block-library/assets/js/blocks/checkout/inner-blocks/checkout-terms-block/edit';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn().mockImplementation( ( fn ) => {
 		const select = () => {
 			return {
@@ -33,8 +33,8 @@ jest.mock( '@wordpress/data', () => ( {
 	} ),
 } ) );
 
-jest.mock( '@wordpress/block-editor', () => ( {
-	...jest.requireActual( '@wordpress/block-editor' ),
+jest.mock( '@finpress/block-editor', () => ( {
+	...jest.requireActual( '@finpress/block-editor' ),
 	useBlockProps: jest.fn(),
 	InspectorControls: jest.fn( ( { children } ) => <div>{ children }</div> ),
 } ) );

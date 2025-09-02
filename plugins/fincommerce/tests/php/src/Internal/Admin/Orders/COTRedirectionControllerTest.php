@@ -123,7 +123,7 @@ class COTRedirectionControllerTest extends \WC_Unit_Test_Case {
 		$this->assertStringContainsString(
 			'/post.php',
 			$redirect_base,
-			'Confirm order editor redirects go to the expected WordPress admin controller.'
+			'Confirm order editor redirects go to the expected finpress admin controller.'
 		);
 
 		$this->assertEquals(
@@ -157,7 +157,7 @@ class COTRedirectionControllerTest extends \WC_Unit_Test_Case {
 		$this->assertStringContainsString(
 			'/edit.php',
 			$redirect_base,
-			'Confirm order list table redirects go to the expected WordPress admin controller.'
+			'Confirm order list table redirects go to the expected finpress admin controller.'
 		);
 
 		$this->assertEquals(

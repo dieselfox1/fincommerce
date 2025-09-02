@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { createElement } from 'react';
-import { Modal } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { Modal } from '@finpress/components';
+import { useState } from '@finpress/element';
 
 export const MockMediaUpload = ( { onSelect, render } ) => {
 	const [ isOpen, setOpen ] = useState( false );

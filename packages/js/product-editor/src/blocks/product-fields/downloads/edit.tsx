@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button, Spinner } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { Button, Spinner } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	createElement,
 	Fragment,
 	createInterpolateElement,
 	useState,
-} from '@wordpress/element';
-import { closeSmall } from '@wordpress/icons';
-import { MediaItem } from '@wordpress/media-utils';
+} from '@finpress/element';
+import { closeSmall } from '@finpress/icons';
+import { MediaItem } from '@finpress/media-utils';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import {
 	ListItem,
@@ -23,7 +23,7 @@ import { Product, ProductDownload } from '@fincommerce/data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityProp } from '@wordpress/core-data';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies
@@ -251,7 +251,7 @@ export function DownloadBlockEdit( {
 											link: (
 												// eslint-disable-next-line jsx-a11y/anchor-has-content
 												<a
-													href="https://codex.wordpress.org/Uploading_Files"
+													href="https://codex.finpress.org/Uploading_Files"
 													target="_blank"
 													rel="noreferrer"
 													onClick={ ( event ) =>

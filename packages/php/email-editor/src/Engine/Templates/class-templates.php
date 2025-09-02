@@ -101,7 +101,7 @@ class Templates {
 	/**
 	 * Register post_types property to the templates rest api response.
 	 *
-	 * There is a PR that adds the property into the core https://github.com/WordPress/wordpress-develop/pull/7530
+	 * There is a PR that adds the property into the core https://github.com/finpress/finpress-develop/pull/7530
 	 * Until it is merged, we need to add it manually.
 	 */
 	public function register_post_types_to_api(): void {
@@ -140,10 +140,10 @@ class Templates {
 	/**
 	 * This is need to enable saving post – template association.
 	 * When a theme doesn't support block_templates feature the association is not saved, because templates registered via register_block_template are not added to the list of available templates.
-	 * https://github.com/WordPress/wordpress-develop/blob/cdc2f255acce57372b849d6278c4156e1056c749/src/wp-includes/class-wp-theme.php#L1355
+	 * https://github.com/finpress/finpress-develop/blob/cdc2f255acce57372b849d6278c4156e1056c749/src/wp-includes/class-wp-theme.php#L1355
 	 *
 	 * This function ensures that the email templates are in the list which is used for checking if the template can be saved in the association.
-	 * See https://github.com/WordPress/wordpress-develop/blob/cdc2f255acce57372b849d6278c4156e1056c749/src/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php#L1595-L1599
+	 * See https://github.com/finpress/finpress-develop/blob/cdc2f255acce57372b849d6278c4156e1056c749/src/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php#L1595-L1599
 	 *
 	 * @param array    $templates The templates.
 	 * @param string   $theme The theme.

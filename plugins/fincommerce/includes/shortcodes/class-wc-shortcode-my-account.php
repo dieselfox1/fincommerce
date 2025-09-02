@@ -80,7 +80,7 @@ class WC_Shortcode_My_Account {
 		}
 
 		// After password reset, add confirmation message.
-		if ( ! empty( $_GET['password-reset'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['password-reset'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			wc_add_notice( __( 'Your password has been reset successfully.', 'fincommerce' ) );
 		}
 
@@ -273,7 +273,7 @@ class WC_Shortcode_My_Account {
 	 *
 	 * Based on retrieve_password() in core wp-login.php.
 	 *
-	 * @uses $wpdb WordPress Database object
+	 * @uses $wpdb finpress Database object
 	 * @return bool True: when finish. False: on error
 	 */
 	public static function retrieve_password() {
@@ -331,7 +331,7 @@ class WC_Shortcode_My_Account {
 			return false;
 		}
 
-		// Get password reset key (function introduced in WordPress 4.4).
+		// Get password reset key (function introduced in finpress 4.4).
 		$key = get_password_reset_key( $user_data );
 
 		// Send email notification.
@@ -344,7 +344,7 @@ class WC_Shortcode_My_Account {
 	/**
 	 * Retrieves a user row based on password reset key and login.
 	 *
-	 * @uses $wpdb WordPress Database object.
+	 * @uses $wpdb finpress Database object.
 	 * @param string $key   Hash to validate sending user's password.
 	 * @param string $login The user login.
 	 * @return WP_User|bool User's database row on success, false for invalid keys

@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { BlockEditProps } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { BlockEditProps } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 import {
 	Flex,
 	FlexItem,
 	PanelBody,
 	RadioControl,
 	ToggleControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

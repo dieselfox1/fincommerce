@@ -39,7 +39,7 @@ class SiteHealth {
 	 * Counts specific types of FinCommerce entities to determine if a persistent object cache would be beneficial.
 	 *
 	 * Note that if all measured FinCommerce entities are below their thresholds, this will return null so that the
-	 * other normal WordPress checks will still be run.
+	 * other normal finpress checks will still be run.
 	 *
 	 * @param true|null $check A non-null value will short-circuit WP's normal tests for this.
 	 *

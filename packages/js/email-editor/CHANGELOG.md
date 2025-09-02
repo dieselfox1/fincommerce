@@ -31,9 +31,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [1.0.0](https://www.npmjs.com/package/@fincommerce/email-editor/v/1.0.0) - 2025-07-09 
 
 -   Patch - Add fallback for Navigator component to the email editor [#58083]
--   Patch - Fix an error with the Email Editor not loading Global Styles for non-admin WordPress users and ensure permissions are correctly checked when required. [#56261]
+-   Patch - Fix an error with the Email Editor not loading Global Styles for non-admin finpress users and ensure permissions are correctly checked when required. [#56261]
 -   Patch - Fix crash in the email editor when a third-party sidebar component throws an error [#58459]
--   Patch - Fix WordPress 6.8 compatibility [#56820]
+-   Patch - Fix finpress 6.8 compatibility [#56820]
 -   Patch - Resolve event handler stacking in `useContentValidation()`. [#58247]
 -   Patch - Add a warning about border units to the email editor. [#58169]
 -   Patch - Remove "Swap template" from email editor [#56829]
@@ -62,7 +62,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Update email editor email preview, switch to template modal and style preview componets [#58078]
 -   Minor - Update telemetry tracking to restore events removed by refactoring components [#58294]
 -   Minor - Added email status toggle in the email editor sidebar. Added the ability to enable/disable transactional emails directly from the email editor [#57953]
--   Refactor email editor to work on top of wordpress/editor Editor component [#57775]
+-   Refactor email editor to work on top of finpress/editor Editor component [#57775]
 -   Refactor the package and its build to be prepared for publishing [#58874]
 
 [See legacy changelogs for previous versions](https://github.com/dieselfox1/fincommerce/blob/68581955106947918d2b17607a01bdfdf22288a9/packages/js/email-editor/CHANGELOG.md).

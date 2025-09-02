@@ -29,7 +29,7 @@ final class ProductFilterPrice extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 */
 	protected function initialize() {
 		parent::initialize();
@@ -204,7 +204,7 @@ final class ProductFilterPrice extends AbstractBlock {
 		unset( $query_vars['min_price'], $query_vars['max_price'] );
 
 		if ( ! empty( $query_vars['meta_query'] ) ) {
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			$query_vars['meta_query'] = ProductCollectionUtils::remove_query_array( $query_vars['meta_query'], 'key', '_price' );
 		}
 

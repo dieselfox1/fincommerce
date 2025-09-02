@@ -61,7 +61,7 @@ class AdminManager {
 		) {
 			return;
 		}
-		//phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		//phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( 'fincommerce_page_wc-settings' === $screen_id && isset( $_GET['section'] ) && 'customer_stock_notifications' !== $_GET['section'] ) {
 			return;
 		}

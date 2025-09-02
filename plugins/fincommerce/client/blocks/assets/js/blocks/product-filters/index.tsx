@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 import { filterThreeLines } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

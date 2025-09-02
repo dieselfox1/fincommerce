@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, Card, CardBody, TextControl } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { Button, Card, CardBody, TextControl } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

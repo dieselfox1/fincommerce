@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG } from '@wordpress/primitives';
+import { SVG } from '@finpress/primitives';
 
 const customerAccountStyleAlt = (
 	<SVG xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 25 25">

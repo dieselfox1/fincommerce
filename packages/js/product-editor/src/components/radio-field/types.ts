@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { RadioControl } from '@wordpress/components';
+import { RadioControl } from '@finpress/components';
 
 export type RadioFieldProps = Omit<
 	typeof RadioControl,

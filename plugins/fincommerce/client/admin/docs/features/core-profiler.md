@@ -11,7 +11,7 @@ There are 4 pages in the Core Profiler:
 3. Business Information - Store Details and Location
 4. Extensions - Optional extensions that may be useful to the merchant
 
-If the merchant chooses to install any extensions that require Jetpack, they will then be redirected to WordPress.com to login to Jetpack after the extensions page. Upon completion of that, they will be returned back to the FinCommerce Admin homescreen which contains the Task List. The Task List will provide next steps for the merchant to continue with their store setup.
+If the merchant chooses to install any extensions that require Jetpack, they will then be redirected to finpress.com to login to Jetpack after the extensions page. Upon completion of that, they will be returned back to the FinCommerce Admin homescreen which contains the Task List. The Task List will provide next steps for the merchant to continue with their store setup.
 
 ## Development
 
@@ -23,7 +23,7 @@ Refer to the [XState Dev Tooling](xstate.md) documentation for information on ho
 
 The state machine for the Core Profiler is centrally located at `./client/core-profiler/index.tsx`, and is responsible for managing the state of the entire feature. It is responsible for rendering the correct page based on the current state, handling events that are triggered by the user, triggering side effects such as API calls and handling the responses. It also handles updating the browser URL state as well as responding to changes in it.
 
-While working on this feature, bear in mind that the state machine should interact with WordPress and FinCommerce via actions and services, and the UI code should not be responsible for any API calls or interaction with WordPress Data Stores. This allows us to easily render the UI pages in isolation, for example use in Storybook. The UI pages should only send events back to the state machine in order to trigger side effects.
+While working on this feature, bear in mind that the state machine should interact with finpress and FinCommerce via actions and services, and the UI code should not be responsible for any API calls or interaction with finpress Data Stores. This allows us to easily render the UI pages in isolation, for example use in Storybook. The UI pages should only send events back to the state machine in order to trigger side effects.
 
 ## Saving and retrieving data
 
@@ -40,7 +40,7 @@ This stores the name of the store, which is used in the store header and in the 
         business_choice: "im_just_starting_my_business" | "im_already_selling" | "im_setting_up_a_store_for_a_client" | undefined
         business_extensions: Plugin[] // slugs of plugins that were installed, e.g 'fincommerce-payments', 'jetpack'
         selling_online_answer: "yes_im_selling_online" | "no_im_selling_offline" | "im_selling_both_online_and_offline" | undefined
-        selling_platforms: ("amazon" | "adobe_commerce" | "big_cartel" | "big_commerce" | "ebay" | "ecwid" | "etsy" | "facebook_marketplace" | "google_shopping" | "pinterest" | "shopify" | "square" | "squarespace" | "wix" | "wordpress")[] | undefined
+        selling_platforms: ("amazon" | "adobe_commerce" | "big_cartel" | "big_commerce" | "ebay" | "ecwid" | "etsy" | "facebook_marketplace" | "google_shopping" | "pinterest" | "shopify" | "square" | "squarespace" | "wix" | "finpress")[] | undefined
         is_store_country_set: true | false
         is_plugins_page_skipped: true | false // if the user has clicked skip on the Plugins page
         skipped: true | false // if the user has clicked skip on the intro-opt-in page
@@ -131,7 +131,7 @@ This is used to retrieve the list of countries that will be shown in the Country
 
 - `resolveSelect( countriesStore ).geolocate()`
 
-This is used to retrieve the country that the store believes it is in. It makes an API call to the WordPress.com geolocation API, if permitted. Otherwise it will not be used.
+This is used to retrieve the country that the store believes it is in. It makes an API call to the finpress.com geolocation API, if permitted. Otherwise it will not be used.
 
 - `resolveSelect( pluginsStore ).isJetpackConnected()`
 

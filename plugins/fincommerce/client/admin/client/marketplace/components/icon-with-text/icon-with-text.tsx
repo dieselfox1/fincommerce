@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 import { ReactElement } from 'react';
 
 /**

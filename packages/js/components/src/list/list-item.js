@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { ENTER } from '@wordpress/keycodes';
+import { createElement } from '@finpress/element';
+import { ENTER } from '@finpress/keycodes';
 import PropTypes from 'prop-types';
 
 /**

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { resolveSelect } from '@wordpress/data';
+import { resolveSelect } from '@finpress/data';
 import { productsStore, Product } from '@fincommerce/data';
 
 export type State = {

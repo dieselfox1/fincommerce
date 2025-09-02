@@ -6,7 +6,7 @@ import {
 	createContext,
 	useContext,
 	useMemo,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 export type LayoutContextType = {
 	layoutString: string;

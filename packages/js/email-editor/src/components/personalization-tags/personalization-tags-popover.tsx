@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { Popover, Button, TextControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { useEffect, useState } from '@finpress/element';
+import { Popover, Button, TextControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 type PersonalizationTagsPopoverProps = {
 	contentRef: React.RefObject< HTMLElement >;

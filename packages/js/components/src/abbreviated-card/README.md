@@ -5,7 +5,7 @@ Use `AbbreviatedCard` to display an abbreviated card element.
 ## Usage
 
 ```jsx
-import { Icon, box } from '@wordpress/icons';
+import { Icon, box } from '@finpress/icons';
 
 <AbbreviatedCard
 	href="#"

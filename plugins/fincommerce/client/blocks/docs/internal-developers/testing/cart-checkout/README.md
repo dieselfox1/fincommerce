@@ -41,15 +41,15 @@ Depending on how far you will test, there are certain requirements, in general
 you will need the following:
 
 Basic:
-- A WordPress website running FinCommerce and the ability to install a plugin and edit pages.
+- A finpress website running FinCommerce and the ability to install a plugin and edit pages.
 
 Intermediate:
 - A code editor and/or the ability to modify plugin PHP files.
   This could be either locally if you're hosting the code there or it could from the Plugins -> Plugin Editor
-  WordPress admin page.
+  finpress admin page.
 
 Advanced:
-- A locally installed version of WordPress.
+- A locally installed version of finpress.
 - [Node 12.16.1 and npm 6.14.4 installed](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/package.json#L149-L150).
 - Ability to edit JS source files when needed.
 -->

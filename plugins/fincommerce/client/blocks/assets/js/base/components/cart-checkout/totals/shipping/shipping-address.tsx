@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	formatShippingAddress,
 	hasShippingRate,
@@ -12,9 +12,9 @@ import {
 	ShippingCalculatorPanel,
 	ShippingCalculatorContext,
 } from '@fincommerce/base-components/cart-checkout';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
-import { createInterpolateElement, useContext } from '@wordpress/element';
+import { createInterpolateElement, useContext } from '@finpress/element';
 import { getSetting } from '@fincommerce/settings';
 
 /**

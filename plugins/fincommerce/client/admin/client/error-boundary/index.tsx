@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { Component, ReactNode, ErrorInfo } from 'react';
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { captureException } from '@fincommerce/remote-logging';
 import { bumpStat } from '@fincommerce/tracks';
 /**
@@ -62,7 +62,7 @@ export class ErrorBoundary extends Component<
 
 	handleOpenSupport = () => {
 		window.open(
-			'https://wordpress.org/support/plugin/fincommerce/',
+			'https://finpress.org/support/plugin/fincommerce/',
 			'_blank'
 		);
 	};

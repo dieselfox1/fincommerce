@@ -501,14 +501,14 @@ CREATE TABLE $meta_table_name (
 		$sql      = "SELECT $select FROM $table $where $order_by $limit $offset";
 
 		// Prepare the query.
-		$prepared_sql = empty( $where_values ) ? $sql : $wpdb->prepare( $sql, $where_values ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$prepared_sql = empty( $where_values ) ? $sql : $wpdb->prepare( $sql, $where_values ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		// Execute the query.
 		if ( 'count' === $args['return'] ) {
-			return (int) $wpdb->get_var( $prepared_sql ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			return (int) $wpdb->get_var( $prepared_sql ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		}
 
-		$results = $wpdb->get_results( $prepared_sql, ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$results = $wpdb->get_results( $prepared_sql, ARRAY_A ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		if ( empty( $results ) || ! is_array( $results ) ) {
 			return array();
 		}
@@ -548,11 +548,11 @@ CREATE TABLE $meta_table_name (
 		$table    = $this->get_table_name();
 		$format   = array_fill( 0, count( $product_ids ), '%d' );
 		$query_in = '(' . implode( ',', $format ) . ')';
-		$sql      = $wpdb->prepare( // phpcs:ignore WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
-			"SELECT 1 FROM %i WHERE product_id IN $query_in AND status = %s LIMIT 1", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$sql      = $wpdb->prepare( // phpcs:ignore finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
+			"SELECT 1 FROM %i WHERE product_id IN $query_in AND status = %s LIMIT 1", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			array( $table, ...$product_ids, NotificationStatus::ACTIVE )
 		);
-		return (int) $wpdb->get_var( $sql ) > 0; // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return (int) $wpdb->get_var( $sql ) > 0; // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -571,11 +571,11 @@ CREATE TABLE $meta_table_name (
 		global $wpdb;
 
 		$table = $this->get_table_name();
-		$sql   = $wpdb->prepare( // phpcs:ignore WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
-			'SELECT 1 FROM %i WHERE product_id = %d AND user_email = %s AND status IN (%s, %s) LIMIT 1', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$sql   = $wpdb->prepare( // phpcs:ignore finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
+			'SELECT 1 FROM %i WHERE product_id = %d AND user_email = %s AND status IN (%s, %s) LIMIT 1', // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			array( $table, $product_id, $email, NotificationStatus::ACTIVE, NotificationStatus::PENDING )
 		);
-		return (int) $wpdb->get_var( $sql ) > 0; // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return (int) $wpdb->get_var( $sql ) > 0; // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -594,11 +594,11 @@ CREATE TABLE $meta_table_name (
 		global $wpdb;
 
 		$table = $this->get_table_name();
-		$sql   = $wpdb->prepare( // phpcs:ignore WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
-			'SELECT 1 FROM %i WHERE product_id = %d AND user_id = %d AND status IN (%s, %s) LIMIT 1', // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$sql   = $wpdb->prepare( // phpcs:ignore finpress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
+			'SELECT 1 FROM %i WHERE product_id = %d AND user_id = %d AND status IN (%s, %s) LIMIT 1', // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			array( $table, $product_id, $user_id, NotificationStatus::ACTIVE, NotificationStatus::PENDING )
 		);
-		return (int) $wpdb->get_var( $sql ) > 0; // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return (int) $wpdb->get_var( $sql ) > 0; // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

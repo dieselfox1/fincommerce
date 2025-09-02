@@ -2,11 +2,11 @@
  * External dependencies
  */
 import React from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useLocation } from 'react-router-dom';
 import { getHistory, getNewPath, getQuery } from '@fincommerce/navigation';
-import { getQueryArg } from '@wordpress/url';
-import { dispatch } from '@wordpress/data';
+import { getQueryArg } from '@finpress/url';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

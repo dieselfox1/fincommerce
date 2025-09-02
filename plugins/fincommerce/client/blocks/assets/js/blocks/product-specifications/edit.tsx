@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { useBlockProps, InspectorControls } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
 import { useQueryLoopProductContextValidation } from '@fincommerce/base-hooks';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { optionsStore, Product, productsStore } from '@fincommerce/data';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+import { PanelBody, ToggleControl } from '@finpress/components';
 
 /**
  * Internal dependencies

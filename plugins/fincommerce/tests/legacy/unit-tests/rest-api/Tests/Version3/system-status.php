@@ -55,7 +55,7 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Fetches the System Status Report data and caches it.
-	 * @param  int $user The ID of a WordPress user to switch to before fetching the data.
+	 * @param  int $user The ID of a finpress user to switch to before fetching the data.
 	 * @return Array An array of the data returned by the System Status Report endpoint.
 	 */
 	private function fetch_or_get_system_status_data_for_user( int $user ) {
@@ -218,7 +218,7 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 		$theme        = (array) $this->fetch_or_get_system_status_data_for_user( self::$administrator_user )['theme'];
 
 		$this->assertEquals( 14, count( $theme ) );
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$this->assertEquals( $active_theme->Name, $theme['name'] );
 	}
 
@@ -540,9 +540,9 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 			$mocked_response = array(
 				'response' => array( 'code' => 200 ),
 			);
-		} elseif ( 'https://api.wordpress.org/themes/info/1.0/' === $url ) {
+		} elseif ( 'https://api.finpress.org/themes/info/1.0/' === $url ) {
 			$mocked_response = array(
-				'body'     => 'O:8:"stdClass":12:{s:4:"name";s:7:"Default";s:4:"slug";s:7:"default";s:7:"version";s:5:"1.7.2";s:11:"preview_url";s:29:"https://wp-themes.com/default";s:6:"author";s:15:"wordpressdotorg";s:14:"screenshot_url";s:61:"//ts.w.org/wp-content/themes/default/screenshot.png?ver=1.7.2";s:6:"rating";d:100;s:11:"num_ratings";s:1:"3";s:10:"downloaded";i:296618;s:12:"last_updated";s:10:"2010-06-14";s:8:"homepage";s:37:"https://wordpress.org/themes/default/";s:13:"download_link";s:55:"https://downloads.wordpress.org/theme/default.1.7.2.zip";}',
+				'body'     => 'O:8:"stdClass":12:{s:4:"name";s:7:"Default";s:4:"slug";s:7:"default";s:7:"version";s:5:"1.7.2";s:11:"preview_url";s:29:"https://wp-themes.com/default";s:6:"author";s:15:"finpressdotorg";s:14:"screenshot_url";s:61:"//ts.w.org/wp-content/themes/default/screenshot.png?ver=1.7.2";s:6:"rating";d:100;s:11:"num_ratings";s:1:"3";s:10:"downloaded";i:296618;s:12:"last_updated";s:10:"2010-06-14";s:8:"homepage";s:37:"https://finpress.org/themes/default/";s:13:"download_link";s:55:"https://downloads.finpress.org/theme/default.1.7.2.zip";}',
 				'response' => array( 'code' => 200 ),
 			);
 		}

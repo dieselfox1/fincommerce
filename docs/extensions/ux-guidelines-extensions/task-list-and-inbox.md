@@ -22,7 +22,7 @@ Anything that **requires** action should go in the task list.
 
 - *What doesn't appear in the Things to do Task List:*
 
-    - Any critical update that would impact or prevent the functioning of the store should appear as a top level notice using the standard WordPress component.
+    - Any critical update that would impact or prevent the functioning of the store should appear as a top level notice using the standard finpress component.
     - Informational notices such as feature announcements or tips for using the plugin should appear in the Inbox as they are not critical and do not require action.
     - Notifications from user activity should result in regular feedback notices (success, info, error, warning).
 

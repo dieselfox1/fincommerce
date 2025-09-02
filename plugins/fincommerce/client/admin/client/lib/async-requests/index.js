@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { addQueryArgs } from '@wordpress/url';
-import apiFetch from '@wordpress/api-fetch';
+import { __, sprintf } from '@finpress/i18n';
+import { addQueryArgs } from '@finpress/url';
+import apiFetch from '@finpress/api-fetch';
 import { identity } from 'lodash';
 import { getIdsFromQuery } from '@fincommerce/navigation';
 import { NAMESPACE } from '@fincommerce/data';

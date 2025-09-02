@@ -32,7 +32,7 @@ const initialValues = { firstName: '' };
 
 ### Fields structure
 
-Please reference the [WordPress settings API documentation](https://developer.fincommerce.com/docs/settings-api/) to better understand the structure expected for the fields property. This component accepts the object returned via the `settings` property when querying a gateway via the API, or simply the array provided by `Object.values(settings)`.
+Please reference the [finpress settings API documentation](https://developer.fincommerce.com/docs/settings-api/) to better understand the structure expected for the fields property. This component accepts the object returned via the `settings` property when querying a gateway via the API, or simply the array provided by `Object.values(settings)`.
 
 ### Currently Supported Types
 

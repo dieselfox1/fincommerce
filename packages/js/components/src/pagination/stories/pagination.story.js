@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { createElement, useState } from '@wordpress/element';
+import { createElement, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

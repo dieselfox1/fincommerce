@@ -2,16 +2,16 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useRef } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { useRef } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import {
 	InspectorControls,
 	RichText,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import PageSelector from '@fincommerce/editor-components/page-selector';
-import { PanelBody, ToggleControl, TextControl } from '@wordpress/components';
+import { PanelBody, ToggleControl, TextControl } from '@finpress/components';
 import { CHECKOUT_PAGE_ID } from '@fincommerce/block-settings';
 import { ReturnToCartButton } from '@fincommerce/base-components/cart-checkout';
 import EditableButton from '@fincommerce/editor-components/editable-button';

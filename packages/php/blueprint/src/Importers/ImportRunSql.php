@@ -12,7 +12,7 @@ use Automattic\FinCommerce\Blueprint\UseWPFunctions;
  * Processes SQL execution steps in the Blueprint.
  *
  * Handles the execution of SQL queries with safety checks to prevent
- * unauthorized modifications to sensitive WordPress data.
+ * unauthorized modifications to sensitive finpress data.
  *
  * @package Automattic\FinCommerce\Blueprint\Importers
  */
@@ -88,7 +88,7 @@ class ImportRunSql implements StepProcessor {
 		$wpdb->query( 'START TRANSACTION' );
 
 		try {
-			$query_result = $wpdb->query( $sql ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$query_result = $wpdb->query( $sql ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 			$last_error = $wpdb->last_error;
 			if ( $last_error ) {

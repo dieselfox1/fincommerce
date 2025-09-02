@@ -1,27 +1,27 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /* eslint-disable @typescript-eslint/naming-convention */
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { memo, useMemo, useState } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { memo, useMemo, useState } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import {
 	BlockContextProvider,
 	__experimentalUseBlockPreview as useBlockPreview,
 	useBlockProps,
 	useInnerBlocksProps,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { Spinner } from '@wordpress/components';
-import { store as coreStore } from '@wordpress/core-data';
+} from '@finpress/block-editor';
+import { Spinner } from '@finpress/components';
+import { store as coreStore } from '@finpress/core-data';
 import { ProductCollectionAttributes } from '@fincommerce/blocks/product-collection/types';
 import { getSettingWithCoercion } from '@fincommerce/settings';
 import { isNumber, ProductResponseItem } from '@fincommerce/types';
 import { ProductDataContextProvider } from '@fincommerce/shared-context';
 import { withProduct } from '@fincommerce/block-hocs';
-import type { BlockEditProps, BlockInstance } from '@wordpress/blocks';
+import type { BlockEditProps, BlockInstance } from '@finpress/blocks';
 
 /**
  * Internal dependencies

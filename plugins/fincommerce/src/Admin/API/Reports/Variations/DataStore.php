@@ -471,7 +471,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			 */
 			apply_filters( 'experimental_fincommerce_analytics_variations_additional_clauses', $query_args, $this->subquery );
 
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 			$db_records_count = (int) $wpdb->get_var(
 				"SELECT COUNT(*) FROM (
 					{$this->subquery->get_query_statement()}
@@ -495,7 +495,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$variations_query = $this->subquery->get_query_statement();
 		}
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.NotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.NotPrepared */
 		$product_data = $wpdb->get_results(
 			$variations_query,
 			ARRAY_A

@@ -23,15 +23,15 @@ concurrency:
   group: release-compile-changelog-${{ inputs.version }}
 
 env:
-    GIT_COMMITTER_NAME: 'WooCommerce Bot'
-    GIT_COMMITTER_EMAIL: 'no-reply@woocommerce.com'
-    GIT_AUTHOR_NAME: 'WooCommerce Bot'
-    GIT_AUTHOR_EMAIL: 'no-reply@woocommerce.com'
+    GIT_COMMITTER_NAME: 'fincommerce Bot'
+    GIT_COMMITTER_EMAIL: 'no-reply@fincommerce.com'
+    GIT_AUTHOR_NAME: 'fincommerce Bot'
+    GIT_AUTHOR_EMAIL: 'no-reply@fincommerce.com'
 
 jobs:
   build-prep:
     name: Create changelog PR
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     permissions:
       contents: write
       pull-requests: write
@@ -129,9 +129,9 @@ jobs:
         run: |
           git fetch origin ${SELECTED_BRANCH}
           git checkout ${SELECTED_BRANCH}
-          current_version=$( cat plugins/woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
+          current_version=$( cat plugins/fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
 
-          echo "Current version from woocommerce.php: '$current_version'"
+          echo "Current version from fincommerce.php: '$current_version'"
           echo "Input version: '$VERSION'"
 
           if [[ "$current_version" != "$VERSION"* ]]; then
@@ -179,7 +179,7 @@ jobs:
             if [[ "$VERSION" == *"-"* || "$VERSION" =~ \.0$ ]]; then
               git checkout ${SELECTED_BRANCH}
 
-              if sed -n '/== Changelog ==/,$p' plugins/woocommerce/readme.txt | grep -Fq '**WooCommerce**'; then
+              if sed -n '/== Changelog ==/,$p' plugins/fincommerce/readme.txt | grep -Fq '**fincommerce**'; then
                 APPEND_CHANGELOG="--append-changelog"
               fi
 

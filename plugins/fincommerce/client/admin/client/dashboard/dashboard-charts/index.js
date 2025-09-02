@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Fragment, useState } from '@wordpress/element';
+import { Fragment, useState } from '@finpress/element';
 import LineGraphIcon from 'gridicons/dist/line-graph';
 import StatsAltIcon from 'gridicons/dist/stats-alt';
 import PropTypes from 'prop-types';
-import { Button, NavigableMenu, SelectControl } from '@wordpress/components';
+import { Button, NavigableMenu, SelectControl } from '@finpress/components';
 
 import {
 	EllipsisMenu,

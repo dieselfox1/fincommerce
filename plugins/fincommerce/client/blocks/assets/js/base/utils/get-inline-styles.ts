@@ -3,9 +3,9 @@
  */
 import clsx from 'clsx';
 import { paramCase as kebabCase } from 'change-case';
-import { getCSSRules } from '@wordpress/style-engine';
+import { getCSSRules } from '@finpress/style-engine';
 import { isObject } from '@fincommerce/types';
-import type { Style as StyleEngineProperties } from '@wordpress/style-engine/src/types';
+import type { Style as StyleEngineProperties } from '@finpress/style-engine/src/types';
 
 /**
  * Returns the inline styles to add depending on the style object

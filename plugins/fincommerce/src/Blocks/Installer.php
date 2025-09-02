@@ -103,7 +103,7 @@ class Installer {
 			return true;
 		}
 
-		$wpdb->query( $create_sql ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( $create_sql ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		return in_array( $table_name, $wpdb->get_col( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table_name ), 0 ), true );
 	}

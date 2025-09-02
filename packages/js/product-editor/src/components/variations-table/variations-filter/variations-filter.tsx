@@ -6,23 +6,23 @@ import {
 	ProductAttributeTerm,
 	experimentalProductAttributeTermsStore,
 } from '@fincommerce/data';
-import { useDebounce, useInstanceId } from '@wordpress/compose';
-import { resolveSelect } from '@wordpress/data';
-import { createElement, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { useDebounce, useInstanceId } from '@finpress/compose';
+import { resolveSelect } from '@finpress/data';
+import { createElement, useState } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	Icon,
 	chevronDown,
 	chevronUp,
 	search as searchIcon,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 import {
 	Button,
 	CheckboxControl,
 	Dropdown,
 	__experimentalInputControl as InputControl,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

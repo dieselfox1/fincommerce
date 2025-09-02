@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { productsStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 const PUBLISHED_PRODUCTS_QUERY_PARAMS = {
 	status: 'publish' as const,

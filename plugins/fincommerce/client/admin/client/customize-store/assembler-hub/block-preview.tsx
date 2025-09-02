@@ -1,4 +1,4 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/release/16.4/packages/block-editor/src/components/block-preview/index.js
+// Reference: https://github.com/finpress/gutenberg/blob/release/16.4/packages/block-editor/src/components/block-preview/index.js
 
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
@@ -6,9 +6,9 @@
  * External dependencies
  */
 // @ts-ignore No types for this exist yet.
-import { BlockEditorProvider, EditorSettings } from '@wordpress/block-editor';
-import { memo, useContext } from '@wordpress/element';
-import { BlockInstance } from '@wordpress/blocks';
+import { BlockEditorProvider, EditorSettings } from '@finpress/block-editor';
+import { memo, useContext } from '@finpress/element';
+import { BlockInstance } from '@finpress/blocks';
 
 /**
  * Internal dependencies

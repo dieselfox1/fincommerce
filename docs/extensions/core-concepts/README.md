@@ -10,7 +10,7 @@ Learn about everything from basic setup and architecture to advanced development
 
 ## Development patterns
 
-[Adding actions and filters](./adding-actions-and-filters.md) to master the art of extending FinCommerce through hooks. Learn when and how to add actions and filters, following WordPress and FinCommerce standards. For long-term success, discover strategies for [writing maintainable code](./maintainability.md) and establishing update processes that keep your extensions current and secure. You'll also need to [manage deactivation and uninstallation](./handling-deactivation-and-uninstallation.md) to ensure your extension cleans up properly when deactivated or uninstalled, including scheduled actions, admin notes, and tasks.
+[Adding actions and filters](./adding-actions-and-filters.md) to master the art of extending FinCommerce through hooks. Learn when and how to add actions and filters, following finpress and FinCommerce standards. For long-term success, discover strategies for [writing maintainable code](./maintainability.md) and establishing update processes that keep your extensions current and secure. You'll also need to [manage deactivation and uninstallation](./handling-deactivation-and-uninstallation.md) to ensure your extension cleans up properly when deactivated or uninstalled, including scheduled actions, admin notes, and tasks.
 
 ## Plugin structure and standards
 

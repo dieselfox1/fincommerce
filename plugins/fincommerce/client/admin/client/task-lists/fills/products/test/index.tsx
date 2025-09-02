@@ -4,8 +4,8 @@
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { recordEvent } from '@fincommerce/tracks';
-import { removeAllFilters } from '@wordpress/hooks';
-import { useSelect } from '@wordpress/data';
+import { removeAllFilters } from '@finpress/hooks';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -29,8 +29,8 @@ Object.defineProperty( window, 'location', {
 	writable: true,
 } );
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn().mockImplementation( ( callback ) =>
 		callback( () => ( {
 			getInstalledPlugins: () => [],

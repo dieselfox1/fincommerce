@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import type { BlockAttributes } from '@wordpress/blocks';
-import { isRTL } from '@wordpress/i18n';
+import type { BlockAttributes } from '@finpress/blocks';
+import { isRTL } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	useBlockProps,
@@ -16,7 +16,7 @@ import {
 	/* @ts-ignore module is exported as experimental */
 	__experimentalGetShadowClassesAndStyles as useShadowProps,
 	/* eslint-enable */
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

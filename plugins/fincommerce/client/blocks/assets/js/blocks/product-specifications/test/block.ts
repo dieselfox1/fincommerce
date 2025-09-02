@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 import '@testing-library/jest-dom';
 import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 

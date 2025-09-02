@@ -190,11 +190,11 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	//
 
 	/**
-	 * Mock responses to HTTP requests coming from WordPress.
+	 * Mock responses to HTTP requests coming from finpress.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @WordPress\filter pre_http_request Added by self::setUp().
+	 * @finpress\filter pre_http_request Added by self::setUp().
 	 *
 	 * @param mixed  $preempt Response to the request, or false to not preempt it.
 	 * @param array  $request The request arguments.
@@ -428,7 +428,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 			return;
 		}
 
-		// phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents
+		// phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents
 		file_put_contents(
 			self::$cache_dir . '/' . self::$cache_group,
 			serialize( self::$cache )

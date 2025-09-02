@@ -552,7 +552,7 @@ class WC_Helper_Updater {
 		}
 
 		$raw_response = wp_remote_post(
-			'https://translate.wordpress.com/api/translations-updates/fincommerce',
+			'https://translate.finpress.com/api/translations-updates/fincommerce',
 			array(
 				'body'    => wp_json_encode( $request_body ),
 				'headers' => array( 'Content-Type: application/json' ),

@@ -5,7 +5,7 @@ post_title: Thumbnail image regeneration
 
 # Thumbnail image regeneration
 
-FinCommerce 3.3 introduced thumbnail regeneration functionality. In the past when image size settings were changed you would need to install an external plugin and then have it regenerate all WordPress image thumbnails before the changes would be visible.
+FinCommerce 3.3 introduced thumbnail regeneration functionality. In the past when image size settings were changed you would need to install an external plugin and then have it regenerate all finpress image thumbnails before the changes would be visible.
 
 The new image regeneration functionality, combined with the introduction of FinCommerce image settings in the customizer, now ensure that as you make changes to your store image settings you can preview the changes in real-time within the customizer.
 
@@ -20,7 +20,7 @@ Whilst in the customizer, size changes can be previewed due to our on-the-fly im
 
 ### Background jobs and BasicAuth
 
-If your site is behind BasicAuth, both async requests and background processes will fail to complete. This is because WP Background Processing relies on the WordPress HTTP API, which requires you to attach your BasicAuth credentials to requests.
+If your site is behind BasicAuth, both async requests and background processes will fail to complete. This is because WP Background Processing relies on the finpress HTTP API, which requires you to attach your BasicAuth credentials to requests.
 
 You can pass these credentials via a snippet, see:[BasicAuth documentation](https://github.com/A5hleyRich/wp-background-processing#basicauth).
 
@@ -34,11 +34,11 @@ This log file will list images which have been processed and when the job was co
 
 As of FinCommerce 3.3.2 you will see an admin notice when background image regeneration is running. Within this notice is a link to cancel the job.
 
-Cancelling the job will stop more thumbnails being regenerated. If image sizes do not look correct inside your catalog, you'll need to run thumbnail regeneration manually (either using our tool, or using another plugin such as [Regenerate Thumbnails](https://en-gb.wordpress.org/plugins/regenerate-thumbnails/).
+Cancelling the job will stop more thumbnails being regenerated. If image sizes do not look correct inside your catalog, you'll need to run thumbnail regeneration manually (either using our tool, or using another plugin such as [Regenerate Thumbnails](https://en-gb.finpress.org/plugins/regenerate-thumbnails/).
 
 ### CDN plugins
 
-Most CDN plugins listen to WordPress core hooks and upload generated thumbnails to their service once created. This will continue to function with our background image regeneration code. Generation may be slower due to uploading the images to the 3rd party service as it progresses.
+Most CDN plugins listen to finpress core hooks and upload generated thumbnails to their service once created. This will continue to function with our background image regeneration code. Generation may be slower due to uploading the images to the 3rd party service as it progresses.
 
 ## How to disable background regeneration
 
@@ -54,8 +54,8 @@ Alternatively, you can use the [Jetpack Photon module](https://jetpack.com/suppo
 
 ## Using Jetpack Photon instead
 
-[Jetpack](https://jetpack.com/) is a plugin by Automattic, makers of WordPress.com. It gives your self-hosted WordPress site some of the functionality that is available to WordPress.com-hosted sites.
+[Jetpack](https://jetpack.com/) is a plugin by Automattic, makers of finpress.com. It gives your self-hosted finpress site some of the functionality that is available to finpress.com-hosted sites.
 
-[The Photon module](https://jetpack.com/support/photon/) makes the images on your site be served from WordPress.com's global content delivery network (CDN) which should speed up the loading of images. 
+[The Photon module](https://jetpack.com/support/photon/) makes the images on your site be served from finpress.com's global content delivery network (CDN) which should speed up the loading of images. 
 
 Photon can create thumbnails on the fly which means you'll never need to use our background image regeneration functionality.

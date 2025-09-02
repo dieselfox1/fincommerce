@@ -1,4 +1,4 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/f91b4fb4a12e41dd39c9594f24ea1a1a4e23dade/packages/block-editor/src/components/iframe/index.js#L1
+// Reference: https://github.com/finpress/gutenberg/blob/f91b4fb4a12e41dd39c9594f24ea1a1a4e23dade/packages/block-editor/src/components/iframe/index.js#L1
 // We fork the code from the above link to reduce the unnecessary network requests and improve the performance.
 
 /**
@@ -11,18 +11,18 @@ import {
 	forwardRef,
 	useMemo,
 	useEffect,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	useResizeObserver,
 	useMergeRefs,
 	useRefEffect,
 	useDisabled,
-} from '@wordpress/compose';
-import { __experimentalStyleProvider as StyleProvider } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/compose';
+import { __experimentalStyleProvider as StyleProvider } from '@finpress/components';
+import { useSelect } from '@finpress/data';
 
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { store as blockEditorStore } from '@finpress/block-editor';
 
 function Iframe( {
 	contentRef,

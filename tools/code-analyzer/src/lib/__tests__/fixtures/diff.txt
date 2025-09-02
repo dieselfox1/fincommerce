@@ -5,7 +5,7 @@ index 8176590cf5..1a6c107656 100644
 @@ -2,7 +2,7 @@
  
  -   [ ] Have you followed the [FinCommerce Contributing guideline](https://github.com/dieselfox1/fincommerce/blob/trunk/.github/CONTRIBUTING.md)?
- -   [ ] Does your code follow the [WordPress' coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/)?
+ -   [ ] Does your code follow the [finpress' coding standards](https://make.finpress.org/core/handbook/best-practices/coding-standards/)?
 --   [ ] Have you checked to ensure there aren't other open [Pull Requests](../../pulls) for the same update/change?
 +-   [ ] Have you checked to ensure there aren't other open [Pull Requests](https://github.com/dieselfox1/fincommerce/pulls) for the same update/change?
  
@@ -3238,7 +3238,7 @@ diff --git a/packages/js/components/src/order-status/stories/index.js b/packages
 index 2bfaf7b1c6..1f07975fd4 100644
 --- a/packages/js/components/src/order-status/stories/index.js
 +++ b/packages/js/components/src/order-status/stories/index.js
-@@ -5,9 +5,9 @@ import { __ } from '@wordpress/i18n';
+@@ -5,9 +5,9 @@ import { __ } from '@finpress/i18n';
  import { OrderStatus } from '@fincommerce/components';
  
  const orderStatusMap = {
@@ -3687,8 +3687,8 @@ index 0000000000..62bdcd8f69
 +/**
 + * External dependencies
 + */
-+import { Icon, check } from '@wordpress/icons';
-+import { createElement } from '@wordpress/element';
++import { Icon, check } from '@finpress/icons';
++import { createElement } from '@finpress/element';
 +/**
 + * @typedef {import('./index').Option} Option
 + */
@@ -3765,7 +3765,7 @@ index 0000000000..dd25685c97
 + */
 +import classnames from 'classnames';
 +import { noop } from 'lodash';
-+import { forwardRef, createElement } from '@wordpress/element';
++import { forwardRef, createElement } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -3890,20 +3890,20 @@ index 0000000000..51b4746fa3
 + * External dependencies
 + */
 +import { noop } from 'lodash';
-+import { __ } from '@wordpress/i18n';
-+import { focus } from '@wordpress/dom';
++import { __ } from '@finpress/i18n';
++import { focus } from '@finpress/dom';
 +import {
 +	useEffect,
 +	useMemo,
 +	useState,
 +	useRef,
 +	createElement,
-+} from '@wordpress/element';
++} from '@finpress/element';
 +import classnames from 'classnames';
 +import {
 +	__experimentalUseFocusOutside as useFocusOutside,
 +	useInstanceId,
-+} from '@wordpress/compose';
++} from '@finpress/compose';
 +
 +/**
 + * Internal dependencies
@@ -4665,10 +4665,10 @@ index 0000000000..13636cf842
 + * External dependencies
 + */
 +import { noop } from 'lodash';
-+import { Flex } from '@wordpress/components';
-+import { Icon, chevronUp, chevronDown } from '@wordpress/icons';
++import { Flex } from '@finpress/components';
++import { Icon, chevronUp, chevronDown } from '@finpress/icons';
 +import classnames from 'classnames';
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -4794,7 +4794,7 @@ index 0000000000..da400a324b
 +/**
 + * External dependencies
 + */
-+import { useState } from '@wordpress/element';
++import { useState } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -4896,9 +4896,9 @@ index 0000000000..ea7019fe71
 +/**
 + * External dependencies
 + */
-+import { __, sprintf } from '@wordpress/i18n';
-+import { useState, createElement } from '@wordpress/element';
-+import { Button } from '@wordpress/components';
++import { __, sprintf } from '@finpress/i18n';
++import { useState, createElement } from '@finpress/element';
++import { Button } from '@finpress/components';
 +
 +/**
 + * Internal dependencies
@@ -5003,7 +5003,7 @@ index 0000000000..a2ecc86f91
 + */
 +import { screen, render, fireEvent } from '@testing-library/react';
 +import userEvent from '@testing-library/user-event';
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -5121,7 +5121,7 @@ index 0000000000..a78eed711d
 + * External dependencies
 + */
 +import { fireEvent, render } from '@testing-library/react';
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -5278,7 +5278,7 @@ index 0000000000..1f92879843
 + * External dependencies
 + */
 +import { fireEvent, render } from '@testing-library/react';
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -5289,10 +5289,10 @@ index 0000000000..1f92879843
 + * In jsdom, the width and height of all elements are zero,
 + * so setting `offsetWidth` to avoid them to be filtered out
 + * by `isVisible` in focusable.
-+ * Ref: https://github.com/WordPress/gutenberg/blob/%40wordpress/dom%403.1.1/packages/dom/src/focusable.js#L42-L48
++ * Ref: https://github.com/finpress/gutenberg/blob/%40finpress/dom%403.1.1/packages/dom/src/focusable.js#L42-L48
 + */
-+jest.mock( '@wordpress/dom', () => {
-+	const { focus } = jest.requireActual( '@wordpress/dom' );
++jest.mock( '@finpress/dom', () => {
++	const { focus } = jest.requireActual( '@finpress/dom' );
 +	const descriptor = { configurable: true, get: () => 1 };
 +	function find( context ) {
 +		context.querySelectorAll( '*' ).forEach( ( element ) => {
@@ -5426,7 +5426,7 @@ index 0000000000..a0c1724a80
 + * External dependencies
 + */
 +import { fireEvent, render } from '@testing-library/react';
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -5481,7 +5481,7 @@ index 0000000000..c43175ab42
 + * External dependencies
 + */
 +import { isEqual } from 'lodash';
-+import { useRef } from '@wordpress/element';
++import { useRef } from '@finpress/element';
 +
 +/**
 + * Stores value in a ref. In subsequent render, value will be compared with ref.current using `isEqual` comparison.
@@ -6332,7 +6332,7 @@ index 0000000000..48e190951c
 +import { createSelectors } from '../crud/selectors';
 +import { createResolvers } from '../crud/selectors';
 +import { createActions } from '../crud/actions';
-+import { registerStore, combineReducers } from '@wordpress/data';
++import { registerStore, combineReducers } from '@finpress/data';
 +
 +const dataStoreArgs = {
 +    resourceName: 'MyThing',
@@ -6401,8 +6401,8 @@ index 0000000000..42960bde82
 +/**
 + * External dependencies
 + */
-+import { addQueryArgs } from '@wordpress/url';
-+import { apiFetch } from '@wordpress/data-controls';
++import { addQueryArgs } from '@finpress/url';
++import { apiFetch } from '@finpress/data-controls';
 +
 +/**
 + * Internal dependencies
@@ -6594,7 +6594,7 @@ index 0000000000..a59fe38ea3
 +/**
 + * External dependencies
 + */
-+import { registerStore } from '@wordpress/data';
++import { registerStore } from '@finpress/data';
 +import { Reducer } from 'redux';
 +
 +/**
@@ -6794,7 +6794,7 @@ index 0000000000..e24f524eb3
 +/**
 + * External dependencies
 + */
-+import { apiFetch } from '@wordpress/data-controls';
++import { apiFetch } from '@finpress/data-controls';
 +
 +/**
 + * Internal dependencies
@@ -7639,7 +7639,7 @@ rename to packages/js/data/src/items/actions.ts
 index 71662a367f..e4e54bc91c 100644
 --- a/packages/js/data/src/items/actions.js
 +++ b/packages/js/data/src/items/actions.ts
-@@ -9,8 +9,9 @@ import { addQueryArgs } from '@wordpress/url';
+@@ -9,8 +9,9 @@ import { addQueryArgs } from '@finpress/url';
   */
  import TYPES from './action-types';
  import { NAMESPACE, WC_ADMIN_NAMESPACE } from '../constants';
@@ -7758,7 +7758,7 @@ index 7b3ca7e73f..0000000000
 - * External dependencies
 - */
 -
--import { registerStore } from '@wordpress/data';
+-import { registerStore } from '@finpress/data';
 -
 -/**
 - * Internal dependencies
@@ -7788,7 +7788,7 @@ index 0000000000..bd6cb4938a
 +/**
 + * External dependencies
 + */
-+import { registerStore } from '@wordpress/data';
++import { registerStore } from '@finpress/data';
 +import { SelectFromMap, DispatchFromMap } from '@automattic/data-stores';
 +import { Reducer, AnyAction } from 'redux';
 +/**
@@ -7822,7 +7822,7 @@ index 0000000000..bd6cb4938a
 +	getItems: getItemsType;
 +} & WPDataSelectors;
 +
-+declare module '@wordpress/data' {
++declare module '@finpress/data' {
 +	function dispatch(
 +		key: typeof STORE_NAME
 +	): DispatchFromMap< typeof actions & WPDataActions >;
@@ -8611,7 +8611,7 @@ index 085270c062..9ae50b9cce 100644
   */
  import { appendTimestamp, getCurrentDates } from '@fincommerce/date';
 -
-+import { select as wpSelect } from '@wordpress/data';
++import { select as wpSelect } from '@finpress/data';
  /**
   * Internal dependencies
   */
@@ -8637,7 +8637,7 @@ index 085270c062..9ae50b9cce 100644
   * @param {Object} options.persisted_query  Persisted query passed to endpoint
   * @param {Object} options.query            Query parameters in the url
 + * @param {Object} options.filterQuery      Query parameters to filter the leaderboard
-  * @param {Object} options.select           Instance of @wordpress/select
+  * @param {Object} options.select           Instance of @finpress/select
   * @param {string} options.defaultDateRange User specified default date range.
   * @return {Object} Object containing leaderboard responses.
   */
@@ -8657,7 +8657,7 @@ index 085270c062..9ae50b9cce 100644
 @@ -49,7 +63,10 @@ export function getLeaderboard( options ) {
  	// Disable eslint rule requiring `getItems` to be defined below because the next two statements
  	// depend on `getItems` to have been called.
- 	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+ 	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 -	const leaderboards = getItems( endpoint, leaderboardQuery );
 +	const leaderboards = getItems< 'leaderboards' >(
 +		endpoint,
@@ -9052,7 +9052,7 @@ index 0000000000..bf9f6e5006
 +
 +```js
 +import { EXPERIMENTAL_PRODUCT_SHIPPING_CLASSES_STORE_NAME } from '@fincommerce/data';
-+import { useDispatch } from '@wordpress/data';
++import { useDispatch } from '@finpress/data';
 +
 +function Component() {
 +	const actions = useDispatch(
@@ -9276,7 +9276,7 @@ diff --git a/packages/js/data/src/settings/use-settings.js b/packages/js/data/sr
 index 11fabfd874..2a40c11310 100644
 --- a/packages/js/data/src/settings/use-settings.js
 +++ b/packages/js/data/src/settings/use-settings.js
-@@ -10,28 +10,29 @@ import { useCallback } from '@wordpress/element';
+@@ -10,28 +10,29 @@ import { useCallback } from '@finpress/element';
  import { STORE_NAME } from './constants';
  
  export const useSettings = ( group, settingsKeys = [] ) => {
@@ -9368,7 +9368,7 @@ index 0000000000..5b2540de53
 +	EXPERIMENTAL_SHIPPING_ZONES_STORE_NAME,
 +	ShippingZonesActions,
 +} from '@fincommerce/data';
-+import { useDispatch } from '@wordpress/data';
++import { useDispatch } from '@finpress/data';
 +
 +function Component() {
 +	const actions = useDispatch(
@@ -9472,8 +9472,8 @@ index 46b5287fc6..f6deb9b4f3 100644
 --- a/packages/js/data/src/types/wp-data.ts
 +++ b/packages/js/data/src/types/wp-data.ts
 @@ -4,18 +4,18 @@
- // [wp.data.getSelectors](https://github.com/WordPress/gutenberg/blob/319deee5f4d4838d6bc280e9e2be89c7f43f2509/packages/data/src/store/index.js#L16-L20)
- // [selector.js](https://github.com/WordPress/gutenberg/blob/trunk/packages/data/src/redux-store/metadata/selectors.js#L48-L52)
+ // [wp.data.getSelectors](https://github.com/finpress/gutenberg/blob/319deee5f4d4838d6bc280e9e2be89c7f43f2509/packages/data/src/store/index.js#L16-L20)
+ // [selector.js](https://github.com/finpress/gutenberg/blob/trunk/packages/data/src/redux-store/metadata/selectors.js#L48-L52)
  export type WPDataSelectors = {
 -	getIsResolving: ( selector: string, args?: string[] ) => boolean;
 -	hasStartedResolution: ( selector: string, args?: string[] ) => boolean;
@@ -9486,8 +9486,8 @@ index 46b5287fc6..f6deb9b4f3 100644
  	getCachedResolvers: () => unknown;
  };
  
- // [wp.data.getActions](https://github.com/WordPress/gutenberg/blob/319deee5f4d4838d6bc280e9e2be89c7f43f2509/packages/data/src/store/index.js#L31-L35)
- // [actions.js](https://github.com/WordPress/gutenberg/blob/aa2bed9010aa50467cb43063e370b70a91591e9b/packages/data/src/redux-store/metadata/actions.js)
+ // [wp.data.getActions](https://github.com/finpress/gutenberg/blob/319deee5f4d4838d6bc280e9e2be89c7f43f2509/packages/data/src/store/index.js#L31-L35)
+ // [actions.js](https://github.com/finpress/gutenberg/blob/aa2bed9010aa50467cb43063e370b70a91591e9b/packages/data/src/redux-store/metadata/actions.js)
  export type WPDataActions = {
 -	startResolution: ( selector: string, args?: string[] ) => void;
 -	finishResolution: ( selector: string, args?: string[] ) => void;
@@ -9504,8 +9504,8 @@ index 99d5e5fe8f..81319989b4 100644
 --- a/packages/js/data/src/use-select-with-refresh.js
 +++ b/packages/js/data/src/use-select-with-refresh.ts
 @@ -4,13 +4,20 @@
- import { useEffect, useRef } from '@wordpress/element';
- import { useSelect } from '@wordpress/data';
+ import { useEffect, useRef } from '@finpress/element';
+ import { useSelect } from '@finpress/data';
  
 -const useInterval = ( callback, interval ) => {
 -	const savedCallback = useRef();
@@ -9585,7 +9585,7 @@ index 0000000000..122da493e9
 + * External dependencies
 + */
 +
-+import schema from '@wordpress/core-data';
++import schema from '@finpress/core-data';
 +
 +export type UserPreferences = {
 +	activity_panel_inbox_last_read?: string;
@@ -9632,8 +9632,8 @@ index f675e3380e..5a49d1fe85 100644
 @@ -3,47 +3,12 @@
   */
  import { mapValues } from 'lodash';
- import { useDispatch, useSelect } from '@wordpress/data';
--import schema from '@wordpress/core-data';
+ import { useDispatch, useSelect } from '@finpress/data';
+-import schema from '@finpress/core-data';
  
  /**
   * Internal dependencies
@@ -9698,7 +9698,7 @@ rename to packages/js/data/src/user/use-user.ts
 index 060aff1a94..40bdaed104 100644
 --- a/packages/js/data/src/user/use-user.js
 +++ b/packages/js/data/src/user/use-user.ts
-@@ -7,6 +7,7 @@ import { useSelect } from '@wordpress/data';
+@@ -7,6 +7,7 @@ import { useSelect } from '@finpress/data';
   * Internal dependencies
   */
  import { STORE_NAME } from './constants';
@@ -9715,8 +9715,8 @@ index 060aff1a94..40bdaed104 100644
 -			hasStartedResolution,
 -			hasFinishedResolution,
 -		} = select( STORE_NAME );
-+		// TODO: Update @types/wordpress__core-data to include the 'hasStartedResolution', 'hasFinishedResolution' method.
-+		// @ts-expect-errors Property 'hasStartedResolution', 'hasFinishedResolution' does not exist on type @types/wordpress__core-data
++		// TODO: Update @types/finpress__core-data to include the 'hasStartedResolution', 'hasFinishedResolution' method.
++		// @ts-expect-errors Property 'hasStartedResolution', 'hasFinishedResolution' does not exist on type @types/finpress__core-data
 +		const { getCurrentUser, hasStartedResolution, hasFinishedResolution } =
 +			select( STORE_NAME );
  
@@ -9743,7 +9743,7 @@ rename to packages/js/data/src/user/with-current-user-hydration.tsx
 index bfdb070891..a073199963 100644
 --- a/packages/js/data/src/user/with-current-user-hydration.js
 +++ b/packages/js/data/src/user/with-current-user-hydration.tsx
-@@ -9,26 +9,27 @@ import { createElement, useRef } from '@wordpress/element';
+@@ -9,26 +9,27 @@ import { createElement, useRef } from '@finpress/element';
   * Internal dependencies
   */
  import { STORE_NAME } from './constants';
@@ -9761,7 +9761,7 @@ index bfdb070891..a073199963 100644
  		( OriginalComponent ) => ( props ) => {
  			const userRef = useRef( currentUser );
  
- 			// Use currentUser to hydrate calls to @wordpress/core-data's getCurrentUser().
+ 			// Use currentUser to hydrate calls to @finpress/core-data's getCurrentUser().
 +			// @ts-expect-error // @ts-expect-error registry is not defined in the wp.data typings
  			useSelect( ( select, registry ) => {
  				if ( ! userRef.current ) {
@@ -9803,16 +9803,16 @@ index afa620c3bb..2afe19f015 100644
 --- a/packages/js/data/typings/index.d.ts
 +++ b/packages/js/data/typings/index.d.ts
 @@ -1,13 +1,16 @@
--import { select, resolveSelect, dispatch } from '@wordpress/data';
+-import { select, resolveSelect, dispatch } from '@finpress/data';
 +/**
 + * External dependencies
 + */
- import { Entity } from '@wordpress/core-data';
-+import * as controls from '@wordpress/data-controls';
+ import { Entity } from '@finpress/core-data';
++import * as controls from '@finpress/data-controls';
  
  
- declare module '@wordpress/data' {
- 	// TODO: update @wordpress/data types to include this.
+ declare module '@finpress/data' {
+ 	// TODO: update @finpress/data types to include this.
  	const controls: {
 -		select: select;
 -		resolveSelect: resolveSelect;
@@ -12229,16 +12229,16 @@ index 0907ad54d2..0000000000
 -    "platform-dev": [],
 -    "plugin-api-version": "1.1.0"
 -}
-diff --git a/packages/js/e2e-utils/changelog/bump-wordpress-e2e-test-utils b/packages/js/e2e-utils/changelog/bump-wordpress-e2e-test-utils
+diff --git a/packages/js/e2e-utils/changelog/bump-finpress-e2e-test-utils b/packages/js/e2e-utils/changelog/bump-finpress-e2e-test-utils
 new file mode 100644
 index 0000000000..2a51ec593e
 --- /dev/null
-+++ b/packages/js/e2e-utils/changelog/bump-wordpress-e2e-test-utils
++++ b/packages/js/e2e-utils/changelog/bump-finpress-e2e-test-utils
 @@ -0,0 +1,4 @@
 +Significance: patch
 +Type: dev
 +
-+Update `@wordpress/e2e-test-utils` to `wp-5.8: 5.3.2`
++Update `@finpress/e2e-test-utils` to `wp-5.8: 5.3.2`
 diff --git a/packages/js/e2e-utils/composer.lock b/packages/js/e2e-utils/composer.lock
 deleted file mode 100644
 index a5d2be9ba8..0000000000
@@ -13273,9 +13273,9 @@ index 42fd60e00d..1c92d19d5f 100644
 @@ -13,7 +13,7 @@
  	"dependencies": {
  		"@automattic/puppeteer-utils": "github:Automattic/puppeteer-utils#0f3ec50",
- 		"@wordpress/deprecated": "^3.2.3",
--		"@wordpress/e2e-test-utils": "^4.16.1",
-+		"@wordpress/e2e-test-utils": "wp-5.8",
+ 		"@finpress/deprecated": "^3.2.3",
+-		"@finpress/e2e-test-utils": "^4.16.1",
++		"@finpress/e2e-test-utils": "wp-5.8",
  		"config": "3.3.3",
  		"fishery": "^1.2.0"
  	},
@@ -13426,16 +13426,16 @@ index acadbb1a92..69f06935ed 100644
 @@ -16,6 +16,12 @@ module.exports = {
  		yoda: [ 'error', 'never' ],
  		// temporary conversion to warnings until the below are all handled.
- 		'@wordpress/i18n-translator-comments': 'warn',
-+		'@wordpress/i18n-text-domain': [
+ 		'@finpress/i18n-translator-comments': 'warn',
++		'@finpress/i18n-text-domain': [
 +			'error',
 +			{
 +				allowedTextDomain: 'fincommerce',
 +			},
 +		],
- 		'@wordpress/valid-sprintf': 'warn',
- 		'@wordpress/no-unsafe-wp-apis': 'warn',
- 		'@wordpress/no-global-active-element': 'warn',
+ 		'@finpress/valid-sprintf': 'warn',
+ 		'@finpress/no-unsafe-wp-apis': 'warn',
+ 		'@finpress/no-global-active-element': 'warn',
 @@ -35,10 +41,11 @@ module.exports = {
  				],
  			},
@@ -13717,7 +13717,7 @@ index d5155c0094..6749cf7762 100644
  -   Patch - Added useExperiment example
 +-   Patch - Standardize lint scripts: add lint:fix
  -   Minor - Add Jetpack Changelogger
- -   Minor - Update dependency `@wordpress/hooks` to ^3.5.0
+ -   Minor - Update dependency `@finpress/hooks` to ^3.5.0
  -   Minor - Added Typescript type declarations. #32615
  -   Minor - Updated README with useExperiment example
 --   Patch - Standardize lint scripts: add lint:fix
@@ -14297,7 +14297,7 @@ index 74a32fa9da..4df354fdbe 100644
 --   Patch - Standardize lint scripts: add lint:fix
 --   Patch - Update dependency history to ^5.3.0
 --   Major [ **BREAKING CHANGE** ] - Upgraded react-router-dom to v6, which itself causes breaking changes. This upgrade will require consumers to also upgrade their react-router-dom to v6. #33156
- -   Minor - Update dependency `@wordpress/hooks` to ^3.5.0
+ -   Minor - Update dependency `@finpress/hooks` to ^3.5.0
  -   Minor - Added Typescript type declarations. #32615
  -   Minor - Update dependency `history` to ^5.3.0
 -
@@ -14950,7 +14950,7 @@ index 82f0b26434..564be6610f 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const Amex = () => (
  	/* eslint-disable */
@@ -14966,7 +14966,7 @@ index 99a62d6cb4..198c6ea46c 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const ApplePay = () => (
  	/* eslint-disable */
@@ -14982,7 +14982,7 @@ index 9b0d89ecc2..0bc51dd04b 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const CB = () => (
  	/* eslint-disable */
@@ -14998,7 +14998,7 @@ index d0a90ba27d..aa0883bd4a 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const DinersClub = () => (
  	/* eslint-disable */
@@ -15014,7 +15014,7 @@ index 1f2f92aa8a..91775302c4 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const Discover = () => (
  	/* eslint-disable */
@@ -15030,7 +15030,7 @@ index 0aee187ab4..63dfef83e0 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const Giropay = () => (
  	/* eslint-disable */
@@ -15046,7 +15046,7 @@ index 7bd90317ab..353c10e1e5 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const GooglePay = () => (
  	/* eslint-disable */
@@ -15066,7 +15066,7 @@ index 55495fbf00..e817776d17 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const JCB = () => (
  	/* eslint-disable */
@@ -15082,7 +15082,7 @@ index 9207441f32..b877a28968 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const Maestro = () => (
  	/* eslint-disable */
@@ -15098,7 +15098,7 @@ index 5e1b6311ab..8a4d0f42b6 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const MasterCard = () => (
  	/* eslint-disable */
@@ -15114,7 +15114,7 @@ index 9755177dcf..0907073cbe 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const Sofort = () => (
  	<svg
@@ -15130,7 +15130,7 @@ index de3fbc06d5..39c3933faf 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const UnionPay = () => (
  	/* eslint-disable */
@@ -15146,7 +15146,7 @@ index dead6a6014..42370709f9 100644
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
  export const Visa = () => (
  	/* eslint-disable */
@@ -15160,8 +15160,8 @@ index 0000000000..808f1772a0
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
-+import { __ } from '@wordpress/i18n';
++import { createElement } from '@finpress/element';
++import { __ } from '@finpress/i18n';
 +import { Text } from '@fincommerce/experimental';
 +
 +/**
@@ -15285,9 +15285,9 @@ index 0000000000..b3912c4d91
 +/**
 + * External dependencies
 + */
-+import { createElement, Fragment } from '@wordpress/element';
-+import { __ } from '@wordpress/i18n';
-+import { Card, CardFooter, CardBody } from '@wordpress/components';
++import { createElement, Fragment } from '@finpress/element';
++import { __ } from '@finpress/i18n';
++import { Card, CardFooter, CardBody } from '@finpress/components';
 +import { Text } from '@fincommerce/experimental';
 +import interpolateComponents from '@automattic/interpolate-components';
 +import { Link } from '@fincommerce/components';
@@ -15343,7 +15343,7 @@ index 0000000000..b3912c4d91
 +					components: {
 +						tosLink: (
 +							<Link
-+								href="https://wordpress.com/tos/"
++								href="https://finpress.com/tos/"
 +								type="external"
 +								target="_blank"
 +							>
@@ -15413,7 +15413,7 @@ index 62fd76f2a8..b52d6a4372 100644
 +++ b/packages/js/onboarding/src/components/WCPayBanner/WCPayBannerImage.tsx
 @@ -3,7 +3,7 @@
   */
- import { createElement } from '@wordpress/element';
+ import { createElement } from '@finpress/element';
  
 -export default () => (
 +export const WCPayBannerImage = () => (
@@ -15429,7 +15429,7 @@ index 0000000000..1c984d157d
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +export const WCPayBannerImageCut = () => (
 +	<svg
@@ -15615,10 +15615,10 @@ index 0000000000..29c96fbf26
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
-+import { __ } from '@wordpress/i18n';
++import { createElement } from '@finpress/element';
++import { __ } from '@finpress/i18n';
 +import { Text } from '@fincommerce/experimental';
-+import { Flex } from '@wordpress/components';
++import { Flex } from '@finpress/components';
 +
 +/**
 + * Internal dependencies
@@ -15671,7 +15671,7 @@ index 0000000000..5cd087ae40
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +export const InternationalMarketIcon = () => (
 +	<svg
@@ -15778,7 +15778,7 @@ index 0000000000..0993dbad0d
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +export const EarnManageIcon = () => (
 +	<svg
@@ -15973,7 +15973,7 @@ index 0000000000..022abd0ea4
 +/**
 + * External dependencies
 + */
-+import { createElement } from '@wordpress/element';
++import { createElement } from '@finpress/element';
 +
 +export const PaymentCardIcon = () => (
 +	<svg
@@ -16298,7 +16298,7 @@ index 70bf2d649c..9103caf833 100644
 -	</rule>
 -
  	<!-- Temporary -->
- 	<rule ref="WordPress.Security.NonceVerification.Recommended">
+ 	<rule ref="finpress.Security.NonceVerification.Recommended">
  		<exclude-pattern>src/Internal/Admin/</exclude-pattern>
 @@ -133,11 +127,11 @@
  	<rule ref="Squiz.Classes.ClassFileName.NoMatch">
@@ -17330,14 +17330,14 @@ index bef2888d91..d74d3acac3 100644
 -			const { getOrders, hasFinishedResolution, getOrdersError } = select(
 -				ORDERS_STORE_NAME
 -			);
--			// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+-			// eslint-disable-next-line @finpress/no-unused-vars-before-return
 -			const { getItems } = select( ITEMS_STORE_NAME );
 -
 -			if ( ! orderStatuses.length && unreadOrdersCount === 0 ) {
 -				return { isRequesting: false };
 -			}
 -
--			/* eslint-disable @wordpress/no-unused-vars-before-return */
+-			/* eslint-disable @finpress/no-unused-vars-before-return */
 -			const actionableOrders = getOrders( actionableOrdersQuery, null );
 +	const {
 +		orders = [],
@@ -17347,7 +17347,7 @@ index bef2888d91..d74d3acac3 100644
 +	} = useSelect( ( select ) => {
 +		const { getOrders, hasFinishedResolution, getOrdersError } =
 +			select( ORDERS_STORE_NAME );
-+		// eslint-disable-next-line @wordpress/no-unused-vars-before-return
++		// eslint-disable-next-line @finpress/no-unused-vars-before-return
 +		const { getItems } = select( ITEMS_STORE_NAME );
  
 -			const isRequestingActionable = hasFinishedResolution( 'getOrders', [
@@ -17368,7 +17368,7 @@ index bef2888d91..d74d3acac3 100644
 -					orderStatuses,
 -				};
 -			}
-+		/* eslint-disable @wordpress/no-unused-vars-before-return */
++		/* eslint-disable @finpress/no-unused-vars-before-return */
 +		const actionableOrders = getOrders( actionableOrdersQuery, null );
  
 -			const customers = getItems( 'customers', {
@@ -17506,8 +17506,8 @@ index fb8c93bc76..f72e08364e 100644
  						date_modified: '2020-11-20T17:28:47',
  						date_modified_gmt: '2020-11-20T17:28:47',
 -						src:
--							'https://one.wordpress.test/wp-content/uploads/2020/11/cap-2-1.jpg',
-+						src: 'https://one.wordpress.test/wp-content/uploads/2020/11/cap-2-1.jpg',
+-							'https://one.finpress.test/wp-content/uploads/2020/11/cap-2-1.jpg',
++						src: 'https://one.finpress.test/wp-content/uploads/2020/11/cap-2-1.jpg',
  						name: 'cap-2-1.jpg',
  						alt: '',
  					},
@@ -17525,7 +17525,7 @@ index 1dda58d9c9..00bbd1e40f 100644
 +	const { getReviewsTotalCount, getReviewsError, isResolving } =
 +		select( REVIEWS_STORE_NAME );
  
- 	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+ 	// eslint-disable-next-line @finpress/no-unused-vars-before-return
  	const totalReviews = getReviewsTotalCount( unapprovedReviewsQuery );
 diff --git a/plugins/fincommerce-admin/client/homescreen/activity-panel/stock/index.js b/plugins/fincommerce-admin/client/homescreen/activity-panel/stock/index.js
 index b2044aebe1..88d89e05a9 100644
@@ -17874,7 +17874,7 @@ diff --git a/plugins/fincommerce-admin/client/inbox-panel/dismiss-all-modal.js b
 index 5d836c9abd..3fc82831df 100644
 --- a/plugins/fincommerce-admin/client/inbox-panel/dismiss-all-modal.js
 +++ b/plugins/fincommerce-admin/client/inbox-panel/dismiss-all-modal.js
-@@ -10,9 +10,8 @@ import { __ } from '@wordpress/i18n';
+@@ -10,9 +10,8 @@ import { __ } from '@finpress/i18n';
  const DismissAllModal = ( { onClose } ) => {
  	const { createNotice } = useDispatch( 'core/notices' );
  
@@ -18183,9 +18183,9 @@ index 44bfc59943..1d5c06c0d0 100644
 --- a/plugins/fincommerce-admin/client/payments-welcome/index.tsx
 +++ b/plugins/fincommerce-admin/client/payments-welcome/index.tsx
 @@ -13,12 +13,6 @@ import { recordEvent } from '@fincommerce/tracks';
- import { useDispatch, useSelect } from '@wordpress/data';
+ import { useDispatch, useSelect } from '@finpress/data';
  import { OPTIONS_STORE_NAME, PluginsStoreActions } from '@fincommerce/data';
- import apiFetch from '@wordpress/api-fetch';
+ import apiFetch from '@finpress/api-fetch';
 -
 -/**
 - * Internal dependencies
@@ -18315,10 +18315,10 @@ index a3b0d0cd5d..3831557698 100644
  /**
   * External dependencies
   */
--import { Card, CardFooter, CardBody, Button } from '@wordpress/components';
+-import { Card, CardFooter, CardBody, Button } from '@finpress/components';
 -import { Text } from '@fincommerce/experimental';
-+import { Button } from '@wordpress/components';
- import { __ } from '@wordpress/i18n';
++import { Button } from '@finpress/components';
+ import { __ } from '@finpress/i18n';
  import { getAdminLink } from '@fincommerce/settings';
 -import interpolateComponents from '@automattic/interpolate-components';
 -import { Link } from '@fincommerce/components';
@@ -18410,7 +18410,7 @@ index a3b0d0cd5d..3831557698 100644
 -							components: {
 -								tosLink: (
 -									<Link
--										href="https://wordpress.com/tos/"
+-										href="https://finpress.com/tos/"
 -										type="external"
 -										target="_blank"
 -									>
@@ -18929,8 +18929,8 @@ index dd4a640caa..06b4c21b1d 100644
 @@ -2,13 +2,17 @@
   * External dependencies
   */
- import { useSelect } from '@wordpress/data';
-+import { useMemo } from '@wordpress/element';
+ import { useSelect } from '@finpress/data';
++import { useMemo } from '@finpress/element';
  import { Spinner } from '@fincommerce/components';
  import { ONBOARDING_STORE_NAME, SETTINGS_STORE_NAME } from '@fincommerce/data';
  
@@ -19274,7 +19274,7 @@ index 0000000000..d4d9598b21
 +/**
 + * External dependencies
 + */
-+import { useSelect } from '@wordpress/data';
++import { useSelect } from '@finpress/data';
 +
 +import {
 +	PLUGINS_STORE_NAME,
@@ -19357,12 +19357,12 @@ index 0000000000..558e07be21
 +/**
 + * External dependencies
 + */
-+import { __ } from '@wordpress/i18n';
-+import { Button, ExternalLink } from '@wordpress/components';
++import { __ } from '@finpress/i18n';
++import { Button, ExternalLink } from '@finpress/components';
 +import { Pill } from '@fincommerce/components';
 +import { getNewPath, navigateTo } from '@fincommerce/navigation';
 +import { recordEvent } from '@fincommerce/tracks';
-+import { useContext, useMemo } from '@wordpress/element';
++import { useContext, useMemo } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -19430,7 +19430,7 @@ diff --git a/plugins/fincommerce-admin/client/shipping/shipping-recommendations-
 index 5c315885ae..fbfa17c53d 100644
 --- a/plugins/fincommerce-admin/client/shipping/shipping-recommendations-wrapper.tsx
 +++ b/plugins/fincommerce-admin/client/shipping/shipping-recommendations-wrapper.tsx
-@@ -8,13 +8,19 @@ import { lazy, Suspense } from '@wordpress/element';
+@@ -8,13 +8,19 @@ import { lazy, Suspense } from '@finpress/element';
   */
  import { EmbeddedBodyProps } from '../embedded-body-layout/embedded-body-props';
  import RecommendationsEligibilityWrapper from '../settings-recommendations/recommendations-eligibility-wrapper';
@@ -19489,15 +19489,15 @@ index 0000000000..e48e5c9ebe
 + * External dependencies
 + */
 +import { TourKit, TourKitTypes } from '@fincommerce/components';
-+import { __ } from '@wordpress/i18n';
-+import { useDispatch, useSelect } from '@wordpress/data';
++import { __ } from '@finpress/i18n';
++import { useDispatch, useSelect } from '@finpress/data';
 +import {
 +	useLayoutEffect,
 +	useEffect,
 +	useState,
 +	useRef,
 +	createPortal,
-+} from '@wordpress/element';
++} from '@finpress/element';
 +import { OPTIONS_STORE_NAME } from '@fincommerce/data';
 +
 +const REVIEWED_DEFAULTS_OPTION =
@@ -19826,15 +19826,15 @@ index 0000000000..e4a82ebc87
 + * External dependencies
 + */
 +import { render, screen } from '@testing-library/react';
-+import { useSelect } from '@wordpress/data';
++import { useSelect } from '@finpress/data';
 +
 +/**
 + * Internal dependencies
 + */
 +import ShippingRecommendations from '../experimental-shipping-recommendations';
 +
-+jest.mock( '@wordpress/data', () => ( {
-+	...jest.requireActual( '@wordpress/data' ),
++jest.mock( '@finpress/data', () => ( {
++	...jest.requireActual( '@finpress/data' ),
 +	useSelect: jest.fn(),
 +} ) );
 +jest.mock( '../../settings-recommendations/dismissable-list', () => ( {
@@ -19984,21 +19984,21 @@ index 0000000000..8c46c4ad43
 + * External dependencies
 + */
 +import { render } from '@testing-library/react';
-+import { useSelect } from '@wordpress/data';
++import { useSelect } from '@finpress/data';
 +
 +/**
 + * Internal dependencies
 + */
 +import { ShippingRecommendations } from '../shipping-recommendations-wrapper';
 +
-+jest.mock( '@wordpress/data', () => ( {
-+	...jest.requireActual( '@wordpress/data' ),
++jest.mock( '@finpress/data', () => ( {
++	...jest.requireActual( '@finpress/data' ),
 +	useSelect: jest.fn(),
 +	useDispatch: jest.fn(),
 +} ) );
 +
-+jest.mock( '@wordpress/element', () => ( {
-+	...jest.requireActual( '@wordpress/element' ),
++jest.mock( '@finpress/element', () => ( {
++	...jest.requireActual( '@finpress/element' ),
 +	Suspense: () => <div>FinCommerce Shipping</div>,
 +} ) );
 +
@@ -20347,7 +20347,7 @@ index ee4ad87a86..61786ba8f7 100644
 @@ -2,16 +2,12 @@
   * External dependencies
   */
- import { __ } from '@wordpress/i18n';
+ import { __ } from '@finpress/i18n';
 -import interpolateComponents from '@automattic/interpolate-components';
 -import { Link, Pill } from '@fincommerce/components';
 -import { recordEvent } from '@fincommerce/tracks';
@@ -20364,9 +20364,9 @@ index ee4ad87a86..61786ba8f7 100644
 +	WCPayBenefits,
 +	WCPayBannerImageCut,
  } from '@fincommerce/onboarding';
- import { useDispatch } from '@wordpress/data';
+ import { useDispatch } from '@finpress/data';
  
-@@ -21,27 +17,10 @@ import { useDispatch } from '@wordpress/data';
+@@ -21,27 +17,10 @@ import { useDispatch } from '@finpress/data';
  
  import { Action } from '../Action';
  import { connectWcpay } from './utils';
@@ -20380,7 +20380,7 @@ index ee4ad87a86..61786ba8f7 100644
 -		components: {
 -			link: (
 -				<Link
--					href={ 'https://wordpress.com/tos/' }
+-					href={ 'https://finpress.com/tos/' }
 -					target="_blank"
 -					type="external"
 -				/>
@@ -20505,12 +20505,12 @@ diff --git a/plugins/fincommerce-admin/client/tasks/fills/PaymentGatewaySuggesti
 index 894f567399..524ff50767 100644
 --- a/plugins/fincommerce-admin/client/tasks/fills/PaymentGatewaySuggestions/index.js
 +++ b/plugins/fincommerce-admin/client/tasks/fills/PaymentGatewaySuggestions/index.js
-@@ -14,7 +14,6 @@ import { useMemo, useCallback, useEffect } from '@wordpress/element';
- import { registerPlugin } from '@wordpress/plugins';
+@@ -14,7 +14,6 @@ import { useMemo, useCallback, useEffect } from '@finpress/element';
+ import { registerPlugin } from '@finpress/plugins';
  import { WooOnboardingTask } from '@fincommerce/onboarding';
  import { getNewPath } from '@fincommerce/navigation';
 -import { getAdminLink } from '@fincommerce/settings';
- import { Button } from '@wordpress/components';
+ import { Button } from '@finpress/components';
  import ExternalIcon from 'gridicons/dist/external';
  
 @@ -204,29 +203,53 @@ export const PaymentGatewaySuggestions = ( { onComplete, query } ) => {
@@ -20664,7 +20664,7 @@ index c1d710c865..b56e28545a 100644
 @@ -69,8 +65,7 @@ const paymentGatewaySuggestions = [
  		title: 'FinCommerce Payments',
  		content:
- 			'Manage transactions without leaving your WordPress Dashboard. Only with FinCommerce Payments.',
+ 			'Manage transactions without leaving your finpress Dashboard. Only with FinCommerce Payments.',
 -		image:
 -			'http://localhost:8888/wp-content/plugins/fincommerce-admin/images/onboarding/wcpay.svg',
 +		image: 'http://localhost:8888/wp-content/plugins/fincommerce-admin/images/onboarding/wcpay.svg',
@@ -21094,7 +21094,7 @@ index 0000000000..2bed128cff
 +/**
 + * External dependencies
 + */
-+import { __ } from '@wordpress/i18n';
++import { __ } from '@finpress/i18n';
 +import { recordEvent } from '@fincommerce/tracks';
 +
 +/**
@@ -21128,14 +21128,14 @@ index 0000000000..5189ecd231
 +/**
 + * External dependencies
 + */
-+import { __ } from '@wordpress/i18n';
++import { __ } from '@finpress/i18n';
 +import interpolateComponents from '@automattic/interpolate-components';
 +import { Link, Plugins as PluginInstaller } from '@fincommerce/components';
 +import { OPTIONS_STORE_NAME, InstallPluginsResponse } from '@fincommerce/data';
 +import { recordEvent } from '@fincommerce/tracks';
 +import { Text } from '@fincommerce/experimental';
-+import { useDispatch, useSelect } from '@wordpress/data';
-+import { useEffect } from '@wordpress/element';
++import { useDispatch, useSelect } from '@finpress/data';
++import { useEffect } from '@finpress/element';
 +
 +/**
 + * Internal dependencies
@@ -21237,7 +21237,7 @@ index 0000000000..5189ecd231
 +						components: {
 +							link: (
 +								<Link
-+									href={ 'https://wordpress.com/tos/' }
++									href={ 'https://finpress.com/tos/' }
 +									target="_blank"
 +									type="external"
 +								>
@@ -21260,7 +21260,7 @@ index 0000000000..20db717fe7
 +/**
 + * External dependencies
 + */
-+import { __ } from '@wordpress/i18n';
++import { __ } from '@finpress/i18n';
 +
 +/**
 + * Internal dependencies
@@ -21347,8 +21347,8 @@ index 0000000000..1d34401519
 + */
 +import { SETTINGS_STORE_NAME } from '@fincommerce/data';
 +import { recordEvent } from '@fincommerce/tracks';
-+import { useEffect, useState } from '@wordpress/element';
-+import { useSelect, useDispatch } from '@wordpress/data';
++import { useEffect, useState } from '@finpress/element';
++import { useSelect, useDispatch } from '@finpress/data';
 +
 +/**
 + * Internal dependencies
@@ -21454,7 +21454,7 @@ index 0000000000..71369cb51a
 +/**
 + * External dependencies
 + */
-+import { __ } from '@wordpress/i18n';
++import { __ } from '@finpress/i18n';
 +
 +/**
 + * Internal dependencies
@@ -21738,10 +21738,10 @@ index 0000000000..ae49f21480
 +	PLUGINS_STORE_NAME,
 +	SETTINGS_STORE_NAME,
 +} from '@fincommerce/data';
-+import { withSelect } from '@wordpress/data';
-+import { registerPlugin } from '@wordpress/plugins';
++import { withSelect } from '@finpress/data';
++import { registerPlugin } from '@finpress/plugins';
 +import { WooOnboardingTask } from '@fincommerce/onboarding';
-+import { compose } from '@wordpress/compose';
++import { compose } from '@finpress/compose';
 +
 +/**
 + * Internal dependencies
@@ -21778,7 +21778,7 @@ index 0000000000..ae49f21480
 +)( ShippingRecommendation );
 +
 +registerPlugin( 'wc-admin-onboarding-task-shipping-recommendation', {
-+	// @ts-expect-error 'scope' does exist. @types/wordpress__plugins is outdated.
++	// @ts-expect-error 'scope' does exist. @types/finpress__plugins is outdated.
 +	scope: 'fincommerce-tasks',
 +	render: () => (
 +		<WooOnboardingTask id="shipping-recommendation">
@@ -21801,11 +21801,11 @@ index 0000000000..f74c1997e0
 +/**
 + * External dependencies
 + */
-+import { __ } from '@wordpress/i18n';
++import { __ } from '@finpress/i18n';
 +import { difference } from 'lodash';
-+import { useCallback, useEffect, useState } from '@wordpress/element';
++import { useCallback, useEffect, useState } from '@finpress/element';
 +import { Stepper } from '@fincommerce/components';
-+import { Card, CardBody, Button } from '@wordpress/components';
++import { Card, CardBody, Button } from '@finpress/components';
 +
 +/**
 + * Internal dependencies
@@ -21918,7 +21918,7 @@ index 0000000000..f74c1997e0
 +			key: 'connect',
 +			label: __( 'Connect your store', 'fincommerce' ),
 +			description: __(
-+				'Connect your store to WordPress.com to enable FinCommerce Shipping',
++				'Connect your store to finpress.com to enable FinCommerce Shipping',
 +				'fincommerce'
 +			),
 +			content: isJetpackConnected ? (
@@ -21975,8 +21975,8 @@ index 0000000000..8ebec7be8f
 +	redirectToWCSSettings: jest.fn(),
 +} ) );
 +
-+jest.mock( '@wordpress/data', () => ( {
-+	...jest.requireActual( '@wordpress/data' ),
++jest.mock( '@finpress/data', () => ( {
++	...jest.requireActual( '@finpress/data' ),
 +	useSelect: jest.fn().mockImplementation( ( fn ) =>
 +		fn( () => ( {
 +			getSettings: () => ( {
@@ -22174,7 +22174,7 @@ index bb13b7a3e0..e4c4100c87 100644
 +++ b/plugins/fincommerce-admin/client/tasks/fills/shipping/index.js
 @@ -21,6 +21,7 @@ import {
  import { recordEvent } from '@fincommerce/tracks';
- import { registerPlugin } from '@wordpress/plugins';
+ import { registerPlugin } from '@finpress/plugins';
  import { WooOnboardingTask } from '@fincommerce/onboarding';
 +import { Text } from '@fincommerce/experimental';
  
@@ -22374,7 +22374,7 @@ index bb13b7a3e0..e4c4100c87 100644
 +												link: (
 +													<Link
 +														href={
-+															'https://wordpress.com/tos/'
++															'https://finpress.com/tos/'
 +														}
 +														target="_blank"
 +														type="external"
@@ -22605,14 +22605,14 @@ index e6af8c900d..b41112cab1 100644
   */
 -import React from 'react';
 +import React, { useEffect } from 'react';
- import { registerPlugin } from '@wordpress/plugins';
+ import { registerPlugin } from '@finpress/plugins';
 -import { WooOnboardingTaskListItem } from '@fincommerce/onboarding';
 +import {
 +	WooOnboardingTaskListItem,
 +	WooOnboardingTask,
 +} from '@fincommerce/onboarding';
  import { PLUGINS_STORE_NAME } from '@fincommerce/data';
- import { useDispatch } from '@wordpress/data';
+ import { useDispatch } from '@finpress/data';
 +import { Spinner } from '@fincommerce/components';
  
  /**
@@ -23263,7 +23263,7 @@ index 91746db38e..3141c7c7fd 100644
 +WC_EXT=<example> pnpm example --filter=fincommerce/client/admin
  ```
  
- Include the output plugin in your `.wp-env.json` and `.wp-env.override.json` and restart the WordPress instance. FinCommerce Analytics reports will now reflect the changes made by the example extension.
+ Include the output plugin in your `.wp-env.json` and `.wp-env.override.json` and restart the finpress instance. FinCommerce Analytics reports will now reflect the changes made by the example extension.
 diff --git a/plugins/fincommerce-admin/docs/features/navigation.md b/plugins/fincommerce-admin/docs/features/navigation.md
 index 677431085c..0d56e6bfe5 100644
 --- a/plugins/fincommerce-admin/docs/features/navigation.md
@@ -23321,7 +23321,7 @@ index fcc67ba38a..5d959e3d34 100644
 +		"lint": "node ./node_modules/require-turbo && pnpm lint:js && pnpm lint:css",
  		"lint:fix": "pnpm lint:js-fix && pnpm lint:css-fix",
  		"lint:css": "stylelint '**/*.scss'",
- 		"lint:css-fix": "stylelint '**/*.scss' --fix --ip 'storybook/wordpress'",
+ 		"lint:css-fix": "stylelint '**/*.scss' --fix --ip 'storybook/finpress'",
 -		"lint:js": "wp-scripts lint-js ./client --ext=js,ts,tsx",
 +		"lint:js": "eslint ./client --ext=js,ts,tsx",
  		"lint:js-fix": "pnpm lint:js -- --fix --ext=js,ts,tsx",
@@ -23406,7 +23406,7 @@ index 0000000000..b70d759e5c
 +
 +## [2.0.0](https://github.com/dieselfox1/fincommerce/releases)
 +
-+-   Enhancement - Re-built to pull updates from the WordPress.org repository rather than GitHub.
++-   Enhancement - Re-built to pull updates from the finpress.org repository rather than GitHub.
 +-   Enhancement - Channel selection; choose to receive RC or beta versions.
 +-   Enhancement - Admin bar item shows version information, and offers shortcuts to functionality.
 +-   Enhancement - Shortcut to log GitHub issues.
@@ -23587,7 +23587,7 @@ index 5d0757c720..34687ba440 100644
 @@ -48,7 +48,7 @@
  				"enhancement": "Improve existing functionality"
  			},
- 			"versioning": "wordpress",
+ 			"versioning": "finpress",
 -			"changelog": "NEXT_CHANGELOG.md"
 +			"changelog": "CHANGELOG.md"
  		}
@@ -23886,8 +23886,8 @@ index 227f668ec7..4570ee348a 100644
  	"devDependencies": {
  		"@fincommerce/dependency-extraction-webpack-plugin": "workspace:*",
  		"@fincommerce/eslint-plugin": "workspace:*",
- 		"@wordpress/env": "^4.8.0",
- 		"@wordpress/scripts": "^19.2.4",
+ 		"@finpress/env": "^4.8.0",
+ 		"@finpress/scripts": "^19.2.4",
  		"eslint": "5.16.0",
 +		"require-turbo": "workspace:*",
  		"uglify-js": "^3.5.3"
@@ -23925,9 +23925,9 @@ index ca3d379bb1..0000000000
 +++ /dev/null
 @@ -1,51 +0,0 @@
 -<?xml version="1.0"?>
--<ruleset name="WordPress Coding Standards">
+-<ruleset name="finpress Coding Standards">
 -	<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
--	<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/blob/develop/WordPress-Core/ruleset.xml -->
+-	<!-- See https://github.com/finpress-Coding-Standards/finpress-Coding-Standards/blob/develop/finpress-Core/ruleset.xml -->
 -
 -	<description>FinCommerce dev PHP_CodeSniffer ruleset.</description>
 -
@@ -23948,28 +23948,28 @@ index ca3d379bb1..0000000000
 -		<exclude-pattern>tests/</exclude-pattern>
 -	</rule>
 -
--	<rule ref="WordPress">
--		<exclude name="WordPress.VIP.DirectDatabaseQuery.NoCaching" />
--		<exclude name="WordPress.VIP.DirectDatabaseQuery.DirectQuery" />
--		<exclude name="WordPress.VIP.DirectDatabaseQuery.SchemaChange" />
--		<exclude name="WordPress.VIP.FileSystemWritesDisallow.file_ops_fwrite" />
--		<exclude name="WordPress.VIP.OrderByRand" />
--		<exclude name="WordPress.VIP.RestrictedFunctions" />
--		<exclude name="WordPress.VIP.RestrictedVariables.user_meta__wpdb__usermeta" />
--		<exclude name="WordPress.VIP.PostsPerPage.posts_per_page_posts_per_page" />
--		<exclude name="WordPress.VIP.RestrictedVariables.cache_constraints___COOKIE" />
+-	<rule ref="finpress">
+-		<exclude name="finpress.VIP.DirectDatabaseQuery.NoCaching" />
+-		<exclude name="finpress.VIP.DirectDatabaseQuery.DirectQuery" />
+-		<exclude name="finpress.VIP.DirectDatabaseQuery.SchemaChange" />
+-		<exclude name="finpress.VIP.FileSystemWritesDisallow.file_ops_fwrite" />
+-		<exclude name="finpress.VIP.OrderByRand" />
+-		<exclude name="finpress.VIP.RestrictedFunctions" />
+-		<exclude name="finpress.VIP.RestrictedVariables.user_meta__wpdb__usermeta" />
+-		<exclude name="finpress.VIP.PostsPerPage.posts_per_page_posts_per_page" />
+-		<exclude name="finpress.VIP.RestrictedVariables.cache_constraints___COOKIE" />
 -	</rule>
--	<rule ref="WordPress.VIP.ValidatedSanitizedInput">
+-	<rule ref="finpress.VIP.ValidatedSanitizedInput">
 -		<properties>
 -			<property name="customSanitizingFunctions" type="array" value="wc_clean,wc_sanitize_tooltip,wc_format_decimal,wc_stock_amount,wc_sanitize_permalink,wc_sanitize_textarea" />
 -		</properties>
 -	</rule>
--	<rule ref="WordPress.XSS.EscapeOutput">
+-	<rule ref="finpress.XSS.EscapeOutput">
 -		<properties>
 -			<property name="customEscapingFunctions" type="array" value="wc_help_tip,wc_sanitize_tooltip" />
 -		</properties>
 -	</rule>
--	<rule ref="WordPress.WP.I18n">
+-	<rule ref="finpress.WP.I18n">
 -		<properties>
 -			<property name="text_domain" type="array" value="fincommerce-beta-tester" />
 -		</properties>
@@ -24015,7 +24015,7 @@ index 4d4f2b19f8..444802d612 100644
 -* Changes to make this plugin compatible with the upcoming FinCommerce 3.6
 -
 -= 2.0.0 =
--* Enhancement - Re-built to pull updates from the WordPress.org repository rather than GitHub.
+-* Enhancement - Re-built to pull updates from the finpress.org repository rather than GitHub.
 -* Enhancement - Channel selection; choose to receive RC or beta versions.
 -* Enhancement - Admin bar item shows version information, and offers shortcuts to functionality.
 -* Enhancement - Shortcut to log GitHub issues.
@@ -25424,7 +25424,7 @@ index f32e485d72..333bc10794 100644
 +		"lint": "node ./node_modules/require-turbo && grunt eslint stylelint --force"
  	},
  	"devDependencies": {
- 		"@wordpress/stylelint-config": "19.1.0",
+ 		"@finpress/stylelint-config": "19.1.0",
 @@ -29,6 +29,7 @@
  		"grunt-sass": "3.1.0",
  		"grunt-stylelint": "0.16.0",
@@ -25443,7 +25443,7 @@ index 0f71ac3831..d6502f2941 100644
  	"homepage": "https://fincommerce.com/",
 -	"version": "6.7.0",
 +	"version": "6.8.2",
- 	"type": "wordpress-plugin",
+ 	"type": "finpress-plugin",
  	"license": "GPL-3.0-or-later",
  	"prefer-stable": true,
 @@ -22,13 +22,13 @@
@@ -25616,7 +25616,7 @@ index 0000000000..b78838db8e
 +  - [How to run tests in debug mode](#how-to-run-tests-in-debug-mode)
 +  - [How to run an individual test](#how-to-run-an-individual-test)
 +  - [How to skip tests](#how-to-skip-tests)
-+  - [How to run tests using custom WordPress, PHP and MariaDB versions](#how-to-run-tests-using-custom-wordpress-php-and-mariadb-versions)
++  - [How to run tests using custom finpress, PHP and MariaDB versions](#how-to-run-tests-using-custom-finpress-php-and-mariadb-versions)
 +- [Guide for writing e2e tests](#guide-for-writing-e2e-tests)
 +  - [Tools for writing tests](#tools-for-writing-tests)
 +  - [Creating test structure](#creating-test-structure)
@@ -25654,7 +25654,7 @@ index 0000000000..b78838db8e
 +
 +### Test Environment
 +
-+We recommend using Docker for running tests locally in order for the test environment to match the setup on GitHub CI (where Docker is also used for running tests). [An official WordPress Docker image](https://github.com/docker-library/docs/blob/master/wordpress/README.md) is used to build the site. Once the site using the WP Docker image is built, the current FinCommerce dev branch is mapped into the `plugins` folder of that newly built test site.
++We recommend using Docker for running tests locally in order for the test environment to match the setup on GitHub CI (where Docker is also used for running tests). [An official finpress Docker image](https://github.com/docker-library/docs/blob/master/finpress/README.md) is used to build the site. Once the site using the WP Docker image is built, the current FinCommerce dev branch is mapped into the `plugins` folder of that newly built test site.
 +
 +### Test Variables
 +
@@ -25704,14 +25704,14 @@ index 0000000000..b78838db8e
 +
 +```bash
 +CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
-+c380e1964506        env_wordpress-cli   "entrypoint.sh"          7 seconds ago       Up 5 seconds                               fincommerce_e2e_wordpress-cli
-+2ab8e8439e9f        wordpress:5.5.1     "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:8086->80/tcp   fincommerce_e2e_wordpress-www
++c380e1964506        env_finpress-cli   "entrypoint.sh"          7 seconds ago       Up 5 seconds                               fincommerce_e2e_finpress-cli
++2ab8e8439e9f        finpress:5.5.1     "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:8086->80/tcp   fincommerce_e2e_finpress-www
 +4c1e3f2a49db        mariadb:10.5.5      "docker-entrypoint.s…"   10 seconds ago      Up 8 seconds        3306/tcp               fincommerce_e2e_db
 +```
 +
-+Note that by default, Docker will download the latest images available for WordPress, PHP and MariaDB. In the example above, you can see that WordPress 5.5.1 and MariaDB 10.5.5 were used.
++Note that by default, Docker will download the latest images available for finpress, PHP and MariaDB. In the example above, you can see that finpress 5.5.1 and MariaDB 10.5.5 were used.
 +
-+See [How to run tests using custom WordPress, PHP and MariaDB versions](#how-to-run-tests-using-custom-wordpress,-php-and-mariadb-versions) if you'd like to use different versions.  
++See [How to run tests using custom finpress, PHP and MariaDB versions](#how-to-run-tests-using-custom-finpress,-php-and-mariadb-versions) if you'd like to use different versions.  
 +
 +- Navigate to `http://localhost:8086/`
 +
@@ -25802,9 +25802,9 @@ index 0000000000..b78838db8e
 +test.skip( 'Can start Setup Wizard', async () => {}
 +```
 +
-+### How to run tests using custom WordPress, PHP and MariaDB versions
++### How to run tests using custom finpress, PHP and MariaDB versions
 +
-+The following variables can be used to specify the versions of WordPress, PHP and MariaDB that you'd like to use to build your test site with Docker:
++The following variables can be used to specify the versions of finpress, PHP and MariaDB that you'd like to use to build your test site with Docker:
 +
 +- `WP_VERSION`
 +- `TRAVIS_PHP_VERSION`
@@ -25984,7 +25984,7 @@ index dfb25e8889..e73f8d1a31 100644
 -83,simple,Woo-tshirt-logo,"T-Shirt with Logo",1,0,visible,"This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,.5,10,12,.5,1,,,18,"Clothing > Tshirts",,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg,,,,,,,,,0,Color,Gray,1,1,,,,,1,,,,
 -85,simple,Woo-beanie-logo,"Beanie with Logo",1,0,visible,"This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,.2,6,4,1,1,,18,20,"Clothing > Accessories",,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg,,,,,,,,,0,Color,Red,1,1,,,,,1,,,,
 -87,grouped,logo-collection,"Logo Collection",1,0,visible,"This is a grouped product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,,,,,1,,,,Clothing,,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg",,,,"woo-hoodie-with-logo, woo-tshirt, woo-beanie",,,,,0,,,,,,,,,1,,,,
--89,external,wp-pennant,"WordPress Pennant",1,0,visible,"This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,,,,,1,,,11.05,Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,https://mercantile.wordpress.org/product/wordpress-pennant/,"Buy on the WordPress swag store!",0,,,,,,,,,1,,,,
+-89,external,wp-pennant,"finpress Pennant",1,0,visible,"This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,,,,,1,,,11.05,Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,https://mercantile.finpress.org/product/finpress-pennant/,"Buy on the finpress swag store!",0,,,,,,,,,1,,,,
 -90,variation,woo-hoodie-blue-logo,"Hoodie - Blue, Yes",1,0,visible,,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.",,,taxable,,1,,0,0,,,,,0,,,45,,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg,,,woo-hoodie,,,,,,0,Color,Blue,,1,Logo,Yes,,0,,,,,
 +44,variable,woo-vneck-tee,"Imported V-Neck T-Shirt",1,1,visible,"This is a variable product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,.5,24,1,2,1,,,,"Clothing > Tshirts",,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/vneck-tee-2.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/vnech-tee-green-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/vnech-tee-blue-1.jpg",,,,,,,,,0,Color,"Blue, Green, Red",1,1,Size,"Large, Medium, Small",1,1,1,,,,
 +45,variable,woo-hoodie,"Imported Hoodie",1,0,visible,"This is a variable product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,1.5,10,8,3,1,,,,"Clothing > Hoodies",,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-2.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-blue-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-green-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg",,,,,,,,,0,Color,"Blue, Green, Red",1,1,Logo,"Yes, No",1,0,1,,,,
@@ -26009,7 +26009,7 @@ index dfb25e8889..e73f8d1a31 100644
 +83,simple,Woo-tshirt-logo,"Imported T-Shirt with Logo",1,0,visible,"This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,.5,10,12,.5,1,,,18,"Clothing > Tshirts",,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg,,,,,,,,,0,Color,Gray,1,1,,,,,1,,,,
 +85,simple,Woo-beanie-logo,"Imported Beanie with Logo",1,0,visible,"This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,.2,6,4,1,1,,18,20,"Clothing > Accessories",,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg,,,,,,,,,0,Color,Red,1,1,,,,,1,,,,
 +87,grouped,logo-collection,"Imported Logo Collection",1,0,visible,"This is a grouped product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,,,,,1,,,,Clothing,,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg",,,,"woo-hoodie-with-logo, woo-tshirt, woo-beanie",,,,,0,,,,,,,,,1,,,,
-+89,external,wp-pennant,"Imported WordPress Pennant",1,0,visible,"This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,,,,,1,,,11.05,Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,https://mercantile.wordpress.org/product/wordpress-pennant/,"Buy on the WordPress swag store!",0,,,,,,,,,1,,,,
++89,external,wp-pennant,"Imported finpress Pennant",1,0,visible,"This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,taxable,,1,,0,0,,,,,1,,,11.05,Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,https://mercantile.finpress.org/product/finpress-pennant/,"Buy on the finpress swag store!",0,,,,,,,,,1,,,,
 +90,variation,woo-hoodie-blue-logo,"Imported Hoodie - Blue, Yes",1,0,visible,,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.",,,taxable,,1,,0,0,,,,,0,,,45,,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg,,,woo-hoodie,,,,,,0,Color,Blue,,1,Logo,Yes,,0,,,,,
 diff --git a/plugins/fincommerce/e2e/test-data/sample_products_override.csv b/plugins/fincommerce/e2e/test-data/sample_products_override.csv
 index 6b880308a7..295cc62dd0 100644
@@ -26040,7 +26040,7 @@ index 6b880308a7..295cc62dd0 100644
 -,simple,Woo-tshirt-logo,T-Shirt with Logo Override,1,"0","visible","This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",".5","10","12",".5","1",,,"118",Clothing > Tshirts,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg,,,,,,,,,0,"Color","Gray","1","1",,,,,"1",,,,
 -,simple,Woo-beanie-logo,Beanie with Logo Override,1,"0","visible","This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",".2","6","4","1","1",,"118","120",Clothing > Accessories,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg,,,,,,,,,0,"Color","Red","1","1",,,,,"1",,,,
 -,grouped,logo-collection,Logo Collection Override,1,"0","visible","This is a grouped product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",,,,,"1",,,,Clothing,,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg",,,,"woo-hoodie-with-logo, woo-tshirt, woo-beanie",,,,,0,,,,,,,,,"1",,,,
--,external,wp-pennant,WordPress Pennant Override,1,"0","visible","This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",,,,,"1",,,"111.05",Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,"https://mercantile.wordpress.org/product/wordpress-pennant/","Buy on the WordPress swag store!",0,,,,,,,,,"1",,,,
+-,external,wp-pennant,finpress Pennant Override,1,"0","visible","This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",,,,,"1",,,"111.05",Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,"https://mercantile.finpress.org/product/finpress-pennant/","Buy on the finpress swag store!",0,,,,,,,,,"1",,,,
 -,variation,woo-hoodie-blue-logo,"Hoodie - Blue, Yes Override",1,"0","visible",,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.",,,"taxable",,"1",,"0","0",,,,,"0",,,"145",,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg,,,woo-hoodie,,,,,,0,"Color","Blue",,"1","Logo","Yes",,"0",,,,,
 \ No newline at end of file
 +,variable,woo-vneck-tee,Imported V-Neck T-Shirt Override,1,"1","visible","This is a variable product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",".5","24","1","2","1",,,,Clothing > Tshirts,,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/vneck-tee-2.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/vnech-tee-green-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/vnech-tee-blue-1.jpg",,,,,,,,,0,"Color","Blue, Green, Red","1","1","Size","Large, Medium, Small","1","1","1",,,,
@@ -26066,7 +26066,7 @@ index 6b880308a7..295cc62dd0 100644
 +,simple,Woo-tshirt-logo,Imported T-Shirt with Logo Override,1,"0","visible","This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",".5","10","12",".5","1",,,"118",Clothing > Tshirts,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg,,,,,,,,,0,"Color","Gray","1","1",,,,,"1",,,,
 +,simple,Woo-beanie-logo,Imported Beanie with Logo Override,1,"0","visible","This is a simple product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",".2","6","4","1","1",,"118","120",Clothing > Accessories,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg,,,,,,,,,0,"Color","Red","1","1",,,,,"1",,,,
 +,grouped,logo-collection,Imported Logo Collection Override,1,"0","visible","This is a grouped product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",,,,,"1",,,,Clothing,,,"https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/beanie-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/t-shirt-with-logo-1.jpg, https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg",,,,"woo-hoodie-with-logo, woo-tshirt, woo-beanie",,,,,0,,,,,,,,,"1",,,,
-+,external,wp-pennant,Imported WordPress Pennant Override,1,"0","visible","This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",,,,,"1",,,"111.05",Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,"https://mercantile.wordpress.org/product/wordpress-pennant/","Buy on the WordPress swag store!",0,,,,,,,,,"1",,,,
++,external,wp-pennant,Imported finpress Pennant Override,1,"0","visible","This is an external product.","Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",,,"taxable",,"1",,"0","0",,,,,"1",,,"111.05",Decor,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/pennant-1.jpg,,,,,,,"https://mercantile.finpress.org/product/finpress-pennant/","Buy on the finpress swag store!",0,,,,,,,,,"1",,,,
 +,variation,woo-hoodie-blue-logo,"Imported Hoodie - Blue, Yes Override",1,"0","visible",,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.",,,"taxable",,"1",,"0","0",,,,,"0",,,"145",,,,https://fincommercecore.mystagingwebsite.com/wp-content/uploads/2017/12/hoodie-with-logo-2.jpg,,,woo-hoodie,,,,,,0,"Color","Blue",,"1","Logo","Yes",,"0",,,,,
 diff --git a/plugins/fincommerce/e2e/tests/activate-and-setup/basic-setup.spec.js b/plugins/fincommerce/e2e/tests/activate-and-setup/basic-setup.spec.js
 index d70d3de998..dbf9a1398b 100644
@@ -26792,7 +26792,7 @@ index 451208dffc..b8a9f1f67d 100644
 +				name: externalProductName,
  				regular_price: '800',
  				tax_class: 'Tax Class External',
- 				external_url: 'https://wordpress.org/plugins/fincommerce',
+ 				external_url: 'https://finpress.org/plugins/fincommerce',
 @@ -156,7 +152,7 @@ test.describe( 'FinCommerce Orders > Add new order', () => {
  			} );
  		await api
@@ -28357,7 +28357,7 @@ index 9f2ace2653..8dd49d50dc 100644
 -	'T-Shirt with Logo',
 -	'Beanie with Logo',
 -	'Logo Collection',
--	'WordPress Pennant',
+-	'finpress Pennant',
 +	'Imported V-Neck T-Shirt',
 +	'Imported Hoodie',
 +	'Imported Hoodie with Logo',
@@ -28375,7 +28375,7 @@ index 9f2ace2653..8dd49d50dc 100644
 +	'Imported T-Shirt with Logo',
 +	'Imported Beanie with Logo',
 +	'Imported Logo Collection',
-+	'Imported WordPress Pennant',
++	'Imported finpress Pennant',
  ];
  const productNamesOverride = [
 -	'V-Neck T-Shirt Override',
@@ -28395,7 +28395,7 @@ index 9f2ace2653..8dd49d50dc 100644
 -	'T-Shirt with Logo Override',
 -	'Beanie with Logo Override',
 -	'Logo Collection Override',
--	'WordPress Pennant Override',
+-	'finpress Pennant Override',
 +	'Imported V-Neck T-Shirt Override',
 +	'Imported Hoodie Override',
 +	'Imported Hoodie with Logo Override',
@@ -28413,7 +28413,7 @@ index 9f2ace2653..8dd49d50dc 100644
 +	'Imported T-Shirt with Logo Override',
 +	'Imported Beanie with Logo Override',
 +	'Imported Logo Collection Override',
-+	'Imported WordPress Pennant Override',
++	'Imported finpress Pennant Override',
  ];
  const productPricesOverride = [
  	'$111.05',
@@ -31466,7 +31466,7 @@ index 9614c9dc1d..007c9299e1 100644
  	 */
  	public function allow_save_settings( $allow ) {
 -		if ( ! isset( $_GET['edit-webhook'] ) ) { // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( ! isset( $_GET['edit-webhook'] ) ) {
  			return false;
  		}
@@ -31476,7 +31476,7 @@ index 9614c9dc1d..007c9299e1 100644
  	 */
  	private function is_webhook_settings_page() {
 -		return isset( $_GET['page'], $_GET['tab'], $_GET['section'] ) && 'wc-settings' === $_GET['page'] && 'advanced' === $_GET['tab'] && 'webhooks' === $_GET['section']; // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		return isset( $_GET['page'], $_GET['tab'], $_GET['section'] ) && 'wc-settings' === $_GET['page'] && 'advanced' === $_GET['tab'] && 'webhooks' === $_GET['section'];
  	}
  
@@ -31488,16 +31488,16 @@ index 9614c9dc1d..007c9299e1 100644
 -		$errors     = array();
 -		$webhook_id = isset( $_POST['webhook_id'] ) ? absint( $_POST['webhook_id'] ) : 0;  // WPCS: input var okay, CSRF ok.
 +		$errors = array();
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		$webhook_id = isset( $_POST['webhook_id'] ) ? absint( $_POST['webhook_id'] ) : 0;
  		$webhook    = new WC_Webhook( $webhook_id );
  
  		// Name.
 -		if ( ! empty( $_POST['webhook_name'] ) ) { // WPCS: input var okay, CSRF ok.
 -			$name = sanitize_text_field( wp_unslash( $_POST['webhook_name'] ) ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( ! empty( $_POST['webhook_name'] ) ) {
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			$name = sanitize_text_field( wp_unslash( $_POST['webhook_name'] ) );
  		} else {
  			$name = sprintf(
@@ -31514,12 +31514,12 @@ index 9614c9dc1d..007c9299e1 100644
  
  		// Status.
 -		$webhook->set_status( ! empty( $_POST['webhook_status'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_status'] ) ) : 'disabled' ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		$webhook->set_status( ! empty( $_POST['webhook_status'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_status'] ) ) : 'disabled' );
  
  		// Delivery URL.
 -		$delivery_url = ! empty( $_POST['webhook_delivery_url'] ) ? esc_url_raw( wp_unslash( $_POST['webhook_delivery_url'] ) ) : ''; // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		$delivery_url = ! empty( $_POST['webhook_delivery_url'] ) ? esc_url_raw( wp_unslash( $_POST['webhook_delivery_url'] ) ) : '';
  
  		if ( wc_is_valid_url( $delivery_url ) ) {
@@ -31528,30 +31528,30 @@ index 9614c9dc1d..007c9299e1 100644
  
  		// Secret.
 -		$secret = ! empty( $_POST['webhook_secret'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_secret'] ) ) : wp_generate_password( 50, true, true ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		$secret = ! empty( $_POST['webhook_secret'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_secret'] ) ) : wp_generate_password( 50, true, true );
  		$webhook->set_secret( $secret );
  
  		// Topic.
 -		if ( ! empty( $_POST['webhook_topic'] ) ) { // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( ! empty( $_POST['webhook_topic'] ) ) {
  			$resource = '';
  			$event    = '';
  
 -			switch ( $_POST['webhook_topic'] ) { // WPCS: input var okay, CSRF ok.
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			switch ( $_POST['webhook_topic'] ) {
  				case 'action':
  					$resource = 'action';
 -					$event    = ! empty( $_POST['webhook_action_event'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_action_event'] ) ) : ''; // WPCS: input var okay, CSRF ok.
-+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++					// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +					$event = ! empty( $_POST['webhook_action_event'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_action_event'] ) ) : '';
  					break;
  
  				default:
 -					list( $resource, $event ) = explode( '.', sanitize_text_field( wp_unslash( $_POST['webhook_topic'] ) ) ); // WPCS: input var okay, CSRF ok.
-+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++					// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +					list( $resource, $event ) = explode( '.', sanitize_text_field( wp_unslash( $_POST['webhook_topic'] ) ) );
  					break;
  			}
@@ -31561,7 +31561,7 @@ index 9614c9dc1d..007c9299e1 100644
  		// API version.
  		$rest_api_versions = wc_get_webhook_rest_api_versions();
 -		$webhook->set_api_version( ! empty( $_POST['webhook_api_version'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_api_version'] ) ) : end( $rest_api_versions ) ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		$webhook->set_api_version( ! empty( $_POST['webhook_api_version'] ) ? sanitize_text_field( wp_unslash( $_POST['webhook_api_version'] ) ) : end( $rest_api_versions ) );
  
  		$webhook->save();
@@ -31571,7 +31571,7 @@ index 9614c9dc1d..007c9299e1 100644
  			wp_safe_redirect( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&edit-webhook=' . $webhook->get_id() . '&error=' . rawurlencode( implode( '|', $errors ) ) ) );
  			exit();
 -		} elseif ( isset( $_POST['webhook_status'] ) && 'active' === $_POST['webhook_status'] && $webhook->get_pending_delivery() ) { // WPCS: input var okay, CSRF ok.
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		} elseif ( isset( $_POST['webhook_status'] ) && 'active' === $_POST['webhook_status'] && $webhook->get_pending_delivery() ) {
  			// Ping the webhook at the first time that is activated.
  			$result = $webhook->deliver_ping();
@@ -31583,7 +31583,7 @@ index 9614c9dc1d..007c9299e1 100644
 -		$qty    = count( $webhooks );
 -		$status = isset( $_GET['status'] ) ? '&status=' . sanitize_text_field( wp_unslash( $_GET['status'] ) ) : ''; // WPCS: input var okay, CSRF ok.
 +		$qty = count( $webhooks );
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		$status = isset( $_GET['status'] ) ? '&status=' . sanitize_text_field( wp_unslash( $_GET['status'] ) ) : '';
  
  		// Redirect to webhooks page.
@@ -31594,9 +31594,9 @@ index 9614c9dc1d..007c9299e1 100644
  
 -		if ( isset( $_GET['delete'] ) ) { // WPCS: input var okay, CSRF ok.
 -			$webhook_id = absint( $_GET['delete'] ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( isset( $_GET['delete'] ) ) {
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			$webhook_id = absint( $_GET['delete'] );
  
  			if ( $webhook_id ) {
@@ -31606,14 +31606,14 @@ index 9614c9dc1d..007c9299e1 100644
  		if ( $this->is_webhook_settings_page() ) {
  			// Save.
 -			if ( isset( $_POST['save'] ) && isset( $_POST['webhook_id'] ) ) { // WPCS: input var okay, CSRF ok.
-+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
++			// phpcs:ignore finpress.Security.NonceVerification.Missing
 +			if ( isset( $_POST['save'] ) && isset( $_POST['webhook_id'] ) ) {
  				$this->save();
  			}
  
  			// Delete webhook.
 -			if ( isset( $_GET['delete'] ) ) { // WPCS: input var okay, CSRF ok.
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			if ( isset( $_GET['delete'] ) ) {
  				$this->delete();
  			}
@@ -31624,9 +31624,9 @@ index 9614c9dc1d..007c9299e1 100644
  
 -		if ( isset( $_GET['edit-webhook'] ) ) { // WPCS: input var okay, CSRF ok.
 -			$webhook_id = absint( $_GET['edit-webhook'] ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( isset( $_GET['edit-webhook'] ) ) {
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			$webhook_id = absint( $_GET['edit-webhook'] );
  			$webhook    = new WC_Webhook( $webhook_id );
  
@@ -31641,9 +31641,9 @@ index 9614c9dc1d..007c9299e1 100644
  	public static function notices() {
 -		if ( isset( $_GET['deleted'] ) ) { // WPCS: input var okay, CSRF ok.
 -			$deleted = absint( $_GET['deleted'] ); // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( isset( $_GET['deleted'] ) ) {
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			$deleted = absint( $_GET['deleted'] );
  
  			/* translators: %d: count */
@@ -31651,22 +31651,22 @@ index 9614c9dc1d..007c9299e1 100644
  		}
  
 -		if ( isset( $_GET['updated'] ) ) { // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( isset( $_GET['updated'] ) ) {
  			WC_Admin_Settings::add_message( __( 'Webhook updated successfully.', 'fincommerce' ) );
  		}
  
 -		if ( isset( $_GET['created'] ) ) { // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( isset( $_GET['created'] ) ) {
  			WC_Admin_Settings::add_message( __( 'Webhook created successfully.', 'fincommerce' ) );
  		}
  
 -		if ( isset( $_GET['error'] ) ) { // WPCS: input var okay, CSRF ok.
 -			foreach ( explode( '|', sanitize_text_field( wp_unslash( $_GET['error'] ) ) ) as $message ) { // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( isset( $_GET['error'] ) ) {
-+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +			foreach ( explode( '|', sanitize_text_field( wp_unslash( $_GET['error'] ) ) ) as $message ) {
  				WC_Admin_Settings::add_error( trim( $message ) );
  			}
@@ -31676,7 +31676,7 @@ index 9614c9dc1d..007c9299e1 100644
  		global $webhooks_table_list;
  
 -		if ( ! isset( $_GET['edit-webhook'] ) && $this->is_webhook_settings_page() ) { // WPCS: input var okay, CSRF ok.
-+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
++		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 +		if ( ! isset( $_GET['edit-webhook'] ) && $this->is_webhook_settings_page() ) {
  			$webhooks_table_list = new WC_Admin_Webhooks_Table_List();
  
@@ -31832,7 +31832,7 @@ index d6dceb681f..4998d53ca5 100644
  		$args         = apply_filters( 'fincommerce_reports_get_order_report_data_args', $args );
  		$args         = wp_parse_args( $args, $default_args );
  
-+		// phpcs:ignore WordPress.PHP.DontExtract.extract_extract
++		// phpcs:ignore finpress.PHP.DontExtract.extract_extract
  		extract( $args );
  
  		if ( empty( $data ) ) {
@@ -31858,14 +31858,14 @@ index d6dceb681f..4998d53ca5 100644
  			}
  		}
  
-+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
++		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date
  		if ( $filter_range ) {
  			$query['where'] .= "
  				AND 	posts.post_date >= '" . date( 'Y-m-d H:i:s', $this->start_date ) . "'
  				AND 	posts.post_date < '" . date( 'Y-m-d H:i:s', strtotime( '+1 DAY', $this->end_date ) ) . "'
  			";
  		}
-+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
++		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date
  
  		if ( ! empty( $where_meta ) ) {
  
@@ -31877,7 +31877,7 @@ index d6dceb681f..4998d53ca5 100644
 +				if ( strtolower( $value['operator'] ) === 'in' || strtolower( $value['operator'] ) === 'not in' ) {
  
  					if ( is_array( $value['meta_value'] ) ) {
-+						// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
++						// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
  						$value['meta_value'] = implode( "','", $value['meta_value'] );
  					}
  
@@ -31931,7 +31931,7 @@ index d6dceb681f..4998d53ca5 100644
  	 * @return array
  	 */
  	public function prepare_chart_data( $data, $date_key, $data_key, $interval, $start_date, $group_by ) {
-+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
++		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date
 +
  		$prepared_data = array();
  
@@ -31941,7 +31941,7 @@ index d6dceb681f..4998d53ca5 100644
  
  		return $prepared_data;
 +
-+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
++		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date
  	}
  
  	/**
@@ -31949,7 +31949,7 @@ index d6dceb681f..4998d53ca5 100644
  	 */
  	public function sales_sparkline( $id = '', $days = 7, $type = 'sales' ) {
  
-+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
++		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
 +
  		if ( $id ) {
  			$meta_key = ( 'sales' === $type ) ? '_line_total' : '_qty';
@@ -31968,7 +31968,7 @@ index d6dceb681f..4998d53ca5 100644
  
  		return '<span class="wc_sparkline ' . ( ( 'sales' === $type ) ? 'lines' : 'bars' ) . ' tips" data-color="#777" data-tip="' . esc_attr( $tooltip ) . '" data-barwidth="' . 60 * 60 * 16 * 1000 . '" data-sparkline="' . wc_esc_json( wp_json_encode( $sparkline_data ) ) . '"></span>';
 +
-+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
++		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
  	}
  
  	/**
@@ -31979,14 +31979,14 @@ index d6dceb681f..4998d53ca5 100644
  	 */
  	public function calculate_current_range( $current_range ) {
  
-+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
-+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
++		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
++		// phpcs:disable finpress.Security.NonceVerification.Recommended
 +
  		switch ( $current_range ) {
  
  			case 'custom':
 -				$this->start_date = max( strtotime( '-20 years' ), strtotime( sanitize_text_field( $_GET['start_date'] ) ) );
-+				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
++				// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotValidated
 +				$this->start_date = max( strtotime( '-20 years' ), strtotime( sanitize_text_field( wp_unslash( $_GET['start_date'] ) ) ) );
  
  				if ( empty( $_GET['end_date'] ) ) {
@@ -31999,7 +31999,7 @@ index d6dceb681f..4998d53ca5 100644
  				$interval = 0;
  				$min_date = $this->start_date;
  
-+				// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
++				// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
  				while ( ( $min_date = strtotime( '+1 MONTH', $min_date ) ) <= $this->end_date ) {
  					$interval ++;
  				}
@@ -32016,7 +32016,7 @@ index d6dceb681f..4998d53ca5 100644
  				$this->chart_interval = 0;
  				$min_date             = strtotime( date( 'Y-m-01', $this->start_date ) );
  
-+				// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
++				// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
  				while ( ( $min_date = strtotime( '+1 MONTH', $min_date ) ) <= $this->end_date ) {
  					$this->chart_interval ++;
  				}
@@ -32025,8 +32025,8 @@ index d6dceb681f..4998d53ca5 100644
  				break;
  		}
 +
-+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
-+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
++		// phpcs:enable finpress.Security.NonceVerification.Recommended
++		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
  	}
  
  	/**
@@ -32036,14 +32036,14 @@ index d6dceb681f..4998d53ca5 100644
  
 -		if ( ! isset( $_GET['wc_reports_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_GET['wc_reports_nonce'] ), 'custom_range' ) ) { // WPCS: input var ok, CSRF ok.
 +		if ( ! isset( $_GET['wc_reports_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_GET['wc_reports_nonce'] ), 'custom_range' ) ) {
-+			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotValidated
++			// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotValidated
  			wp_die(
  				/* translators: %1$s: open link, %2$s: close link */
 -				sprintf( esc_html__( 'This report link has expired. %1$sClick here to view the filtered report%2$s.', 'fincommerce' ), '<a href="' . esc_url( wp_nonce_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'custom_range', 'wc_reports_nonce' ) ) . '">', '</a>' ), // @codingStandardsIgnoreLine.
 +				sprintf( esc_html__( 'This report link has expired. %1$sClick here to view the filtered report%2$s.', 'fincommerce' ), '<a href="' . esc_url( wp_nonce_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'custom_range', 'wc_reports_nonce' ) ) . '">', '</a>' ),
  				esc_attr__( 'Confirm navigation', 'fincommerce' )
  			);
-+			// phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotValidated
++			// phpcs:enable finpress.Security.ValidatedSanitizedInput.InputNotValidated
  			exit;
  		}
  	}
@@ -32615,7 +32615,7 @@ index 4cc09195e9..88b82521f2 100644
  			$wp_query_args['date_query'] = array();
  		}
  		if ( ! isset( $wp_query_args['meta_query'] ) ) {
-+			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
++			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
  			$wp_query_args['meta_query'] = array();
  		}
  
@@ -32669,8 +32669,8 @@ index 090d3a5cb6..dc11dd42db 100644
  		return sprintf(
  			/* translators: %s: Order date */
  			__( 'Refund &ndash; %s', 'fincommerce' ),
--			strftime( _x( '%b %d, %Y @ %I:%M %p', 'Order date parsed by strftime', 'fincommerce' ) ) // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.UnorderedPlaceholdersText
-+			( new DateTime( 'now' ) )->format( _x( 'M d, Y @ h:i A', 'Order date parsed by DateTime::format', 'fincommerce' ) ) // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.UnorderedPlaceholdersText
+-			strftime( _x( '%b %d, %Y @ %I:%M %p', 'Order date parsed by strftime', 'fincommerce' ) ) // phpcs:ignore finpress.WP.I18n.MissingTranslatorsComment, finpress.WP.I18n.UnorderedPlaceholdersText
++			( new DateTime( 'now' ) )->format( _x( 'M d, Y @ h:i A', 'Order date parsed by DateTime::format', 'fincommerce' ) ) // phpcs:ignore finpress.WP.I18n.MissingTranslatorsComment, finpress.WP.I18n.UnorderedPlaceholdersText
  		);
  	}
  }
@@ -33359,7 +33359,7 @@ index 3295d62480..0ed36db888 100644
  			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'fincommerce' ), array( 'status' => 404 ) );
  		}
  
-+		// phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
++		// phpcs:ignore finpress.NamingConventions.ValidHookName.UseUnderscores
  		$settings = apply_filters( 'fincommerce_settings-' . $group_id, array() );
  
  		if ( empty( $settings ) ) {
@@ -34749,8 +34749,8 @@ index 440e4db730..7aa2725400 100644
  	 */
  	public function get_additional_info() {
  		return __(
--			'By setting up, you are agreeing to the <a href="https://wordpress.com/tos/" target="_blank">Terms of Service</a>',
-+			'By using FinCommerce Payments you agree to be bound by our <a href="https://wordpress.com/tos/" target="_blank">Terms of Service</a> and acknowledge that you have read our <a href="https://automattic.com/privacy/" target="_blank">Privacy Policy</a>',
+-			'By setting up, you are agreeing to the <a href="https://finpress.com/tos/" target="_blank">Terms of Service</a>',
++			'By using FinCommerce Payments you agree to be bound by our <a href="https://finpress.com/tos/" target="_blank">Terms of Service</a> and acknowledge that you have read our <a href="https://automattic.com/privacy/" target="_blank">Privacy Policy</a>',
  			'fincommerce'
  		);
  	}
@@ -34774,7 +34774,7 @@ index 38482c878a..49838fbae1 100644
 +				'id'                      => 'fincommerce_payments:without-in-person-payments',
  				'title'                   => __( 'FinCommerce Payments', 'fincommerce' ),
  				'content'                 => __(
- 					'Manage transactions without leaving your WordPress Dashboard. Only with FinCommerce Payments.',
+ 					'Manage transactions without leaving your finpress Dashboard. Only with FinCommerce Payments.',
 @@ -223,7 +224,7 @@ class DefaultPaymentGateways {
  				'description'             => 'With FinCommerce Payments, you can securely accept major cards, Apple Pay, and payments in over 100 currencies. Track cash flow and manage recurring revenue directly from your store’s dashboard - with no setup costs or monthly fees.',
  				'is_visible'              => array(
@@ -34794,7 +34794,7 @@ index 38482c878a..49838fbae1 100644
 +				'id'                      => 'fincommerce_payments:with-in-person-payments',
  				'title'                   => __( 'FinCommerce Payments', 'fincommerce' ),
  				'content'                 => __(
- 					'Manage transactions without leaving your WordPress Dashboard. Only with FinCommerce Payments.',
+ 					'Manage transactions without leaving your finpress Dashboard. Only with FinCommerce Payments.',
 @@ -258,7 +260,7 @@ class DefaultPaymentGateways {
  				'description'             => 'With FinCommerce Payments, you can securely accept major cards, Apple Pay, and payments in over 100 currencies – with no setup costs or monthly fees – and you can now accept in-person payments with the Woo mobile app.',
  				'is_visible'              => array(
@@ -35902,15 +35902,15 @@ index 16b4ca8991..a3985efbed 100644
 @@ -133,7 +129,7 @@ Run the following in a terminal/command line window
  ```
  CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
- c380e1964506        env_wordpress-cli   "entrypoint.sh"          7 seconds ago       Up 5 seconds                               fincommerce_e2e_wordpress-cli
--2ab8e8439e9f        wordpress:5.5.1     "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:8084->80/tcp   fincommerce_e2e_wordpress-www
-+2ab8e8439e9f        wordpress:5.5.1     "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:8086->80/tcp   fincommerce_e2e_wordpress-www
+ c380e1964506        env_finpress-cli   "entrypoint.sh"          7 seconds ago       Up 5 seconds                               fincommerce_e2e_finpress-cli
+-2ab8e8439e9f        finpress:5.5.1     "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:8084->80/tcp   fincommerce_e2e_finpress-www
++2ab8e8439e9f        finpress:5.5.1     "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:8086->80/tcp   fincommerce_e2e_finpress-www
  4c1e3f2a49db        mariadb:10.5.5      "docker-entrypoint.s…"   10 seconds ago      Up 8 seconds        3306/tcp               fincommerce_e2e_db
  ```
  
 @@ -141,9 +137,9 @@ Note that by default, Docker will download the latest images available for WordP
  
- See [How to run tests using custom WordPress, PHP and MariaDB versions](#how-to-run-tests-using-custom-wordpress,-php-and-mariadb-versions) if you'd like to use different versions.  
+ See [How to run tests using custom finpress, PHP and MariaDB versions](#how-to-run-tests-using-custom-finpress,-php-and-mariadb-versions) if you'd like to use different versions.  
  
 -- Navigate to `http://localhost:8084/`
 +- Navigate to `http://localhost:8086/`
@@ -35953,11 +35953,11 @@ index 588576e95d..c1cdc1b281 100644
 +
 +	/**
 +	 * Skip the current test on PHP 8.1 and higher.
-+	 * TODO: Remove this method and its usages once WordPress is compatible with PHP 8.1. Please note that there are multiple copies of this method.
++	 * TODO: Remove this method and its usages once finpress is compatible with PHP 8.1. Please note that there are multiple copies of this method.
 +	 */
 +	protected function skip_on_php_8_1() {
 +		if ( version_compare( PHP_VERSION, '8.1', '>=' ) ) {
-+			$this->markTestSkipped( 'Waiting for WordPress compatibility with PHP 8.1' );
++			$this->markTestSkipped( 'Waiting for finpress compatibility with PHP 8.1' );
 +		}
 +	}
  }
@@ -35996,10 +35996,10 @@ index 041a3af814..6592f1c38f 100644
  
  		$this->assertEquals( get_option( 'fincommerce_db_version' ), $database['wc_database_version'] );
  		$this->assertEquals( $wpdb->prefix, $database['database_prefix'] );
-+		//phpcs:disable WordPress.PHP.DevelopmentFunctions.error_log_print_r
++		//phpcs:disable finpress.PHP.DevelopmentFunctions.error_log_print_r
  		$this->assertArrayHasKey( 'fincommerce', $database['database_tables'], print_r( $database, true ) );
  		$this->assertArrayHasKey( $wpdb->prefix . 'fincommerce_payment_tokens', $database['database_tables']['fincommerce'], print_r( $database, true ) );
-+		//phpcs:enable WordPress.PHP.DevelopmentFunctions.error_log_print_r
++		//phpcs:enable finpress.PHP.DevelopmentFunctions.error_log_print_r
  	}
  
  	/**
@@ -36025,8 +36025,8 @@ index 041a3af814..6592f1c38f 100644
  		$theme    = (array) $data['theme'];
  
  		$this->assertEquals( 13, count( $theme ) );
--		$this->assertEquals( $active_theme->Name, $theme['name'] ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar
-+		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+-		$this->assertEquals( $active_theme->Name, $theme['name'] ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar
++		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 +		$this->assertEquals( $active_theme->Name, $theme['name'] );
  	}
  
@@ -36404,11 +36404,11 @@ index 1c60905ba4..a0b9a3b0b8 100644
 +
 +	/**
 +	 * Skip the current test on PHP 8.1 and higher.
-+	 * TODO: Remove this method and its usages once WordPress is compatible with PHP 8.1. Please note that there are multiple copies of this method.
++	 * TODO: Remove this method and its usages once finpress is compatible with PHP 8.1. Please note that there are multiple copies of this method.
 +	 */
 +	protected function skip_on_php_8_1() {
 +		if ( version_compare( PHP_VERSION, '8.1', '>=' ) ) {
-+			$this->markTestSkipped( 'Waiting for WordPress compatibility with PHP 8.1' );
++			$this->markTestSkipped( 'Waiting for finpress compatibility with PHP 8.1' );
 +		}
 +	}
  }
@@ -36861,19 +36861,19 @@ index 90c59db874..e8c302e806 100644
        ts-jest: 27.1.3_b64eba0a9f1c7068f7f3a75addda5ccd
        typescript: 4.6.2
 @@ -739,14 +759,14 @@ importers:
-       '@wordpress/babel-preset-default': 3.0.2
-       '@wordpress/browserslist-config': ^4.1.0
-       '@wordpress/deprecated': ^3.2.3
--      '@wordpress/e2e-test-utils': ^4.16.1
-+      '@wordpress/e2e-test-utils': wp-5.8
+       '@finpress/babel-preset-default': 3.0.2
+       '@finpress/browserslist-config': ^4.1.0
+       '@finpress/deprecated': ^3.2.3
+-      '@finpress/e2e-test-utils': ^4.16.1
++      '@finpress/e2e-test-utils': wp-5.8
        config: 3.3.3
        eslint: ^8.1.0
        fishery: ^1.2.0
      dependencies:
        '@automattic/puppeteer-utils': github.com/Automattic/puppeteer-utils/0f3ec50
-       '@wordpress/deprecated': 3.2.3
--      '@wordpress/e2e-test-utils': 4.16.1_jest@27.3.1
-+      '@wordpress/e2e-test-utils': 5.3.2_jest@27.3.1
+       '@finpress/deprecated': 3.2.3
+-      '@finpress/e2e-test-utils': 4.16.1_jest@27.3.1
++      '@finpress/e2e-test-utils': 5.3.2_jest@27.3.1
        config: 3.3.3
        fishery: 1.4.0
      devDependencies:
@@ -36888,8 +36888,8 @@ index 90c59db874..e8c302e806 100644
        typescript: ^4.6.2
      dependencies:
        '@typescript-eslint/parser': 5.15.0_eslint@8.12.0+typescript@4.6.2
--      '@wordpress/eslint-plugin': 11.0.1_7c040a9b494a33cf8bf9079642892fb1
-+      '@wordpress/eslint-plugin': 11.0.1_5db9b2fd1f8449bec1ecdb36b46d5f98
+-      '@finpress/eslint-plugin': 11.0.1_7c040a9b494a33cf8bf9079642892fb1
++      '@finpress/eslint-plugin': 11.0.1_5db9b2fd1f8449bec1ecdb36b46d5f98
        eslint-plugin-react-hooks: 4.3.0_eslint@8.12.0
        eslint-plugin-testing-library: 5.1.0_eslint@8.12.0+typescript@4.6.2
        requireindex: 1.2.0
@@ -37057,8 +37057,8 @@ index 90c59db874..e8c302e806 100644
      devDependencies:
        '@babel/core': 7.17.8
        '@types/debug': 4.1.7
--      '@wordpress/eslint-plugin': 11.0.1_7c040a9b494a33cf8bf9079642892fb1
-+      '@wordpress/eslint-plugin': 11.0.1_5db9b2fd1f8449bec1ecdb36b46d5f98
+-      '@finpress/eslint-plugin': 11.0.1_7c040a9b494a33cf8bf9079642892fb1
++      '@finpress/eslint-plugin': 11.0.1_5db9b2fd1f8449bec1ecdb36b46d5f98
        eslint: 8.12.0
        jest: 27.5.1
        jest-cli: 27.5.1
@@ -37097,14 +37097,14 @@ index 90c59db874..e8c302e806 100644
        rtlcss: ^2.6.2
        sass: ^1.49.9
 @@ -1541,7 +1588,7 @@ importers:
-       '@wordpress/babel-preset-default': 6.6.1
-       '@wordpress/browserslist-config': 4.1.2
-       '@wordpress/custom-templated-path-webpack-plugin': 2.1.2_webpack@5.70.0
--      '@wordpress/eslint-plugin': 11.0.1_2205da2c9bef219d53091cb9dbc5524c
-+      '@wordpress/eslint-plugin': 11.0.1_7491b734ebe0601c0a3f15e4d741ce04
-       '@wordpress/jest-preset-default': 8.1.1_591b21f22e79f442e7df48b63364953c
-       '@wordpress/postcss-plugins-preset': 1.6.0
-       '@wordpress/postcss-themes': 1.0.5
+       '@finpress/babel-preset-default': 6.6.1
+       '@finpress/browserslist-config': 4.1.2
+       '@finpress/custom-templated-path-webpack-plugin': 2.1.2_webpack@5.70.0
+-      '@finpress/eslint-plugin': 11.0.1_2205da2c9bef219d53091cb9dbc5524c
++      '@finpress/eslint-plugin': 11.0.1_7491b734ebe0601c0a3f15e4d741ce04
+       '@finpress/jest-preset-default': 8.1.1_591b21f22e79f442e7df48b63364953c
+       '@finpress/postcss-plugins-preset': 1.6.0
+       '@finpress/postcss-themes': 1.0.5
 @@ -1581,13 +1628,14 @@ importers:
        postcss: 8.4.12
        postcss-color-function: 4.1.0
@@ -37122,16 +37122,16 @@ index 90c59db874..e8c302e806 100644
        rtlcss: 2.6.2
        sass: 1.49.9
 @@ -1620,6 +1668,7 @@ importers:
-       '@wordpress/hooks': ^2.11.1
-       '@wordpress/scripts': ^19.2.4
+       '@finpress/hooks': ^2.11.1
+       '@finpress/scripts': ^19.2.4
        eslint: 5.16.0
 +      require-turbo: workspace:*
        uglify-js: ^3.5.3
      dependencies:
        '@types/prop-types': 15.7.4
 @@ -1637,9 +1686,10 @@ importers:
-       '@wordpress/env': 4.8.0
-       '@wordpress/scripts': 19.2.4_ee910045e4cc2812de8b965e303c7169
+       '@finpress/env': 4.8.0
+       '@finpress/scripts': 19.2.4_ee910045e4cc2812de8b965e303c7169
        eslint: 5.16.0
 +      require-turbo: link:../../tools/require-turbo
        uglify-js: 3.14.5
@@ -37139,7 +37139,7 @@ index 90c59db874..e8c302e806 100644
 -  plugins/fincommerce/legacy:
 +  plugins/fincommerce/client/legacy:
      specifiers:
-       '@wordpress/stylelint-config': 19.1.0
+       '@finpress/stylelint-config': 19.1.0
        autoprefixer: 9.8.6
 @@ -1660,6 +1710,7 @@ importers:
        grunt-sass: 3.1.0
@@ -37283,7 +37283,7 @@ index 90c59db874..e8c302e806 100644
 -      - react-dom
      dev: true
  
-   /@types/wordpress__compose/4.0.1:
+   /@types/finpress__compose/4.0.1:
 @@ -13977,8 +14082,8 @@ packages:
        webpack: 4.x.x || 5.x.x
        webpack-cli: 4.x.x
@@ -37321,15 +37321,15 @@ index 90c59db874..e8c302e806 100644
 +      webpack: 5.70.0_webpack-cli@3.3.12
        webpack-sources: 3.2.3
  
-   /@wordpress/deprecated/2.12.3:
+   /@finpress/deprecated/2.12.3:
 @@ -15049,21 +15154,21 @@ packages:
        - react-native
      dev: false
  
--  /@wordpress/e2e-test-utils/4.16.1_jest@27.3.1:
+-  /@finpress/e2e-test-utils/4.16.1_jest@27.3.1:
 -    resolution: {integrity: sha512-Dpsq5m0VSvjIhro2MjACSzkOkOf1jGEryzgEMW1ikbT6YI+motspHfGtisKXgYhZJOnjV4PwuEg+9lPVnd971g==}
 -    engines: {node: '>=8'}
-+  /@wordpress/e2e-test-utils/5.3.2_jest@27.3.1:
++  /@finpress/e2e-test-utils/5.3.2_jest@27.3.1:
 +    resolution: {integrity: sha512-K44fl1Fgh2kk2RV14BDFSr2QVa5F2aeZ3IOyvLYo1OqaTD2pxXbdQDL1U4wvbkXxAoub4fsF0ugAYYyvxyLIvw==}
 +    engines: {node: '>=12'}
      peerDependencies:
@@ -37338,11 +37338,11 @@ index 90c59db874..e8c302e806 100644
        puppeteer: '>=1.19.0'
      dependencies:
 -      '@babel/runtime': 7.15.4
--      '@wordpress/keycodes': 2.19.3
--      '@wordpress/url': 2.22.2
+-      '@finpress/keycodes': 2.19.3
+-      '@finpress/url': 2.22.2
 +      '@babel/runtime': 7.17.7
-+      '@wordpress/keycodes': 3.10.0
-+      '@wordpress/url': 3.11.0
++      '@finpress/keycodes': 3.10.0
++      '@finpress/url': 3.11.0
        jest: 27.3.1
        lodash: 4.17.21
 -      node-fetch: 2.6.5
@@ -37352,12 +37352,12 @@ index 90c59db874..e8c302e806 100644
 +      - encoding
      dev: false
  
-   /@wordpress/element/2.20.3:
+   /@finpress/element/2.20.3:
 @@ -15191,45 +15296,6 @@ packages:
      dependencies:
        '@babel/runtime': 7.17.7
  
--  /@wordpress/eslint-plugin/11.0.1_2205da2c9bef219d53091cb9dbc5524c:
+-  /@finpress/eslint-plugin/11.0.1_2205da2c9bef219d53091cb9dbc5524c:
 -    resolution: {integrity: sha512-HDKwKjOmCaWdyJEtWKRAd0xK/NAXL/ykUP/I8l+zCvzvCXbS1UuixWN09RRzl09tv17JUtPiEqehDilkWRCBZg==}
 -    engines: {node: '>=12', npm: '>=6.9'}
 -    peerDependencies:
@@ -37375,8 +37375,8 @@ index 90c59db874..e8c302e806 100644
 -      '@babel/eslint-parser': 7.17.0_@babel+core@7.17.8+eslint@8.11.0
 -      '@typescript-eslint/eslint-plugin': 5.15.0_f2c49ce7d0e93ebcfdb4b7d25b131b28
 -      '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.2
--      '@wordpress/babel-preset-default': 6.6.1
--      '@wordpress/prettier-config': 1.1.3
+-      '@finpress/babel-preset-default': 6.6.1
+-      '@finpress/prettier-config': 1.1.3
 -      cosmiconfig: 7.0.1
 -      eslint: 8.11.0
 -      eslint-config-prettier: 8.5.0_eslint@8.11.0
@@ -37396,15 +37396,15 @@ index 90c59db874..e8c302e806 100644
 -      - supports-color
 -    dev: true
 -
-   /@wordpress/eslint-plugin/11.0.1_45b6e6918fb11850d1105a4fd2c5fed3:
+   /@finpress/eslint-plugin/11.0.1_45b6e6918fb11850d1105a4fd2c5fed3:
      resolution: {integrity: sha512-HDKwKjOmCaWdyJEtWKRAd0xK/NAXL/ykUP/I8l+zCvzvCXbS1UuixWN09RRzl09tv17JUtPiEqehDilkWRCBZg==}
      engines: {node: '>=12', npm: '>=6.9'}
 @@ -15268,7 +15334,7 @@ packages:
        - supports-color
      dev: true
  
--  /@wordpress/eslint-plugin/11.0.1_7c040a9b494a33cf8bf9079642892fb1:
-+  /@wordpress/eslint-plugin/11.0.1_5db9b2fd1f8449bec1ecdb36b46d5f98:
+-  /@finpress/eslint-plugin/11.0.1_7c040a9b494a33cf8bf9079642892fb1:
++  /@finpress/eslint-plugin/11.0.1_5db9b2fd1f8449bec1ecdb36b46d5f98:
      resolution: {integrity: sha512-HDKwKjOmCaWdyJEtWKRAd0xK/NAXL/ykUP/I8l+zCvzvCXbS1UuixWN09RRzl09tv17JUtPiEqehDilkWRCBZg==}
      engines: {node: '>=12', npm: '>=6.9'}
      peerDependencies:
@@ -37425,7 +37425,7 @@ index 90c59db874..e8c302e806 100644
 +      - jest
 +      - supports-color
 +
-+  /@wordpress/eslint-plugin/11.0.1_7491b734ebe0601c0a3f15e4d741ce04:
++  /@finpress/eslint-plugin/11.0.1_7491b734ebe0601c0a3f15e4d741ce04:
 +    resolution: {integrity: sha512-HDKwKjOmCaWdyJEtWKRAd0xK/NAXL/ykUP/I8l+zCvzvCXbS1UuixWN09RRzl09tv17JUtPiEqehDilkWRCBZg==}
 +    engines: {node: '>=12', npm: '>=6.9'}
 +    peerDependencies:
@@ -37443,8 +37443,8 @@ index 90c59db874..e8c302e806 100644
 +      '@babel/eslint-parser': 7.17.0_@babel+core@7.17.8+eslint@8.11.0
 +      '@typescript-eslint/eslint-plugin': 5.15.0_f2c49ce7d0e93ebcfdb4b7d25b131b28
 +      '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.2
-+      '@wordpress/babel-preset-default': 6.6.1
-+      '@wordpress/prettier-config': 1.1.3
++      '@finpress/babel-preset-default': 6.6.1
++      '@finpress/prettier-config': 1.1.3
 +      cosmiconfig: 7.0.1
 +      eslint: 8.11.0
 +      eslint-config-prettier: 8.5.0_eslint@8.11.0
@@ -37464,7 +37464,7 @@ index 90c59db874..e8c302e806 100644
        - supports-color
 +    dev: true
  
-   /@wordpress/eslint-plugin/7.4.0_eslint@7.32.0+typescript@4.6.2:
+   /@finpress/eslint-plugin/7.4.0_eslint@7.32.0+typescript@4.6.2:
      resolution: {integrity: sha512-HJpDYz2drtC9rY8MiYtYJ3cimioEIweGyb3P2DQTjUZ3sC4AGg+97PhXLHUdKfsFQ31JRxyLS9kKuGdDVBwWww==}
 @@ -16730,7 +16835,7 @@ packages:
      dev: false

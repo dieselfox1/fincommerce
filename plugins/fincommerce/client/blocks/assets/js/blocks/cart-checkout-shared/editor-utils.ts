@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { getBlockTypes } from '@wordpress/blocks';
+import { getBlockTypes } from '@finpress/blocks';
 import { applyCheckoutFilter } from '@fincommerce/blocks-checkout';
 import { cartStore } from '@fincommerce/block-data';
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 
 // List of core block types to allow in inner block areas.
 const coreBlockTypes = [ 'core/paragraph', 'core/image', 'core/separator' ];

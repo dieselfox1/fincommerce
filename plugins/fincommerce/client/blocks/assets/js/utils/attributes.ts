@@ -11,7 +11,7 @@ import {
 	AttributeWithTerms,
 	isAttributeTerm,
 } from '@fincommerce/types';
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 
 const ATTRIBUTES = getSetting< AttributeSetting[] >( 'attributes', [] );
 

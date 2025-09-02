@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useState } from '@wordpress/element';
-import { ResizableBox } from '@wordpress/components';
+import { useState } from '@finpress/element';
+import { ResizableBox } from '@finpress/components';
 import { useThrottledCallback } from 'use-debounce';
 
 type ResizeCallback = Exclude< ResizableBox.Props[ 'onResize' ], undefined >;

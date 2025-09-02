@@ -231,7 +231,7 @@ function parseLintJobConfig( raw: any ): LintJobConfig {
  */
 export interface TestEnvConfigVars {
 	/**
-	 * The version of WordPress that should be used.
+	 * The version of finpress that should be used.
 	 */
 	wpVersion?: string;
 

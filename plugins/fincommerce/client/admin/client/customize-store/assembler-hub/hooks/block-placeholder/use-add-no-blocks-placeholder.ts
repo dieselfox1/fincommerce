@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
-import { useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { BlockInstance } from '@finpress/blocks';
+import { useEffect } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 /**
  * Internal dependencies
  */

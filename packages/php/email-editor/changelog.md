@@ -41,7 +41,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [1.0.0](https://github.com/dieselfox1/email-editor/releases/tag/1.0.0) - 2025-06-27 
 
 -   Patch - Address PHP 8.4 deprecation warnings. [#57722]
--   Patch - Fix default rendering mode for WordPress 6.8 [#56820]
+-   Patch - Fix default rendering mode for finpress 6.8 [#56820]
 -   Patch - Fixed parsing empty argument values in personalization tags. [#58500]
 -   Patch - Fix tiny rendering issues with image borders, list padding when the background color is set, and top margin for cite in the quote block. [#58796]
 -   Patch - Sending correct email when user create an account after placing an order. [#57689]

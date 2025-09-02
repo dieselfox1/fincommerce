@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, useEffect, useRef, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { BaseControl, Spinner } from '@wordpress/components';
+import { createElement, useEffect, useRef, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { BaseControl, Spinner } from '@finpress/components';
 import { Product } from '@fincommerce/data';
 import clsx from 'clsx';
 

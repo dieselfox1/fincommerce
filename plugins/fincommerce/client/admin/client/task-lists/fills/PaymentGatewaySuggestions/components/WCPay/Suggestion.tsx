@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	WCPayBanner,
 	WCPayBannerFooter,
@@ -9,7 +9,7 @@ import {
 	WCPayBenefits,
 	WCPayBannerImageCut,
 } from '@fincommerce/onboarding';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { paymentSettingsStore } from '@fincommerce/data';
 
 /**

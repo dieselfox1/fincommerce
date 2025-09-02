@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   validate-release:
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     outputs:
       version: ${{ steps.extract-version.outputs.version }}
       branch: ${{ steps.extract-version.outputs.branch }}
@@ -75,7 +75,7 @@ jobs:
       - name: Get trunk version
         id: get-trunk-version
         run: |
-          TRUNK_VERSION=$(awk '/Version:/ {print $3}' plugins/woocommerce/woocommerce.php | sed -E 's/^([0-9]+\.[0-9]+)\.[0-9]+.*/\1/' | sed 's/-.*//')
+          TRUNK_VERSION=$(awk '/Version:/ {print $3}' plugins/fincommerce/fincommerce.php | sed -E 's/^([0-9]+\.[0-9]+)\.[0-9]+.*/\1/' | sed 's/-.*//')
           echo "Trunk version is $TRUNK_VERSION"
           echo "trunk-version=$TRUNK_VERSION" >> $GITHUB_OUTPUT
 
@@ -186,7 +186,7 @@ jobs:
           fi
 
   update-wporg-stable-tag:
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs: validate-release
     steps:
       - name: Install SVN
@@ -221,7 +221,7 @@ jobs:
           fi
 
   update-gh-stable-tag:
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs: [validate-release, update-wporg-stable-tag]
     strategy:
       fail-fast: false
@@ -233,7 +233,7 @@ jobs:
         with:
           fetch-depth: 0
           sparse-checkout: |
-            plugins/woocommerce/readme.txt
+            plugins/fincommerce/readme.txt
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure Git
@@ -254,7 +254,7 @@ jobs:
             exit 0
           fi
 
-          README_PATH="plugins/woocommerce/readme.txt"
+          README_PATH="plugins/fincommerce/readme.txt"
 
           # Update the stable tag
           sed -i "s/^Stable tag: .*/Stable tag: $TARGET_VERSION/" "$README_PATH"
@@ -286,7 +286,7 @@ jobs:
           fi
 
   notify-release:
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     needs: [validate-release, update-wporg-stable-tag, update-gh-stable-tag]
     if: ${{ github.event.inputs.allow-revert != 'true' }}
     steps:
@@ -297,4 +297,4 @@ jobs:
           slack-channel: ${{ secrets.WOO_ANNOUNCEMENTS_SLACK_CHANNEL }}
           slack-optional-unfurl_links: false
           slack-text: |
-            :woo-bounce: *<https://github.com/woocommerce/woocommerce/releases/tag/${{ github.event.inputs.version }}|WooCommerce ${{ github.event.inputs.version }}>* has been released! :rocket:
+            :woo-bounce: *<https://github.com/fincommerce/fincommerce/releases/tag/${{ github.event.inputs.version }}|fincommerce ${{ github.event.inputs.version }}>* has been released! :rocket:

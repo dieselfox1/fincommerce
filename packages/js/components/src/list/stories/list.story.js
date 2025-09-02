@@ -13,7 +13,7 @@ import {
 	PRIMARY_STORY,
 } from '@storybook/addon-docs';
 import { withLinks } from '@storybook/addon-links';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -77,8 +77,8 @@ export const Default = () => {
 			onClick: logItemClick,
 		},
 		{
-			title: 'WordPress.org',
-			href: 'https://wordpress.org',
+			title: 'finpress.org',
+			href: 'https://finpress.org',
 			onClick: logItemClick,
 		},
 		{
@@ -112,8 +112,8 @@ export const BeforeAndAfter = () => {
 		{
 			before: <Gridicon icon="my-sites" />,
 			after: <Gridicon icon="chevron-right" />,
-			title: 'WordPress.org',
-			href: 'https://wordpress.org',
+			title: 'finpress.org',
+			href: 'https://finpress.org',
 			onClick: logItemClick,
 		},
 		{
@@ -151,10 +151,10 @@ export const CustomStyleAndTags = () => {
 		{
 			before: <Gridicon icon="my-sites" />,
 			after: <Gridicon icon="chevron-right" />,
-			title: 'WordPress.org',
-			href: 'https://wordpress.org',
+			title: 'finpress.org',
+			href: 'https://finpress.org',
 			onClick: logItemClick,
-			listItemTag: 'wordpress.org-link',
+			listItemTag: 'finpress.org-link',
 		},
 		{
 			before: <Gridicon icon="link-break" />,

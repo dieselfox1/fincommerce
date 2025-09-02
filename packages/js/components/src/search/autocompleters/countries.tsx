@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
-import { createElement, Fragment } from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
+import { decodeEntities } from '@finpress/html-entities';
+import { createElement, Fragment } from '@finpress/element';
+import apiFetch from '@finpress/api-fetch';
 import { Country } from '@fincommerce/data';
 /**
  * Internal dependencies

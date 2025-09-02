@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, act, cleanup, waitFor } from '@testing-library/react';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 import userEvent from '@testing-library/user-event';
 
@@ -14,9 +14,9 @@ import { TaskProps } from '../components/task';
 import { TaskListProps } from '../components/task-list';
 import { TaskListProps as SetupTaskListProps } from '../setup-task-list/setup-task-list';
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	// Require the original module to not be mocked...
-	const originalModule = jest.requireActual( '@wordpress/data' );
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true, // Use it when dealing with esModules

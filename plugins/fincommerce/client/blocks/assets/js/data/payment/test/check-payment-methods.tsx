@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import * as wpDataFunctions from '@wordpress/data';
+import * as wpDataFunctions from '@finpress/data';
 import { previewCart } from '@fincommerce/resource-previews';
 import { paymentStore, cartStore } from '@fincommerce/block-data';
 import {

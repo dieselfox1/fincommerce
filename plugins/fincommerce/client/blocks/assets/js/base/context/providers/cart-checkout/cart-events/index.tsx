@@ -8,7 +8,7 @@ import {
 	useReducer,
 	useRef,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

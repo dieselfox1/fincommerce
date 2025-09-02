@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { renderHook } from '@testing-library/react-hooks';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { TaskType } from '@fincommerce/data';
 
 /**
@@ -12,8 +12,8 @@ import { useTaskListsState } from '../use-tasklists-state';
 import { getAdminSetting } from '~/utils/admin-settings';
 
 // Mock dependencies
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true,

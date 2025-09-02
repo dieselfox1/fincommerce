@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { dispatch as wpDispatch } from '@wordpress/data';
+import { dispatch as wpDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -13,7 +13,7 @@ import {
 } from '@fincommerce/block-library/assets/js/data/cart/persistence-layer';
 
 // Mock all dependencies before importing the module that contains the event listener
-jest.mock( '@wordpress/data' );
+jest.mock( '@finpress/data' );
 jest.mock( '@fincommerce/utils', () => ( {
 	isSiteEditorPage: jest.fn().mockReturnValue( true ),
 } ) );

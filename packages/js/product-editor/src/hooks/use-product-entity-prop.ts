@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEntityProp } from '@wordpress/core-data';
-import { useCallback, useMemo } from '@wordpress/element';
+import { useEntityProp } from '@finpress/core-data';
+import { useCallback, useMemo } from '@finpress/element';
 
 /**
  * Internal dependencies

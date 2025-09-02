@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { SVG, Path } from '@wordpress/components';
-import { registerBlockType } from '@wordpress/blocks';
+import { SVG, Path } from '@finpress/components';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies

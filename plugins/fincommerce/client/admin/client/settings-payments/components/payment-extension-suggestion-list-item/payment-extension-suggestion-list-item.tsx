@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { WooPaymentsMethodsLogos } from '@fincommerce/onboarding';
 import {
 	PaymentsExtensionSuggestionProvider,

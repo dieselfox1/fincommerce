@@ -6,8 +6,8 @@ import {
 	useImperativeHandle,
 	useLayoutEffect,
 	useRef,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 type ExpressionTextAreaProps = {
 	expression?: string;

@@ -156,7 +156,7 @@ class SettingsController {
 	public function output_admin_notices() {
 		// Only show notices on the Customer Stock Notifications settings page.
 		$screen = get_current_screen();
-		if ( ! $screen || 'fincommerce_page_wc-settings' !== $screen->id || ! isset( $_GET['section'] ) || 'customer_stock_notifications' !== $_GET['section'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! $screen || 'fincommerce_page_wc-settings' !== $screen->id || ! isset( $_GET['section'] ) || 'customer_stock_notifications' !== $_GET['section'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return;
 		}
 

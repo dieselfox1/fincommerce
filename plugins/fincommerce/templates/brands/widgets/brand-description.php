@@ -20,7 +20,7 @@ declare( strict_types = 1);
 global $fincommerce;
 
 if ( $thumbnail ) {
-	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	echo wc_get_brand_thumbnail_image( $brand );
 }
 

@@ -3,8 +3,8 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { parse } from '@wordpress/blocks';
+import { useMemo } from '@finpress/element';
+import { parse } from '@finpress/blocks';
 
 /**
  * Internal dependencies

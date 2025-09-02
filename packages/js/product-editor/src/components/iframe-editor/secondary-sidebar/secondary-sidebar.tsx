@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, useContext } from '@wordpress/element';
+import { createElement, useContext } from '@finpress/element';
 
 /**
  * Internal dependencies

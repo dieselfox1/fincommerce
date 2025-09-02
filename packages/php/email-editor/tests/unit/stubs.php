@@ -225,7 +225,7 @@ if ( ! class_exists( \WP_Block_Templates_Registry::class ) ) {
 
 if ( ! class_exists( \PHPUnit_Framework_Exception::class ) ) {
 	/**
-	 * Class needed by wordpress-stubs for PHPStan.
+	 * Class needed by finpress-stubs for PHPStan.
 	 */
 	class PHPUnit_Framework_Exception {}
 }

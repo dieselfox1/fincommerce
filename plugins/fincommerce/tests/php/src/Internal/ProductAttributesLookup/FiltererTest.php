@@ -108,14 +108,14 @@ class FiltererTest extends \WC_Unit_Test_Case {
 
 		$product->save();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$wpdb->prefix}wc_product_attributes_lookup WHERE product_id = %d",
 				$product->get_id()
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -383,7 +383,7 @@ class FiltererTest extends \WC_Unit_Test_Case {
 	private function run_lookup_table_insert( $insert_query_parts, $insert_values ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 
 		$insert_query =
 			"INSERT INTO {$wpdb->prefix}wc_product_attributes_lookup ( product_id, product_or_parent_id, taxonomy, term_id, is_variation_attribute, in_stock ) VALUES "
@@ -393,7 +393,7 @@ class FiltererTest extends \WC_Unit_Test_Case {
 
 		$wpdb->query( $prepared_insert );
 
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createRegistry, RegistryProvider } from '@wordpress/data';
+import { createRegistry, RegistryProvider } from '@finpress/data';
 import { QUERY_STATE_STORE_KEY as storeKey } from '@fincommerce/block-data';
 import { act, renderHook } from '@testing-library/react';
 

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import * as React from '@wordpress/element';
-import { create } from '@wordpress/rich-text';
-import { RichTextFormatList } from '@wordpress/rich-text/build-types/types';
+import * as React from '@finpress/element';
+import { create } from '@finpress/rich-text';
+import { RichTextFormatList } from '@finpress/rich-text/build-types/types';
 
 /**
  * Internal dependencies

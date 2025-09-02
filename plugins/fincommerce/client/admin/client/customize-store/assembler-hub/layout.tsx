@@ -1,4 +1,4 @@
-// Reference: https://github.com/WordPress/gutenberg/tree/v16.4.0/packages/edit-site/src/components/layout/index.js
+// Reference: https://github.com/finpress/gutenberg/tree/v16.4.0/packages/edit-site/src/components/layout/index.js
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
@@ -9,27 +9,27 @@ import {
 	useReducedMotion,
 	useResizeObserver,
 	useViewportMatch,
-} from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
-import { useState, useContext } from '@wordpress/element';
-import { __unstableMotion as motion } from '@wordpress/components';
+} from '@finpress/compose';
+import { __ } from '@finpress/i18n';
+import { useState, useContext } from '@finpress/element';
+import { __unstableMotion as motion } from '@finpress/components';
 import {
 	// @ts-expect-error No types for this exist yet.
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // @ts-expect-error No types for this exist yet.
-import useInitEditedEntityFromURL from '@wordpress/edit-site/build-module/components/sync-state-with-url/use-init-edited-entity-from-url';
+import useInitEditedEntityFromURL from '@finpress/edit-site/build-module/components/sync-state-with-url/use-init-edited-entity-from-url';
 // @ts-expect-error No types for this exist yet.
-import { useIsSiteEditorLoading } from '@wordpress/edit-site/build-module/components/layout/hooks';
+import { useIsSiteEditorLoading } from '@finpress/edit-site/build-module/components/layout/hooks';
 // @ts-expect-error No types for this exist yet.
-import ErrorBoundary from '@wordpress/edit-site/build-module/components/error-boundary';
+import ErrorBoundary from '@finpress/edit-site/build-module/components/error-boundary';
 // @ts-expect-error No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 // @ts-expect-error No types for this exist yet.
-import { NavigableRegion } from '@wordpress/interface';
-import { EntityProvider } from '@wordpress/core-data';
+import { NavigableRegion } from '@finpress/interface';
+import { EntityProvider } from '@finpress/core-data';
 // @ts-expect-error No types for this exist yet.
-import useEditedEntityRecord from '@wordpress/edit-site/build-module/components/use-edited-entity-record';
+import useEditedEntityRecord from '@finpress/edit-site/build-module/components/use-edited-entity-record';
 
 /**
  * Internal dependencies

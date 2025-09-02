@@ -140,7 +140,7 @@ class WC_Log_Handler_DB extends WC_Log_Handler {
 		$query_in = '(' . implode( ',', $format ) . ')';
 
 		$result = $wpdb->query(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->prepare(
 				"
 					DELETE FROM {$wpdb->prefix}fincommerce_log
@@ -148,7 +148,7 @@ class WC_Log_Handler_DB extends WC_Log_Handler {
 				",
 				$log_ids
 			)
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		);
 
 		if ( false !== $result ) {

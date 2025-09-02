@@ -3,7 +3,7 @@
  */
 import { render, screen, waitFor, act } from '@testing-library/react';
 import { previewCart } from '@fincommerce/resource-previews';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { CART_STORE_KEY as storeKey } from '@fincommerce/block-data';
 import { server, http, HttpResponse } from '@fincommerce/test-utils/msw';
 import { registerCheckoutFilters } from '@fincommerce/blocks-checkout';
@@ -32,8 +32,8 @@ import OrderSummarySubtotalBlock from '@fincommerce/block-library/assets/js/bloc
 import OrderSummaryShippingBlock from '@fincommerce/block-library/assets/js/blocks/cart/inner-blocks/cart-order-summary-shipping/frontend';
 import OrderSummaryTaxesBlock from '@fincommerce/block-library/assets/js/blocks/cart/inner-blocks/cart-order-summary-taxes/frontend';
 
-jest.mock( '@wordpress/compose', () => ( {
-	...jest.requireActual( '@wordpress/compose' ),
+jest.mock( '@finpress/compose', () => ( {
+	...jest.requireActual( '@finpress/compose' ),
 	useResizeObserver: jest.fn().mockReturnValue( [ null, { width: 0 } ] ),
 } ) );
 

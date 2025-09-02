@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __, sprintf } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import { getSetting } from '@fincommerce/settings';
 import { getScreenFromPath, isWCAdmin, getPath } from '@fincommerce/navigation';
 

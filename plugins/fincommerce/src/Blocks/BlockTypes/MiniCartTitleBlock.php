@@ -45,9 +45,9 @@ class MiniCartTitleBlock extends AbstractInnerBlock {
 		);
 		ob_start();
 		?>
-			<h2 <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+			<h2 <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 				<?php
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 					echo $content;
 				?>
 			</h2>

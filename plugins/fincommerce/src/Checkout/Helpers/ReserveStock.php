@@ -55,7 +55,7 @@ final class ReserveStock {
 		}
 
 		return wc_stock_amount(
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 			$wpdb->get_var( $this->get_query_for_reserved_stock( $product->get_stock_managed_by_id(), $exclude_order_id ) )
 		);
 	}
@@ -205,7 +205,7 @@ final class ReserveStock {
 		$query_for_stock          = $product_data_store->get_query_for_stock( $product_id );
 		$query_for_reserved_stock = $this->get_query_for_reserved_stock( $product_id, $order->get_id() );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 		$result = $wpdb->query(
 			$wpdb->prepare(
 				"
@@ -221,7 +221,7 @@ final class ReserveStock {
 				$stock_quantity
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 
 		if ( ! $result ) {
 			$product = wc_get_product( $product_id );
@@ -254,7 +254,7 @@ final class ReserveStock {
 			$where_status = "orders.status IN ( 'wc-checkout-draft', '" . OrderInternalStatus::PENDING . "' )";
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$query = $wpdb->prepare(
 			"
 			SELECT COALESCE( SUM( stock_table.`stock_quantity` ), 0 ) FROM $wpdb->wc_reserved_stock stock_table
@@ -267,7 +267,7 @@ final class ReserveStock {
 			$product_id,
 			$exclude_order_id
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		/**
 		 * Filter: fincommerce_query_for_reserved_stock

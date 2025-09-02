@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { sprintf, __ } from '@wordpress/i18n';
-import { CheckboxControl, Icon, Spinner } from '@wordpress/components';
-import { resolveSelect, useDispatch } from '@wordpress/data';
+import { sprintf, __ } from '@finpress/i18n';
+import { CheckboxControl, Icon, Spinner } from '@finpress/components';
+import { resolveSelect, useDispatch } from '@finpress/data';
 import {
 	useCallback,
 	useEffect,
@@ -11,10 +11,10 @@ import {
 	useState,
 	createElement,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDebounce } from '@wordpress/compose';
-import { plus } from '@wordpress/icons';
+import { useDebounce } from '@finpress/compose';
+import { plus } from '@finpress/icons';
 import {
 	ProductAttributeTerm,
 	experimentalProductAttributeTermsStore,
@@ -25,7 +25,7 @@ import {
 	__experimentalSelectControlMenu as Menu,
 	__experimentalSelectControlMenuItem as MenuItem,
 } from '@fincommerce/components';
-import { cleanForSlug } from '@wordpress/url';
+import { cleanForSlug } from '@finpress/url';
 
 /**
  * Internal dependencies

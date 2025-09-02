@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { dispatch, select } from '@wordpress/data';
-import type { Notice } from '@wordpress/notices';
+import { dispatch, select } from '@finpress/data';
+import type { Notice } from '@finpress/notices';
 
 export const hasNoticesOfType = (
 	type: 'default' | 'snackbar',

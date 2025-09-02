@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, useEffect } from '@wordpress/element';
+import { createElement, useEffect } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
-import { Slot, Fill } from '@wordpress/components';
+import { Slot, Fill } from '@finpress/components';
 
 /**
  * Internal dependencies

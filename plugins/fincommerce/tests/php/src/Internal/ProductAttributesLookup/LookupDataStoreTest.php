@@ -662,7 +662,7 @@ class LookupDataStoreTest extends \WC_Unit_Test_Case {
 
 		$this->sut->on_product_deleted( $variation );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$rows = $wpdb->get_results( 'SELECT DISTINCT product_id FROM ' . $this->lookup_table_name, ARRAY_N );
 
 		$this->assertEquals( array( 1 ), $rows[0] );
@@ -686,7 +686,7 @@ class LookupDataStoreTest extends \WC_Unit_Test_Case {
 
 		$this->sut->on_product_deleted( $product );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$rows = $wpdb->get_results( 'SELECT DISTINCT product_id FROM ' . $this->lookup_table_name, ARRAY_N );
 
 		$this->assertEquals( array( 3 ), $rows[0] );
@@ -1215,14 +1215,14 @@ class LookupDataStoreTest extends \WC_Unit_Test_Case {
 
 		$product->save();
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query(
 			$wpdb->prepare(
 				"DELETE FROM {$wpdb->prefix}wc_product_attributes_lookup WHERE product_id = %d",
 				$product->get_id()
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$queue = WC()->get_instance_of( \WC_Queue::class );
 		$queue->clear_methods_called();
@@ -1241,7 +1241,7 @@ class LookupDataStoreTest extends \WC_Unit_Test_Case {
 	private function insert_lookup_table_data( int $product_id, int $product_or_parent_id, string $taxonomy, int $term_id, bool $is_variation_attribute, bool $has_stock ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query(
 			$wpdb->prepare(
 				'INSERT INTO ' . $this->lookup_table_name . ' (
@@ -1261,6 +1261,6 @@ class LookupDataStoreTest extends \WC_Unit_Test_Case {
 				$has_stock ? 1 : 0
 			)
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 }

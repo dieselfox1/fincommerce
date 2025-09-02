@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Fragment, useEffect } from '@wordpress/element';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { createElement, Fragment, useEffect } from '@finpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
 import {
 	Form,
 	__experimentalSelectControlMenuSlot as SelectControlMenuSlot,
@@ -14,7 +14,7 @@ import {
 	type ProductAttribute,
 	experimentalProductAttributesStore,
 } from '@fincommerce/data';
-import { Button, Modal, Notice, Tooltip } from '@wordpress/components';
+import { Button, Modal, Notice, Tooltip } from '@finpress/components';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

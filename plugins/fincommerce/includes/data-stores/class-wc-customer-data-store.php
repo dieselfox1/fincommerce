@@ -380,7 +380,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 
 			$order_statuses_sql = "( '" . implode( "','", array_map( 'esc_sql', array_keys( wc_get_order_statuses() ) ) ) . "' )";
 
-			//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:disable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			if ( $this->is_cot_in_use() ) {
 				$sql           = $wpdb->prepare(
 					'SELECT id FROM ' . OrdersTableDataStore::get_orders_table_name() . "
@@ -404,7 +404,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 				LIMIT 1"
 				);
 			}
-			//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:enable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			Users::update_site_user_meta( $customer->get_id(), 'wc_last_order', $last_order_id );
 		}
 
@@ -434,7 +434,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 		if ( '' === $count ) {
 			global $wpdb;
 
-			//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:disable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			if ( $this->is_cot_in_use() ) {
 				$sql   = $wpdb->prepare(
 					'SELECT COUNT(id) FROM ' . OrdersTableDataStore::get_orders_table_name() . "
@@ -454,7 +454,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 				AND     meta_value = '" . esc_sql( $customer->get_id() ) . "'"
 				);
 			}
-			//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:enable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 			Users::update_site_user_meta( $customer->get_id(), 'wc_order_count', $count );
 		}
@@ -482,7 +482,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 			$statuses     = array_map( 'esc_sql', wc_get_is_paid_statuses() );
 			$statuses_sql = "( 'wc-" . implode( "','wc-", $statuses ) . "' )";
 
-			//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:disable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			if ( $this->is_cot_in_use() ) {
 				$sql = $wpdb->prepare(
 					'SELECT SUM(total_amount) FROM ' . OrdersTableDataStore::get_orders_table_name() . "
@@ -514,7 +514,7 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 			//phpcs:enable FinCommerce.Commenting.CommentHooks.MissingSinceComment
 
 			$spent = $wpdb->get_var( $sql );
-			//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:enable finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 			if ( ! $spent ) {
 				$spent = 0;

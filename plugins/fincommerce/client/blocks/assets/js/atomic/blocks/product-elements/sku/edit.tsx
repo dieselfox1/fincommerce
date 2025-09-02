@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { useBlockProps } from '@finpress/block-editor';
+import type { BlockEditProps } from '@finpress/blocks';
 import EditProductLink from '@fincommerce/editor-components/edit-product-link';
 import { ProductQueryContext as Context } from '@fincommerce/blocks/product-query/types';
 

@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { useEffect, useMemo, useState } from 'react';
-import { __ } from '@wordpress/i18n';
-import { Button, Icon } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, Icon } from '@finpress/components';
 
 /**
  * Internal dependencies

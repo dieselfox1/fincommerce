@@ -6,7 +6,7 @@ use WP_Comment_Query;
 use WP_Screen;
 
 /**
- * Tweaks the WordPress comments page to exclude reviews.
+ * Tweaks the finpress comments page to exclude reviews.
  */
 class ReviewsCommentsOverrides {
 

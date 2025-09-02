@@ -98,7 +98,7 @@ class FileListTable extends WP_List_Table {
 	protected function extra_tablenav( $which ): void {
 		$all_sources = $this->get_sources_list();
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification.Recommended
 		$current_source = File::sanitize_source( wp_unslash( $_GET['source'] ?? '' ) );
 
 		?>

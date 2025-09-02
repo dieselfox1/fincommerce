@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { Block, BlockEditProps } from '@wordpress/blocks';
+import type { Block, BlockEditProps } from '@finpress/blocks';
 import { isNumber } from '@fincommerce/types';
 
 export type EditorBlock< T > = Block< T > & BlockEditProps< T >;

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { addFilter } from '@wordpress/hooks';
-import { Block } from '@wordpress/blocks/index';
+import { InspectorControls } from '@finpress/block-editor';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { addFilter } from '@finpress/hooks';
+import { Block } from '@finpress/blocks/index';
 
 const imageEditCallback = createHigherOrderComponent(
 	( BlockEdit ) =>

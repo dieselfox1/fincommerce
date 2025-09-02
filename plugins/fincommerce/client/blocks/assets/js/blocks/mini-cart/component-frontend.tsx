@@ -13,7 +13,7 @@ const renderMiniCartFrontend = () => {
 	// Check if button is focused. In that case, we want to refocus it after we
 	// replace it with the React equivalent.
 	let focusedMiniCartBlock: HTMLElement | null = null;
-	/* eslint-disable @wordpress/no-global-active-element */
+	/* eslint-disable @finpress/no-global-active-element */
 	if (
 		document.activeElement &&
 		document.activeElement.classList.contains(
@@ -23,7 +23,7 @@ const renderMiniCartFrontend = () => {
 	) {
 		focusedMiniCartBlock = document.activeElement.parentNode;
 	}
-	/* eslint-enable @wordpress/no-global-active-element */
+	/* eslint-enable @finpress/no-global-active-element */
 
 	renderFrontend( {
 		selector: '.wc-block-mini-cart',

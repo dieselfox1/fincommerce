@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Suspense, lazy } from '@wordpress/element';
+import { Suspense, lazy } from '@finpress/element';
 import { useRef, useEffect } from 'react';
 import { parse, stringify } from 'qs';
 import { find, isEqual, last, omit } from 'lodash';
-import { applyFilters } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+import { applyFilters } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 import {
 	getNewPath,
 	getPersistedQuery,
@@ -500,7 +500,7 @@ window.wpNavMenuUrlUpdate = function ( query ) {
 const customSVGMenuItems = [];
 const getCustomSVGMenuItems = () => {
 	// Get all menu items with SVG backgrounds
-	// See: https://github.com/WordPress/wordpress-develop/blob/22bebd7de6681c673933953aab8c08802e7e3d4a/src/js/_enqueues/wp/svg-painter.js#L140-L148
+	// See: https://github.com/finpress/finpress-develop/blob/22bebd7de6681c673933953aab8c08802e7e3d4a/src/js/_enqueues/wp/svg-painter.js#L140-L148
 	const menuItems = window.jQuery(
 		'#adminmenu .wp-menu-image, #wpadminbar .ab-item'
 	);
@@ -596,7 +596,7 @@ window.wpNavMenuClassChange = function ( page, url ) {
 
 	// 6. Attempt to re-color SVG icons used in the admin menu or the toolbar
 	if ( window.wp && window.wp.svgPainter ) {
-		// Detach SVG painting event handlers from menu items to prevent the active state from being reset on hover. For more information, see: https://github.com/WordPress/wordpress-develop/blob/22bebd7de6681c673933953aab8c08802e7e3d4a/src/js/_enqueues/wp/svg-painter.js#L162C4-L170C10
+		// Detach SVG painting event handlers from menu items to prevent the active state from being reset on hover. For more information, see: https://github.com/finpress/finpress-develop/blob/22bebd7de6681c673933953aab8c08802e7e3d4a/src/js/_enqueues/wp/svg-painter.js#L162C4-L170C10
 		customSVGMenuItems.forEach( ( $menuItem ) => {
 			const events =
 				window.jQuery._data( $menuItem[ 0 ], 'events' ) || {};

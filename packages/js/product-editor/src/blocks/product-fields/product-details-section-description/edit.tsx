@@ -8,15 +8,15 @@ import {
 	MenuGroup,
 	MenuItem,
 	Modal,
-} from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+} from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	createElement,
 	createInterpolateElement,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import * as icons from '@wordpress/icons';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import * as icons from '@finpress/icons';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import type { ProductStatus, Product } from '@fincommerce/data';
 import { getNewPath } from '@fincommerce/navigation';
@@ -24,7 +24,7 @@ import { recordEvent } from '@fincommerce/tracks';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId, useEntityProp } from '@wordpress/core-data';
+import { useEntityId, useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies
@@ -59,7 +59,7 @@ export function ProductDetailsSectionDescriptionBlockEdit( {
 			return getEditorSettings();
 		}, [] );
 
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const [ supportedProductTemplates, unsupportedProductTemplates ] =
 		productTemplates.reduce(
 			(

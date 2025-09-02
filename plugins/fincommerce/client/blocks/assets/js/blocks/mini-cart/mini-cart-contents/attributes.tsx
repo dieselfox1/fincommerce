@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Icon } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Icon } from '@finpress/icons';
 import { filledCart, removeCart } from '@fincommerce/icons';
 
 export const blockName = 'fincommerce/mini-cart-contents';

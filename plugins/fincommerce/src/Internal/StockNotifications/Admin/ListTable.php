@@ -332,9 +332,9 @@ class ListTable extends \WP_List_Table {
 		$this->_column_headers = array( $columns, $hidden, $sortable );
 
 		// Setup params.
-		$paged   = isset( $_REQUEST['paged'] ) ? max( 0, (int) wp_unslash( $_REQUEST['paged'] ) - 1 ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		$orderby = ( isset( $_REQUEST['orderby'] ) && in_array( wp_unslash( $_REQUEST['orderby'] ), array_keys( $this->get_sortable_columns() ), true ) ) ? wc_clean( wp_unslash( $_REQUEST['orderby'] ) ) : 'id'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$order   = ( isset( $_REQUEST['order'] ) && in_array( wp_unslash( $_REQUEST['order'] ), array( 'asc', 'desc' ), true ) ) ? wc_clean( wp_unslash( $_REQUEST['order'] ) ) : 'desc'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$paged   = isset( $_REQUEST['paged'] ) ? max( 0, (int) wp_unslash( $_REQUEST['paged'] ) - 1 ) : 0; // phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$orderby = ( isset( $_REQUEST['orderby'] ) && in_array( wp_unslash( $_REQUEST['orderby'] ), array_keys( $this->get_sortable_columns() ), true ) ) ? wc_clean( wp_unslash( $_REQUEST['orderby'] ) ) : 'id'; // phpcs:ignore finpress.Security.NonceVerification.Recommended
+		$order   = ( isset( $_REQUEST['order'] ) && in_array( wp_unslash( $_REQUEST['order'] ), array( 'asc', 'desc' ), true ) ) ? wc_clean( wp_unslash( $_REQUEST['order'] ) ) : 'desc'; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 
 		// Query args.
 		$query_args = array(
@@ -344,24 +344,24 @@ class ListTable extends \WP_List_Table {
 		);
 
 		// Search.
-		if ( isset( $_REQUEST['s'] ) && ! empty( $_REQUEST['s'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$query_args['user_email'] = wc_clean( wp_unslash( $_REQUEST['s'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_REQUEST['s'] ) && ! empty( $_REQUEST['s'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$query_args['user_email'] = wc_clean( wp_unslash( $_REQUEST['s'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
 		// Views.
-		if ( ! empty( $_REQUEST['status'] ) && 'active_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_REQUEST['status'] ) && 'active_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$query_args['status'] = NotificationStatus::ACTIVE;
-		} elseif ( ! empty( $_REQUEST['status'] ) && 'sent_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		} elseif ( ! empty( $_REQUEST['status'] ) && 'sent_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$query_args['status'] = NotificationStatus::SENT;
-		} elseif ( ! empty( $_REQUEST['status'] ) && 'cancelled_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		} elseif ( ! empty( $_REQUEST['status'] ) && 'cancelled_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$query_args['status'] = NotificationStatus::CANCELLED;
-		} elseif ( ! empty( $_REQUEST['status'] ) && 'pending_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		} elseif ( ! empty( $_REQUEST['status'] ) && 'pending_customer_stock_notifications' === $_REQUEST['status'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$query_args['status'] = NotificationStatus::PENDING;
 		}
 
 		// Filters.
-		if ( ! empty( $_GET['m'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$filter = absint( wp_unslash( $_GET['m'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['m'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$filter = absint( wp_unslash( $_GET['m'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$month  = substr( (string) $filter, 4, 6 );
 			$year   = substr( (string) $filter, 0, 4 ); // This will break at year 10.000 AC :).
 
@@ -372,8 +372,8 @@ class ListTable extends \WP_List_Table {
 			$query_args['end_date'] = gmdate( 'Y-m-d H:i:s', $end_timestamp );
 		}
 
-		if ( ! empty( $_GET['customer_stock_notifications_product_filter'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$filter  = absint( wp_unslash( $_GET['customer_stock_notifications_product_filter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['customer_stock_notifications_product_filter'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$filter  = absint( wp_unslash( $_GET['customer_stock_notifications_product_filter'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$product = wc_get_product( $filter );
 			if ( $product instanceof \WC_Product ) {
 				$target_ids               = $this->eligibility_service->get_target_product_ids( $product );
@@ -383,8 +383,8 @@ class ListTable extends \WP_List_Table {
 			}
 		}
 
-		if ( ! empty( $_GET['customer_stock_notifications_customer_filter'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$filter                = absint( wp_unslash( $_GET['customer_stock_notifications_customer_filter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['customer_stock_notifications_customer_filter'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$filter                = absint( wp_unslash( $_GET['customer_stock_notifications_customer_filter'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$query_args['user_id'] = array( $filter );
 		}
 
@@ -462,8 +462,8 @@ class ListTable extends \WP_List_Table {
 		$product_string = '';
 		$product_id     = '';
 
-		if ( ! empty( $_GET['customer_stock_notifications_product_filter'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$product_id = wc_clean( wp_unslash( $_GET['customer_stock_notifications_product_filter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['customer_stock_notifications_product_filter'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$product_id = wc_clean( wp_unslash( $_GET['customer_stock_notifications_product_filter'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$product    = wc_get_product( absint( $product_id ) );
 
 			if ( $product ) {
@@ -493,8 +493,8 @@ class ListTable extends \WP_List_Table {
 		$user_string = '';
 		$user_id     = '';
 
-		if ( ! empty( $_GET['customer_stock_notifications_customer_filter'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$user_id = wc_clean( wp_unslash( $_GET['customer_stock_notifications_customer_filter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['customer_stock_notifications_customer_filter'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$user_id = wc_clean( wp_unslash( $_GET['customer_stock_notifications_customer_filter'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$user    = get_user_by( 'id', absint( $user_id ) );
 
 			if ( $user ) {
@@ -525,7 +525,7 @@ class ListTable extends \WP_List_Table {
 		$status_links = array();
 
 		// All view.
-		$class          = ! empty( $_REQUEST['status'] ) && 'all_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$class          = ! empty( $_REQUEST['status'] ) && 'all_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$all_inner_html = sprintf(
 			/* translators: %s: Notifications count */
 			_nx(
@@ -541,7 +541,7 @@ class ListTable extends \WP_List_Table {
 		$status_links['all'] = $this->get_link( array( 'status' => 'all_customer_stock_notifications' ), $all_inner_html, $class );
 
 		// Active view.
-		$class             = ! empty( $_REQUEST['status'] ) && 'active_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$class             = ! empty( $_REQUEST['status'] ) && 'active_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$active_inner_html = sprintf(
 			/* translators: %s: Notifications count */
 			_nx(
@@ -557,7 +557,7 @@ class ListTable extends \WP_List_Table {
 		$status_links['active'] = $this->get_link( array( 'status' => 'active_customer_stock_notifications' ), $active_inner_html, $class );
 
 		// Sent view.
-		$class           = ! empty( $_REQUEST['status'] ) && 'sent_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$class           = ! empty( $_REQUEST['status'] ) && 'sent_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$sent_inner_html = sprintf(
 			/* translators: %s: Notifications count */
 			_nx(
@@ -573,7 +573,7 @@ class ListTable extends \WP_List_Table {
 		$status_links['sent'] = $this->get_link( array( 'status' => 'sent_customer_stock_notifications' ), $sent_inner_html, $class );
 
 		// Cancelled view.
-		$class                = ! empty( $_REQUEST['status'] ) && 'cancelled_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$class                = ! empty( $_REQUEST['status'] ) && 'cancelled_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$cancelled_inner_html = sprintf(
 			/* translators: %s: Notifications count */
 			_nx(
@@ -589,7 +589,7 @@ class ListTable extends \WP_List_Table {
 		$status_links['cancelled'] = $this->get_link( array( 'status' => 'cancelled_customer_stock_notifications' ), $cancelled_inner_html, $class );
 
 		// Pending view.
-		$class              = ! empty( $_REQUEST['status'] ) && 'pending_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$class              = ! empty( $_REQUEST['status'] ) && 'pending_customer_stock_notifications' === $_REQUEST['status'] ? 'current' : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$pending_inner_html = sprintf(
 			/* translators: %s: Notifications count */
 			_nx(
@@ -660,7 +660,7 @@ class ListTable extends \WP_List_Table {
 			return;
 		}
 
-		$m = isset( $_GET['m'] ) ? (int) wp_unslash( $_GET['m'] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$m = isset( $_GET['m'] ) ? (int) wp_unslash( $_GET['m'] ) : 0; // phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		?>
 		<label for="filter-by-date" class="screen-reader-text"><?php esc_html_e( 'Filter by date', 'fincommerce' ); ?></label>
 		<select name="m" id="filter-by-date">
@@ -702,7 +702,7 @@ class ListTable extends \WP_List_Table {
 	 */
 	public function process_delete_action(): void {
 
-		$action = isset( $_GET['notification_action'] ) ? wc_clean( wp_unslash( $_GET['notification_action'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$action = isset( $_GET['notification_action'] ) ? wc_clean( wp_unslash( $_GET['notification_action'] ) ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 
 		if ( 'delete' !== $action ) {
 			return;

@@ -105,7 +105,7 @@ class SpecRunner {
 	}
 
 	/**
-	 * Get the locale for the WordPress locale, or fall back to the en_US
+	 * Get the locale for the finpress locale, or fall back to the en_US
 	 * locale.
 	 *
 	 * @param Array $locales The locales to search through.

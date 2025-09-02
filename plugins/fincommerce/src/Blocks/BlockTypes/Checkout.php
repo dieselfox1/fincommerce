@@ -33,7 +33,7 @@ class Checkout extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 */
 	protected function initialize() {
 		parent::initialize();
@@ -43,7 +43,7 @@ class Checkout extends AbstractBlock {
 		add_filter(
 			'fincommerce_checkout_redirect_empty_cart',
 			function ( $redirect_empty_cart ) {
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// phpcs:ignore finpress.Security.NonceVerification.Recommended
 				return isset( $_GET['_wp-find-template'] ) ? false : $redirect_empty_cart;
 			}
 		);

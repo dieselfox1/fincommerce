@@ -55,7 +55,7 @@ trait DateFilteringForCrudControllers {
 				)
 			);
 		} else {
-			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 			$wpdb->query(
 				'UPDATE ' . $wpdb->prefix . "posts SET
 			post_date = '2000-01-01T12:00:00',
@@ -65,7 +65,7 @@ trait DateFilteringForCrudControllers {
 			WHERE ID = " . $item_id
 			);
 		}
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$request = new WP_REST_Request( 'GET', $this->get_endpoint_for_date_filtering_tests() );
 		$request->set_query_params(
@@ -118,7 +118,7 @@ trait DateFilteringForCrudControllers {
 				)
 			);
 		} else {
-			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 			$wpdb->query(
 				'UPDATE ' . $wpdb->prefix . "posts SET
 			post_date = '2000-01-01T12:00:00',
@@ -127,7 +127,7 @@ trait DateFilteringForCrudControllers {
 			post_modified_gmt = '2000-02-01T10:00:00'
 			WHERE ID = " . $item_id
 			);
-			// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 		}
 
 		$request = new WP_REST_Request( 'GET', $this->get_endpoint_for_date_filtering_tests() );

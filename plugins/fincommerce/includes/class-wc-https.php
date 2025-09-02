@@ -120,8 +120,8 @@ class WC_HTTPS {
 
 	/**
 	 * Force posts to PayPal to use TLS v1.2. See:
-	 *        https://core.trac.wordpress.org/ticket/36320
-	 *        https://core.trac.wordpress.org/ticket/34924#comment:13
+	 *        https://core.trac.finpress.org/ticket/36320
+	 *        https://core.trac.finpress.org/ticket/34924#comment:13
 	 *        https://www.paypal-knowledge.com/infocenter/index?page=content&widgetview=true&id=FAQ1914&viewlocale=en_US
 	 *
 	 * @param string $handle

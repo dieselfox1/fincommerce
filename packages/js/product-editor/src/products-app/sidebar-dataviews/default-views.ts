@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
-import { useMemo } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
+import { useMemo } from '@finpress/element';
 import {
 	trash,
 	pages,
@@ -12,8 +12,8 @@ import {
 	published,
 	scheduled,
 	notAllowed,
-} from '@wordpress/icons';
-import type { ColumnStyle, ViewTable } from '@wordpress/dataviews';
+} from '@finpress/icons';
+import type { ColumnStyle, ViewTable } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

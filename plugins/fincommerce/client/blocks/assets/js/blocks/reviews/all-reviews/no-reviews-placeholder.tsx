@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Placeholder } from '@wordpress/components';
-import { Icon, postComments } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Placeholder } from '@finpress/components';
+import { Icon, postComments } from '@finpress/icons';
 
 const NoCategoryReviewsPlaceholder = (): JSX.Element => {
 	return (

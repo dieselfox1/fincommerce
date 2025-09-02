@@ -2,10 +2,10 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
 import { Sidebar } from '@fincommerce/base-components/sidebar-layout';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
-import type { TemplateArray } from '@wordpress/blocks';
+import type { TemplateArray } from '@finpress/blocks';
 
 /**
  * Internal dependencies

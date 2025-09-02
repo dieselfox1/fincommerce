@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { registerCoreBlocks } from '@wordpress/block-library';
-import '@wordpress/format-library';
+import { registerCoreBlocks } from '@finpress/block-library';
+import '@finpress/format-library';
 import {
 	type EditorSettings,
 	type EditorBlockListSettings,
@@ -13,7 +13,7 @@ import {
 	BlockInspector,
 	// @ts-expect-error privateApis exists but is not typed
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	type BlockAttributes,
@@ -21,10 +21,10 @@ import {
 	createBlock,
 	// @ts-expect-error Type definitions for this function are missing in Gutenberg
 	createBlocksFromInnerBlocksTemplate,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 // @ts-expect-error lock-unlock exists but is not typed
-import { unlock } from '@wordpress/block-library/build/lock-unlock'; // eslint-disable-line
+import { unlock } from '@finpress/block-library/build/lock-unlock'; // eslint-disable-line
 
 /**
  * Internal dependencies

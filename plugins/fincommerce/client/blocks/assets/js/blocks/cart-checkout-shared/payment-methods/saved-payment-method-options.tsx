@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useMemo, cloneElement } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { useMemo, cloneElement } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import { noticeContexts } from '@fincommerce/base-context';
 import {
 	RadioControl,
@@ -13,7 +13,7 @@ import {
 	useStoreEvents,
 } from '@fincommerce/base-context/hooks';
 import { paymentStore } from '@fincommerce/block-data';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { getPaymentMethods } from '@fincommerce/blocks-registry';
 import { isNull } from '@fincommerce/types';
 

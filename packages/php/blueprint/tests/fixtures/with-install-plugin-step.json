@@ -3,7 +3,7 @@
 	{
 	  "step": "installPlugin",
 	  "pluginZipFile": {
-		"resource": "wordpress.org\/plugins",
+		"resource": "finpress.org\/plugins",
 		"slug": "fincommerce"
 	  },
 	  "options": {
@@ -13,7 +13,7 @@
 	{
 	  "step": "installPlugin",
 	  "pluginZipFile": {
-		"resource": "wordpress.org\/plugins",
+		"resource": "finpress.org\/plugins",
 		"slug": "code-snippets"
 	  },
 	  "options": {

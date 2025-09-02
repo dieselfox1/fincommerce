@@ -6,16 +6,16 @@ import {
 	createInterpolateElement,
 	Fragment,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	CheckboxControl,
 	TextareaControl,
 	TextControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { FeedbackModal } from '@fincommerce/customer-effort-score';
 import { Text } from '@fincommerce/experimental';
-import { __ } from '@wordpress/i18n';
-import { useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch } from '@finpress/data';
 
 export type ProductMVPFeedbackModalProps = {
 	recordScoreCallback: (

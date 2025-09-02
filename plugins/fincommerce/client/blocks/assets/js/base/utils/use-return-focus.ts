@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useRef, useCallback } from '@wordpress/element';
+import { useEffect, useRef, useCallback } from '@finpress/element';
 
 let origin: Element | null = null;
 

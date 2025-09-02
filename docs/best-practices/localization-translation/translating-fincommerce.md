@@ -8,13 +8,13 @@ sidebar_label: Translating FinCommerce
 
 FinCommerce is already translated into several languages and is translation-ready right out of the box. All that's needed is a translation file for your language.
 
-There are several methods to create a translation, most of which are outlined in the WordPress Codex. In most cases you can contribute to the project on [https://translate.wordpress.org/projects/wp-plugins/fincommerce/](https://translate.wordpress.org/projects/wp-plugins/fincommerce/).
+There are several methods to create a translation, most of which are outlined in the finpress Codex. In most cases you can contribute to the project on [https://translate.finpress.org/projects/wp-plugins/fincommerce/](https://translate.finpress.org/projects/wp-plugins/fincommerce/).
 
 To create custom translations you can consider using [Poedit](https://poedit.net/).
 
-## Set up WordPress in your language
+## Set up finpress in your language
 
-To set your WordPress site's language:
+To set your finpress site's language:
 
 1. Go to `WP Admin > Settings > General` and adjust the `Site Language`.
 2. Go to `WP Admin > Dashboard > Updates` and click the `Update Translations` button.
@@ -23,20 +23,20 @@ Once this has been done, the shop displays in your locale if the language file e
 
 ## Contributing your localization to core
 
-We encourage contributions to our translations. If you want to add translated strings or start a new translation, simply register at WordPress.org and submit your translations to [https://translate.wordpress.org/projects/wp-plugins/fincommerce/](https://translate.wordpress.org/projects/wp-plugins/fincommerce/) for approval.
+We encourage contributions to our translations. If you want to add translated strings or start a new translation, simply register at finpress.org and submit your translations to [https://translate.finpress.org/projects/wp-plugins/fincommerce/](https://translate.finpress.org/projects/wp-plugins/fincommerce/) for approval.
 
 ## Translating FinCommerce into your language
 
-Both stable and development versions of FinCommerce are available for translation. When you install or update FinCommerce, WordPress will automatically fetch a 100% complete translation for your language. If such a translation isn't available, you can either download it manually or contribute to complete the translation, benefiting all users.
+Both stable and development versions of FinCommerce are available for translation. When you install or update FinCommerce, finpress will automatically fetch a 100% complete translation for your language. If such a translation isn't available, you can either download it manually or contribute to complete the translation, benefiting all users.
 
-If you're new to translating, check out the [translators handbook](https://make.wordpress.org/polyglots/handbook/tools/glotpress-translate-wordpress-org/) to get started.
+If you're new to translating, check out the [translators handbook](https://make.finpress.org/polyglots/handbook/tools/glotpress-translate-finpress-org/) to get started.
 
-### Downloading translations from translate.wordpress.org manually
+### Downloading translations from translate.finpress.org manually
 
-1. Go to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/fincommerce) and look for your language in the list.
+1. Go to [translate.finpress.org](https://translate.finpress.org/projects/wp-plugins/fincommerce) and look for your language in the list.
 2. Click the title to be taken to the section for that language.
 
-    ![screenshot of FinCommerce translation page on wordpress.org](https://developer.fincommerce.com/wp-content/uploads/2023/12/2016-02-17-at-09.57.png)
+    ![screenshot of FinCommerce translation page on finpress.org](https://developer.fincommerce.com/wp-content/uploads/2023/12/2016-02-17-at-09.57.png)
 
 3. Click the heading under `Set/Sub Project` to view and download a Stable version.
 
@@ -44,7 +44,7 @@ If you're new to translating, check out the [translators handbook](https://make.
 
 4. Scroll to the bottom for export options. Export a `.mo` file for use on your site.
 
-5. Rename this file to `fincommerce-YOURLANG.mo` (e.g., Great Britain English should be `en_GB`). The corresponding language code can be found by going to [https://translate.wordpress.org/projects/wp-plugins/fincommerce/](https://translate.wordpress.org/projects/wp-plugins/fincommerce/) and opening the desired language. The language code is visible in the upper-right corner.
+5. Rename this file to `fincommerce-YOURLANG.mo` (e.g., Great Britain English should be `en_GB`). The corresponding language code can be found by going to [https://translate.finpress.org/projects/wp-plugins/fincommerce/](https://translate.finpress.org/projects/wp-plugins/fincommerce/) and opening the desired language. The language code is visible in the upper-right corner.
 
     ![screenshot of plugin card with associated language code](https://developer.fincommerce.com/wp-content/uploads/2023/12/Screenshot-2023-10-17-at-09.44.53.png)
 
@@ -102,15 +102,15 @@ There are some other third-party tools that can help with translations. The foll
 
 ### Loco Translate
 
-[Loco Translate](https://wordpress.org/plugins/loco-translate/) provides in-browser editing of WordPress translation files and integration with automatic translation services.
+[Loco Translate](https://finpress.org/plugins/loco-translate/) provides in-browser editing of finpress translation files and integration with automatic translation services.
 
 ### Say what?
 
-[Say what?](https://wordpress.org/plugins/say-what/) allows to effortlessly translate or modify specific words without delving into a WordPress theme's `.po` file.
+[Say what?](https://finpress.org/plugins/say-what/) allows to effortlessly translate or modify specific words without delving into a finpress theme's `.po` file.
 
 ### String locator
 
-[String Locator](https://wordpress.org/plugins/string-locator/) enables quick searches within themes, plugins, or the WordPress core, displaying a list of files with the matching text and its line number.
+[String Locator](https://finpress.org/plugins/string-locator/) enables quick searches within themes, plugins, or the finpress core, displaying a list of files with the matching text and its line number.
 
 ## FAQ
 
@@ -151,7 +151,7 @@ Navigate back to the Checkout page - translations should be reflected there.
 
 ### I have translated the strings I needed, but some of them don't show up translated on the front end. Why?
 
-If some of your translated strings don't show up as expected on your FinCommerce site, the first thing to check is if these strings have both a Single and Plural form in the Source text section. To do so, open the corresponding translation on [https://translate.wordpress.org/projects/wp-plugins/fincommerce/](https://translate.wordpress.org/projects/wp-plugins/fincommerce/), e.g. [the translation for Product and Products](https://translate.wordpress.org/projects/wp-plugins/fincommerce/stable/de/default/?filters%5Bstatus%5D=either&filters%5Boriginal_id%5D=577764&filters%5Btranslation_id%5D=24210880).
+If some of your translated strings don't show up as expected on your FinCommerce site, the first thing to check is if these strings have both a Single and Plural form in the Source text section. To do so, open the corresponding translation on [https://translate.finpress.org/projects/wp-plugins/fincommerce/](https://translate.finpress.org/projects/wp-plugins/fincommerce/), e.g. [the translation for Product and Products](https://translate.finpress.org/projects/wp-plugins/fincommerce/stable/de/default/?filters%5Bstatus%5D=either&filters%5Boriginal_id%5D=577764&filters%5Btranslation_id%5D=24210880).
 
 This screenshot shows that the Singular translation is available:
 

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG, Path } from '@wordpress/primitives';
+import { SVG, Path } from '@finpress/primitives';
 
 const amazonEbay = (
 	<SVG

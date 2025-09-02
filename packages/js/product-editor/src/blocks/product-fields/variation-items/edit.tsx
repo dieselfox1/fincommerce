@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { sprintf, __ } from '@wordpress/i18n';
+import { sprintf, __ } from '@finpress/i18n';
 import {
 	PartialProductVariation,
 	ProductVariation,
@@ -11,12 +11,12 @@ import {
 } from '@fincommerce/data';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { recordEvent } from '@fincommerce/tracks';
-import { createElement, useMemo, useRef } from '@wordpress/element';
-import { resolveSelect, useDispatch, useSelect } from '@wordpress/data';
+import { createElement, useMemo, useRef } from '@finpress/element';
+import { resolveSelect, useDispatch, useSelect } from '@finpress/data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId, useEntityProp } from '@wordpress/core-data';
+import { useEntityId, useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

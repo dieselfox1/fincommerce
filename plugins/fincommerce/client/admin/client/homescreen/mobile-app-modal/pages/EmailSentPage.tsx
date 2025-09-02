@@ -2,8 +2,8 @@
  * External dependencies
  */
 import interpolateComponents from '@automattic/interpolate-components';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 interface EmailSentProps {
 	returnToSendLinkPage: () => void;

@@ -2,7 +2,7 @@
 
 This is a block that displays a taxonomy field, allowing searching, selection, and creation of new items, to be used in a product context.
 
-![Taxonomy block](https://fincommerce.files.wordpress.com/2023/09/fincommerceproduct-taxonomy-field.png)
+![Taxonomy block](https://fincommerce.files.finpress.com/2023/09/fincommerceproduct-taxonomy-field.png)
 
 ## Attributes
 

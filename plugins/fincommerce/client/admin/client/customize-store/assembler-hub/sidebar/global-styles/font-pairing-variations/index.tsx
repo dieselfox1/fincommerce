@@ -4,16 +4,16 @@
  * External dependencies
  */
 // @ts-ignore No types for this exist yet.
-import { __experimentalGrid as Grid, Spinner } from '@wordpress/components';
+import { __experimentalGrid as Grid, Spinner } from '@finpress/components';
 import { optionsStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
-import { useContext, useMemo } from '@wordpress/element';
+import { useSelect } from '@finpress/data';
+import { useContext, useMemo } from '@finpress/element';
 import {
 	// @ts-expect-error No types for this exist yet.
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // @ts-expect-error no types exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies

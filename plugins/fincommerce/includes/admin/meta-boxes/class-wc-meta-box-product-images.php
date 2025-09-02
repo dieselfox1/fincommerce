@@ -53,7 +53,7 @@ class WC_Meta_Box_Product_Images {
 						}
 						?>
 						<li class="image" data-attachment_id="<?php echo esc_attr( $attachment_id ); ?>">
-							<?php echo $attachment; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $attachment; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 							<ul class="actions">
 								<li><a href="#" class="delete tips" data-tip="<?php esc_attr_e( 'Delete image', 'fincommerce' ); ?>"><?php esc_html_e( 'Delete', 'fincommerce' ); ?></a></li>
 							</ul>

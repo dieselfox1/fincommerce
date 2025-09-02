@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { select, resolveSelect, dispatch } from '@wordpress/data';
+import { select, resolveSelect, dispatch } from '@finpress/data';
 import { productsStore } from '@fincommerce/data';
 import type { PartialProduct, Product } from '@fincommerce/data';
 

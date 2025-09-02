@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
-import { Button } from '@wordpress/components';
-import { useMemo } from '@wordpress/element';
+import { Button } from '@finpress/components';
+import { useMemo } from '@finpress/element';
 import type { TaskListType } from '@fincommerce/data';
 
 /**

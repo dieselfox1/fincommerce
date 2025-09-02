@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 import { hasCollectableRate } from '@fincommerce/base-utils';
 import { isString, objectHasProp } from '@fincommerce/types';
 

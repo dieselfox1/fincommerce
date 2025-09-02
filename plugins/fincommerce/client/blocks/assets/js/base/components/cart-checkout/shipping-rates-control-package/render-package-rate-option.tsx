@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import { FormattedMonetaryAmount } from '@fincommerce/blocks-components';
 import type { PackageRateOption } from '@fincommerce/types';
 import { getSetting } from '@fincommerce/settings';
 import { CartShippingPackageShippingRate } from '@fincommerce/types';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Default render function for package rate options.

@@ -35,7 +35,7 @@ permissions: {}
 
 jobs:
     build:
-        if: github.repository_owner == 'woocommerce' && github.event.pull_request.draft == false && github.event.pull_request.user.login != 'github-actions[bot]'
+        if: github.repository_owner == 'fincommerce' && github.event.pull_request.draft == false && github.event.pull_request.user.login != 'github-actions[bot]'
         runs-on: ubuntu-latest
         permissions:
             contents: write
@@ -48,14 +48,14 @@ jobs:
             - name: Get current version
               id: version
               run: |
-                  current_version=$( cat plugins/woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
+                  current_version=$( cat plugins/fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
                   echo "Detected version: $current_version"
                   echo "version=$current_version" >> $GITHUB_OUTPUT
 
-            - name: Setup WooCommerce Monorepo
-              uses: ./.github/actions/setup-woocommerce-monorepo
+            - name: Setup fincommerce Monorepo
+              uses: ./.github/actions/setup-fincommerce-monorepo
               with:
-                pull-package-deps: '@woocommerce/plugin-woocommerce'
+                pull-package-deps: '@fincommerce/plugin-fincommerce'
 
             - name: Prepare plugin zips
               id: prepare
@@ -69,23 +69,23 @@ jobs:
 
                   CURRENT_VERSION="$CURRENT_VERSION-$VERSUFFIX"
 
-                  sed -i -e 's/Version: .*$/Version: '"$CURRENT_VERSION"'/' "$GITHUB_WORKSPACE/plugins/woocommerce/woocommerce.php"
-                  echo "$CURRENT_VERSION" > "$GITHUB_WORKSPACE/plugins/woocommerce/version.txt"
+                  sed -i -e 's/Version: .*$/Version: '"$CURRENT_VERSION"'/' "$GITHUB_WORKSPACE/plugins/fincommerce/fincommerce.php"
+                  echo "$CURRENT_VERSION" > "$GITHUB_WORKSPACE/plugins/fincommerce/version.txt"
 
-                  cd "$GITHUB_WORKSPACE/plugins/woocommerce"
-                  PLUGIN_SLUG='woocommerce-dev' bash bin/build-zip.sh
+                  cd "$GITHUB_WORKSPACE/plugins/fincommerce"
+                  PLUGIN_SLUG='fincommerce-dev' bash bin/build-zip.sh
 
                   mkdir "$GITHUB_WORKSPACE/zips"
-                  mv "$GITHUB_WORKSPACE/plugins/woocommerce/woocommerce-dev.zip" "$GITHUB_WORKSPACE/zips/woocommerce-dev.zip"
+                  mv "$GITHUB_WORKSPACE/plugins/fincommerce/fincommerce-dev.zip" "$GITHUB_WORKSPACE/zips/fincommerce-dev.zip"
                 
-                  mkdir -p "$GITHUB_WORKSPACE/unzips/woocommerce"
+                  mkdir -p "$GITHUB_WORKSPACE/unzips/fincommerce"
                   cd "$GITHUB_WORKSPACE/zips"
-                  unzip -qq woocommerce-dev.zip
-                  mv "$GITHUB_WORKSPACE/zips/woocommerce-dev" "$GITHUB_WORKSPACE/unzips/woocommerce/woocommerce"
+                  unzip -qq fincommerce-dev.zip
+                  mv "$GITHUB_WORKSPACE/zips/fincommerce-dev" "$GITHUB_WORKSPACE/unzips/fincommerce/fincommerce"
                 
                   # Plugin data is passed as a JSON object.
                   PLUGIN_DATA="{}"          
-                  PLUGIN_DATA=$( jq -c --arg slug "woocommerce" --arg ver "$CURRENT_VERSION" '.[ $slug ] = { version: $ver }' <<<"$PLUGIN_DATA" )
+                  PLUGIN_DATA=$( jq -c --arg slug "fincommerce" --arg ver "$CURRENT_VERSION" '.[ $slug ] = { version: $ver }' <<<"$PLUGIN_DATA" )
                   echo "plugin-data=$PLUGIN_DATA" >> $GITHUB_OUTPUT
 
             - name: Create plugins artifact
@@ -102,7 +102,7 @@ jobs:
               if: steps.prepare.outputs.plugin-data != '{}'
               with:
                   name: plugins-${{ github.run_id }}
-                  path: unzips/woocommerce
+                  path: unzips/fincommerce
                   retention-days: 30
 
             - name: Inform Beta Download webhook if this is an internal PR
@@ -119,7 +119,7 @@ jobs:
                     --form-string "plugins=$PLUGIN_DATA" \
                     --form-string "secret=$SECRET"
 
-            - name: Comment on PR with WordPress Playground details
+            - name: Comment on PR with finpress Playground details
               uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea #v7.0.1
               if: steps.prepare.outputs.plugin-data != '{}' && ! github.event.pull_request.head.repo.fork
               with:

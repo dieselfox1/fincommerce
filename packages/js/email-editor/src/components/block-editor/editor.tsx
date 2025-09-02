@@ -1,23 +1,23 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useMemo, useEffect } from '@wordpress/element';
-import { SlotFillProvider, Spinner } from '@wordpress/components';
-import { store as coreStore, Post } from '@wordpress/core-data';
-import { CommandMenu } from '@wordpress/commands';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useMemo, useEffect } from '@finpress/element';
+import { SlotFillProvider, Spinner } from '@finpress/components';
+import { store as coreStore, Post } from '@finpress/core-data';
+import { CommandMenu } from '@finpress/commands';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	AutosaveMonitor,
-	// @ts-expect-error Type is missing in @types/wordpress__editor
+	// @ts-expect-error Type is missing in @types/finpress__editor
 	LocalAutosaveMonitor,
 	UnsavedChangesWarning,
-	// @ts-expect-error Type is missing in @types/wordpress__editor
+	// @ts-expect-error Type is missing in @types/finpress__editor
 	EditorKeyboardShortcutsRegister,
 	ErrorBoundary,
 	PostLockedModal,
 	store as editorStore,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -81,7 +81,7 @@ export function InnerEditor( {
 	);
 	const { isFullScreenForced, displaySendEmailButton } = settings;
 
-	// @ts-expect-error Type is missing in @types/wordpress__editor
+	// @ts-expect-error Type is missing in @types/finpress__editor
 	const { removeEditorPanel } = useDispatch( editorStore );
 	useEffect( () => {
 		removeEditorPanel( 'post-status' );
@@ -126,7 +126,7 @@ export function InnerEditor( {
 
 	return (
 		<SlotFillProvider>
-			{ /* @ts-expect-error canCopyContent is missing in @types/wordpress__editor */ }
+			{ /* @ts-expect-error canCopyContent is missing in @types/finpress__editor */ }
 			<ErrorBoundary canCopyContent>
 				<CommandMenu />
 				<Editor

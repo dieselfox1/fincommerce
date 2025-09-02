@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { EllipsisMenu, Link } from '@fincommerce/components';
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 import {
 	pluginsStore,
 	paymentGatewaysStore,
 	paymentSettingsStore,
 } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { sanitize } from 'dompurify';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { WooPaymentsMethodsLogos } from '@fincommerce/onboarding';
 
 /**

@@ -3,7 +3,7 @@
  */
 import { act, screen, waitFor } from '@testing-library/react';
 import { registerCheckoutFilters } from '@fincommerce/blocks-checkout';
-import { type BlockAttributes } from '@wordpress/blocks';
+import { type BlockAttributes } from '@finpress/blocks';
 import { getByLabelText, getByRole } from '@testing-library/dom';
 import { userEvent } from '@testing-library/user-event';
 

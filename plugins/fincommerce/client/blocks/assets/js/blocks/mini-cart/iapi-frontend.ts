@@ -8,7 +8,7 @@ import {
 	getElement,
 	useLayoutEffect,
 	useRef,
-} from '@wordpress/interactivity';
+} from '@finpress/interactivity';
 import '@fincommerce/stores/fincommerce/cart';
 import type { Store as FinCommerce } from '@fincommerce/stores/fincommerce/cart';
 import Dinero from 'dinero.js';

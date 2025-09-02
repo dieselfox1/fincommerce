@@ -2,8 +2,8 @@ name: 'Highlight Template Changes'
 on:
   pull_request:
     paths:
-      - 'plugins/woocommerce/**/templates/**/*.php'
-      - '!plugins/woocommerce/tests/**'
+      - 'plugins/fincommerce/**/templates/**/*.php'
+      - '!plugins/fincommerce/tests/**'
       - '.github/workflows/pr-highlight-changes.yml'
     branches:
       - 'trunk'
@@ -21,8 +21,8 @@ jobs:
     steps:
       - uses: 'actions/checkout@v4'
         name: 'Checkout'
-      - uses: './.github/actions/setup-woocommerce-monorepo'
-        name: 'Setup WooCommerce Monorepo'
+      - uses: './.github/actions/setup-fincommerce-monorepo'
+        name: 'Setup fincommerce Monorepo'
         with:
           install: 'code-analyzer...'
           build: 'code-analyzer'
@@ -34,8 +34,8 @@ jobs:
         env:
           GIT_CLONE_PROTECTION_ACTIVE: false
         run: |
-          exclude="plugins/woocommerce/tests"
-          version=$(pnpm analyzer major-minor "${{ github.event.pull_request.head.sha }}" "plugins/woocommerce/woocommerce.php" | tail -n 1)
+          exclude="plugins/fincommerce/tests"
+          version=$(pnpm analyzer major-minor "${{ github.event.pull_request.head.sha }}" "plugins/fincommerce/fincommerce.php" | tail -n 1)
           pnpm analyzer "${{ github.event.pull_request.head.sha }}" $version --base "${{ github.event.pull_request.base.sha }}" --outputStyle "github" --exclude $exclude
       - uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea #v7.0.1
         name: 'Validate'

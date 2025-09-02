@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { edit } from '@wordpress/icons';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
-import { __ } from '@wordpress/i18n';
+import { useMemo } from '@finpress/element';
+import { edit } from '@finpress/icons';
+import { privateApis as routerPrivateApis } from '@finpress/router';
+import { __ } from '@finpress/i18n';
 import { Product } from '@fincommerce/data';
 
 /**

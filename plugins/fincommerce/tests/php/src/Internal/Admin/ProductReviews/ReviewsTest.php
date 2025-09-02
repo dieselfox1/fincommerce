@@ -35,7 +35,7 @@ class ReviewsTest extends WC_Unit_Test_Case {
 	public function tearDown() : void {
 		global $current_screen;
 
-		$current_screen = $this->old_current_screen; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$current_screen = $this->old_current_screen; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		parent::tearDown();
 	}
@@ -180,7 +180,7 @@ class ReviewsTest extends WC_Unit_Test_Case {
 
 		$product = $this->factory()->post->create( [ 'post_type' => 'product' ] );
 		$review = $this->factory()->comment->create( [ 'comment_post_ID' => $product ] );
-		$current_screen = (object) [ 'id' => 'comment' ]; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$current_screen = (object) [ 'id' => 'comment' ]; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$_GET['c'] = $review;
 		$reviews = wc_get_container()->get( Reviews::class );
 
@@ -200,7 +200,7 @@ class ReviewsTest extends WC_Unit_Test_Case {
 	 * @throws ReflectionException If the property doesn't exist.
 	 */
 	public function test_render_reviews_list_table() : void {
-		$GLOBALS['hook_suffix'] = 'product_page_product-reviews'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['hook_suffix'] = 'product_page_product-reviews'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$reviews = wc_get_container()->get( Reviews::class );
 		$list_table = new ReviewsListTable( [ 'screen' => 'product_page_product-reviews' ] );
@@ -245,7 +245,7 @@ class ReviewsTest extends WC_Unit_Test_Case {
 	public function test_is_reviews_page( $new_current_screen, bool $expected_result ) : void {
 		global $current_screen;
 
-		$current_screen = $new_current_screen; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$current_screen = $new_current_screen; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$reviews = wc_get_container()->get( Reviews::class );
 

@@ -7,7 +7,7 @@ import {
 	getImageSrcFromProduct,
 	getImageIdFromProduct,
 } from '@fincommerce/utils';
-import { useEffect, useState, useRef } from '@wordpress/element';
+import { useEffect, useState, useRef } from '@finpress/element';
 
 /**
  * Internal dependencies

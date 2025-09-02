@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createElement, Component } from '@wordpress/element';
+import { createElement, Component } from '@finpress/element';
 import clsx from 'clsx';
 import { range } from 'lodash';
 import PropTypes from 'prop-types';
-import { withViewportMatch } from '@wordpress/viewport';
+import { withViewportMatch } from '@finpress/viewport';
 
 /**
  * Internal dependencies

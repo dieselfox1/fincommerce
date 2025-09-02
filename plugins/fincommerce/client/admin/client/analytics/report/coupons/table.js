@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _n } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
+import { __, _n } from '@finpress/i18n';
+import { Component } from '@finpress/element';
 import { map } from 'lodash';
 import { Date, Link } from '@fincommerce/components';
 import { getNewPath, getPersistedQuery } from '@fincommerce/navigation';

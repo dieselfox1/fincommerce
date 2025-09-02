@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) || exit;
 		$order
 	);
 
-	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	echo $message;
 	?>
 </p>

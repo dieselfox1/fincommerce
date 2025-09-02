@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import type { RatingValues } from '@fincommerce/types';
 
 /**

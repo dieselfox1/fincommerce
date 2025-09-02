@@ -14,10 +14,10 @@ import {
 import { Spinner } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
 import { lazy, Suspense, useContext, useEffect } from 'react';
-import { registerPlugin, unregisterPlugin } from '@wordpress/plugins';
+import { registerPlugin, unregisterPlugin } from '@finpress/plugins';
 import { useParams } from 'react-router-dom';
 import { WooFooterItem } from '@fincommerce/admin-layout';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -179,7 +179,7 @@ class WC_Shortcode_Checkout {
 					wc_get_template(
 						'checkout/form-verify-email.php',
 						array(
-							'failed_submission' => ! empty( $_POST['email'] ), // phpcs:ignore WordPress.Security.NonceVerification.Missing
+							'failed_submission' => ! empty( $_POST['email'] ), // phpcs:ignore finpress.Security.NonceVerification.Missing
 							'verify_url'        => $order->get_checkout_payment_url(),
 						)
 					);
@@ -322,7 +322,7 @@ class WC_Shortcode_Checkout {
 			wc_get_template(
 				'checkout/form-verify-email.php',
 				array(
-					'failed_submission' => ! empty( $_POST['email'] ), // phpcs:ignore WordPress.Security.NonceVerification.Missing
+					'failed_submission' => ! empty( $_POST['email'] ), // phpcs:ignore finpress.Security.NonceVerification.Missing
 					'verify_url'        => $order->get_checkout_order_received_url(),
 				)
 			);

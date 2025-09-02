@@ -3,7 +3,7 @@
  */
 import '@testing-library/jest-dom';
 import { screen, waitFor } from '@testing-library/react';
-import { createBlock } from '@wordpress/blocks';
+import { createBlock } from '@finpress/blocks';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 

@@ -10,8 +10,8 @@ import {
 	useMemo,
 	forwardRef,
 	useImperativeHandle,
-} from '@wordpress/element';
-import deprecated from '@wordpress/deprecated';
+} from '@finpress/element';
+import deprecated from '@finpress/deprecated';
 import { ChangeEvent, useRef } from 'react';
 import _setWith from 'lodash/setWith';
 import _get from 'lodash/get';

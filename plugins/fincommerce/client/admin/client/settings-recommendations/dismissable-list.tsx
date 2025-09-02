@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { Button, Card, CardHeader } from '@wordpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
+import { Button, Card, CardHeader } from '@finpress/components';
 import { optionsStore } from '@fincommerce/data';
 import { EllipsisMenu } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
-import { createContext, useContext } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createContext, useContext } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

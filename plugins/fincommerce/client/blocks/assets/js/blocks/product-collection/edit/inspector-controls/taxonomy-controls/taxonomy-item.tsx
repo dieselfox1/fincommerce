@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
-import { useDebounce } from '@wordpress/compose';
-import { FormTokenField } from '@wordpress/components';
-import { decodeEntities } from '@wordpress/html-entities';
-import type { Taxonomy } from '@wordpress/core-data/src/entity-types';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { useState } from '@finpress/element';
+import { useDebounce } from '@finpress/compose';
+import { FormTokenField } from '@finpress/components';
+import { decodeEntities } from '@finpress/html-entities';
+import type { Taxonomy } from '@finpress/core-data/src/entity-types';
 
 type Term = {
 	id: number;

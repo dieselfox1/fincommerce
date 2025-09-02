@@ -6,14 +6,14 @@ import {
 	useRef,
 	useContext,
 	useState,
-} from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { DataForm } from '@wordpress/dataviews';
+} from '@finpress/element';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { DataForm } from '@finpress/dataviews';
 import { getNewPath } from '@fincommerce/navigation';
-import { useDispatch } from '@wordpress/data';
-import apiFetch from '@wordpress/api-fetch';
-import { addQueryArgs } from '@wordpress/url';
+import { useDispatch } from '@finpress/data';
+import apiFetch from '@finpress/api-fetch';
+import { addQueryArgs } from '@finpress/url';
 
 /**
  * Internal dependencies

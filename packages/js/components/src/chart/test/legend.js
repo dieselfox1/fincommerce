@@ -5,7 +5,7 @@
  * External dependencies
  */
 import { render, within } from '@testing-library/react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

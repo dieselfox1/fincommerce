@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { addQueryArgs } from '@wordpress/url';
+import { useEffect, useState } from '@finpress/element';
+import { addQueryArgs } from '@finpress/url';
 import { getSetting } from '@fincommerce/settings';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

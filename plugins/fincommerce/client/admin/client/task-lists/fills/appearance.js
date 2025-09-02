@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { WooOnboardingTaskListItem } from '@fincommerce/onboarding';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import { getAdminLink } from '@fincommerce/settings';
 
 export const useAppearanceClick = () => {

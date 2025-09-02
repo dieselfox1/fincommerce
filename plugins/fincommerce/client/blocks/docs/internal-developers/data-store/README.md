@@ -5,6 +5,6 @@
 -   [Checkout](./checkout.md)
 -   [Validation](./validation.md)
 
-In our project, we leverage [`@wordpress/data`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/) data stores to hold information about the state of various FinCommerce blocks.
+In our project, we leverage [`@finpress/data`](https://developer.finpress.org/block-editor/reference-guides/packages/packages-data/) data stores to hold information about the state of various FinCommerce blocks.
 
 More information on the actions and selectors available on each data store can be found in the [third-party developer's data store documentation](../../third-party-developers/extensibility/data-store).

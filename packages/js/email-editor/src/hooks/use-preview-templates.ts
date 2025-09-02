@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { parse } from '@wordpress/blocks';
-import { BlockInstance } from '@wordpress/blocks/index';
-import { useSelect } from '@wordpress/data';
-import { applyFilters } from '@wordpress/hooks';
+import { useMemo } from '@finpress/element';
+import { parse } from '@finpress/blocks';
+import { BlockInstance } from '@finpress/blocks/index';
+import { useSelect } from '@finpress/data';
+import { applyFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies

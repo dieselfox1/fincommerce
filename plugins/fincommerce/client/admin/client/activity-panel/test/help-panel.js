@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render } from '@testing-library/react';
-import { addFilter, removeAllFilters } from '@wordpress/hooks';
+import { addFilter, removeAllFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies

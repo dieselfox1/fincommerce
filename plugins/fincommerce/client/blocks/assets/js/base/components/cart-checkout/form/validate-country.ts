@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { type ShippingAddress } from '@fincommerce/settings';
-import { select, dispatch } from '@wordpress/data';
+import { select, dispatch } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 import {
 	ALLOWED_COUNTRIES,

@@ -20,7 +20,7 @@ trait SerializingCacheTrait {
 	public function setup_serializing_cache() {
 		if ( ! $GLOBALS['wp_object_cache'] instanceof Serializing_Cache_Proxy ) {
 			$original_object_cache_instance = $GLOBALS['wp_object_cache'];
-			$GLOBALS['wp_object_cache']     = new Serializing_Cache_Proxy( $original_object_cache_instance );  // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['wp_object_cache']     = new Serializing_Cache_Proxy( $original_object_cache_instance );  // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 	}
 
@@ -34,7 +34,7 @@ trait SerializingCacheTrait {
 	 */
 	public function cleanup_mock_cache() {
 		if ( $GLOBALS['wp_object_cache'] instanceof Serializing_Cache_Proxy ) {
-			$GLOBALS['wp_object_cache'] = $GLOBALS['wp_object_cache']->original_cache_instance; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['wp_object_cache'] = $GLOBALS['wp_object_cache']->original_cache_instance; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 	}
 }

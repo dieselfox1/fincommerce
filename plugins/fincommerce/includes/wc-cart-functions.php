@@ -228,7 +228,7 @@ add_action( 'template_redirect', 'wc_clear_cart_after_payment', 20 );
  * Get the subtotal.
  */
 function wc_cart_totals_subtotal_html() {
-	echo WC()->cart->get_cart_subtotal(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo WC()->cart->get_cart_subtotal(); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -274,7 +274,7 @@ function wc_cart_totals_shipping_html() {
  * Get taxes total.
  */
 function wc_cart_totals_taxes_total_html() {
-	echo apply_filters( 'fincommerce_cart_totals_taxes_total_html', wc_price( WC()->cart->get_taxes_total() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo apply_filters( 'fincommerce_cart_totals_taxes_total_html', wc_price( WC()->cart->get_taxes_total() ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -294,7 +294,7 @@ function wc_cart_totals_coupon_label( $coupon, $echo = true ) {
 	$label = apply_filters( 'fincommerce_cart_totals_coupon_label', sprintf( esc_html__( 'Coupon: %s', 'fincommerce' ), $coupon->get_code() ), $coupon );
 
 	if ( $echo ) {
-		echo $label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $label; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	} else {
 		return $label;
 	}
@@ -358,7 +358,7 @@ function wc_cart_totals_order_total_html() {
 		}
 	}
 
-	echo apply_filters( 'fincommerce_cart_totals_order_total_html', $value ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo apply_filters( 'fincommerce_cart_totals_order_total_html', $value ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -369,7 +369,7 @@ function wc_cart_totals_order_total_html() {
 function wc_cart_totals_fee_html( $fee ) {
 	$cart_totals_fee_html = WC()->cart->display_prices_including_tax() ? wc_price( $fee->total + $fee->tax ) : wc_price( $fee->total );
 
-	echo apply_filters( 'fincommerce_cart_totals_fee_html', $cart_totals_fee_html, $fee ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo apply_filters( 'fincommerce_cart_totals_fee_html', $cart_totals_fee_html, $fee ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**

@@ -50,7 +50,7 @@ class Serializing_Cache_Proxy {
 	public function get( $key, $group = 'default', $force = false, &$found = null ) {
 		$data = $this->original_cache_instance->get( $key, $group, $found, $found );
 		if ( is_object( $data ) || is_array( $data ) ) {
-			return unserialize( serialize( $data ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize,WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+			return unserialize( serialize( $data ) ); // phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_unserialize,finpress.PHP.DiscouragedPHPFunctions.serialize_serialize
 		}
 
 		return $data;

@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { createElement } from 'react';
-import { Notice } from '@wordpress/components';
-import { MediaItem } from '@wordpress/media-utils';
-import { useState } from '@wordpress/element';
-import { cloudUpload } from '@wordpress/icons';
+import { Notice } from '@finpress/components';
+import { MediaItem } from '@finpress/media-utils';
+import { useState } from '@finpress/element';
+import { cloudUpload } from '@finpress/icons';
 
 /**
  * Internal dependencies

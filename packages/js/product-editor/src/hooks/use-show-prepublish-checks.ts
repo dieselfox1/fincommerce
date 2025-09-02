@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { optionsStore } from '@fincommerce/data';
 
 /**

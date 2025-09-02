@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import domReady from '@wordpress/dom-ready';
+import { __ } from '@finpress/i18n';
+import domReady from '@finpress/dom-ready';
 import { getAdminLink } from '@fincommerce/settings';
 
 domReady( () => {

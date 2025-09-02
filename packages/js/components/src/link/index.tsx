@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { partial } from 'lodash';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { getHistory } from '@fincommerce/navigation';
 
 interface LinkProps {

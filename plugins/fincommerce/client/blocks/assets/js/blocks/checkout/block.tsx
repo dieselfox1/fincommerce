@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { createInterpolateElement, useEffect } from '@wordpress/element';
+import { createInterpolateElement, useEffect } from '@finpress/element';
 import {
 	useStoreCart,
 	useShowShippingTotalWarning,
@@ -15,7 +15,7 @@ import { CURRENT_USER_IS_ADMIN, getSetting } from '@fincommerce/settings';
 import { StoreNoticesContainer } from '@fincommerce/blocks-components';
 import { SlotFillProvider } from '@fincommerce/blocks-checkout';
 import withScrollToTop from '@fincommerce/base-hocs/with-scroll-to-top';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { checkoutStore, validationStore } from '@fincommerce/block-data';
 
 /**

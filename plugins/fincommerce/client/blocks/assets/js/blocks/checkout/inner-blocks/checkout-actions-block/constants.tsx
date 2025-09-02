@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 export const defaultPlaceOrderButtonLabel = __( 'Place Order', 'fincommerce' );
 export const defaultReturnToCartButtonLabel = __(

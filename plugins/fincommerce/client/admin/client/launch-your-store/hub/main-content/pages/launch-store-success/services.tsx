@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { pluginsStore, onboardingStore } from '@fincommerce/data';
-import { resolveSelect } from '@wordpress/data';
+import { resolveSelect } from '@finpress/data';
 import { fromPromise } from 'xstate5';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 type SurveyCompletedResponse = string | null;
 let cachedSurveyCompleted: SurveyCompletedResponse = null;

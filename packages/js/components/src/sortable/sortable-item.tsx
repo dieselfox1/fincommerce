@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { DragEvent, useEffect } from 'react';
 import clsx from 'clsx';
-import { createElement, useRef, useContext } from '@wordpress/element';
-import { Draggable } from '@wordpress/components';
+import { createElement, useRef, useContext } from '@finpress/element';
+import { Draggable } from '@finpress/components';
 
 /**
  * Internal dependencies

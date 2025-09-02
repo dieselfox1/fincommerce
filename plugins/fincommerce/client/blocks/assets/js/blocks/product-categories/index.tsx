@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createBlock, registerBlockType } from '@wordpress/blocks';
-import { Icon, listView } from '@wordpress/icons';
+import { createBlock, registerBlockType } from '@finpress/blocks';
+import { Icon, listView } from '@finpress/icons';
 
 /**
  * Internal dependencies

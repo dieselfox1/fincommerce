@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { useState, useRef } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useState, useRef } from '@finpress/element';
 import Button from '@fincommerce/base-components/button';
 import LoadingMask from '@fincommerce/base-components/loading-mask';
 import {
@@ -13,7 +13,7 @@ import {
 	Panel,
 	Spinner,
 } from '@fincommerce/blocks-components';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 import type { MouseEvent, MouseEventHandler } from 'react';
 

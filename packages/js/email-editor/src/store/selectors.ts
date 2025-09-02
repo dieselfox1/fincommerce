@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { createRegistrySelector, createSelector } from '@wordpress/data';
-import { store as coreDataStore } from '@wordpress/core-data';
-import { store as editorStore } from '@wordpress/editor';
-import { store as preferencesStore } from '@wordpress/preferences';
-import { serialize, parse, BlockInstance } from '@wordpress/blocks';
-import { Post } from '@wordpress/core-data/build-types/entity-types/post';
+import { createRegistrySelector, createSelector } from '@finpress/data';
+import { store as coreDataStore } from '@finpress/core-data';
+import { store as editorStore } from '@finpress/editor';
+import { store as preferencesStore } from '@finpress/preferences';
+import { serialize, parse, BlockInstance } from '@finpress/blocks';
+import { Post } from '@finpress/core-data/build-types/entity-types/post';
 
 /**
  * Internal dependencies
@@ -207,7 +207,7 @@ function getTemplate( select, templateId: string ): EmailTemplate {
 }
 
 /**
- * COPIED FROM https://github.com/WordPress/gutenberg/blob/9c6d4fe59763b188d27ad937c2f0daa39e4d9341/packages/edit-post/src/store/selectors.js
+ * COPIED FROM https://github.com/finpress/gutenberg/blob/9c6d4fe59763b188d27ad937c2f0daa39e4d9341/packages/edit-post/src/store/selectors.js
  * Retrieves the template of the currently edited post.
  *
  * @return {Object?} Post Template.

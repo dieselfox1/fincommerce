@@ -2,10 +2,10 @@
 /**
  * Script to automatically assign a milestone to a pull request when it's merged.
  *
- * @package WooCommerce/GithubActions
+ * @package fincommerce/GithubActions
  */
 
-// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions
+// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped, finpress.WP.AlternativeFunctions
 
 require_once __DIR__ . '/post-request-shared.php';
 
@@ -44,4 +44,4 @@ if ( is_array( $result ) ) {
 	echo var_dump( $result );
 }
 
-// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions
+// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped, finpress.WP.AlternativeFunctions

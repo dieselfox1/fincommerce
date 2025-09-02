@@ -96,7 +96,7 @@ class OrderCouponDataMigrator implements BatchProcessorInterface, RegisterHooksI
 		$meta_ids = StringUtil::to_sql_list( $batch );
 
 		$meta_ids_and_values = $wpdb->get_results(
-			//phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			//phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			"SELECT meta_id,meta_value FROM {$wpdb->prefix}fincommerce_order_itemmeta WHERE meta_id IN $meta_ids",
 			ARRAY_N
 		);
@@ -122,13 +122,13 @@ class OrderCouponDataMigrator implements BatchProcessorInterface, RegisterHooksI
 	private function convert_item( int $meta_id, string $meta_value ) {
 		global $wpdb;
 
-		//phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize
+		//phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_unserialize
 		$coupon_data = unserialize( $meta_value );
 
 		$temp_coupon = new \WC_Coupon();
 		$temp_coupon->set_props( $coupon_data );
 
-		//phpcs:disable WordPress.DB.SlowDBQuery
+		//phpcs:disable finpress.DB.SlowDBQuery
 		$wpdb->update(
 			"{$wpdb->prefix}fincommerce_order_itemmeta",
 			array(
@@ -137,7 +137,7 @@ class OrderCouponDataMigrator implements BatchProcessorInterface, RegisterHooksI
 			),
 			array( 'meta_id' => $meta_id )
 		);
-		//phpcs:enable WordPress.DB.SlowDBQuery
+		//phpcs:enable finpress.DB.SlowDBQuery
 
 		if ( $wpdb->last_error ) {
 			throw new Exception( $wpdb->last_error );

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useInstanceId } from '@wordpress/compose';
-import { createElement, useState } from '@wordpress/element';
-import { Icon, chevronDown, chevronUp } from '@wordpress/icons';
+import { useInstanceId } from '@finpress/compose';
+import { createElement, useState } from '@finpress/element';
+import { Icon, chevronDown, chevronUp } from '@finpress/icons';
 
 /**
  * Internal dependencies

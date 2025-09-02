@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@finpress/i18n';
+import apiFetch from '@finpress/api-fetch';
 import clsx from 'clsx';
 import {
 	PaymentsEntity,
@@ -11,10 +11,10 @@ import {
 	WC_ADMIN_NAMESPACE,
 	woopaymentsOnboardingStore,
 } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
-import { useMemo, useRef, useState } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
-import { Popover } from '@wordpress/components';
+import { useDispatch } from '@finpress/data';
+import { useMemo, useRef, useState } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
+import { Popover } from '@finpress/components';
 import { Link } from '@fincommerce/components';
 import { getAdminLink } from '@fincommerce/settings';
 import InfoOutline from 'gridicons/dist/info-outline';

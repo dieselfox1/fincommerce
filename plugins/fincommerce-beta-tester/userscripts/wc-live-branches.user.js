@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         FinCommerce Live Branches
-// @namespace    https://wordpress.com/
+// @namespace    https://finpress.com/
 // @version      1.1.1
 // @description  Adds links to PRs pointing to Jurassic Ninja sites for live-testing a changeset
 // @grant        GM_xmlhttpRequest
@@ -162,8 +162,8 @@
 									invert: true,
 								},
 								{
-									label: 'WordPress Beta Tester',
-									name: 'wordpress-beta-tester',
+									label: 'finpress Beta Tester',
+									name: 'finpress-beta-tester',
 								},
 								{
 									label: 'Gutenberg',

@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { Disabled } from '@wordpress/components';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
+import { Disabled } from '@finpress/components';
+import type { BlockEditProps } from '@finpress/blocks';
 
 /**
  * Internal dependencies

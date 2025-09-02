@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import {
 	// @ts-expect-error no exported member.
 	useInnerBlocksProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

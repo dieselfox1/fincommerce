@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import apiFetch from '@wordpress/api-fetch';
-import { useDispatch } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import apiFetch from '@finpress/api-fetch';
+import { useDispatch } from '@finpress/data';
+import { useState } from '@finpress/element';
 import { WC_ADMIN_NAMESPACE } from '@fincommerce/data';
 
 /**

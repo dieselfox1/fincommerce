@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { RangeControl, ToggleControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { RangeControl, ToggleControl } from '@finpress/components';
 
 interface ClampProps {
 	( number: number, boundOne: number, boundTwo?: number ): number;

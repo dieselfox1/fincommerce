@@ -28,7 +28,7 @@ class WC_Orders_Tracking_Test extends \WC_Unit_Test_Case {
 
 		// Mock screen.
 		$this->current_screen_backup = $GLOBALS['current_screen'] ?? null;
-		$GLOBALS['current_screen']   = $this->get_screen_mock(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['current_screen']   = $this->get_screen_mock(); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		if ( ! did_action( 'current_screen' ) ) {
 			do_action( 'current_screen', $GLOBALS['current_screen'] ); // phpcs:ignore FinCommerce.Commenting.CommentHooks.MissingHookComment
 		}
@@ -48,7 +48,7 @@ class WC_Orders_Tracking_Test extends \WC_Unit_Test_Case {
 	public function tearDown(): void {
 		update_option( 'fincommerce_allow_tracking', 'no' );
 		if ( $this->current_screen_backup ) {
-			$GLOBALS['current_screen'] = $this->current_screen_backup; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['current_screen'] = $this->current_screen_backup; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 		parent::tearDown();
 		$this->clean_up_cot_setup();
@@ -87,7 +87,7 @@ class WC_Orders_Tracking_Test extends \WC_Unit_Test_Case {
 		$this->setup_screen( 'list' );
 
 		/* phpcs:disable FinCommerce.Commenting.CommentHooks.MissingHookComment */
-		// phpcs:disable WordPress.NamingConventions.ValidHookName.UseUnderscores
+		// phpcs:disable finpress.NamingConventions.ValidHookName.UseUnderscores
 		do_action( $hpos_enabled ? 'load-fincommerce_page_wc-orders' : 'load-edit.php' );
 
 		$this->assertRecordedTracksEvent( 'wcadmin_orders_view' );
@@ -123,8 +123,8 @@ class WC_Orders_Tracking_Test extends \WC_Unit_Test_Case {
 		$_GET['action']                       = '';
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
-			$GLOBALS['pagenow']     = 'admin.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-			$GLOBALS['plugin_page'] = 'wc-orders'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['pagenow']     = 'admin.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['plugin_page'] = 'wc-orders'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 			add_filter( 'map_meta_cap', array( $this, 'allow_edit_shop_orders' ), 10, 3 );
 			wc_get_container()->get( PageController::class )->setup();

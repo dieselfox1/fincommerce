@@ -2,13 +2,13 @@
  * External dependencies
  */
 import { ReactNode } from 'react';
-import { Slot, Fill } from '@wordpress/components';
+import { Slot, Fill } from '@finpress/components';
 import {
 	createElement,
 	Children,
 	Fragment,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	useSlotContext,
 	SlotContextHelpersType,

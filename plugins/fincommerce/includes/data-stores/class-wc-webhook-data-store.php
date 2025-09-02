@@ -344,7 +344,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 				{$offset}"
 			);
 
-			$webhook_ids  = wp_parse_id_list( $wpdb->get_col( $query ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$webhook_ids  = wp_parse_id_list( $wpdb->get_col( $query ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$total        = (int) $wpdb->get_var( 'SELECT FOUND_ROWS();' );
 			$return_value = (object) array(
 				'webhooks'      => $webhook_ids,
@@ -368,7 +368,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 				{$offset}"
 			);
 
-			$webhook_ids  = wp_parse_id_list( $wpdb->get_col( $query ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$webhook_ids  = wp_parse_id_list( $wpdb->get_col( $query ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$return_value = $webhook_ids;
 		}
 

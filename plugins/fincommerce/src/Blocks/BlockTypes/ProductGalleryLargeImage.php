@@ -33,7 +33,7 @@ class ProductGalleryLargeImage extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 * - Hook into pre_render_block to update the query.
 	 */
 	protected function initialize() {
@@ -144,10 +144,10 @@ class ProductGalleryLargeImage extends AbstractBlock {
 		?>
 			<div class="wc-block-product-gallery-large-image wp-block-fincommerce-product-gallery-large-image">
 				<?php // No need to use wp_kses here because the image HTML is built internally. ?>
-				<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php echo $images_html; ?>
 				<div class="wc-block-product-gallery-large-image__inner-blocks">
-					<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 					<?php echo $inner_blocks_html; ?>
 				</div>
 			</div>
@@ -251,7 +251,7 @@ class ProductGalleryLargeImage extends AbstractBlock {
 								)
 							)->render( array( 'dynamic' => true ) );
 
-							echo $this->update_single_image( $image_html, $context, $index ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							echo $this->update_single_image( $image_html, $context, $index ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 						?>
 					</li>
 				<?php endforeach; ?>

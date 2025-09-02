@@ -26,7 +26,7 @@ const { storeNoticesStore } = window.wc.wcBlocksData;
 The following code snippet demonstrates how to register a container for notices.
 
 ```js
-import { store as noticesStore } from '@wordpress/notices';
+import { store as noticesStore } from '@finpress/notices';
 
 export default function Block( attributes ) {
 	const context = 'your-namespace/custom-form-step';

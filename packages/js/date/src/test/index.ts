@@ -2,7 +2,7 @@
  * External dependencies
  */
 import moment from 'moment';
-import { format as formatDate } from '@wordpress/date';
+import { format as formatDate } from '@finpress/date';
 import { timeFormat as d3TimeFormat } from 'd3-time-format';
 /**
  * Internal dependencies

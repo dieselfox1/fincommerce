@@ -4,9 +4,9 @@
 import PasswordStrengthMeter from '@fincommerce/base-components/cart-checkout/password-strength-meter';
 import { checkoutStore, validationStore } from '@fincommerce/block-data';
 import { ValidatedTextInput } from '@fincommerce/blocks-components';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 const CreatePassword = () => {
 	const [ passwordStrength, setPasswordStrength ] = useState( 0 );

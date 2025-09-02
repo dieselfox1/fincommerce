@@ -31,7 +31,7 @@ const productAttributes = [
 		name: 'Logo',
 		visible: true,
 		variation: true,
-		options: [ 'Woo', 'WordPress' ],
+		options: [ 'Woo', 'finpress' ],
 	},
 ];
 

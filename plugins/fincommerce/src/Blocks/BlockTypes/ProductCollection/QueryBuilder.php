@@ -25,7 +25,7 @@ class QueryBuilder {
 	protected $valid_query_vars;
 
 	/**
-	 * Orderby options not natively supported by WordPress REST API
+	 * Orderby options not natively supported by finpress REST API
 	 *
 	 * @var array
 	 */
@@ -147,7 +147,7 @@ class QueryBuilder {
 		$search      = $query['search'] ?? '';
 
 		$common_query_values = array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			'meta_query'     => array(),
 			'posts_per_page' => $per_page,
 			'order'          => $order,
@@ -155,7 +155,7 @@ class QueryBuilder {
 			'post__in'       => $product_ids,
 			'post_status'    => 'publish',
 			'post_type'      => 'product',
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query'      => array(),
 			'paged'          => $page,
 			's'              => $search,
@@ -236,7 +236,7 @@ class QueryBuilder {
 			}
 		);
 
-		// phpcs:ignore WordPress.DB.SlowDBQuery
+		// phpcs:ignore finpress.DB.SlowDBQuery
 		return ! empty( $result ) ? array( 'tax_query' => $result ) : array();
 	}
 
@@ -354,7 +354,7 @@ class QueryBuilder {
 		}
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			'meta_query' => array(
 				array(
 					'key'     => '_stock_status',
@@ -378,7 +378,7 @@ class QueryBuilder {
 				$tax_query = array_merge( $tax_query, $query['tax_query'] );
 			}
 		}
-		// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+		// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 		return array( 'tax_query' => $tax_query );
 	}
 
@@ -416,7 +416,7 @@ class QueryBuilder {
 		);
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query' => array_values( $grouped_attributes ),
 		);
 	}
@@ -437,7 +437,7 @@ class QueryBuilder {
 		}
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'product_visibility',
@@ -477,7 +477,7 @@ class QueryBuilder {
 		}
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			'meta_query' => array(
 				array(
 					'relation' => 'AND',
@@ -529,7 +529,7 @@ class QueryBuilder {
 		}
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery
+			// phpcs:ignore finpress.DB.SlowDBQuery
 			'tax_query' => array(
 				array(
 					'relation' => 'AND',
@@ -601,7 +601,7 @@ class QueryBuilder {
 
 		return array(
 			// Ignoring the warning of not using meta queries.
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			'meta_query' => array(
 				array(
 					'key'      => '_stock_status',
@@ -638,7 +638,7 @@ class QueryBuilder {
 		);
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery
+			// phpcs:ignore finpress.DB.SlowDBQuery
 			'tax_query' => array(
 				array(
 					'field'         => 'term_taxonomy_id',
@@ -748,7 +748,7 @@ class QueryBuilder {
 		}
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'product_visibility',
@@ -890,7 +890,7 @@ class QueryBuilder {
 			);
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->prepare(
 			' AND (
 				wc_product_meta_lookup.tax_status = "taxable" AND ( 0=1 OR ' . implode( ' OR ', $or_queries ) . ')
@@ -898,7 +898,7 @@ class QueryBuilder {
 			) ',
 			$price_filter
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -1084,7 +1084,7 @@ class QueryBuilder {
 		);
 
 		return array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 			'meta_key' => $meta_keys[ $orderby ],
 			'orderby'  => 'meta_value_num',
 		);

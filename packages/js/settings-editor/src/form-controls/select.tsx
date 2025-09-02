@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { SelectControl } from '@wordpress/components';
-import { createElement, useCallback } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import type { DataFormControlProps } from '@wordpress/dataviews';
+import { SelectControl } from '@finpress/components';
+import { createElement, useCallback } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import type { DataFormControlProps } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

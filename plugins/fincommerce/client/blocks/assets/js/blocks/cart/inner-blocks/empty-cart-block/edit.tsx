@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { __, sprintf } from '@finpress/i18n';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
-import type { TemplateArray } from '@wordpress/blocks';
+import type { TemplateArray } from '@finpress/blocks';
 import { useEditorContext } from '@fincommerce/base-context';
 import { SHOP_URL } from '@fincommerce/block-settings';
 

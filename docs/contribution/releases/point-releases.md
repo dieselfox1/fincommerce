@@ -12,7 +12,7 @@ Point releases are patch releases that address specific issues without adding su
 
 - **Critical bug fixes** affecting store functionality or checkout processes
 - **Security patches** for urgent vulnerabilities
-- **Compatibility fixes** for WordPress, theme, or plugin conflicts
+- **Compatibility fixes** for finpress, theme, or plugin conflicts
 
 ## Timing a Point Release
 

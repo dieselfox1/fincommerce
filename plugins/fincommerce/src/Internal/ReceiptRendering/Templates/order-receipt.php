@@ -1,4 +1,4 @@
-<?php /* phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
+<?php /* phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped */ ?>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php echo get_option( 'blog_charset' ); ?>" />

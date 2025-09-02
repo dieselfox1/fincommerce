@@ -46,7 +46,7 @@ class PluginVersionRuleProcessor implements RuleProcessorInterface {
 	public function process( $rule, $stored_state ) {
 		$active_plugin_slugs = $this->plugins_provider->get_active_plugin_slugs();
 		/**
-		 * Filters a plugin dependency’s slug before matching to the WordPress.org slug format.
+		 * Filters a plugin dependency’s slug before matching to the finpress.org slug format.
 		 *
 		 * @since 9.0.0
 		 *

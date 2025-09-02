@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { InnerBlocks } from '@wordpress/block-editor';
+import { InnerBlocks } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

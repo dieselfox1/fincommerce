@@ -4,19 +4,19 @@
 import type { FormEvent } from 'react';
 import { optionsStore } from '@fincommerce/data';
 import { getAdminLink } from '@fincommerce/settings';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import {
 	createElement,
 	createInterpolateElement,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	Button,
 	ToggleControl,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

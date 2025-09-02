@@ -11,7 +11,7 @@ import { execAsync } from './util';
 
 /**
  * Determine if the default port for wp-env is already taken. If so, see
- * https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/#2-check-the-port-number
+ * https://developer.finpress.org/block-editor/reference-guides/packages/packages-env/#2-check-the-port-number
  * for alternatives.
  *
  * @return {Promise<boolean>} if the port is being currently used.

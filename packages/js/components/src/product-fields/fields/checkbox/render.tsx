@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { CheckboxControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { CheckboxControl } from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __ } from '@finpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
 import {
 	type PaymentResult,
 	type CheckoutResponse,
@@ -15,13 +15,13 @@ import {
 	isFailResponse,
 	isSuccessResponse,
 } from '@fincommerce/types';
-import type { createErrorNotice as originalCreateErrorNotice } from '@wordpress/notices/store/actions';
+import type { createErrorNotice as originalCreateErrorNotice } from '@finpress/notices/store/actions';
 import {
 	type ActionCreatorsOf,
 	type ConfigOf,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 import { checkoutStore } from '@fincommerce/block-data';
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 import type {
 	ContactForm,
 	ContactFormValues,

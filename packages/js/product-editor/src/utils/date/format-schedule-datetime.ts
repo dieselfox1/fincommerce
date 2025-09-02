@@ -7,8 +7,8 @@ import {
 	getDate,
 	getSettings,
 	isInTheFuture,
-} from '@wordpress/date';
-import { __, _x, isRTL, sprintf } from '@wordpress/i18n';
+} from '@finpress/date';
+import { __, _x, isRTL, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

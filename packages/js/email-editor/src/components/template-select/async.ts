@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect, useState, flushSync } from '@wordpress/element';
-// @ts-expect-error TS7016 Could not find a declaration file for module '@wordpress/priority-queue'
-import { createQueue } from '@wordpress/priority-queue'; // eslint-disable-line
+import { useEffect, useState, flushSync } from '@finpress/element';
+// @ts-expect-error TS7016 Could not find a declaration file for module '@finpress/priority-queue'
+import { createQueue } from '@finpress/priority-queue'; // eslint-disable-line
 
 const blockPreviewQueue = createQueue();
 
@@ -27,7 +27,7 @@ export function Async( { children, placeholder } ) {
 		const context = {};
 		blockPreviewQueue.add( context, () => {
 			// Synchronously run all renders so it consumes timeRemaining.
-			// See https://github.com/WordPress/gutenberg/pull/48238
+			// See https://github.com/finpress/gutenberg/pull/48238
 			flushSync( () => {
 				setShouldRender( true );
 			} );

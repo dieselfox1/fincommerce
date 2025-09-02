@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createContext, useContext, useState } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { createContext, useContext, useState } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import { pluginsStore } from '@fincommerce/data';
 import { getNewPath } from '@fincommerce/navigation';
 

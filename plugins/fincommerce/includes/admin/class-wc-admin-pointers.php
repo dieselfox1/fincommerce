@@ -50,7 +50,7 @@ class WC_Admin_Pointers {
 	 * Pointers for creating a product.
 	 */
 	public function create_product_tutorial() {
-		if ( ! isset( $_GET['tutorial'] ) || ! current_user_can( 'manage_options' ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! isset( $_GET['tutorial'] ) || ! current_user_can( 'manage_options' ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return;
 		}
 
@@ -69,7 +69,7 @@ class WC_Admin_Pointers {
 	 * Pointers for creating a variable product.
 	 */
 	public function create_variable_product_tutorial() {
-		if ( ! current_user_can( 'manage_options' ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! current_user_can( 'manage_options' ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return;
 		}
 
@@ -80,7 +80,7 @@ class WC_Admin_Pointers {
 	 * Pointers for accessing In-App Marketplace.
 	 */
 	public function create_wc_addons_tutorial() {
-		if ( ! isset( $_GET['tutorial'] ) || ! current_user_can( 'manage_options' ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! isset( $_GET['tutorial'] ) || ! current_user_can( 'manage_options' ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return;
 		}
 

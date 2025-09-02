@@ -32,9 +32,9 @@ jest.mock( '@fincommerce/data', () => ( {
 	useUserPreferences: jest.fn().mockReturnValue( {} ),
 } ) );
 
-jest.mock( '@wordpress/element', () => {
+jest.mock( '@finpress/element', () => {
 	return {
-		...jest.requireActual( '@wordpress/element' ),
+		...jest.requireActual( '@finpress/element' ),
 		Suspense: ( { children } ) => <div>{ children }</div>,
 		// It's not easy to mock a React.lazy component, since we only use one in this component, this mocks lazy to return a mocked <TaskList>
 		lazy: () => () => <div>[TaskList]</div>,

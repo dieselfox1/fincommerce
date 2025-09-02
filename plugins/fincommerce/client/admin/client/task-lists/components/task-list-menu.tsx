@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { EllipsisMenu } from '@fincommerce/components';
 import { onboardingStore } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 export type TaskListMenuProps = {
 	id: string;

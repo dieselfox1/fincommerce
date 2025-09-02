@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, TabbableContainer, Modal } from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { createBlock, BlockInstance } from '@wordpress/blocks';
-import { store as noticesStore } from '@wordpress/notices';
-import { store as coreStore } from '@wordpress/core-data';
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { Button, TabbableContainer, Modal } from '@finpress/components';
+import { useState } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { createBlock, BlockInstance } from '@finpress/blocks';
+import { store as noticesStore } from '@finpress/notices';
+import { store as coreStore } from '@finpress/core-data';
+import { store as blockEditorStore } from '@finpress/block-editor';
 import { recordEvent } from '@fincommerce/tracks';
 import { findBlock } from '@fincommerce/utils';
 

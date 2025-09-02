@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 
 /**
  * Internal dependencies

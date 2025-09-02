@@ -551,7 +551,7 @@ test.describe( 'System Status API tests', () => {
 					name: 'Expired transients',
 					action: 'Clear transients',
 					description:
-						'This tool will clear ALL expired transients from WordPress.',
+						'This tool will clear ALL expired transients from finpress.',
 				} ),
 				expect.objectContaining( {
 					id: 'clear_expired_download_permissions',

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Icon } from '@wordpress/components';
+import { Button, Icon } from '@finpress/components';
 import { useEffect, useState } from 'react';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies
@@ -108,7 +108,7 @@ export default function FulfillmentEditor( {
 			>
 				<h3>
 					{
-						// eslint-disable-next-line @wordpress/valid-sprintf
+						// eslint-disable-next-line @finpress/valid-sprintf
 						sprintf(
 							isEditing
 								? /* translators: %s: Fulfillment ID */

@@ -7,7 +7,7 @@ import {
 	useCallback,
 	useEffect,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition';
 import { CSSTransition, TransitionStatus } from 'react-transition-group';
 

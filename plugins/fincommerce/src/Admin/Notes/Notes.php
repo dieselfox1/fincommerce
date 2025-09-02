@@ -419,7 +419,7 @@ class Notes {
 	 */
 	private static function record_tracks_event_without_cookies( $event_name, $params ) {
 		// We save the cookie to set it back after the event recording.
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$anon_id = isset( $_COOKIE['tk_ai'] ) ? $_COOKIE['tk_ai'] : null;
 
 		unset( $_COOKIE['tk_ai'] );

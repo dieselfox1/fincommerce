@@ -18,7 +18,7 @@ import { base_url, admin_username, admin_password } from '../config.js';
  */
 export function setCartCheckoutShortcodes() {
 	/**
-	 * A WordPress page.
+	 * A finpress page.
 	 *
 	 * @typedef {Object} WPPage
 	 * @property {number} id

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import { Template } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
+import { Template } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 const TEMPLATE: Template[] = [
 	[

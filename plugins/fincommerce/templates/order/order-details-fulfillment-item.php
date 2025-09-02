@@ -43,11 +43,11 @@ if ( ! apply_filters( 'fincommerce_order_item_visible', true, $item ) ) {
 			$qty_display = esc_html( $qty );
 		}
 
-		echo apply_filters( 'fincommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf( '&times;&nbsp;%s', $qty_display ) . '</strong>', $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf( '&times;&nbsp;%s', $qty_display ) . '</strong>', $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 		do_action( 'fincommerce_order_item_meta_start', $item_id, $item, $order, false );
 
-		wc_display_item_meta( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		wc_display_item_meta( $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 		do_action( 'fincommerce_order_item_meta_end', $item_id, $item, $order, false );
 		?>
@@ -63,7 +63,7 @@ if ( ! apply_filters( 'fincommerce_order_item_visible', true, $item ) ) {
 				$item->get_subtotal() * $quantity / $item->get_quantity()
 			);
 		}
-		echo $order->get_formatted_line_subtotal( $item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $order->get_formatted_line_subtotal( $item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		?>
 	</td>
 
@@ -73,7 +73,7 @@ if ( ! apply_filters( 'fincommerce_order_item_visible', true, $item ) ) {
 
 <tr class="fincommerce-table__product-purchase-note product-purchase-note">
 
-	<td colspan="2"><?php echo wpautop( do_shortcode( wp_kses_post( $purchase_note ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+	<td colspan="2"><?php echo wpautop( do_shortcode( wp_kses_post( $purchase_note ) ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></td>
 
 </tr>
 

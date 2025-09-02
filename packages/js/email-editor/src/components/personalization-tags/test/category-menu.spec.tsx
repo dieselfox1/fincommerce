@@ -12,7 +12,7 @@ import '@testing-library/jest-dom';
  */
 import { CategoryMenu } from '../category-menu';
 
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	MenuGroup: ( props: React.HTMLAttributes< HTMLDivElement > ) => (
 		<div data-testid="menu-group" { ...props } />
 	),

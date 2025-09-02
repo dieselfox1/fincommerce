@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { Button, CardDivider } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, CardDivider } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import {
 	pluginsStore,
 	paymentSettingsStore,
 	PaymentsProviderLink,
 	PaymentsProvider,
 } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { useDispatch } from '@finpress/data';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

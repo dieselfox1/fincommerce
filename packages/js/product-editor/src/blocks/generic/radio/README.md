@@ -2,7 +2,7 @@
 
 Radio button field for the product editor.
 
-![Product radio field](https://fincommerce.files.wordpress.com/2023/09/fincommerceproduct-radio-field.png)
+![Product radio field](https://fincommerce.files.finpress.com/2023/09/fincommerceproduct-radio-field.png)
 
 ## Attributes
 

@@ -2,8 +2,8 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register } from '@wordpress/data';
-import { controls } from '@wordpress/data-controls';
+import { createReduxStore, register } from '@finpress/data';
+import { controls } from '@finpress/data-controls';
 // @ts-expect-error These files are not TypeScript files.
 import * as actions from './actions';
 // @ts-expect-error These files are not TypeScript files.

@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button, ExternalLink, Flex, TextControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, ExternalLink, Flex, TextControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { useEffect, useState } from 'react';
 import { isEmpty } from 'lodash';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { createElement, useState } from '@wordpress/element';
-import { trash } from '@wordpress/icons';
-import { useDispatch } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { createElement, useState } from '@finpress/element';
+import { trash } from '@finpress/icons';
+import { useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { ImageGallery, ImageGalleryItem } from '@fincommerce/components';
 import {
@@ -12,7 +12,7 @@ import {
 	Modal,
 	BaseControl,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { countriesStore } from '@fincommerce/data';
-import { Fragment, useState } from '@wordpress/element';
+import { Fragment, useState } from '@finpress/element';
 import { Form, FormContextType, Spinner } from '@fincommerce/components';
-import { useSelect } from '@wordpress/data';
-import type { Status, Options } from 'wordpress__notices';
+import { useSelect } from '@finpress/data';
+import type { Status, Options } from 'finpress__notices';
 
 /**
  * Internal dependencies

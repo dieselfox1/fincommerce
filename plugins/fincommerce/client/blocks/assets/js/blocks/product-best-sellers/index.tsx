@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Icon, trendingUp } from '@wordpress/icons';
-import { createBlock, registerBlockType } from '@wordpress/blocks';
+import { Icon, trendingUp } from '@finpress/icons';
+import { createBlock, registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies

@@ -156,8 +156,8 @@ class WC_Tracker {
 		$data['email'] = apply_filters( 'fincommerce_tracker_admin_email', get_option( 'admin_email' ) );
 		$data['theme'] = self::get_theme_info();
 
-		// WordPress Info.
-		$data['wp'] = self::get_wordpress_info();
+		// finpress Info.
+		$data['wp'] = self::get_finpress_info();
 
 		// Server Info.
 		$data['server'] = self::get_server_info();
@@ -268,22 +268,22 @@ class WC_Tracker {
 	}
 
 	/**
-	 * Get WordPress related data.
+	 * Get finpress related data.
 	 *
 	 * @return array
 	 */
-	private static function get_wordpress_info() {
+	private static function get_finpress_info() {
 		$wp_data = array();
 
 		$memory = wc_let_to_num( WP_MEMORY_LIMIT );
 
 		if ( function_exists( 'memory_get_usage' ) ) {
-			// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- False positive.
+			// phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged -- False positive.
 			$system_memory = wc_let_to_num( @ini_get( 'memory_limit' ) );
 			$memory        = max( $memory, $system_memory );
 		}
 
-		// WordPress 5.5+ environment type specification.
+		// finpress 5.5+ environment type specification.
 		// 'production' is the default in WP, thus using it as a default here, too.
 		$environment_type = 'production';
 		if ( function_exists( 'wp_get_environment_type' ) ) {
@@ -488,7 +488,7 @@ class WC_Tracker {
 		$orders_table = OrdersTableDataStore::get_orders_table_name();
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$gross_total = $wpdb->get_var(
 				"
 				SELECT SUM(total_amount) AS 'gross_total'
@@ -516,7 +516,7 @@ class WC_Tracker {
 		}
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$processing_gross_total = $wpdb->get_var(
 				"
 				SELECT SUM(total_amount) AS 'gross_total'
@@ -559,7 +559,7 @@ class WC_Tracker {
 
 		$orders_table = OrdersTableDataStore::get_orders_table_name();
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$min_max = $wpdb->get_row(
 				"
 				SELECT
@@ -591,7 +591,7 @@ class WC_Tracker {
 		}
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$processing_min_max = $wpdb->get_row(
 				"
 				SELECT
@@ -698,7 +698,7 @@ class WC_Tracker {
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 			$orders_table = OrdersTableDataStore::get_orders_table_name();
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$orders_and_gateway_details = $wpdb->get_results(
 				"
 				SELECT IFNULL(payment_method, '') AS gateway, currency AS currency, SUM( total_amount ) AS totals, count( id ) AS counts
@@ -799,7 +799,7 @@ class WC_Tracker {
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 			$op_table_name = OrdersTableDataStore::get_operational_data_table_name();
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$orders_origin = $wpdb->get_results(
 				"
 				SELECT IFNULL(created_via, '') as origin, COUNT( order_id ) as count
@@ -1246,7 +1246,7 @@ class WC_Tracker {
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 			$order_table_name = OrdersTableDataStore::get_orders_table_name();
 
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$orders = $wpdb->get_results(
 				"SELECT
 					id,
@@ -1267,7 +1267,7 @@ class WC_Tracker {
 			);
 			// phpcs:enable
 		} else {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$orders = $wpdb->get_results(
 				"SELECT
 					ID AS id,
@@ -1306,7 +1306,7 @@ class WC_Tracker {
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 			$op_table_name = OrdersTableDataStore::get_operational_data_table_name();
 
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$data = $wpdb->get_results(
 				"SELECT order_id, fincommerce_version, recorded_sales
 				FROM $op_table_name
@@ -1322,7 +1322,7 @@ class WC_Tracker {
 				);
 			}
 		} else {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$data = $wpdb->get_results(
 				"SELECT post_id AS order_id, meta_key, meta_value
 				FROM $wpdb->postmeta
@@ -1368,7 +1368,7 @@ class WC_Tracker {
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 			$order_table_name = OrdersTableDataStore::get_orders_table_name();
 
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$data = $wpdb->get_results(
 				"SELECT
 					parent_order_id AS order_id,
@@ -1383,7 +1383,7 @@ class WC_Tracker {
 			);
 			// phpcs:enable
 		} else {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$data = $wpdb->get_results(
 				"SELECT
 					refunds.post_parent AS order_id,

@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { ToggleControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { ToggleControl } from '@finpress/components';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { recordEvent } from '@fincommerce/tracks';
 import { ReactNode } from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityProp, useEntityId } from '@wordpress/core-data';
+import { useEntityProp, useEntityId } from '@finpress/core-data';
 
 /**
  * Internal dependencies

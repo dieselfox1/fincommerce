@@ -2,15 +2,15 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, _x } from '@wordpress/i18n';
+import { __, _x } from '@finpress/i18n';
 import {
 	Warning,
 	__experimentalGetElementClassName,
-} from '@wordpress/block-editor';
-import { Button, Disabled } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+} from '@finpress/block-editor';
+import { Button, Disabled } from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { useSelect, useDispatch } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 import { productsStore } from '@fincommerce/data';
 
 const CommentsFormPlaceholder = () => {

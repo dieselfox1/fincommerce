@@ -1,23 +1,23 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
-import { Popover } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { BlockInstance } from '@finpress/blocks';
+import { Popover } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	createElement,
 	useCallback,
 	useEffect,
 	useReducer,
 	useState,
-} from '@wordpress/element';
-import { useResizeObserver } from '@wordpress/compose';
-import { PluginArea } from '@wordpress/plugins';
+} from '@finpress/element';
+import { useResizeObserver } from '@finpress/compose';
+import { PluginArea } from '@finpress/plugins';
 import clsx from 'clsx';
 import {
 	store as preferencesStore,
 	// @ts-expect-error No types for this exist yet.
-} from '@wordpress/preferences';
+} from '@finpress/preferences';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	BlockEditorProvider,
@@ -31,12 +31,12 @@ import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	ComplementaryArea,
 	// @ts-expect-error No types for this exist yet.
-} from '@wordpress/interface';
+} from '@finpress/interface';
 
 /**
  * Internal dependencies
@@ -291,7 +291,7 @@ export function IframeEditor( {
 									{ resizeObserver }
 									<BlockList className="edit-site-block-editor__block-list wp-site-blocks" />
 								</EditorCanvas>
-								{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
+								{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
 								<Popover.Slot />
 							</ResizableEditor>
 							{ /* This is a hack, but I couldn't find another (easy) way to not

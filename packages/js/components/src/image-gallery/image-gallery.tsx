@@ -8,9 +8,9 @@ import {
 	cloneElement,
 	useState,
 	useMemo,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
-import { MediaItem, MediaUpload } from '@wordpress/media-utils';
+import { MediaItem, MediaUpload } from '@finpress/media-utils';
 
 /**
  * Internal dependencies

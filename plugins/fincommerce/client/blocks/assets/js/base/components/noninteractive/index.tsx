@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useRef, useLayoutEffect } from '@wordpress/element';
-import { focus } from '@wordpress/dom';
+import { useRef, useLayoutEffect } from '@finpress/element';
+import { focus } from '@finpress/dom';
 import { useDebouncedCallback } from 'use-debounce';
 
 /**
@@ -25,9 +25,9 @@ const FOCUSABLE_NODE_NAMES = [
  * Makes children elements Noninteractive, preventing both mouse and keyboard events without affecting how the elements
  * appear visually. Used for previews.
  *
- * Based on the <Disabled> component in WordPress.
+ * Based on the <Disabled> component in finpress.
  *
- * @see https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/disabled/index.js
+ * @see https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/disabled/index.js
  */
 const Noninteractive = ( {
 	children,

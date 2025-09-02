@@ -2,9 +2,9 @@
  * External dependencies
  */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - Ignoring because @wordpress/element library does not have type definition for FunctionComponent
+// @ts-ignore - Ignoring because @finpress/element library does not have type definition for FunctionComponent
 // eslint-disable-next-line
-import { FunctionComponent } from '@wordpress/element';
+import { FunctionComponent } from '@finpress/element';
 
 export type SelectedOption = number | string | null | number[] | string[];
 

@@ -2,15 +2,15 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import interpolateComponents from '@automattic/interpolate-components';
 import React from 'react';
 
 const documentationUrls = {
-	tos: 'https://wordpress.com/tos/',
+	tos: 'https://finpress.com/tos/',
 	signUpLink:
 		'https://fincommerce.com/document/woopayments/startup-guide/#sign-up-process',
-	merchantTerms: 'https://wordpress.com/tos/#more-woopay-specifically',
+	merchantTerms: 'https://finpress.com/tos/#more-woopay-specifically',
 	privacyPolicy: 'https://automattic.com/privacy/',
 };
 

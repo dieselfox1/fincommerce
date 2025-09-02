@@ -142,10 +142,10 @@ class PatternRegistry {
 			}
 		}
 
-		// phpcs:ignore WordPress.WP.I18n.NonSingularStringLiteralText, WordPress.WP.I18n.LowLevelTranslationFunction
+		// phpcs:ignore finpress.WP.I18n.NonSingularStringLiteralText, finpress.WP.I18n.LowLevelTranslationFunction
 		$pattern_data['title'] = translate_with_gettext_context( $pattern_data['title'], 'Pattern title', 'fincommerce' );
 		if ( ! empty( $pattern_data['description'] ) ) {
-			// phpcs:ignore WordPress.WP.I18n.NonSingularStringLiteralText, WordPress.WP.I18n.LowLevelTranslationFunction
+			// phpcs:ignore finpress.WP.I18n.NonSingularStringLiteralText, finpress.WP.I18n.LowLevelTranslationFunction
 			$pattern_data['description'] = translate_with_gettext_context( $pattern_data['description'], 'Pattern description', 'fincommerce' );
 		}
 

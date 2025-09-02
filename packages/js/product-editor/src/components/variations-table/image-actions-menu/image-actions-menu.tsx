@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Dropdown, MenuGroup } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
-import { createElement, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { MediaItem } from '@wordpress/media-utils';
+import { Dropdown, MenuGroup } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
+import { createElement, useState } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { MediaItem } from '@finpress/media-utils';
 import { MediaUploaderErrorCallback } from '@fincommerce/components';
 
 /**

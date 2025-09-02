@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, useContext } from '@wordpress/element';
+import { createElement, useContext } from '@finpress/element';
 import { screen, render, renderHook } from '@testing-library/react';
-import { addAction, applyFilters, didFilter } from '@wordpress/hooks';
+import { addAction, applyFilters, didFilter } from '@finpress/hooks';
 /* eslint-disable @fincommerce/dependency-group */
 // @ts-ignore No types for this exist yet.
 import { useLocation } from '@automattic/site-admin';
@@ -15,7 +15,7 @@ import { useLocation } from '@automattic/site-admin';
 import { useActiveRoute, useModernRoutes } from '../route';
 
 // Mock external dependencies
-jest.mock( '@wordpress/hooks', () => ( {
+jest.mock( '@finpress/hooks', () => ( {
 	addAction: jest.fn(),
 	removeAction: jest.fn(),
 	applyFilters: jest.fn(),
@@ -34,8 +34,8 @@ jest.mock( '../components/sidebar', () => ( {
 	),
 } ) );
 
-jest.mock( '@wordpress/element', () => ( {
-	...jest.requireActual( '@wordpress/element' ),
+jest.mock( '@finpress/element', () => ( {
+	...jest.requireActual( '@finpress/element' ),
 	useContext: jest.fn(),
 } ) );
 

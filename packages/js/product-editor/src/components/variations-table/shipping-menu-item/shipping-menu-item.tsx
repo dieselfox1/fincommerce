@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Dropdown, MenuItem, MenuGroup } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { chevronRight } from '@wordpress/icons';
+import { Dropdown, MenuItem, MenuGroup } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { chevronRight } from '@finpress/icons';
 import { ProductVariation } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 

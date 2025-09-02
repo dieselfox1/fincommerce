@@ -55,7 +55,7 @@ final class WC_Cart_Session {
 
 
 	/**
-	 * Register methods for this object on the appropriate WordPress hooks.
+	 * Register methods for this object on the appropriate finpress hooks.
 	 */
 	public function init() {
 		/**
@@ -123,7 +123,7 @@ final class WC_Cart_Session {
 		}
 
 		// Populate cart from order.
-		if ( isset( $_GET['order_again'], $_GET['_wpnonce'] ) && is_user_logged_in() && wp_verify_nonce( wp_unslash( $_GET['_wpnonce'] ), 'fincommerce-order_again' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( isset( $_GET['order_again'], $_GET['_wpnonce'] ) && is_user_logged_in() && wp_verify_nonce( wp_unslash( $_GET['_wpnonce'] ), 'fincommerce-order_again' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$cart                = $this->populate_cart_from_order( absint( $_GET['order_again'] ), $cart );
 			$order_again         = true;
 			$update_cart_session = true;

@@ -66,7 +66,7 @@ class ProductGallery extends AbstractBlock {
 					</button>
 					<div class="wc-block-product-gallery-dialog__images-container">
 						<div class="wc-block-product-gallery-dialog__images">
-							<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is already escaped by FinCommerce. ?>
+							<?php // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped -- Output is already escaped by FinCommerce. ?>
 							<?php echo $images_html; ?>
 						</div>
 					</div>

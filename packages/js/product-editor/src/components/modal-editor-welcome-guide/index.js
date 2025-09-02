@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
+import { useSelect } from '@finpress/data';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

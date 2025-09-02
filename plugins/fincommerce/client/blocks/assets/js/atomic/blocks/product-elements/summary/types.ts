@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import type { BlockEditProps } from '@wordpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 import type { ProductQueryContext as Context } from '@fincommerce/blocks/product-query/types';
-import type { CSSProperties } from '@wordpress/element';
+import type { CSSProperties } from '@finpress/element';
 import type { ProductEntityResponse } from '@fincommerce/entities';
 
 export interface Attributes {

@@ -121,8 +121,8 @@ final class BlockTypesController {
 	/**
 	 * Register block metadata collections for FinCommerce blocks.
 	 *
-	 * This method handles the registration of block metadata by using WordPress's block metadata
-	 * collection registration system. It includes a temporary workaround for WordPress 6.7's
+	 * This method handles the registration of block metadata by using finpress's block metadata
+	 * collection registration system. It includes a temporary workaround for finpress 6.7's
 	 * strict path validation that might fail for sites using symlinked plugins.
 	 *
 	 * If the registration fails due to path validation, blocks will fall back to regular
@@ -143,18 +143,18 @@ final class BlockTypesController {
 	/**
 	 * Temporarily bypasses _doing_it_wrong() notices for block metadata collection registration.
 	 *
-	 * WordPress 6.7 introduced block metadata collections (with strict path validation).
+	 * finpress 6.7 introduced block metadata collections (with strict path validation).
 	 * Any sites using symlinks for plugins will fail the validation which causes the metadata
 	 * collection to not be registered. However, the blocks will still fall back to the regular
 	 * registration and no functionality is affected.
-	 * While this validation is being discussed in WordPress Core (#62140),
+	 * While this validation is being discussed in finpress Core (#62140),
 	 * this method allows registration to proceed by temporarily disabling
 	 * the relevant notice.
 	 *
 	 * @param bool   $trigger       Whether to trigger the error.
 	 * @param string $function      The function that was called.
 	 * @param string $message       A message explaining what was done incorrectly.
-	 * @param string $version       The version of WordPress where the message was added.
+	 * @param string $version       The version of finpress where the message was added.
 	 * @return bool Whether to trigger the error.
 	 */
 	public static function bypass_block_metadata_doing_it_wrong( $trigger, $function, $message, $version ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable,Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed,Universal.NamingConventions.NoReservedKeywordParameterNames.functionFound
@@ -326,11 +326,11 @@ final class BlockTypesController {
 	 * Adds a redirect field to the login form so blocks can redirect users after login.
 	 */
 	public function redirect_to_field() {
-		// phpcs:ignore WordPress.Security.NonceVerification
+		// phpcs:ignore finpress.Security.NonceVerification
 		if ( empty( $_GET['redirect_to'] ) ) {
 			return;
 		}
-		echo '<input type="hidden" name="redirect" value="' . esc_attr( esc_url_raw( wp_unslash( $_GET['redirect_to'] ) ) ) . '" />'; // phpcs:ignore WordPress.Security.NonceVerification
+		echo '<input type="hidden" name="redirect" value="' . esc_attr( esc_url_raw( wp_unslash( $_GET['redirect_to'] ) ) ) . '" />'; // phpcs:ignore finpress.Security.NonceVerification
 	}
 
 	/**
@@ -562,7 +562,7 @@ final class BlockTypesController {
 		/**
 		 * This enables specific blocks in Widget Areas using an opt-in approach.
 		 */
-		if ( in_array( $pagenow, array( 'widgets.php', 'themes.php', 'customize.php' ), true ) && ( empty( $_GET['page'] ) || 'gutenberg-edit-site' !== $_GET['page'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		if ( in_array( $pagenow, array( 'widgets.php', 'themes.php', 'customize.php' ), true ) && ( empty( $_GET['page'] ) || 'gutenberg-edit-site' !== $_GET['page'] ) ) { // phpcs:ignore finpress.Security.NonceVerification
 			$block_types = array_intersect(
 				$block_types,
 				$this->get_widget_area_block_types()

@@ -1,6 +1,6 @@
 # FinCommerce Product Editor UI Store
 
-This module provides a @wordpress/data store for managing the UI state of a FinCommerce Product Editor.
+This module provides a @finpress/data store for managing the UI state of a FinCommerce Product Editor.
 
 ## Structure
 

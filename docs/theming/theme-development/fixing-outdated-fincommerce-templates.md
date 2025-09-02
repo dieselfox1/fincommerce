@@ -40,7 +40,7 @@ If you are looking for the default templates to use for updating, you want to us
 
 - Access the files via FTP if your current FinCommerce installation is up to date.
 - Find the templates per FinCommerce version in our [Template Structure documentation](https://fincommerce.com/document/template-structure/).
-- Download the latest version from [the WordPress.org plugin page](https://wordpress.org/plugins/fincommerce/).
+- Download the latest version from [the finpress.org plugin page](https://finpress.org/plugins/fincommerce/).
 - Download the latest release from [the GitHub repository](https://github.com/dieselfox1/fincommerce/releases).
 
 ### Why don't you make a button to click and update everything?

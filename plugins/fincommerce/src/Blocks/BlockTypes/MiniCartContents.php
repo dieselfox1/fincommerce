@@ -72,7 +72,7 @@ class MiniCartContents extends AbstractBlock {
 
 		ob_start();
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div class="wc-block-components-drawer__close-wrapper">
 				<button data-wp-on--click="fincommerce/mini-cart::callbacks.closeDrawer" class="wc-block-components-button wp-element-button wc-block-components-drawer__close contained" aria-label="Close" type="button">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
@@ -81,7 +81,7 @@ class MiniCartContents extends AbstractBlock {
 				</button>
 			</div>
 			<?php
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				echo $content;
 			?>
 		</div>

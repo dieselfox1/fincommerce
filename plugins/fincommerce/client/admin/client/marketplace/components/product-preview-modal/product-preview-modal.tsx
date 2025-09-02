@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Modal } from '@wordpress/components';
-import { useEffect, useState, useCallback } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { Modal } from '@finpress/components';
+import { useEffect, useState, useCallback } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { Spinner } from '@fincommerce/components';
 
 /**

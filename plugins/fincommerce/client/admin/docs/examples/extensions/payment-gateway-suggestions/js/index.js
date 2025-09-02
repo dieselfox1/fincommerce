@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createElement } from '@finpress/element';
 import { PAYMENT_GATEWAYS_STORE_NAME } from '@fincommerce/data';
-import { registerPlugin } from '@wordpress/plugins';
-import { useDispatch } from '@wordpress/data';
+import { registerPlugin } from '@finpress/plugins';
+import { useDispatch } from '@finpress/data';
 import { WooPaymentGatewayConfigure } from '@fincommerce/onboarding';
 
 const MyPaymentGatewaySuggestion = () => {

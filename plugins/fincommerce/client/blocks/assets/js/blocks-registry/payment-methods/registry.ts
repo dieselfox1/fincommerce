@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 import type {
 	PaymentMethodConfiguration,
 	ExpressPaymentMethodConfiguration,
@@ -10,12 +10,12 @@ import type {
 	PaymentMethods,
 	ExpressPaymentMethods,
 } from '@fincommerce/types';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import {
 	ActionCreatorsOf,
 	ConfigOf,
 	DispatchReturn,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 
 /**
  * Internal dependencies

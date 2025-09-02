@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema for an array.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#arrays
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#arrays
  */
 class Array_Schema extends Schema {
 	/**

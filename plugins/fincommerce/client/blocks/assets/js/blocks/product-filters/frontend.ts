@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import * as iAPI from '@wordpress/interactivity';
+import * as iAPI from '@finpress/interactivity';
 
 /**
  * Internal dependencies
@@ -226,8 +226,8 @@ const productFiltersStore = {
 				return ( window.location.href = url.href );
 			}
 
-			const routerModule: typeof import('@wordpress/interactivity-router') =
-				yield import( '@wordpress/interactivity-router' );
+			const routerModule: typeof import('@finpress/interactivity-router') =
+				yield import( '@finpress/interactivity-router' );
 
 			yield routerModule.actions.navigate( url.href );
 		},

@@ -22,7 +22,7 @@ class ReviewsUtil {
 			return $message;
 		}
 
-		// Replace the WordPress comment moderation URLs with FinCommerce product review URLs.
+		// Replace the finpress comment moderation URLs with FinCommerce product review URLs.
 		$product_reviews_url = admin_url( 'edit.php?post_type=product&page=product-reviews' );
 
 		// Replace the moderation panel URL (this is the "show all reviews pending" link).

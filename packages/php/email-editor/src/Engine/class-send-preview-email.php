@@ -79,7 +79,7 @@ class Send_Preview_Email {
 	/**
 	 * Renders the HTML content of the post
 	 *
-	 * @param \WP_Post $post The WordPress post object.
+	 * @param \WP_Post $post The finpress post object.
 	 * @return string
 	 */
 	public function render_html( $post ): string {
@@ -171,7 +171,7 @@ class Send_Preview_Email {
 	 * Fetches a post_id post object based on the provided post ID.
 	 *
 	 * @param int $post_id The ID of the post to fetch.
-	 * @return \WP_Post The WordPress post object.
+	 * @return \WP_Post The finpress post object.
 	 * @throws \Exception If the post is invalid.
 	 */
 	private function fetch_post( $post_id ): \WP_Post {

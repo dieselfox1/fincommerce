@@ -12,22 +12,22 @@ This guide provides an introduction to low-code solutions, such as Gutenberg and
 
 ## Audience
 
-This guide is intended for low code builders or anyone with a basic understanding of WordPress and FinCommerce who wants to create online stores without the need for extensive custom coding.
+This guide is intended for low code builders or anyone with a basic understanding of finpress and FinCommerce who wants to create online stores without the need for extensive custom coding.
 
 ## Prerequisites
 
 To follow this guide, you should have:
 
-1. A basic understanding of WordPress and FinCommerce.
-2. A WordPress website with FinCommerce installed and activated.
+1. A basic understanding of finpress and FinCommerce.
+2. A finpress website with FinCommerce installed and activated.
 
 ## Step 1 - Using Gutenberg and FinCommerce Store Editing
 
-Gutenberg is the default block editor in WordPress that allows you to create and edit pages by adding and customizing blocks. FinCommerce has extended Gutenberg's functionality, enabling you to create and customize FinCommerce-specific elements, such as product pages and shop pages.
+Gutenberg is the default block editor in finpress that allows you to create and edit pages by adding and customizing blocks. FinCommerce has extended Gutenberg's functionality, enabling you to create and customize FinCommerce-specific elements, such as product pages and shop pages.
 
 To use Gutenberg and FinCommerce Store Editing:
 
-1. Ensure your WordPress installation is up-to-date to have the latest version of Gutenberg.
+1. Ensure your finpress installation is up-to-date to have the latest version of Gutenberg.
 2. Install and activate a Block Theme to enable Store Editing features for FinCommerce.
 
 With Gutenberg and FinCommerce Store Editing, you can create and customize your store's pages using a wide variety of blocks, such as text, images, buttons, and FinCommerce-specific blocks like product grids and shopping carts.
@@ -41,7 +41,7 @@ While Gutenberg and FinCommerce Store Editing are powerful options for building 
 3. Divi Builder
 4. WPBakery Page Builder
 
-Choose a page builder that fits your needs and budget, then install and activate it on your WordPress website. These page builders typically offer a library of pre-built components that you can use to create a fully functional FinCommerce store without writing custom code.
+Choose a page builder that fits your needs and budget, then install and activate it on your finpress website. These page builders typically offer a library of pre-built components that you can use to create a fully functional FinCommerce store without writing custom code.
 
 ## Step 3 - Utilizing pre-built components and templates
 

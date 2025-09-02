@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { useParams } from 'react-router-dom';
-import { MenuGroup, MenuItem } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
-import { useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { MenuGroup, MenuItem } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
+import { useState } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import { EXPERIMENTAL_PRODUCT_VARIATIONS_STORE_NAME } from '@fincommerce/data';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import {
@@ -16,7 +16,7 @@ import { recordEvent } from '@fincommerce/tracks';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId, useEntityProp } from '@wordpress/core-data';
+import { useEntityId, useEntityProp } from '@finpress/core-data';
 
 export type DeleteVariationMenuItemProps = { onClose(): void };
 

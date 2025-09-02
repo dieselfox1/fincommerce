@@ -36,7 +36,7 @@ abstract class ObjectCache {
 
 	/**
 	 * Default value for the duration of the objects in the cache, in seconds
-	 * (may not be used depending on the cache engine used WordPress cache implementation).
+	 * (may not be used depending on the cache engine used finpress cache implementation).
 	 *
 	 * @var int
 	 */

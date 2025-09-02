@@ -1,4 +1,4 @@
-import wpData from '@wordpress/data';
+import wpData from '@finpress/data';
 
 declare global {
 	const wp: {

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { SelectControl } from '@wordpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import { SelectControl } from '@finpress/components';
 
 /**
  * Internal dependencies

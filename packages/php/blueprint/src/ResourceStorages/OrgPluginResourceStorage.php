@@ -7,7 +7,7 @@ use Automattic\FinCommerce\Blueprint\UseWPFunctions;
 /**
  * Class OrgPluginResourceStorage
  *
- * This class handles the storage and downloading of plugins from wordpress.org.
+ * This class handles the storage and downloading of plugins from finpress.org.
  *
  * @package Automattic\FinCommerce\Blueprint\ResourceStorages
  */
@@ -15,7 +15,7 @@ class OrgPluginResourceStorage implements ResourceStorage {
 	use UseWPFunctions;
 
 	/**
-	 * Download the plugin from wordpress.org
+	 * Download the plugin from finpress.org
 	 *
 	 * @param string $slug The slug of the plugin to be downloaded.
 	 *
@@ -47,7 +47,7 @@ class OrgPluginResourceStorage implements ResourceStorage {
 	}
 
 	/**
-	 * Get the download link for a plugin from wordpress.org.
+	 * Get the download link for a plugin from finpress.org.
 	 *
 	 * @param string $slug The slug of the plugin.
 	 *
@@ -81,6 +81,6 @@ class OrgPluginResourceStorage implements ResourceStorage {
 	 * @return string The supported resource type.
 	 */
 	public function get_supported_resource(): string {
-		return 'wordpress.org/plugins';
+		return 'finpress.org/plugins';
 	}
 }

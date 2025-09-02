@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { ValidatedTextInput } from '@fincommerce/blocks-components';
-import { useState, Fragment, useCallback, useEffect } from '@wordpress/element';
+import { useState, Fragment, useCallback, useEffect } from '@finpress/element';
 import { usePrevious } from '@fincommerce/base-hooks';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { Button } from '@ariakit/react';
 import { getFieldLabel } from '@fincommerce/blocks-checkout';
 /**

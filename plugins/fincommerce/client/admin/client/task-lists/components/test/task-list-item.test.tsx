@@ -3,8 +3,8 @@
  */
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { SlotFillProvider } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
+import { SlotFillProvider } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
 import { useSlot } from '@fincommerce/experimental';
 import { TaskType } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
@@ -14,8 +14,8 @@ import { recordEvent } from '@fincommerce/tracks';
  */
 import { TaskListItem } from '../task-list-item';
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	return {
 		...originalModule,
 		useDispatch: jest.fn(),

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { Slot, Fill } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { Slot, Fill } from '@finpress/components';
 
 type WooOnboardingTaskListHeaderProps = {
 	id: string;

@@ -2,11 +2,11 @@
 /**
  * External dependencies
  */
-import { BlockVariation } from '@wordpress/blocks';
-import { addFilter } from '@wordpress/hooks';
+import { BlockVariation } from '@finpress/blocks';
+import { addFilter } from '@finpress/hooks';
 import { EditorBlock } from '@fincommerce/types';
-import type { ElementType } from '@wordpress/element';
-import type { BlockEditProps, BlockAttributes } from '@wordpress/blocks';
+import type { ElementType } from '@finpress/element';
+import type { BlockEditProps, BlockAttributes } from '@finpress/blocks';
 import {
 	SetPreviewState,
 	PreviewState,
@@ -479,7 +479,7 @@ export const __experimentalRegisterProductCollection = (
 
 	/**
 	 * Temporarily utilizing `wp.blocks.registerBlockVariation` directly instead of importing
-	 * from `@wordpress/blocks` to mitigate the increase in the number of JavaScript files
+	 * from `@finpress/blocks` to mitigate the increase in the number of JavaScript files
 	 * loaded on the frontend, specifically on the /shop page.
 	 *
 	 * TODO - Future Improvement:

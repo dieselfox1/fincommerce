@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Modal } from '@wordpress/components';
-import { useState, useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { Button, Modal } from '@finpress/components';
+import { useState, useEffect } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

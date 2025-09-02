@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
-import { __, sprintf } from '@wordpress/i18n';
+import { dispatch } from '@finpress/data';
+import { __, sprintf } from '@finpress/i18n';
 import type { Product, ProductStatus } from '@fincommerce/data';
 import type { ReactElement } from 'react';
 /**

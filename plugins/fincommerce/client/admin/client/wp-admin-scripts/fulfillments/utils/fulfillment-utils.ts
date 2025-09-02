@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { dispatch, resolveSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { dispatch, resolveSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

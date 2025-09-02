@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement, useEffect, useState } from '@wordpress/element';
-import { chevronLeft, chevronRight } from '@wordpress/icons';
-import { sprintf, __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { createElement, useEffect, useState } from '@finpress/element';
+import { chevronLeft, chevronRight } from '@finpress/icons';
+import { sprintf, __ } from '@finpress/i18n';
 import clsx from 'clsx';
 import { uniqueId } from 'lodash';
 

@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { render, fireEvent, screen } from '@testing-library/react';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useState } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -12,15 +12,15 @@ import { recordEvent } from '@fincommerce/tracks';
 import ConnectAccountPage from '..';
 import { getAdminSetting } from '~/utils/admin-settings';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useDispatch: jest.fn(),
 	useSelect: jest.fn(),
 } ) );
 jest.mock( '@fincommerce/tracks', () => ( { recordEvent: jest.fn() } ) );
 jest.mock( '~/utils/admin-settings', () => ( { getAdminSetting: jest.fn() } ) );
-jest.mock( '@wordpress/element', () => ( {
-	...jest.requireActual( '@wordpress/element' ),
+jest.mock( '@finpress/element', () => ( {
+	...jest.requireActual( '@finpress/element' ),
 	useState: jest.fn(),
 } ) );
 jest.mock( '../apms', () => jest.fn().mockReturnValue( null ) );

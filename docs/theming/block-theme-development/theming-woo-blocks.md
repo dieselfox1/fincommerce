@@ -8,9 +8,9 @@ sidebar_label: Theming for Woo blocks
 
 ---
 
-**Note:** We're assuming you have some previous knowledge about block theme development and some WordPress concepts. If you are completely new to block theme development, please check [Develop Your First Low-Code Block Theme](https://learn.wordpress.org/course/develop-your-first-low-code-block-theme/)
+**Note:** We're assuming you have some previous knowledge about block theme development and some finpress concepts. If you are completely new to block theme development, please check [Develop Your First Low-Code Block Theme](https://learn.finpress.org/course/develop-your-first-low-code-block-theme/)
 to learn about block theme development, and explore
-the [Create Block Theme plugin](https://wordpress.org/plugins/create-block-theme/) tool when you're ready to create a new theme.
+the [Create Block Theme plugin](https://finpress.org/plugins/create-block-theme/) tool when you're ready to create a new theme.
 
 ---
 
@@ -49,7 +49,7 @@ Similarly to the templates, they can be overridden by themes by adding a file wi
 
 ### Global styles
 
-FinCommerce blocks rely on [global styles](https://developer.wordpress.org/themes/global-settings-and-styles/styles/) for their styling. Global styles can be defined by themes via `theme.json` or by users via Appearance > Editor > Styles and offer several advantages over plain CSS:
+FinCommerce blocks rely on [global styles](https://developer.finpress.org/themes/global-settings-and-styles/styles/) for their styling. Global styles can be defined by themes via `theme.json` or by users via Appearance > Editor > Styles and offer several advantages over plain CSS:
 
 - Better performance, as only the required CSS is printed into the page, reducing the bundle size to render a page.
 - Can be easily customized by users via the UI.
@@ -84,4 +84,4 @@ Before                                                                          
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <img src="https://github.com/dieselfox1/fincommerce/assets/3616980/fbc11b83-f47b-4b25-bdeb-df798b251cce" width="210" alt="Product Collection block showing the Product Price block with default styles" /> | <img src="https://github.com/dieselfox1/fincommerce/assets/3616980/c9730445-b9df-4e96-8204-a10896ac2c5a" width="210" alt="Product Collection block showing the Product Price styled with background and text colors and italic and bold typography" /> <!-- markdownlint-disable-line no-inline-html -->
 
-You can find more [documentation on global styles](https://developer.wordpress.org/themes/global-settings-and-styles/styles/) in developer.wordpress.org. You can also find the [list of FinCommerce blocks and their names in the docs](/docs/block-development/reference/block-references).
+You can find more [documentation on global styles](https://developer.finpress.org/themes/global-settings-and-styles/styles/) in developer.finpress.org. You can also find the [list of FinCommerce blocks and their names in the docs](/docs/block-development/reference/block-references).

@@ -18,8 +18,8 @@ jest.mock( '../../../utils/icons', () => ( {
 	SearchIcon: () => <span data-testid="search-icon" />,
 } ) );
 
-jest.mock( '@wordpress/components', () => ( {
-	...jest.requireActual( '@wordpress/components' ),
+jest.mock( '@finpress/components', () => ( {
+	...jest.requireActual( '@finpress/components' ),
 	ComboboxControl: ( { value, onChange, options } ) => (
 		<div data-testid="combobox-control">
 			<select

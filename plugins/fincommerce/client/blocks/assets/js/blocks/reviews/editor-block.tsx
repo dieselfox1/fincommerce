@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { Disabled } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { Disabled } from '@finpress/components';
 import { getSetting } from '@fincommerce/settings';
 import ErrorPlaceholder, {
 	ErrorObject,

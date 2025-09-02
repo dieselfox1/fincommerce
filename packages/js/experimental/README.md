@@ -2,7 +2,7 @@
 
 This is a private package not meant for use by third parties.
 
-A collection of component imports and exports that are aliases for components transitioning from experimental to non-experimental. This package prevents the component from being undefined when the `@wordpress/components` library version is unclear.
+A collection of component imports and exports that are aliases for components transitioning from experimental to non-experimental. This package prevents the component from being undefined when the `@finpress/components` library version is unclear.
 
 It also contains several in-development components that are slated for inclusion in later releases of `@fincommerce/components`.
 

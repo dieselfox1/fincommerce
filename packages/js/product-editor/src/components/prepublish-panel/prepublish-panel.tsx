@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Fragment, useRef, useEffect } from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { createElement, Fragment, useRef, useEffect } from '@finpress/element';
+import { Button } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useEntityProp } from '@wordpress/core-data';
-import { closeSmall } from '@wordpress/icons';
+import { useEntityProp } from '@finpress/core-data';
+import { closeSmall } from '@finpress/icons';
 import clsx from 'clsx';
 import type { Product } from '@fincommerce/data';
-import { isInTheFuture } from '@wordpress/date';
+import { isInTheFuture } from '@finpress/date';
 
 /**
  * Internal dependencies

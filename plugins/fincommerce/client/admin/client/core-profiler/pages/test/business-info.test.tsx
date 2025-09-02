@@ -352,7 +352,7 @@ describe( 'BusinessInfo', () => {
 			const emailInput = screen.getByRole( 'textbox', {
 				name: /Your email address/i,
 			} );
-			userEvent.type( emailInput, 'wordpress@automattic.com' );
+			userEvent.type( emailInput, 'finpress@automattic.com' );
 			const continueButton = screen.getByRole( 'button', {
 				name: /Continue/i,
 			} );
@@ -364,7 +364,7 @@ describe( 'BusinessInfo', () => {
 					storeLocation: 'AW',
 					storeName: '',
 					isOptInMarketing: true,
-					storeEmailAddress: 'wordpress@automattic.com',
+					storeEmailAddress: 'finpress@automattic.com',
 				},
 				type: 'BUSINESS_INFO_COMPLETED',
 			} );
@@ -372,12 +372,12 @@ describe( 'BusinessInfo', () => {
 
 		it( 'should correctly prepopulate the email field if populated in the onboarding profile', () => {
 			props.context.onboardingProfile.store_email =
-				'wordpress@automattic.com';
+				'finpress@automattic.com';
 			render( <BusinessInfo { ...props } /> );
 			const emailInput = screen.getByRole( 'textbox', {
 				name: /Your email address/i,
 			} );
-			expect( emailInput ).toHaveValue( 'wordpress@automattic.com' );
+			expect( emailInput ).toHaveValue( 'finpress@automattic.com' );
 		} );
 
 		it( 'should correctly prepopulate the email field if populated in the current user', () => {
@@ -392,12 +392,12 @@ describe( 'BusinessInfo', () => {
 		it( 'should correctly favor the onboarding profile email over the current user email', () => {
 			props.context.currentUserEmail = 'currentUser@automattic.com';
 			props.context.onboardingProfile.store_email =
-				'wordpress@automattic.com';
+				'finpress@automattic.com';
 			render( <BusinessInfo { ...props } /> );
 			const emailInput = screen.getByRole( 'textbox', {
 				name: /Your email address/i,
 			} );
-			expect( emailInput ).toHaveValue( 'wordpress@automattic.com' );
+			expect( emailInput ).toHaveValue( 'finpress@automattic.com' );
 		} );
 
 		it( 'should not show an error for invalid email if isOptInMarketing is false', () => {

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { mapValues } from 'lodash';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -105,7 +105,7 @@ async function updateUserPrefs(
 /**
  * Custom react hook for retrieving thecurrent user's FinCommerce preferences.
  *
- * This is a wrapper around @wordpress/core-data's getCurrentUser() and saveUser().
+ * This is a wrapper around @finpress/core-data's getCurrentUser() and saveUser().
  */
 export const useUserPreferences = () => {
 	// Get our dispatch methods now - this can't happen inside the callback below.

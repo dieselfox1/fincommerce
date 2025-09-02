@@ -9,8 +9,8 @@ import { WCUser } from '@fincommerce/data';
 import { renderEmbeddedLayout } from '../render-embedded-layout';
 
 // Mock dependencies
-jest.mock( '@wordpress/element', () => ( {
-	...jest.requireActual( '@wordpress/element' ),
+jest.mock( '@finpress/element', () => ( {
+	...jest.requireActual( '@finpress/element' ),
 	createRoot: jest.fn( () => ( {
 		render: jest.fn(),
 	} ) ),

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
-import { ToggleControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
+import { ToggleControl } from '@finpress/components';
 
 /**
  * Internal dependencies

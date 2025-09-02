@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button, Flex, Icon } from '@wordpress/components';
-import { closeSmall } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
-import { createElement } from '@wordpress/element';
+import { Button, Flex, Icon } from '@finpress/components';
+import { closeSmall } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
+import { createElement } from '@finpress/element';
 import { TourStepRendererProps } from '@automattic/tour-kit';
 
 interface Props {

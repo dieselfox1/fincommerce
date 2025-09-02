@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Icon } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { layout } from '@wordpress/icons';
+import { Icon } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { layout } from '@finpress/icons';
 
 /**
  * Internal dependencies

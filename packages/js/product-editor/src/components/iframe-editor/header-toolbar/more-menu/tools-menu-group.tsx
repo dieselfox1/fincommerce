@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { MenuGroup } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { MenuGroup } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

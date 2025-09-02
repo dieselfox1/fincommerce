@@ -4,8 +4,8 @@
 import { productFilterAttribute } from '@fincommerce/icons';
 import { getSetting } from '@fincommerce/settings';
 import { AttributeSetting } from '@fincommerce/types';
-import { registerBlockType } from '@wordpress/blocks';
-import { __, sprintf } from '@wordpress/i18n';
+import { registerBlockType } from '@finpress/blocks';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

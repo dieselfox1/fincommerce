@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { act, render } from '@testing-library/react';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { checkoutStore, paymentStore } from '@fincommerce/block-data';
 import { checkoutEvents } from '@fincommerce/blocks-checkout-events';
 

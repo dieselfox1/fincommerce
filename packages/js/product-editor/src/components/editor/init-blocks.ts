@@ -5,13 +5,13 @@ import {
 	BlockInstance,
 	getBlockType,
 	unregisterBlockType,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 import {
 	registerCoreBlocks,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore We need this to import the block modules for registration.
 	__experimentalGetCoreBlocks,
-} from '@wordpress/block-library';
+} from '@finpress/block-library';
 
 /**
  * Internal dependencies

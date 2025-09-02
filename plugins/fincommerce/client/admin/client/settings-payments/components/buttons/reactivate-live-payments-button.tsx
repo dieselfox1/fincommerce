@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { dispatch, useDispatch } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useState } from '@finpress/element';
+import { dispatch, useDispatch } from '@finpress/data';
 import { paymentSettingsStore } from '@fincommerce/data';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

@@ -8,8 +8,8 @@ import {
 	useEffect,
 	useMemo,
 	useRef,
-} from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+} from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 
 /**

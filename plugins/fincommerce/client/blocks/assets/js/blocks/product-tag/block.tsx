@@ -1,11 +1,11 @@
-// @ts-expect-error: `ServerSideRender ` currently does not have a type definition in WordPress core
+// @ts-expect-error: `ServerSideRender ` currently does not have a type definition in finpress core
 // eslint-disable-next-line @fincommerce/dependency-group
-import ServerSideRender from '@wordpress/server-side-render';
+import ServerSideRender from '@finpress/server-side-render';
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BlockControls, InspectorControls } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { BlockControls, InspectorControls } from '@finpress/block-editor';
 import {
 	Button,
 	Disabled,
@@ -13,14 +13,14 @@ import {
 	Placeholder,
 	ToolbarGroup,
 	withSpokenMessages,
-} from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
+} from '@finpress/components';
+import { useEffect, useState } from '@finpress/element';
 import GridContentControl from '@fincommerce/editor-components/grid-content-control';
 import GridLayoutControl from '@fincommerce/editor-components/grid-layout-control';
 import ProductTagControl from '@fincommerce/editor-components/product-tag-control';
 import ProductOrderbyControl from '@fincommerce/editor-components/product-orderby-control';
 import ProductStockControl from '@fincommerce/editor-components/product-stock-control';
-import { Icon, tag } from '@wordpress/icons';
+import { Icon, tag } from '@finpress/icons';
 import { gridBlockPreview } from '@fincommerce/resource-previews';
 import { getSetting, getSettingWithCoercion } from '@fincommerce/settings';
 import { isNumber } from '@fincommerce/types';

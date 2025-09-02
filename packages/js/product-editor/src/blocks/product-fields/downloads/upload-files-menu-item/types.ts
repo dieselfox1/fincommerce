@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { MediaItem } from '@wordpress/media-utils';
+import { MediaItem } from '@finpress/media-utils';
 import { MediaUploaderErrorCallback } from '@fincommerce/components';
 
 export type UploadFilesMenuItemProps = {

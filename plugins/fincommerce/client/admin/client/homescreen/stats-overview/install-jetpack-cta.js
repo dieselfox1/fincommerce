@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useSelect, useDispatch } from '@finpress/data';
 import { pluginsStore, useUser, useUserPreferences } from '@fincommerce/data';
 import { H } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
@@ -33,7 +33,7 @@ export const JetpackCTA = ( {
 				<p>
 					{ __(
 						'Keep an eye on your views and visitors metrics with ' +
-							'Jetpack. Requires Jetpack plugin and a WordPress.com ' +
+							'Jetpack. Requires Jetpack plugin and a finpress.com ' +
 							'account.',
 						'fincommerce'
 					) }

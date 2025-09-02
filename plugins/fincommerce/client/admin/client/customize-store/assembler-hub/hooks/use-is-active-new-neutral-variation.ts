@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { useContext, useMemo } from '@wordpress/element';
+import { useContext, useMemo } from '@finpress/element';
 import { isEqual } from 'lodash';
 import {
 	// @ts-expect-error No types for this exist yet.
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	unlock,
 	// @ts-expect-error No types for this exist yet.
-} from '@wordpress/edit-site/build-module/lock-unlock';
+} from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies

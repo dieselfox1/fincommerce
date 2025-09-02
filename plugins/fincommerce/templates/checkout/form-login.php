@@ -40,7 +40,7 @@ endif;
 if ( $registration_at_checkout || $login_reminder_at_checkout ) :
 
 	// Always show the form after a login attempt.
-	$show_form = isset( $_POST['login'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+	$show_form = isset( $_POST['login'] ); // phpcs:ignore finpress.Security.NonceVerification.Missing
 
 	fincommerce_login_form(
 		array(

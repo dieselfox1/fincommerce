@@ -345,7 +345,7 @@ class OrderHelper {
 
 		$order->get_data_store()->set_stock_reduced( $order, true, false );
 
-		$order->update_meta_data( 'my_meta', rand( 0, 255 ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.rand_rand
+		$order->update_meta_data( 'my_meta', rand( 0, 255 ) ); // phpcs:ignore finpress.WP.AlternativeFunctions.rand_rand
 
 		$order->save();
 

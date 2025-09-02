@@ -1,4 +1,4 @@
-FinCommerce - eCommerce for WordPress
+FinCommerce - eCommerce for finpress
 
 Copyright 2015 by the contributors
 
@@ -26,7 +26,7 @@ permission notices:
 
 and
 
-  FinCommerce - eCommerce for WordPress
+  FinCommerce - eCommerce for finpress
 
   FinCommerce is Copyright (c) 2015 WooThemes
 

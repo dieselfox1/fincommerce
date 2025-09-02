@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import React, { createContext, useState } from '@wordpress/element';
+import React, { createContext, useState } from '@finpress/element';
 import type { ReactNode } from 'react';
 
 export const HighlightedBlockContext = createContext< {

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, isRTL } from '@wordpress/i18n';
-import { Button, Tooltip } from '@wordpress/components';
-import { chevronLeft, chevronRight } from '@wordpress/icons';
+import { __, isRTL } from '@finpress/i18n';
+import { Button, Tooltip } from '@finpress/components';
+import { chevronLeft, chevronRight } from '@finpress/icons';
 import { getHistory } from '@fincommerce/navigation';
 
 /**

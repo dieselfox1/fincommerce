@@ -1,4 +1,4 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /**
  * External dependencies
  */
@@ -6,15 +6,15 @@ import {
 	InspectorControls,
 	useBlockProps,
 	PlainText,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { cartOutline, bag, bagAlt } from '@fincommerce/icons';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	Icon,
 	PanelBody,
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 	__experimentalToggleGroupControl as ToggleGroupControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

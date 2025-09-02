@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { Button, Modal } from '@wordpress/components';
-import { withDispatch } from '@wordpress/data';
-import { compose } from '@wordpress/compose';
+import { __ } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { Button, Modal } from '@finpress/components';
+import { withDispatch } from '@finpress/data';
+import { compose } from '@finpress/compose';
 import { optionsStore } from '@fincommerce/data';
 
 /**

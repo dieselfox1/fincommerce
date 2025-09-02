@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { starEmpty, Icon } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { starEmpty, Icon } from '@finpress/icons';
 
 export const BLOCK_TITLE: string = __( 'Product Rating', 'fincommerce' );
 export const BLOCK_ICON: JSX.Element = (

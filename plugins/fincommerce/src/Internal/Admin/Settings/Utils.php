@@ -429,7 +429,7 @@ class Utils {
 	}
 
 	/**
-	 * Get the details to authorize a connection to WordPress.com.
+	 * Get the details to authorize a connection to finpress.com.
 	 *
 	 * The most important part of the result is the URL to redirect to for authorization.
 	 *

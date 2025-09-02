@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useContext } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { withSelect } from '@wordpress/data';
+import { useContext } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { withSelect } from '@finpress/data';
 import clsx from 'clsx';
 import {
 	SummaryNumber,

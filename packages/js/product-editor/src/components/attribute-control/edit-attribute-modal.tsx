@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	Button,
 	Modal,
 	CheckboxControl,
 	TextControl,
-} from '@wordpress/components';
-import { useState, createElement, Fragment, useMemo } from '@wordpress/element';
+} from '@finpress/components';
+import { useState, createElement, Fragment, useMemo } from '@finpress/element';
 import {
 	__experimentalTooltip as Tooltip,
 	__experimentalSelectControlMenuSlot as SelectControlMenuSlot,

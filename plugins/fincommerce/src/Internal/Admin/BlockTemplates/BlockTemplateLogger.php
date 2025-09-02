@@ -418,7 +418,7 @@ class BlockTemplateLogger {
 		$formatted_message = sprintf(
 			"%s\n%s",
 			$message,
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 			print_r( $this->format_info( $info ), true ),
 		);
 
@@ -467,7 +467,7 @@ class BlockTemplateLogger {
 		return array(
 			'message' => $exception->getMessage(),
 			'source'  => "{$exception->getFile()}: {$exception->getLine()}",
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 			'trace'   => print_r( $this->format_exception_trace( $exception->getTrace() ), true ),
 		);
 	}

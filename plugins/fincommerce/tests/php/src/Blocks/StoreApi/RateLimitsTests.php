@@ -170,7 +170,7 @@ class RateLimitsTests extends WP_Test_REST_TestCase {
 		);
 
 		$this->assertEquals(
-			sanitize_key( wc_get_user_agent() . $_SERVER['HTTP_ACCEPT_LANGUAGE'] ), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+			sanitize_key( wc_get_user_agent() . $_SERVER['HTTP_ACCEPT_LANGUAGE'] ), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotValidated
 			$get_rate_limiting_id->invokeArgs( $authentication, array( false ) )
 		);
 	}

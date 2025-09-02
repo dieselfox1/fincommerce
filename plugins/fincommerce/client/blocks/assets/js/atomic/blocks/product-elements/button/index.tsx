@@ -1,9 +1,9 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /**
  * External dependencies
  */
-import { Icon, button } from '@wordpress/icons';
-import { registerBlockType } from '@wordpress/blocks';
+import { Icon, button } from '@finpress/icons';
+import { registerBlockType } from '@finpress/blocks';
 /**
  * Internal dependencies
  */
@@ -11,7 +11,7 @@ import edit from '@fincommerce/block-library/assets/js/atomic/blocks/product-ele
 import save from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/button/save';
 import metadata from '@fincommerce/block-library/assets/js/atomic/blocks/product-elements/button/block.json';
 
-// @ts-expect-error: `metadata` currently does not have a type definition in WordPress core
+// @ts-expect-error: `metadata` currently does not have a type definition in finpress core
 registerBlockType( metadata, {
 	apiVersion: 3,
 	icon: {

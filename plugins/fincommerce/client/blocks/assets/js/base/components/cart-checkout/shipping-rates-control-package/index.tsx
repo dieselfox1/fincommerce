@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { Panel } from '@fincommerce/blocks-components';
-import { useCallback, useEffect, useMemo, useState } from '@wordpress/element';
+import { useCallback, useEffect, useMemo, useState } from '@finpress/element';
 import { useShippingData } from '@fincommerce/base-context/hooks';
 import { sanitizeHTML } from '@fincommerce/utils';
 import { CartShippingPackageShippingRate } from '@fincommerce/types';

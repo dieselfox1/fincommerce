@@ -51,7 +51,7 @@ class WC_Beta_Tester_Import_Export {
 	}
 
 	/**
-	 * Hook into WordPress.
+	 * Hook into finpress.
 	 */
 	public function add_hooks() {
 		add_action( 'admin_menu', array( $this, 'add_to_menu' ), 55 );
@@ -116,7 +116,7 @@ class WC_Beta_Tester_Import_Export {
 	 * Export settings in json format.
 	 */
 	public function export_settings() {
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( wp_unslash( $_GET['_wpnonce'] ), static::NONCE_ACTION ) ) {
 			header( 'HTTP/1.1 403 Forbidden' );
 			exit;
@@ -141,7 +141,7 @@ class WC_Beta_Tester_Import_Export {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['_wpnonce'] ), static::NONCE_ACTION ) ) {
 			$this->add_message( __( 'Invalid submission', 'fincommerce-beta-tester' ) );
 			return;
@@ -152,7 +152,7 @@ class WC_Beta_Tester_Import_Export {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotValidated,finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$tmp_file = wp_unslash( $_FILES[ static::IMPORT_FILENAME ]['tmp_name'] );
 		if ( empty( $tmp_file ) ) {
 			$this->add_message( __( 'No file uploaded.', 'fincommerce-beta-tester' ) );
@@ -164,7 +164,7 @@ class WC_Beta_Tester_Import_Export {
 			return;
 		}
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$maybe_json = file_get_contents( $tmp_file );
 		$settings   = json_decode( $maybe_json, true );
 		if ( null !== $settings ) {
@@ -197,7 +197,7 @@ class WC_Beta_Tester_Import_Export {
 				if ( false === $setting ) {
 					$setting = null;
 				}
-				// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+				// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_serialize
 				$settings[ $option_name ] = is_string( $setting ) ? $setting : serialize( $setting );
 			}
 		}

@@ -16,7 +16,7 @@ _This package assumes that your code will run in an **ES2015+** environment. If 
 
 ```JS
 import { settingsStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 function MySettings() {
 	const settings = useSelect( select => {

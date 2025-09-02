@@ -8,9 +8,9 @@ use WP_Query;
 use Automattic\FinCommerce\Blocks\Utils\Utils;
 use Automattic\FinCommerce\Enums\ProductStockStatus;
 
-// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_tax_query
-// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
-// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_tax_query
+// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_query
+// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_key
 
 /**
  * ProductQuery class.
@@ -31,7 +31,7 @@ class ProductQuery extends AbstractBlock {
 	protected $parsed_block;
 
 	/**
-	 * Orderby options not natively supported by WordPress REST API
+	 * Orderby options not natively supported by finpress REST API
 	 *
 	 * @var array
 	 */
@@ -64,7 +64,7 @@ class ProductQuery extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 * - Hook into pre_render_block to update the query.
 	 */
 	protected function initialize() {
@@ -87,7 +87,7 @@ class ProductQuery extends AbstractBlock {
 	}
 
 	/**
-	 * Post Template support for grid view was introduced in Gutenberg 16 / WordPress 6.3
+	 * Post Template support for grid view was introduced in Gutenberg 16 / finpress 6.3
 	 * Fixed in:
 	 * - https://github.com/dieselfox1/fincommerce-blocks/pull/9916
 	 * - https://github.com/dieselfox1/fincommerce-blocks/pull/10360
@@ -244,7 +244,7 @@ class ProductQuery extends AbstractBlock {
 	/**
 	 * Return a custom query based on attributes, filters and global WP_Query.
 	 *
-	 * @param WP_Query $query The WordPress Query.
+	 * @param WP_Query $query The finpress Query.
 	 * @param WP_Block $block The block being rendered.
 	 * @return array
 	 */
@@ -727,7 +727,7 @@ class ProductQuery extends AbstractBlock {
 
 		return array(
 			// Ignoring the warning of not using meta queries.
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			'meta_query' => array(
 				array(
 					'key'      => '_stock_status',

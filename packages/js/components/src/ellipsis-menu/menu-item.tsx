@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BaseControl, FormToggle } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { DOWN, ENTER, SPACE, UP } from '@wordpress/keycodes';
+import { BaseControl, FormToggle } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { DOWN, ENTER, SPACE, UP } from '@finpress/keycodes';
 import { useRef, MouseEvent, KeyboardEvent } from 'react';
 
 type MenuItemProps = {

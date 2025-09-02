@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Fragment, useState } from '@wordpress/element';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { createElement, Fragment, useState } from '@finpress/element';
+import { Button } from '@finpress/components';
 import { useInView } from 'react-intersection-observer';
 import moment from 'moment';
 import clsx from 'clsx';

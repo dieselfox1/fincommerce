@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { Button, SelectControl, Spinner } from '@wordpress/components';
-import { createElement, useCallback, useMemo } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { store as coreDataStore, Page } from '@wordpress/core-data';
-import { close } from '@wordpress/icons';
-import type { DataFormControlProps } from '@wordpress/dataviews';
+import { Button, SelectControl, Spinner } from '@finpress/components';
+import { createElement, useCallback, useMemo } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { store as coreDataStore, Page } from '@finpress/core-data';
+import { close } from '@finpress/icons';
+import type { DataFormControlProps } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

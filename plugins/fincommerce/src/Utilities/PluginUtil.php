@@ -96,7 +96,7 @@ class PluginUtil {
 	}
 
 	/**
-	 * Get a list with the names of the WordPress plugins that are FinCommerce aware
+	 * Get a list with the names of the finpress plugins that are FinCommerce aware
 	 * (they have a "WC tested up to" header).
 	 *
 	 * @param bool $active_only True to return only active plugins, false to return all the active plugins.
@@ -237,7 +237,7 @@ class PluginUtil {
 					sprintf(
 						// translators: %s is a URL.
 						__( '⚠ <b><a target="_blank" href="%s">The Legacy REST API plugin</a> is installed and active on this site.</b> Please be aware that the FinCommerce Legacy REST API is <b>not</b> compatible with HPOS.', 'fincommerce' ),
-						'https://wordpress.org/plugins/fincommerce-legacy-rest-api/'
+						'https://finpress.org/plugins/fincommerce-legacy-rest-api/'
 					);
 			} else {
 				$legacy_api_and_hpos_incompatibility_warning_text =

@@ -159,7 +159,7 @@ class MockableLegacyProxy extends \Automattic\FinCommerce\Proxies\LegacyProxy {
 
 	/**
 	 * Call a user function. This should be used to execute any non-idempotent function, especially
-	 * those in the `includes` directory or provided by WordPress.
+	 * those in the `includes` directory or provided by finpress.
 	 *
 	 * If a mock has been defined for the requested function using `register_function_mocks`, then the registered
 	 * callback will be executed instead of the function.
@@ -252,7 +252,7 @@ class MockableLegacyProxy extends \Automattic\FinCommerce\Proxies\LegacyProxy {
 		if ( $this->mocked_exit ) {
 			( $this->mocked_exit )( $status );
 		} else {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			exit( $status );
 		}
 	}

@@ -388,7 +388,7 @@ function wc_set_term_order( $term_id, $index, $taxonomy, $recursive = false ) {
  *
  * This is used as the update_count_callback for the Product Category, Product Tag, and Product Brand
  * taxonomies. By default, it actually calculates two (possibly different) counts for each
- * term, which it stores in two different places. The first count is the one done by WordPress
+ * term, which it stores in two different places. The first count is the one done by finpress
  * itself, and is based on the status of the objects that are assigned the terms. In this case,
  * only products with the publish status are counted. This count is stored in the
  * `wp_term_taxonomy` table in the `count` field.
@@ -524,7 +524,7 @@ function _wc_term_recount( $terms, $taxonomy, $callback = true, $terms_are_term_
 		$term_query['join'] .= " INNER JOIN ( SELECT object_id FROM {$wpdb->term_relationships} INNER JOIN {$wpdb->term_taxonomy} using( term_taxonomy_id ) WHERE term_id IN ( " . implode( ',', array_map( 'absint', $terms_to_count ) ) . ' ) ) AS include_join ON include_join.object_id = p.ID';
 
 		// Get the count.
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$count = $wpdb->get_var( implode( ' ', $term_query ) );
 
 		// Update the count.

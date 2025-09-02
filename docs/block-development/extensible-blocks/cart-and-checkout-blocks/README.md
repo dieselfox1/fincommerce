@@ -8,8 +8,8 @@ post_title: Cart and Checkout blocks
 
 This document is a high-level overview of the moving parts required to extend the Cart and Checkout blocks.
 
-To get started, it is recommended to first read the [Block Development Environment](https://developer.wordpress.org/block-editor/getting-started/devenv/) documentation from WordPress and follow [Tutorial: Build your first block
-](https://developer.wordpress.org/block-editor/getting-started/tutorial/).
+To get started, it is recommended to first read the [Block Development Environment](https://developer.finpress.org/block-editor/getting-started/devenv/) documentation from finpress and follow [Tutorial: Build your first block
+](https://developer.finpress.org/block-editor/getting-started/tutorial/).
 
 ## Example block template package
 
@@ -25,20 +25,20 @@ To extend the front-end of the blocks, extensions must use JavaScript. The JavaS
 
 Some extensions may be very simple and include only a single JavaScript file, other extensions may be complex and the code may be split into multiple files. Either way, it is recommended that the files are bundled together and minified into a single output file. If your extension has several distinct parts that only load on specific pages, bundle splitting is recommended, though that is out of scope for this document.
 
-To set up the build system, the recommended approach is to align with WordPress and use a JavaScript package called [`@wordpress/scripts`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/). This package contains a script called `build`. By default, this will build your scripts into a single output file that can be enqueued using `wp_enqueue_script`.
+To set up the build system, the recommended approach is to align with finpress and use a JavaScript package called [`@finpress/scripts`](https://developer.finpress.org/block-editor/reference-guides/packages/packages-scripts/). This package contains a script called `build`. By default, this will build your scripts into a single output file that can be enqueued using `wp_enqueue_script`.
 
-The base configuration of the `build` script in  `@wordpress/scripts` can be overridden by creating a `webpack.config.js` file in the root of your plugin. The example block shows how the base config can be extended.
+The base configuration of the `build` script in  `@finpress/scripts` can be overridden by creating a `webpack.config.js` file in the root of your plugin. The example block shows how the base config can be extended.
 
 #### `fincommerceDependencyExtractionWebpackPlugin`
 
-See [`WordPress Dependency Extraction Webpack Plugin`](https://github.com/WordPress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin) and 
+See [`finpress Dependency Extraction Webpack Plugin`](https://github.com/finpress/gutenberg/tree/trunk/packages/dependency-extraction-webpack-plugin) and 
 [`FinCommerce Dependency Extraction Webpack Plugin`](https://github.com/dieselfox1/fincommerce/tree/trunk/packages/js/dependency-extraction-webpack-plugin#dependency-extraction-webpack-plugin).
 
 This Webpack plugin is used to:
 
-- Externalize dependencies that are available as shared scripts or modules on WordPress sites.
+- Externalize dependencies that are available as shared scripts or modules on finpress sites.
     - This means when you import something from `@fincommerce/blocks-checkout` it resolves that path to `window.wc.wcBlocksCheckout` without you needing to change your code. It makes your code easier to read and allows these packages to be loaded onto the page once.
-- Add an asset file for each entry point that declares an object with the list of WordPress script or module dependencies for the entry point. The asset file also contains the current version calculated for the current source code.
+- Add an asset file for each entry point that declares an object with the list of finpress script or module dependencies for the entry point. The asset file also contains the current version calculated for the current source code.
 
 The PHP "asset file" that this plugin outputs contains information your script needs to register itself, such as dependencies and paths.
 
@@ -92,7 +92,7 @@ Please see the [Cart and Checkout – Handling scripts, styles, and data](/docs/
 In the example block, there is a "checkout-newsletter-subscription-block" directory which contains the files needed to register an inner block in the Checkout. The example block template is only set up to import and build a single block, but the Webpack config can be modified to build multiple blocks. Doing this is not supported as part of this document, refer to the [Webpack documentation](https://webpack.js.org/concepts/) instead.
 
 The principles covered in [Tutorial: Build your first block
-](https://developer.wordpress.org/block-editor/getting-started/tutorial/) apply here too.
+](https://developer.finpress.org/block-editor/getting-started/tutorial/) apply here too.
 
 ### Modifying existing values on the front-end
 

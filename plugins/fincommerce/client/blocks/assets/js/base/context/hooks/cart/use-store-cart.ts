@@ -2,7 +2,7 @@
  * External dependencies
  */
 import fastDeepEqual from 'fast-deep-equal/es6';
-import { useRef } from '@wordpress/element';
+import { useRef } from '@finpress/element';
 import {
 	cartStore,
 	EMPTY_CART_COUPONS,
@@ -17,8 +17,8 @@ import {
 	EMPTY_PAYMENT_REQUIREMENTS,
 	EMPTY_EXTENSIONS,
 } from '@fincommerce/block-data';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { decodeEntities } from '@wordpress/html-entities';
+import { useSelect, useDispatch } from '@finpress/data';
+import { decodeEntities } from '@finpress/html-entities';
 import type {
 	StoreCart,
 	CartResponseTotals,
@@ -36,7 +36,7 @@ import { emptyHiddenAddressFields } from '@fincommerce/base-utils';
  */
 import { useStoreCartEventListeners } from '@fincommerce/block-library/assets/js/base/context/hooks/cart/use-store-cart-event-listeners';
 
-declare module '@wordpress/html-entities' {
+declare module '@finpress/html-entities' {
 	// eslint-disable-next-line @typescript-eslint/no-shadow
 	export function decodeEntities< T >( coupon: T ): T;
 }

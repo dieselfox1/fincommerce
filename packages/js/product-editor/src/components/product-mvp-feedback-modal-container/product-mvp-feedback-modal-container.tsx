@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { createElement } from '@finpress/element';
 import { STORE_KEY } from '@fincommerce/customer-effort-score';
 import { recordEvent } from '@fincommerce/tracks';
 import { getAdminLink, getSetting } from '@fincommerce/settings';

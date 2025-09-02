@@ -5,7 +5,7 @@ import preloadScript from '@fincommerce/base-utils/preload-script';
 import lazyLoadScript from '@fincommerce/base-utils/lazy-load-script';
 import getNavigationType from '@fincommerce/base-utils/get-navigation-type';
 import { translateJQueryEventToNative } from '@fincommerce/base-utils/legacy-events';
-import { select, subscribe } from '@wordpress/data';
+import { select, subscribe } from '@finpress/data';
 import { cartStore } from '@fincommerce/block-data';
 
 /**

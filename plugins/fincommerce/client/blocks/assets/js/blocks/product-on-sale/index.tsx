@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createBlock, registerBlockType } from '@wordpress/blocks';
-import { Icon, percent } from '@wordpress/icons';
+import { createBlock, registerBlockType } from '@finpress/blocks';
+import { Icon, percent } from '@finpress/icons';
 /**
  * Internal dependencies
  */

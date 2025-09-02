@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 
 export interface NoticeBlockAttributes extends BlockAttributes {
 	message: string;

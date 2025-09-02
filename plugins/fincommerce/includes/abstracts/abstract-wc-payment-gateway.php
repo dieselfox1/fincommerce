@@ -478,7 +478,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 
 		if ( $description ) {
 			// KSES is ran within get_description, but not here since there may be custom HTML returned by extensions.
-			echo wpautop( wptexturize( $description ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo wpautop( wptexturize( $description ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 		if ( $this->supports( PaymentGatewayFeature::DEFAULT_CREDIT_CARD_FORM ) ) {
@@ -665,7 +665,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 		 * @param WC_Payment_Gateway $this Payment gateway instance.
 		 * @return string
 		 */
-		echo apply_filters( 'fincommerce_payment_gateway_save_new_payment_method_option_html', $html, $this ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_payment_gateway_save_new_payment_method_option_html', $html, $this ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**

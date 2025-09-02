@@ -757,7 +757,7 @@ class WC_Checkout {
 	 * @return array of data.
 	 */
 	public function get_posted_data() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		$data = array(
 			'terms'                              => (int) isset( $_POST['terms'] ),
 			'terms-field'                        => (int) isset( $_POST['terms-field'] ),
@@ -767,10 +767,10 @@ class WC_Checkout {
 			'ship_to_different_address'          => ! empty( $_POST['ship_to_different_address'] ) && ! wc_ship_to_billing_address_only(),
 			'fincommerce_checkout_update_totals' => isset( $_POST['fincommerce_checkout_update_totals'] ),
 		);
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 
 		$skipped        = array();
-		$form_was_shown = isset( $_POST['fincommerce-process-checkout-nonce'] ); // phpcs:disable WordPress.Security.NonceVerification.Missing
+		$form_was_shown = isset( $_POST['fincommerce-process-checkout-nonce'] ); // phpcs:disable finpress.Security.NonceVerification.Missing
 
 		foreach ( $this->get_checkout_fields() as $fieldset_key => $fieldset ) {
 			if ( $this->maybe_skip_fieldset( $fieldset_key, $data ) ) {
@@ -781,8 +781,8 @@ class WC_Checkout {
 			foreach ( $fieldset as $key => $field ) {
 				$type = sanitize_title( isset( $field['type'] ) ? $field['type'] : 'text' );
 
-				if ( isset( $_POST[ $key ] ) && '' !== $_POST[ $key ] ) { // phpcs:disable WordPress.Security.NonceVerification.Missing
-					$value = wp_unslash( $_POST[ $key ] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				if ( isset( $_POST[ $key ] ) && '' !== $_POST[ $key ] ) { // phpcs:disable finpress.Security.NonceVerification.Missing
+					$value = wp_unslash( $_POST[ $key ] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 				} elseif ( isset( $field['default'] ) && 'checkbox' !== $type && ! $form_was_shown ) {
 					$value = $field['default'];
 				} else {
@@ -945,7 +945,7 @@ class WC_Checkout {
 		$this->validate_posted_data( $data, $errors );
 		$this->check_cart_items();
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		// phpcs:ignore finpress.Security.NonceVerification.Missing
 		if ( empty( $data['fincommerce_checkout_update_totals'] ) && empty( $data['terms'] ) && ! empty( $data['terms-field'] ) ) {
 			$errors->add( 'terms', __( 'Please read and accept the terms and conditions to proceed with your order.', 'fincommerce' ), array( 'id' => 'terms' ) );
 		}
@@ -1101,7 +1101,7 @@ class WC_Checkout {
 			);
 
 			if ( ! wp_doing_ajax() ) {
-				// phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect
+				// phpcs:ignore finpress.Security.SafeRedirect.wp_redirect_wp_redirect
 				wp_redirect( $result['redirect'] );
 				exit;
 			}
@@ -1182,9 +1182,9 @@ class WC_Checkout {
 					 * @param string $message The notice.
 					 * @param string $email   The email address.
 					 */
-					throw new Exception( apply_filters( 'fincommerce_registration_error_email_exists', __( 'An account is already registered with your email address. <a href="#" class="showlogin">Please log in.</a>', 'fincommerce' ), $data['billing_email'] ) ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					throw new Exception( apply_filters( 'fincommerce_registration_error_email_exists', __( 'An account is already registered with your email address. <a href="#" class="showlogin">Please log in.</a>', 'fincommerce' ), $data['billing_email'] ) ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 				}
-				throw new Exception( $customer_id->get_error_message() ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+				throw new Exception( $customer_id->get_error_message() ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 			}
 
 			wc_set_customer_auth_cookie( $customer_id );
@@ -1404,8 +1404,8 @@ class WC_Checkout {
 	 */
 	public function get_value( $input ) {
 		// If the form was posted, get the posted value. This will only tend to happen when JavaScript is disabled client side.
-		if ( ! empty( $_POST[ $input ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			return wc_clean( wp_unslash( $_POST[ $input ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		if ( ! empty( $_POST[ $input ] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Missing
+			return wc_clean( wp_unslash( $_POST[ $input ] ) ); // phpcs:ignore finpress.Security.NonceVerification.Missing
 		}
 
 		// Allow 3rd parties to short circuit the logic and return their own default value.

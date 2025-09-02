@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button, ButtonGroup, Modal } from '@wordpress/components';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button, ButtonGroup, Modal } from '@finpress/components';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

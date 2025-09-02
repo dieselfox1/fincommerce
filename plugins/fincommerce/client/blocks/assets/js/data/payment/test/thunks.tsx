@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import * as wpDataFunctions from '@wordpress/data';
+import * as wpDataFunctions from '@finpress/data';
 import { EventObserversType } from '@fincommerce/base-context';
 
 /**

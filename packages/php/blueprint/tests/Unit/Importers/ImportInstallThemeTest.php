@@ -34,7 +34,7 @@ class ImportInstallThemeTest extends TestCase {
 		$theme_slug = 'sample-theme';
 
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->themeData = (object) array(
 			'slug'     => $theme_slug,
 			'resource' => 'valid-resource',
@@ -77,19 +77,19 @@ class ImportInstallThemeTest extends TestCase {
 		$theme_slug = 'failed-theme';
 
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->themeData = (object) array(
 			'slug'     => $theme_slug,
-			'resource' => 'wordpress.org/themes',
+			'resource' => 'finpress.org/themes',
 			'activate' => false,
 		);
 
 		$resource_storage = Mockery::mock( ResourceStorages::class );
 		$resource_storage->shouldReceive( 'is_supported_resource' )
-			->with( 'wordpress.org/themes' )
+			->with( 'finpress.org/themes' )
 			->andReturn( true );
 		$resource_storage->shouldReceive( 'download' )
-			->with( $theme_slug, 'wordpress.org/themes' )
+			->with( $theme_slug, 'finpress.org/themes' )
 			->andReturn( '/path/to/theme.zip' );
 
 		$import_install_theme = Mockery::mock( ImportInstallTheme::class, array( $resource_storage ) )

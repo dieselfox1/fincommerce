@@ -2,10 +2,10 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { FormStep } from '@fincommerce/blocks-components';
 import { useShippingData } from '@fincommerce/base-context/hooks';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 
 /**

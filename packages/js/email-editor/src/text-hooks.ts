@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+import { addFilter } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 
 /**
  * Replace text in the email editor.

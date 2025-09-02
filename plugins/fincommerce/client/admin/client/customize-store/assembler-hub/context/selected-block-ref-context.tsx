@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createContext, useState } from '@wordpress/element';
+import { createContext, useState } from '@finpress/element';
 import { ReactNode } from 'react';
 
 type SelectedBlockContextType = {

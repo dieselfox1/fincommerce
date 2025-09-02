@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { Component, Fragment } from '@wordpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { Component, Fragment } from '@finpress/element';
 import { map } from 'lodash';
 import { Date, Link, OrderStatus, ViewMoreList } from '@fincommerce/components';
 import { formatValue } from '@fincommerce/number';

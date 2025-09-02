@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { useMemo, useState } from '@wordpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { useMemo, useState } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

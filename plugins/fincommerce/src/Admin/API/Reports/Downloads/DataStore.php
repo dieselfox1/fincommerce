@@ -345,13 +345,13 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$selections = $this->selected_columns( $query_args );
 		$this->add_sql_query_params( $query_args );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$db_records_count = (int) $wpdb->get_var(
 			"SELECT COUNT(*) FROM (
 				{$this->subquery->get_query_statement()}
 			) AS tt"
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		$params      = $this->get_limit_params( $query_args );
 		$total_pages = (int) ceil( $db_records_count / $params['per_page'] );
@@ -365,7 +365,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->subquery->add_sql_clause( 'limit', $this->get_sql_clause( 'limit' ) );
 
 		$download_data = $wpdb->get_results(
-			$this->subquery->get_query_statement(), // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$this->subquery->get_query_statement(), // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			ARRAY_A
 		);
 

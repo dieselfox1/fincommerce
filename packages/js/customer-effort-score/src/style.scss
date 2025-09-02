@@ -45,19 +45,19 @@
 			font-size: 0.9em;
 
 			&:hover {
-				background-color: $studio-wordpress-blue-0;
+				background-color: $studio-finpress-blue-0;
 			}
 		}
 
 		input:focus+label {
-			outline: 2px solid $studio-wordpress-blue;
+			outline: 2px solid $studio-finpress-blue;
 			background-color: peach;
 			color: $studio-blue-60;
 		}
 
 		input:checked+label {
-			outline: 2px solid $studio-wordpress-blue;
-			background-color: $studio-wordpress-blue-0;
+			outline: 2px solid $studio-finpress-blue;
+			background-color: $studio-finpress-blue-0;
 		}
 
 		// Replace the hidden radio input with emoji.
@@ -66,7 +66,7 @@
 			font-size: 24px;
 			text-align: center;
 			margin: 1em 0;
-			color: $studio-wordpress-blue;
+			color: $studio-finpress-blue;
 		}
 
 		input[value='1']+label::before {

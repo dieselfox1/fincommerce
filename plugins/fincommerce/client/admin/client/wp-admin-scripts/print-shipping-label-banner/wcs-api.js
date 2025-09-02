@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 export function acceptWcsTos() {
 	const path = '/wcshipping/v1/tos';

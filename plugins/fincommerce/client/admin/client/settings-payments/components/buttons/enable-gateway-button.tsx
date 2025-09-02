@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { dispatch, useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useState } from '@finpress/element';
+import { dispatch, useDispatch } from '@finpress/data';
 import {
 	EnableGatewayResponse,
 	paymentSettingsStore,

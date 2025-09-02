@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 
 export function createNoticesFromResponse( response ) {
 	const { createNotice } = dispatch( 'core/notices' );

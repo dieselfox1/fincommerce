@@ -5,7 +5,7 @@ import { render, fireEvent } from '@testing-library/react';
 import { ProductVariation } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { createElement } from 'react';
-import { SlotFillProvider } from '@wordpress/components';
+import { SlotFillProvider } from '@finpress/components';
 
 /**
  * Internal dependencies
@@ -20,7 +20,7 @@ jest.mock( '@fincommerce/tracks', () => ( {
 	recordEvent: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/media-utils', () => ( {
+jest.mock( '@finpress/media-utils', () => ( {
 	MediaUpload: ( {
 		onSelect,
 		render: mockRender,

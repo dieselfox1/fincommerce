@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { Block } from '@wordpress/blocks';
+import type { Block } from '@finpress/blocks';
 
 export interface LockableBlock extends Block {
 	attributes: {

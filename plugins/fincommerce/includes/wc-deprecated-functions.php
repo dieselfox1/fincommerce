@@ -63,7 +63,7 @@ function wc_deprecated_function( $function, $version, $replacement = null ) {
  *
  * @since 3.3.0
  * @param string $hook        The hook that was used.
- * @param string $version     The version of WordPress that deprecated the hook.
+ * @param string $version     The version of finpress that deprecated the hook.
  * @param string $replacement The hook that should have been used.
  * @param string $message     A message regarding the change.
  */
@@ -998,7 +998,7 @@ function _wc_save_product_price( $product_id, $regular_price, $sale_price = '', 
  * @return string the URL to the customer's avatar.
  */
 function wc_get_customer_avatar_url( $email ) {
-	// Deprecated in favor of WordPress get_avatar_url() function.
+	// Deprecated in favor of finpress get_avatar_url() function.
 	wc_deprecated_function( 'wc_get_customer_avatar_url()', '3.1', 'get_avatar_url()' );
 
 	return get_avatar_url( $email );
@@ -1058,7 +1058,7 @@ function wc_taxonomy_metadata_update_content_for_split_terms( $old_term_id, $new
 /**
  * FinCommerce Term Meta API.
  *
- * WC tables for storing term meta are deprecated from WordPress 4.4 since 4.4 has its own table.
+ * WC tables for storing term meta are deprecated from finpress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
  *
  * @deprecated 3.6.0
@@ -1076,7 +1076,7 @@ function update_fincommerce_term_meta( $term_id, $meta_key, $meta_value, $prev_v
 /**
  * FinCommerce Term Meta API.
  *
- * WC tables for storing term meta are deprecated from WordPress 4.4 since 4.4 has its own table.
+ * WC tables for storing term meta are deprecated from finpress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
  *
  * @deprecated 3.6.0
@@ -1094,7 +1094,7 @@ function add_fincommerce_term_meta( $term_id, $meta_key, $meta_value, $unique = 
 /**
  * FinCommerce Term Meta API
  *
- * WC tables for storing term meta are deprecated from WordPress 4.4 since 4.4 has its own table.
+ * WC tables for storing term meta are deprecated from finpress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
  *
  * @deprecated 3.6.0
@@ -1112,7 +1112,7 @@ function delete_fincommerce_term_meta( $term_id, $meta_key, $meta_value = '', $d
 /**
  * FinCommerce Term Meta API
  *
- * WC tables for storing term meta are deprecated from WordPress 4.4 since 4.4 has its own table.
+ * WC tables for storing term meta are deprecated from finpress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
  *
  * @deprecated 3.6.0

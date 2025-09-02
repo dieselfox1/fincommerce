@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _n } from '@wordpress/i18n';
-import { Fragment, useState } from '@wordpress/element';
+import { __, _n } from '@finpress/i18n';
+import { Fragment, useState } from '@finpress/element';
 import {
 	Button,
 	Card,
@@ -10,12 +10,12 @@ import {
 	CardFooter,
 	CardHeader,
 	SelectControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import clsx from 'clsx';
 import interpolateComponents from '@automattic/interpolate-components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import moment from 'moment';
-import { Icon, chevronLeft, chevronRight, close } from '@wordpress/icons';
+import { Icon, chevronLeft, chevronRight, close } from '@finpress/icons';
 import {
 	notesStore,
 	QUERY_DEFAULTS,

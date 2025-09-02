@@ -25,7 +25,7 @@ class LoaderTest extends WC_Unit_Test_Case {
 	 *
 	 * @param string $function_name The deprecated function.
 	 * @param string $replacement   The function that should have been called.
-	 * @param string $version       The version of WordPress that deprecated the function.
+	 * @param string $version       The version of finpress that deprecated the function.
 	 * @param string $message       Optional. A message regarding the change.
 	 */
 	public function deprecated_function_run( $function_name, $replacement, $version, $message = '' ) {

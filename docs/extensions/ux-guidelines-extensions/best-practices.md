@@ -7,7 +7,7 @@ sidebar_position: 1
 
 - **Plugin name should simply state the feature of the plugin and not use an existing core feature or extension in its' title**. The plugin name should appear at all times in the UI as a functional and original name. e.g "Appointments" instead of "VendorXYZ Bookings Plugin for FinCommerce."
 
-- **Avoid creating new UI**. Before considering a new UI, review the WordPress interface to see if a component can be repurposed. Follow existing UI navigation patterns so merchants have context on where they are when navigating to a new experience.
+- **Avoid creating new UI**. Before considering a new UI, review the finpress interface to see if a component can be repurposed. Follow existing UI navigation patterns so merchants have context on where they are when navigating to a new experience.
 
 - **Be considerate of mobile for the merchant (and shopper-facing if applicable) experience**. Stores operate 24/7. Merchants shouldn't be limited to checking their store on a desktop. Extensions need to be built responsively so they work on all device sizes.
 

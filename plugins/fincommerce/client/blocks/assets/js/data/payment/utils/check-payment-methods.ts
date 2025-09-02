@@ -7,12 +7,12 @@ import {
 	PaymentMethodConfigInstance,
 } from '@fincommerce/types';
 import { CURRENT_USER_IS_ADMIN, getSetting } from '@fincommerce/settings';
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 import {
 	deriveSelectedShippingRates,
 	emptyHiddenAddressFields,
 } from '@fincommerce/base-utils';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	getExpressPaymentMethods,
 	getPaymentMethods,
@@ -22,7 +22,7 @@ import {
 	ActionCreatorsOf,
 	ConfigOf,
 	CurriedSelectorsOf,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 
 /**
  * Internal dependencies
@@ -53,7 +53,7 @@ export const getCanMakePaymentArg = (): CanMakePaymentArgument => {
 		const cart = store.getCartData();
 		const cartErrors = store.getCartErrors();
 		const cartTotals = store.getCartTotals();
-		// @ts-expect-error `hasFinishedResolution` is not typed in @wordpress/data yet.
+		// @ts-expect-error `hasFinishedResolution` is not typed in @finpress/data yet.
 		const cartIsLoading = ! store.hasFinishedResolution( 'getCartData' );
 		const isLoadingRates = store.isAddressFieldsForShippingRatesUpdating();
 		const selectedShippingMethods = deriveSelectedShippingRates(

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useContext, useEffect } from '@wordpress/element';
+import { useContext, useEffect } from '@finpress/element';
 import { CurrencyContext } from '@fincommerce/currency';
 
 export const ShippingCurrencyContext = () => {

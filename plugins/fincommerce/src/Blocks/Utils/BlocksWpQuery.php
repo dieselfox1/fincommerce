@@ -15,7 +15,7 @@ class BlocksWpQuery extends WP_Query {
 	/**
 	 * Constructor.
 	 *
-	 * Sets up the WordPress query, if parameter is not empty.
+	 * Sets up the finpress query, if parameter is not empty.
 	 *
 	 * Unlike the constructor in WP_Query, this does not RUN the query.
 	 *

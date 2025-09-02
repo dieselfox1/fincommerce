@@ -324,7 +324,7 @@ final class QueryFilters {
 			);
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->prepare(
 			' AND (
 				wc_product_meta_lookup.tax_status = "taxable" AND ( 0=1 OR ' . implode( ' OR ', $or_queries ) . ')
@@ -332,7 +332,7 @@ final class QueryFilters {
 			) ',
 			$price_filter
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

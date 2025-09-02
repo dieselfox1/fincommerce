@@ -136,18 +136,18 @@ const coreModules = [
 	'@fincommerce/tracks',
 	'@fincommerce/data',
 	'@fincommerce/customer-effort-score',
-	'@wordpress/a11y',
-	'@wordpress/api-fetch',
-	'@wordpress/block-editor',
-	'@wordpress/compose',
-	'@wordpress/data',
-	'@wordpress/core-data',
-	'@wordpress/editor',
-	'@wordpress/escape-html',
-	'@wordpress/hooks',
-	'@wordpress/keycodes',
-	'@wordpress/url',
-	'@wordpress/wordcount',
+	'@finpress/a11y',
+	'@finpress/api-fetch',
+	'@finpress/block-editor',
+	'@finpress/compose',
+	'@finpress/data',
+	'@finpress/core-data',
+	'@finpress/editor',
+	'@finpress/escape-html',
+	'@finpress/hooks',
+	'@finpress/keycodes',
+	'@finpress/url',
+	'@finpress/wordcount',
 	'@fincommerce/blocks-test-utils',
 	'babel-jest',
 	'dotenv',
@@ -199,8 +199,8 @@ module.exports = {
 		'fincommerce/feature-flag': 'off',
 		'react-hooks/exhaustive-deps': 'error',
 		'react/jsx-fragments': [ 'error', 'syntax' ],
-		'@wordpress/no-global-active-element': 'warn',
-		'@wordpress/i18n-text-domain': [
+		'@finpress/no-global-active-element': 'warn',
+		'@finpress/i18n-text-domain': [
 			'error',
 			{
 				allowedTextDomain: [ 'fincommerce' ],
@@ -219,7 +219,7 @@ module.exports = {
 					{
 						name: 'react',
 						message:
-							'Please use React API through `@wordpress/element` instead.',
+							'Please use React API through `@finpress/element` instead.',
 						allowTypeImports: true,
 					},
 				],
@@ -327,11 +327,11 @@ module.exports = {
 					...coreModules,
 					// We should lint these modules imports, but the types are way out of date.
 					// To support us not inadvertently introducing new import errors this lint exists, but to avoid
-					// having to fix hundreds of import errors for @wordpress packages we ignore them.
-					'@wordpress/components',
-					'@wordpress/element',
-					'@wordpress/blocks',
-					'@wordpress/notices',
+					// having to fix hundreds of import errors for @finpress packages we ignore them.
+					'@finpress/components',
+					'@finpress/element',
+					'@finpress/blocks',
+					'@finpress/notices',
 				],
 			},
 		},

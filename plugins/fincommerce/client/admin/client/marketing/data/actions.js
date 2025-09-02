@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { apiFetch } from '@wordpress/data-controls';
-import { dispatch } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { apiFetch } from '@finpress/data-controls';
+import { dispatch } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

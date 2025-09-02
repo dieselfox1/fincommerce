@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEntityProp } from '@wordpress/core-data';
-import { createElement } from '@wordpress/element';
+import { useEntityProp } from '@finpress/core-data';
+import { createElement } from '@finpress/element';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 
 /**

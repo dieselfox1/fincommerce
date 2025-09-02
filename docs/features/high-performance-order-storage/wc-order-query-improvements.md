@@ -7,7 +7,7 @@ post_title: HPOS order querying APIs
 
 With the introduction of HPOS, we've enhanced the querying functionality in WC. Now, in addition to the well-known [existing APIs](https://github.com/dieselfox1/fincommerce/wiki/wc_get_orders-and-WC_Order_Query), we're adding a few features that would make it easier to create complex queries on orders or their properties, including the ability to query custom order metadata.
 
-All the new query types are implemented as additional query arguments that can be passed to `wc_get_orders()` and are heavily inspired by similar functionality in WordPress' own `WP_Query`. As regular query arguments, they can be combined with other arguments to produce complex queries that, until now, would have required writing custom code and SQL.
+All the new query types are implemented as additional query arguments that can be passed to `wc_get_orders()` and are heavily inspired by similar functionality in finpress' own `WP_Query`. As regular query arguments, they can be combined with other arguments to produce complex queries that, until now, would have required writing custom code and SQL.
 
 ## The new query types
 
@@ -21,7 +21,7 @@ At its core, `meta_query` is an array that can contain one or more arrays with k
 `compare` (optional) an operator to use for comparison purposes such as LIKE, RLIKE, NOT BETWEEN, BETWEEN, etc.
 `type` to cast the meta value to a specific SQL type in the query
 
-The different arrays can also be combined using `relation` (which admits 'AND' or 'OR' values) to produce more complex queries. The syntax for this new argument is exactly the same as for WP_Query's `meta_query`. As such, you can refer to the [`meta_query` docs](https://developer.wordpress.org/reference/classes/wp_query/#custom-field-post-meta-parameters) for more details.
+The different arrays can also be combined using `relation` (which admits 'AND' or 'OR' values) to produce more complex queries. The syntax for this new argument is exactly the same as for WP_Query's `meta_query`. As such, you can refer to the [`meta_query` docs](https://developer.finpress.org/reference/classes/wp_query/#custom-field-post-meta-parameters) for more details.
 
 ```php
 // Example: obtain all orders which have metadata with the "color" key (any value) and have metadata
@@ -98,7 +98,7 @@ $orders = wc_get_orders(
 ### Date queries (`date_query`)
 
 Date queries allow you to fetch orders by querying their associated dates (`date_completed`, `date_created`, `date_updated`, `date_paid`) in various ways.
-The syntax for `date_query` is fully compatible with that of `date_query` in `WP_Query`. As such, a good source of examples and details is [the `meta_query` docs](https://developer.wordpress.org/reference/classes/wp_query/#date-parameters) in the WP codex.
+The syntax for `date_query` is fully compatible with that of `date_query` in `WP_Query`. As such, a good source of examples and details is [the `meta_query` docs](https://developer.finpress.org/reference/classes/wp_query/#date-parameters) in the WP codex.
 
 ```php
 // Example. Obtain all orders paid in the last month that were created before noon (on any date).

@@ -7,15 +7,15 @@
 import {
 	// @ts-expect-error No types for this exist
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	__experimentalHStack as HStack,
 	__experimentalVStack as VStack,
-} from '@wordpress/components';
-import { useResizeObserver } from '@wordpress/compose';
+} from '@finpress/components';
+import { useResizeObserver } from '@finpress/compose';
 // @ts-expect-error No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
-import { __ } from '@wordpress/i18n';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

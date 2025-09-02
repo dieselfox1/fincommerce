@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	Button,
 	Modal,
 	TextareaControl,
 	TextControl,
-} from '@wordpress/components';
-import { useState, createElement, Fragment } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
-import { cleanForSlug } from '@wordpress/url';
+} from '@finpress/components';
+import { useState, createElement, Fragment } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
+import { cleanForSlug } from '@finpress/url';
 import { Form, FormErrors } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
 import {

@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { CART_URL } from '@fincommerce/block-settings';
 import { removeCart } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 import { getSetting } from '@fincommerce/settings';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { CheckoutResponse } from '@fincommerce/types';
 
 /**

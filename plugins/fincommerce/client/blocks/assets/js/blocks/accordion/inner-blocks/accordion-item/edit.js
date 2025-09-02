@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useBlockProps,
 	useInnerBlocksProps,
 	InspectorControls,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+} from '@finpress/block-editor';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useEffect } from '@finpress/element';
+import { PanelBody, ToggleControl } from '@finpress/components';
 import clsx from 'clsx';
 
 const ACCORDION_HEADER_BLOCK_NAME = 'fincommerce/accordion-header';

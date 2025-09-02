@@ -2,12 +2,12 @@
  * External dependencies
  */
 import { useContext, useState } from 'react';
-import { CheckboxControl, Icon } from '@wordpress/components';
+import { CheckboxControl, Icon } from '@finpress/components';
 import CurrencyFactory, {
 	CurrencyContext,
 	SymbolPosition,
 } from '@fincommerce/currency';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { range } from 'lodash';
 
 /**

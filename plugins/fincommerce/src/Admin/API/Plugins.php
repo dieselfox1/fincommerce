@@ -533,7 +533,7 @@ class Plugins extends \WC_REST_Data_Controller {
 			'oauth/access_token',
 			array(
 				'body' => array(
-					'request_token' => wp_unslash( $rest_request['request_token'] ), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					'request_token' => wp_unslash( $rest_request['request_token'] ), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 					'home_url'      => home_url(),
 				),
 			)

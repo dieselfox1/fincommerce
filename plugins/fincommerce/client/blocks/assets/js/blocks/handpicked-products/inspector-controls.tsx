@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, RangeControl, ToggleControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { PanelBody, RangeControl, ToggleControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
 import GridContentControl from '@fincommerce/editor-components/grid-content-control';
 import ProductOrderbyControl from '@fincommerce/editor-components/product-orderby-control';

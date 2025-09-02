@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { createElement, useEffect } from '@wordpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { useSelect, useDispatch } from '@finpress/data';
+import { createElement, useEffect } from '@finpress/element';
 import { SelectFromMap } from '@automattic/data-stores';
 import type { ComponentType } from 'react';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies

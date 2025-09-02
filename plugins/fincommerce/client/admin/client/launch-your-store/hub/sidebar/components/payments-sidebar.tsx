@@ -4,9 +4,9 @@
  * External dependencies
  */
 import React from 'react';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 // @ts-ignore No types for this exist yet.
-import SidebarNavigationItem from '@wordpress/edit-site/build-module/components/sidebar-navigation-item';
+import SidebarNavigationItem from '@finpress/edit-site/build-module/components/sidebar-navigation-item';
 import clsx from 'clsx';
 import {
 	Button,
@@ -14,7 +14,7 @@ import {
 	__experimentalItemGroup as ItemGroup,
 	// @ts-ignore No types for this exist yet.
 	__unstableMotion as motion,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { useOnboardingContext } from '~/settings-payments/onboarding/providers/woopayments/data/onboarding-context';
 import { recordEvent } from '@fincommerce/tracks';
 

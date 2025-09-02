@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { ButtonGroup, Button, Modal, Notice } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { dispatch } from '@wordpress/data';
-import { useState, useEffect, useContext } from '@wordpress/element';
+import { ButtonGroup, Button, Modal, Notice } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { dispatch } from '@finpress/data';
+import { useState, useEffect, useContext } from '@finpress/element';
 import { navigateTo, getNewPath, useQuery } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';
-import type { Status } from 'wordpress__notices';
+import type { Status } from 'finpress__notices';
 
 /**
  * Internal dependencies
@@ -113,7 +113,7 @@ function InstallNewProductModal( props: { products: Product[] } ) {
 	}, [ query, props.products, installedProducts, isStoreConnected ] );
 
 	/**
-	 * WordPress gives us a activateURL as a response to us installig the product.
+	 * finpress gives us a activateURL as a response to us installig the product.
 	 * Even though it's not an API endpoint, we can hit that URL with fetch
 	 * and activate the plugin.
 	 */

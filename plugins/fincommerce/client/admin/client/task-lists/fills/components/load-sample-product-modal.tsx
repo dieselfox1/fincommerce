@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Modal, Spinner } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Modal, Spinner } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
 
 /**

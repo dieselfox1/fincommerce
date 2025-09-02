@@ -146,7 +146,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 				),
 				'fields'      => 'ids',
 				'post_status' => array( ProductStatus::PUBLISH, ProductStatus::PRIVATE ),
-				'numberposts' => -1, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_numberposts
+				'numberposts' => -1, // phpcs:ignore finpress.VIP.PostsPerPage.posts_per_page_numberposts
 			);
 
 			$visible_only_args                = $all_args;
@@ -517,7 +517,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 			$format     = array_fill( 0, count( $children ), '%d' );
 			$query_in   = '(' . implode( ',', $format ) . ')';
 			$query_args = array( 'stock_status' => $status ) + $children;
-			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 			if ( get_option( 'fincommerce_product_lookup_table_is_generating' ) ) {
 				$query = "SELECT COUNT( post_id ) FROM {$wpdb->postmeta} WHERE meta_key = '_stock_status' AND meta_value = %s AND post_id IN {$query_in}";
 			} else {
@@ -529,7 +529,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 					$query_args
 				)
 			);
-			// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 		} else {
 			$children_with_status = 0;
 		}
@@ -683,7 +683,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 					'post_type'   => 'product_variation',
 					'fields'      => 'ids',
 					'post_status' => array( 'any', ProductStatus::TRASH, ProductStatus::AUTO_DRAFT ),
-					'numberposts' => -1, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_numberposts
+					'numberposts' => -1, // phpcs:ignore finpress.VIP.PostsPerPage.posts_per_page_numberposts
 				)
 			)
 		);
@@ -717,7 +717,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 					'post_type'   => 'product_variation',
 					'fields'      => 'ids',
 					'post_status' => 'trash',
-					'numberposts' => -1, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_numberposts
+					'numberposts' => -1, // phpcs:ignore finpress.VIP.PostsPerPage.posts_per_page_numberposts
 				)
 			)
 		);

@@ -8,7 +8,7 @@ import {
 	FormStep,
 	StoreNoticesContainer,
 } from '@fincommerce/blocks-components';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 import { noticeContexts } from '@fincommerce/base-context';
 import { useCheckoutBlockContext } from '@fincommerce/blocks/checkout/context';

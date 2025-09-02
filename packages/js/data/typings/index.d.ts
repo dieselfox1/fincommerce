@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Entity } from '@wordpress/core-data';
+import { Entity } from '@finpress/core-data';
 
 
 declare module 'rememo';

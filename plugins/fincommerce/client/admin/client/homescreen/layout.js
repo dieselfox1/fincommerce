@@ -8,9 +8,9 @@ import {
 	useLayoutEffect,
 	useRef,
 	useEffect,
-} from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { withSelect, dispatch } from '@wordpress/data';
+} from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { withSelect, dispatch } from '@finpress/data';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import {
@@ -19,7 +19,7 @@ import {
 	onboardingStore,
 	optionsStore,
 } from '@fincommerce/data';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

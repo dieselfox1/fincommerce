@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { cloneElement, Component } from '@wordpress/element';
+import { cloneElement, Component } from '@finpress/element';
 import NoticeOutline from 'gridicons/dist/notice-outline';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import { H, Section } from '@fincommerce/components';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { useCallback, useMemo } from '@wordpress/element';
+import { useSelect } from '@finpress/data';
+import { useCallback, useMemo } from '@finpress/element';
 import {
 	optionsStore,
 	pluginsStore,

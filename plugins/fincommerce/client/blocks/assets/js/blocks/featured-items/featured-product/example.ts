@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { previewProducts } from '@fincommerce/resource-previews';
-import type { Block } from '@wordpress/blocks';
+import type { Block } from '@finpress/blocks';
 
 type ExampleBlock = Block[ 'example' ] & {
 	attributes: {

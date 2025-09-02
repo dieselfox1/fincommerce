@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Component, createRef } from '@wordpress/element';
+import { createElement, Component, createRef } from '@finpress/element';
 import clsx from 'clsx';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';

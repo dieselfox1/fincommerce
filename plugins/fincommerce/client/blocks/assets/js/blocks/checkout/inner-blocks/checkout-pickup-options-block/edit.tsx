@@ -1,14 +1,14 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { checkoutStore as checkoutStoreDescriptor } from '@fincommerce/block-data';
 import { LOCAL_PICKUP_ENABLED } from '@fincommerce/block-settings';
-import { Disabled } from '@wordpress/components';
+import { Disabled } from '@finpress/components';
 
 /**
  * Internal dependencies

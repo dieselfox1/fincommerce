@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { EXPERIMENTAL_PRODUCT_VARIATIONS_STORE_NAME } from '@fincommerce/data';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 

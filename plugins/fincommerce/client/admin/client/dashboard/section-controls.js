@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { TextControl } from '@wordpress/components';
-import { trash, Icon } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { TextControl } from '@finpress/components';
+import { trash, Icon } from '@finpress/icons';
 import ChevronUpIcon from 'gridicons/dist/chevron-up';
 import ChevronDownIcon from 'gridicons/dist/chevron-down';
-import { Component, Fragment } from '@wordpress/element';
+import { Component, Fragment } from '@finpress/element';
 import { MenuItem } from '@fincommerce/components';
 
 class SectionControls extends Component {

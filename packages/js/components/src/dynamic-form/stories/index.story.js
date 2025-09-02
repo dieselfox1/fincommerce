@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { DynamicForm } from '@fincommerce/components';
-import { createElement, useState } from '@wordpress/element';
+import { createElement, useState } from '@finpress/element';
 
 const fields = [
 	{

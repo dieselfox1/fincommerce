@@ -1,9 +1,9 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/d5ab7238e53d0947d4bb0853464b1c58325b6130/packages/edit-site/src/components/global-styles/style-variations-container.js
+// Reference: https://github.com/finpress/gutenberg/blob/d5ab7238e53d0947d4bb0853464b1c58325b6130/packages/edit-site/src/components/global-styles/style-variations-container.js
 
 /**
  * External dependencies
  */
-import { __experimentalGrid as Grid } from '@wordpress/components';
+import { __experimentalGrid as Grid } from '@finpress/components';
 
 /**
  * Internal dependencies

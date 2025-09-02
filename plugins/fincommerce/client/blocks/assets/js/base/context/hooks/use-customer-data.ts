@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { cartStore as storeKey } from '@fincommerce/block-data';
 import type { BillingAddress, ShippingAddress } from '@fincommerce/settings';
 

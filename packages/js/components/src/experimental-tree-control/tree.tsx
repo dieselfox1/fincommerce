@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Button, Icon } from '@wordpress/components';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button, Icon } from '@finpress/components';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import { createElement, forwardRef, Fragment, useRef } from 'react';
-import { plus } from '@wordpress/icons';
-import { useMergeRefs } from '@wordpress/compose';
+import { plus } from '@finpress/icons';
+import { useMergeRefs } from '@finpress/compose';
 
 /**
  * Internal dependencies

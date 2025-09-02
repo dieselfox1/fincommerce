@@ -8,7 +8,7 @@ import {
 	Children,
 	createElement,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 import type { ReactNode } from 'react';
 
 /**

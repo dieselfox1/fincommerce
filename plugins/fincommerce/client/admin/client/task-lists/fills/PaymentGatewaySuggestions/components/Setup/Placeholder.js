@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Card, CardBody } from '@wordpress/components';
+import { Card, CardBody } from '@finpress/components';
 import { Stepper } from '@fincommerce/components';
 
 export const Placeholder = () => {

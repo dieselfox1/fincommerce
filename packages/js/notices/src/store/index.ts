@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerStore } from '@wordpress/data';
+import { registerStore } from '@finpress/data';
 import { SelectFromMap, DispatchFromMap } from '@automattic/data-stores';
 import { Reducer, AnyAction } from 'redux';
 
@@ -24,7 +24,7 @@ export default registerStore< State >( STORE_NAME, {
 	selectors,
 } );
 
-declare module '@wordpress/data' {
+declare module '@finpress/data' {
 	// TODO: convert action.js to TS
 	function dispatch(
 		key: typeof STORE_NAME

@@ -82,7 +82,7 @@ final class ProductFilterTaxonomy extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 */
 	protected function initialize() {
 		parent::initialize();
@@ -314,7 +314,7 @@ final class ProductFilterTaxonomy extends AbstractBlock {
 
 		// Remove from tax_query if present.
 		if ( ! empty( $query_vars['tax_query'] ) ) {
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			$query_vars['tax_query'] = ProductCollectionUtils::remove_query_array( $query_vars['tax_query'], 'taxonomy', $taxonomy );
 		}
 

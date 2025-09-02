@@ -3,7 +3,7 @@
  */
 import { getSetting, getSettingWithCoercion } from '@fincommerce/settings';
 import { objectOmit } from '@fincommerce/utils';
-import type { InnerBlockTemplate } from '@wordpress/blocks';
+import type { InnerBlockTemplate } from '@finpress/blocks';
 import { isBoolean } from '@fincommerce/types';
 /**
  * Internal dependencies

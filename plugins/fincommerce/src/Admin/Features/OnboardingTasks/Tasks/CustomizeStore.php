@@ -128,7 +128,7 @@ class CustomizeStore extends Task {
 	 * Possibly add site editor scripts.
 	 */
 	public function possibly_add_site_editor_scripts() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$is_wc_admin_page = (
 			isset( $_GET['page'] ) &&
 			'wc-admin' === $_GET['page'] &&
@@ -137,13 +137,13 @@ class CustomizeStore extends Task {
 
 		$is_assembler_hub     = $is_wc_admin_page && str_starts_with( wc_clean( wp_unslash( $_GET['path'] ) ), '/customize-store/assembler-hub' );
 		$is_transitional_page = $is_wc_admin_page && str_starts_with( wc_clean( wp_unslash( $_GET['path'] ) ), '/customize-store/transitional' );
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		if ( ! ( $is_assembler_hub || $is_transitional_page ) ) {
 			return;
 		}
 
-		// See: https://github.com/WordPress/WordPress/blob/master/wp-admin/site-editor.php.
+		// See: https://github.com/finpress/finpress/blob/master/wp-admin/site-editor.php.
 		if ( ! wp_is_block_theme() ) {
 			wp_die( esc_html__( 'The theme you are currently using is not compatible.', 'fincommerce' ) );
 		}

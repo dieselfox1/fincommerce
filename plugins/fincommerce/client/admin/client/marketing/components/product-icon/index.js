@@ -3,8 +3,8 @@
  */
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { Component } from '@wordpress/element';
-import { Icon } from '@wordpress/icons';
+import { Component } from '@finpress/element';
+import { Icon } from '@finpress/icons';
 import { camelCase } from 'lodash';
 
 /**

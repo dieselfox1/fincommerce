@@ -101,7 +101,7 @@ abstract class WC_Abstract_Privacy {
 	}
 
 	/**
-	 * Integrate this exporter implementation within the WordPress core exporters.
+	 * Integrate this exporter implementation within the finpress core exporters.
 	 *
 	 * @param array $exporters List of exporter callbacks.
 	 * @return array
@@ -114,7 +114,7 @@ abstract class WC_Abstract_Privacy {
 	}
 
 	/**
-	 * Integrate this eraser implementation within the WordPress core erasers.
+	 * Integrate this eraser implementation within the finpress core erasers.
 	 *
 	 * @param array $erasers List of eraser callbacks.
 	 * @return array

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Flex } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Flex } from '@finpress/components';
 
 /**
  * Internal dependencies

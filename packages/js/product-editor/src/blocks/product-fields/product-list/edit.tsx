@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { resolveSelect } from '@wordpress/data';
+import { Button } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { resolveSelect } from '@finpress/data';
 import {
 	createElement,
 	useContext,
 	useEffect,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { external, closeSmall } from '@wordpress/icons';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { external, closeSmall } from '@finpress/icons';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { CurrencyContext } from '@fincommerce/currency';
 import { productsStore, Product } from '@fincommerce/data';

@@ -1,4 +1,4 @@
-name: WooCommerce Beta Tester Release
+name: fincommerce Beta Tester Release
 permissions: {}
 
 on:
@@ -17,22 +17,22 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Setup WooCommerce Monorepo
-              uses: ./.github/actions/setup-woocommerce-monorepo
+            - name: Setup fincommerce Monorepo
+              uses: ./.github/actions/setup-fincommerce-monorepo
               with:
-                install: '@woocommerce/plugin-woocommerce-beta-tester...'
-                build: '@woocommerce/plugin-woocommerce-beta-tester...'
-                pull-package-deps: '@woocommerce/plugin-woocommerce-beta-tester'
+                install: '@fincommerce/plugin-fincommerce-beta-tester...'
+                build: '@fincommerce/plugin-fincommerce-beta-tester...'
+                pull-package-deps: '@fincommerce/plugin-fincommerce-beta-tester'
 
-            - name: Build WooCommerce Beta Tester Zip
-              working-directory: plugins/woocommerce-beta-tester
+            - name: Build fincommerce Beta Tester Zip
+              working-directory: plugins/fincommerce-beta-tester
               run: pnpm build:zip
 
             - name: Create release
               id: create_release
-              uses: woocommerce/action-gh-release@master
+              uses: fincommerce/action-gh-release@master
               with:
                   tag_name: wc-beta-tester-${{ inputs.version }}
-                  name: WooCommerce Beta Tester Release ${{ inputs.version }}
+                  name: fincommerce Beta Tester Release ${{ inputs.version }}
                   draft: false
-                  files: plugins/woocommerce-beta-tester/woocommerce-beta-tester.zip
+                  files: plugins/fincommerce-beta-tester/fincommerce-beta-tester.zip

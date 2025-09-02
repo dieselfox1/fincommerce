@@ -81,7 +81,7 @@ class StoredStateSetupForProducts {
 	 */
 	public static function run_on_product_importer() {
 		// We're only interested in when the importer completes.
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( ! isset( $_REQUEST['step'] ) ) {
 			return;
 		}

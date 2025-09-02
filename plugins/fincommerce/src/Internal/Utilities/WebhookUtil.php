@@ -94,8 +94,8 @@ class WebhookUtil {
 
 		$webhooks_settings_url = esc_url_raw( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks' ) );
 
-		// This block of code is copied from WordPress' users.php.
-		// phpcs:disable FinCommerce.Commenting.CommentHooks, WordPress.DB.PreparedSQL.NotPrepared
+		// This block of code is copied from finpress' users.php.
+		// phpcs:disable FinCommerce.Commenting.CommentHooks, finpress.DB.PreparedSQL.NotPrepared
 		$users_have_content = (bool) apply_filters( 'users_have_additional_content', false, $userids );
 		if ( ! $users_have_content ) {
 			if ( $wpdb->get_var( "SELECT ID FROM {$wpdb->posts} WHERE post_author IN( " . implode( ',', $userids ) . ' ) LIMIT 1' ) ) {
@@ -104,7 +104,7 @@ class WebhookUtil {
 				$users_have_content = true;
 			}
 		}
-		// phpcs:enable FinCommerce.Commenting.CommentHooks, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable FinCommerce.Commenting.CommentHooks, finpress.DB.PreparedSQL.NotPrepared
 
 		if ( $users_have_content ) {
 			$text = __( 'If the "Delete all content" option is selected, the affected FinCommerce webhooks will <b>not</b> be deleted and will be attributed to user id 0.<br/>', 'fincommerce' );

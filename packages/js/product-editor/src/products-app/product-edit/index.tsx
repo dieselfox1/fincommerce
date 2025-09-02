@@ -2,12 +2,12 @@
  * External dependencies
  */
 import { productsStore } from '@fincommerce/data';
-import { DataForm, isItemValid } from '@wordpress/dataviews';
-import type { Form } from '@wordpress/dataviews';
-import { createElement, useState, useMemo } from '@wordpress/element';
+import { DataForm, isItemValid } from '@finpress/dataviews';
+import type { Form } from '@finpress/dataviews';
+import { createElement, useState, useMemo } from '@finpress/element';
 import { FormEvent } from 'react';
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
 import clsx from 'clsx';
 import {
 	__experimentalHeading as Heading,
@@ -16,10 +16,10 @@ import {
 	__experimentalVStack as VStack,
 	FlexItem,
 	Button,
-} from '@wordpress/components';
+} from '@finpress/components';
 // @ts-expect-error missing types.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { privateApis as editorPrivateApis } from '@wordpress/editor';
+import { privateApis as editorPrivateApis } from '@finpress/editor';
 
 /**
  * Internal dependencies

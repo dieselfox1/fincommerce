@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { type BlockEditProps } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
+import { type BlockEditProps } from '@finpress/blocks';
 import {
 	Disabled,
 	PanelBody,
 	SelectControl,
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { useCustomDataContext } from '@fincommerce/shared-context';
 import type { ProductResponseAttributeItem } from '@fincommerce/types';
 import clsx from 'clsx';

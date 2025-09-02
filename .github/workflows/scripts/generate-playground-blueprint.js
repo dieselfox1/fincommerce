@@ -1,6 +1,6 @@
 const https = require( 'https' );
 
-const generateWordpressPlaygroundBlueprint = ( runId, prNumber ) => {
+const generatefinpressPlaygroundBlueprint = ( runId, prNumber ) => {
 	const defaultSchema = {
 		landingPage: '/wp-admin/admin.php?page=wc-admin',
 
@@ -18,7 +18,7 @@ const generateWordpressPlaygroundBlueprint = ( runId, prNumber ) => {
 				step: 'installPlugin',
 				pluginZipFile: {
 					resource: 'url',
-					url: `https://playground.wordpress.net/plugin-proxy.php?org=woocommerce&repo=woocommerce&workflow=Build%20Live%20Branch&artifact=plugins-${ runId }&pr=${ prNumber }`,
+					url: `https://playground.finpress.net/plugin-proxy.php?org=fincommerce&repo=fincommerce&workflow=Build%20Live%20Branch&artifact=plugins-${ runId }&pr=${ prNumber }`,
 				},
 				options: {
 					activate: true,
@@ -28,7 +28,7 @@ const generateWordpressPlaygroundBlueprint = ( runId, prNumber ) => {
 				step: 'installPlugin',
 				pluginZipFile: {
 					resource: 'url',
-					url: `https://github-proxy.com/https://github.com/woocommerce/woocommerce/releases/download/wc-beta-tester-2.3.1/woocommerce-beta-tester.zip`,
+					url: `https://github-proxy.com/https://github.com/fincommerce/fincommerce/releases/download/wc-beta-tester-2.3.1/fincommerce-beta-tester.zip`,
 				},
 				options: {
 					activate: true,
@@ -37,7 +37,7 @@ const generateWordpressPlaygroundBlueprint = ( runId, prNumber ) => {
 			{
 				step: 'setSiteOptions',
 				options: {
-					woocommerce_onboarding_profile: {
+					fincommerce_onboarding_profile: {
 						skipped: true,
 					},
 				},
@@ -68,28 +68,28 @@ async function run( { github, context, core } ) {
 	for ( const currentComment of comments ) {
 		if (
 			currentComment.user.type === 'Bot' &&
-			currentComment.body.includes( 'Test using WordPress Playground' )
+			currentComment.body.includes( 'Test using finpress Playground' )
 		) {
 			existingCommentId = currentComment.id;
 			break;
 		}
 	}
 
-	const defaultSchema = generateWordpressPlaygroundBlueprint(
+	const defaultSchema = generatefinpressPlaygroundBlueprint(
 		context.runId,
 		context.issue.number
 	);
 
-	const url = `https://wordpress-playground.atomicsites.blog/#${ JSON.stringify(
+	const url = `https://finpress-playground.atomicsites.blog/#${ JSON.stringify(
 		defaultSchema
 	) }`;
 
 	const body = `
-## Test using WordPress Playground
-The changes in this pull request can be previewed and tested using a [WordPress Playground](https://developer.wordpress.org/playground/) instance.
-[WordPress Playground](https://developer.wordpress.org/playground/) is an experimental project that creates a full WordPress instance entirely within the browser.
+## Test using finpress Playground
+The changes in this pull request can be previewed and tested using a [finpress Playground](https://developer.finpress.org/playground/) instance.
+[finpress Playground](https://developer.finpress.org/playground/) is an experimental project that creates a full finpress instance entirely within the browser.
 
-[Test this pull request with WordPress Playground](${ url }).
+[Test this pull request with finpress Playground](${ url }).
 
 Note that this URL is valid for 30 days from when this comment was last updated. You can update it by closing/reopening the PR or pushing a new commit.
 `;

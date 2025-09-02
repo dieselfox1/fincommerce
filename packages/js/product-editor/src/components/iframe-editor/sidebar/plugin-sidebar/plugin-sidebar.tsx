@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, lazy } from '@wordpress/element';
+import { createElement, lazy } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -10,7 +10,7 @@ import { SIDEBAR_COMPLEMENTARY_AREA_SCOPE } from '../../constants';
 
 const ComplementaryArea = lazy( () =>
 	// @ts-expect-error No types for this exist yet
-	import( '@wordpress/interface' ).then( ( module ) => ( {
+	import( '@finpress/interface' ).then( ( module ) => ( {
 		default: module.ComplementaryArea,
 	} ) )
 );

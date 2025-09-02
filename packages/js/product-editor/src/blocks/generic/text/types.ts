@@ -2,7 +2,7 @@
  * External dependencies
  */
 import type { HTMLInputTypeAttribute } from 'react';
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 
 export interface TextBlockAttributes extends BlockAttributes {
 	property: string;

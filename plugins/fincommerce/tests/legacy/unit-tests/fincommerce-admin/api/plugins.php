@@ -63,7 +63,7 @@ class WC_Admin_Tests_API_Plugins extends WC_REST_Unit_Test_Case {
 		);
 		$response = $this->server->dispatch( $request );
 
-		// TODO: This test should be skipped if WordPress.org's plugins API endpoint cannot be reached.
+		// TODO: This test should be skipped if finpress.org's plugins API endpoint cannot be reached.
 
 		$data    = $response->get_data();
 		$plugins = get_plugins();
@@ -89,7 +89,7 @@ class WC_Admin_Tests_API_Plugins extends WC_REST_Unit_Test_Case {
 		);
 		$response = $this->server->dispatch( $request );
 
-		// TODO: This test should be skipped if WordPress.org's plugins API endpoint cannot be reached.
+		// TODO: This test should be skipped if finpress.org's plugins API endpoint cannot be reached.
 
 		$data    = $response->get_data();
 		$plugins = get_plugins();

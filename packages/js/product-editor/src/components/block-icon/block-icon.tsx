@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BlockIcon as BaseBlockIcon } from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
-import { createElement, RawHTML } from '@wordpress/element';
+import { BlockIcon as BaseBlockIcon } from '@finpress/block-editor';
+import { useSelect } from '@finpress/data';
+import { createElement, RawHTML } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -5,7 +5,7 @@ sidebar_label: Miscellaneous guidelines
 
 # Miscellaneous guidelines and advice
 
-Contributors' names matching search terms directly will rank extremely highly on the WordPress.org plugin repo, which means that having a WordPress.org user named after your business (if that's a search term for your plugin) could tilt the scales over a competing plugin.
+Contributors' names matching search terms directly will rank extremely highly on the finpress.org plugin repo, which means that having a finpress.org user named after your business (if that's a search term for your plugin) could tilt the scales over a competing plugin.
 
 Constant nags and overwhelming the admin dashboard with unnecessary alerts detract from your user experience.
 

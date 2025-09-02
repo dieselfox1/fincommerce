@@ -7,8 +7,8 @@ import {
 	TableRow,
 } from '@fincommerce/components/build-types/table/types';
 import { getNewPath } from '@fincommerce/navigation';
-import { createInterpolateElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

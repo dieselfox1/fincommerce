@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies
@@ -14,7 +14,7 @@ import {
 import { APIError } from '../types';
 import { STORE_NAME } from '../';
 
-jest.mock( '@wordpress/api-fetch' );
+jest.mock( '@finpress/api-fetch' );
 
 describe( 'setting-options actions', () => {
 	let registry: ReturnType< typeof createTestRegistryAndStore >[ 'registry' ];

@@ -12,7 +12,7 @@ import { store as paymentStore } from '@fincommerce/block-library/assets/js/data
 import { PlainPaymentMethods } from '@fincommerce/block-library/assets/js/types';
 import { __internalSetRegisteredExpressPaymentMethods } from '@fincommerce/block-library/assets/js/data/payment/actions';
 
-const originalDispatch = jest.requireActual( '@wordpress/data' ).dispatch;
+const originalDispatch = jest.requireActual( '@finpress/data' ).dispatch;
 
 jest.mock( '../utils/set-default-payment-method', () => ( {
 	setDefaultPaymentMethod: jest.fn(),

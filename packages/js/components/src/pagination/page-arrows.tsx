@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button, Icon } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { chevronLeft, chevronRight } from '@wordpress/icons';
-import { sprintf, __ } from '@wordpress/i18n';
+import { Button, Icon } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { chevronLeft, chevronRight } from '@finpress/icons';
+import { sprintf, __ } from '@finpress/i18n';
 import clsx from 'clsx';
 
 type PageArrowsProps = {

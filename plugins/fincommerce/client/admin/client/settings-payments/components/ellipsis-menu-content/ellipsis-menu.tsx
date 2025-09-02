@@ -3,7 +3,7 @@
  */
 import { EllipsisMenu } from '@fincommerce/components';
 import { PaymentsProvider } from '@fincommerce/data';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, _n } from '@wordpress/i18n';
-import { Fragment, useContext } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { Tooltip } from '@wordpress/components';
+import { __, _n } from '@finpress/i18n';
+import { Fragment, useContext } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { Tooltip } from '@finpress/components';
 import { Date, Link, Pill } from '@fincommerce/components';
 import { formatValue } from '@fincommerce/number';
 import { getAdminLink } from '@fincommerce/settings';

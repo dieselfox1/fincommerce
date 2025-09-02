@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import { createNoticesFromResponse } from '../../notices';
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	dispatch: jest.fn().mockReturnValue( {
 		createNotice: jest.fn(),
 	} ),

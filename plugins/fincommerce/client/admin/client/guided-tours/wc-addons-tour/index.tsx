@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 import { TourKit, TourKitTypes } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { optionsStore } from '@fincommerce/data';
 
 /**

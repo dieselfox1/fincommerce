@@ -72,7 +72,7 @@ class ProductButton extends AbstractBlock {
 	 * @return string Rendered block type output.
 	 */
 	protected function render( $attributes, $content, $block ) {
-		// This workaround ensures that WordPress loads the core/button block styles.
+		// This workaround ensures that finpress loads the core/button block styles.
 		// For more details, see https://github.com/dieselfox1/fincommerce/pull/53052.
 		( new \WP_Block( array( 'blockName' => 'core/button' ) ) )->render();
 

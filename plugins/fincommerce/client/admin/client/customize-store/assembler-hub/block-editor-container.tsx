@@ -1,21 +1,21 @@
 /**
  * External dependencies
  */
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { store as coreStore } from '@wordpress/core-data';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { store as coreStore } from '@finpress/core-data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { useQuery } from '@fincommerce/navigation';
-import { useContext, useEffect, useMemo } from '@wordpress/element';
-import { BlockInstance, createBlock } from '@wordpress/blocks';
+import { useContext, useEffect, useMemo } from '@finpress/element';
+import { BlockInstance, createBlock } from '@finpress/blocks';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import useSiteEditorSettings from '@wordpress/edit-site/build-module/components/block-editor/use-site-editor-settings';
+import useSiteEditorSettings from '@finpress/edit-site/build-module/components/block-editor/use-site-editor-settings';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { store as editSiteStore } from '@wordpress/edit-site/build-module/store';
+import { store as editSiteStore } from '@finpress/edit-site/build-module/store';
 
 /**
  * Internal dependencies

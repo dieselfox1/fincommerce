@@ -3,16 +3,16 @@
  */
 import { render, screen } from '@testing-library/react';
 import { registerPaymentMethod } from '@fincommerce/blocks-registry';
-import * as wpData from '@wordpress/data';
+import * as wpData from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import SavedPaymentMethodOptions from '@fincommerce/block-library/assets/js/blocks/cart-checkout-shared/payment-methods/saved-payment-method-options';
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	__esModule: true,
-	...jest.requireActual( '@wordpress/data' ),
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 } ) );
 
@@ -30,7 +30,7 @@ mockedUseSelect.mockImplementation(
 			) {
 				return {
 					...jest
-						.requireActual( '@wordpress/data' )
+						.requireActual( '@finpress/data' )
 						.select( storeName ),
 					getActiveSavedToken: () => 1,
 					getSavedPaymentMethods: () => {
@@ -81,10 +81,10 @@ mockedUseSelect.mockImplementation(
 					},
 				};
 			}
-			return jest.requireActual( '@wordpress/data' ).select( storeName );
+			return jest.requireActual( '@finpress/data' ).select( storeName );
 		} );
 		return passedMapSelect( mockedSelect, {
-			dispatch: jest.requireActual( '@wordpress/data' ).dispatch,
+			dispatch: jest.requireActual( '@finpress/data' ).dispatch,
 		} );
 	} )
 );

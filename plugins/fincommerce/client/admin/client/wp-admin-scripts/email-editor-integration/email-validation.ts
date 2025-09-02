@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
-import { __, sprintf } from '@wordpress/i18n';
-import { select } from '@wordpress/data';
+import { addFilter } from '@finpress/hooks';
+import { __, sprintf } from '@finpress/i18n';
+import { select } from '@finpress/data';
 
 /**
  * Internal dependencies

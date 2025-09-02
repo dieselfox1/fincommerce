@@ -7,8 +7,8 @@ providing a slot for specific actions related to the section in which it is incl
 
 ```jsx
 import { __experimentalSectionActions as SectionActions } from '@fincommerce/product-editor'
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 function CustomProductBlockEdit() {
   return (

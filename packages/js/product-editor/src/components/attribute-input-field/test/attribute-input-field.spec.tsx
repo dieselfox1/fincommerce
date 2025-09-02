@@ -3,7 +3,7 @@
  */
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { useState, createElement } from '@wordpress/element';
+import { useState, createElement } from '@finpress/element';
 import type {
 	ProductProductAttribute,
 	QueryProductAttribute,
@@ -15,15 +15,15 @@ import type {
 import { AttributeInputField } from '../attribute-input-field';
 import type { AttributeInputFieldItemProps } from '../types';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useDispatch: jest.fn().mockReturnValue( {
 		createErrorNotice: jest.fn(),
 		createProductAttribute: jest.fn(),
 	} ),
 } ) );
 
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	__esModule: true,
 	Spinner: () => <div>spinner</div>,
 	Icon: () => <div>icon</div>,

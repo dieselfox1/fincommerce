@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { ExternalLink, Modal, SearchControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { ExternalLink, Modal, SearchControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import { noop } from 'lodash';
-import { forwardRef, createElement } from '@wordpress/element';
+import { forwardRef, createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -7,7 +7,7 @@ jest.mock( '../cart/use-store-cart-coupons', () => ( {
 	useStoreCartCoupons: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	useSelect: jest.fn(),
 } ) );
 
@@ -21,7 +21,7 @@ jest.mock( '@fincommerce/block-data', () => ( {
  * External dependencies
  */
 import { renderHook } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

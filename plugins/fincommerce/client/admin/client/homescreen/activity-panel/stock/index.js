@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { withDispatch, withSelect } from '@wordpress/data';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { withDispatch, withSelect } from '@finpress/data';
 import PropTypes from 'prop-types';
 import { Section } from '@fincommerce/components';
 import { itemsStore } from '@fincommerce/data';

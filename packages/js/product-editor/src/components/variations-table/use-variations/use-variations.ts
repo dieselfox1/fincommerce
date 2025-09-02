@@ -7,8 +7,8 @@ import {
 	ProductProductAttribute,
 	ProductVariation,
 } from '@fincommerce/data';
-import { dispatch, resolveSelect } from '@wordpress/data';
-import { useCallback, useMemo, useRef, useState } from '@wordpress/element';
+import { dispatch, resolveSelect } from '@finpress/data';
+import { useCallback, useMemo, useRef, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

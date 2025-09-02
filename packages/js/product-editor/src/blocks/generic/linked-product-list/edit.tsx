@@ -8,19 +8,19 @@ import {
 	useReducer,
 	useRef,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useWooBlockProps } from '@fincommerce/block-templates';
-import { resolveSelect } from '@wordpress/data';
+import { resolveSelect } from '@finpress/data';
 import { Product, productsStore } from '@fincommerce/data';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { reusableBlock } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { reusableBlock } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDebounce } from '@wordpress/compose';
+import { useDebounce } from '@finpress/compose';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId } from '@wordpress/core-data';
+import { useEntityId } from '@finpress/core-data';
 
 /**
  * Internal dependencies

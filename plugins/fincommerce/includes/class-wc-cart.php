@@ -1099,12 +1099,12 @@ class WC_Cart extends WC_Legacy_Cart {
 					}
 					$attribute_key = 'attribute_' . sanitize_title( $attribute['name'] );
 
-					if ( isset( $variation[ $attribute_key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					if ( isset( $variation[ $attribute_key ] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 						if ( $attribute['is_taxonomy'] ) {
 							// Don't use wc_clean as it destroys sanitized characters.
-							$value = sanitize_title( wp_unslash( $variation[ $attribute_key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+							$value = sanitize_title( wp_unslash( $variation[ $attribute_key ] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 						} else {
-							$value = html_entity_decode( wc_clean( wp_unslash( $variation[ $attribute_key ] ) ), ENT_QUOTES, get_bloginfo( 'charset' ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+							$value = html_entity_decode( wc_clean( wp_unslash( $variation[ $attribute_key ] ) ), ENT_QUOTES, get_bloginfo( 'charset' ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 						}
 
 						// Don't include if it's empty.

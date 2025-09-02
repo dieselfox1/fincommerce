@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { cartStore, processErrorResponse } from '@fincommerce/block-data';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { isObject } from '@fincommerce/types';
-import { useEffect, useRef, useCallback } from '@wordpress/element';
+import { useEffect, useRef, useCallback } from '@finpress/element';
 import {
 	hasCollectableRate,
 	deriveSelectedShippingRates,
 } from '@fincommerce/base-utils';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import isShallowEqual from '@finpress/is-shallow-equal';
 
 /**
  * Internal dependencies

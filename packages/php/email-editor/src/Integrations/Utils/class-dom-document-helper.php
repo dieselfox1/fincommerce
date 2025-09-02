@@ -93,7 +93,7 @@ class Dom_Document_Helper {
 	 */
 	public function get_element_inner_html( \DOMElement $element ): string {
 		$inner_html = '';
-		$children   = $element->childNodes; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$children   = $element->childNodes; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		foreach ( $children as $child ) {
 			$inner_html .= $this->dom->saveHTML( $child );
 		}

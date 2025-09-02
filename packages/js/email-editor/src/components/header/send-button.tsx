@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { applyFilters } from '@wordpress/hooks';
-import { useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { applyFilters } from '@finpress/hooks';
+import { useSelect } from '@finpress/data';
 import {
 	// @ts-expect-error No types available for useEntitiesSavedStatesIsDirty
 	useEntitiesSavedStatesIsDirty,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies

@@ -394,7 +394,7 @@ class PageController {
 				<?php
 				$line = fgets( $stream );
 				if ( is_string( $line ) ) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- format_line does the escaping.
+					// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped -- format_line does the escaping.
 					echo $this->format_line( $line, $line_number );
 					++$line_number;
 				}
@@ -600,7 +600,7 @@ class PageController {
 
 		$action = $this->get_list_table( $view )->current_action();
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : $this->get_logs_tab_url();
 
 		if ( $action ) {

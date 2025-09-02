@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	alignCenter,
 	alignJustify,
 	alignLeft,
 	alignRight,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 
 export const ALIGNMENT_CONTROLS = [
 	{

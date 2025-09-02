@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	createInterpolateElement,
 	useContext,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { getNewPath, navigateTo, useQuery } from '@fincommerce/navigation';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import clsx from 'clsx';
-import { addQueryArgs } from '@wordpress/url';
-import { useSelect } from '@wordpress/data';
+import { addQueryArgs } from '@finpress/url';
+import { useSelect } from '@finpress/data';
 import { onboardingStore } from '@fincommerce/data';
 
 /**
@@ -190,7 +190,7 @@ export default function Products( props: ProductsProps ) {
 					</b>
 					{ createInterpolateElement(
 						__(
-							' Browse the <a>WordPress.org theme directory</a> to discover more.',
+							' Browse the <a>finpress.org theme directory</a> to discover more.',
 							'fincommerce'
 						),
 						{

@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <p class="fincommerce-result-count" role="alert" aria-relevant="all" <?php echo ( empty( $orderedby ) || 1 === intval( $total ) ) ? '' : 'data-is-sorted-by="true"'; ?>>
 	<?php
-	// phpcs:disable WordPress.Security
+	// phpcs:disable finpress.Security
 	if ( 1 === intval( $total ) ) {
 		_e( 'Showing the single result', 'fincommerce' );
 	} elseif ( $total <= $per_page || -1 === $per_page ) {
@@ -37,6 +37,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		/* translators: 1: first result 2: last result 3: total results 4: sorted by */
 		printf( _nx( 'Showing %1$d&ndash;%2$d of %3$d result', 'Showing %1$d&ndash;%2$d of %3$d results', $total, 'with first and last result', 'fincommerce' ) . $orderedby_placeholder, $first, $last, $total, esc_html( $orderedby ) );
 	}
-	// phpcs:enable WordPress.Security
+	// phpcs:enable finpress.Security
 	?>
 </p>

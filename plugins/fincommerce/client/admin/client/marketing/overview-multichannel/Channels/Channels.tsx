@@ -7,8 +7,8 @@ import {
 	forwardRef,
 	useImperativeHandle,
 	useRef,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	Card,
 	CardHeader,
@@ -16,8 +16,8 @@ import {
 	CardDivider,
 	Button,
 	Icon,
-} from '@wordpress/components';
-import { chevronUp, chevronDown } from '@wordpress/icons';
+} from '@finpress/components';
+import { chevronUp, chevronDown } from '@finpress/icons';
 
 /**
  * Internal dependencies

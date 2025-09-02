@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, ExternalLink } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, ExternalLink } from '@finpress/components';
 import { Pill } from '@fincommerce/components';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';

@@ -49,10 +49,10 @@ class EmptyMiniCartContentsBlock extends AbstractInnerBlock {
 
 		ob_start();
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div class="wc-block-mini-cart__empty-cart-wrapper">
 				<?php
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 					echo $content;
 				?>
 			</div>

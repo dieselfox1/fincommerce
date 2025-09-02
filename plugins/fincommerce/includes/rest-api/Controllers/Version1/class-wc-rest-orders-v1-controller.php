@@ -466,7 +466,7 @@ class WC_REST_Orders_V1_Controller extends WC_REST_Posts_Controller {
 
 		if ( ! is_null( $request['customer_id'] ) && 0 !== $request['customer_id'] ) {
 			if ( is_wp_error( Users::get_user_in_current_site( $request['customer_id'] ) ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 				throw new WC_REST_Exception( 'fincommerce_rest_invalid_customer_id', __( 'Customer ID is invalid.', 'fincommerce' ), 400 );
 			}
 

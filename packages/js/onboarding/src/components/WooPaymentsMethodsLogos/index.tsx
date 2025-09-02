@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { useState, useEffect, useRef } from 'react';
-import { createElement } from '@wordpress/element';
-import { Popover } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { Popover } from '@finpress/components';
 
 /**
  * Internal dependencies

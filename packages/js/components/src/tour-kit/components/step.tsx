@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { withViewportMatch } from '@wordpress/viewport';
-import { Card, CardBody, CardFooter, CardHeader } from '@wordpress/components';
-import { createElement, useEffect, useRef } from '@wordpress/element';
+import { withViewportMatch } from '@finpress/viewport';
+import { Card, CardBody, CardFooter, CardHeader } from '@finpress/components';
+import { createElement, useEffect, useRef } from '@finpress/element';
 
 /**
  * Internal dependencies

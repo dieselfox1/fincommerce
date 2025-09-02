@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { withDispatch, withSelect } from '@wordpress/data';
-import { compose } from '@wordpress/compose';
-import { Button } from '@wordpress/components';
+import { withDispatch, withSelect } from '@finpress/data';
+import { compose } from '@finpress/compose';
+import { Button } from '@finpress/components';
 import { optionsStore } from '@fincommerce/data';
 /**
  * Internal dependencies

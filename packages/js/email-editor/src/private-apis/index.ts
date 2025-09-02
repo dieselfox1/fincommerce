@@ -1,22 +1,22 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
-import { __dangerousOptInToUnstableAPIsOnlyForCoreModules } from '@wordpress/private-apis';
+import { dispatch } from '@finpress/data';
+import { __dangerousOptInToUnstableAPIsOnlyForCoreModules } from '@finpress/private-apis';
 import {
 	// @ts-expect-error No types for privateApis.
 	privateApis as editorPrivateApis,
 	store as editorStore,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	// @ts-expect-error No types for privateApis.
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 const { unlock } = __dangerousOptInToUnstableAPIsOnlyForCoreModules(
-	'I acknowledge private features are not for use in themes or plugins and doing so will break in the next version of WordPress.',
-	'@wordpress/edit-site' // The module name must be in the list of allowed, so for now I used the package name of the post editor
+	'I acknowledge private features are not for use in themes or plugins and doing so will break in the next version of finpress.',
+	'@finpress/edit-site' // The module name must be in the list of allowed, so for now I used the package name of the post editor
 );
 
 /**

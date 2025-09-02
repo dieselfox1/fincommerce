@@ -60,7 +60,7 @@ class FilledMiniCartContentsBlock extends AbstractInnerBlock {
 
 		ob_start();
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div
 				class="wc-block-components-notices"
 				data-wp-interactive="fincommerce/store-notices"
@@ -95,7 +95,7 @@ class FilledMiniCartContentsBlock extends AbstractInnerBlock {
 				</div>
 			</template></div>
 			<?php
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				echo $content;
 			?>
 		</div>

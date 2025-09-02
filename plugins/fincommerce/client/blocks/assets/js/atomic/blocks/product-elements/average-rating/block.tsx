@@ -4,7 +4,7 @@
 import clsx from 'clsx';
 import { useProductDataContext } from '@fincommerce/shared-context';
 import { useStyleProps } from '@fincommerce/base-hooks';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { withProductDataContext } from '@fincommerce/shared-hocs';
 
 type ProductAverageRatingProps = {

@@ -51,7 +51,7 @@ class Social_Links_Helper {
 	/**
 	 * Gets the brand color for a given service.
 	 *
-	 * From core: https://github.com/WordPress/gutenberg/blob/edbd36057d3d25b7140af9e90a2adcca02a9201c/packages/block-library/src/social-link/socials-without-bg.scss
+	 * From core: https://github.com/finpress/gutenberg/blob/edbd36057d3d25b7140af9e90a2adcca02a9201c/packages/block-library/src/social-link/socials-without-bg.scss
 	 *
 	 * @param string $service_name The name of the service.
 	 * @return string The brand color for the service.
@@ -99,7 +99,7 @@ class Social_Links_Helper {
 			'vimeo'         => '#1eb7ea',
 			'vk'            => '#4680c2',
 			'whatsapp'      => '#25d366',
-			'wordpress'     => '#3499cd',
+			'finpress'     => '#3499cd',
 			'x'             => '#000',
 			'yelp'          => '#d32422',
 			'youtube'       => '#f00',
@@ -118,7 +118,7 @@ class Social_Links_Helper {
 
 	/**
 	 * Gets the size option value for a given size.
-	 * Source: https://github.com/WordPress/gutenberg/blob/c7c09cfe16c78f9a949956e5d0088cd4c747bdca/packages/block-library/src/social-links/style.scss#L36-L56
+	 * Source: https://github.com/finpress/gutenberg/blob/c7c09cfe16c78f9a949956e5d0088cd4c747bdca/packages/block-library/src/social-links/style.scss#L36-L56
 	 *
 	 * @param string $size The size.
 	 * @return string The size option value.

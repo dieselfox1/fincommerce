@@ -2,7 +2,7 @@ const { test: base, expect, request } = require( '@playwright/test' );
 const { AssemblerPage } = require( './assembler.page' );
 const { activateTheme, DEFAULT_THEME } = require( '../../../utils/themes' );
 const { setOption } = require( '../../../utils/options' );
-const { getInstalledWordPressVersion } = require( '../../../utils/wordpress' );
+const { getInstalledfinpressVersion } = require( '../../../utils/finpress' );
 const { tags } = require( '../../../fixtures/fixtures' );
 const { ADMIN_STATE_PATH } = require( '../../../playwright.config' );
 
@@ -63,11 +63,11 @@ test.describe(
 				console.log( 'Store completed option not updated' );
 			}
 
-			const wordPressVersion = await getInstalledWordPressVersion();
+			const finpressVersion = await getInstalledfinpressVersion();
 
-			if ( wordPressVersion <= 6.5 ) {
+			if ( finpressVersion <= 6.5 ) {
 				test.skip(
-					'Skipping Full Composability tests: WordPress version is below 6.5, which does not support this feature.'
+					'Skipping Full Composability tests: finpress version is below 6.5, which does not support this feature.'
 				);
 			}
 		} );

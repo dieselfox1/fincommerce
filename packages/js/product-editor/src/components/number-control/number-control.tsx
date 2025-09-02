@@ -9,17 +9,17 @@ import {
 	useEffect,
 	useRef,
 	useState,
-} from '@wordpress/element';
-import { useInstanceId } from '@wordpress/compose';
+} from '@finpress/element';
+import { useInstanceId } from '@finpress/compose';
 import clsx from 'clsx';
-import { plus, reset } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { plus, reset } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import type { ForwardedRef } from 'react';
 import {
 	BaseControl,
 	Button,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -7,8 +7,8 @@ import {
 	useMemo,
 	useRef,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { TourKit, TourKitTypes } from '@fincommerce/components';
 import {
 	experimentalProductVariationsStore,
@@ -16,11 +16,11 @@ import {
 	useUserPreferences,
 } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId } from '@wordpress/core-data';
+import { useEntityId } from '@finpress/core-data';
 
 /**
  * Internal dependencies

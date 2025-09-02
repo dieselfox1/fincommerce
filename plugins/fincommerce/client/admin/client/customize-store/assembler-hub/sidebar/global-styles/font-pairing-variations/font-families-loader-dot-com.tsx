@@ -1,10 +1,10 @@
-// TODO: When wp.com will upgrade to WordPress 6.5, we should remove this logic and use the FontFamiliesLoader component instead.
+// TODO: When wp.com will upgrade to finpress 6.5, we should remove this logic and use the FontFamiliesLoader component instead.
 // Load font families from wp.com.
 
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
+import { useMemo } from '@finpress/element';
 
 export type FontFamily = {
 	fontFamily: string;

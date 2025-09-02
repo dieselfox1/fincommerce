@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import type { TemplateArray } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import type { TemplateArray } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 export const ATTRIBUTE_ITEM_TEMPLATE: TemplateArray = [
 	[

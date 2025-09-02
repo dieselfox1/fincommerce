@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { createContext, useLayoutEffect, useState } from 'react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { isEqual } from 'lodash';
 
 /**

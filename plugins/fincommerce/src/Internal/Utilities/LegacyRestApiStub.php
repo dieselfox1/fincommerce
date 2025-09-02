@@ -94,7 +94,7 @@ class LegacyRestApiStub implements RegisterHooksInterface {
 
 		self::maybe_process_wc_api_query_var();
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:disable finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput
 
 		if ( ! empty( $_GET['wc-api-version'] ) ) {
 			$wp->query_vars['wc-api-version'] = $_GET['wc-api-version'];
@@ -124,7 +124,7 @@ class LegacyRestApiStub implements RegisterHooksInterface {
 			exit;
 		}
 
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:enable finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput
 	}
 
 	/**
@@ -133,11 +133,11 @@ class LegacyRestApiStub implements RegisterHooksInterface {
 	private static function maybe_process_wc_api_query_var() {
 		global $wp;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['wc-api'] ) ) {
 			$wp->query_vars['wc-api'] = sanitize_key( wp_unslash( $_GET['wc-api'] ) );
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		// wc-api endpoint requests.
 		if ( ! empty( $wp->query_vars['wc-api'] ) ) {

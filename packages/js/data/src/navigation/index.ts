@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { controls } from '@wordpress/data-controls';
+import { controls } from '@finpress/data-controls';
 import { SelectFromMap, DispatchFromMap } from '@automattic/data-stores';
-import { createReduxStore, register } from '@wordpress/data';
-import deprecated from '@wordpress/deprecated';
+import { createReduxStore, register } from '@finpress/data';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies
@@ -57,7 +57,7 @@ initDispatchers();
 
 export const NAVIGATION_STORE_NAME = STORE_NAME;
 
-declare module '@wordpress/data' {
+declare module '@finpress/data' {
 	function dispatch(
 		key: typeof STORE_NAME
 	): DispatchFromMap< typeof actions & WPDataActions >;

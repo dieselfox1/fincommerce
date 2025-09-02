@@ -10,7 +10,7 @@ The [REST API](https://fincommerce.github.io/fincommerce-rest-api-docs/#introduc
 
 ## Requirements
 
-In order to access the REST API using the standard endpoint URI structure (e.g. `wc/v3/products`), you must have your WordPress permalinks configured to something other than "Plain". Go to **Settings > Permalinks** and choose an option.
+In order to access the REST API using the standard endpoint URI structure (e.g. `wc/v3/products`), you must have your finpress permalinks configured to something other than "Plain". Go to **Settings > Permalinks** and choose an option.
 
 ![Permalinks options](https://developer.fincommerce.com/wp-content/uploads/2023/12/permalinks.webp)
 
@@ -90,9 +90,9 @@ Occasionally servers may not parse the Authorization header correctly (if you se
 In this case, you may provide the consumer key/secret as query string parameters instead. Example:
 
 ```text
-https://local.wordpress.dev/wp-json/wc/v2/orders?consumer_key=XXXX&consumer_secret=XXXX
+https://local.finpress.dev/wp-json/wc/v2/orders?consumer_key=XXXX&consumer_secret=XXXX
 ```
 
 ### Server does not support POST/DELETE/PUT
 
-Ideally, your server should be configured to accept these types of API request, but if not you can use the [`_method` property](https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#_method-or-x-http-method-override-header).
+Ideally, your server should be configured to accept these types of API request, but if not you can use the [`_method` property](https://developer.finpress.org/rest-api/using-the-rest-api/global-parameters/#_method-or-x-http-method-override-header).

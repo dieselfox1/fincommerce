@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createRoot } from '@wordpress/element';
+import { createRoot } from '@finpress/element';
 import { SettingsEditor } from '@fincommerce/settings-editor';
 
 /**

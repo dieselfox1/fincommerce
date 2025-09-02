@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useRef, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useRef, useState } from '@finpress/element';
 import type { UniqueIdentifier } from '@dnd-kit/core';
 
 /**

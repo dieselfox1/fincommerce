@@ -2,16 +2,16 @@
  * External dependencies
  */
 import PropTypes from 'prop-types';
-import { SelectControl as Select, Spinner } from '@wordpress/components';
+import { SelectControl as Select, Spinner } from '@finpress/components';
 import clsx from 'clsx';
 import {
 	createElement,
 	Fragment,
 	useEffect,
 	useState,
-} from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import apiFetch from '@finpress/api-fetch';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

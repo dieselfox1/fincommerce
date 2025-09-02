@@ -8,14 +8,14 @@ import {
 	useRef,
 	useEffect,
 	useMemo,
-} from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
+} from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	checkoutStore,
 	paymentStore,
 	validationStore,
 } from '@fincommerce/block-data';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies

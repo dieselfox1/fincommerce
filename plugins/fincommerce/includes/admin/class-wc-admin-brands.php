@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName.
+<?php // phpcs:ignore finpress.Files.FileName.InvalidClassFileName.
 /**
  * Brands Admin Page
  *
@@ -201,8 +201,8 @@ class WC_Brands_Admin {
 	 * @return  void
 	 */
 	public function save_coupon_brands( $post_id ) {
-		$product_brands         = isset( $_POST['product_brands'] ) ? array_map( 'intval', $_POST['product_brands'] ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Missing
-		$exclude_product_brands = isset( $_POST['exclude_product_brands'] ) ? array_map( 'intval', $_POST['exclude_product_brands'] ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$product_brands         = isset( $_POST['product_brands'] ) ? array_map( 'intval', $_POST['product_brands'] ) : array(); // phpcs:ignore finpress.Security.NonceVerification.Missing
+		$exclude_product_brands = isset( $_POST['exclude_product_brands'] ) ? array_map( 'intval', $_POST['exclude_product_brands'] ) : array(); // phpcs:ignore finpress.Security.NonceVerification.Missing
 
 		// Save.
 		update_post_meta( $post_id, 'product_brands', $product_brands );
@@ -300,7 +300,7 @@ class WC_Brands_Admin {
 	 * Save admin settings function.
 	 */
 	public function save_admin_settings() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['section'] ) && 'brands' === $_GET['section'] ) {
 			fincommerce_update_options( $this->settings );
 		}
@@ -469,8 +469,8 @@ class WC_Brands_Admin {
 	 * @return void
 	 */
 	public function thumbnail_field_save( $term_id ) {
-		if ( isset( $_POST['product_cat_thumbnail_id'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			update_term_meta( $term_id, 'thumbnail_id', absint( $_POST['product_cat_thumbnail_id'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		if ( isset( $_POST['product_cat_thumbnail_id'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Missing
+			update_term_meta( $term_id, 'thumbnail_id', absint( $_POST['product_cat_thumbnail_id'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Missing
 		}
 	}
 
@@ -564,9 +564,9 @@ class WC_Brands_Admin {
 	 * fincommerce_product_brand_filter_threshold filter.
 	 */
 	public function render_product_brand_filter() {
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		$brands_count       = (int) wp_count_terms( 'product_brand' );
-		$current_brand_slug = wc_clean( wp_unslash( $_GET['product_brand'] ?? '' ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$current_brand_slug = wc_clean( wp_unslash( $_GET['product_brand'] ?? '' ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		/**
 		 * Filter the brands threshold count.
@@ -598,12 +598,12 @@ class WC_Brands_Admin {
 			}
 			$placeholder = esc_attr__( 'Filter by brand', 'fincommerce' );
 			?>
-			<select class="wc-brands-search" name="product_brand" data-placeholder="<?php echo $placeholder; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" data-allow_clear="true">
-				<?php echo $selected_option; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<select class="wc-brands-search" name="product_brand" data-placeholder="<?php echo $placeholder; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>" data-allow_clear="true">
+				<?php echo $selected_option; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 			</select>
 			<?php
 		}
-		// phpcs:enable WordPress.Security.NonceVerification
+		// phpcs:enable finpress.Security.NonceVerification
 	}
 
 	/**
@@ -647,7 +647,7 @@ class WC_Brands_Admin {
 			return;
 		}
 
-		if ( isset( $_POST['permalink_structure'], $_POST['wc-permalinks-nonce'], $_POST['fincommerce_product_brand_slug'] ) && wp_verify_nonce( wp_unslash( $_POST['wc-permalinks-nonce'] ), 'wc-permalinks' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( isset( $_POST['permalink_structure'], $_POST['wc-permalinks-nonce'], $_POST['fincommerce_product_brand_slug'] ) && wp_verify_nonce( wp_unslash( $_POST['wc-permalinks-nonce'] ), 'wc-permalinks' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			update_option( 'fincommerce_brand_permalink', wc_sanitize_permalink( trim( wc_clean( wp_unslash( $_POST['fincommerce_product_brand_slug'] ) ) ) ) );
 		}
 	}

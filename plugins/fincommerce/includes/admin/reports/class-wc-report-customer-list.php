@@ -50,13 +50,13 @@ class WC_Report_Customer_List extends WP_List_Table {
 
 		echo '<div id="poststuff" class="fincommerce-reports-wide">';
 
-		if ( ! empty( $_GET['link_orders'] ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'link_orders' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( ! empty( $_GET['link_orders'] ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'link_orders' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput
 			$linked = wc_update_new_customer_past_orders( absint( $_GET['link_orders'] ) );
 			/* translators: single or plural number of orders */
 			echo '<div class="updated"><p>' . esc_html( sprintf( _n( '%s previous order linked', '%s previous orders linked', $linked, 'fincommerce' ), $linked ) ) . '</p></div>';
 		}
 
-		if ( ! empty( $_GET['refresh'] ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'refresh' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( ! empty( $_GET['refresh'] ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'refresh' ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput
 			$user_id = absint( $_GET['refresh'] );
 			$user    = get_user_by( 'id', $user_id );
 
@@ -234,7 +234,7 @@ class WC_Report_Customer_List extends WP_List_Table {
 	public function order_by_last_name( $query ) {
 		global $wpdb;
 
-		$s = ! empty( $_REQUEST['s'] ) ? wp_unslash( $_REQUEST['s'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$s = ! empty( $_REQUEST['s'] ) ? wp_unslash( $_REQUEST['s'] ) : ''; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		$query->query_from   .= " LEFT JOIN {$wpdb->usermeta} as meta2 ON ({$wpdb->users}.ID = meta2.user_id) ";
 		$query->query_where  .= " AND meta2.meta_key = 'last_name' ";

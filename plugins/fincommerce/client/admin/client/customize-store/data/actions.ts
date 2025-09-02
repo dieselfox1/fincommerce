@@ -3,15 +3,15 @@
 /**
  * External dependencies
  */
-import { resolveSelect, dispatch } from '@wordpress/data';
+import { resolveSelect, dispatch } from '@finpress/data';
 // @ts-ignore No types for this exist yet.
-import { store as coreStore } from '@wordpress/core-data';
-import { BlockInstance, parse, serialize } from '@wordpress/blocks';
+import { store as coreStore } from '@finpress/core-data';
+import { BlockInstance, parse, serialize } from '@finpress/blocks';
 import {
 	registerCoreBlocks,
 	__experimentalGetCoreBlocks,
 	// @ts-ignore No types for this exist yet.
-} from '@wordpress/block-library';
+} from '@finpress/block-library';
 
 /**
  * Internal dependencies
@@ -49,7 +49,7 @@ const parsePattern = ( pattern: Pattern ) => {
 };
 
 /**
- * This function can be removed once the full composability feature is available for all the version of WordPress that we support.
+ * This function can be removed once the full composability feature is available for all the version of finpress that we support.
  */
 export const updateTemplatePrePTK = async ( {
 	homepageTemplateId,

@@ -318,7 +318,7 @@ class OrdersTableQuery {
 		}
 
 		// meta_query.
-		$this->args['meta_query'] = ( $this->arg_isset( 'meta_query' ) && is_array( $this->args['meta_query'] ) ) ? $this->args['meta_query'] : array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		$this->args['meta_query'] = ( $this->arg_isset( 'meta_query' ) && is_array( $this->args['meta_query'] ) ) ? $this->args['meta_query'] : array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 
 		$shortcut_meta_query = array();
 		foreach ( array( 'key', 'value', 'compare', 'type', 'compare_key', 'type_key' ) as $key ) {
@@ -329,13 +329,13 @@ class OrdersTableQuery {
 
 		if ( ! empty( $shortcut_meta_query ) ) {
 			if ( ! empty( $this->args['meta_query'] ) ) {
-				$this->args['meta_query'] = array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				$this->args['meta_query'] = array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 					'relation' => 'AND',
 					$shortcut_meta_query,
 					$this->args['meta_query'],
 				);
 			} else {
-				$this->args['meta_query'] = array( $shortcut_meta_query ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				$this->args['meta_query'] = array( $shortcut_meta_query ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			}
 		}
 	}
@@ -998,7 +998,7 @@ class OrdersTableQuery {
 		}
 
 		if ( $is_address_mapping ) {
-			$join_on .= $wpdb->prepare( " AND `{$alias}`.address_type = %s", substr( $mapping_id, 0, -8 ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$join_on .= $wpdb->prepare( " AND `{$alias}`.address_type = %s", substr( $mapping_id, 0, -8 ) ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		}
 
 		return $join . ( $join_on ? " ON ( {$join_on} )" : '' );
@@ -1099,7 +1099,7 @@ class OrdersTableQuery {
 			$placeholder = $format;
 		}
 
-		$sql = $wpdb->prepare( "{$table}.{$field} {$operator} {$placeholder}", $value ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+		$sql = $wpdb->prepare( "{$table}.{$field} {$operator} {$placeholder}", $value ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared,finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 
 		return $sql;
 	}
@@ -1260,7 +1260,7 @@ class OrdersTableQuery {
 			$this->join(
 				$this->tables['addresses'],
 				$address_type,
-				$wpdb->prepare( "{$this->tables['orders']}.id = {$address_type}.order_id AND {$address_type}.address_type = %s", $address_type ), // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$wpdb->prepare( "{$this->tables['orders']}.id = {$address_type}.order_id AND {$address_type}.address_type = %s", $address_type ), // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				'inner',
 				false
 			);
@@ -1361,7 +1361,7 @@ class OrdersTableQuery {
 		global $wpdb;
 
 		// Run query.
-		$this->orders = array_map( 'absint', $wpdb->get_col( $this->sql ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$this->orders = array_map( 'absint', $wpdb->get_col( $this->sql ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		// Set max_num_pages and found_orders if necessary.
 		if ( ( $this->arg_isset( 'no_found_rows' ) && $this->args['no_found_rows'] ) || empty( $this->orders ) ) {
@@ -1369,7 +1369,7 @@ class OrdersTableQuery {
 		}
 
 		if ( $this->limits ) {
-			$this->found_orders  = absint( $wpdb->get_var( $this->count_sql ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$this->found_orders  = absint( $wpdb->get_var( $this->count_sql ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$this->max_num_pages = (int) ceil( $this->found_orders / $this->args['limit'] );
 		} else {
 			$this->found_orders = count( $this->orders );

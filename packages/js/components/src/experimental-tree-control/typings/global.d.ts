@@ -1,6 +1,6 @@
-import * as components from '@wordpress/components';
+import * as components from '@finpress/components';
 
-declare module '@wordpress/components' {
+declare module '@finpress/components' {
 	declare namespace CheckboxControl {
 		interface Props {
 			indeterminate?: boolean;

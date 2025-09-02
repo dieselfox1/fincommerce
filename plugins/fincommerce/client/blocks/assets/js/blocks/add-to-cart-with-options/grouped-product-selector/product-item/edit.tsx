@@ -1,22 +1,22 @@
 /**
  * External dependencies
  */
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 import {
 	useBlockProps,
 	useInnerBlocksProps,
 	store as blockEditorStore,
 	__experimentalUseBlockPreview as useBlockPreview,
 	BlockContextProvider,
-} from '@wordpress/block-editor';
-import { BlockInstance, type BlockEditProps } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { BlockInstance, type BlockEditProps } from '@finpress/blocks';
 import { withProduct } from '@fincommerce/block-hocs';
 import {
 	InnerBlockLayoutContextProvider,
 	ProductDataContextProvider,
 	useProductDataContext,
 } from '@fincommerce/shared-context';
-import { resolveSelect, useSelect } from '@wordpress/data';
+import { resolveSelect, useSelect } from '@finpress/data';
 import type { ProductResponseItem } from '@fincommerce/types';
 import { productsStore } from '@fincommerce/data';
 

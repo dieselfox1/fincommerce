@@ -3,7 +3,7 @@
  */
 import { render, screen, fireEvent } from '@testing-library/react';
 import AddressLine2Field from '@fincommerce/base-components/cart-checkout/form/address-line-2-field';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 describe( 'Address Line 2 Component', () => {
 	it( 'Renders a hidden field which disappears as soon as text is entered (autofill functionality)', async () => {

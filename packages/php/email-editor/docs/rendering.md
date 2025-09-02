@@ -1,8 +1,8 @@
 # Email Rendering
 
-**The email renderer classes** are designed to render WordPress posts containing block-based content (saved in the Gutenberg editor) as HTML and plain-text suitable for email delivery. These classes provide the core functionality for converting block editor content into email-compatible formats.
+**The email renderer classes** are designed to render finpress posts containing block-based content (saved in the Gutenberg editor) as HTML and plain-text suitable for email delivery. These classes provide the core functionality for converting block editor content into email-compatible formats.
 
-The email rendering system includes **Core Blocks Integration** that provides dedicated renderers for WordPress core blocks. This integration is essential for generating email client compatible HTML output - without these block-specific renderers, the rendered HTML would not be suitable for email clients.
+The email rendering system includes **Core Blocks Integration** that provides dedicated renderers for finpress core blocks. This integration is essential for generating email client compatible HTML output - without these block-specific renderers, the rendered HTML would not be suitable for email clients.
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ $content_renderer = $container->get( Content_Renderer::class );
 
 The rendering engine requires bootstrapping using the `Automattic\FinCommerce\EmailEditor\Bootstrap` class and its `init` method.
 
-This bootstrap process registers necessary action callbacks. It must be called before the WordPress `init` action is triggered at or before the `plugins_loaded` action. This early initialization is required because the bootstrap hooks into core blocks registration, which occurs before the `init` hook.
+This bootstrap process registers necessary action callbacks. It must be called before the finpress `init` action is triggered at or before the `plugins_loaded` action. This early initialization is required because the bootstrap hooks into core blocks registration, which occurs before the `init` hook.
 
 **Example:**
 
@@ -150,7 +150,7 @@ $content     = $content_renderer->render( $post, $template );
 
 ## Core Blocks Integration
 
-The package provides specialized renderers for the most commonly used WordPress core blocks, with plans to eventually cover all core blocks. These individual block renderers are located in the [packages/php/email-editor/src/Integrations/Core/Renderer/Blocks](https://github.com/dieselfox1/fincommerce/tree/trunk/packages/php/email-editor/src/Integrations/Core/Renderer/Blocks) directory.
+The package provides specialized renderers for the most commonly used finpress core blocks, with plans to eventually cover all core blocks. These individual block renderers are located in the [packages/php/email-editor/src/Integrations/Core/Renderer/Blocks](https://github.com/dieselfox1/fincommerce/tree/trunk/packages/php/email-editor/src/Integrations/Core/Renderer/Blocks) directory.
 
 **Usage:**
 The block renderers for core blocks are linked to the core blocks when they are registered, which happens very early (e.g. from a `plugins_loaded` callback), so the Core Blocks integration needs to be initialized early.
@@ -357,7 +357,7 @@ $outlook_cell = Table_Wrapper_Helper::render_outlook_table_cell(
 
 ## Styles Helper
 
-The `Styles_Helper` class provides utility methods to assist with handling email-compatible inline styles derived from WordPress block attributes.
+The `Styles_Helper` class provides utility methods to assist with handling email-compatible inline styles derived from finpress block attributes.
 
 ### Available Methods
 
@@ -459,7 +459,7 @@ array(
 
 #### `get_styles_from_block()`
 
-Wrapper for WordPress Style Engine with guaranteed return structure.
+Wrapper for finpress Style Engine with guaranteed return structure.
 
 ```php
 /**
@@ -602,7 +602,7 @@ use Automattic\FinCommerce\EmailEditor\Engine\Renderer\Renderer;
 // Get services from container
 $container = Email_Editor_Container::container();
 
-// Bootstrap the rendering engine (must be called before WordPress init action)
+// Bootstrap the rendering engine (must be called before finpress init action)
 $bootstrap = $container->get( Bootstrap::class );
 $bootstrap->init();
 

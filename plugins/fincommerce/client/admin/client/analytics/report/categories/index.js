@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Component, Fragment } from '@wordpress/element';
+import { Component, Fragment } from '@finpress/element';
 import PropTypes from 'prop-types';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

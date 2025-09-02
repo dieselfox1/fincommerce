@@ -14,8 +14,8 @@ jest.mock( '@fincommerce/tracks', () => ( {
 	recordEvent: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	withSelect: () => ( Component: React.ComponentType ) => Component,
 	withDispatch: () => ( Component: React.ComponentType ) => Component,
 } ) );

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen, fireEvent } from '@testing-library/react';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -14,8 +14,8 @@ import { useFulfillmentContext } from '../../../context/fulfillment-context';
 const setError = jest.fn();
 
 // Mock dependencies
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	return {
 		...originalModule,
 		useDispatch: jest.fn( () => {} ),

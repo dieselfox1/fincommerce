@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { useEffect, useRef, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { check, closeSmall, edit, trash } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { useEffect, useRef, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { check, closeSmall, edit, trash } from '@finpress/icons';
 import { evaluate } from '@fincommerce/expression-evaluation';
 
 /**

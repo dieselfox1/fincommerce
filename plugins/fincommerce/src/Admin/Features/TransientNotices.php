@@ -79,7 +79,7 @@ class TransientNotices {
 	 *      'status'  => (string) info|error|success
 	 *      'content' => (string) Content to be shown for the notice. Required.
 	 *      'options' => (array) Array of options to be passed to the notice component.
-	 *       See https://developer.wordpress.org/block-editor/reference-guides/data/data-core-notices/#createNotice for available options.
+	 *       See https://developer.finpress.org/block-editor/reference-guides/data/data-core-notices/#createNotice for available options.
 	 *    ).
 	 */
 	public static function add( $notice ) {

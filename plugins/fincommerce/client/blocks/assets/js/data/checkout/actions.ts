@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { OrderFormValues } from '@fincommerce/settings';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies

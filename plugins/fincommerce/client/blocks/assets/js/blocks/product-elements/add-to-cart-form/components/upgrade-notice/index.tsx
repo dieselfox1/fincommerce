@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 import { UpgradeDowngradeNotice as Notice } from '@fincommerce/editor-components/upgrade-downgrade-notice';
 import { findBlock } from '@fincommerce/utils';
-import { createBlock } from '@wordpress/blocks';
+import { createBlock } from '@finpress/blocks';
 
 /**
  * Internal dependencies

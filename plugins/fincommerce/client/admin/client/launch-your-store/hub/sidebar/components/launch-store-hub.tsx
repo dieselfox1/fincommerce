@@ -8,10 +8,10 @@ import {
 	createInterpolateElement,
 	useEffect,
 	useState,
-} from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 // @ts-ignore No types for this exist yet.
-import SidebarNavigationItem from '@wordpress/edit-site/build-module/components/sidebar-navigation-item';
+import SidebarNavigationItem from '@finpress/edit-site/build-module/components/sidebar-navigation-item';
 import {
 	Button,
 	// @ts-ignore No types for this exist yet.
@@ -23,7 +23,7 @@ import {
 	ToggleControl,
 	Notice,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

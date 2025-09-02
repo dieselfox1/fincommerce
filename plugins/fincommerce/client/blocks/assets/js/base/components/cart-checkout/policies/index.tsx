@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	PRIVACY_URL,
 	TERMS_URL,
 	PRIVACY_PAGE_NAME,
 	TERMS_PAGE_NAME,
 } from '@fincommerce/block-settings';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

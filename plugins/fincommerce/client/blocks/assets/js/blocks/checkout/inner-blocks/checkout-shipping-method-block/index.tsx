@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Icon, shipping } from '@wordpress/icons';
-import { registerBlockType } from '@wordpress/blocks';
+import { Icon, shipping } from '@finpress/icons';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies

@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Dropdown } from '@wordpress/components';
-import { focus } from '@wordpress/dom';
+import { __ } from '@finpress/i18n';
+import { Button, Dropdown } from '@finpress/components';
+import { focus } from '@finpress/dom';
 import clsx from 'clsx';
-import { createElement, Component } from '@wordpress/element';
+import { createElement, Component } from '@finpress/element';
 import { find, partial, last, get, includes } from 'lodash';
 import PropTypes from 'prop-types';
-import { Icon, chevronLeft } from '@wordpress/icons';
+import { Icon, chevronLeft } from '@finpress/icons';
 import {
 	flattenFilters,
 	updateQueryString,

@@ -7,13 +7,13 @@ import {
 	useQueryStateByContext,
 	useCollectionData,
 } from '@fincommerce/base-context/hooks';
-import { useCallback, useState, useEffect } from '@wordpress/element';
+import { useCallback, useState, useEffect } from '@finpress/element';
 import PriceSlider from '@fincommerce/base-components/price-slider';
 import FilterTitlePlaceholder from '@fincommerce/base-components/filter-placeholder';
 import { useDebouncedCallback } from 'use-debounce';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import { getSettingWithCoercion } from '@fincommerce/settings';
-import { addQueryArgs, removeQueryArgs } from '@wordpress/url';
+import { addQueryArgs, removeQueryArgs } from '@finpress/url';
 import { changeUrl, getUrlParameter } from '@fincommerce/utils';
 import {
 	CurrencyResponse,

@@ -4,7 +4,7 @@
 import {
 	registerBlockVariation,
 	type BlockVariationScope,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 interface VariationDetails {
 	blockDescription: string;

@@ -4,7 +4,7 @@ module.exports = {
 	settings: {
 		'import/core-modules': [
 			'@fincommerce/components',
-			'@wordpress/components',
+			'@finpress/components',
 			'@storybook/react',
 			'react-transition-group/CSSTransition',
 			'dompurify',

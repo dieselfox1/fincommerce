@@ -96,7 +96,7 @@
 		"import-wp-css-for-storybook": {
 			"command": "./import-wp-css-storybook.sh",
 			"output": [
-				"wordpress"
+				"finpress"
 			]
 		},
 		"dependencyOutputs": {

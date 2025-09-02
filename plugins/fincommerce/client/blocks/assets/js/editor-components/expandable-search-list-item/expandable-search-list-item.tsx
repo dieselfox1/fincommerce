@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Spinner } from '@wordpress/components';
+import { Spinner } from '@finpress/components';
 import { SearchListItem } from '@fincommerce/editor-components/search-list-control';
 import { RenderItemArgs } from '@fincommerce/editor-components/search-list-control/types';
 import clsx from 'clsx';

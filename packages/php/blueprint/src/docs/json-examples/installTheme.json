@@ -1,7 +1,7 @@
 {
   "step": "installTheme",
   "themeZipFile": {
-	"resource": "wordpress.org/themes",
+	"resource": "finpress.org/themes",
 	"slug": "twentytwenty"
   },
   "options": {

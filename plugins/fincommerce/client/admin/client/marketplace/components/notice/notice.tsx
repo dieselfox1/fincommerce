@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useEffect, useState } from '@wordpress/element';
-import { Icon, check, closeSmall, info, percent } from '@wordpress/icons'; // See: https://wordpress.github.io/gutenberg/?path=/docs/icons-icon--docs
+import { useEffect, useState } from '@finpress/element';
+import { Icon, check, closeSmall, info, percent } from '@finpress/icons'; // See: https://finpress.github.io/gutenberg/?path=/docs/icons-icon--docs
 
 /**
  * Internal dependencies

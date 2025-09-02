@@ -23,7 +23,7 @@
 
 # 8.2.0
 
--   Fix usage of Wordpress DatePicker component in `DatePicker`. #7982
+-   Fix usage of finpress DatePicker component in `DatePicker`. #7982
 -   Fix select-control component label/value alignment. #8045
 -   Fix clicking the error message opens the dropdown. #8094
 -   Fix misaligned "Rows per page" dropdown. #8113
@@ -58,7 +58,7 @@
 -   AdvancedFilters: Create workable defaults for Reports that don't have them #7186
 -   Filters: On update respect all other queries, not just persistedQueries #7155
 -   Fix non-string query prop warning in SelectControl component. #7046
--   Fix WordPress 5.8 compatibility UI fixes #7255
+-   Fix finpress 5.8 compatibility UI fixes #7255
 -   Revert Card component removal #7167.
 -   Update DynamicForm, adding initial config memoization. #7256
 -   Update package dependencies
@@ -67,13 +67,13 @@
 
 -   Fix style regression with the Chart header. #7002
 -   Fix styling of the advanced filter operator selection. #7005
--   Remove the use of Dashicons and replace with @wordpress/icons or gridicons #7020
+-   Remove the use of Dashicons and replace with @finpress/icons or gridicons #7020
 -   Add tree shaking support to this package. #7034
 -   Deprecate the Gravatar component. #7716
 -   Remove useFilters from the package. #7117
 -   Deprecate SegmentedSelection, it will be removed in the next major release. #7118
 -   Deprecate the Count component, with plan to remove in next major version. #7115
--   Remove the long deprecated Card component (use Card from `@wordpress/components` instead). #7114
+-   Remove the long deprecated Card component (use Card from `@finpress/components` instead). #7114
 -   Add `<AbbreviatedCard />` component. #7017
 -   Remove support for IE11. #7112
 
@@ -109,13 +109,13 @@
 
 -   Change styling of `<ProductImage />`.
 -   Remove the `showCount` prop from `<SearchListItem>`. Count will always be displayed if any of those props is not undefined/null: `countLabel` and `item.count`.
--   Fix alignment of `<SearchListItem>` count bubble in newest versions of `@wordpress/components`.
+-   Fix alignment of `<SearchListItem>` count bubble in newest versions of `@finpress/components`.
 -   `<SearchListControl>` no longer has different styles when it's used inside a panel. Those styles are available now with the `isCompact` prop.
 -   Support custom attributes in `<AttributeFilter />`.
 -   Add product attributes support to `<Search />`.
 -   Allow single-selection support to `<Search />`.
 -   Improve handling of `multiple` and `inlineTags` in `<SelectControl />`.
--   Deprecate use of `<Card>` in favor of the `<Card>` component in `@wordpress/components`.
+-   Deprecate use of `<Card>` in favor of the `<Card>` component in `@finpress/components`.
 -   Fixing screen reader text being undefined for report `<Table>`
 -   Update `<SearchListControl />` to use checkbox and radio inputs.
 -   Fix <SelectControl /> so the onChange value type always matches the selected type. #6594
@@ -135,7 +135,7 @@
 # 5.1.0
 
 -   Fix default value for `<Table />` component `onQueryChange` prop.
--   Deprecate our bespoke component `useFilters` in favor of using the WordPress variety `withFilters`.
+-   Deprecate our bespoke component `useFilters` in favor of using the finpress variety `withFilters`.
 -   Fix screen reader text in `<AdvancedFilters />`.
 -   Add `<AttributeFilter />` component to `<AdvancedFilters />`.
 -   Fix internal dependencies for `<Plugins />`.
@@ -145,7 +145,7 @@
 
 -   Added `<Timeline />` component.
 -   Added `<ImageUpload />` component.
--   Style form components for WordPress 5.3.
+-   Style form components for finpress 5.3.
 -   Fix CompareFilter options format (key prop vs. id).
 -   Fix styling of `<Search />` component "clear all" button.
 -   Add state classes to `<TextControlWithAffixes />` component.
@@ -192,7 +192,7 @@
 -   Add `<TextControl />` component.
 -   Require `currency` prop in `<AdvancedFilters />` component.
 -   Remove call to `getAdminLink()` inside the `<Link />` component.
--   Explicitly import component styles from `@wordpress/base-styles` (#3292)
+-   Explicitly import component styles from `@finpress/base-styles` (#3292)
 -   Update various dependencies
 
 # 3.2.0

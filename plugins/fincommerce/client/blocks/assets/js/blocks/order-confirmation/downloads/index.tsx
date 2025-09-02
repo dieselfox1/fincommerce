@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { registerBlockType, type BlockConfiguration } from '@wordpress/blocks';
-import { Icon, download } from '@wordpress/icons';
+import { registerBlockType, type BlockConfiguration } from '@finpress/blocks';
+import { Icon, download } from '@finpress/icons';
 
 /**
  * Internal dependencies

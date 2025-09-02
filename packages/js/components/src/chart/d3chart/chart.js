@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Component, createRef } from '@wordpress/element';
+import { createElement, Component, createRef } from '@finpress/element';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { timeFormat as d3TimeFormat } from 'd3-time-format';

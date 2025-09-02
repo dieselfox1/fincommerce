@@ -1,19 +1,19 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/release/16.4/packages/block-editor/src/components/block-preview/auto.js
+// Reference: https://github.com/finpress/gutenberg/blob/release/16.4/packages/block-editor/src/components/block-preview/auto.js
 
 /**
  * External dependencies
  */
-import { useResizeObserver } from '@wordpress/compose';
+import { useResizeObserver } from '@finpress/compose';
 import {
 	memo,
 	useContext,
 	useEffect,
 	useMemo,
 	useState,
-} from '@wordpress/element';
-import { Disabled, Popover } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { Disabled, Popover } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import { useQuery } from '@fincommerce/navigation';
 import clsx from 'clsx';
 // eslint-disable-next-line @fincommerce/dependency-group
@@ -24,7 +24,7 @@ import {
 	__unstableIframe as Iframe,
 	BlockList,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -218,8 +218,8 @@ function ScaledBlockPreview( {
 									transform: `scale(${ scale })`,
 									// Using width + aspect-ratio instead of height here triggers browsers' native
 									// handling of scrollbar's visibility. It prevents the flickering issue seen
-									// in https://github.com/WordPress/gutenberg/issues/52027.
-									// See https://github.com/WordPress/gutenberg/pull/52921 for more info.
+									// in https://github.com/finpress/gutenberg/issues/52027.
+									// See https://github.com/finpress/gutenberg/pull/52921 for more info.
 									aspectRatio,
 									maxHeight:
 										contentHeight !== null &&
@@ -246,7 +246,7 @@ function ScaledBlockPreview( {
 										pointerEvents: 'none',
 										height: contentHeight,
 										// This is a catch-all max-height for patterns.
-										// See: https://github.com/WordPress/gutenberg/pull/38175.
+										// See: https://github.com/finpress/gutenberg/pull/38175.
 										maxHeight: MAX_HEIGHT,
 								  }
 								: {}

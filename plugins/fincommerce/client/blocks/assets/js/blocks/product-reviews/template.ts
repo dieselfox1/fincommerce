@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { InnerBlockTemplate } from '@wordpress/blocks';
+import { InnerBlockTemplate } from '@finpress/blocks';
 
 const TEMPLATE: InnerBlockTemplate[] = [
 	[ 'fincommerce/product-reviews-title' ],

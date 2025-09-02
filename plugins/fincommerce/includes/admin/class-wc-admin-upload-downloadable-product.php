@@ -33,7 +33,7 @@ class WC_Admin_Upload_Downloadable_Product {
 	 * @return array
 	 */
 	public function upload_dir( $pathdata ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( isset( $_POST['type'] ) && 'downloadable_product' === $_POST['type'] ) {
 
 			if ( empty( $pathdata['subdir'] ) ) {
@@ -49,7 +49,7 @@ class WC_Admin_Upload_Downloadable_Product {
 			}
 		}
 		return $pathdata;
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 
 	/**
@@ -63,7 +63,7 @@ class WC_Admin_Upload_Downloadable_Product {
 	 * @since 4.0
 	 */
 	public function update_filename( $full_filename, $ext, $dir ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( ! isset( $_POST['type'] ) || ! 'downloadable_product' === $_POST['type'] ) {
 			return $full_filename;
 		}
@@ -77,7 +77,7 @@ class WC_Admin_Upload_Downloadable_Product {
 		}
 
 		return $this->unique_filename( $full_filename, $ext );
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 
 	/**

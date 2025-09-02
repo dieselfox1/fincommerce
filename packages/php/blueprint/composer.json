@@ -1,7 +1,7 @@
 {
 	"name": "fincommerce/blueprint",
 	"version": "0.0.1",
-	"type": "wordpress-plugin",
+	"type": "finpress-plugin",
 	"autoload": {
 		"psr-4": {
 			"Automattic\\FinCommerce\\Blueprint\\": "src/"

@@ -72,7 +72,7 @@ class LegacyProxy {
 
 	/**
 	 * Call a user function. This should be used to execute any non-idempotent function, especially
-	 * those in the `includes` directory or provided by WordPress.
+	 * those in the `includes` directory or provided by finpress.
 	 *
 	 * @param string $function_name The function to execute.
 	 * @param mixed  ...$parameters The parameters to pass to the function.
@@ -114,7 +114,7 @@ class LegacyProxy {
 	 * @return void
 	 */
 	public function exit( $status = '' ) {
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		exit( $status );
 	}
 }

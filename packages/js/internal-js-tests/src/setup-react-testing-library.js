@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import '@wordpress/jest-console';
+import '@finpress/jest-console';
 import '@testing-library/jest-dom';
 
 /**
@@ -13,7 +13,7 @@ const consoleErrorSpy = jest
 	.mockImplementation( ( message, ...args ) => {
 		if (
 			typeof message === 'string' &&
-			// The error was introduced since @wordpress/data@8.6.0.
+			// The error was introduced since @finpress/data@8.6.0.
 			message.match( /Store ".*" is already registered/ )
 		) {
 			return;

@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useState, memo } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { BlockInstance, BlockEditProps } from '@wordpress/blocks';
-import { Spinner } from '@wordpress/components';
-import { store as coreStore } from '@wordpress/core-data';
+import { useState, memo } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { BlockInstance, BlockEditProps } from '@finpress/blocks';
+import { Spinner } from '@finpress/components';
+import { store as coreStore } from '@finpress/core-data';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore No types for this exist yet.
@@ -16,9 +16,9 @@ import {
 	useInnerBlocksProps,
 	store as blockEditorStore,
 	// @ts-expect-error no exported member.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalUseBlockPreview as useBlockPreview,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

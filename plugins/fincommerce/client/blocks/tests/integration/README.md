@@ -11,7 +11,7 @@ The purpose of this folder is to:
 
 ## Structure and Approach
 
-Following the [approach used in Gutenberg](https://github.com/WordPress/gutenberg/blob/trunk/docs/contributors/code/testing-overview.md#integration-testing-for-block-ui):
+Following the [approach used in Gutenberg](https://github.com/finpress/gutenberg/blob/trunk/docs/contributors/code/testing-overview.md#integration-testing-for-block-ui):
 
 - Block-specific integration tests are placed within their respective block folders and run as part of the JS test suite. For example, see the [Active Filters block integration test](../../assets/js/blocks/active-filters/test/block.ts).
 - **Wider integration tests** or shared helpers can be added directly within this folder, maintaining flexibility and organization.

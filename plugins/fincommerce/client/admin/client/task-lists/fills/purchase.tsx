@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTaskListItem } from '@fincommerce/onboarding';
-import { useState, useCallback } from '@wordpress/element';
+import { useState, useCallback } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { onboardingStore, pluginsStore } from '@fincommerce/data';
 
 /**

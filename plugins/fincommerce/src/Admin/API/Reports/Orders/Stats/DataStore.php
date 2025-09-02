@@ -349,7 +349,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->total_query->add_sql_clause( 'left_join', $coupon_join );
 		$this->total_query->add_sql_clause( 'where_time', $where_time );
 		$totals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->total_query->get_query_statement(),
 			ARRAY_A
 		);
@@ -384,7 +384,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->interval_query->add_sql_clause( 'left_join', $coupon_join );
 		$this->interval_query->add_sql_clause( 'where_time', $where_time );
 		$db_intervals = $wpdb->get_col(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, , unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, , unprepared SQL ok.
 			$this->interval_query->get_query_statement()
 		);
 
@@ -398,7 +398,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$this->interval_query->add_sql_clause( 'select', ', ' . $selections );
 		}
 		$intervals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, , unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, , unprepared SQL ok.
 			$this->interval_query->get_query_statement(),
 			ARRAY_A
 		);
@@ -723,8 +723,8 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$wpdb->query(
 			$wpdb->prepare(
 				// phpcs:ignore Generic.Commenting.Todo.TaskFound
-				// TODO: use the %i placeholder to prepare the table name when available in the minimum required WordPress version.
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// TODO: use the %i placeholder to prepare the table name when available in the minimum required finpress version.
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"UPDATE {$orders_stats_table} SET returning_customer = CASE WHEN order_id = %d THEN false ELSE true END WHERE customer_id = %d",
 				$order_id,
 				$customer_id

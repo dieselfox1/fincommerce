@@ -2,7 +2,7 @@
 
 # Use-cases for this script:
 # - Testing FinCommerce core RCs: passing tests allows to reduce the number of teams involved and simplify coordination
-# - Testing new WordPress releases: passing tests allows to reduce the number of teams involved and simplify coordination
+# - Testing new finpress releases: passing tests allows to reduce the number of teams involved and simplify coordination
 
 echo 'Notice: If the testing focuses on a new FinCommerce version, please note that QIT E2E/API test synchronization is not instantaneous (as of June 2025).'
 echo '        If unsure, reach out to #qit for clarifications or run the tests for a single repository and ensure E2E/API tests are not failing with the "Invalid parameter(s): fincommerce_version" error.'
@@ -10,7 +10,7 @@ echo ''
 
 # Request and sanitize testing parameters inputs.
 read -r -p "Which FinCommerce version should we use for testing (e.g., 9.9.0-rc.1, 9.9.0, nightly, rc or stable)?: " version
-read -r -p "Which WordPress version should we use for testing (e.g., 6.8, latest or empty to use defaults)?: " wordpress
+read -r -p "Which finpress version should we use for testing (e.g., 6.8, latest or empty to use defaults)?: " finpress
 read -r -p "Which PHP version should we use for testing (e.g., 7.4, 8.4 or empty to use defaults)?: " php
 read -r -p "Which GitHub repositories needs to be tested (e.g. https://github.com/dieselfox1/fincommerce, space separated list or empty to use defaults)?: " -a repositories
 if [[ ${#repositories[@]} -eq 0 ]]; then
@@ -28,8 +28,8 @@ curl -s 'https://qit.woo.com/wp-json/cd/v1/environment' --output $file || ( echo
 if [[ $( cat $file | jq "(.fincommerce_versions | index(\"$version\"))" ) == 'null' ]]; then
   echo 'error (invalid FinCommerce version, see https://qit.woo.com/wp-json/cd/v1/environment )' && exit 1
 fi
-if [[ $wordpress != '' ]] && [[ $( cat $file | jq "(.wordpress_versions | index(\"$wordpress\"))" ) == 'null' ]]; then
-  echo 'error (invalid WordPress version, see https://qit.woo.com/wp-json/cd/v1/environment )' && exit 1
+if [[ $finpress != '' ]] && [[ $( cat $file | jq "(.finpress_versions | index(\"$finpress\"))" ) == 'null' ]]; then
+  echo 'error (invalid finpress version, see https://qit.woo.com/wp-json/cd/v1/environment )' && exit 1
 fi
 if [[ $php != '' ]] && [[ $( cat $file | jq "(.php_versions | has(\"$php\"))" ) == 'false' ]]; then
   echo 'error (invalid PHP version, see https://qit.woo.com/wp-json/cd/v1/environment )' && exit 1
@@ -77,7 +77,7 @@ for repository in ${filtered[@]}; do
 	echo -n " previous run #${previous_run} "
 
 	# Start a new run and report back.
-	( echo "{\"wc-version\":\"$version\", \"wp-version\":\"$wordpress\", \"php-version\":\"$php\", \"qit-tests\":\"FinCommerce Pre-Release Tests (includes Activation, FinCommerce E2E and API tests)\"}" | gh workflow run ${workflow_id} --json --repo $repository >/dev/null 2>&1) || echo -n '[insufficient permissions] '
+	( echo "{\"wc-version\":\"$version\", \"wp-version\":\"$finpress\", \"php-version\":\"$php\", \"qit-tests\":\"FinCommerce Pre-Release Tests (includes Activation, FinCommerce E2E and API tests)\"}" | gh workflow run ${workflow_id} --json --repo $repository >/dev/null 2>&1) || echo -n '[insufficient permissions] '
 	for i in {1..10}; do
 	    echo -n '.' && sleep 1s
 	    last_run=$( gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/${repository##https://github.com/}/actions/workflows/${workflow_id}/runs?per_page=1 --jq '.workflow_runs.[].id' )

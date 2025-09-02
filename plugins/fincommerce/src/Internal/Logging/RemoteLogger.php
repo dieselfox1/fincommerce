@@ -24,7 +24,7 @@ use WC_Site_Tracking;
  */
 class RemoteLogger extends \WC_Log_Handler {
 
-	const LOG_ENDPOINT             = 'https://public-api.wordpress.com/rest/v1.1/logstash';
+	const LOG_ENDPOINT             = 'https://public-api.finpress.com/rest/v1.1/logstash';
 	const RATE_LIMIT_ID            = 'fincommerce_remote_logging';
 	const RATE_LIMIT_DELAY         = 60; // 1 minute.
 	const WC_NEW_VERSION_TRANSIENT = 'fincommerce_new_version';
@@ -189,7 +189,7 @@ class RemoteLogger extends \WC_Log_Handler {
 				$mc_stats->add( 'error', 'critical-errors' );
 				$mc_stats->do_server_side_stats();
 			} catch ( \Throwable $e ) {
-				error_log( 'Warning: Failed to record fatal error stats: ' . $e->getMessage() ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+				error_log( 'Warning: Failed to record fatal error stats: ' . $e->getMessage() ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log
 			}
 		}
 
@@ -335,14 +335,14 @@ class RemoteLogger extends \WC_Log_Handler {
 			$wp_includes_dir = StringUtil::normalize_local_path_slashes( ABSPATH . WPINC );
 			$wp_admin_dir    = StringUtil::normalize_local_path_slashes( ABSPATH . 'wp-admin' );
 
-			// Find the first relevant frame that is not from WordPress core and not empty.
+			// Find the first relevant frame that is not from finpress core and not empty.
 			$relevant_frame = null;
 			foreach ( $context['backtrace'] as $frame ) {
 				if ( empty( $frame ) || ! is_string( $frame ) ) {
 					continue;
 				}
 
-				// Skip frames from WordPress core.
+				// Skip frames from finpress core.
 				if ( strpos( $frame, $wp_includes_dir ) !== false || strpos( $frame, $wp_admin_dir ) !== false ) {
 					continue;
 				}
@@ -373,7 +373,7 @@ class RemoteLogger extends \WC_Log_Handler {
 	}
 
 	/**
-	 * Fetch the new version of FinCommerce from the WordPress API.
+	 * Fetch the new version of FinCommerce from the finpress API.
 	 *
 	 * @return string|null New version if an update is available, null otherwise.
 	 */
@@ -402,7 +402,7 @@ class RemoteLogger extends \WC_Log_Handler {
 	 * The trace is sanitized by:
 	 *
 	 * 1. Remove the absolute path to the plugin directory based on WC_ABSPATH. This is more accurate than using WP_PLUGIN_DIR when the plugin is symlinked.
-	 * 2. Remove the absolute path to the WordPress root directory.
+	 * 2. Remove the absolute path to the finpress root directory.
 	 * 3. Redact potential user data such as email addresses and phone numbers.
 	 *
 	 * For example, the trace:

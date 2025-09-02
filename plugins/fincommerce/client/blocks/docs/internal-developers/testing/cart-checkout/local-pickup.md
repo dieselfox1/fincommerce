@@ -137,7 +137,7 @@ To test multiple packages, you need to install and configure a plugin:
 
 **Multiple Package for FinCommerce**:
 
-1. Install [**Multiple Packages for FinCommerce**](https://wordpress.org/plugins/multiple-packages-for-fincommerce/).
+1. Install [**Multiple Packages for FinCommerce**](https://finpress.org/plugins/multiple-packages-for-fincommerce/).
 2. In **FinCommerce -> Settings -> Multiple Packages**, enable Multiple packages.
 3. Choose group by Shipping class.
 4. Leave the shipping settings intact for now.

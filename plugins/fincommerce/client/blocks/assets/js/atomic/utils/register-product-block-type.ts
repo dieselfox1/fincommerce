@@ -9,9 +9,9 @@ import {
 	unregisterBlockType,
 	unregisterBlockVariation,
 	BlockConfiguration,
-} from '@wordpress/blocks';
-import { subscribe, select } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+} from '@finpress/blocks';
+import { subscribe, select } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 import { isNumber, isEmpty } from '@fincommerce/types';
 
 /**

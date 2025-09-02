@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { compose } from '@wordpress/compose';
+import { compose } from '@finpress/compose';
 import { withPluginsHydration, withOptionsHydration } from '@fincommerce/data';
 import '@fincommerce/notices';
 import { identity, isFunction } from 'lodash';
-import { SlotFillProvider } from '@wordpress/components';
-import { useEffect } from '@wordpress/element';
+import { SlotFillProvider } from '@finpress/components';
+import { useEffect } from '@finpress/element';
 import { CustomerEffortScoreModalContainer } from '@fincommerce/customer-effort-score';
 import { getQuery } from '@fincommerce/navigation';
 import { recordPageView } from '@fincommerce/tracks';
@@ -14,7 +14,7 @@ import {
 	LayoutContextProvider,
 	getLayoutContextValue,
 } from '@fincommerce/admin-layout';
-import { PluginArea } from '@wordpress/plugins';
+import { PluginArea } from '@finpress/plugins';
 
 /**
  * Internal dependencies

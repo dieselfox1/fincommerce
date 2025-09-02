@@ -9,8 +9,8 @@ import { recordPageView } from '@fincommerce/tracks';
  */
 import { _EmbedLayout as EmbedLayout } from '../embed';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn().mockReturnValue( {} ),
 } ) );
 

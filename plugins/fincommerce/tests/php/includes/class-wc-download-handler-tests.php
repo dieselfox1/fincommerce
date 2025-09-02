@@ -93,7 +93,7 @@ class WC_Download_Handler_Tests extends \WC_Unit_Test_Case {
 		$downloads     = $product->get_downloads();
 		$download_keys = array_keys( $downloads );
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		// phpcs:disable finpress.Security.NonceVerification.Recommended finpress.Security.ValidatedSanitizedInput.InputNotValidated
 		$_GET = array(
 			'download_file' => $product_id,
 			'order'         => $order->get_order_key(),
@@ -140,7 +140,7 @@ class WC_Download_Handler_Tests extends \WC_Unit_Test_Case {
 	 */
 	public function test_downloads_remaining_count(): void {
 		self::remove_download_handlers();
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- Ok for unit tests.
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- Ok for unit tests.
 		file_put_contents( WP_CONTENT_DIR . '/uploads/fincommerce_uploads/supersheet-123.ods', str_pad( '', 100 ) );
 
 		list( $product, $order ) = $this->build_downloadable_product_and_order_one(
@@ -161,7 +161,7 @@ class WC_Download_Handler_Tests extends \WC_Unit_Test_Case {
 		$download->set_downloads_remaining( 10 );
 		$download->save();
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		// phpcs:disable finpress.Security.NonceVerification.Recommended finpress.Security.ValidatedSanitizedInput.InputNotValidated
 		$_GET = array(
 			'download_file' => $product_id,
 			'order'         => $order->get_order_key(),

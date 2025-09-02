@@ -101,7 +101,7 @@ class JetpackManifestEditor {
 			$manifest_content
 		);
 
-		// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+		// phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged
 		@file_put_contents( $manifest_dir . $file, $manifest_content );
 	}
 }

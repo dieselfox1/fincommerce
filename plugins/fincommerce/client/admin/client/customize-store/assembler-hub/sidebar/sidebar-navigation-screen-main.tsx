@@ -1,9 +1,9 @@
 /**
- * WordPress dependencies
+ * finpress dependencies
  */
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { useContext } from '@wordpress/element';
+import { useContext } from '@finpress/element';
 import {
 	// @ts-ignore No types for this exist yet.
 	__experimentalItemGroup as ItemGroup,
@@ -11,8 +11,8 @@ import {
 	__experimentalNavigatorButton as NavigatorButton,
 	// @ts-ignore No types for this exist yet.
 	__experimentalHeading as Heading,
-} from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import {
 	siteLogo,
 	color,
@@ -20,9 +20,9 @@ import {
 	header,
 	home,
 	footer,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 // @ts-ignore No types for this exist yet.
-import SidebarNavigationItem from '@wordpress/edit-site/build-module/components/sidebar-navigation-item';
+import SidebarNavigationItem from '@finpress/edit-site/build-module/components/sidebar-navigation-item';
 
 /**
  * Internal dependencies

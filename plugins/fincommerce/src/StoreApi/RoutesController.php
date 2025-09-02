@@ -139,7 +139,7 @@ class RoutesController {
 	}
 
 	/**
-	 * Register defined list of routes with WordPress.
+	 * Register defined list of routes with finpress.
 	 *
 	 * @param string $version API Version being registered..
 	 * @param string $namespace Overrides the default route namespace.

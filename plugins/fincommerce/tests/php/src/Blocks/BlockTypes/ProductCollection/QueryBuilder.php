@@ -516,7 +516,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 			// Since we aren't calling the Query Loop build function, we need to provide
 			// a tax_query rather than relying on it generating one from the input.
 			array(
-				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				'tax_query' => array(
 					array(
 						'taxonomy'         => 'product_cat',
@@ -689,7 +689,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 			$this->block_instance,
 			null,
 			array(
-				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				'tax_query' => array(
 					array(
 						'taxonomy'         => 'product_cat',
@@ -712,7 +712,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 		// Test filtering by Electronics category - Editor.
 		$args    = array(
 			'posts_per_page' => 10,
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query'      => array(
 				array(
 					'taxonomy'         => 'product_cat',
@@ -738,7 +738,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 			$this->block_instance,
 			null,
 			array(
-				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				'tax_query' => array(
 					array(
 						'taxonomy'         => 'product_cat',
@@ -761,7 +761,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 		// Test filtering by Clothing category - Editor.
 		$args_clothing    = array(
 			'posts_per_page' => 10,
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query'      => array(
 				array(
 					'taxonomy'         => 'product_cat',
@@ -824,7 +824,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 			$this->block_instance,
 			null,
 			array(
-				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				'tax_query' => array(
 					array(
 						'taxonomy'         => 'product_tag',
@@ -846,7 +846,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 		// Test filtering by Featured tag - Editor.
 		$args    = array(
 			'posts_per_page' => 10,
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query'      => array(
 				array(
 					'taxonomy'         => 'product_tag',
@@ -871,7 +871,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 			$this->block_instance,
 			null,
 			array(
-				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+				// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				'tax_query' => array(
 					array(
 						'taxonomy'         => 'product_tag',
@@ -893,7 +893,7 @@ class QueryBuilder extends \WP_UnitTestCase {
 		// Test filtering by Sale tag - Editor.
 		$args_sale    = array(
 			'posts_per_page' => 10,
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			'tax_query'      => array(
 				array(
 					'taxonomy'         => 'product_tag',

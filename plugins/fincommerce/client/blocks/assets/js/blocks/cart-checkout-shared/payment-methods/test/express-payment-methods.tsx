@@ -7,7 +7,7 @@ import {
 	registerExpressPaymentMethod,
 	__experimentalDeRegisterExpressPaymentMethod,
 } from '@fincommerce/blocks-registry';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

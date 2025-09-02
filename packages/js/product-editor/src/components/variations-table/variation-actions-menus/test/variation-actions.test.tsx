@@ -17,7 +17,7 @@ jest.mock( '@fincommerce/tracks', () => ( {
 	recordEvent: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/media-utils', () => ( {
+jest.mock( '@finpress/media-utils', () => ( {
 	MediaUpload: ( {
 		onSelect,
 		render: mockRender,

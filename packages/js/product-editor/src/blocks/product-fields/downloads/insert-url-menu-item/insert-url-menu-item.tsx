@@ -2,16 +2,16 @@
  * External dependencies
  */
 import { FocusEvent, FormEvent } from 'react';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { customLink, keyboardReturn } from '@wordpress/icons';
-import { MediaItem } from '@wordpress/media-utils';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { customLink, keyboardReturn } from '@finpress/icons';
+import { MediaItem } from '@finpress/media-utils';
 import {
 	Button,
 	Dropdown,
 	MenuItem,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

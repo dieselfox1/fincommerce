@@ -15,7 +15,7 @@
 	},
 	"license": "GPL-2.0-or-later",
 	"devDependencies": {
-		"@wordpress/env": "10.17.0"
+		"@finpress/env": "10.17.0"
 	},
 	"config": {
 		"ci": {

@@ -369,7 +369,7 @@ class WC_Admin_Post_Types {
 		}
 
 		// Check nonce.
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.ValidatedSanitizedInput.MissingUnslash
 		if ( ! isset( $request_data['fincommerce_quick_edit_nonce'] ) || ! wp_verify_nonce( $request_data['fincommerce_quick_edit_nonce'], 'fincommerce_quick_edit_nonce' ) ) {
 			return $post_id;
 		}
@@ -416,7 +416,7 @@ class WC_Admin_Post_Types {
 
 		if ( isset( $request_data['_sku'] ) ) {
 			$sku = $product->get_sku();
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+			// phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash
 			$new_sku = (string) wc_clean( $request_data['_sku'] );
 
 			if ( $new_sku !== $sku ) {
@@ -435,7 +435,7 @@ class WC_Admin_Post_Types {
 			if ( '_no_shipping_class' === $request_data['_shipping_class'] ) {
 				$product->set_shipping_class_id( 0 );
 			} else {
-				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+				// phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash
 				$shipping_class_id = $data_store->get_shipping_class_id_by_slug( wc_clean( $request_data['_shipping_class'] ) );
 				$product->set_shipping_class_id( $shipping_class_id );
 			}
@@ -454,7 +454,7 @@ class WC_Admin_Post_Types {
 		if ( $product->is_type( ProductType::SIMPLE ) || $product->is_type( ProductType::EXTERNAL ) ) {
 
 			if ( isset( $request_data['_regular_price'] ) ) {
-				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+				// phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash
 				$new_regular_price = ( '' === $request_data['_regular_price'] ) ? '' : wc_format_decimal( $request_data['_regular_price'] );
 				$product->set_regular_price( $new_regular_price );
 			} else {
@@ -462,7 +462,7 @@ class WC_Admin_Post_Types {
 			}
 
 			if ( isset( $request_data['_sale_price'] ) ) {
-				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+				// phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash
 				$new_sale_price = ( '' === $request_data['_sale_price'] ) ? '' : wc_format_decimal( $request_data['_sale_price'] );
 				$product->set_sale_price( $new_sale_price );
 			} else {
@@ -491,7 +491,7 @@ class WC_Admin_Post_Types {
 		}
 
 		// Handle Stock Data.
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$manage_stock = ! empty( $request_data['_manage_stock'] ) && ProductType::GROUPED !== $product->get_type() ? 'yes' : 'no';
 		$backorders   = ! empty( $request_data['_backorders'] ) ? wc_clean( $request_data['_backorders'] ) : 'no';
 		if ( ! empty( $request_data['_stock_status'] ) ) {
@@ -499,7 +499,7 @@ class WC_Admin_Post_Types {
 		} else {
 			$stock_status = $product->is_type( ProductType::VARIABLE ) ? null : ProductStockStatus::IN_STOCK;
 		}
-		// phpcs:enable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:enable finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		$product->set_manage_stock( $manage_stock );
 
@@ -526,7 +526,7 @@ class WC_Admin_Post_Types {
 	 * @param WC_Product $product Product object.
 	 */
 	public function bulk_edit_save( $post_id, $product ) {
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.MissingUnslash
 
 		$request_data = $this->request_data();
 
@@ -574,9 +574,9 @@ class WC_Admin_Post_Types {
 		}
 
 		if ( ! empty( $request_data['_featured'] ) ) {
-			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$product->set_featured( wp_unslash( $request_data['_featured'] ) );
-			// phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:enable finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		}
 
 		if ( ! empty( $request_data['_sold_individually'] ) ) {
@@ -666,7 +666,7 @@ class WC_Admin_Post_Types {
 
 		do_action( 'fincommerce_product_bulk_edit_save', $product );
 
-		// phpcs:enable WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+		// phpcs:enable finpress.Security.ValidatedSanitizedInput.MissingUnslash
 	}
 
 	/**
@@ -714,13 +714,13 @@ class WC_Admin_Post_Types {
 	 * @param WP_Post $post Current post object.
 	 */
 	public function edit_form_after_title( $post ) {
-		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 		if ( 'shop_coupon' === $post->post_type ) {
 			?>
 			<textarea id="fincommerce-coupon-description" name="excerpt" cols="5" rows="2" placeholder="<?php esc_attr_e( 'Description (optional)', 'fincommerce' ); ?>"><?php echo $post->post_excerpt; ?></textarea>
 			<?php
 		}
-		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -908,7 +908,7 @@ class WC_Admin_Post_Types {
 	 * @return bool true if a new price has been set, false otherwise.
 	 */
 	private function set_new_price( $product, $price_type ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 
 		$request_data = $this->request_data();
 
@@ -974,7 +974,7 @@ class WC_Admin_Post_Types {
 
 		return $price_changed;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**

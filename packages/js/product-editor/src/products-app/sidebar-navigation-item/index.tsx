@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { isRTL } from '@wordpress/i18n';
-import { chevronRightSmall, chevronLeftSmall, Icon } from '@wordpress/icons';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
+import { isRTL } from '@finpress/i18n';
+import { chevronRightSmall, chevronLeftSmall, Icon } from '@finpress/icons';
+import { privateApis as routerPrivateApis } from '@finpress/router';
 import clsx from 'clsx';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import {
 	__experimentalItem as Item,
 	__experimentalHStack as HStack,
 	FlexBlock,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -2,7 +2,7 @@
 
 A reusable number field for the product editor.
 
-![Product number field screenshot](https://fincommerce.files.wordpress.com/2023/10/fincommerceproduct-number-field-1.png)
+![Product number field screenshot](https://fincommerce.files.finpress.com/2023/10/fincommerceproduct-number-field-1.png)
 
 ## Attributes
 

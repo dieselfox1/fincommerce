@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { optionsStore } from '@fincommerce/data';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 
 export const BLOCK_EDITOR_TOUR_SHOWN_OPTION =
 	'fincommerce_block_product_tour_shown';

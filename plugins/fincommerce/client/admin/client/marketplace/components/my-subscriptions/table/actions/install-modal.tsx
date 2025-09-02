@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { Button, ButtonGroup, Modal, Notice } from '@wordpress/components';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button, ButtonGroup, Modal, Notice } from '@finpress/components';
+import { __, sprintf } from '@finpress/i18n';
 import { getNewPath, navigateTo, useQuery } from '@fincommerce/navigation';
 import {
 	useCallback,
 	useContext,
 	useEffect,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

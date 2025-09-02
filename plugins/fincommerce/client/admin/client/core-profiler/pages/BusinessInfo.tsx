@@ -1,23 +1,23 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	Button,
 	TextControl,
 	Spinner,
 	CheckboxControl,
 	Notice,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { FormInputValidation } from '@automattic/components';
 import { SelectControl } from '@fincommerce/components';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { Icon, chevronDown } from '@finpress/icons';
 import {
 	useEffect,
 	useState,
 	createInterpolateElement,
-} from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+} from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import { z } from 'zod';
 import clsx from 'clsx';
 
@@ -369,7 +369,7 @@ export const BusinessInfo = ( {
 									</>
 								}
 								placeholder={ __(
-									'wordpress@example.com',
+									'finpress@example.com',
 									'fincommerce'
 								) }
 							/>

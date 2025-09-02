@@ -13,8 +13,8 @@ import {
 	getActiveFiltersFromQuery,
 	getQueryFromActiveFilters,
 } from '@fincommerce/navigation';
-import deprecated from '@wordpress/deprecated';
-import { select as WPSelect } from '@wordpress/data';
+import deprecated from '@finpress/deprecated';
+import { select as WPSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -288,7 +288,7 @@ export function getRequestQuery( options: QueryOptions ) {
  * @param {Object} options                   arguments
  * @param {string} options.endpoint          Report API Endpoint
  * @param {Object} options.query             Query parameters in the url
- * @param {Object} options.select            Instance of @wordpress/select
+ * @param {Object} options.select            Instance of @finpress/select
  * @param {Array}  [options.filters]         config filters
  * @param {Object} [options.advancedFilters] config advanced filters
  * @param {Array}  options.limitBy           Properties used to limit the results. It will be used in the API call to send the IDs.
@@ -314,7 +314,7 @@ export function getSummaryNumbers< T extends ReportStatEndpoint >(
 
 	// Disable eslint rule requiring `getReportStats` to be defined below because the next two statements
 	// depend on `getReportStats` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const primary = getReportStats< T >( endpoint, primaryQuery );
 
 	if ( isResolving( 'getReportStats', [ endpoint, primaryQuery ] ) ) {
@@ -333,7 +333,7 @@ export function getSummaryNumbers< T extends ReportStatEndpoint >(
 
 	// Disable eslint rule requiring `getReportStats` to be defined below because the next two statements
 	// depend on `getReportStats` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const secondary = getReportStats< T >( endpoint, secondaryQuery );
 
 	if ( isResolving( 'getReportStats', [ endpoint, secondaryQuery ] ) ) {
@@ -409,8 +409,8 @@ const getReportChartDataResponse = memoize(
  * @param {string} options.endpoint         Report API Endpoint
  * @param {string} options.dataType         'primary' or 'secondary'
  * @param {Object} options.query            Query parameters in the url
- * @param {Object} options.selector         Instance of @wordpress/select response
- * @param {Object} options.select           (Depreciated) Instance of @wordpress/select
+ * @param {Object} options.selector         Instance of @finpress/select response
+ * @param {Object} options.select           (Depreciated) Instance of @finpress/select
  * @param {Array}  options.limitBy          Properties used to limit the results. It will be used in the API call to send the IDs.
  * @param {string} options.defaultDateRange User specified default date range.
  * @return {Object}  Object containing API request information (response, fetching, and error details)
@@ -433,7 +433,7 @@ export function getReportChartData< T extends ReportStatEndpoint >(
 	const requestQuery = getRequestQuery( options );
 	// Disable eslint rule requiring `stats` to be defined below because the next two if statements
 	// depend on `getReportStats` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const stats = getReportStats< T >( endpoint, requestQuery );
 
 	if ( isResolving( 'getReportStats', [ endpoint, requestQuery ] ) ) {
@@ -574,8 +574,8 @@ export function getReportTableQuery(
  * @param {Object} options                  arguments
  * @param {string} options.endpoint         Report API Endpoint
  * @param {Object} options.query            Query parameters in the url
- * @param {Object} options.selector         Instance of @wordpress/select response
- * @param {Object} options.select           (depreciated) Instance of @wordpress/select
+ * @param {Object} options.selector         Instance of @finpress/select response
+ * @param {Object} options.select           (depreciated) Instance of @finpress/select
  * @param {Object} options.tableQuery       Query parameters specific for that endpoint
  * @param {string} options.defaultDateRange User specified default date range.
  * @return {Object} Object    Table data response
@@ -610,7 +610,7 @@ export function getReportTableData< T extends ReportItemsEndpoint >(
 
 	// Disable eslint rule requiring `items` to be defined below because the next two if statements
 	// depend on `getReportItems` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const items = getReportItems< T >( endpoint, tableQuery );
 
 	const queryResolved = hasFinishedResolution( 'getReportItems', [

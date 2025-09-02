@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@finpress/element';
 
 /* TinyMCE or HTML (textarea) editor  */
 export type EditorType = 'tmce' | 'html';

@@ -4,7 +4,7 @@
 import moment from 'moment';
 import momentTz from 'moment-timezone';
 import { find, memoize } from 'lodash';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { parse } from 'qs';
 
 type Query = {
@@ -756,9 +756,9 @@ export function getDateFormatsForIntervalD3( interval: string, ticks = 0 ) {
 				xFormat = '%b';
 				x2Format = '%Y';
 			}
-			// eslint-disable-next-line @wordpress/i18n-translator-comments
+			// eslint-disable-next-line @finpress/i18n-translator-comments
 			screenReaderFormat = __( 'Week of %B %-d, %Y', 'fincommerce' );
-			// eslint-disable-next-line @wordpress/i18n-translator-comments
+			// eslint-disable-next-line @finpress/i18n-translator-comments
 			tooltipLabelFormat = __( 'Week of %B %-d, %Y', 'fincommerce' );
 			break;
 		case 'quarter':

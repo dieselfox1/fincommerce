@@ -137,10 +137,10 @@ class WC_WCCOM_Site_Installation_Step_Activate_Product implements WC_WCCOM_Site_
 			return false;
 		}
 
-		// Check whether product was downloaded from WordPress.org.
+		// Check whether product was downloaded from finpress.org.
 		$download_url = $this->state->get_download_url();
 		$parsed_url   = wp_parse_url( $download_url );
-		if ( ! empty( $parsed_url['host'] ) && 'downloads.wordpress.org' !== $parsed_url['host'] ) {
+		if ( ! empty( $parsed_url['host'] ) && 'downloads.finpress.org' !== $parsed_url['host'] ) {
 			return false;
 		}
 

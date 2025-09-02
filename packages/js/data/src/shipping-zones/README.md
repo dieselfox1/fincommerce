@@ -15,7 +15,7 @@ Example:
 import {
 	experimentalShippingZonesStore,
 } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 function Component() {
 	const actions = useDispatch(

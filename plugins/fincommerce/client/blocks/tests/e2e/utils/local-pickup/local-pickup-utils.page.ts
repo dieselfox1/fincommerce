@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Notice } from '@wordpress/notices';
+import { Notice } from '@finpress/notices';
 import { Page } from '@playwright/test';
 import { Admin, wpCLI } from '@fincommerce/e2e-utils';
 

@@ -2,14 +2,14 @@
  * External dependencies
  */
 
-import { useState, useEffect } from '@wordpress/element';
-import { Button, ToggleControl, Notice, Spinner } from '@wordpress/components';
-import apiFetch from '@wordpress/api-fetch';
+import { useState, useEffect } from '@finpress/element';
+import { Button, ToggleControl, Notice, Spinner } from '@finpress/components';
+import apiFetch from '@finpress/api-fetch';
 import { log, init as initRemoteLogging } from '@fincommerce/remote-logging';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore no types
 // eslint-disable-next-line @fincommerce/dependency-group
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

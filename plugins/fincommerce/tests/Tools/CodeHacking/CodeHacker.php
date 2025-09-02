@@ -5,7 +5,7 @@
  * @package FinCommerce\Testing
  */
 
-//phpcs:disable WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors.Discouraged
+//phpcs:disable finpress.WP.AlternativeFunctions, finpress.PHP.NoSilencedErrors.Discouraged
 
 namespace Automattic\FinCommerce\Testing\Tools\CodeHacking;
 
@@ -507,5 +507,5 @@ final class CodeHacker {
 	}
 }
 
-//phpcs:enable WordPress.WP.AlternativeFunctions, WordPress.PHP.NoSilencedErrors.Discouraged
+//phpcs:enable finpress.WP.AlternativeFunctions, finpress.PHP.NoSilencedErrors.Discouraged
 

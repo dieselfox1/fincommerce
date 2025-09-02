@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import { createElement } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { createElement } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -12,8 +12,8 @@ import { ProductMVPFeedbackModal } from '../index';
 
 const mockRecordScoreCallback = jest.fn();
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useDispatch: jest.fn(),
 } ) );
 

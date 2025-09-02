@@ -1,21 +1,21 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
+import { __, _x } from '@finpress/i18n';
 import clsx from 'clsx';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@finpress/block-editor';
 import BlockTitle from '@fincommerce/editor-components/block-title';
-import type { BlockEditProps } from '@wordpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 import {
 	Disabled,
 	PanelBody,
 	ToggleControl,
 	withSpokenMessages,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

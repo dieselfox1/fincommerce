@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { select } from '@wordpress/data';
-import { store as coreDataStore } from '@wordpress/core-data';
-import { apiFetch } from '@wordpress/data-controls';
+import { select } from '@finpress/data';
+import { store as coreDataStore } from '@finpress/core-data';
+import { apiFetch } from '@finpress/data-controls';
 
 /**
  * Internal dependencies

@@ -2,8 +2,8 @@
 /**
  * External dependencies
  */
-import { useMemo, RefObject } from '@wordpress/element';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useMemo, RefObject } from '@finpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
 import { getElementBackgroundColor } from '@fincommerce/utils';
 import {
 	store as blockEditorStore,
@@ -11,11 +11,11 @@ import {
 	InspectorControls,
 	ContrastChecker,
 	useBlockEditContext,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -123,13 +123,13 @@ export const ColorPanel = ( {
 	const { clientId } = useBlockEditContext();
 	const attributes = useSelect(
 		( select ) => {
-			// @ts-ignore @wordpress/block-editor/store types not provided
+			// @ts-ignore @finpress/block-editor/store types not provided
 			const { getBlockAttributes } = select( blockEditorStore );
 			return getBlockAttributes( clientId ) || {};
 		},
 		[ clientId ]
 	);
-	// @ts-ignore @wordpress/block-editor/store types not provided
+	// @ts-ignore @finpress/block-editor/store types not provided
 	const { updateBlockAttributes } = useDispatch( blockEditorStore );
 	const settings = useMemo( () => {
 		return createSettings(

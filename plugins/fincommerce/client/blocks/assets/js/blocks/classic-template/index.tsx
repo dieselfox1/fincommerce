@@ -7,22 +7,22 @@ import {
 	getBlockType,
 	registerBlockType,
 	unregisterBlockType,
-} from '@wordpress/blocks';
-import type { BlockEditProps } from '@wordpress/blocks';
+} from '@finpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 import { WC_BLOCKS_IMAGE_URL } from '@fincommerce/block-settings';
 import {
 	useBlockProps,
 	BlockPreview,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { Button, Placeholder, Popover } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { box, Icon } from '@wordpress/icons';
-import { useDispatch, subscribe, useSelect, select } from '@wordpress/data';
-import { useEffect, useState } from '@wordpress/element';
-import { store as noticesStore } from '@wordpress/notices';
-import { useEntityRecord } from '@wordpress/core-data';
-import { store as editorStore } from '@wordpress/editor';
+} from '@finpress/block-editor';
+import { Button, Placeholder, Popover } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { box, Icon } from '@finpress/icons';
+import { useDispatch, subscribe, useSelect, select } from '@finpress/data';
+import { useEffect, useState } from '@finpress/element';
+import { store as noticesStore } from '@finpress/notices';
+import { useEntityRecord } from '@finpress/core-data';
+import { store as editorStore } from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -359,7 +359,7 @@ const registerClassicTemplateBlock = ( {
 	} );
 };
 
-// @todo Refactor when there will be possible to show a block according on a template/post with a Gutenberg API. https://github.com/WordPress/gutenberg/pull/41718
+// @todo Refactor when there will be possible to show a block according on a template/post with a Gutenberg API. https://github.com/finpress/gutenberg/pull/41718
 let previousEditedTemplate: string | number | null = null;
 let isBlockRegistered = false;
 let isBlockInInserter = false;

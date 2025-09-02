@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { PlainText } from '@wordpress/block-editor';
-import { withInstanceId } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { PlainText } from '@finpress/block-editor';
+import { withInstanceId } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

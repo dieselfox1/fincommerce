@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button, Modal } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { Button, Modal } from '@finpress/components';
+import { useState } from '@finpress/element';
 import { getAdminLink } from '@fincommerce/settings';
 
 interface WooPaymentsUpdateRequiredModalProps {

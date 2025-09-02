@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { ComboboxControl as Combobox } from '@wordpress/components';
+import { ComboboxControl as Combobox } from '@finpress/components';
 
 export type ComboboxControlOption = {
 	label: string;

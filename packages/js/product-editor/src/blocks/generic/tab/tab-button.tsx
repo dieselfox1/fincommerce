@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Fill } from '@wordpress/components';
+import { Button, Fill } from '@finpress/components';
 import clsx from 'clsx';
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import LoadingMask from '@fincommerce/base-components/loading-mask';
 import { RemovableChip, TotalsItem } from '@fincommerce/blocks-components';
 import { applyCheckoutFilter } from '@fincommerce/blocks-checkout';

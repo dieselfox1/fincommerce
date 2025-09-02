@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { createInterpolateElement, useContext } from '@wordpress/element';
-import { Icon, external } from '@wordpress/icons';
-import apiFetch from '@wordpress/api-fetch';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { createInterpolateElement, useContext } from '@finpress/element';
+import { Icon, external } from '@finpress/icons';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

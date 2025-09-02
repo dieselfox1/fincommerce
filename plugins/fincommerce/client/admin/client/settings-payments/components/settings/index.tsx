@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Card, CardBody } from '@wordpress/components';
+import { Card, CardBody } from '@finpress/components';
 import { useEffect } from 'react';
 
 /**

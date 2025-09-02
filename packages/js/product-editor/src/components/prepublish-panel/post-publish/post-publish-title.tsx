@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { createElement, createInterpolateElement } from '@wordpress/element';
-import { useEntityProp } from '@wordpress/core-data';
+import { __, sprintf } from '@finpress/i18n';
+import { createElement, createInterpolateElement } from '@finpress/element';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

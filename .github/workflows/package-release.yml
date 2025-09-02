@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       packages:
-        description: 'Enter a specific package to release, or releases separated by commas, ie @woocommerce/components,@woocommerce/number. Leaving this input blank will release all eligible packages.'
+        description: 'Enter a specific package to release, or releases separated by commas, ie @fincommerce/components,@fincommerce/number. Leaving this input blank will release all eligible packages.'
         required: false
         default: '-a'
       dry_run:
@@ -22,8 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup WooCommerce Monorepo
-        uses: ./.github/actions/setup-woocommerce-monorepo
+      - name: Setup fincommerce Monorepo
+        uses: ./.github/actions/setup-fincommerce-monorepo
         with:
           install: true
           build: './tools/package-release'

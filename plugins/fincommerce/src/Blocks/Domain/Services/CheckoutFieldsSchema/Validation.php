@@ -153,7 +153,7 @@ class Validation {
 		}
 
 		if ( empty( self::$meta_schema_json ) ) {
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 			self::$meta_schema_json = file_get_contents( __DIR__ . '/json-schema-draft-07.json' );
 		}
 

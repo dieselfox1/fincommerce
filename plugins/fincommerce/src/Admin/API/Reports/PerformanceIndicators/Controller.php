@@ -540,7 +540,7 @@ class Controller extends GenericController {
 
 			// Loop over provided data and filter by the queried date.
 			// Note that this is currently limited to 30 days via the Jetpack API
-			// but the WordPress.com endpoint allows up to 90 days.
+			// but the finpress.com endpoint allows up to 90 days.
 			$total  = 0;
 			$before = gmdate( 'Y-m-d', strtotime( isset( $query_args['before'] ) ? $query_args['before'] : TimeInterval::default_before() ) );
 			$after  = gmdate( 'Y-m-d', strtotime( isset( $query_args['after'] ) ? $query_args['after'] : TimeInterval::default_after() ) );

@@ -36,8 +36,8 @@
 		<!-- wp:paragraph {"align":"center"} -->
 		<p class="has-text-align-center">
 			<?php
-				/* translators: 1: WordPress link, 2: FinCommerce link */
-				echo sprintf( esc_html__( 'Powered by %1$s with %2$s', 'fincommerce' ), '<a href="https://wordpress.org" target="_blank" rel="noreferrer nofollow">WordPress</a>', '<a href="https://fincommerce.com" target="_blank" rel="noreferrer nofollow">FinCommerce</a>' );
+				/* translators: 1: finpress link, 2: FinCommerce link */
+				echo sprintf( esc_html__( 'Powered by %1$s with %2$s', 'fincommerce' ), '<a href="https://finpress.org" target="_blank" rel="noreferrer nofollow">finpress</a>', '<a href="https://fincommerce.com" target="_blank" rel="noreferrer nofollow">FinCommerce</a>' );
 			?>
 		</p>
 		<!-- /wp:paragraph -->

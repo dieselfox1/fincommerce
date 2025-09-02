@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { Product } from '@fincommerce/data';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 /**
  * Internal dependencies
  */

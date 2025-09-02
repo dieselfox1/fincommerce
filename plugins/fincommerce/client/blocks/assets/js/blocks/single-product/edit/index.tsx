@@ -1,30 +1,30 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useEffect, useState } from '@finpress/element';
 import { withProduct } from '@fincommerce/block-hocs';
 import BlockErrorBoundary from '@fincommerce/base-components/block-error-boundary';
 import EditProductLink from '@fincommerce/editor-components/edit-product-link';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
 import { ProductResponseItem } from '@fincommerce/types';
 import ErrorPlaceholder, {
 	ErrorObject,
 } from '@fincommerce/editor-components/error-placeholder';
 import { PRODUCTS_STORE_NAME, Product } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
-import { Icon, info } from '@wordpress/icons';
+import { useSelect } from '@finpress/data';
+import { Icon, info } from '@finpress/icons';
 import {
 	Placeholder,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalHStack as HStack,
 	// @ts-expect-error Using experimental features
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalText as Text,
 	Button,
 	PanelBody,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

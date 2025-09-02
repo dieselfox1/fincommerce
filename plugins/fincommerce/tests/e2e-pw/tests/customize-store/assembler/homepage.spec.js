@@ -1,7 +1,7 @@
 const { test: base, expect, request } = require( '@playwright/test' );
 const { AssemblerPage } = require( './assembler.page' );
 const { activateTheme, DEFAULT_THEME } = require( '../../../utils/themes' );
-const { getInstalledWordPressVersion } = require( '../../../utils/wordpress' );
+const { getInstalledfinpressVersion } = require( '../../../utils/finpress' );
 const { setOption } = require( '../../../utils/options' );
 const { encodeCredentials } = require( '../../../utils/plugin-utils' );
 const { admin } = require( '../../../test-data/data' );
@@ -44,11 +44,11 @@ test.describe(
 				console.log( 'Store completed option not updated' );
 			}
 
-			const wordPressVersion = await getInstalledWordPressVersion();
+			const finpressVersion = await getInstalledfinpressVersion();
 
-			if ( wordPressVersion > 6.5 ) {
+			if ( finpressVersion > 6.5 ) {
 				test.skip(
-					'Skipping Assembler Homepage tests: WordPress version is above 6.5, which does not support this feature.'
+					'Skipping Assembler Homepage tests: finpress version is above 6.5, which does not support this feature.'
 				);
 			}
 		} );
@@ -245,11 +245,11 @@ test.describe( 'Homepage tracking banner', { tag: tags.NOT_E2E }, () => {
 			console.log( 'Store completed option not updated' );
 		}
 
-		const wordPressVersion = await getInstalledWordPressVersion();
+		const finpressVersion = await getInstalledfinpressVersion();
 
-		if ( wordPressVersion <= 6.5 ) {
+		if ( finpressVersion <= 6.5 ) {
 			test.skip(
-				'Skipping PTK API test: WordPress version is below 6.5, which does not support this feature.'
+				'Skipping PTK API test: finpress version is below 6.5, which does not support this feature.'
 			);
 		}
 	} );

@@ -66,7 +66,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 		$file = chr( 239 ) . chr( 187 ) . chr( 191 ) . $this->export_column_headers();
 
 		if ( @file_exists( $this->get_headers_row_file_path() ) ) { // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
-			$file = @file_get_contents( $this->get_headers_row_file_path() ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents, WordPress.WP.AlternativeFunctions.file_system_read_file_get_contents
+			$file = @file_get_contents( $this->get_headers_row_file_path() ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents, finpress.WP.AlternativeFunctions.file_system_read_file_get_contents
 		}
 
 		return $file;
@@ -81,10 +81,10 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	public function get_file() {
 		$file = '';
 		if ( @file_exists( $this->get_file_path() ) ) { // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
-			$file = @file_get_contents( $this->get_file_path() ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents, WordPress.WP.AlternativeFunctions.file_system_read_file_get_contents
+			$file = @file_get_contents( $this->get_file_path() ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents, finpress.WP.AlternativeFunctions.file_system_read_file_get_contents
 		} else {
-			@file_put_contents( $this->get_file_path(), '' ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents, Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_file_put_contents
-			@chmod( $this->get_file_path(), 0664 ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.chmod_chmod, WordPress.WP.AlternativeFunctions.file_system_read_file_put_contents, Generic.PHP.NoSilencedErrors.Discouraged
+			@file_put_contents( $this->get_file_path(), '' ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents, Generic.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_system_read_file_put_contents
+			@chmod( $this->get_file_path(), 0664 ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.chmod_chmod, finpress.WP.AlternativeFunctions.file_system_read_file_put_contents, Generic.PHP.NoSilencedErrors.Discouraged
 		}
 		return $file;
 	}
@@ -97,8 +97,8 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	public function export() {
 		$this->send_headers();
 		$this->send_content( $this->get_headers_row_file() . $this->get_file() );
-		@unlink( $this->get_file_path() ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_unlink, Generic.PHP.NoSilencedErrors.Discouraged
-		@unlink( $this->get_headers_row_file_path() ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_unlink, Generic.PHP.NoSilencedErrors.Discouraged
+		@unlink( $this->get_file_path() ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_unlink, Generic.PHP.NoSilencedErrors.Discouraged
+		@unlink( $this->get_headers_row_file_path() ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_unlink, Generic.PHP.NoSilencedErrors.Discouraged
 		die();
 	}
 
@@ -109,7 +109,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	 */
 	public function generate_file() {
 		if ( 1 === $this->get_page() ) {
-			@unlink( $this->get_file_path() ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_unlink, Generic.PHP.NoSilencedErrors.Discouraged,
+			@unlink( $this->get_file_path() ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_unlink, Generic.PHP.NoSilencedErrors.Discouraged,
 
 			// We need to initialize the file here.
 			$this->get_file();
@@ -160,7 +160,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 			$header = chr( 239 ) . chr( 187 ) . chr( 191 ) . $this->export_column_headers();
 
 			// We need to use a temporary file to store headers, this will make our life so much easier.
-			@file_put_contents( $this->get_headers_row_file_path(), $header ); //phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents, Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_file_put_contents
+			@file_put_contents( $this->get_headers_row_file_path(), $header ); //phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents, Generic.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_system_read_file_put_contents
 		}
 
 	}

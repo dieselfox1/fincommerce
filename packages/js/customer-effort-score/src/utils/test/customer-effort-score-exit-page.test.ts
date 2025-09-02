@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -11,8 +11,8 @@ import { triggerExitPageCesSurvey } from '../customer-effort-score-exit-page';
 jest.mock( '@fincommerce/data', () => ( {
 	optionsStore: 'options',
 } ) );
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 	dispatch: jest.fn(),
 	resolveSelect: jest.fn().mockReturnValue( {

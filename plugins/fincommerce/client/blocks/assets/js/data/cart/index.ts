@@ -7,8 +7,8 @@ import {
 	createReduxStore,
 	dispatch as wpDispatch,
 	select,
-} from '@wordpress/data';
-import { controls as dataControls } from '@wordpress/data-controls';
+} from '@finpress/data';
+import { controls as dataControls } from '@finpress/data-controls';
 
 /**
  * Internal dependencies
@@ -89,7 +89,7 @@ subscribe( () => {
 		window.dispatchEvent(
 			// Question: What are the usual names for FinCommerce events?
 			new CustomEvent( 'wc-blocks_store_sync_required', {
-				detail: { type: 'from_@wordpress/data' },
+				detail: { type: 'from_@finpress/data' },
 			} )
 		);
 	}

@@ -2,21 +2,21 @@
  * External dependencies
  */
 import { render } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import { ShippingRecommendations } from '../shipping-recommendations-wrapper';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 	useDispatch: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/element', () => ( {
-	...jest.requireActual( '@wordpress/element' ),
+jest.mock( '@finpress/element', () => ( {
+	...jest.requireActual( '@finpress/element' ),
 	Suspense: () => <div>FinCommerce Shipping</div>,
 } ) );
 

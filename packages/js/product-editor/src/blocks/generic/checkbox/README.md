@@ -2,7 +2,7 @@
 
 A reusable checkbox for the product editor.
 
-![Product checkbox field screenshot](https://fincommerce.files.wordpress.com/2023/09/checkbox.png)
+![Product checkbox field screenshot](https://fincommerce.files.finpress.com/2023/09/checkbox.png)
 
 _Please note that to persist a custom field in the product it also needs to be added to the FinCommerce REST API._
 

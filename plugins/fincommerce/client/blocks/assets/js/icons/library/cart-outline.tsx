@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG } from '@wordpress/primitives';
+import { SVG } from '@finpress/primitives';
 
 const cartOutline = (
 	<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">

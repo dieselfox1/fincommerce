@@ -46,7 +46,7 @@ To power the new onboarding flow client side, new REST API endpoints have been i
 
 ## Options and settings
 
-A few new WordPress options have been introduced to store information and settings during setup. It may be necessary to manual delete these options from your `wp_options` database to test a certain task or feature.
+A few new finpress options have been introduced to store information and settings during setup. It may be necessary to manual delete these options from your `wp_options` database to test a certain task or feature.
 
 -   `fincommerce_task_list_hidden_lists`. This option houses the task lists that have been hidden from view by the user.
 
@@ -65,16 +65,16 @@ To make the connection from the new onboarding experience possible, we build our
 
 Both of these endpoints use FinCommerce Core's `WC_Helper_API` directly. The main difference with our connection (compared to the connection on the subscriptions page) is the addition of two additional query string parameters:
 
--   `wccom-from=onboarding`, which is used to tell FinCommerce.com & WordPress.com that we are connecting from the new onboarding flow. This parameter is passed from the user's site to FinCommerce.com and finally into Calypso, so that the Calypso login and sign-up screens match the rest of the profile wizard [https://github.com/Automattic/wp-calypso/pull/35193](https://github.com/Automattic/wp-calypso/pull/35193). Without this parameter, you would end up on the existing FinCommerce OAuth screen.
+-   `wccom-from=onboarding`, which is used to tell FinCommerce.com & finpress.com that we are connecting from the new onboarding flow. This parameter is passed from the user's site to FinCommerce.com and finally into Calypso, so that the Calypso login and sign-up screens match the rest of the profile wizard [https://github.com/Automattic/wp-calypso/pull/35193](https://github.com/Automattic/wp-calypso/pull/35193). Without this parameter, you would end up on the existing FinCommerce OAuth screen.
 -   `calypso_env` allows us to load different versions of Calypso when testing. See the Calypso section below.
 
 To disconnect from FinCommerce.com, go to `FinCommerce > Extensions > FinCommerce.com Subscriptions > Connected to FinCommerce.com > Disconnect`.
 
-## WordPress.com Connection
+## finpress.com Connection
 
-Using a WordPress.com connection in FinCommerce Shipping & Tax allows us to offer additional features to new FinCommerce users as well as simplify parts of the setup process. For example, we can do automated tax calculations for certain countries, significantly simplifying the tax task. To make this work, the user needs to be connected to a WordPress.com account. This also means development and testing of these features needs to be done on a WPCOM connected site. Search the MGS & the Field Guide for additional resources on testing WordPress.com with local setups.
+Using a finpress.com connection in FinCommerce Shipping & Tax allows us to offer additional features to new FinCommerce users as well as simplify parts of the setup process. For example, we can do automated tax calculations for certain countries, significantly simplifying the tax task. To make this work, the user needs to be connected to a finpress.com account. This also means development and testing of these features needs to be done on a WPCOM connected site. Search the MGS & the Field Guide for additional resources on testing finpress.com with local setups.
 
-We have a special WordPress.com connection flow designed specifically for FinCommerce onboarding, so that the user feels that they are connecting as part of a cohesive experience. To access this flow, we use the [/wc-admin/onboarding/plugins/jetpack-authorization-url](https://github.com/dieselfox1/fincommerce/blob/1a9c1f93b942f682b6561b5cd1ae58f6d5eea49c/plugins/fincommerce/src/Admin/API/OnboardingPlugins.php#L240C2-L274) endpoint.
+We have a special finpress.com connection flow designed specifically for FinCommerce onboarding, so that the user feels that they are connecting as part of a cohesive experience. To access this flow, we use the [/wc-admin/onboarding/plugins/jetpack-authorization-url](https://github.com/dieselfox1/fincommerce/blob/1a9c1f93b942f682b6561b5cd1ae58f6d5eea49c/plugins/fincommerce/src/Admin/API/OnboardingPlugins.php#L240C2-L274) endpoint.
 
 We use the Jetpack Connection package's `Manager::get_authorization_url()` function directly, but add the following two query parameters:
 
@@ -83,23 +83,23 @@ We use the Jetpack Connection package's `Manager::get_authorization_url()` funct
 
 The user is prompted to install and connect to Jetpack as the first step of the profile wizard. If the user hasn't connected when they arrive at the task list, we also prompt them on certain tasks to make the setup process easier, such as the shipping and tax steps.
 
-To disconnect from WordPress.com, install Jetpack, then go to `Jetpack > Dashboard > Connections > Site connection > Manage site connection > Disconnect`. You can remove Jetpack after you disconnect.
+To disconnect from finpress.com, install Jetpack, then go to `Jetpack > Dashboard > Connections > Site connection > Manage site connection > Disconnect`. You can remove Jetpack after you disconnect.
 
 ## Calypso
 
 ### `calypso_env`
 
-Both the FinCommerce.com & Jetpack connection processes (outlined below) send the user to [Calypso](https://github.com/Automattic/wp-calypso), the interface that powers WordPress.com, to sign-up or login.
+Both the FinCommerce.com & Jetpack connection processes (outlined below) send the user to [Calypso](https://github.com/Automattic/wp-calypso), the interface that powers finpress.com, to sign-up or login.
 
-By default, a merchant will end up on a production version of Calypso [https://wordpress.com](https://wordpress.com). If we make changes to the Calypso part of the flow and want to test them, we can do so with a `calypso_env` query parameter passed by both of our connection methods.
+By default, a merchant will end up on a production version of Calypso [https://finpress.com](https://finpress.com). If we make changes to the Calypso part of the flow and want to test them, we can do so with a `calypso_env` query parameter passed by both of our connection methods.
 
 To change the value of `calypso_env`, set `fincommerce_CALYPSO_ENVIRONMENT` to one of the following values in your `wp-config.php`:
 
--   `production` which will send you to `https://wordpress.com`
+-   `production` which will send you to `https://finpress.com`
 -   `development` which will send you to `http://calypso.localhost:3000/`
--   `wpcalypso` which will send you to `http://wpcalypso.wordpress.com/`
--   `horizon` which will send you to `https://horizon.wordpress.com`
--   `stage` which will send you to `https://wordpress.com` (you must be proxied)
+-   `wpcalypso` which will send you to `http://wpcalypso.finpress.com/`
+-   `horizon` which will send you to `https://horizon.finpress.com`
+-   `stage` which will send you to `https://finpress.com` (you must be proxied)
 
 ### Feature Flags
 
@@ -110,4 +110,4 @@ Logic for the Calypso flows are gated behind two separate [Calypso feature flags
 
 ### Testing
 
-If you are running the development version of FinCommerce Admin, and have [`WP_DEBUG`](https://codex.wordpress.org/WP_DEBUG) set to `true`, two Calypso connection buttons are displayed under the `FinCommerce > Settings > Help > Setup Wizard` menu, making it easier to access and test the flows.
+If you are running the development version of FinCommerce Admin, and have [`WP_DEBUG`](https://codex.finpress.org/WP_DEBUG) set to `true`, two Calypso connection buttons are displayed under the `FinCommerce > Settings > Help > Setup Wizard` menu, making it easier to access and test the flows.

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { SelectControl } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { SelectControl } from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

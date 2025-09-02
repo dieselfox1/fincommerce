@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React from 'react';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

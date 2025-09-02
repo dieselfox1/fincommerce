@@ -90,7 +90,7 @@ class PaymentsController {
 					&& $menu_path === $menu_item[2]
 					&& false === strpos( $menu_item[0], $badge ) ) {
 
-					$menu[ $index ][0] .= $badge; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					$menu[ $index ][0] .= $badge; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 					// One menu item with a badge is more than enough.
 					break;

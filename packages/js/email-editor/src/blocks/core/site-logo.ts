@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerBlockVariation } from '@wordpress/blocks';
+import { registerBlockVariation } from '@finpress/blocks';
 
 /**
  * Register a custom variation for the site logo block

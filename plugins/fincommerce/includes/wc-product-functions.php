@@ -372,7 +372,7 @@ function wc_product_canonical_redirect(): void {
 		return;
 	}
 
-	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	// phpcs:ignore finpress.Security.NonceVerification.Recommended
 	$query_vars = isset( $_GET ) && is_array( $_GET ) ? $_GET : array();
 
 	wp_safe_redirect( add_query_arg( $query_vars, wc_get_product( get_the_ID() )->get_permalink() ), 301 );
@@ -1719,7 +1719,7 @@ function wc_update_product_lookup_tables_column( $column ) {
 				$meta_key = '_' . $column;
 			}
 			$column = esc_sql( $column );
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->query(
 				$wpdb->prepare(
 					"
@@ -1732,13 +1732,13 @@ function wc_update_product_lookup_tables_column( $column ) {
 					$meta_key
 				)
 			);
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			break;
 		case 'downloadable':
 		case 'virtual':
 			$column   = esc_sql( $column );
 			$meta_key = '_' . $column;
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->query(
 				$wpdb->prepare(
 					"
@@ -1751,13 +1751,13 @@ function wc_update_product_lookup_tables_column( $column ) {
 					$meta_key
 				)
 			);
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			break;
 		case 'onsale':
 			$column   = esc_sql( $column );
 			$decimals = absint( wc_get_price_decimals() );
 
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->query(
 				$wpdb->prepare(
 					"
@@ -1780,7 +1780,7 @@ function wc_update_product_lookup_tables_column( $column ) {
 					$decimals
 				)
 			);
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			break;
 	}
 

@@ -2,7 +2,7 @@
  * Add an asset file for each entry point that contains the current version calculated for the current source code.
  *
  * This is modified from WP dependency-extraction-webpack-plugin plugin:
- * https://github.com/WordPress/gutenberg/tree/a04a8e94e8b93ba60441c6534e21f4c3c26ff1bc/packages/dependency-extraction-webpack-plugin
+ * https://github.com/finpress/gutenberg/tree/a04a8e94e8b93ba60441c6534e21f4c3c26ff1bc/packages/dependency-extraction-webpack-plugin
  *
  * We can contribute this back to the original plugin in the future and remove this file.
  */

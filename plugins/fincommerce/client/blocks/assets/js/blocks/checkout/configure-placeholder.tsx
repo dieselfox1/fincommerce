@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Placeholder, Button } from '@wordpress/components';
-import { Icon, blockDefault } from '@wordpress/icons';
+import { Placeholder, Button } from '@finpress/components';
+import { Icon, blockDefault } from '@finpress/icons';
 import PALETTE from '@automattic/color-studio';
 
 /**

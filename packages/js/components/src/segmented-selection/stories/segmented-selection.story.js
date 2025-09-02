@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { SegmentedSelection } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const name = 'number';
 

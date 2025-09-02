@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { _n, sprintf } from '@wordpress/i18n';
+import { _n, sprintf } from '@finpress/i18n';
 import { SearchListItem } from '@fincommerce/editor-components/search-list-control';
 import clsx from 'clsx';
 

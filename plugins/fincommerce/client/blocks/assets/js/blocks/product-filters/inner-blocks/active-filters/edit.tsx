@@ -5,7 +5,7 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	BlockContextProvider,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

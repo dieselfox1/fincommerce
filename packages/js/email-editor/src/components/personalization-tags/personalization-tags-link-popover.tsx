@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
+import { useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
 import {
 	Popover,
 	Button,
 	TextControl,
 	SelectControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

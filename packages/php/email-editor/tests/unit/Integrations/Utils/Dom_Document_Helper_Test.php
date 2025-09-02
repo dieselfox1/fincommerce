@@ -21,7 +21,7 @@ class Dom_Document_Helper_Test extends \Email_Editor_Unit_Test {
 		$element             = $dom_document_helper->find_element( 'p' );
 		$empty               = $dom_document_helper->find_element( 'span' );
 		$this->assertInstanceOf( \DOMElement::class, $element );
-		$this->assertEquals( 'p', $element->tagName ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->assertEquals( 'p', $element->tagName ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$this->assertNull( $empty );
 	}
 

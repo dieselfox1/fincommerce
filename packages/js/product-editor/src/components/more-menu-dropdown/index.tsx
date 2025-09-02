@@ -2,15 +2,15 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { DropdownMenu } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { moreVertical } from '@wordpress/icons';
+import { DropdownMenu } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { moreVertical } from '@finpress/icons';
 
 /**
- * Copied exactly from https://github.com/WordPress/gutenberg/blob/e89fceffab765902e0162a1e3359d88501e72005/packages/interface/src/components/more-menu-dropdown/index.js
- * to unblock progress as it was discovered to have been deleted while doing a monorepo WordPress dependencies upgrade.
- * It was deleted in https://github.com/WordPress/gutenberg/pull/59096
+ * Copied exactly from https://github.com/finpress/gutenberg/blob/e89fceffab765902e0162a1e3359d88501e72005/packages/interface/src/components/more-menu-dropdown/index.js
+ * to unblock progress as it was discovered to have been deleted while doing a monorepo finpress dependencies upgrade.
+ * It was deleted in https://github.com/finpress/gutenberg/pull/59096
  */
 
 export const MoreMenuDropdown = ( {

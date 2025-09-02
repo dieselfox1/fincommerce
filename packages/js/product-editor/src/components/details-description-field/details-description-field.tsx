@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useFormContext,
 	__experimentalRichTextEditor as RichTextEditor,
 } from '@fincommerce/components';
 import { Product } from '@fincommerce/data';
-import { BlockInstance, serialize, parse } from '@wordpress/blocks';
-import { useState, createElement } from '@wordpress/element';
+import { BlockInstance, serialize, parse } from '@finpress/blocks';
+import { useState, createElement } from '@finpress/element';
 
 export const DetailsDescriptionField = () => {
 	const { setValue, values } = useFormContext< Product >();

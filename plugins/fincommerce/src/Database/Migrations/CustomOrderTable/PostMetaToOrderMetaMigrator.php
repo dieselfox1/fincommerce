@@ -9,7 +9,7 @@ use Automattic\FinCommerce\Database\Migrations\MetaToMetaTableMigrator;
 use Automattic\FinCommerce\Internal\DataStores\Orders\OrdersTableDataStore;
 
 /**
- * Helper class to migrate records from the WordPress post meta table
+ * Helper class to migrate records from the finpress post meta table
  * to the custom orders meta table.
  *
  * @package Automattic\FinCommerce\Database\Migrations\CustomOrderTable

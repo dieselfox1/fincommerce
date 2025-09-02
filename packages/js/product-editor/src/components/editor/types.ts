@@ -4,8 +4,8 @@
 import {
 	EditorSettings,
 	EditorBlockListSettings,
-} from '@wordpress/block-editor';
-import { Template } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { Template } from '@finpress/blocks';
 
 /**
  * Internal dependencies

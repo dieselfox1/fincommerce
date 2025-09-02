@@ -115,7 +115,7 @@ class WC_Customer_Download_Log extends WC_Data {
 	/**
 	 * Set timestamp.
 	 *
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_timestamp( $date = null ) {
 		$this->set_date_prop( 'timestamp', $date );

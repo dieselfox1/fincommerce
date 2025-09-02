@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { Button, Tooltip } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { Button, Tooltip } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 
 export type CustomerFeedbackSimpleProps = {

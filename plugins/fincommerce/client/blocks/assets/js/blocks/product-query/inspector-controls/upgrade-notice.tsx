@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 import { UpgradeDowngradeNotice } from '@fincommerce/editor-components/upgrade-downgrade-notice';
 

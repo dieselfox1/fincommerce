@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Component, Fragment } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Component, Fragment } from '@finpress/element';
 import { isNil } from 'lodash';
 import { SectionHeader } from '@fincommerce/components';
 import { importStore } from '@fincommerce/data';
-import { withSelect } from '@wordpress/data';
+import { withSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

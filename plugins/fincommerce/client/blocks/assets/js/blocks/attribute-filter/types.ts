@@ -2,7 +2,7 @@
  * External dependencies
  */
 import type { ReactElement } from 'react';
-import type { BlockEditProps } from '@wordpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 
 export interface BlockAttributes {
 	className?: string;

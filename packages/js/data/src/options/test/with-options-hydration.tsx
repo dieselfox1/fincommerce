@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { render } from '@testing-library/react';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { createElement } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -13,8 +13,8 @@ import {
 	withOptionsHydration,
 } from '../with-options-hydration';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 	useDispatch: jest.fn(),
 } ) );

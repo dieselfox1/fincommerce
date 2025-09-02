@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

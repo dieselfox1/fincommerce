@@ -430,7 +430,7 @@ class WC_Coupon_Data_Store_CPT extends WC_Data_Store_WP implements WC_Coupon_Dat
 		add_post_meta( $id, 'usage_count', $coupon->get_usage_count( 'edit' ), true );
 		$wpdb->query(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"UPDATE $wpdb->postmeta SET meta_value = meta_value {$operator} 1 WHERE meta_key = 'usage_count' AND post_id = %d;",
 				$id
 			)
@@ -452,7 +452,7 @@ class WC_Coupon_Data_Store_CPT extends WC_Data_Store_WP implements WC_Coupon_Dat
 	public function get_tentative_usage_count( $coupon_id ) {
 		global $wpdb;
 		return $wpdb->get_var(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$this->get_tentative_usage_query( $coupon_id )
 		);
 	}

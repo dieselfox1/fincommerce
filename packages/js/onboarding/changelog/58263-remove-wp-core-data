@@ -1,4 +1,4 @@
 Significance: patch
 Type: dev
-Comment: Remove unused '@types/wordpress__data' package as it's no longer needed.
+Comment: Remove unused '@types/finpress__data' package as it's no longer needed.
 

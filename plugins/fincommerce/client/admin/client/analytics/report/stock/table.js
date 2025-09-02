@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, _n, _x } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __, _n, _x } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import { Link } from '@fincommerce/components';
 import { getNewPath, getPersistedQuery } from '@fincommerce/navigation';
 import { formatValue } from '@fincommerce/number';

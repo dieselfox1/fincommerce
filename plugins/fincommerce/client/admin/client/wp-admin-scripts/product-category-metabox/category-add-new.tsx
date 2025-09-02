@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useCallback, useState } from '@wordpress/element';
-import { addQueryArgs } from '@wordpress/url';
+import { __ } from '@finpress/i18n';
+import { useCallback, useState } from '@finpress/element';
+import { addQueryArgs } from '@finpress/url';
 import { getSetting } from '@fincommerce/settings';
 import {
 	useAsyncFilter,
@@ -11,7 +11,7 @@ import {
 } from '@fincommerce/components';
 import { useUser } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

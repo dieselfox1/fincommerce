@@ -80,9 +80,9 @@ function wc_admin_filter_core_page_breadcrumbs( $breadcrumbs ) {
 					),
 				);
 
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// phpcs:ignore finpress.Security.NonceVerification.Recommended
 				if ( isset( $_GET['tab'] ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					// phpcs:ignore finpress.Security.NonceVerification.Recommended
 					$current_tab = wc_clean( wp_unslash( $_GET['tab'] ) );
 				} else {
 					$current_tab = key( $page_data['tabs'] );

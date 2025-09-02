@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { cartOutline, bag, bagAlt } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

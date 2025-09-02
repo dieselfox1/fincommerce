@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { resolveSelect } from '@wordpress/data';
+import { resolveSelect } from '@finpress/data';
 import { onboardingStore } from '@fincommerce/data';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

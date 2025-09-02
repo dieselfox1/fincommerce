@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { useMemo, useContext } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { useMemo, useContext } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { decodeEntities } from '@finpress/html-entities';
 import PropTypes from 'prop-types';
 import interpolateComponents from '@automattic/interpolate-components';
 import {
@@ -279,7 +279,7 @@ function OrdersPanel( { unreadOrdersCount, orderStatuses } ) {
 			return { isRequesting: false };
 		}
 
-		/* eslint-disable @wordpress/no-unused-vars-before-return */
+		/* eslint-disable @finpress/no-unused-vars-before-return */
 		const actionableOrders = getOrders( actionableOrdersQuery, null );
 
 		const isRequestingActionable = hasFinishedResolution( 'getOrders', [

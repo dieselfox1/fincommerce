@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 
 /**

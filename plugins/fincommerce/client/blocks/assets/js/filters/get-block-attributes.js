@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Adjust attributes on load to set defaults so default attributes get saved.
@@ -34,7 +34,7 @@ const setBlockAttributeDefaults = ( blockAttributes, blockType ) => {
  * This is a workaround for Gutenberg which does not save "default" attributes
  * to the post, which means if defaults change, all existing blocks change too.
  *
- * See https://github.com/WordPress/gutenberg/issues/7342
+ * See https://github.com/finpress/gutenberg/issues/7342
  *
  * To use this, the block name needs a `fincommerce/` prefix, and as well
  * as defining `attributes` during block registration, you must also declare an

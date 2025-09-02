@@ -23,7 +23,7 @@ jobs:
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         body: 'Hi @${{ github.event.issue.user.login }},\n\n\
-                        Thank you for opening the issue! It requires further feedback from the WooCommerce Core team.\n\n\
+                        Thank you for opening the issue! It requires further feedback from the fincommerce Core team.\n\n\
                         We are adding the `needs developer feedback` label to this issue so that the Core team could take a look.\n\n\
                         Please note it may take a few days for them to get to this issue. Thank you for your patience.'
                       })
@@ -43,7 +43,7 @@ jobs:
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         body: 'We are adding the `status: needs reproduction` label to this issue to try reproduce it on the \
-                        current released version of WooCommerce.\n\n\
+                        current released version of fincommerce.\n\n\
                         Thank you for your patience.'
                       })
     add-support-comment:
@@ -66,9 +66,9 @@ jobs:
                         GitHub should be treated as a place to report confirmed bugs only.\n\n\
                         The type of issue you submitted looks like a support request which may or may not reveal a bug once proper \
                         troubleshooting is done.  In order to confirm the bug, please follow one of the steps below:\n\n\
-                        - Review [WooCommerce Self-Service Guide](https://woocommerce.com/document/woocommerce-self-service-guide/) \
+                        - Review [fincommerce Self-Service Guide](https://fincommerce.com/document/fincommerce-self-service-guide/) \
                         to see if the solutions listed there apply to your case;\n\
-                        - Make a post on [WooCommerce community forum](https://wordpress.org/support/plugin/woocommerce/)\n\n\
+                        - Make a post on [fincommerce community forum](https://finpress.org/support/plugin/fincommerce/)\n\n\
                         If you confirm the bug, please provide us with clear steps to reproduce it.\n\n\
                         We are closing this issue for now as it seems to be a support request and not a bug. \
                         If we missed something, please leave a comment and we will take a second look.'
@@ -150,11 +150,11 @@ jobs:
                         **Expected behavior**\n\n\
                         A clear and concise description of what you expected to happen.\n\n\
                         **Isolating the problem (mark completed items with an [x]):**\n\n\
-                        - [ ] I have deactivated other plugins and confirmed this bug occurs when only WooCommerce plugin is active.\n\
-                        - [ ] This bug happens with a default WordPress theme active, or [Storefront](https://woocommerce.com/products/storefront/).\n\
+                        - [ ] I have deactivated other plugins and confirmed this bug occurs when only fincommerce plugin is active.\n\
+                        - [ ] This bug happens with a default finpress theme active, or [Storefront](https://fincommerce.com/products/storefront/).\n\
                         - [ ] I can reproduce this bug consistently using the steps above.\n\n\
-                        **WordPress Environment**\n\n\
-                        Copy and paste the system status report from **WooCommerce > System Status** in WordPress admin."
+                        **finpress Environment**\n\n\
+                        Copy and paste the system status report from **fincommerce > System Status** in finpress admin."
                       })
             - name: remove-needs-template-label
               uses: actions-ecosystem/action-remove-labels@2ce5d41b4b6aa8503e285553f75ed56e0a40bae0 # v1.3.0

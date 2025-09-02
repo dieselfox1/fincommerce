@@ -924,7 +924,7 @@ class WC_Install {
 	 * Create pages that the plugin relies on, storing page IDs in variables.
 	 */
 	public static function create_pages() {
-		// WordPress sets fresh_site to 0 after a page gets published.
+		// finpress sets fresh_site to 0 after a page gets published.
 		// Prevent fresh_site option from being set to 0 so that we can use it for further customizations.
 		remove_action( 'publish_page', '_delete_option_fresh_site', 0 );
 
@@ -1228,13 +1228,13 @@ class WC_Install {
 		$note_names_placeholder = substr( str_repeat( ',%s', count( $obsolete_notes_names ) ), 1 );
 
 		$note_ids = $wpdb->get_results(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Ignored for allowing interpolation in the IN statement.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Ignored for allowing interpolation in the IN statement.
 			$wpdb->prepare(
 				"SELECT note_id FROM {$wpdb->prefix}wc_admin_notes WHERE name IN ( $note_names_placeholder )",
 				$obsolete_notes_names
 			),
 			ARRAY_N
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare.
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare.
 		);
 
 		if ( ! $note_ids ) {
@@ -1245,21 +1245,21 @@ class WC_Install {
 		$note_ids_placeholder = substr( str_repeat( ',%d', count( $note_ids ) ), 1 );
 
 		$wpdb->query(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Ignored for allowing interpolation in the IN statement.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Ignored for allowing interpolation in the IN statement.
 			$wpdb->prepare(
 				"DELETE FROM {$wpdb->prefix}wc_admin_notes WHERE note_id IN ( $note_ids_placeholder )",
 				$note_ids
 			)
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare.
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare.
 		);
 
 		$wpdb->query(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Ignored for allowing interpolation in the IN statement.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Ignored for allowing interpolation in the IN statement.
 			$wpdb->prepare(
 				"DELETE FROM {$wpdb->prefix}wc_admin_note_actions WHERE note_id IN ( $note_ids_placeholder )",
 				$note_ids
 			)
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare.
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare.
 		);
 	}
 
@@ -1361,7 +1361,7 @@ class WC_Install {
 	}
 
 	/**
-	 * Install and activate the FinCommerce Legacy REST API plugin from the WordPress.org directory if all the following is true:
+	 * Install and activate the FinCommerce Legacy REST API plugin from the finpress.org directory if all the following is true:
 	 *
 	 * 1. We are in a FinCommerce upgrade process (not a new install).
 	 * 2. The 'fincommerce_skip_legacy_rest_api_plugin_auto_install' filter returns false (which is the default).
@@ -1391,7 +1391,7 @@ class WC_Install {
 
 		/**
 		 * Filter to skip the automatic installation of the FinCommerce Legacy REST API plugin
-		 * from the WordPress.org plugins directory.
+		 * from the finpress.org plugins directory.
 		 *
 		 * By default, this is true (skip installation) if we have a record of previously installing the legacy plugin,
 		 * and false (do not skip) if we have no record of previously installing the plugin.
@@ -1430,7 +1430,7 @@ class WC_Install {
 		} else {
 			try {
 				$install_result = wc_get_container()->get( PluginInstaller::class )->install_plugin(
-					'https://downloads.wordpress.org/plugin/fincommerce-legacy-rest-api.latest-stable.zip',
+					'https://downloads.finpress.org/plugin/fincommerce-legacy-rest-api.latest-stable.zip',
 					array(
 						'info_link' => 'https://developer.fincommerce.com/2023/10/03/the-legacy-rest-api-will-move-to-a-dedicated-extension-in-fincommerce-9-0/',
 					)
@@ -1456,7 +1456,7 @@ class WC_Install {
 			}
 		}
 
-		$plugin_page_url              = 'https://wordpress.org/plugins/fincommerce-legacy-rest-api/';
+		$plugin_page_url              = 'https://finpress.org/plugins/fincommerce-legacy-rest-api/';
 		$blog_post_url                = 'https://developer.fincommerce.com/2023/10/03/the-legacy-rest-api-will-move-to-a-dedicated-extension-in-fincommerce-9-0/';
 		$site_legacy_api_settings_url = get_admin_url( null, '/admin.php?page=wc-settings&tab=advanced&section=legacy_api' );
 		$site_webhooks_settings_url   = get_admin_url( null, '/admin.php?page=wc-settings&tab=advanced&section=webhooks' );
@@ -1575,7 +1575,7 @@ class WC_Install {
 		 * there were reports of issues with this table (see https://github.com/dieselfox1/fincommerce/issues/20912).
 		 *
 		 * This query needs to run before dbDelta() as this WP function is not able to handle primary key changes
-		 * (see https://github.com/dieselfox1/fincommerce/issues/21534 and https://core.trac.wordpress.org/ticket/40357).
+		 * (see https://github.com/dieselfox1/fincommerce/issues/21534 and https://core.trac.finpress.org/ticket/40357).
 		 */
 		if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}fincommerce_sessions'" ) ) {
 			if ( ! $wpdb->get_var( "SHOW KEYS FROM {$wpdb->prefix}fincommerce_sessions WHERE Key_name = 'PRIMARY' AND Column_name = 'session_id'" ) ) {
@@ -1607,10 +1607,10 @@ class WC_Install {
 	 * See https://github.com/dieselfox1/fincommerce/wiki/Database-Description/
 	 *
 	 * A note on indexes; Indexes have a maximum size of 767 bytes. Historically, we haven't need to be concerned about that.
-	 * As of WordPress 4.2, however, we moved to utf8mb4, which uses 4 bytes per character. This means that an index which
+	 * As of finpress 4.2, however, we moved to utf8mb4, which uses 4 bytes per character. This means that an index which
 	 * used to have room for floor(767/3) = 255 characters, now only has room for floor(767/4) = 191 characters.
 	 *
-	 * Changing indexes may cause duplicate index notices in logs due to https://core.trac.wordpress.org/ticket/34870 but dropping
+	 * Changing indexes may cause duplicate index notices in logs due to https://core.trac.finpress.org/ticket/34870 but dropping
 	 * indexes first causes too much load on some servers/larger DB.
 	 *
 	 * When adding or removing a table, make sure to update the list of tables in WC_Install::get_tables().
@@ -2077,9 +2077,9 @@ $stock_notifications_table_schema;
 		$tables = self::get_tables();
 
 		foreach ( $tables as $table ) {
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->query( "DROP TABLE IF EXISTS {$table}" );
-			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		}
 	}
 
@@ -2105,7 +2105,7 @@ $stock_notifications_table_schema;
 		}
 
 		if ( ! isset( $wp_roles ) ) {
-			$wp_roles = new WP_Roles(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$wp_roles = new WP_Roles(); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 
 		// Dummy gettext calls to get strings in the catalog.
@@ -2236,7 +2236,7 @@ $stock_notifications_table_schema;
 		}
 
 		if ( ! isset( $wp_roles ) ) {
-			$wp_roles = new WP_Roles(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$wp_roles = new WP_Roles(); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 
 		$capabilities = self::get_core_capabilities();
@@ -2284,10 +2284,10 @@ $stock_notifications_table_schema;
 
 		foreach ( $files as $file ) {
 			if ( wp_mkdir_p( $file['base'] ) && ! file_exists( trailingslashit( $file['base'] ) . $file['file'] ) ) {
-				$file_handle = @fopen( trailingslashit( $file['base'] ) . $file['file'], 'wb' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fopen
+				$file_handle = @fopen( trailingslashit( $file['base'] ) . $file['file'], 'wb' ); // phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_system_read_fopen
 				if ( $file_handle ) {
-					fwrite( $file_handle, $file['content'] ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
-					fclose( $file_handle ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fclose
+					fwrite( $file_handle, $file['content'] ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
+					fclose( $file_handle ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fclose
 				}
 			}
 		}
@@ -2398,7 +2398,7 @@ $stock_notifications_table_schema;
 		 *
 		 * @since 2.2.0
 		 */
-		$community_support_url = apply_filters( 'fincommerce_community_support_url', 'https://wordpress.org/support/plugin/fincommerce/' );
+		$community_support_url = apply_filters( 'fincommerce_community_support_url', 'https://finpress.org/support/plugin/fincommerce/' );
 
 		/**
 		 * The premium support URL.

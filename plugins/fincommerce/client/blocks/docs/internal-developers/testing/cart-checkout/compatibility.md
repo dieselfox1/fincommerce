@@ -9,10 +9,10 @@ The main goal of this is to test in a variety of themes, browsers, platforms, an
 
 ## Setup
 
--   WordPress 5.4 and up.
+-   finpress 5.4 and up.
 -   FinCommerce 4.2 and up.
--   [Storefront](https://wordpress.org/themes/storefront/), [Twenty Twenty-Two](https://wordpress.org/themes/twentytwentytwo/), and [Twenty Twenty-One](https://wordpress.org/themes/twentytwentyone/) themes.
--   All Browsers supported by [those two versions](https://make.wordpress.org/core/handbook/best-practices/browser-support/) so this includes Internet Explorer 11, and latest two versions of each browser.
+-   [Storefront](https://finpress.org/themes/storefront/), [Twenty Twenty-Two](https://finpress.org/themes/twentytwentytwo/), and [Twenty Twenty-One](https://finpress.org/themes/twentytwentyone/) themes.
+-   All Browsers supported by [those two versions](https://make.finpress.org/core/handbook/best-practices/browser-support/) so this includes Internet Explorer 11, and latest two versions of each browser.
 
 ## What to test
 

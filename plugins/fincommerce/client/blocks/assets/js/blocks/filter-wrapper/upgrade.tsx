@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
 import { UpgradeDowngradeNotice } from '@fincommerce/editor-components/upgrade-downgrade-notice';
-import { useDispatch, select } from '@wordpress/data';
-import { createBlock } from '@wordpress/blocks';
+import { useDispatch, select } from '@finpress/data';
+import { createBlock } from '@finpress/blocks';
 
 export const UpgradeNotice = ( { clientId }: { clientId: string } ) => {
 	const { replaceBlock, removeBlock, updateBlockAttributes, selectBlock } =

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Component, createElement } from '@wordpress/element';
+import { Component, createElement } from '@finpress/element';
 import {
 	debounce,
 	escapeRegExp,
@@ -12,8 +12,8 @@ import {
 	isNumber,
 	noop,
 } from 'lodash';
-import { withFocusOutside, withSpokenMessages } from '@wordpress/components';
-import { withInstanceId, compose } from '@wordpress/compose';
+import { withFocusOutside, withSpokenMessages } from '@finpress/components';
+import { withInstanceId, compose } from '@finpress/compose';
 import { ChangeEvent, InputHTMLAttributes } from 'react';
 
 /**

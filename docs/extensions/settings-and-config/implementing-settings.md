@@ -15,7 +15,7 @@ You'll need at least two files to create an integration so you'll need to create
 
 ### Creating the Main Plugin File
 
-Create your main plugin file to [hook](https://developer.wordpress.org/reference/functions/add_action/ 'WordPress add_action()') into the `plugins_loaded` hook and check if the `WC_Integration` [class exists](https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.extends 'PHP Class Exists'). If it doesn't then the user most likely doesn't have FinCommerce activated. After you do that you need to register the integration. Load the integration file (we'll get to this file in a minute). Use the `fincommerce_integrations` filter to add a new integration to the [array](http://php.net/manual/en/language.types.array.php 'PHP Array').
+Create your main plugin file to [hook](https://developer.finpress.org/reference/functions/add_action/ 'finpress add_action()') into the `plugins_loaded` hook and check if the `WC_Integration` [class exists](https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.extends 'PHP Class Exists'). If it doesn't then the user most likely doesn't have FinCommerce activated. After you do that you need to register the integration. Load the integration file (we'll get to this file in a minute). Use the `fincommerce_integrations` filter to add a new integration to the [array](http://php.net/manual/en/language.types.array.php 'PHP Array').
 
 ### Creating the Integration Class
 

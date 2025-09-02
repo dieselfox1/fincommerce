@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { useCartEventsContext } from '@fincommerce/base-context';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 

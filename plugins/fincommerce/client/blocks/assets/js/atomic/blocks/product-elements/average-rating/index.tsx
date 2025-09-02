@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
-import { Icon, starHalf } from '@wordpress/icons';
+import { registerBlockType } from '@finpress/blocks';
+import { Icon, starHalf } from '@finpress/icons';
 
 /**
  * Internal dependencies

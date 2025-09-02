@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { noticeContexts, useStoreCart } from '@fincommerce/base-context';
 import { StoreNoticesContainer } from '@fincommerce/blocks-components';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { paymentStore } from '@fincommerce/block-data';
 import { Skeleton } from '@fincommerce/base-components/skeleton';
 import clsx from 'clsx';

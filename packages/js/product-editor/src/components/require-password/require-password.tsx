@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@finpress/compose';
 import {
 	createElement,
 	Fragment,
 	useEffect,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import {
 	BaseControl,
 	CheckboxControl,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

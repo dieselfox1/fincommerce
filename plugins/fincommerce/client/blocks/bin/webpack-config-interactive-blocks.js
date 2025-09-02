@@ -2,13 +2,13 @@
  * External dependencies
  */
 const path = require( 'path' );
-const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
+const DependencyExtractionWebpackPlugin = require( '@finpress/dependency-extraction-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const WebpackRTLPlugin = require( '@fincommerce/block-library/bin/webpack-rtl-plugin' );
 const [
 	,
 	moduleConfig,
-] = require( '@wordpress/scripts/config/webpack.config' );
+] = require( '@finpress/scripts/config/webpack.config' );
 const RemoveFilesPlugin = require( '@fincommerce/block-library/bin/remove-files-webpack-plugin' );
 
 /**

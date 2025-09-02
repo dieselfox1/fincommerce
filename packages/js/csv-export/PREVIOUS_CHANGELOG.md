@@ -16,7 +16,7 @@
 
 # 1.3.0
 
--   Update to @wordpress/eslint coding standards.
+-   Update to @finpress/eslint coding standards.
 
 # 1.2.0
 

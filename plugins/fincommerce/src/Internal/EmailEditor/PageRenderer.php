@@ -47,8 +47,8 @@ class PageRenderer {
 	 * Render the email editor page.
 	 */
 	public function render() {
-		$post_id     = isset( $_GET['post'] ) ? intval( $_GET['post'] ) : 0;  // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
-		$template_id = isset( $_GET['template'] ) ? sanitize_text_field( wp_unslash( $_GET['template'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
+		$post_id     = isset( $_GET['post'] ) ? intval( $_GET['post'] ) : 0;  // phpcs:ignore finpress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
+		$template_id = isset( $_GET['template'] ) ? sanitize_text_field( wp_unslash( $_GET['template'] ) ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
 		$post_type   = $template_id ? 'wp_template' : Integration::EMAIL_POST_TYPE;
 		$post_id     = $template_id ? $template_id : $post_id;
 

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, Component, Fragment } from '@wordpress/element';
-import { SelectControl, Spinner } from '@wordpress/components';
+import { createElement, Component, Fragment } from '@finpress/element';
+import { SelectControl, Spinner } from '@finpress/components';
 import { find } from 'lodash';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';

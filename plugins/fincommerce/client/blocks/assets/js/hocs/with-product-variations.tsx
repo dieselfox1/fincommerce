@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { Component } from '@finpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
+import isShallowEqual from '@finpress/is-shallow-equal';
 import { getProductVariations } from '@fincommerce/editor-components/utils';
 import { ErrorObject } from '@fincommerce/editor-components/error-placeholder';
 import {
@@ -37,7 +37,7 @@ interface State {
  */
 const withProductVariations = createHigherOrderComponent(
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	// @ts-ignore ignoring this line because @wordpress/compose does not expose the correct type for createHigherOrderComponent
+	// @ts-ignore ignoring this line because @finpress/compose does not expose the correct type for createHigherOrderComponent
 	( OriginalComponent ) => {
 		class WrappedComponent extends Component<
 			WithProductVariationsProps,
@@ -194,7 +194,7 @@ const withProductVariations = createHigherOrderComponent(
 
 				return (
 					// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-					// @ts-ignore ignoring this line because @wordpress/compose does not expose the correct type for createHigherOrderComponent
+					// @ts-ignore ignoring this line because @finpress/compose does not expose the correct type for createHigherOrderComponent
 					<OriginalComponent
 						{ ...this.props }
 						error={ error || propsError }

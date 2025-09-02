@@ -20,16 +20,16 @@ const transformModules = {
 };
 
 /**
- * To ensure consistency in the test environment, all test files should use the same instance of the WP packages from the project's node_modules. This prevents potential conflicts with different versions of the packages. For example, a specific version of @wordpress/private-apis is defined in the package.json, but different instances can be used due to sub-dependencies having specific versions, which can cause issues.
+ * To ensure consistency in the test environment, all test files should use the same instance of the WP packages from the project's node_modules. This prevents potential conflicts with different versions of the packages. For example, a specific version of @finpress/private-apis is defined in the package.json, but different instances can be used due to sub-dependencies having specific versions, which can cause issues.
  *
  * This approach aligns the test environment more closely with production, where the same version of the WP packages is used.
  *
  * Add additional mappings for other WP packages that are used in the project if needed.
  */
 const mapWpModules = [
-	'@wordpress/private-apis',
-	'@wordpress/core-data',
-	'@wordpress/components',
+	'@finpress/private-apis',
+	'@finpress/core-data',
+	'@finpress/components',
 ];
 const wpModulesMapper = mapWpModules.reduce( ( acc, module ) => {
 	try {

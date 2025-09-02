@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls } from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
-import { addFilter } from '@wordpress/hooks';
-import { type ElementType } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { useSelect } from '@finpress/data';
+import { addFilter } from '@finpress/hooks';
+import { type ElementType } from '@finpress/element';
 import { EditorBlock, isNumber } from '@fincommerce/types';
 import { usePrevious } from '@fincommerce/base-hooks';
 import {
@@ -17,11 +17,11 @@ import { ProductQueryBlockQuery } from '@fincommerce/blocks/product-query/types'
 import {
 	FormTokenField,
 	ToggleControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanel as ToolsPanel,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToolsPanelItem as ToolsPanelItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

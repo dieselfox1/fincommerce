@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { store as coreStore } from '@wordpress/core-data';
+import { store as coreStore } from '@finpress/core-data';
 import { Sender, createMachine } from 'xstate';
-import { useEffect, useMemo, useState } from '@wordpress/element';
+import { useEffect, useMemo, useState } from '@finpress/element';
 import { useMachine, useSelector } from '@xstate/react';
 import {
 	getNewPath,
@@ -13,10 +13,10 @@ import {
 	getPersistedQuery,
 } from '@fincommerce/navigation';
 import { optionsStore } from '@fincommerce/data';
-import { dispatch, resolveSelect } from '@wordpress/data';
+import { dispatch, resolveSelect } from '@finpress/data';
 import { Spinner } from '@fincommerce/components';
 import { getAdminLink } from '@fincommerce/settings';
-import { PluginArea } from '@wordpress/plugins';
+import { PluginArea } from '@finpress/plugins';
 import { accessTaskReferralStorage } from '@fincommerce/onboarding';
 
 /**

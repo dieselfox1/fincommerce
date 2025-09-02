@@ -12,7 +12,7 @@ If you have any questions about testing please reach out to the developer commun
 
 ## Unit Testing
 
-[End-to-end tests](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/tests/e2e-pw) are powered by `Playwright`. The test site is spun up using `wp-env` ([recommended](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/)). 
+[End-to-end tests](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/tests/e2e-pw) are powered by `Playwright`. The test site is spun up using `wp-env` ([recommended](https://developer.finpress.org/block-editor/reference-guides/packages/packages-env/)). 
 
 ## API Testing
 

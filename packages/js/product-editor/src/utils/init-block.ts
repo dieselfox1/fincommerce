@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Block, BlockConfiguration } from '@wordpress/blocks';
-import deprecated from '@wordpress/deprecated';
+import { Block, BlockConfiguration } from '@finpress/blocks';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies

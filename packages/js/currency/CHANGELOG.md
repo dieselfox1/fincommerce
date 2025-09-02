@@ -13,7 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Make eslint emit JSON report for annotating PRs. [#39704]
 -   Minor - Match TypeScript version with syncpack [#34787]
 -   Patch - Merging trunk with local [#34322]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
 -   Patch - Update eslint to 8.32.0 across the monorepo. [#36700]
 -   Patch - Update events that should trigger the test job(s) [#47612]
 -   Minor - Update pnpm monorepo-wide to 8.6.5 [#38990]

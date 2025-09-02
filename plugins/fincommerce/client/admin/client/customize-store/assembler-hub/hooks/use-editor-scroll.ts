@@ -5,8 +5,8 @@
  * External dependencies
  */
 // @ts-ignore No types for this exist yet.
-import { useIsSiteEditorLoading } from '@wordpress/edit-site/build-module/components/layout/hooks';
-import { useCallback, useEffect } from '@wordpress/element';
+import { useIsSiteEditorLoading } from '@finpress/edit-site/build-module/components/layout/hooks';
+import { useCallback, useEffect } from '@finpress/element';
 
 export const useEditorScroll = ( {
 	editorSelector,

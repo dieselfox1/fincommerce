@@ -19,7 +19,7 @@ namespace Automattic\FinCommerce\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
-// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 
 /**
  * A facade to allow deprecating an entire class.

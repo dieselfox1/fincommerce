@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 import { debounce } from '@fincommerce/base-utils';
 
 /**

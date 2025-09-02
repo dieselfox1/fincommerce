@@ -1,7 +1,7 @@
 ImageUpload
 ===
 
-ImageUpload - Adds an upload area for selecting or uploading an image from the WordPress media gallery.
+ImageUpload - Adds an upload area for selecting or uploading an image from the finpress media gallery.
 
 ## Usage
 

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Notice } from '@wordpress/components';
+import { Notice } from '@finpress/components';
 
 export type UpgradeDowngradeNoticeProps = Omit< Notice.Props, 'actions' > & {
 	actionLabel: string;

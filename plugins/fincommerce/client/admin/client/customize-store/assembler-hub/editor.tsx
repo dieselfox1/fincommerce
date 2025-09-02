@@ -1,24 +1,24 @@
-// Reference: https://github.com/WordPress/gutenberg/tree/v16.4.0/packages/edit-site/src/components/editor/index.js
+// Reference: https://github.com/finpress/gutenberg/tree/v16.4.0/packages/edit-site/src/components/editor/index.js
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { useEffect, useMemo } from '@wordpress/element';
+import { useEffect, useMemo } from '@finpress/element';
 // @ts-ignore No types for this exist yet.
-import { InterfaceSkeleton } from '@wordpress/interface';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { InterfaceSkeleton } from '@finpress/interface';
+import { useSelect, useDispatch } from '@finpress/data';
 // @ts-ignore No types for this exist yet.
-import { BlockContextProvider } from '@wordpress/block-editor';
+import { BlockContextProvider } from '@finpress/block-editor';
 // @ts-ignore No types for this exist yet.
-import { store as editSiteStore } from '@wordpress/edit-site/build-module/store';
+import { store as editSiteStore } from '@finpress/edit-site/build-module/store';
 // @ts-ignore No types for this exist yet.
-import CanvasSpinner from '@wordpress/edit-site/build-module/components/canvas-spinner';
+import CanvasSpinner from '@finpress/edit-site/build-module/components/canvas-spinner';
 // @ts-ignore No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 // @ts-ignore No types for this exist yet.
-import { GlobalStylesRenderer } from '@wordpress/edit-site/build-module/components/global-styles-renderer';
+import { GlobalStylesRenderer } from '@finpress/edit-site/build-module/components/global-styles-renderer';
 
 /**
  * Internal dependencies

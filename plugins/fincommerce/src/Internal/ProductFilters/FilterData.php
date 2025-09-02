@@ -92,7 +92,7 @@ class FilterData {
 			* query.
 			* We're using the query as is, same as Core does.
 			*/
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$results = (array) $wpdb->get_row( $price_filter_sql );
 		}
 
@@ -161,7 +161,7 @@ class FilterData {
 				* SQL query.
 				* We're using the query as is, same as Core does.
 				*/
-				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				$result             = $wpdb->get_row( $stock_status_count_sql );
 				$results[ $status ] = $result->status_count;
 			}
@@ -221,7 +221,7 @@ class FilterData {
 			* SQL query.
 			* We're using the query as is, same as Core does.
 			*/
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$results = $wpdb->get_results( $rating_count_sql );
 			$results = array_map( 'absint', wp_list_pluck( $results, 'product_count', 'rounded_average_rating' ) );
 		}
@@ -284,7 +284,7 @@ class FilterData {
 			 * SQL query.
 			 * We're using the query as is, same as Core does.
 			 */
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$results = $wpdb->get_results( $attribute_count_sql );
 			$results = array_map( 'absint', wp_list_pluck( $results, 'term_count', 'term_count_id' ) );
 		}
@@ -353,7 +353,7 @@ class FilterData {
 				 * SQL query.
 				 * We're using the query as is, same as Core does.
 				 */
-				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				$base_results = $wpdb->get_results( $taxonomy_count_sql );
 				$results      = array_map( 'absint', wp_list_pluck( $base_results, 'term_count', 'term_count_id' ) );
 			}
@@ -391,7 +391,7 @@ class FilterData {
 			AND tt.taxonomy = '{$taxonomy_escaped}'
 		";
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$base_terms = $wpdb->get_results( $base_terms_sql );
 
 		if ( empty( $base_terms ) ) {
@@ -447,7 +447,7 @@ class FilterData {
 			AND tt.taxonomy = '{$taxonomy_escaped}'
 		";
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$count_result = $wpdb->get_row( $batch_count_sql, ARRAY_A );
 
 		if ( empty( $count_result ) ) {
@@ -570,7 +570,7 @@ class FilterData {
 		global $wpdb;
 
 		// The query is already prepared by WP_Query.
-		$results = $wpdb->get_results( $query->request, ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$results = $wpdb->get_results( $query->request, ARRAY_A ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		if ( ! $results ) {
 			$results = array();

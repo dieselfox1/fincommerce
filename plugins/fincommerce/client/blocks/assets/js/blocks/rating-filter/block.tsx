@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { __, sprintf } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
+import { Icon, chevronDown } from '@finpress/icons';
 import Rating from '@fincommerce/base-components/product-rating';
 import { usePrevious, useShallowEqual } from '@fincommerce/base-hooks';
 import {
@@ -13,13 +13,13 @@ import {
 } from '@fincommerce/base-context/hooks';
 import { getSettingWithCoercion } from '@fincommerce/settings';
 import { isBoolean, isObject, objectHasProp } from '@fincommerce/types';
-import isShallowEqual from '@wordpress/is-shallow-equal';
-import { useState, useCallback, useMemo, useEffect } from '@wordpress/element';
+import isShallowEqual from '@finpress/is-shallow-equal';
+import { useState, useCallback, useMemo, useEffect } from '@finpress/element';
 import { CheckboxList } from '@fincommerce/blocks-components';
 import FilterSubmitButton from '@fincommerce/base-components/filter-submit-button';
 import FilterResetButton from '@fincommerce/base-components/filter-reset-button';
 import FormTokenField from '@fincommerce/base-components/form-token-field';
-import { addQueryArgs, removeQueryArgs } from '@wordpress/url';
+import { addQueryArgs, removeQueryArgs } from '@finpress/url';
 import {
 	changeUrl,
 	normalizeQueryParams,

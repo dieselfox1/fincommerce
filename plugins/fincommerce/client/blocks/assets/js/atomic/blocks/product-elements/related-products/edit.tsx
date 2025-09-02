@@ -9,10 +9,10 @@ import {
 	InnerBlocks,
 	InspectorControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import { InnerBlockTemplate } from '@wordpress/blocks';
-import { Notice } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/block-editor';
+import { InnerBlockTemplate } from '@finpress/blocks';
+import { Notice } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

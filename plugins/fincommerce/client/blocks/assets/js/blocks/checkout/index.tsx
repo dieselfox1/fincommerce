@@ -3,9 +3,9 @@
  */
 import clsx from 'clsx';
 import { fields } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
-import { registerBlockType, createBlock } from '@wordpress/blocks';
-import type { BlockInstance } from '@wordpress/blocks';
+import { Icon } from '@finpress/icons';
+import { registerBlockType, createBlock } from '@finpress/blocks';
+import type { BlockInstance } from '@finpress/blocks';
 
 /**
  * Internal dependencies

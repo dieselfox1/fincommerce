@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import userEvent from '@testing-library/user-event';
 import { recordEvent } from '@fincommerce/tracks';
 
@@ -11,9 +11,9 @@ import { recordEvent } from '@fincommerce/tracks';
  */
 import OrdersPanel from '../';
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	// Require the original module to not be mocked...
-	const originalModule = jest.requireActual( '@wordpress/data' );
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true, // Use it when dealing with esModules

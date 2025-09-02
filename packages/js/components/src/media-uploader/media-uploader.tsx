@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, DropZone, FormFileUpload } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, DropZone, FormFileUpload } from '@finpress/components';
 import { Fragment, createElement } from 'react';
 import {
 	MediaItem,
 	MediaUpload,
 	uploadMedia as wpUploadMedia,
 	UploadMediaOptions,
-} from '@wordpress/media-utils';
+} from '@finpress/media-utils';
 
 /**
  * Internal dependencies

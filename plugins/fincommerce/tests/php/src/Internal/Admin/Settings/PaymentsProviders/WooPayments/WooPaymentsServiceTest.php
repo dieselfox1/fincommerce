@@ -427,7 +427,7 @@ class WooPaymentsServiceTest extends WC_Unit_Test_Case {
 					),
 					'auth'  => array(
 						'type' => WooPaymentsService::ACTION_TYPE_REDIRECT,
-						'href' => 'https://wordpress.com/auth?query=some_query',
+						'href' => 'https://finpress.com/auth?query=some_query',
 					),
 					'check' => array(
 						'type' => WooPaymentsService::ACTION_TYPE_REST,
@@ -698,7 +698,7 @@ class WooPaymentsServiceTest extends WC_Unit_Test_Case {
 							'success'      => true,
 							'errors'       => array(),
 							'color_scheme' => 'fresh',
-							'url'          => 'https://wordpress.com/auth?query=some_query',
+							'url'          => 'https://finpress.com/auth?query=some_query',
 						);
 
 						if ( $wpcom_connection_return_url === $return_url && ! empty( $expected_steps[1]['actions']['auth']['href'] ) ) {

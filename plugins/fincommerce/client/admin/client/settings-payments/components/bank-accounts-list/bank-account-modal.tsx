@@ -6,10 +6,10 @@ import {
 	TextControl,
 	SelectControl,
 	Button,
-} from '@wordpress/components';
-import { decodeEntities } from '@wordpress/html-entities';
+} from '@finpress/components';
+import { decodeEntities } from '@finpress/html-entities';
 import { useState } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

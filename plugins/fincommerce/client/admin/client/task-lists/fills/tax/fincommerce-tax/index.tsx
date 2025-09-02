@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { difference } from 'lodash';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { Spinner } from '@fincommerce/components';
 import { pluginsStore, settingsStore } from '@fincommerce/data';
 

@@ -3,9 +3,9 @@
  */
 import 'core-js/features/object/assign';
 import 'core-js/features/array/from';
-import { __, sprintf } from '@wordpress/i18n';
-import { createElement, Component } from '@wordpress/element';
-import { Dropdown, DatePicker as WpDatePicker } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { createElement, Component } from '@finpress/element';
+import { Dropdown, DatePicker as WpDatePicker } from '@finpress/components';
 import { partial, noop } from 'lodash';
 import moment from 'moment';
 import PropTypes from 'prop-types';

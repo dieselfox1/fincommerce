@@ -41,7 +41,7 @@ class Reviews {
 		add_action( 'admin_menu', array( $this, 'add_reviews_page' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_javascript' ) );
 
-		// These ajax callbacks need a low priority to ensure they run before their WordPress core counterparts.
+		// These ajax callbacks need a low priority to ensure they run before their finpress core counterparts.
 		add_action( 'wp_ajax_edit-comment', array( $this, 'handle_edit_review' ), -1 );
 		add_action( 'wp_ajax_replyto-comment', array( $this, 'handle_reply_to_review' ), -1 );
 
@@ -162,12 +162,12 @@ class Reviews {
 	 * Ajax callback for editing a review.
 	 *
 	 * This functionality is taken from {@see wp_ajax_edit_comment()} and is largely copy and pasted. The only thing
-	 * we want to change is the review row HTML in the response. WordPress core uses a comment list table and we need
+	 * we want to change is the review row HTML in the response. finpress core uses a comment list table and we need
 	 * to use our own {@see ReviewsListTable} class to support our custom columns.
 	 *
-	 * This ajax callback is registered with a lower priority than WordPress core's so that our code can run
+	 * This ajax callback is registered with a lower priority than finpress core's so that our code can run
 	 * first. If the supplied comment ID is not a review or a reply to a review, then we `return` early from this method
-	 * to allow the WordPress core callback to take over.
+	 * to allow the finpress core callback to take over.
 	 *
 	 * @return void
 	 *
@@ -236,12 +236,12 @@ class Reviews {
 	 * Ajax callback for replying to a review inline.
 	 *
 	 * This functionality is taken from {@see wp_ajax_replyto_comment()} and is largely copy and pasted. The only thing
-	 * we want to change is the review row HTML in the response. WordPress core uses a comment list table and we need
+	 * we want to change is the review row HTML in the response. finpress core uses a comment list table and we need
 	 * to use our own {@see ReviewsListTable} class to support our custom columns.
 	 *
-	 * This ajax callback is registered with a lower priority than WordPress core's so that our code can run
+	 * This ajax callback is registered with a lower priority than finpress core's so that our code can run
 	 * first. If the supplied comment ID is not a review or a reply to a review, then we `return` early from this method
-	 * to allow the WordPress core callback to take over.
+	 * to allow the finpress core callback to take over.
 	 *
 	 * @return void
 	 *
@@ -255,24 +255,24 @@ class Reviews {
 
 		check_ajax_referer( 'replyto-comment', '_ajax_nonce-replyto-comment' );
 
-		$comment_post_ID = isset( $_POST['comment_post_ID'] ) ? (int) sanitize_text_field( wp_unslash( $_POST['comment_post_ID'] ) ) : 0; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
-		$post            = get_post( $comment_post_ID ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+		$comment_post_ID = isset( $_POST['comment_post_ID'] ) ? (int) sanitize_text_field( wp_unslash( $_POST['comment_post_ID'] ) ) : 0; // phpcs:ignore finpress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+		$post            = get_post( $comment_post_ID ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.VariableNotSnakeCase
 
 		if ( ! $post ) {
 			wp_die( -1 );
 		}
 
-		// Inline Review replies will use the `detail` mode. If that's not what we have, then let WordPress core take over.
+		// Inline Review replies will use the `detail` mode. If that's not what we have, then let finpress core take over.
 		if ( isset( $_REQUEST['mode'] ) && 'dashboard' === $_REQUEST['mode'] ) {
 			return;
 		}
 
-		// If this is not a a reply to a review, bail silently to let WordPress core take over.
+		// If this is not a a reply to a review, bail silently to let finpress core take over.
 		if ( get_post_type( $post ) !== 'product' ) {
 			return;
 		}
 
-		if ( ! current_user_can( 'edit_post', $comment_post_ID ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+		if ( ! current_user_can( 'edit_post', $comment_post_ID ) ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.VariableNotSnakeCase
 			wp_die( -1 );
 		}
 
@@ -289,8 +289,8 @@ class Reviews {
 			$comment_author       = wp_slash( $user->display_name );
 			$comment_author_email = wp_slash( $user->user_email );
 			$comment_author_url   = wp_slash( $user->user_url );
-			// WordPress core already sanitizes `content` during the `pre_comment_content` hook, which is why it's not needed here, {@see wp_filter_comment()} and {@see kses_init_filters()}.
-			$comment_content = isset( $_POST['content'] ) ? wp_unslash( $_POST['content'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// finpress core already sanitizes `content` during the `pre_comment_content` hook, which is why it's not needed here, {@see wp_filter_comment()} and {@see kses_init_filters()}.
+			$comment_content = isset( $_POST['content'] ) ? wp_unslash( $_POST['content'] ) : ''; // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$comment_type    = isset( $_POST['comment_type'] ) ? sanitize_text_field( wp_unslash( $_POST['comment_type'] ) ) : 'comment';
 
 			if ( current_user_can( 'unfiltered_html' ) ) {
@@ -326,7 +326,7 @@ class Reviews {
 		if ( ! empty( $_POST['approve_parent'] ) ) {
 			$parent = get_comment( $comment_parent );
 
-			if ( $parent && '0' === $parent->comment_approved && $parent->comment_post_ID === $comment_post_ID ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+			if ( $parent && '0' === $parent->comment_approved && $parent->comment_post_ID === $comment_post_ID ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.VariableNotSnakeCase
 				if ( ! current_user_can( 'edit_comment', $parent->comment_ID ) ) {
 					wp_die( -1 );
 				}
@@ -410,7 +410,7 @@ class Reviews {
 
 		$messages = $this->get_bulk_action_notice_messages();
 
-		echo ! empty( $messages ) ? '<div id="moderated" class="updated"><p>' . implode( "<br/>\n", $messages ) . '</p></div>' : '';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo ! empty( $messages ) ? '<div id="moderated" class="updated"><p>' . implode( "<br/>\n", $messages ) . '</p></div>' : '';  // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -520,7 +520,7 @@ class Reviews {
 	public function edit_review_parent_file( $parent_file ) {
 		global $submenu_file, $current_screen;
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( isset( $current_screen->id, $_GET['c'] ) && 'comment' === $current_screen->id ) {
 
 			$comment_id = absint( $_GET['c'] );
@@ -532,7 +532,7 @@ class Reviews {
 
 			if ( isset( $comment->comment_post_ID ) && get_post_type( $comment->comment_post_ID ) === 'product' ) {
 				$parent_file  = 'edit.php?post_type=product';
-				$submenu_file = 'product-reviews'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+				$submenu_file = 'product-reviews'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			}
 		}
 
@@ -601,6 +601,6 @@ class Reviews {
 		 * @param string           $output             The HTML output of the list table.
 		 * @param ReviewsListTable $reviews_list_table The reviews list table instance.
 		 */
-		echo apply_filters( 'fincommerce_product_reviews_list_table', ob_get_clean(), $this->reviews_list_table ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_product_reviews_list_table', ob_get_clean(), $this->reviews_list_table ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 }

@@ -8,7 +8,7 @@ import { ItemsSelector } from './';
 /**
  * Returns items based on a search query.
  *
- * @param {Object}   selector Instance of @wordpress/select response
+ * @param {Object}   selector Instance of @finpress/select response
  * @param {string}   endpoint Report API Endpoint
  * @param {string[]} search   Array of search strings.
  * @param {Object}   options  Query options.

@@ -412,7 +412,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 			}
 
 			$filter_name = 'filter_' . wc_attribute_taxonomy_slug( $taxonomy );
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$current_filter = isset( $_GET[ $filter_name ] ) ? explode( ',', wc_clean( wp_unslash( $_GET[ $filter_name ] ) ) ) : array();
 			$current_filter = array_map( 'sanitize_title', $current_filter );
 
@@ -457,7 +457,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 			$term_html .= ' ' . apply_filters( 'fincommerce_layered_nav_count', '<span class="count">(' . absint( $count ) . ')</span>', $count, $term );
 
 			echo '<li class="fincommerce-widget-layered-nav-list__item wc-layered-nav-term ' . ( $option_is_set ? 'fincommerce-widget-layered-nav-list__item--chosen chosen' : '' ) . '">';
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.EscapeOutput.OutputNotEscaped
 			echo apply_filters( 'fincommerce_layered_nav_term_html', $term_html, $term, $link, $count );
 			echo '</li>';
 		}

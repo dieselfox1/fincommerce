@@ -2,16 +2,16 @@
  * External dependencies
  */
 import { useCallback, useRef } from 'react';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	pluginsStore,
 	paymentSettingsStore,
 	PaymentsProvider,
 	PaymentsEntity,
 } from '@fincommerce/data';
-import { resolveSelect, useDispatch, useSelect } from '@wordpress/data';
-import React, { useState, useEffect } from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
+import { resolveSelect, useDispatch, useSelect } from '@finpress/data';
+import React, { useState, useEffect } from '@finpress/element';
+import apiFetch from '@finpress/api-fetch';
 import { getHistory, getNewPath } from '@fincommerce/navigation';
 import { getAdminLink } from '@fincommerce/settings';
 
@@ -104,7 +104,7 @@ export const SettingsPaymentsMain = () => {
 				sprintf(
 					/* translators: %s: plugin name */
 					__(
-						'%s: There was a problem connecting your WordPress.com account — please try again.',
+						'%s: There was a problem connecting your finpress.com account — please try again.',
 						'fincommerce'
 					),
 					'WooPayments'

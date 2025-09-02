@@ -294,7 +294,7 @@ class WC_Notes_Run_Db_Update {
 
 			$next_scheduled_date = WC()->queue()->get_next( 'fincommerce_run_update_callback', null, 'fincommerce-db-updates' );
 
-			if ( $next_scheduled_date || ! empty( $_GET['do_update_fincommerce'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			if ( $next_scheduled_date || ! empty( $_GET['do_update_fincommerce'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 				// Db needs update && db update is scheduled -> update note to In progress.
 				self::update_in_progress_notice( $note_id );
 			} else {

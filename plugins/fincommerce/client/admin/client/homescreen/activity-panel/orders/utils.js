@@ -27,7 +27,7 @@ export function getUnreadOrders( select, orderStatuses ) {
 
 	// Disable eslint rule requiring `totalOrders` to be defined below because the next two statements
 	// depend on `getItemsTotalCount` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const totalOrders = getItemsTotalCount(
 		'orders',
 		ordersQuery,
@@ -68,7 +68,7 @@ export function getLowStockCount( select ) {
 
 	// Disable eslint rule requiring `totalLowStockProducts` to be defined below because the next two statements
 	// depend on `getItemsTotalCount` to have been called.
-	// eslint-disable-next-line @wordpress/no-unused-vars-before-return
+	// eslint-disable-next-line @finpress/no-unused-vars-before-return
 	const totalLowStockProducts = getItemsTotalCount(
 		'products/count-low-in-stock',
 		getLowStockCountQuery,

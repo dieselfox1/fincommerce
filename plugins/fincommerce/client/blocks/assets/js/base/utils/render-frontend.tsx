@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createRoot, useEffect, Suspense } from '@wordpress/element';
+import { createRoot, useEffect, Suspense } from '@finpress/element';
 import BlockErrorBoundary from '@fincommerce/base-components/block-error-boundary';
 import type { Root } from 'react-dom/client';
 

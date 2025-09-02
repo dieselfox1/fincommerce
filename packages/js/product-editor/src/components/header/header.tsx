@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { WooHeaderItem, useAdminSidebarWidth } from '@fincommerce/admin-layout';
-import { useEntityId, useEntityRecord } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
+import { useEntityId, useEntityRecord } from '@finpress/core-data';
+import { useSelect } from '@finpress/data';
 import {
 	createElement,
 	useContext,
@@ -11,16 +11,16 @@ import {
 	Fragment,
 	lazy,
 	Suspense,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Button, Tooltip } from '@wordpress/components';
-import { box, chevronLeft, group, Icon } from '@wordpress/icons';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, Tooltip } from '@finpress/components';
+import { box, chevronLeft, group, Icon } from '@finpress/icons';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';
 import clsx from 'clsx';
 import { Tag } from '@fincommerce/components';
 import { Product } from '@fincommerce/data';
-import PinnedItems from '@wordpress/interface/build-module/components/pinned-items';
+import PinnedItems from '@finpress/interface/build-module/components/pinned-items';
 
 /**
  * Internal dependencies

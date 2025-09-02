@@ -1,23 +1,23 @@
 /**
  * External dependencies
  */
-import { _n, __ } from '@wordpress/i18n';
+import { _n, __ } from '@finpress/i18n';
 import {
 	useState,
 	useEffect,
 	useCallback,
 	useMemo,
 	createInterpolateElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useShippingData, useStoreCart } from '@fincommerce/base-context/hooks';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import {
 	FormattedMonetaryAmount,
 	RadioControlOptionType,
 } from '@fincommerce/blocks-components';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { getSetting } from '@fincommerce/settings';
-import { Icon, mapMarker } from '@wordpress/icons';
+import { Icon, mapMarker } from '@finpress/icons';
 import { CartShippingPackageShippingRate } from '@fincommerce/types';
 import {
 	isPackageRateCollectable,

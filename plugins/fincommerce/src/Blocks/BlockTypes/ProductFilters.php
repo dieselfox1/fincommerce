@@ -126,12 +126,12 @@ class ProductFilters extends AbstractBlock {
 
 		ob_start();
 		?>
-		<div <?php echo get_block_wrapper_attributes( $wrapper_attributes ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo get_block_wrapper_attributes( $wrapper_attributes ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<button
 				class="wc-block-product-filters__open-overlay"
 				data-wp-on--click="actions.openOverlay"
 			>
-				<?php echo $this->get_svg_icon( 'filter-icon-2' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo $this->get_svg_icon( 'filter-icon-2' ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				<span><?php echo esc_html__( 'Filter products', 'fincommerce' ); ?></span>
 			</button>
 			<div class="wc-block-product-filters__overlay">
@@ -147,11 +147,11 @@ class ProductFilters extends AbstractBlock {
 								data-wp-on--click="actions.closeOverlay"
 							>
 								<span><?php echo esc_html__( 'Close', 'fincommerce' ); ?></span>
-								<?php echo $this->get_svg_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								<?php echo $this->get_svg_icon( 'close' ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 							</button>
 						</header>
 						<div class="wc-block-product-filters__overlay-content">
-							<?php echo $inner_blocks; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $inner_blocks; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
 						<footer
 							class="wc-block-product-filters__overlay-footer"
@@ -216,7 +216,7 @@ class ProductFilters extends AbstractBlock {
 	 * @return array Parsed filter params.
 	 */
 	private function get_filter_params( $query_id ) {
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
 
 		$parsed_url = wp_parse_url( esc_url_raw( $request_uri ) );

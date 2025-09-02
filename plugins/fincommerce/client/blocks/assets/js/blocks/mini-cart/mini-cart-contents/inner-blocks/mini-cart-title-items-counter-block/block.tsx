@@ -3,7 +3,7 @@
  */
 import { useStoreCart } from '@fincommerce/base-context';
 import clsx from 'clsx';
-import { _n, sprintf } from '@wordpress/i18n';
+import { _n, sprintf } from '@finpress/i18n';
 import { useStyleProps } from '@fincommerce/base-hooks';
 
 type Props = {

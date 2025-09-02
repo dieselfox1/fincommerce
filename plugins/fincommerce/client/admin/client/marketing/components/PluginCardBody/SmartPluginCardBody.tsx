@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { Button } from '@wordpress/components';
+import { useState } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { Button } from '@finpress/components';
 import { Pill } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import { pluginsStore } from '@fincommerce/data';
 

@@ -33,7 +33,7 @@ You might be running an unsupported version of Vagrant. At the time of writing, 
 ## VVV: `install-wp-tests.sh` error
 
 ```bash
-mysqladmin: CREATE DATABASE failed; error: 'Access denied for user 'wp'@'localhost' to database 'wordpress-one-tests''
+mysqladmin: CREATE DATABASE failed; error: 'Access denied for user 'wp'@'localhost' to database 'finpress-one-tests''
 ```
 
 To fix:

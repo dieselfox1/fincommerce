@@ -157,7 +157,7 @@ const dbUpdateKeyGreaterThan = ( key1, key2 ) => {
 const run = async ( currentRef, { github, context } ) => {
   // Find version number in ref.
   const version = (
-    await readFileFromRef( currentRef, 'plugins/woocommerce/woocommerce.php', { github, context } )
+    await readFileFromRef( currentRef, 'plugins/fincommerce/fincommerce.php', { github, context } )
   ).match( /(?<=Version: )(.+)/ )[0];
 
   if ( version.endsWith( '-dev' ) || version.endsWith( '-beta.1' ) ) {
@@ -167,11 +167,11 @@ const run = async ( currentRef, { github, context } ) => {
 
   // Previous version.
   const previousRef = await findPreviousVersion( version, { github, context } );
-  const previousFile = await readFileFromRef( previousRef, 'plugins/woocommerce/includes/class-wc-install.php', { github, context } );
+  const previousFile = await readFileFromRef( previousRef, 'plugins/fincommerce/includes/class-wc-install.php', { github, context } );
   const previousDbUpdates = readDbUpdatesFromString( previousFile );
 
   // Read current wc-install.php.
-  const currentFile = await readFileFromRef( currentRef, 'plugins/woocommerce/includes/class-wc-install.php', { github, context } );
+  const currentFile = await readFileFromRef( currentRef, 'plugins/fincommerce/includes/class-wc-install.php', { github, context } );
   const currentDbUpdates = readDbUpdatesFromString( currentFile );
 
   console.log( `Comparing versions '${ previousRef }' and '${ version }'  (ref: '${ currentRef }').` );

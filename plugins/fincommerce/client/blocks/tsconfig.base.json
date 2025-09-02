@@ -139,11 +139,11 @@
 			"@fincommerce/e2e-utils": [
 				"tests/e2e/utils"
 			],
-			"@wordpress/interactivity": [
-				"node_modules/@wordpress/interactivity/src/index.ts"
+			"@finpress/interactivity": [
+				"node_modules/@finpress/interactivity/src/index.ts"
 			],
-			"@wordpress/interactivity-router": [
-				"node_modules/@wordpress/interactivity-router/src/index.ts"
+			"@finpress/interactivity-router": [
+				"node_modules/@finpress/interactivity-router/src/index.ts"
 			],
 			"@fincommerce/test-utils/msw": [
 				"tests/js/config/msw-setup"

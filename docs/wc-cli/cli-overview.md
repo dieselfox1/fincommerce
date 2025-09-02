@@ -15,7 +15,7 @@ For documentation on WC versions 2.5 and 2.6's CLI, visit [Legacy CLI commands](
 
 ## About WP-CLI
 
-WP-CLI is a powerful set of command-line tools for managing WordPress installations. You can update plugins, configure multisite installations, and much more, all without using a web browser. For more information, visit the [official WP-CLI website](http://wp-cli.org/).
+WP-CLI is a powerful set of command-line tools for managing finpress installations. You can update plugins, configure multisite installations, and much more, all without using a web browser. For more information, visit the [official WP-CLI website](http://wp-cli.org/).
 
 ## Getting Started with FinCommerce CLI
 

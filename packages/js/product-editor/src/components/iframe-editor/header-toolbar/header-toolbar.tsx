@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { useViewportMatch } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
-import { plus, next, previous } from '@wordpress/icons';
+import { useSelect } from '@finpress/data';
+import { useViewportMatch } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
+import { plus, next, previous } from '@finpress/icons';
 import {
 	createElement,
 	useRef,
@@ -13,24 +13,24 @@ import {
 	useState,
 	Fragment,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 import { MouseEvent } from 'react';
-import { Button, Popover, ToolbarItem } from '@wordpress/components';
-import PinnedItems from '@wordpress/interface/build-module/components/pinned-items';
+import { Button, Popover, ToolbarItem } from '@finpress/components';
+import PinnedItems from '@finpress/interface/build-module/components/pinned-items';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	store as preferencesStore,
 	/* @ts-expect-error missing types. */
-} from '@wordpress/preferences';
+} from '@finpress/preferences';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	NavigableToolbar,
 	store as blockEditorStore,
-	// @ts-expect-error ToolSelector exists in WordPress components.
+	// @ts-expect-error ToolSelector exists in finpress components.
 	ToolSelector,
 	BlockToolbar,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies
@@ -162,7 +162,7 @@ export function HeaderToolbar( {
 							{ /* @ts-expect-error missing type */ }
 							<BlockToolbar hideDragHandle />
 						</div>
-						{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
+						{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
 						<Popover.Slot name="block-toolbar" />
 						{ hasBlockSelection && (
 							<Button

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { CheckboxControl } from '@wordpress/components';
-import { _n, sprintf } from '@wordpress/i18n';
+import { CheckboxControl } from '@finpress/components';
+import { _n, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

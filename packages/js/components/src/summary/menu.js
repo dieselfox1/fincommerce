@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { NavigableMenu } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { NavigableMenu } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 import { uniqueId } from 'lodash';
 import PropTypes from 'prop-types';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

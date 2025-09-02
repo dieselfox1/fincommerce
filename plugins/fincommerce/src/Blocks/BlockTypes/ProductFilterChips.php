@@ -67,7 +67,7 @@ final class ProductFilterChips extends AbstractBlock {
 
 		ob_start();
 		?>
-		<div <?php echo get_block_wrapper_attributes( $wrapper_attributes ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo get_block_wrapper_attributes( $wrapper_attributes ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<fieldset>
 				<?php if ( ! empty( $block->context['filterData']['groupLabel'] ) ) : ?>
 					<legend class="screen-reader-text"><?php echo esc_html( $block->context['filterData']['groupLabel'] ); ?></legend>
@@ -85,7 +85,7 @@ final class ProductFilterChips extends AbstractBlock {
 							data-wp-on--click="actions.toggleFilter"
 							value="<?php echo esc_attr( $item['value'] ); ?>"
 							data-wp-bind--aria-checked="state.isFilterSelected"
-							<?php echo wp_interactivity_data_wp_context( array( 'item' => $item ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo wp_interactivity_data_wp_context( array( 'item' => $item ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 							<?php if ( ! $item['selected'] ) : ?>
 								<?php if ( $count >= $remaining_initial_unchecked ) : ?>
 									data-wp-bind--hidden="!context.showAll"
@@ -97,7 +97,7 @@ final class ProductFilterChips extends AbstractBlock {
 						>
 							<span class="wc-block-product-filter-chips__label">
 								<span class="wc-block-product-filter-chips__text">
-									<?php echo $item['label']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php echo $item['label']; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 								</span>
 								<?php if ( $show_counts ) : ?>
 									<span class="wc-block-product-filter-chips__count">

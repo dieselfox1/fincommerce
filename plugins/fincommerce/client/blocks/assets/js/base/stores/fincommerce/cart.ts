@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store } from '@wordpress/interactivity';
+import { store } from '@finpress/interactivity';
 import type {
 	Cart,
 	CartItem,
@@ -372,7 +372,7 @@ const { state, actions } = store< Store >(
 						preserveCartData: true,
 					} );
 
-					// Dispatches the event to sync the @wordpress/data store.
+					// Dispatches the event to sync the @finpress/data store.
 					emitSyncEvent( { quantityChanges } );
 				} catch ( error ) {
 					// Reverts the optimistic update.
@@ -513,7 +513,7 @@ const { state, actions } = store< Store >(
 							preserveCartData: true,
 						} );
 
-						// Dispatches the event to sync the @wordpress/data store.
+						// Dispatches the event to sync the @finpress/data store.
 						emitSyncEvent( { quantityChanges } );
 					}
 
@@ -639,7 +639,7 @@ window.addEventListener(
 			type: string;
 			id: number;
 		} >;
-		if ( customEvent.detail.type === 'from_@wordpress/data' ) {
+		if ( customEvent.detail.type === 'from_@finpress/data' ) {
 			actions.refreshCartItems();
 		}
 	}

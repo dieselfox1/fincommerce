@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { registerPlugin } from '@wordpress/plugins';
-import { Fill } from '@wordpress/components';
+import { registerPlugin } from '@finpress/plugins';
+import { Fill } from '@finpress/components';
 
 const MyFill = () => (
 	<Fill name="experimental_fincommerce_wcpay_feature">

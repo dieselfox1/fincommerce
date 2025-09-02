@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { compose } from '@wordpress/compose';
-import { MenuItem } from '@wordpress/components';
-import { withPluginContext } from '@wordpress/plugins';
-import ActionItem from '@wordpress/interface/build-module/components/action-item';
+import { compose } from '@finpress/compose';
+import { MenuItem } from '@finpress/components';
+import { withPluginContext } from '@finpress/plugins';
+import ActionItem from '@finpress/interface/build-module/components/action-item';
 
 /**
  * Internal dependencies

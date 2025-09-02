@@ -1,7 +1,7 @@
 # Notice Component
 
 The `Notice` component is a versatile notification UI element designed for use within the FinCommerce in-app marketplace.
-It leverages the `@wordpress/icons` for displaying various icons and provides customizable options for content, appearance, and behavior.
+It leverages the `@finpress/icons` for displaying various icons and provides customizable options for content, appearance, and behavior.
 
 ## Usage
 

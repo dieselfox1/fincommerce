@@ -34,7 +34,7 @@ class WCAdminUser {
 	}
 
 	/**
-	 * Registers FinCommerce specific user data to the WordPress user API.
+	 * Registers FinCommerce specific user data to the finpress user API.
 	 */
 	public function register_user_data() {
 		register_rest_field(
@@ -108,7 +108,7 @@ class WCAdminUser {
 	 */
 	public function get_user_data_fields() {
 		/**
-		 * Filter user data fields exposed over the WordPress user endpoint.
+		 * Filter user data fields exposed over the finpress user endpoint.
 		 *
 		 * @since 4.0.0
 		 * @param array $fields Array of fields to expose over the WP user endpoint.

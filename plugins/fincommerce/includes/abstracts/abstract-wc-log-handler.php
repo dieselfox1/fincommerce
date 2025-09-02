@@ -82,7 +82,7 @@ abstract class WC_Log_Handler implements WC_Log_Handler_Interface {
 			array( wc_get_logger(), self::class, static::class )
 		);
 
-		$backtrace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
+		$backtrace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_debug_backtrace
 
 		$filtered_backtrace = array_filter(
 			$backtrace,

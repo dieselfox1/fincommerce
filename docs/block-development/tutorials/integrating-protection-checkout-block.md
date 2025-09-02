@@ -11,7 +11,7 @@ If you're a developer of a Captcha or fraud protection plugin, make sure your so
 
 The FinCommerce Checkout block uses the [Store API](/docs/apis/store-api/) for processing orders, which provides a secure, unauthenticated API for customer-facing functionality. To integrate protection mechanisms like CAPTCHA or fraud detection, you'll need to:
 
-1. **Render your protection element** in the checkout block using WordPress block filters
+1. **Render your protection element** in the checkout block using finpress block filters
 2. **Handle client-side validation** using the checkout data store
 3. **Validate on the server-side** using the Store API authentication hooks
 
@@ -21,7 +21,7 @@ The first step is to render your CAPTCHA or protection element in the checkout b
 
 ### Using the render_block Filter
 
-The `render_block` filter allows you to modify the output of any WordPress block. For the checkout block, you'll want to target the `fincommerce/checkout-actions-block` which contains the "Place order" button.
+The `render_block` filter allows you to modify the output of any finpress block. For the checkout block, you'll want to target the `fincommerce/checkout-actions-block` which contains the "Place order" button.
 
 ```php
 add_filter(
@@ -102,7 +102,7 @@ The most critical step is validating the protection token on the server side. Th
 
 ### Using the core `rest_authentication_errors` filter
 
-The [`rest_authentication_errors`](https://developer.wordpress.org/reference/hooks/rest_authentication_errors/) filter is the ideal place to validate your protection token because it runs before any checkout processing begins.
+The [`rest_authentication_errors`](https://developer.finpress.org/reference/hooks/rest_authentication_errors/) filter is the ideal place to validate your protection token because it runs before any checkout processing begins.
 
 ```php
 add_filter( 'rest_authentication_errors', 'plugin_check_turnstile_token' );

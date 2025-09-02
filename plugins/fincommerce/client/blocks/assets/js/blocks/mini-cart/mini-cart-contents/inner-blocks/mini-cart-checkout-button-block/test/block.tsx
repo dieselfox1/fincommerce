@@ -5,7 +5,7 @@ import {
 	CartEventsProvider,
 	useCartEventsContext,
 } from '@fincommerce/base-context';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { render, screen, waitFor } from '@testing-library/react';
 
 /**

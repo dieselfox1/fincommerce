@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	CustomerEffortScoreModalContainer,
 	useCustomerEffortScoreModal,
 } from '@fincommerce/customer-effort-score';
-import { Button, TextareaControl, TextControl } from '@wordpress/components';
-import { isEmail } from '@wordpress/url';
+import { Button, TextareaControl, TextControl } from '@finpress/components';
+import { isEmail } from '@finpress/url';
 
 /**
  * Internal dependencies

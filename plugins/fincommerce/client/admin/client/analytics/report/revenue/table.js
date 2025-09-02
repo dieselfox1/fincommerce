@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, _n } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { format as formatDate } from '@wordpress/date';
-import { withSelect } from '@wordpress/data';
-import { compose } from '@wordpress/compose';
+import { __, _n } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { format as formatDate } from '@finpress/date';
+import { withSelect } from '@finpress/data';
+import { compose } from '@finpress/compose';
 import { get, memoize } from 'lodash';
 import { Date, Link } from '@fincommerce/components';
 import { formatValue } from '@fincommerce/number';

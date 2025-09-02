@@ -6,7 +6,7 @@ import {
 	useEffect,
 	useCallback,
 	createContext,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies

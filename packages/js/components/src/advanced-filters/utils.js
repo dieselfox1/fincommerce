@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { isArray, isNumber, isString } from 'lodash';
-import deprecated from '@wordpress/deprecated';
-import { createInterpolateElement } from '@wordpress/element';
+import deprecated from '@finpress/deprecated';
+import { createInterpolateElement } from '@finpress/element';
 
 /**
  * DOM Node.textContent for React components

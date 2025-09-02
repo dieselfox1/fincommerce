@@ -102,7 +102,7 @@ class ComingSoonRequestHandler {
 
 		if ( ! empty( $coming_soon_template ) && file_exists( $coming_soon_template ) ) {
 			if ( ! $is_fse_theme && $is_store_coming_soon && function_exists( 'get_the_block_template_html' ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				echo get_the_block_template_html();
 			} else {
 				include $coming_soon_template;
@@ -168,9 +168,9 @@ class ComingSoonRequestHandler {
 		// Check if the private link option is enabled.
 		if ( get_option( 'fincommerce_private_link' ) === 'yes' ) {
 			// Exclude users with a private link.
-			if ( isset( $_GET['woo-share'] ) && get_option( 'fincommerce_share_key' ) === $_GET['woo-share'] ) { //phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			if ( isset( $_GET['woo-share'] ) && get_option( 'fincommerce_share_key' ) === $_GET['woo-share'] ) { //phpcs:ignore finpress.Security.NonceVerification.Recommended
 				// Persist the share link with a cookie for 90 days.
-				setcookie( 'woo-share', sanitize_text_field( wp_unslash( $_GET['woo-share'] ) ), time() + 60 * 60 * 24 * 90, '/' ); //phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				setcookie( 'woo-share', sanitize_text_field( wp_unslash( $_GET['woo-share'] ) ), time() + 60 * 60 * 24 * 90, '/' ); //phpcs:ignore finpress.Security.NonceVerification.Recommended
 				return false;
 			}
 			if ( isset( $_COOKIE['woo-share'] ) && get_option( 'fincommerce_share_key' ) === $_COOKIE['woo-share'] ) {

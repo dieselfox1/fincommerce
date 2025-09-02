@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
-import { postCommentsForm as icon } from '@wordpress/icons';
+import { registerBlockType } from '@finpress/blocks';
+import { postCommentsForm as icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

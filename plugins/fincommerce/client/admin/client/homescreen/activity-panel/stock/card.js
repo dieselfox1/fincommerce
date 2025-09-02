@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { BaseControl, Button } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { BaseControl, Button } from '@finpress/components';
 import clsx from 'clsx';
-import { Component, Fragment } from '@wordpress/element';
-import { ESCAPE } from '@wordpress/keycodes';
+import { Component, Fragment } from '@finpress/element';
+import { ESCAPE } from '@finpress/keycodes';
 import { get } from 'lodash';
 import { Link, ProductImage } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';

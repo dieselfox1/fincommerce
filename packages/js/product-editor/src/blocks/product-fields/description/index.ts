@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { postContent } from '@wordpress/icons';
-import { addFilter } from '@wordpress/hooks';
+import { postContent } from '@finpress/icons';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Internal dependencies

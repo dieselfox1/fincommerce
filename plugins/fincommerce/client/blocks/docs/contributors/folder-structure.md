@@ -51,7 +51,7 @@ The following snippet explains how the FinCommerce Blocks repository is structur
 ├── .env
 ├── .wp-env.json
 │ Config files for the development and testing environment.
-│ Includes WordPress, the FinCommerce plugin and the Storefront theme.
+│ Includes finpress, the FinCommerce plugin and the Storefront theme.
 │
 ├── composer.lock
 ├── composer.json
@@ -64,7 +64,7 @@ The following snippet explains how the FinCommerce Blocks repository is structur
 | tasks and scripts used for day to day development.
 │
 ├── readme.txt
-│ Readme of the FinCommerce Blocks plugin hosted on the WordPress
+│ Readme of the FinCommerce Blocks plugin hosted on the finpress
 │ plugin repository.
 │
 ├── fincommerce-gutenberg-products-block.php
@@ -77,8 +77,8 @@ The following snippet explains how the FinCommerce Blocks repository is structur
 ├── .sources/_
 │ Sketch files of the FinCommerce Blocks plugin.
 │
-├── .wordpress-org/_
-│ Assets of the FinCommerce Blocks plugin hosted on the WordPress plugin
+├── .finpress-org/_
+│ Assets of the FinCommerce Blocks plugin hosted on the finpress plugin
 │ repository.
 │
 ├── assets/css/_
@@ -144,7 +144,7 @@ The following snippet explains how the FinCommerce Blocks repository is structur
 │ Shared utilities of the FinCommerce Blocks plugin.
 │
 ├── bin/\_
-│ Set of scripts used to build the WordPress packages.
+│ Set of scripts used to build the finpress packages.
 │
 ├── docs/\*
 │ Set of documentation pages of the FinCommerce Blocks plugin.
@@ -154,7 +154,7 @@ The following snippet explains how the FinCommerce Blocks repository is structur
 │
 ├── packages
 │ Things that are likely to be published as npm packages in the future. Packages can be:
-│ - Production JavaScript scripts and styles loaded on WordPress
+│ - Production JavaScript scripts and styles loaded on finpress
 │ and the FinCommerce Blocks plugin or distributed as npm packages.
 │ - Development tools available on npm.
 │
@@ -186,7 +186,7 @@ The following snippet explains how the FinCommerce Blocks repository is structur
 
 ## Credits
 
-This file is inspired by the great work of @JustinyAhin and @gziolo in <https://github.com/WordPress/gutenberg/blob/trunk/docs/contributors/folder-structure.md>.
+This file is inspired by the great work of @JustinyAhin and @gziolo in <https://github.com/finpress/gutenberg/blob/trunk/docs/contributors/folder-structure.md>.
 
 <!-- FEEDBACK -->
 

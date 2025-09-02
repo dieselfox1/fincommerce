@@ -41,6 +41,6 @@ class OrgThemeResourceStorage extends OrgPluginResourceStorage {
 	 * @return string The supported resource.
 	 */
 	public function get_supported_resource(): string {
-		return 'wordpress.org/themes';
+		return 'finpress.org/themes';
 	}
 }

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 import { filledCart, removeCart } from '@fincommerce/icons';
 
 export const blockName = 'fincommerce/cart';

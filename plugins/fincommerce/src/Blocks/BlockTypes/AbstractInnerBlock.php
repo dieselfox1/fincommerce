@@ -14,7 +14,7 @@ abstract class AbstractInnerBlock extends AbstractBlock {
 	protected $is_lazy_loaded = true;
 
 	/**
-	 * Registers the block type with WordPress using the metadata file.
+	 * Registers the block type with finpress using the metadata file.
 	 *
 	 * The registration using metadata is now recommended. And it's required for "Inner Blocks" to
 	 * fix the issue of missing translations in the inspector (in the Editor mode)

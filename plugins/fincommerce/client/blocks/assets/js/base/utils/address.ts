@@ -20,7 +20,7 @@ import {
 	type CartResponseShippingAddress,
 	type AddressFieldsForShippingRates as AddressFieldsForShippingRatesType,
 } from '@fincommerce/types';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 export const addressFieldsForShippingRates: AddressFieldsForShippingRatesType =
 	[ 'state', 'country', 'postcode', 'city' ];

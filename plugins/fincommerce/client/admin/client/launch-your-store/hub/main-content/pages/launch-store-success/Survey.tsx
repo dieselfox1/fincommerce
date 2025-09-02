@@ -2,13 +2,13 @@
  * External dependencies
  */
 import { Link } from '@fincommerce/components';
-import { createInterpolateElement, useState } from '@wordpress/element';
+import { createInterpolateElement, useState } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { isInteger } from 'lodash';
-import { closeSmall } from '@wordpress/icons';
+import { closeSmall } from '@finpress/icons';
 import { CustomerFeedbackSimple } from '@fincommerce/customer-effort-score';
-import { Button, TextareaControl, Icon } from '@wordpress/components';
+import { Button, TextareaControl, Icon } from '@finpress/components';
 
 /**
  * Internal dependencies

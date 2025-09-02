@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createBlock, BlockInstance } from '@wordpress/blocks';
-import { select, dispatch } from '@wordpress/data';
+import { createBlock, BlockInstance } from '@finpress/blocks';
+import { select, dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

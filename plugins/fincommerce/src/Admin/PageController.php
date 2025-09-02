@@ -583,18 +583,18 @@ class PageController {
 	 * Returns true if we are on a JS powered admin page.
 	 */
 	public static function is_admin_page() {
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		return isset( $_GET['page'] ) && 'wc-admin' === $_GET['page'];
-		// phpcs:enable WordPress.Security.NonceVerification
+		// phpcs:enable finpress.Security.NonceVerification
 	}
 
 	/**
 	 * Returns true if we are on a settings page.
 	 */
 	public static function is_settings_page() {
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		return isset( $_GET['page'] ) && 'wc-settings' === $_GET['page'];
-		// phpcs:enable WordPress.Security.NonceVerification
+		// phpcs:enable finpress.Security.NonceVerification
 	}
 
 	/**

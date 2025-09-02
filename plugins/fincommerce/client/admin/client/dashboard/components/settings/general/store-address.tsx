@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { countriesStore, Country, Locale } from '@fincommerce/data';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { escapeRegExp } from 'lodash';
-import { useEffect, useMemo, useState, useRef } from '@wordpress/element';
+import { useEffect, useMemo, useState, useRef } from '@finpress/element';
 import {
 	SelectControl,
 	TextControl,
 	FormContextType,
 } from '@fincommerce/components';
-import { Spinner } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+import { Spinner } from '@finpress/components';
+import { useSelect } from '@finpress/data';
 
 export type FormValues = {
 	addressLine1: string;

@@ -1,5 +1,5 @@
 module.exports = {
-	plugins: [ '@wordpress', '@fincommerce' ],
+	plugins: [ '@finpress', '@fincommerce' ],
 	rules: {
 		'@fincommerce/dependency-group': 'error',
 	},
@@ -16,7 +16,7 @@ module.exports = {
 				'**/tests/**/*.js',
 			],
 			extends: [
-				'plugin:@wordpress/eslint-plugin/test-unit',
+				'plugin:@finpress/eslint-plugin/test-unit',
 				require.resolve( './react-testing-library' ),
 			],
 		},

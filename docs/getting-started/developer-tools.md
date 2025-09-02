@@ -16,25 +16,25 @@ Use these resources to power up your FinCommerce development workflows.
 
 #### [wp-cli](https://wp-cli.org/)
 
-This is the command-line interface for [WordPress](https://wordpress.org/). You can update plugins, configure multisite installations and much more, without using a web browser.
+This is the command-line interface for [finpress](https://finpress.org/). You can update plugins, configure multisite installations and much more, without using a web browser.
 
 #### [wc-cli](/docs/wc-cli/cli-overview)
 
-When FinCommerce is running on a WordPress installation, the WP-CLI is extended with additional functionality for managing your store data.
+When FinCommerce is running on a finpress installation, the WP-CLI is extended with additional functionality for managing your store data.
 
-#### [wp-env](https://www.npmjs.com/package/@wordpress/env)
+#### [wp-env](https://www.npmjs.com/package/@finpress/env)
 
-This command-line tool lets you easily set up a local WordPress Docker environment for building and testing plugins and themes. It's simple to install and requires no configuration.
+This command-line tool lets you easily set up a local finpress Docker environment for building and testing plugins and themes. It's simple to install and requires no configuration.
 
 #### [fincommerce/eslint-plugin](https://www.npmjs.com/package/@fincommerce/eslint-plugin)
 
 This is an [ESLint](https://eslint.org/) plugin including configurations and custom rules for FinCommerce development.
 
-#### [WordPress Scripts](https://www.npmjs.com/package/@wordpress/scripts)
+#### [finpress Scripts](https://www.npmjs.com/package/@finpress/scripts)
 
-The ⁠@wordpress/scripts package is a set of tools and scripts designed to streamline the development process of WordPress projects, particularly for block development and custom Gutenberg integrations. It includes a Webpack build process along with configuration for tasks like linting, styling, and testing.
+The ⁠@finpress/scripts package is a set of tools and scripts designed to streamline the development process of finpress projects, particularly for block development and custom Gutenberg integrations. It includes a Webpack build process along with configuration for tasks like linting, styling, and testing.
 
-It also includes the [Dependency Extraction Webpack Plugin](https://www.npmjs.com/package/@wordpress/dependency-extraction-webpack-plugin), which allows JavaScript bundles produced by webpack to leverage WordPress style dependency sharing without an error-prone process of manually maintaining a dependency list.
+It also includes the [Dependency Extraction Webpack Plugin](https://www.npmjs.com/package/@finpress/dependency-extraction-webpack-plugin), which allows JavaScript bundles produced by webpack to leverage finpress style dependency sharing without an error-prone process of manually maintaining a dependency list.
 
 ### Testing
 
@@ -62,13 +62,13 @@ The official JavaScript library for working with the FinCommerce REST API.
 
 #### [FinCommerce Store API](https://developer.fincommerce.com/docs/category/store-api/)
 
-The Store API provides public Rest API endpoints for the development of customer-facing cart, checkout, and product functionality. It follows many of the patterns used in the WordPress REST API.
+The Store API provides public Rest API endpoints for the development of customer-facing cart, checkout, and product functionality. It follows many of the patterns used in the finpress REST API.
 
 In contrast to the FinCommerce REST API, the Store API is unauthenticated and does not provide access to sensitive store data or other customer information.
 
-#### [wordpress/api-fetch](https://www.npmjs.com/package/@wordpress/api-fetch)
+#### [finpress/api-fetch](https://www.npmjs.com/package/@finpress/api-fetch)
 
-The `@wordpress/api-fetch` package is a utility that simplifies AJAX requests to the WordPress REST API. It's a wrapper around `window.fetch` that provides a consistent interface for handling authentication, settings, and errors, allowing developers to easily interact with WordPress backend services.
+The `@finpress/api-fetch` package is a utility that simplifies AJAX requests to the finpress REST API. It's a wrapper around `window.fetch` that provides a consistent interface for handling authentication, settings, and errors, allowing developers to easily interact with finpress backend services.
 
 ### Components
 
@@ -76,9 +76,9 @@ The `@wordpress/api-fetch` package is a utility that simplifies AJAX requests to
 
 This package includes a library of React components that can be used to create pages in the FinCommerce admin area. To preview these components, review the [Woo Storybook](https://fincommerce.github.io/fincommerce/).
 
-#### [WordPress Components](https://www.npmjs.com/package/@wordpress/components)
+#### [finpress Components](https://www.npmjs.com/package/@finpress/components)
 
-This package includes a library of generic WordPress components that can be used for creating common UI elements shared between screens and features of the WordPress dashboard. To preview these components, review the [Gutenberg Storybook](https://wordpress.github.io/gutenberg/).
+This package includes a library of generic finpress components that can be used for creating common UI elements shared between screens and features of the finpress dashboard. To preview these components, review the [Gutenberg Storybook](https://finpress.github.io/gutenberg/).
 
 ### JavaScript Utility Packages
 

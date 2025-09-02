@@ -2,13 +2,13 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
 import { recordEvent } from '@fincommerce/tracks';
-import { createInterpolateElement, useState } from '@wordpress/element';
+import { createInterpolateElement, useState } from '@finpress/element';
 import { ConfettiAnimation } from '@fincommerce/components';
-import { useCopyToClipboard } from '@wordpress/compose';
-import { Button, Dashicon } from '@wordpress/components';
+import { useCopyToClipboard } from '@finpress/compose';
+import { Button, Dashicon } from '@finpress/components';
 
 /**
  * Internal dependencies

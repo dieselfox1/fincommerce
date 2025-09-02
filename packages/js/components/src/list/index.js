@@ -4,8 +4,8 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import deprecated from '@wordpress/deprecated';
-import { createElement } from '@wordpress/element';
+import deprecated from '@finpress/deprecated';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

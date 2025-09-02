@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Card } from '@wordpress/components';
-import { Icon, help } from '@wordpress/icons';
+import { Card } from '@finpress/components';
+import { Icon, help } from '@finpress/icons';
 
 /**
  * Internal dependencies

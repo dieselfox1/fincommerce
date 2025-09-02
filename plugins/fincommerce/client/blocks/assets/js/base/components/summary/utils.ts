@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { autop } from '@wordpress/autop';
+import { autop } from '@finpress/autop';
 import { trimCharacters, trimWords } from '@fincommerce/utils';
-import { count, CountType } from '@wordpress/wordcount';
+import { count, CountType } from '@finpress/wordcount';
 
 /**
  * Get first paragraph from some HTML text, or return whole string.

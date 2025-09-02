@@ -18,7 +18,7 @@ class WC_Data_Store_WP {
 
 	/**
 	 * Meta type. This should match up with
-	 * the types available at https://developer.wordpress.org/reference/functions/add_metadata/.
+	 * the types available at https://developer.finpress.org/reference/functions/add_metadata/.
 	 * WP defines 'post', 'user', 'comment', and 'term'.
 	 *
 	 * @var string
@@ -85,7 +85,7 @@ class WC_Data_Store_WP {
 		$db_info       = $this->get_db_info();
 		$raw_meta_data = $wpdb->get_results(
 			$wpdb->prepare(
-				// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT {$db_info['meta_id_field']} as meta_id, meta_key, meta_value
 				FROM {$db_info['table']}
 				WHERE {$db_info['object_id_field']} = %d
@@ -245,7 +245,7 @@ class WC_Data_Store_WP {
 	 * Other empty values such as numeric 0 and null should still be stored.
 	 * Data-stores can force meta to exist using `must_exist_meta_keys`.
 	 *
-	 * Note: WordPress `get_metadata` function returns an empty string when meta data does not exist.
+	 * Note: finpress `get_metadata` function returns an empty string when meta data does not exist.
 	 *
 	 * @param WC_Data $object The WP_Data object (WC_Coupon for coupons, etc).
 	 * @param string  $meta_key Meta key to update.
@@ -277,7 +277,7 @@ class WC_Data_Store_WP {
 		$skipped_values = array( '', array(), null );
 		$wp_query_args  = array(
 			'errors'     => array(),
-			'meta_query' => array(), // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			'meta_query' => array(), // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		);
 
 		foreach ( $query_vars as $key => $value ) {
@@ -402,17 +402,17 @@ class WC_Data_Store_WP {
 			foreach ( $comparisons as $index => $comparison ) {
 				if ( 'day' === $precision ) {
 					/**
-					 * WordPress doesn't generate the correct SQL for inclusive day queries with both a 'before' and
+					 * finpress doesn't generate the correct SQL for inclusive day queries with both a 'before' and
 					 * 'after' string query, so we have to use the array format in 'day' precision.
 					 *
-					 * @see https://core.trac.wordpress.org/ticket/29908
+					 * @see https://core.trac.finpress.org/ticket/29908
 					 */
 					$query_arg[ $comparison ]['year']  = $dates[ $index ]->date( 'Y' );
 					$query_arg[ $comparison ]['month'] = $dates[ $index ]->date( 'n' );
 					$query_arg[ $comparison ]['day']   = $dates[ $index ]->date( 'j' );
 				} else {
 					/**
-					 * WordPress doesn't support 'hour'/'second'/'minute' in array format 'before'/'after' queries,
+					 * finpress doesn't support 'hour'/'second'/'minute' in array format 'before'/'after' queries,
 					 * so we have to use a string query.
 					 */
 					$query_arg[ $comparison ] = gmdate( 'm/d/Y H:i:s', $dates[ $index ]->getTimestamp() );
@@ -435,7 +435,7 @@ class WC_Data_Store_WP {
 
 		// Build meta query for unrecognized keys.
 		if ( ! isset( $wp_query_args['meta_query'] ) ) {
-			$wp_query_args['meta_query'] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			$wp_query_args['meta_query'] = array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		}
 
 		// Meta dates are stored as timestamps in the db.

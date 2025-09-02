@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
+import { useBlockProps, useInnerBlocksProps } from '@finpress/block-editor';
 import clsx from 'clsx';
 
 export default function save( { attributes } ) {

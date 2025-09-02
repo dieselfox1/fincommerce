@@ -1,25 +1,25 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	createElement,
 	useEffect,
 	useMemo,
 	useState,
-} from '@wordpress/element';
-import { closeSmall } from '@wordpress/icons';
+} from '@finpress/element';
+import { closeSmall } from '@finpress/icons';
 import {
 	Button,
 	FormTokenField as CoreFormTokenField,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	useSelect,
 	useDispatch,
 	select as sel,
 	dispatch,
-} from '@wordpress/data';
-import { cleanForSlug } from '@wordpress/url';
+} from '@finpress/data';
+import { cleanForSlug } from '@finpress/url';
 import {
 	experimentalProductAttributeTermsStore,
 	type ProductAttributeTerm,

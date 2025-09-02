@@ -3,7 +3,7 @@
  */
 import { screen, render } from '@testing-library/react';
 import { SlotFillProvider } from '@fincommerce/blocks-checkout';
-import * as wpData from '@wordpress/data';
+import * as wpData from '@finpress/data';
 import { CartShippingRate } from '@fincommerce/types';
 import { previewCart as mockPreviewCart } from '@fincommerce/resource-previews';
 import * as baseContextHooks from '@fincommerce/base-context/hooks';
@@ -13,9 +13,9 @@ import * as baseContextHooks from '@fincommerce/base-context/hooks';
  */
 import { TotalsShipping } from '@fincommerce/block-library/assets/js/base/components/cart-checkout/totals/shipping';
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	__esModule: true,
-	...jest.requireActual( '@wordpress/data' ),
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 } ) );
 
@@ -32,10 +32,10 @@ jest.mock( '@wordpress/data', () => ( {
 					},
 				};
 			}
-			return jest.requireActual( '@wordpress/data' ).select( storeName );
+			return jest.requireActual( '@finpress/data' ).select( storeName );
 		} );
 		passedMapSelect( mockedSelect, {
-			dispatch: jest.requireActual( '@wordpress/data' ).dispatch,
+			dispatch: jest.requireActual( '@finpress/data' ).dispatch,
 		} );
 	} )
 );

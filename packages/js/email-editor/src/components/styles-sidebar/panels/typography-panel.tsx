@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	__experimentalItemGroup as ItemGroup, // eslint-disable-line
 	__experimentalItem as Item, // eslint-disable-line
@@ -12,7 +12,7 @@ import {
 	FlexItem,
 	Card,
 	CardBody,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { useDispatch } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { external } from '@wordpress/icons';
+import { useDispatch } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { external } from '@finpress/icons';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
-	// @ts-expect-error Type for PluginPreviewMenuItem is missing in @types/wordpress__editor
+	// @ts-expect-error Type for PluginPreviewMenuItem is missing in @types/finpress__editor
 	PluginPreviewMenuItem,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies

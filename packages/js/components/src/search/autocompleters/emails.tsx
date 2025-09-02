@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { addQueryArgs } from '@wordpress/url';
-import apiFetch from '@wordpress/api-fetch';
-import { createElement } from '@wordpress/element';
+import { addQueryArgs } from '@finpress/url';
+import apiFetch from '@finpress/api-fetch';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

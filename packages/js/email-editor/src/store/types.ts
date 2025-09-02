@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { EditorSettings, EditorColor } from '@wordpress/block-editor/index';
-import { BlockInstance } from '@wordpress/blocks/index';
-import { Post } from '@wordpress/core-data/build-types/entity-types/post';
-import type { WpTemplate } from '@wordpress/core-data';
+import { EditorSettings, EditorColor } from '@finpress/block-editor/index';
+import { BlockInstance } from '@finpress/blocks/index';
+import { Post } from '@finpress/core-data/build-types/entity-types/post';
+import type { WpTemplate } from '@finpress/core-data';
 
 export interface EmailTemplate extends Omit< WpTemplate, 'title' > {
 	post_types: string[];
@@ -44,7 +44,7 @@ export type EmailEditorSettings = EditorSettings &
 export type EmailTheme = {
 	version?: number;
 	styles?: EmailStyles;
-	// Ref: https://github.com/WordPress/gutenberg/blob/38d0a4351105e6ba4b72c4dcb90985305aacf921/packages/block-editor/src/components/global-styles/hooks.js#L24C7-L24C21
+	// Ref: https://github.com/finpress/gutenberg/blob/38d0a4351105e6ba4b72c4dcb90985305aacf921/packages/block-editor/src/components/global-styles/hooks.js#L24C7-L24C21
 	settings?: {
 		appearanceTools?: boolean;
 		useRootPaddingAwareAlignments?: boolean;

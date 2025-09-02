@@ -7,13 +7,13 @@ import {
 	Notice,
 	ToggleControl,
 	Icon,
-} from '@wordpress/components';
-import apiFetch from '@wordpress/api-fetch';
-import { useState, createInterpolateElement } from '@wordpress/element';
-import { registerPlugin, getPlugin } from '@wordpress/plugins';
-import { __, sprintf } from '@wordpress/i18n';
+} from '@finpress/components';
+import apiFetch from '@finpress/api-fetch';
+import { useState, createInterpolateElement } from '@finpress/element';
+import { registerPlugin, getPlugin } from '@finpress/plugins';
+import { __, sprintf } from '@finpress/i18n';
 import { CollapsibleContent } from '@fincommerce/components';
-import { settings, plugins, layout } from '@wordpress/icons';
+import { settings, plugins, layout } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 import { useUser } from '@fincommerce/data';
 

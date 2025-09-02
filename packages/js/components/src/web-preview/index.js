@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { createElement, Component, createRef } from '@wordpress/element';
+import { createElement, Component, createRef } from '@finpress/element';
 import { noop } from 'lodash';
 import PropTypes from 'prop-types';
 

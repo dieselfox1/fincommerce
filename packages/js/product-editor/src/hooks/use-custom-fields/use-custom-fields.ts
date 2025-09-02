@@ -2,8 +2,8 @@
  * External dependencies
  */
 import type { SetStateAction } from 'react';
-import { useEntityProp } from '@wordpress/core-data';
-import { useMemo } from '@wordpress/element';
+import { useEntityProp } from '@finpress/core-data';
+import { useMemo } from '@finpress/element';
 
 /**
  * Internal dependencies

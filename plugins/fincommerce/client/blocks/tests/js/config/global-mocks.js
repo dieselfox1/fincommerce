@@ -11,7 +11,7 @@ global.TextDecoder = require( 'util' ).TextDecoder;
  */
 global.wp = {};
 
-require( '@wordpress/data' );
+require( '@finpress/data' );
 
 /**
  * wcSettings is required by @fincommerce/* packages.

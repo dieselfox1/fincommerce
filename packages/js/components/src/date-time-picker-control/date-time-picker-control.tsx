@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Ref } from 'react';
-import { format as formatDate } from '@wordpress/date';
+import { format as formatDate } from '@finpress/date';
 import {
 	createElement,
 	useCallback,
@@ -11,22 +11,22 @@ import {
 	useMemo,
 	useRef,
 	forwardRef,
-} from '@wordpress/element';
-import { Icon, calendar } from '@wordpress/icons';
+} from '@finpress/element';
+import { Icon, calendar } from '@finpress/icons';
 import moment, { Moment } from 'moment';
 import clsx from 'clsx';
-import { sprintf, __ } from '@wordpress/i18n';
-import { useDebounce, useInstanceId } from '@wordpress/compose';
+import { sprintf, __ } from '@finpress/i18n';
+import { useDebounce, useInstanceId } from '@finpress/compose';
 import {
 	BaseControl,
 	DatePicker,
 	DateTimePicker as WpDateTimePicker,
 	Dropdown,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 // PHP style formatting:
-// https://wordpress.org/support/article/formatting-date-and-time/
+// https://finpress.org/support/article/formatting-date-and-time/
 export const defaultDateFormat = 'm/d/Y';
 export const default12HourDateTimeFormat = 'm/d/Y h:i a';
 export const default24HourDateTimeFormat = 'm/d/Y H:i';
@@ -38,7 +38,7 @@ const HOUR_IN_SECONDS = 60 * MINUTE_IN_SECONDS;
 /**
  * Map of PHP formats to Moment.js formats.
  *
- * Copied from @wordpress/date, since it's not exposed. If this is exposed upstream,
+ * Copied from @finpress/date, since it's not exposed. If this is exposed upstream,
  * it should ideally be used from there.
  */
 const formatMap: Record<
@@ -143,7 +143,7 @@ const formatMap: Record<
 };
 
 /**
- * A modified version of the `format` function from @wordpress/date.
+ * A modified version of the `format` function from @finpress/date.
  * This is needed to create a date object from the typed string and the date format,
  * that needs to be mapped from the PHP format to moment's format.
  */

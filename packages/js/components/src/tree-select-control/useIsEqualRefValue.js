@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { isEqual } from 'lodash';
-import { useRef } from '@wordpress/element';
+import { useRef } from '@finpress/element';
 
 /**
  * Stores value in a ref. In subsequent render, value will be compared with ref.current using `isEqual` comparison.

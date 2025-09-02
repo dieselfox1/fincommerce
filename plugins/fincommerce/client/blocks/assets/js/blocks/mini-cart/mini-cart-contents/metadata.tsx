@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { cart } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
-import { BlockConfiguration } from '@wordpress/blocks';
+import { Icon } from '@finpress/icons';
+import { BlockConfiguration } from '@finpress/blocks';
 
 export const metadata: BlockConfiguration = {
 	apiVersion: 3,

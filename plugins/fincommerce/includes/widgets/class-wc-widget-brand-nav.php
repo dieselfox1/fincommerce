@@ -37,7 +37,7 @@ class WC_Widget_Brand_Nav extends WC_Widget {
 	 * @param array $cat_args Category arguments.
 	 */
 	public function filter_out_cats( $cat_args ) {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['filter_product_brand'] ) ) {
 			return array( 'taxonomy' => '' );
 		}
@@ -153,7 +153,7 @@ class WC_Widget_Brand_Nav extends WC_Widget {
 		if ( ! $found ) {
 			ob_end_clean();
 		} else {
-			echo ob_get_clean(); // phpcs:ignore WordPress.Security.EscapeOutput
+			echo ob_get_clean(); // phpcs:ignore finpress.Security.EscapeOutput
 		}
 	}
 
@@ -232,7 +232,7 @@ class WC_Widget_Brand_Nav extends WC_Widget {
 		} else {
 			$link = get_post_type_archive_link( 'product' );
 		}
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 
 		// Min/Max.
 		if ( isset( $_GET['min_price'] ) ) {
@@ -292,9 +292,9 @@ class WC_Widget_Brand_Nav extends WC_Widget {
 	 * @return array
 	 */
 	public function get_chosen_attributes() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['filter_product_brand'] ) ) {
-			$filter_product_brand = wc_clean( wp_unslash( $_GET['filter_product_brand'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$filter_product_brand = wc_clean( wp_unslash( $_GET['filter_product_brand'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return array_map( 'intval', explode( ',', $filter_product_brand ) );
 		}
 
@@ -407,7 +407,7 @@ class WC_Widget_Brand_Nav extends WC_Widget {
 				continue;
 			}
 
-			$current_filter = isset( $_GET[ $filter_name ] ) ? explode( ',', wc_clean( wp_unslash( $_GET[ $filter_name ] ) ) ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$current_filter = isset( $_GET[ $filter_name ] ) ? explode( ',', wc_clean( wp_unslash( $_GET[ $filter_name ] ) ) ) : array(); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$current_filter = array_map( 'intval', $current_filter );
 
 			if ( ! in_array( $term->term_id, $current_filter, true ) ) {
@@ -526,7 +526,7 @@ class WC_Widget_Brand_Nav extends WC_Widget {
 		}
 
 		if ( ! isset( $cached_counts[ $query_hash ] ) ) {
-			$results                      = $wpdb->get_results( $query, ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$results                      = $wpdb->get_results( $query, ARRAY_A ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$counts                       = array_map( 'absint', wp_list_pluck( $results, 'term_count', 'term_count_id' ) );
 			$cached_counts[ $query_hash ] = $counts;
 			if ( true === $cache ) {

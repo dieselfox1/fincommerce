@@ -34,10 +34,10 @@ class ImportInstallPluginTest extends TestCase {
 		$plugin_slug = 'already-installed-plugin';
 
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->pluginData = (object) array(
 			'slug'     => $plugin_slug,
-			'resource' => 'wordpress.org/plugins',
+			'resource' => 'finpress.org/plugins',
 		);
 
 		$resource_storage      = Mockery::mock( ResourceStorages::class );
@@ -67,7 +67,7 @@ class ImportInstallPluginTest extends TestCase {
 		$plugin_slug = 'invalid-resource-plugin';
 
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->pluginData = (object) array(
 			'slug'     => $plugin_slug,
 			'resource' => 'invalid-resource',
@@ -87,7 +87,7 @@ class ImportInstallPluginTest extends TestCase {
 		$this->assertInstanceOf( StepProcessorResult::class, $result );
 		$messages = $result->get_messages( 'info' );
 		$this->assertCount( 1, $messages );
-		$this->assertEquals( "Skipped installing a plugin. Unsupported resource type. Only 'wordpress.org/plugins' is supported at the moment.", $messages[0]['message'] );
+		$this->assertEquals( "Skipped installing a plugin. Unsupported resource type. Only 'finpress.org/plugins' is supported at the moment.", $messages[0]['message'] );
 	}
 
 	/**
@@ -99,10 +99,10 @@ class ImportInstallPluginTest extends TestCase {
 		$plugin_slug = 'sample-plugin';
 
 		$schema = Mockery::mock();
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$schema->pluginData = (object) array(
 			'slug'     => $plugin_slug,
-			'resource' => 'wordpress.org/plugins',
+			'resource' => 'finpress.org/plugins',
 		);
 
 		$schema->options = (object) array(
@@ -111,10 +111,10 @@ class ImportInstallPluginTest extends TestCase {
 
 		$resource_storage = Mockery::mock( ResourceStorages::class );
 		$resource_storage->shouldReceive( 'is_supported_resource' )
-			->with( 'wordpress.org/plugins' )
+			->with( 'finpress.org/plugins' )
 			->andReturn( true );
 		$resource_storage->shouldReceive( 'download' )
-			->with( $plugin_slug, 'wordpress.org/plugins' )
+			->with( $plugin_slug, 'finpress.org/plugins' )
 			->andReturn( '/path/to/plugin.zip' );
 
 		$import_install_plugin = Mockery::mock( ImportInstallPlugin::class, array( $resource_storage ) )

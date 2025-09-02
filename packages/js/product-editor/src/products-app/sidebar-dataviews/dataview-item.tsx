@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import clsx from 'clsx';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
-import { addQueryArgs, getQueryArgs, removeQueryArgs } from '@wordpress/url';
-import { VIEW_LAYOUTS } from '@wordpress/dataviews';
-import { __experimentalHStack as HStack } from '@wordpress/components';
+import { privateApis as routerPrivateApis } from '@finpress/router';
+import { addQueryArgs, getQueryArgs, removeQueryArgs } from '@finpress/url';
+import { VIEW_LAYOUTS } from '@finpress/dataviews';
+import { __experimentalHStack as HStack } from '@finpress/components';
 
 /**
  * Internal dependencies

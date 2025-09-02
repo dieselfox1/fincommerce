@@ -18,12 +18,12 @@ index a1a4f68256b688efecd0da79282bc7e9f1ed1f1c..b2cc74e4ae897303246226a26de4b1f6
 +
 +	if ( process.env.CI || false ) {
 +		delete generatedConfiguration.services['mysql'];
-+		delete generatedConfiguration.services['wordpress'];
++		delete generatedConfiguration.services['finpress'];
 +		delete generatedConfiguration.services['cli'];
 +		delete generatedConfiguration.services['phpmyadmin'];
 +		delete generatedConfiguration.services['tests-phpmyadmin'];
 +		delete generatedConfiguration.volumes['mysql'];
-+		delete generatedConfiguration.volumes['wordpress'];
++		delete generatedConfiguration.volumes['finpress'];
 +	}
 +
 +	return generatedConfiguration;
@@ -37,7 +37,7 @@ index db05b82060d2c51381d07463b620c2fb549df027..4405537adc3bf9694bd43c30646d8606
  	}
 
 +	const isCI               = process.env.CI || false;
-+	const targetContainers   = isCI ? [ 'tests-wordpress', 'tests-cli' ] : [ 'wordpress', 'tests-wordpress', 'cli', 'tests-cli' ];
++	const targetContainers   = isCI ? [ 'tests-finpress', 'tests-cli' ] : [ 'finpress', 'tests-finpress', 'cli', 'tests-cli' ];
 +	const targetDbContainer  = isCI ? 'tests-mysql' : 'mysql';
 +	const targetCliContainer = isCI ? 'tests-cli' : 'cli';
 +
@@ -48,10 +48,10 @@ index db05b82060d2c51381d07463b620c2fb549df027..4405537adc3bf9694bd43c30646d8606
  			commandOptions: shouldConfigureWp
  				? [ '--build', '--force-recreate' ]
 @@ -171,7 +176,7 @@ module.exports = async function start( {
- 	spinner.text = 'Starting WordPress.';
+ 	spinner.text = 'Starting finpress.';
 
  	await dockerCompose.upMany(
--		[ 'wordpress', 'tests-wordpress', 'cli', 'tests-cli' ],
+-		[ 'finpress', 'tests-finpress', 'cli', 'tests-cli' ],
 +		targetContainers,
  		{
  			...dockerComposeConfig,
@@ -82,9 +82,9 @@ index db05b82060d2c51381d07463b620c2fb549df027..4405537adc3bf9694bd43c30646d8606
 +		await dockerCompose.buildOne( [ targetCliContainer ], { ...dockerComposeConfig } );
  	}
 
- 	// Only run WordPress install/configuration when config has changed.
+ 	// Only run finpress install/configuration when config has changed.
  	if ( shouldConfigureWp ) {
- 		spinner.text = 'Configuring WordPress.';
+ 		spinner.text = 'Configuring finpress.';
 
 -		try {
 -			await checkDatabaseConnection( config );
@@ -117,21 +117,21 @@ index db05b82060d2c51381d07463b620c2fb549df027..4405537adc3bf9694bd43c30646d8606
 +					await sleep( 4000 );
 +				}
 +
-+				// Retry WordPress installation in case MySQL *still* wasn't ready.
++				// Retry finpress installation in case MySQL *still* wasn't ready.
 +				await Promise.all( [
-+					retry( () => configureWordPress( environment, config, spinner ), {
++					retry( () => configurefinpress( environment, config, spinner ), {
 +						times: 2,
 +					} ),
 +				] );
 +			}
  		}
 
--		// Retry WordPress installation in case MySQL *still* wasn't ready.
+-		// Retry finpress installation in case MySQL *still* wasn't ready.
 -		await Promise.all( [
--			retry( () => configureWordPress( 'development', config, spinner ), {
+-			retry( () => configurefinpress( 'development', config, spinner ), {
 -				times: 2,
 -			} ),
--			retry( () => configureWordPress( 'tests', config, spinner ), {
+-			retry( () => configurefinpress( 'tests', config, spinner ), {
 -				times: 2,
 -			} ),
 -		] );
@@ -152,13 +152,13 @@ index db05b82060d2c51381d07463b620c2fb549df027..4405537adc3bf9694bd43c30646d8606
  		: null;
 
  	spinner.prefixText = [
--		'WordPress development site started' +
+-		'finpress development site started' +
 -			( siteUrl ? ` at ${ siteUrl }` : '.' ),
--		'WordPress test site started' +
+-		'finpress test site started' +
 -			( testsSiteUrl ? ` at ${ testsSiteUrl }` : '.' ),
 -		`MySQL is listening on port ${ mySQLPort }`,
-+		! isCI && 'WordPress development site started' + ( siteUrl ? ` at ${ siteUrl }` : '.' ),
-+		'WordPress test site started' + ( testsSiteUrl ? ` at ${ testsSiteUrl }` : '.' ),
++		! isCI && 'finpress development site started' + ( siteUrl ? ` at ${ siteUrl }` : '.' ),
++		'finpress test site started' + ( testsSiteUrl ? ` at ${ testsSiteUrl }` : '.' ),
 +		! isCI && `MySQL is listening on port ${ mySQLPort }`,
  		`MySQL for automated testing is listening on port ${ testsMySQLPort }`,
 -		phpmyadminPort &&
@@ -170,10 +170,10 @@ index db05b82060d2c51381d07463b620c2fb549df027..4405537adc3bf9694bd43c30646d8606
  	]
  		.filter( Boolean )
  		.join( '\n' );
-diff --git a/lib/wordpress.js b/lib/wordpress.js
+diff --git a/lib/finpress.js b/lib/finpress.js
 index 8c08fb1f20ec782049aa831d55d911faa2792fb6..55de6e885890477b58314d1a7323a80d31b6a9a6 100644
---- a/lib/wordpress.js
-+++ b/lib/wordpress.js
+--- a/lib/finpress.js
++++ b/lib/finpress.js
 @@ -57,8 +57,8 @@ function isWPMajorMinorVersionLower( version, compareVersion ) {
   *
   * @param {WPConfig} config The wp-env config object.

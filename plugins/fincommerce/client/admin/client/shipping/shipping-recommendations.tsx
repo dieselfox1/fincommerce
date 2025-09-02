@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useState, Children } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useState, Children } from '@finpress/element';
 import { Text } from '@fincommerce/experimental';
 import { pluginsStore } from '@fincommerce/data';
 import { getAdminLink } from '@fincommerce/settings';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore VisuallyHidden is present, it's just not typed
 // eslint-disable-next-line @fincommerce/dependency-group
-import { CardFooter } from '@wordpress/components';
+import { CardFooter } from '@finpress/components';
 
 /**
  * Internal dependencies

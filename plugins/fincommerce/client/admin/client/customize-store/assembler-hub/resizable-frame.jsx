@@ -1,19 +1,19 @@
 // TODO: Modify Gutenberg's ResizableFrame component for use in the Assembler Hub and remove this file.
-// Reference: https://github.com/WordPress/gutenberg/tree/v16.4.0/packages/edit-site/src/components/resizable-frame/index.js
+// Reference: https://github.com/finpress/gutenberg/tree/v16.4.0/packages/edit-site/src/components/resizable-frame/index.js
 
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { useState, useRef, createContext } from '@wordpress/element';
+import { useState, useRef, createContext } from '@finpress/element';
 import {
 	ResizableBox,
 	Tooltip,
 	Popover,
 	__unstableMotion as motion,
-} from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

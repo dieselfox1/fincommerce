@@ -252,7 +252,7 @@ abstract class WC_CSV_Exporter {
 	protected function export_column_headers() {
 		$columns    = $this->get_column_names();
 		$export_row = array();
-		$buffer     = fopen( 'php://output', 'w' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+		$buffer     = fopen( 'php://output', 'w' ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fopen
 		ob_start();
 
 		foreach ( $columns as $column_id => $column_name ) {
@@ -285,7 +285,7 @@ abstract class WC_CSV_Exporter {
 	 */
 	protected function export_rows() {
 		$data   = $this->get_data_to_export();
-		$buffer = fopen( 'php://output', 'w' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fopen
+		$buffer = fopen( 'php://output', 'w' ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fopen
 		ob_start();
 
 		array_walk( $data, array( $this, 'export_row' ), $buffer );

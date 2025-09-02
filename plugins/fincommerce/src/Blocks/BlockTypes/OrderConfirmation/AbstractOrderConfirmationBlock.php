@@ -170,7 +170,7 @@ abstract class AbstractOrderConfirmationBlock extends AbstractBlock {
 	 * @return boolean
 	 */
 	protected function is_email_verified( $order ) {
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.ValidatedSanitizedInput.MissingUnslash
 		if ( empty( $_POST ) || ! isset( $_POST['email'], $_POST['_wpnonce'] ) ) {
 			return false;
 		}
@@ -228,7 +228,7 @@ abstract class AbstractOrderConfirmationBlock extends AbstractBlock {
 	 * @return boolean
 	 */
 	protected function has_valid_order_key( $order ) {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		return ! empty( $_GET['key'] ) && $order->key_is_valid( wc_clean( wp_unslash( $_GET['key'] ) ) );
 	}
 

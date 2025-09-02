@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
-import { Block } from '@wordpress/blocks/index';
+import { addFilter } from '@finpress/hooks';
+import { Block } from '@finpress/blocks/index';
 
 /**
  * Switch layout to reduced flex email layout

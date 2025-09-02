@@ -295,7 +295,7 @@ class OrdersTableFieldQuery {
 		switch ( $clause_compare ) {
 			case 'IN':
 			case 'NOT IN':
-				$where = $wpdb->prepare( '(' . substr( str_repeat( ',%s', count( (array) $clause_value ) ), 1 ) . ')', $clause_value ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$where = $wpdb->prepare( '(' . substr( str_repeat( ',%s', count( (array) $clause_value ) ), 1 ) . ')', $clause_value ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 				break;
 			case 'BETWEEN':
 			case 'NOT BETWEEN':

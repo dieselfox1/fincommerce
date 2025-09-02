@@ -2,10 +2,10 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import { useCheckoutAddress } from '@fincommerce/base-context/hooks';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 /**
  * Internal dependencies
  */

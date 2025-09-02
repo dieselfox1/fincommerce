@@ -1,24 +1,24 @@
 /**
  * External dependencies
  */
-import { Button, TabPanel } from '@wordpress/components';
+import { Button, TabPanel } from '@finpress/components';
 import {
 	useFocusOnMount,
 	useFocusReturn,
 	useMergeRefs,
-} from '@wordpress/compose';
+} from '@finpress/compose';
 import {
 	createElement,
 	useRef,
 	useState,
 	useContext,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { closeSmall } from '@wordpress/icons';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { closeSmall } from '@finpress/icons';
 import {
-	// @ts-expect-error Module "@wordpress/block-editor" has no exported member '__experimentalListView'
+	// @ts-expect-error Module "@finpress/block-editor" has no exported member '__experimentalListView'
 	__experimentalListView as ListView,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

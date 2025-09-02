@@ -2,8 +2,8 @@
  * External dependencies
  */
 import PropTypes from 'prop-types';
-import { format as formatDate } from '@wordpress/date';
-import { createElement } from '@wordpress/element';
+import { format as formatDate } from '@finpress/date';
+import { createElement } from '@finpress/element';
 
 /**
  * Use the `Date` component to display accessible dates or times.

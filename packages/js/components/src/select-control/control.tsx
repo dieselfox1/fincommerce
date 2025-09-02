@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BACKSPACE, DOWN, UP } from '@wordpress/keycodes';
-import { createElement, Component, createRef } from '@wordpress/element';
-import { Icon, search } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { BACKSPACE, DOWN, UP } from '@finpress/keycodes';
+import { createElement, Component, createRef } from '@finpress/element';
+import { Icon, search } from '@finpress/icons';
 import clsx from 'clsx';
 import { isArray } from 'lodash';
 import {

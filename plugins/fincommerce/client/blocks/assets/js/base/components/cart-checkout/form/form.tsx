@@ -24,11 +24,11 @@ import {
 	OrderFormValues,
 } from '@fincommerce/settings';
 import { isNull } from '@fincommerce/types';
-import { useInstanceId } from '@wordpress/compose';
-import { dispatch, select } from '@wordpress/data';
-import { useEffect, useRef } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { useInstanceId } from '@finpress/compose';
+import { dispatch, select } from '@finpress/data';
+import { useEffect, useRef } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
+import isShallowEqual from '@finpress/is-shallow-equal';
 import clsx from 'clsx';
 import fastDeepEqual from 'fast-deep-equal/es6';
 

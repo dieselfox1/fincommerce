@@ -28,7 +28,7 @@ class WC_Admin_List_Table_Orders_Test extends WC_Unit_Test_Case {
 
 		// Simulate a search for the billing first name.
 		$_GET['s']          = 'SearchTestFirstName';
-		$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		// Set up the query. WC_Admin_List_Table_Orders hooks into the parse_query action.
 		$list_table = new WC_Admin_List_Table_Orders();
@@ -88,7 +88,7 @@ class WC_Admin_List_Table_Orders_Test extends WC_Unit_Test_Case {
 			$order->save();
 
 			$_GET['s']          = $value;
-			$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 			$list_table = new WC_Admin_List_Table_Orders();
 			$query      = new WP_Query(
@@ -138,7 +138,7 @@ class WC_Admin_List_Table_Orders_Test extends WC_Unit_Test_Case {
 		$order_id     = $target_order->get_id();
 
 		$_GET['s']          = (string) $order_id;
-		$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = new WC_Admin_List_Table_Orders();
 		$query      = new WP_Query(
@@ -200,7 +200,7 @@ class WC_Admin_List_Table_Orders_Test extends WC_Unit_Test_Case {
 		$dummy_order->save();
 
 		$_GET['s']          = 'Wanted Product';
-		$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['pagenow'] = 'edit.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$list_table = new WC_Admin_List_Table_Orders();
 		$query      = new WP_Query(

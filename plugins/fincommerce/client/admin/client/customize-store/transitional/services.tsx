@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { optionsStore } from '@fincommerce/data';
-import { resolveSelect } from '@wordpress/data';
+import { resolveSelect } from '@finpress/data';
 
 export const fetchSurveyCompletedOption = async () =>
 	resolveSelect( optionsStore ).getOption(

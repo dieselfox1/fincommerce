@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store, getContext, getConfig } from '@wordpress/interactivity';
+import { store, getContext, getConfig } from '@finpress/interactivity';
 
 /**
  * Internal dependencies

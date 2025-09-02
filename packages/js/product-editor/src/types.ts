@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockAttributes, BlockEditProps } from '@wordpress/blocks';
+import { BlockAttributes, BlockEditProps } from '@finpress/blocks';
 import { Product } from '@fincommerce/data';
 
 export type ProductTemplate = {

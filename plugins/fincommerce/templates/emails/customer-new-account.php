@@ -48,7 +48,7 @@ do_action( 'fincommerce_email_header', $email_heading, $email ); ?>
 	<p><a href="<?php echo esc_attr( wc_get_page_permalink( 'myaccount' ) ); ?>"><?php printf( esc_html__( 'My account', 'fincommerce' ) ); ?></a></p>
 <?php else : ?>
 	<?php /* translators: %1$s: Site title, %2$s: Username, %3$s: My account link */ ?>
-	<p><?php printf( esc_html__( 'Thanks for creating an account on %1$s. Your username is %2$s. You can access your account area to view orders, change your password, and more at: %3$s', 'fincommerce' ), esc_html( $blogname ), '<strong>' . esc_html( $user_login ) . '</strong>', make_clickable( esc_url( wc_get_page_permalink( 'myaccount' ) ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+	<p><?php printf( esc_html__( 'Thanks for creating an account on %1$s. Your username is %2$s. You can access your account area to view orders, change your password, and more at: %3$s', 'fincommerce' ), esc_html( $blogname ), '<strong>' . esc_html( $user_login ) . '</strong>', make_clickable( esc_url( wc_get_page_permalink( 'myaccount' ) ) ) ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?></p>
 	<?php if ( $password_generated && $set_password_url ) : ?>
 		<?php // If the password has not been set by the user during the sign up process, send them a link to set a new password. ?>
 		<p><a href="<?php echo esc_attr( $set_password_url ); ?>"><?php printf( esc_html__( 'Click here to set your new password.', 'fincommerce' ) ); ?></a></p>

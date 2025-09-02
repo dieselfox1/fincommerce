@@ -3,7 +3,7 @@
  * Reads from  : assets/js
  * Publishes to: docs/block-references/block-references.md
  *
- * Adopted from: https://github.com/WordPress/gutenberg/pull/36183 Props to @mkaz
+ * Adopted from: https://github.com/finpress/gutenberg/pull/36183 Props to @mkaz
  */
 
 /**

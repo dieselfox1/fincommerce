@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, useEffect, useRef } from '@wordpress/element';
+import { createElement, useEffect, useRef } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

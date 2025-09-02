@@ -85,15 +85,15 @@ class WC_REST_Product_Custom_Fields_Controller extends WC_REST_Controller {
 		);
 
 		$query  = $base_query;
-		$query .= $wpdb->prepare( " ORDER BY post_metas.meta_key $order LIMIT %d, %d", $offset, $limit ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $order is safe.
+		$query .= $wpdb->prepare( " ORDER BY post_metas.meta_key $order LIMIT %d, %d", $offset, $limit ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $order is safe.
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $base_query has been prepared already.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $base_query has been prepared already.
 		$total_query = "SELECT COUNT(1) FROM ($base_query) AS total";
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared -- $query has been prepared already.
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared -- $query has been prepared already.
 		$query_result = $wpdb->get_results( $query );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared -- $total_query has been prepared already.
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared -- $total_query has been prepared already.
 		$total_items = $wpdb->get_var( $total_query );
 
 		$custom_field_names = array();

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement, Fragment, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { closeSmall } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { createElement, Fragment, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { closeSmall } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 import clsx from 'clsx';
 

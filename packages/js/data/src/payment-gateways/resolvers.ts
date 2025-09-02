@@ -4,8 +4,8 @@
 import {
 	apiFetch,
 	dispatch as depreciatedDispatch,
-} from '@wordpress/data-controls';
-import { controls } from '@wordpress/data';
+} from '@finpress/data-controls';
+import { controls } from '@finpress/data';
 
 /**
  * Internal dependencies

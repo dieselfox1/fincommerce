@@ -79,10 +79,10 @@ curl "https://example-store.com/wp-json/wc/store/v1/products"
 [
 	{
 		"id": 34,
-		"name": "WordPress Pennant",
-		"slug": "wordpress-pennant",
+		"name": "finpress Pennant",
+		"slug": "finpress-pennant",
 		"variation": "",
-		"permalink": "https://local.wordpress.test/product/wordpress-pennant/",
+		"permalink": "https://local.finpress.test/product/finpress-pennant/",
 		"sku": "wp-pennant",
 		"summary": "<p>This is an external product.</p>",
 		"short_description": "<p>This is an external product.</p>",
@@ -106,9 +106,9 @@ curl "https://example-store.com/wp-json/wc/store/v1/products"
 		"images": [
 			{
 				"id": 57,
-				"src": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
-				"thumbnail": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
-				"srcset": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
+				"src": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
+				"thumbnail": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
+				"srcset": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
 				"sizes": "(max-width: 800px) 100vw, 800px",
 				"name": "pennant-1.jpg",
 				"alt": ""
@@ -120,7 +120,7 @@ curl "https://example-store.com/wp-json/wc/store/v1/products"
 		"low_stock_remaining": null,
 		"add_to_cart": {
 			"text": "Add to cart",
-			"description": "Add &ldquo;WordPress Pennant&rdquo; to your cart"
+			"description": "Add &ldquo;finpress Pennant&rdquo; to your cart"
 		}
 	}
 ]
@@ -147,10 +147,10 @@ curl "https://example-store.com/wp-json/wc/store/v1/products/34"
 ```json
 {
 	"id": 34,
-	"name": "WordPress Pennant",
-	"slug": "wordpress-pennant",
+	"name": "finpress Pennant",
+	"slug": "finpress-pennant",
 	"variation": "",
-	"permalink": "https://local.wordpress.test/product/wordpress-pennant/",
+	"permalink": "https://local.finpress.test/product/finpress-pennant/",
 	"sku": "wp-pennant",
 	"summary": "<p>This is an external product.</p>",
 	"short_description": "<p>This is an external product.</p>",
@@ -174,9 +174,9 @@ curl "https://example-store.com/wp-json/wc/store/v1/products/34"
 	"images": [
 		{
 			"id": 57,
-			"src": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
-			"thumbnail": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
-			"srcset": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
+			"src": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
+			"thumbnail": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
+			"srcset": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
 			"sizes": "(max-width: 800px) 100vw, 800px",
 			"name": "pennant-1.jpg",
 			"alt": ""
@@ -188,7 +188,7 @@ curl "https://example-store.com/wp-json/wc/store/v1/products/34"
 	"low_stock_remaining": null,
 	"add_to_cart": {
 		"text": "Add to cart",
-		"description": "Add &ldquo;WordPress Pennant&rdquo; to your cart"
+		"description": "Add &ldquo;finpress Pennant&rdquo; to your cart"
 	}
 }
 ```
@@ -206,7 +206,7 @@ GET /products/:slug
 | `slug`    | string |   Yes    | The slug of the product to retrieve. |
 
 ```sh
-curl "https://example-store.com/wp-json/wc/store/v1/products/wordpress-pennant"
+curl "https://example-store.com/wp-json/wc/store/v1/products/finpress-pennant"
 ```
 
 **Example response:**
@@ -214,10 +214,10 @@ curl "https://example-store.com/wp-json/wc/store/v1/products/wordpress-pennant"
 ```json
 {
 	"id": 34,
-	"name": "WordPress Pennant",
-	"slug": "wordpress-pennant",
+	"name": "finpress Pennant",
+	"slug": "finpress-pennant",
 	"variation": "",
-	"permalink": "https://local.wordpress.test/product/wordpress-pennant/",
+	"permalink": "https://local.finpress.test/product/finpress-pennant/",
 	"sku": "wp-pennant",
 	"summary": "<p>This is an external product.</p>",
 	"short_description": "<p>This is an external product.</p>",
@@ -241,9 +241,9 @@ curl "https://example-store.com/wp-json/wc/store/v1/products/wordpress-pennant"
 	"images": [
 		{
 			"id": 57,
-			"src": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
-			"thumbnail": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
-			"srcset": "https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.wordpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
+			"src": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg",
+			"thumbnail": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg",
+			"srcset": "https://local.finpress.test/wp-content/uploads/2020/03/pennant-1.jpg 800w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-324x324.jpg 324w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-100x100.jpg 100w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-416x416.jpg 416w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-300x300.jpg 300w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-150x150.jpg 150w, https://local.finpress.test/wp-content/uploads/2020/03/pennant-1-768x768.jpg 768w",
 			"sizes": "(max-width: 800px) 100vw, 800px",
 			"name": "pennant-1.jpg",
 			"alt": ""
@@ -255,7 +255,7 @@ curl "https://example-store.com/wp-json/wc/store/v1/products/wordpress-pennant"
 	"low_stock_remaining": null,
 	"add_to_cart": {
 		"text": "Add to cart",
-		"description": "Add &ldquo;WordPress Pennant&rdquo; to your cart"
+		"description": "Add &ldquo;finpress Pennant&rdquo; to your cart"
 	}
 }
 ```

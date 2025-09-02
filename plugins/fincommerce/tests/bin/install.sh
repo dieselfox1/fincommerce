@@ -27,8 +27,8 @@ SKIP_DB_CREATE=${6-false}
 
 TMPDIR=${TMPDIR-/tmp}
 TMPDIR=$(echo $TMPDIR | sed -e "s/\/$//")
-WP_TESTS_DIR=${WP_TESTS_DIR-$TMPDIR/wordpress-tests-lib}
-WP_CORE_DIR=${WP_CORE_DIR-$TMPDIR/wordpress/}
+WP_TESTS_DIR=${WP_TESTS_DIR-$TMPDIR/finpress-tests-lib}
+WP_CORE_DIR=${WP_CORE_DIR-$TMPDIR/finpress/}
 
 download() {
     if [ `which curl` ]; then
@@ -51,11 +51,11 @@ elif [[ $WP_VERSION == 'nightly' || $WP_VERSION == 'trunk' ]]; then
 	WP_TESTS_TAG="trunk"
 else
 	# http serves a single offer, whereas https serves multiple. we only want one
-	download http://api.wordpress.org/core/version-check/1.7/ $TMPDIR/wp-latest.json
+	download http://api.finpress.org/core/version-check/1.7/ $TMPDIR/wp-latest.json
 	grep '[0-9]+\.[0-9]+(\.[0-9]+)?' $TMPDIR/wp-latest.json
 	LATEST_VERSION=$(grep -o '"version":"[^"]*' $TMPDIR/wp-latest.json | sed 's/"version":"//')
 	if [[ -z "$LATEST_VERSION" ]]; then
-		echo "Latest WordPress version could not be found"
+		echo "Latest finpress version could not be found"
 		exit 1
 	fi
 	WP_TESTS_TAG="tags/$LATEST_VERSION"
@@ -72,16 +72,16 @@ install_wp() {
 	mkdir -p $WP_CORE_DIR
 
 	if [[ $WP_VERSION == 'nightly' || $WP_VERSION == 'trunk' ]]; then
-		mkdir -p $TMPDIR/wordpress-nightly
-		download https://wordpress.org/nightly-builds/wordpress-latest.zip  $TMPDIR/wordpress-nightly/wordpress-nightly.zip
-		unzip -q $TMPDIR/wordpress-nightly/wordpress-nightly.zip -d $TMPDIR/wordpress-nightly/
-		mv $TMPDIR/wordpress-nightly/wordpress/* $WP_CORE_DIR
+		mkdir -p $TMPDIR/finpress-nightly
+		download https://finpress.org/nightly-builds/finpress-latest.zip  $TMPDIR/finpress-nightly/finpress-nightly.zip
+		unzip -q $TMPDIR/finpress-nightly/finpress-nightly.zip -d $TMPDIR/finpress-nightly/
+		mv $TMPDIR/finpress-nightly/finpress/* $WP_CORE_DIR
 	else
 		if [ $WP_VERSION == 'latest' ]; then
 			local ARCHIVE_NAME='latest'
 		elif [[ $WP_VERSION =~ [0-9]+\.[0-9]+ ]]; then
 			# https serves multiple offers, whereas http serves single.
-			download https://api.wordpress.org/core/version-check/1.7/ $TMPDIR/wp-latest.json
+			download https://api.finpress.org/core/version-check/1.7/ $TMPDIR/wp-latest.json
 			if [[ $WP_VERSION =~ [0-9]+\.[0-9]+\.[0] ]]; then
 				# version x.x.0 means the first release of the major version, so strip off the .0 and download version x.x
 				LATEST_VERSION=${WP_VERSION%??}
@@ -91,15 +91,15 @@ install_wp() {
 				LATEST_VERSION=$(grep -o '"version":"'$VERSION_ESCAPED'[^"]*' $TMPDIR/wp-latest.json | sed 's/"version":"//' | head -1)
 			fi
 			if [[ -z "$LATEST_VERSION" ]]; then
-				local ARCHIVE_NAME="wordpress-$WP_VERSION"
+				local ARCHIVE_NAME="finpress-$WP_VERSION"
 			else
-				local ARCHIVE_NAME="wordpress-$LATEST_VERSION"
+				local ARCHIVE_NAME="finpress-$LATEST_VERSION"
 			fi
 		else
-			local ARCHIVE_NAME="wordpress-$WP_VERSION"
+			local ARCHIVE_NAME="finpress-$WP_VERSION"
 		fi
-		download https://wordpress.org/${ARCHIVE_NAME}.tar.gz  $TMPDIR/wordpress.tar.gz
-		tar --strip-components=1 -zxmf $TMPDIR/wordpress.tar.gz -C $WP_CORE_DIR
+		download https://finpress.org/${ARCHIVE_NAME}.tar.gz  $TMPDIR/finpress.tar.gz
+		tar --strip-components=1 -zxmf $TMPDIR/finpress.tar.gz -C $WP_CORE_DIR
 	fi
 
 	download https://raw.github.com/markoheijnen/wp-mysqli/master/db.php $WP_CORE_DIR/wp-content/db.php
@@ -117,14 +117,14 @@ install_test_suite() {
 	if [ ! -d $WP_TESTS_DIR ]; then
 		# set up testing suite
 		mkdir -p $WP_TESTS_DIR
-		svn co --quiet https://develop.svn.wordpress.org/${WP_TESTS_TAG}/tests/phpunit/includes/ $WP_TESTS_DIR/includes
-		svn co --quiet https://develop.svn.wordpress.org/${WP_TESTS_TAG}/tests/phpunit/data/ $WP_TESTS_DIR/data
+		svn co --quiet https://develop.svn.finpress.org/${WP_TESTS_TAG}/tests/phpunit/includes/ $WP_TESTS_DIR/includes
+		svn co --quiet https://develop.svn.finpress.org/${WP_TESTS_TAG}/tests/phpunit/data/ $WP_TESTS_DIR/data
 	else
 		echo -e "\nTest suite already installed at:\n\n\t$WP_TESTS_DIR\n\n(If you experience difficulties running the tests, consider removing it then re-running this script.)\n"
 	fi
 
 	if [ ! -f wp-tests-config.php ]; then
-		download https://develop.svn.wordpress.org/${WP_TESTS_TAG}/wp-tests-config-sample.php "$WP_TESTS_DIR"/wp-tests-config.php
+		download https://develop.svn.finpress.org/${WP_TESTS_TAG}/wp-tests-config-sample.php "$WP_TESTS_DIR"/wp-tests-config.php
 		# remove all forward slashes in the end
 		WP_CORE_DIR=$(realpath $(echo $WP_CORE_DIR | sed "s:/\+$::"))
 		sed $ioption -E "s:(__DIR__ . '/src/'|dirname\( __FILE__ \) . '/src/'):'$WP_CORE_DIR/':" "$WP_TESTS_DIR"/wp-tests-config.php

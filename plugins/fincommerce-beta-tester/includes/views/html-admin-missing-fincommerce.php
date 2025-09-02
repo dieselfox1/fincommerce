@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 		if ( current_user_can( 'install_plugins' ) ) {
 			$url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=fincommerce' ), 'install-plugin_fincommerce' );
 		} else {
-			$url = 'http://wordpress.org/plugins/fincommerce/';
+			$url = 'http://finpress.org/plugins/fincommerce/';
 		}
 		?>
 		<p>

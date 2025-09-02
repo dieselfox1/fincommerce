@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Fragment } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Fragment } from '@finpress/element';
 import { useEffectOnce } from 'usehooks-ts';
 import {
 	useCheckoutAddress,

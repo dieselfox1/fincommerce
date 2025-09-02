@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { useStoreCart } from '@fincommerce/base-context/hooks';
-import { useEffect, useRef } from '@wordpress/element';
+import { useEffect, useRef } from '@finpress/element';
 
 /**
  * Internal dependencies

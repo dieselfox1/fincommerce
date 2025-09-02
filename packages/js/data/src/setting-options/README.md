@@ -5,7 +5,7 @@ The setting options data store provides a centralized way to manage FinCommerce 
 ## Usage
 
 ```js
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { experimentalSettingOptionsStore as settingOptionsStore } from '@fincommerce/data';
 
 function MySettingsComponent() {

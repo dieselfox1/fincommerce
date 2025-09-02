@@ -3,8 +3,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import type { Field, FormField } from '@wordpress/dataviews';
+import { createElement } from '@finpress/element';
+import type { Field, FormField } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

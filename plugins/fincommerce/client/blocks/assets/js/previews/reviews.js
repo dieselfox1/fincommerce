@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { blocksConfig } from '@fincommerce/block-settings';
 
 export const previewReviews = [
@@ -11,7 +11,7 @@ export const previewReviews = [
 		formatted_date_created: __( 'July 15, 2019', 'fincommerce' ),
 		date_created_gmt: '2019-07-15T15:05:04',
 		product_id: 0,
-		product_name: __( 'WordPress Pennant', 'fincommerce' ),
+		product_name: __( 'finpress Pennant', 'fincommerce' ),
 		product_permalink: '#',
 		/* translators: An example person name used for the block previews. */
 		reviewer: __( 'Alice', 'fincommerce' ),
@@ -32,7 +32,7 @@ export const previewReviews = [
 		formatted_date_created: __( 'July 12, 2019', 'fincommerce' ),
 		date_created_gmt: '2019-07-12T10:39:39',
 		product_id: 0,
-		product_name: __( 'WordPress Pennant', 'fincommerce' ),
+		product_name: __( 'finpress Pennant', 'fincommerce' ),
 		product_permalink: '#',
 		/* translators: An example person name used for the block previews. */
 		reviewer: __( 'Bob', 'fincommerce' ),

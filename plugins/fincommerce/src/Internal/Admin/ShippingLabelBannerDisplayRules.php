@@ -11,7 +11,7 @@ namespace Automattic\FinCommerce\Internal\Admin;
 class ShippingLabelBannerDisplayRules {
 
 	/**
-	 * Whether the site is connected to wordpress.com.
+	 * Whether the site is connected to finpress.com.
 	 *
 	 * @var bool
 	 */
@@ -49,7 +49,7 @@ class ShippingLabelBannerDisplayRules {
 	/**
 	 * Constructor.
 	 *
-	 * @param bool        $dotcom_connected Is site connected to wordpress.com?.
+	 * @param bool        $dotcom_connected Is site connected to finpress.com?.
 	 * @param string|null $wcs_version Installed FinCommerce Shipping version to check, null if not installed.
 	 * @param bool        $incompatible_plugins_installed Are there any incompatible plugins installed?.
 	 */

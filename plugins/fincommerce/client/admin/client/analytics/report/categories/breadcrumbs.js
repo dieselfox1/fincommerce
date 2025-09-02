@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import { first, last } from 'lodash';
-import { Spinner } from '@wordpress/components';
-import { decodeEntities } from '@wordpress/html-entities';
+import { Spinner } from '@finpress/components';
+import { decodeEntities } from '@finpress/html-entities';
 import { Link } from '@fincommerce/components';
 import { getNewPath, getPersistedQuery } from '@fincommerce/navigation';
 

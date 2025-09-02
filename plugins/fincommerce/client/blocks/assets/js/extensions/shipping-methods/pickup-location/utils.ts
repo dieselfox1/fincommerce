@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { cleanForSlug } from '@wordpress/url';
-import { __ } from '@wordpress/i18n';
+import { cleanForSlug } from '@finpress/url';
+import { __ } from '@finpress/i18n';
 import { isObject } from '@fincommerce/types';
 import { getSetting } from '@fincommerce/settings';
 /**

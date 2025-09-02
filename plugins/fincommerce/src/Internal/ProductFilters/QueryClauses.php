@@ -404,7 +404,7 @@ class QueryClauses implements QueryClausesGenerator, MainQueryClausesGenerator {
 			 * 4. Efficient combination: Multiple taxonomy filters can be combined with AND
 			 *    without complex GROUP BY logic or performance degradation.
 			 */
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 			$tax_queries[] = $wpdb->prepare(
 				"EXISTS (
 					SELECT 1 FROM {$wpdb->term_relationships} tr
@@ -496,7 +496,7 @@ class QueryClauses implements QueryClausesGenerator, MainQueryClausesGenerator {
 			);
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->prepare(
 			' AND (
 				wc_product_meta_lookup.tax_status = "taxable" AND ( 0=1 OR ' . implode( ' OR ', $or_queries ) . ')
@@ -504,7 +504,7 @@ class QueryClauses implements QueryClausesGenerator, MainQueryClausesGenerator {
 			) ',
 			$price_filter
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

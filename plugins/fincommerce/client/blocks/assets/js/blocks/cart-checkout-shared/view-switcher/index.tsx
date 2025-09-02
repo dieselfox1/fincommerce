@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { addFilter, hasFilter } from '@wordpress/hooks';
+import { useSelect } from '@finpress/data';
+import { addFilter, hasFilter } from '@finpress/hooks';
 import type { EditorBlock } from '@fincommerce/types';
 
 /**

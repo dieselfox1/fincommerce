@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useEffect, useMemo, useState } from '@wordpress/element';
+import { useEffect, useMemo, useState } from '@finpress/element';
 import { WP_REST_API_Category } from 'wp-types';
 import { ProductResponseItem } from '@fincommerce/types';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import type { ComponentType } from 'react';
 
 /**

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useCallback, useRef } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useCallback, useRef } from '@finpress/element';
 import { checkoutStore } from '@fincommerce/block-data';
 
 /**

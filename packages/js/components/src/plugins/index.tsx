@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import {
 	createElement,
 	Fragment,
 	useState,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { SyntheticEvent, useCallback } from 'react';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { pluginsStore } from '@fincommerce/data';
 import type { InstallPluginsResponse } from '@fincommerce/data';
 

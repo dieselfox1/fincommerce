@@ -17,7 +17,7 @@ jest.mock( '../../assembler-hub/site-hub', () => ( {
 } ) );
 
 jest.mock(
-	'@wordpress/edit-site/build-module/components/layout/hooks',
+	'@finpress/edit-site/build-module/components/layout/hooks',
 	() => ( {
 		__esModule: true,
 		useIsSiteEditorLoading: jest.fn().mockReturnValue( false ),

@@ -5,14 +5,14 @@
 import {
 	// @ts-expect-error No types for this exist yet.
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // @ts-expect-error No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies
  */
-import { useMemo } from '@wordpress/element';
+import { useMemo } from '@finpress/element';
 import { FontFamily } from '../types/font';
 import { FontFamiliesLoader } from './sidebar/global-styles/font-pairing-variations/font-families-loader';
 

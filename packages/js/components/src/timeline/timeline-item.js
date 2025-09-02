@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { format } from '@wordpress/date';
+import { format } from '@finpress/date';
 import PropTypes from 'prop-types';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 const TimelineItem = ( { item = {}, className = '', clockFormat } ) => {
 	const itemClassName = clsx( 'fincommerce-timeline-item', className );

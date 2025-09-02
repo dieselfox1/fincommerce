@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useCallback } from '@wordpress/element';
-import { dispatch, useSelect } from '@wordpress/data';
-import { store as noticesStore } from '@wordpress/notices';
+import { useCallback } from '@finpress/element';
+import { dispatch, useSelect } from '@finpress/data';
+import { store as noticesStore } from '@finpress/notices';
 
 export type NoticeAction = {
 	label: string;

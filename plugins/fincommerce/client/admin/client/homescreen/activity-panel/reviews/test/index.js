@@ -26,7 +26,7 @@ const REVIEW = {
 				id: 45,
 				name: 'Cap',
 				slug: 'cap',
-				permalink: 'https://one.wordpress.test/product/cap/',
+				permalink: 'https://one.finpress.test/product/cap/',
 				description:
 					'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 				short_description: 'This is a simple product.',
@@ -37,7 +37,7 @@ const REVIEW = {
 						date_created_gmt: '2020-11-20T17:28:47',
 						date_modified: '2020-11-20T17:28:47',
 						date_modified_gmt: '2020-11-20T17:28:47',
-						src: 'https://one.wordpress.test/wp-content/uploads/2020/11/cap-2-1.jpg',
+						src: 'https://one.finpress.test/wp-content/uploads/2020/11/cap-2-1.jpg',
 						name: 'cap-2-1.jpg',
 						alt: '',
 					},

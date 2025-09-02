@@ -1,15 +1,15 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 
 /**
  * External dependencies
  */
-import { useCallback, useEffect, useRef, useState } from '@wordpress/element';
+import { useCallback, useEffect, useRef, useState } from '@finpress/element';
 import { WP_REST_API_Category } from 'wp-types';
 import { ProductResponseItem } from '@fincommerce/types';
 import {
 	__experimentalImageEditingProvider as ImageEditingProvider,
 	__experimentalImageEditor as GutenbergImageEditor,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import type { ComponentType, Dispatch, SetStateAction } from 'react';
 
 /**
@@ -57,7 +57,7 @@ interface ImageEditorProps {
 }
 
 // Adapted from:
-// https://github.com/WordPress/gutenberg/blob/v15.6.1/packages/block-library/src/image/use-client-width.js
+// https://github.com/finpress/gutenberg/blob/v15.6.1/packages/block-library/src/image/use-client-width.js
 function useClientWidth(
 	ref: React.RefObject< HTMLDivElement >,
 	dependencies: string[]
@@ -107,7 +107,7 @@ export const ImageEditor = ( {
 	const clientWidth = useClientWidth( containerRef, [ align ] );
 
 	// Fallback for WP 6.1 or lower. In WP 6.2. ImageEditingProvider was merged
-	// with ImageEditor, see: https://github.com/WordPress/gutenberg/pull/47171
+	// with ImageEditor, see: https://github.com/finpress/gutenberg/pull/47171
 	if ( typeof ImageEditingProvider === 'function' ) {
 		return (
 			<ImageEditingProvider

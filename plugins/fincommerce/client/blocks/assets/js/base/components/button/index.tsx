@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Button as AriakitButton } from '@ariakit/react';
-import { forwardRef } from '@wordpress/element';
+import { forwardRef } from '@finpress/element';
 import clsx from 'clsx';
 import type { ForwardedRef } from 'react';
 import type { ButtonProps as AriakitButtonProps } from '@ariakit/react';

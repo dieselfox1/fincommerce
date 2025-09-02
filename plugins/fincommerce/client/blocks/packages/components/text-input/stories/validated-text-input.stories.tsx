@@ -4,9 +4,9 @@
 import type { StoryFn, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { useArgs } from '@storybook/client-api';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
-import { useState, useEffect } from '@wordpress/element';
+import { useState, useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -47,7 +47,7 @@ It looks first within the block's `attributes` and if there is no icon defined t
 
 2. As part of the block's metadata
 
-    See [the official blocks icon documentation](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#icon).
+    See [the official blocks icon documentation](https://developer.finpress.org/block-editor/reference-guides/block-api/block-metadata/#icon).
 
 ### Rendering the Icon
 

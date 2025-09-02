@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import triggerFetch from '@wordpress/api-fetch';
+import { __ } from '@finpress/i18n';
+import triggerFetch from '@finpress/api-fetch';
 import {
 	useEffect,
 	useRef,
 	useCallback,
 	useState,
 	useMemo,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	emptyHiddenAddressFields,
 	removeAllNotices,
 } from '@fincommerce/base-utils';
-import { useDispatch, useSelect, select as selectStore } from '@wordpress/data';
+import { useDispatch, useSelect, select as selectStore } from '@finpress/data';
 import {
 	checkoutStore,
 	paymentStore,

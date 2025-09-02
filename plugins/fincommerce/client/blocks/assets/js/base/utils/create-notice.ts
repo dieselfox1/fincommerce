@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	Options as NoticeOptions,
 	store as noticesStore,
-} from '@wordpress/notices';
-import { select, dispatch } from '@wordpress/data';
-import { CurriedSelectorsOf } from '@wordpress/data/build-types/types';
+} from '@finpress/notices';
+import { select, dispatch } from '@finpress/data';
+import { CurriedSelectorsOf } from '@finpress/data/build-types/types';
 
 /**
  * Internal dependencies
@@ -31,7 +31,7 @@ export const getNoticeContexts = () => {
 };
 
 /**
- * Wrapper for @wordpress/notices createNotice.
+ * Wrapper for @finpress/notices createNotice.
  */
 export const createNotice = (
 	status: 'error' | 'warning' | 'info' | 'success',
@@ -59,7 +59,7 @@ export const createNotice = (
  * Remove notices from all contexts.
  *
  * @todo Remove this when supported in Gutenberg.
- * @see https://github.com/WordPress/gutenberg/pull/44059
+ * @see https://github.com/finpress/gutenberg/pull/44059
  */
 export const removeAllNotices = () => {
 	const selectors = select(

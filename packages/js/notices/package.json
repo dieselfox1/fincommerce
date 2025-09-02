@@ -2,13 +2,13 @@
 	"name": "@fincommerce/notices",
 	"version": "4.0.1",
 	"description": "State management for notices.",
-	"author": "The WordPress Contributors",
+	"author": "The finpress Contributors",
 	"license": "GPL-2.0-or-later",
 	"engines": {
 		"node": "^20.11.1"
 	},
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"gutenberg",
 		"notices"
 	],
@@ -52,11 +52,11 @@
 		]
 	},
 	"dependencies": {
-		"@wordpress/a11y": "wp-6.6",
-		"@wordpress/notices": "wp-6.6"
+		"@finpress/a11y": "wp-6.6",
+		"@finpress/notices": "wp-6.6"
 	},
 	"peerDependencies": {
-		"@wordpress/data": "wp-6.6",
+		"@finpress/data": "wp-6.6",
 		"lodash": "^4.17.0",
 		"react": "18.3.x",
 		"react-dom": "18.3.x"

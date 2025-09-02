@@ -3,8 +3,8 @@
  */
 import { render, waitFor, fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { format as formatDate } from '@wordpress/date';
-import { createElement, Fragment } from '@wordpress/element';
+import { format as formatDate } from '@finpress/date';
+import { createElement, Fragment } from '@finpress/element';
 import moment from 'moment';
 
 /**

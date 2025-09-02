@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { Product } from '@fincommerce/data';
 import clsx from 'clsx';
 

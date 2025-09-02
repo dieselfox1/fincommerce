@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { ComponentProps } from 'react';
-import { Notice } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+import { Notice } from '@finpress/components';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

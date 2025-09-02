@@ -10,7 +10,7 @@ import type {
 	ApiErrorResponse,
 } from '@fincommerce/types';
 import { BillingAddress, ShippingAddress } from '@fincommerce/settings';
-import { createSelector } from '@wordpress/data';
+import { createSelector } from '@finpress/data';
 
 /**
  * Internal dependencies

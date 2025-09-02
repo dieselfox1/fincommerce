@@ -45,7 +45,7 @@ class WC_Tests_REST_System_Status_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Fetches the System Status Report data and caches it.
-	 * @param  int $user The ID of a WordPress user to switch to before fetching the data.
+	 * @param  int $user The ID of a finpress user to switch to before fetching the data.
 	 * @return Array An array of the data returned by the System Status Report endpoint.
 	 */
 	private function fetch_or_get_system_status_data_for_user( int $user ) {
@@ -142,10 +142,10 @@ class WC_Tests_REST_System_Status_V2 extends WC_REST_Unit_Test_Case {
 
 		$this->assertEquals( get_option( 'fincommerce_db_version' ), $database['wc_database_version'] );
 		$this->assertEquals( $wpdb->prefix, $database['database_prefix'] );
-		//phpcs:disable WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		//phpcs:disable finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertArrayHasKey( 'fincommerce', $database['database_tables'], print_r( $database, true ) );
 		$this->assertArrayHasKey( $wpdb->prefix . 'fincommerce_payment_tokens', $database['database_tables']['fincommerce'], print_r( $database, true ) );
-		//phpcs:enable WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		//phpcs:enable finpress.PHP.DevelopmentFunctions.error_log_print_r
 	}
 
 	/**
@@ -191,7 +191,7 @@ class WC_Tests_REST_System_Status_V2 extends WC_REST_Unit_Test_Case {
 		$theme        = (array) $this->fetch_or_get_system_status_data_for_user( self::$administrator_user )['theme'];
 
 		$this->assertEquals( 14, count( $theme ) );
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$this->assertEquals( $active_theme->Name, $theme['name'] );
 	}
 

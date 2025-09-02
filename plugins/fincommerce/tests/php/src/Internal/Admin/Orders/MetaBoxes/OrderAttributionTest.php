@@ -97,7 +97,7 @@ class OrderAttributionTest extends WP_UnitTestCase {
 			'_wc_order_attribution_session_count'      => 1,
 			'_wc_order_attribution_session_pages'      => 4,
 			'_wc_order_attribution_session_start_time' => '2023-11-16 13:47:50',
-			'_wc_order_attribution_session_entry'      => 'https://wordpress.ddev.site/product/belt/',
+			'_wc_order_attribution_session_entry'      => 'https://finpress.ddev.site/product/belt/',
 			'_wc_order_attribution_utm_content'        => '/',
 			'_wc_order_attribution_utm_medium'         => 'referral',
 			'_wc_order_attribution_utm_source'         => 'fincommerce.com',
@@ -121,7 +121,7 @@ class OrderAttributionTest extends WP_UnitTestCase {
 				$this->assertEquals( 1, $args['meta']['session_count'] ?? '' );
 				$this->assertEquals( 4, $args['meta']['session_pages'] ?? '' );
 				$this->assertEquals( '2023-11-16 13:47:50', $args['meta']['session_start_time'] ?? '' );
-				$this->assertEquals( 'https://wordpress.ddev.site/product/belt/', $args['meta']['session_entry'] ?? '' );
+				$this->assertEquals( 'https://finpress.ddev.site/product/belt/', $args['meta']['session_entry'] ?? '' );
 				$this->assertEquals( '/', $args['meta']['utm_content'] ?? '' );
 				$this->assertEquals( 'referral', $args['meta']['utm_medium'] ?? '' );
 				$this->assertEquals( 'fincommerce.com', $args['meta']['utm_source'] ?? '' );

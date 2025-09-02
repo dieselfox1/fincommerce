@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockConfiguration } from '@wordpress/blocks';
+import { BlockConfiguration } from '@finpress/blocks';
 
 /**
  * Internal dependencies

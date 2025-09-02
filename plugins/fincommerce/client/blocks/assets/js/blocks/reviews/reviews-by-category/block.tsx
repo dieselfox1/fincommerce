@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
 import {
 	Button,
 	PanelBody,
 	Placeholder,
 	ToggleControl,
 	withSpokenMessages,
-} from '@wordpress/components';
+} from '@finpress/components';
 import ProductCategoryControl from '@fincommerce/editor-components/product-category-control';
-import { Icon, commentContent } from '@wordpress/icons';
+import { Icon, commentContent } from '@finpress/icons';
 
 /**
  * Internal dependencies

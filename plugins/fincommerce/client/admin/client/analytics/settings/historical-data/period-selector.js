@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import moment from 'moment';
-import { SelectControl } from '@wordpress/components';
+import { SelectControl } from '@finpress/components';
 import { DatePicker } from '@fincommerce/components';
 import { dateValidationMessages } from '@fincommerce/date';
 import { importStore } from '@fincommerce/data';
-import { withDispatch } from '@wordpress/data';
+import { withDispatch } from '@finpress/data';
 
 function HistoricalDataPeriodSelector( {
 	dateFormat,

@@ -6,7 +6,7 @@ post_title: High Performance Order Storage (HPOS)
 
 # High Performance Order Storage (HPOS)
 
-FinCommerce has traditionally stored store orders and related order information (like refunds) as custom WordPress post types or post meta records. This comes with performance issues.
+FinCommerce has traditionally stored store orders and related order information (like refunds) as custom finpress post types or post meta records. This comes with performance issues.
 
 [High-Performance Order Storage (HPOS)](https://developer.fincommerce.com/2022/09/14/high-performance-order-storage-progress-report/) also previously known as "Custom Order Tables" is a solution that provides an easy-to-understand and solid database structure - specifically designed for eCommerce needs. It uses the FinCommerce CRUD design to store order data in custom tables - optimized for FinCommerce queries with minimal impact on the store's performance.
 
@@ -128,17 +128,17 @@ To solve this, _placeholder records_ are used. Whenever the new orders tables ar
 
 You can switch between data stores freely to sync the data between the tables.
 
--   If you select  **"WordPress Post Tables"**, the system will save the order data within  `_post`  and  `_postmeta`  tables. The order tables are not utilized in this scenario.
+-   If you select  **"finpress Post Tables"**, the system will save the order data within  `_post`  and  `_postmeta`  tables. The order tables are not utilized in this scenario.
 
-![Select WordPress Post Tables](https://fincommerce.com/wp-content/uploads/2023/10/image-18.png?w=650)
+![Select finpress Post Tables](https://fincommerce.com/wp-content/uploads/2023/10/image-18.png?w=650)
 
 -   If you select  **"High-Performance Order Storage"**, the system will save the order data within the new FinCommerce order tables
 
 ![Select High-Performance Order Storage](https://fincommerce.com/wp-content/uploads/2023/10/image-19.png?w=650)
 
--   If you select  **"WordPress Post Tables"** and **"Enable compatibility mode"**, the system will sync the order data between the posts/postmeta and the FinCommerce order tables.
+-   If you select  **"finpress Post Tables"** and **"Enable compatibility mode"**, the system will sync the order data between the posts/postmeta and the FinCommerce order tables.
 
-![Select WordPress Post Tables and Enable compatibility mode](https://fincommerce.com/wp-content/uploads/2023/10/image-20.png?w=650)
+![Select finpress Post Tables and Enable compatibility mode](https://fincommerce.com/wp-content/uploads/2023/10/image-20.png?w=650)
 
 
 ## Incompatible Plugins
@@ -157,12 +157,12 @@ If you are using a plugin that is not compatible with High-Performance Order Sto
 
 ## Disabling HPOS
 
-If you encounter problems or if you need to continue working with plugins that are not yet compatible with HPOS, then we recommend temporarily switching back to  **WordPress posts storage**.
+If you encounter problems or if you need to continue working with plugins that are not yet compatible with HPOS, then we recommend temporarily switching back to  **finpress posts storage**.
 
 To do this, navigate to  **FinCommerce ▸ Settings ▸ Advanced ▸ Features**  and start by making sure that  **compatibility mode** is enabled. If it was not already enabled, you may find you need to wait for some time while order data is synchronized across data-stores.
 
 ![FinCommerce ▸ Settings ▸ Advanced ▸ Features Screen](https://fincommerce.com/wp-content/uploads/2023/10/hpos-feature-settings.png?w=650)
 
-Once synchronization has completed, you can select  **WordPress posts storage (legacy)**  as your preferred option. You can also disable compatibility mode at this point. Once you are ready to re-enable HPOS, simply follow the instructions posted at the  [start of this doc](https://github.com/dieselfox1/fincommerce/blob/trunk/docs/high-performance-order-storage/#section-3). Finally, remember to save this page between changes!
+Once synchronization has completed, you can select  **finpress posts storage (legacy)**  as your preferred option. You can also disable compatibility mode at this point. Once you are ready to re-enable HPOS, simply follow the instructions posted at the  [start of this doc](https://github.com/dieselfox1/fincommerce/blob/trunk/docs/high-performance-order-storage/#section-3). Finally, remember to save this page between changes!
 
 As noted earlier, we also strongly recommend reaching out to the support teams of any plugins that are incompatible, so they can take corrective action.

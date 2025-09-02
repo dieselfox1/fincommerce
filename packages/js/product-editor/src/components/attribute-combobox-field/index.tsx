@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	BaseControl,
 	ComboboxControl as CoreComboboxControl,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	createElement,
 	useEffect,
 	useMemo,
 	useRef,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 
 /**

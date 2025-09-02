@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { apiFetch, select } from '@wordpress/data-controls';
-import { controls } from '@wordpress/data';
+import { apiFetch, select } from '@finpress/data-controls';
+import { controls } from '@finpress/data';
 import { DispatchFromMap } from '@automattic/data-stores';
 
 /**
@@ -62,7 +62,7 @@ export const geolocate =
 	() =>
 	async ( { dispatch }: { dispatch: DispatchFromMap< typeof actions > } ) => {
 		try {
-			const url = `https://public-api.wordpress.com/geo/?v=${ new Date().getTime() }`;
+			const url = `https://public-api.finpress.com/geo/?v=${ new Date().getTime() }`;
 			const response = await fetch( url, {
 				method: 'GET',
 			} );

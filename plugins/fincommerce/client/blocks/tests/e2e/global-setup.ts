@@ -4,7 +4,7 @@
  * External dependencies
  */
 import { chromium, request } from '@playwright/test';
-import { RequestUtils } from '@wordpress/e2e-test-utils-playwright';
+import { RequestUtils } from '@finpress/e2e-test-utils-playwright';
 import {
 	adminFile,
 	wpCLI,

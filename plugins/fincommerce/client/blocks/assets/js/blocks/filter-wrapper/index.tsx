@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createBlock, registerBlockType } from '@wordpress/blocks';
-import type { BlockInstance } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { createBlock, registerBlockType } from '@finpress/blocks';
+import type { BlockInstance } from '@finpress/blocks';
 import { toggle } from '@fincommerce/icons';
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
 import {
 	Icon,
 	category,
 	currencyDollar,
 	box,
 	starEmpty,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 
 /**
  * Internal dependencies

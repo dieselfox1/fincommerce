@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { WC_BLOCKS_IMAGE_URL } from '@fincommerce/block-settings';
 
 const shortDescription = __(
-	'Fly your WordPress banner with this beauty! Deck out your office space or add it to your kids walls. This banner will spruce up any space it’s hung!',
+	'Fly your finpress banner with this beauty! Deck out your office space or add it to your kids walls. This banner will spruce up any space it’s hung!',
 	'fincommerce'
 );
 
 export const previewProducts = [
 	{
 		id: 1,
-		name: 'WordPress Pennant',
+		name: 'finpress Pennant',
 		variation: '',
 		permalink: 'https://example.org',
 		sku: 'wp-pennant',
@@ -28,7 +28,7 @@ export const previewProducts = [
 				src: WC_BLOCKS_IMAGE_URL + 'previews/pennant.jpg',
 				thumbnail: WC_BLOCKS_IMAGE_URL + 'previews/pennant.jpg',
 				name: 'pennant-1.jpg',
-				alt: 'WordPress Pennant',
+				alt: 'finpress Pennant',
 				srcset: '',
 				sizes: '',
 			},

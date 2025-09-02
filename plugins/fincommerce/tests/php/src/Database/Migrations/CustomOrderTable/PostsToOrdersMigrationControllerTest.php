@@ -77,7 +77,7 @@ class PostsToOrdersMigrationControllerTest extends \WC_Unit_Test_Case {
 		// Run the migration again, assert there are still no duplicates.
 		$this->sut->migrate_order( $order->get_id() );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$this->assertEquals(
 			1,
 			$wpdb->get_var(
@@ -175,7 +175,7 @@ WHERE order_id = {$order_id} AND meta_key = 'non_unique_key_1' AND meta_value in
 		$order_table = $this->data_store::get_orders_table_name();
 		$query       = "SELECT * FROM $order_table WHERE id = {$post_order->get_id()};";
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->get_row( $query );
 	}
 
@@ -191,7 +191,7 @@ WHERE order_id = {$order_id} AND meta_key = 'non_unique_key_1' AND meta_value in
 		global $wpdb;
 		$address_table = $this->data_store::get_addresses_table_name();
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return $wpdb->get_row( "SELECT * FROM $address_table WHERE order_id = $order_id AND address_type = '$address_type';" );
 	}
 
@@ -206,7 +206,7 @@ WHERE order_id = {$order_id} AND meta_key = 'non_unique_key_1' AND meta_value in
 		global $wpdb;
 		$operational_data_table = $this->data_store::get_operational_data_table_name();
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return $wpdb->get_row( "SELECT * FROM $operational_data_table WHERE order_id = $order_id;" );
 	}
 
@@ -375,7 +375,7 @@ WHERE order_id = {$order_id} AND meta_key = 'non_unique_key_1' AND meta_value in
 		global $wpdb;
 		$order_tables = $this->data_store->get_all_table_names();
 		foreach ( $order_tables as $table ) {
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$wpdb->query( "TRUNCATE table $table;" );
 		}
 	}
@@ -857,7 +857,7 @@ WHERE order_id = {$order_id} AND meta_key = 'non_unique_key_1' AND meta_value in
 		$this->sut->migrate_order( $order->get_id() );
 
 		$errors = $this->sut->verify_migrated_orders( array( $order->get_id() ) );
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r -- Intentional for informative debug message.
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r -- Intentional for informative debug message.
 		$this->assertEmpty( $errors, 'Errors found in migrated data: ' . print_r( $errors, true ) );
 
 		$order_tax = $wpdb->get_var( $wpdb->prepare( "SELECT tax_amount FROM {$wpdb->prefix}wc_orders WHERE id = %d", $order->get_id() ) );

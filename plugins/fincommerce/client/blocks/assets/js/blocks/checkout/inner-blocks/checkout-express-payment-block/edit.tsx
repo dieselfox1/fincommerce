@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 import { useExpressPaymentMethods } from '@fincommerce/base-context/hooks';
 import clsx from 'clsx';
 import { ExpressPaymentControls } from '@fincommerce/blocks/cart-checkout-shared';
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 
 /**
  * Internal dependencies

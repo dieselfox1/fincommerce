@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { PLACEHOLDER_IMG_SRC } from '@fincommerce/settings';
 
 interface ProductImageProps {

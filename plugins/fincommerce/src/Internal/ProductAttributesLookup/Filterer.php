@@ -200,7 +200,7 @@ class Filterer {
 			$cached_counts = array();
 		}
 		if ( ! isset( $cached_counts[ $query_hash ] ) ) {
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$results                      = $wpdb->get_results( $query_sql, ARRAY_A );
 			$counts                       = array_map( 'absint', wp_list_pluck( $results, 'term_count', 'term_count_id' ) );
 			$cached_counts[ $query_hash ] = $counts;

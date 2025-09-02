@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useState, useEffect, useMemo } from '@wordpress/element';
+import { useState, useEffect, useMemo } from '@finpress/element';
 import Button from '@fincommerce/base-components/button';
 import { CHECKOUT_URL } from '@fincommerce/block-settings';
 import { usePositionRelativeToViewport } from '@fincommerce/base-hooks';
 import { getSetting } from '@fincommerce/settings';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { cartStore, checkoutStore } from '@fincommerce/block-data';
 import { applyCheckoutFilter } from '@fincommerce/blocks-checkout';
 import { isErrorResponse } from '@fincommerce/types';

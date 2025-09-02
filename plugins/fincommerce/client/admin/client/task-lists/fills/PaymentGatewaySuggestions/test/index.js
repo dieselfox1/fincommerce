@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { recordEvent } from '@fincommerce/tracks';
 /**
@@ -10,8 +10,8 @@ import { recordEvent } from '@fincommerce/tracks';
 
 import { PaymentGatewaySuggestions } from '../index';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 	useDispatch: jest.fn().mockImplementation( () => ( {
 		updatePaymentGateway: jest.fn(),
@@ -68,7 +68,7 @@ const paymentGatewaySuggestions = [
 		id: 'fincommerce_payments:non-us',
 		title: 'WooPayments',
 		content:
-			'Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.',
+			'Manage transactions without leaving your finpress Dashboard. Only with WooPayments.',
 		image: 'http://localhost:8888/wp-content/plugins/fincommerce-admin/images/onboarding/wcpay.svg',
 		plugins: [ 'fincommerce-payments' ],
 		description:

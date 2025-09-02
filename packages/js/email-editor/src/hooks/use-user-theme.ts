@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useCallback } from '@wordpress/element';
-import { useSelect, dispatch } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+import { useCallback } from '@finpress/element';
+import { useSelect, dispatch } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 
 /**
  * Internal dependencies

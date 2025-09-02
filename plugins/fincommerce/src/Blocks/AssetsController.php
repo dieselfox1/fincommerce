@@ -47,13 +47,13 @@ final class AssetsController {
 		add_filter( 'js_do_concat', array( $this, 'skip_boost_minification_for_cart_checkout' ), 10, 2 );
 
 		if ( Features::is_enabled( 'experimental-iapi-runtime' ) ) {
-			// Run after the WordPress iAPI runtime has been registered by setting a lower priority.
+			// Run after the finpress iAPI runtime has been registered by setting a lower priority.
 			add_filter( 'wp_default_scripts', array( $this, 'reregister_core_iapi_runtime' ), 20 );
 		}
 	}
 
 	/**
-	 * Re-registers the iAPI runtime registered by WordPress Core/Gutenberg, allowing FinCommerce to register its own version of the iAPI runtime.
+	 * Re-registers the iAPI runtime registered by finpress Core/Gutenberg, allowing FinCommerce to register its own version of the iAPI runtime.
 	 */
 	public function reregister_core_iapi_runtime() {
 		$interactivity_api_asset_data = $this->api->get_asset_data(
@@ -62,7 +62,7 @@ final class AssetsController {
 
 		foreach ( $interactivity_api_asset_data as $handle => $data ) {
 			$handle_without_js = str_replace( '.js', '', $handle );
-			if ( '@wordpress/interactivity' === $handle_without_js || '@wordpress/interactivity-router' === $handle_without_js ) {
+			if ( '@finpress/interactivity' === $handle_without_js || '@finpress/interactivity-router' === $handle_without_js ) {
 				wp_deregister_script_module( $handle_without_js );
 			}
 
@@ -256,7 +256,7 @@ final class AssetsController {
 
 		$current_version = array(
 			'fincommerce' => fincommerce_VERSION,
-			'wordpress'   => get_bloginfo( 'version' ),
+			'finpress'   => get_bloginfo( 'version' ),
 			'site_url'    => wp_guess_url(),
 		);
 
@@ -279,7 +279,7 @@ final class AssetsController {
 			'files'   => $cache ?? array(),
 			'version' => array(
 				'fincommerce' => fincommerce_VERSION,
-				'wordpress'   => get_bloginfo( 'version' ),
+				'finpress'   => get_bloginfo( 'version' ),
 				'site_url'    => wp_guess_url(),
 			),
 		);
@@ -350,7 +350,7 @@ final class AssetsController {
 	}
 
 	/**
-	 * Returns an absolute url to relative links for WordPress core scripts.
+	 * Returns an absolute url to relative links for finpress core scripts.
 	 *
 	 * @param string $src Original src that can be relative.
 	 * @return string Correct full path string.
@@ -415,7 +415,7 @@ final class AssetsController {
 	 * Registers a style according to `wp_register_style`.
 	 *
 	 * @param string  $handle Name of the stylesheet. Should be unique.
-	 * @param string  $src    Full URL of the stylesheet, or path of the stylesheet relative to the WordPress root directory.
+	 * @param string  $src    Full URL of the stylesheet, or path of the stylesheet relative to the finpress root directory.
 	 * @param array   $deps   Optional. An array of registered stylesheet handles this stylesheet depends on. Default empty array.
 	 * @param string  $media  Optional. The media for which this stylesheet has been defined. Default 'all'. Accepts media types like
 	 *                        'all', 'print' and 'screen', or media queries like '(orientation: portrait)' and '(max-width: 640px)'.
@@ -481,7 +481,7 @@ final class AssetsController {
 				$error_handle  = 'wc-settings-dep-in-header';
 				$used_deps     = implode( ', ', array_intersect( $known_packages, $script->deps ) );
 				$error_message = "Scripts that have a dependency on [$used_deps] must be loaded in the footer, {$handle} was registered to load in the header, but has been switched to load in the footer instead. See https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5059";
-				// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter,WordPress.WP.EnqueuedResourceParameters.MissingVersion
+				// phpcs:ignore finpress.WP.EnqueuedResourceParameters.NotInFooter,finpress.WP.EnqueuedResourceParameters.MissingVersion
 				wp_register_script( $error_handle, '' );
 				wp_enqueue_script( $error_handle );
 				wp_add_inline_script(

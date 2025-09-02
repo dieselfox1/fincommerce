@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import type { CSSProperties } from 'react';
 import { isNumber, ProductResponseItem } from '@fincommerce/types';

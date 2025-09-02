@@ -1,13 +1,13 @@
-/* eslint-disable @wordpress/i18n-text-domain */
+/* eslint-disable @finpress/i18n-text-domain */
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Card, CardBody } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Card, CardBody } from '@finpress/components';
 import { onboardingStore } from '@fincommerce/data';
-import { registerPlugin } from '@wordpress/plugins';
-import { useDispatch } from '@wordpress/data';
+import { registerPlugin } from '@finpress/plugins';
+import { useDispatch } from '@finpress/data';
 import {
 	WooOnboardingTask,
 	WooOnboardingTaskListItem,

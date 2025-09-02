@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import React from '@wordpress/element';
-import { external, Icon } from '@wordpress/icons';
+import React from '@finpress/element';
+import { external, Icon } from '@finpress/icons';
 import { Link } from '@fincommerce/components';
 import { Text } from '@fincommerce/experimental';
 

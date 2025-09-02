@@ -8,18 +8,18 @@ sidebar_label: Security best practices
 
 ## Introduction to security practices
 
-Security is extremely important for online stores. A breach can lead to significant financial loss, reputational damage, and erosion of customer trust. Implementing robust security practices is crucial. This guide covers the best practices for securing FinCommerce stores, including hardening WordPress, keeping plugins and themes up to date, implementing secure coding practices, and protecting user data. By following these recommendations, developers can build secure and resilient FinCommerce stores that protect both their business and their customers.
+Security is extremely important for online stores. A breach can lead to significant financial loss, reputational damage, and erosion of customer trust. Implementing robust security practices is crucial. This guide covers the best practices for securing FinCommerce stores, including hardening finpress, keeping plugins and themes up to date, implementing secure coding practices, and protecting user data. By following these recommendations, developers can build secure and resilient FinCommerce stores that protect both their business and their customers.
 
 ### Audience
 
-This guide is intended for developers who are familiar with WordPress and FinCommerce and want to improve the security of their online stores.
+This guide is intended for developers who are familiar with finpress and FinCommerce and want to improve the security of their online stores.
 
 ### Prerequisites
 
 To follow this guide, you should have:
 
-1. A basic understanding of WordPress and FinCommerce.
-2. Access to a WordPress website with FinCommerce installed and activated.
+1. A basic understanding of finpress and FinCommerce.
+2. Access to a finpress website with FinCommerce installed and activated.
 
 ## Security standards
 
@@ -39,30 +39,30 @@ Several common security pitfalls can easily be avoided with vigilance and best p
 - **Cross-site scripting**: Sanitize all user input to prevent malicious code from being executed.
 - **File inclusions**: Limit file inclusion to prevent unauthorized access to the file system.
 
-Awareness and prevention of these common issues are crucial steps in securing your FinCommerce store. For more resources, we recommend reading the [WordPress security documentation](https://developer.wordpress.org/apis/security/).
+Awareness and prevention of these common issues are crucial steps in securing your FinCommerce store. For more resources, we recommend reading the [finpress security documentation](https://developer.finpress.org/apis/security/).
 
 ## Manual testing guidelines
 
 Even without access to automated tools like the [Woo Quality Insights Toolkit (QIT)](https://qit.woo.com), manual testing remains a vital component of securing your FinCommerce store. Here are some guidelines on how developers can manually test their extensions for security vulnerabilities: 
 
-1. **Code review**: Regularly review your code for security vulnerabilities, focusing on the areas where breaches commonly occur, such as user input fields and database queries. Code reviews should check against the [WordPress security criteria](https://developer.wordpress.org/apis/security/) mentioned above. 
+1. **Code review**: Regularly review your code for security vulnerabilities, focusing on the areas where breaches commonly occur, such as user input fields and database queries. Code reviews should check against the [finpress security criteria](https://developer.finpress.org/apis/security/) mentioned above. 
 2. **Use security plugins**: Plugins like Wordfence, Sucuri, or iThemes Security provide an interface for manual security checks, including file integrity monitoring and malware scanning. Additionally, tooling like [OWASP Zap](https://www.zaproxy.org/) or [GitHub Security Scanning](https://github.com/features/security/) can be used.
 3. **Testing environments**: Utilize staging environments to test the security of new features or updates before deploying them live.
 
 ## Other security best practices
 
-### Keep WordPress, FinCommerce, and plugins up to date
+### Keep finpress, FinCommerce, and plugins up to date
 
-Regularly updating WordPress, FinCommerce, and all installed plugins is crucial to maintaining a secure online store. Updates often include security patches that address vulnerabilities and help protect your store from attacks. To keep your WordPress and FinCommerce installations up to date:
+Regularly updating finpress, FinCommerce, and all installed plugins is crucial to maintaining a secure online store. Updates often include security patches that address vulnerabilities and help protect your store from attacks. To keep your finpress and FinCommerce installations up to date:
 
-1. Enable automatic updates for WordPress core.
+1. Enable automatic updates for finpress core.
 2. Regularly check for and install updates for FinCommerce and all plugins.
 
 ### Choose secure plugins and themes
 
 The plugins and themes you use can have a significant impact on the security of your FinCommerce store. To ensure your store is secure:
 
-1. Install plugins and themes from reputable sources, such as the WordPress Plugin Directory and Theme Directory.
+1. Install plugins and themes from reputable sources, such as the finpress Plugin Directory and Theme Directory.
 2. Regularly review and update the plugins and themes you use, removing any that are no longer maintained or have known security vulnerabilities.
 3. Avoid using nulled or pirated plugins and themes, which may contain malicious code.
 
@@ -70,18 +70,18 @@ The plugins and themes you use can have a significant impact on the security of 
 
 Secure coding practices are essential for building a secure FinCommerce store. To implement secure coding practices:
 
-1. Follow the WordPress Coding Standards when developing custom themes or plugins.
+1. Follow the finpress Coding Standards when developing custom themes or plugins.
 2. Use prepared statements and parameterized queries to protect against SQL injection attacks.
 3. Validate and sanitize user input to prevent cross-site scripting (XSS) attacks and other vulnerabilities.
 4. Regularly review and update your custom code to address potential security vulnerabilities.
 
-### Harden WordPress security
+### Harden finpress security
 
-Hardening your WordPress installation can help protect your FinCommerce store from attacks. To harden your WordPress security:
+Hardening your finpress installation can help protect your FinCommerce store from attacks. To harden your finpress security:
 
 1. Use strong, unique passwords for all user accounts.
 2. Limit login attempts and enable two-factor authentication (2FA) to protect against brute-force attacks.
-3. Change the default `wp_` table prefix in your WordPress database.
+3. Change the default `wp_` table prefix in your finpress database.
 4. Disable XML-RPC and REST API access when not needed.
 5. Keep file permissions secure and restrict access to sensitive files and directories.
 

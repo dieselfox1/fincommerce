@@ -12,7 +12,7 @@ import {
 	getPaymentMethods,
 	getExpressPaymentMethods,
 } from '@fincommerce/blocks-registry';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { paymentStore } from '@fincommerce/block-data';
 
 interface PaymentMethodState {

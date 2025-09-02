@@ -1,6 +1,6 @@
 // This is a copy of the Gutenberg styles with the selectors modified.
 // Also, some z-index properties have been removed for simplicity.
-// https://github.com/WordPress/gutenberg/blob/8aa998526984a3e9d547cd638840f8314bad9d81/packages/edit-site/src/components/layout/style.scss
+// https://github.com/finpress/gutenberg/blob/8aa998526984a3e9d547cd638840f8314bad9d81/packages/edit-site/src/components/layout/style.scss
 // See https://github.com/dieselfox1/fincommerce/issues/48377
 @import "_variables.scss";
 @import "_mixins.scss";
@@ -68,7 +68,7 @@
 	 * yet it needs the Sidebar component for the React context.
 	 *
 	 * This removes the padding in this scenario.
-	 * See https://github.com/WordPress/gutenberg/pull/63118
+	 * See https://github.com/finpress/gutenberg/pull/63118
 	 */
 	.fincommerce-edit-site-sidebar__screen-wrapper {
 		padding: 0;

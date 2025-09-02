@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase for backwards compatibility.
+<?php // phpcs:ignore finpress.Files.FileName.NotHyphenatedLowercase for backwards compatibility.
 
 /**
  * Use the FinCommerce archive template for brand taxonomy pages

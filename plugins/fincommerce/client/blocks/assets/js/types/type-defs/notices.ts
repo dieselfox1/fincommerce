@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { WPNotice } from '@wordpress/notices/build-types/store/selectors';
+import type { WPNotice } from '@finpress/notices/build-types/store/selectors';
 
 export type NoticeStatus = 'success' | 'error' | 'info' | 'warning' | 'default';
 export interface NoticeType extends Partial< Omit< WPNotice, 'status' > > {

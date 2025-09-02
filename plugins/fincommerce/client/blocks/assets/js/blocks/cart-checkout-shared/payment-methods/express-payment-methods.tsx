@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useExpressPaymentMethods,
 	usePaymentMethodInterface,
@@ -11,15 +11,15 @@ import {
 	isValidElement,
 	useCallback,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useEditorContext } from '@fincommerce/base-context';
-import deprecated from '@wordpress/deprecated';
-import { useDispatch, useSelect } from '@wordpress/data';
+import deprecated from '@finpress/deprecated';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	ActionCreatorsOf,
 	ConfigOf,
 	CurriedSelectorsOf,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 
 /**
  * Internal dependencies

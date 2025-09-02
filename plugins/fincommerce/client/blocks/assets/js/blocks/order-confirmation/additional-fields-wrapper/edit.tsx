@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
 import {
 	ORDER_FORM_FIELDS,
 	CONTACT_FORM_FIELDS,

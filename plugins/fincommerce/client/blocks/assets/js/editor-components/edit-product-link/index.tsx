@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Icon, external } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Icon, external } from '@finpress/icons';
 import { ADMIN_URL } from '@fincommerce/settings';
-import { InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls } from '@finpress/block-editor';
 import { useProductDataContext } from '@fincommerce/shared-context';
 
 interface EditProductLinkProps {

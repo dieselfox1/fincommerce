@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Icon, check } from '@wordpress/icons';
-import { createElement } from '@wordpress/element';
+import { Icon, check } from '@finpress/icons';
+import { createElement } from '@finpress/element';
 /**
  * @typedef {import('./index').Option} Option
  */

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin name: Filter Setter
- * Description: Utility intended to be used during E2E testing, to make it easy to setup WordPress filters.
+ * Description: Utility intended to be used during E2E testing, to make it easy to setup finpress filters.
  *
  * Intended to function as a (mu-)plugin while tests are running, this code works by inspecting the current cookie
  * for an entry called 'e2e-filters', which is expected to be a JSON description of filter hooks and the values we want
@@ -47,7 +47,7 @@ if ( ! isset( $_COOKIE ) || ! isset( $_COOKIE['e2e-filters'] ) ) {
 	return;
 }
 
-// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.ValidatedSanitizedInput.MissingUnslash
 $filters = json_decode( $_COOKIE['e2e-filters'], true );
 
 if ( ! is_array( $filters ) ) {

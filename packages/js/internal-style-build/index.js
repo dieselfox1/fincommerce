@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const path = require( 'path' );
 const WebpackRTLPlugin = require( 'webpack-rtl-plugin' );
 const RemoveEmptyScriptsPlugin = require( 'webpack-remove-empty-scripts' );
-const postcssPlugins = require( '@wordpress/postcss-plugins-preset' );
+const postcssPlugins = require( '@finpress/postcss-plugins-preset' );
 const StyleAssetPlugin = require( './style-asset-plugin' );
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -22,7 +22,7 @@ module.exports = {
 			{
 				test: /\.s?css$/,
 				exclude: [
-					/storybook\/wordpress/,
+					/storybook\/finpress/,
 					/build-style\/*\/*.css/,
 					/[\/\\](changelog|bin|docs|build|build-module|build-types|build-style|vendor|tests|test)[\/\\]/,
 				],

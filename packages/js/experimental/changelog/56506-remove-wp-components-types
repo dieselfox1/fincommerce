@@ -1,4 +1,4 @@
 Significance: patch
 Type: dev
-Comment: Remove deprecated `@types/wordpress__components`
+Comment: Remove deprecated `@types/finpress__components`
 

@@ -11,7 +11,7 @@ import { useBlocksHelper } from '../use-blocks-helper';
 const mockGetBlockParentsByBlockName = jest.fn();
 const mockGetBlock = jest.fn();
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	select: jest.fn( () => ( {
 		getBlockParentsByBlockName: mockGetBlockParentsByBlockName,
 		getBlock: mockGetBlock,

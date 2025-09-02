@@ -37,9 +37,9 @@ class Init {
 	 * Returns true if we are on a JS powered admin page.
 	 */
 	public static function is_product_data_view_page() {
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		return isset( $_GET['page'] ) && 'fincommerce-products-dashboard' === $_GET['page'];
-		// phpcs:enable WordPress.Security.NonceVerification
+		// phpcs:enable finpress.Security.NonceVerification
 	}
 
 	/**
@@ -96,13 +96,13 @@ class Init {
 		$suffix  = Constants::is_true( 'SCRIPT_DEBUG' ) ? '' : '.min';
 		$version = Constants::get_constant( 'WC_VERSION' );
 		if ( function_exists( 'gutenberg_url' ) ) {
-			// phpcs:disable WordPress.WP.EnqueuedResourceParameters.MissingVersion
+			// phpcs:disable finpress.WP.EnqueuedResourceParameters.MissingVersion
 			wp_register_style(
 				'wp-gutenberg-posts-dashboard',
 				gutenberg_url( 'build/edit-site/posts.css', __FILE__ ),
 				array( 'wp-components' ),
 			);
-			// phpcs:enable WordPress.WP.EnqueuedResourceParameters.MissingVersion
+			// phpcs:enable finpress.WP.EnqueuedResourceParameters.MissingVersion
 			wp_enqueue_style( 'wp-gutenberg-posts-dashboard' );
 		}
 		WCAdminAssets::get_instance();

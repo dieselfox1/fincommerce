@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Dropdown } from '@wordpress/components';
+import { Dropdown } from '@finpress/components';
 
 /**
  * Internal dependencies

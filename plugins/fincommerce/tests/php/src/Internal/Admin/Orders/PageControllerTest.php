@@ -62,13 +62,13 @@ namespace Automattic\FinCommerce\Tests\Internal\Admin\Orders {
 			global $pagenow, $plugin_page;
 
 			$controller  = new PageController();
-			$pagenow     = 'admin.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-			$plugin_page = 'wc-orders'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$pagenow     = 'admin.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+			$plugin_page = 'wc-orders'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			$controller->setup();
 			$this->assertTrue( $controller->is_order_screen() );
 
 			$controller = new PageController();
-			$pagenow    = 'edit.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$pagenow    = 'edit.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			$controller->setup();
 			$this->assertFalse( $controller->is_order_screen() );
 		}
@@ -93,8 +93,8 @@ namespace Automattic\FinCommerce\Tests\Internal\Admin\Orders {
 			global $pagenow, $plugin_page;
 
 			$controller     = new PageController();
-			$pagenow        = 'admin.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-			$plugin_page    = 'wc-orders'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$pagenow        = 'admin.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+			$plugin_page    = 'wc-orders'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			$_GET['action'] = '';
 			$controller->setup();
 			$this->assertTrue( $controller->is_order_screen( 'shop_order', 'list' ) );
@@ -128,8 +128,8 @@ namespace Automattic\FinCommerce\Tests\Internal\Admin\Orders {
 			global $pagenow, $plugin_page;
 
 			$controller     = new PageController();
-			$pagenow        = 'admin.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-			$plugin_page    = 'wc-orders'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$pagenow        = 'admin.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+			$plugin_page    = 'wc-orders'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			$_GET['action'] = 'edit';
 			$controller->setup();
 			$this->assertTrue( $controller->is_order_screen( 'shop_order', 'edit' ) );
@@ -161,8 +161,8 @@ namespace Automattic\FinCommerce\Tests\Internal\Admin\Orders {
 			global $pagenow, $plugin_page;
 
 			$controller     = new PageController();
-			$pagenow        = 'admin.php'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-			$plugin_page    = 'wc-orders'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$pagenow        = 'admin.php'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+			$plugin_page    = 'wc-orders'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			$_GET['action'] = 'new';
 			$controller->setup();
 			$this->assertTrue( $controller->is_order_screen( 'shop_order', 'new' ) );

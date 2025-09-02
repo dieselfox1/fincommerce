@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { DropdownMenu } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { moreVertical } from '@wordpress/icons';
+import { DropdownMenu } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { moreVertical } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

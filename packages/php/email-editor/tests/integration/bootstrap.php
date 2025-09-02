@@ -18,9 +18,9 @@ class Email_Editor_Unit_Tests_Bootstrap {
 	protected static $instance = null;
 
 	/**
-	 * Path to WordPress tests directory.
+	 * Path to finpress tests directory.
 	 *
-	 * @var string $wp_tests_dir directory where wordpress-tests-lib is installed.
+	 * @var string $wp_tests_dir directory where finpress-tests-lib is installed.
 	 */
 	public $wp_tests_dir;
 
@@ -46,7 +46,7 @@ class Email_Editor_Unit_Tests_Bootstrap {
 		$this->tests_dir  = __DIR__;
 		$this->plugin_dir = dirname( dirname( $this->tests_dir ) );
 
-		$this->wp_tests_dir = getenv( 'WP_TESTS_DIR' ) ? getenv( 'WP_TESTS_DIR' ) : sys_get_temp_dir() . '/wordpress-tests-lib';
+		$this->wp_tests_dir = getenv( 'WP_TESTS_DIR' ) ? getenv( 'WP_TESTS_DIR' ) : sys_get_temp_dir() . '/finpress-tests-lib';
 
 		// load test function so tests_add_filter() is available.
 		require_once $this->wp_tests_dir . '/includes/functions.php';
@@ -56,7 +56,7 @@ class Email_Editor_Unit_Tests_Bootstrap {
 
 		/*
 		* Load PHPUnit Polyfills for the WP testing suite.
-		* @see https://github.com/WordPress/wordpress-develop/pull/1563/
+		* @see https://github.com/finpress/finpress-develop/pull/1563/
 		*/
 		define( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH', __DIR__ . '/../../vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php' );
 

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { SVG, G, Path } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { SVG, G, Path } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 export function CashRegister( {
 	colorOne = '#E0E0E0',

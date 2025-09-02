@@ -325,7 +325,7 @@ class NumberUtilTest extends \WC_Unit_Test_Case {
 	 * @param string $currency_symbol Currency symbol to use.
 	 */
 	public function test_sanitize_cost_in_current_locale( $input, string $expected, string $thousand_separator, string $decimal_separator, string $currency_symbol ) {
-		// Set up locale settings via WordPress options.
+		// Set up locale settings via finpress options.
 		update_option( 'fincommerce_currency', '$' === $currency_symbol ? 'USD' : 'EUR' );
 		update_option( 'fincommerce_price_thousand_sep', $thousand_separator );
 		update_option( 'fincommerce_price_decimal_sep', $decimal_separator );
@@ -648,7 +648,7 @@ class NumberUtilTest extends \WC_Unit_Test_Case {
 		string $currency_symbol,
 		bool $should_throw
 	) {
-		// Set up locale settings via WordPress options.
+		// Set up locale settings via finpress options.
 		update_option( 'fincommerce_currency', '$' === $currency_symbol ? 'USD' : ( '€' === $currency_symbol ? 'EUR' : 'CHF' ) );
 		update_option( 'fincommerce_price_thousand_sep', $thousand_separator );
 		update_option( 'fincommerce_price_decimal_sep', $decimal_separator );

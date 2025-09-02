@@ -89,10 +89,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</span>
 				</label>
 				<label class="change-input">
-					<?php /* phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped -- the esc_attr is somehow not detected */ ?>
+					<?php /* phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped -- the esc_attr is somehow not detected */ ?>
 					<?php /* translators: %s = cost value (formatted as currency) */ ?>
 					<input type="text" name="_cogs_value" class="text cogs_value" placeholder="<?php esc_attr( printf( __( 'Enter cost value (%s)', 'fincommerce' ), get_fincommerce_currency_symbol() ) ); ?>" value="" />
-					<?php /* phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
+					<?php /* phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped */ ?>
 				</label>
 			<div class="inline-edit-group">
 		<?php endif; ?>

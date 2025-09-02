@@ -4,7 +4,7 @@
 import { render, screen, waitFor, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { previewCart } from '@fincommerce/resource-previews';
-import * as wpDataFunctions from '@wordpress/data';
+import * as wpDataFunctions from '@finpress/data';
 import {
 	CART_STORE_KEY as storeKey,
 	paymentStore,
@@ -28,8 +28,8 @@ import {
 import { defaultCartState } from '@fincommerce/block-library/assets/js/data/cart/default-state';
 import { getRegisteredExpressPaymentMethods } from '@fincommerce/block-library/assets/js/data/payment/selectors';
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	return {
 		...originalModule,
 		select: jest.fn( ( storeName ) => {

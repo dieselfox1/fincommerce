@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { act, renderHook } from '@testing-library/react';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -20,8 +20,8 @@ const mockSelect = jest.fn().mockReturnValue( {
 	hasFinishedResolution: jest.fn().mockReturnValue( true ),
 } );
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: ( callback: ( select: typeof mockSelect ) => void ) =>
 		callback( mockSelect ),
 	useDispatch: jest.fn().mockReturnValue( {
@@ -193,7 +193,7 @@ describe( 'useUserPreferences() hook', () => {
 		} );
 	} );
 
-	it( 'Polyfills saveUser() on older versions of WordPress', async () => {
+	it( 'Polyfills saveUser() on older versions of finpress', async () => {
 		const receiveCurrentUser = jest.fn().mockReturnValue( {
 			type: 'RECEIVE_CURRENT_USER',
 			currentUser: {

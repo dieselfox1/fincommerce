@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
 import { queueRecordEvent } from '@fincommerce/tracks';
 
 interface LoadMoreProps {

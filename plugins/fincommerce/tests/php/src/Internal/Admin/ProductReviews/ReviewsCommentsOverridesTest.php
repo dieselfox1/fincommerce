@@ -33,7 +33,7 @@ class ReviewsCommentsOverridesTest extends WC_Unit_Test_Case {
 	public function tearDown() : void {
 		global $current_screen;
 
-		$current_screen = $this->old_current_screen; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$current_screen = $this->old_current_screen; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		parent::tearDown();
 	}
@@ -56,7 +56,7 @@ class ReviewsCommentsOverridesTest extends WC_Unit_Test_Case {
 		$screen = new \stdClass();
 		$screen->base = $current_screen_base;
 
-		$current_screen = $screen; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$current_screen = $screen; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		// phpcs:disable Squiz.Commenting
 		$instance = new class() extends ReviewsCommentsOverrides {
@@ -258,7 +258,7 @@ class ReviewsCommentsOverridesTest extends WC_Unit_Test_Case {
 			'post_type' => [ 'product' ],
 		];
 
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$current_screen = WP_Screen::get( 'edit-comments' );
 		$filtered_args  = $method->invoke( $overrides, $original_args );
 
@@ -267,7 +267,7 @@ class ReviewsCommentsOverridesTest extends WC_Unit_Test_Case {
 			'In the context of the edit-comments screen, the product post type will be removed from the comments query.'
 		);
 
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$current_screen = WP_Screen::get( 'arbitrary-admin-page' );
 		$filtered_args  = $method->invoke( $overrides, $original_args );
 
@@ -276,7 +276,7 @@ class ReviewsCommentsOverridesTest extends WC_Unit_Test_Case {
 			'In the context of all other admin screens, the product post type will not be removed from the comments query.'
 		);
 
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$current_screen = null;
 		$filtered_args  = $method->invoke( $overrides, $original_args );
 
@@ -285,7 +285,7 @@ class ReviewsCommentsOverridesTest extends WC_Unit_Test_Case {
 			'If the $current_screen global is not set, the product post type will not be removed from the comments query.'
 		);
 
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$current_screen = $original_screen_value;
 	}
 

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Disabled } from '@wordpress/components';
-import ServerSideRender from '@wordpress/server-side-render';
+import { Disabled } from '@finpress/components';
+import ServerSideRender from '@finpress/server-side-render';
 import { gridBlockPreview } from '@fincommerce/resource-previews';
 
 /**

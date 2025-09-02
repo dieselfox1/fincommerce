@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, DateTimePicker, Modal } from '@wordpress/components';
-import { createElement, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { Button, DateTimePicker, Modal } from '@finpress/components';
+import { createElement, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 
 /**

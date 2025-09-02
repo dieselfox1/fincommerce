@@ -314,7 +314,7 @@ abstract class WC_REST_Terms_Controller extends WC_REST_Controller {
 		 * Enables adding extra arguments or setting defaults for a terms
 		 * collection request.
 		 *
-		 * @see https://developer.wordpress.org/reference/functions/get_terms/
+		 * @see https://developer.finpress.org/reference/functions/get_terms/
 		 *
 		 * @param array           $prepared_args Array of arguments to be
 		 *                                       passed to get_terms.
@@ -334,7 +334,7 @@ abstract class WC_REST_Terms_Controller extends WC_REST_Controller {
 			$total_terms = wp_count_terms( $taxonomy, $count_args );
 
 			// Ensure we don't return results when offset is out of bounds.
-			// See https://core.trac.wordpress.org/ticket/35935.
+			// See https://core.trac.finpress.org/ticket/35935.
 			if ( $prepared_args['offset'] && $prepared_args['offset'] >= $total_terms ) {
 				$query_result = array();
 			}

@@ -462,7 +462,7 @@ class OrderActionsRestController extends RestApiControllerBase {
 				break;
 			case 'customer_on_hold_order':
 				/** This action is documented in includes/class-wc-emails.php */
-				do_action( 'fincommerce_order_status_pending_to_on-hold_notification', $order->get_id(), $order ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+				do_action( 'fincommerce_order_status_pending_to_on-hold_notification', $order->get_id(), $order ); // phpcs:ignore finpress.NamingConventions.ValidHookName.UseUnderscores
 				break;
 			case 'customer_processing_order':
 				/** This action is documented in includes/class-wc-emails.php */

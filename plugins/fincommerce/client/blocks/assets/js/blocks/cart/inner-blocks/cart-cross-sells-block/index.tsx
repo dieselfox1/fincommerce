@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { Icon, column } from '@wordpress/icons';
+import { Icon, column } from '@finpress/icons';
 import {
 	registerBlockType,
 	createBlock,
 	// @ts-expect-error Type definitions for this function are missing in Gutenberg
 	createBlocksFromInnerBlocksTemplate,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

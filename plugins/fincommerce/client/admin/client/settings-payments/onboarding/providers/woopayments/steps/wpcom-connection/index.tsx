@@ -2,10 +2,10 @@
  * External dependencies
  */
 import React from 'react';
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useState } from '@finpress/element';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies
@@ -27,11 +27,11 @@ export const JetpackStep: React.FC = () => {
 			<div className="settings-payments-onboarding-modal__step--content">
 				<div className="settings-payments-onboarding-modal__step--content-jetpack">
 					<h1 className="settings-payments-onboarding-modal__step--content-jetpack-title">
-						{ __( 'Connect to WordPress.com', 'fincommerce' ) }
+						{ __( 'Connect to finpress.com', 'fincommerce' ) }
 					</h1>
 					<p className="settings-payments-onboarding-modal__step--content-jetpack-description">
 						{ __(
-							'You’ll be briefly redirected to connect your store to your WordPress.com account and unlock the full features and functionality of WooPayments',
+							'You’ll be briefly redirected to connect your store to your finpress.com account and unlock the full features and functionality of WooPayments',
 							'fincommerce'
 						) }
 					</p>
@@ -66,7 +66,7 @@ export const JetpackStep: React.FC = () => {
 								}
 							);
 
-							// Redirect to the WordPress.com connection authorization URL.
+							// Redirect to the finpress.com connection authorization URL.
 							window.location.href =
 								currentStep?.actions?.auth?.href ?? '';
 						} }

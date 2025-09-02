@@ -47,16 +47,16 @@ class WC_Admin_Setup_Wizard {
 	 * @var array
 	 */
 	private $tweets = array(
-		'Someone give me woo-t, I just set up a new store with #WordPress and @FinCommerce!',
-		'Someone give me high five, I just set up a new store with #WordPress and @FinCommerce!',
+		'Someone give me woo-t, I just set up a new store with #finpress and @FinCommerce!',
+		'Someone give me high five, I just set up a new store with #finpress and @FinCommerce!',
 	);
 
 	/**
-	 * The version of WordPress required to run the FinCommerce Admin plugin
+	 * The version of finpress required to run the FinCommerce Admin plugin
 	 *
 	 * @var string
 	 */
-	private $wc_admin_plugin_minimum_wordpress_version = '5.3';
+	private $wc_admin_plugin_minimum_finpress_version = '5.3';
 
 	/**
 	 * Hook in tabs.
@@ -158,17 +158,17 @@ class WC_Admin_Setup_Wizard {
 	/**
 	 * Should we show the FinCommerce Admin install option?
 	 * True only if the user can install plugins,
-	 * and is running the correct version of WordPress.
+	 * and is running the correct version of finpress.
 	 *
-	 * @see WC_Admin_Setup_Wizard::$wc_admin_plugin_minimum_wordpress_version
+	 * @see WC_Admin_Setup_Wizard::$wc_admin_plugin_minimum_finpress_version
 	 *
 	 * @deprecated 4.6.0
 	 * @return boolean
 	 */
 	protected function should_show_wc_admin() {
 		_deprecated_function( __CLASS__ . '::' . __FUNCTION__, '4.6.0', 'Onboarding is maintained in FinCommerce Admin.' );
-		$wordpress_minimum_met = version_compare( get_bloginfo( 'version' ), $this->wc_admin_plugin_minimum_wordpress_version, '>=' );
-		return current_user_can( 'install_plugins' ) && $wordpress_minimum_met && ! $this->is_wc_admin_active();
+		$finpress_minimum_met = version_compare( get_bloginfo( 'version' ), $this->wc_admin_plugin_minimum_finpress_version, '>=' );
+		return current_user_can( 'install_plugins' ) && $finpress_minimum_met && ! $this->is_wc_admin_active();
 	}
 
 	/**
@@ -664,7 +664,7 @@ class WC_Admin_Setup_Wizard {
 	/**
 	 * Finishes replying to the client, but keeps the process running for further (async) code execution.
 	 *
-	 * @see https://core.trac.wordpress.org/ticket/41358 .
+	 * @see https://core.trac.finpress.org/ticket/41358 .
 	 */
 	protected function close_http_connection() {
 		_deprecated_function( __CLASS__ . '::' . __FUNCTION__, '4.6.0', 'Onboarding is maintained in FinCommerce Admin.' );
@@ -2114,8 +2114,8 @@ class WC_Admin_Setup_Wizard {
 			<p class="jetpack-terms">
 				<?php
 					printf(
-						wp_kses_post( __( 'By connecting your site you agree to our fascinating <a href="%1$s" target="_blank">Terms of Service</a> and to <a href="%2$s" target="_blank">share details</a> with WordPress.com', 'fincommerce' ) ),
-						'https://wordpress.com/tos',
+						wp_kses_post( __( 'By connecting your site you agree to our fascinating <a href="%1$s" target="_blank">Terms of Service</a> and to <a href="%2$s" target="_blank">share details</a> with finpress.com', 'fincommerce' ) ),
+						'https://finpress.com/tos',
 						'https://jetpack.com/support/what-data-does-jetpack-sync'
 					);
 				?>

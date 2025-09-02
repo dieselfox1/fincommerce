@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { FontSize } from '@wordpress/components/build-types/font-size-picker/types';
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { store as keyboardShortutsStore } from '@wordpress/keyboard-shortcuts';
-import { store as preferencesStore } from '@wordpress/preferences';
-import { store as noticesStore } from '@wordpress/notices';
+import { FontSize } from '@finpress/components/build-types/font-size-picker/types';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { store as keyboardShortutsStore } from '@finpress/keyboard-shortcuts';
+import { store as preferencesStore } from '@finpress/preferences';
+import { store as noticesStore } from '@finpress/notices';
 import {
 	ActionCreatorsOf,
 	ConfigOf,
@@ -13,16 +13,16 @@ import {
 	DataRegistry,
 	StoreDescriptor as GenericStoreDescriptor,
 	UseSelectReturn,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 import {
 	Color,
 	Gradient,
-} from '@wordpress/components/build-types/palette-edit/types';
+} from '@finpress/components/build-types/palette-edit/types';
 
 /**
  * Internal dependencies
  */
-import './wordpress-modules';
+import './finpress-modules';
 
 /* eslint-disable @typescript-eslint/no-explicit-any -- some general types in this file need to use "any"  */
 /* eslint-disable @typescript-eslint/naming-convention -- we have no control over 3rd-party naming conventions */
@@ -34,8 +34,8 @@ export type FontFamily = {
 	fontFamily: string;
 };
 
-// fix and improve some @wordpress/data types
-declare module '@wordpress/data' {
+// fix and improve some @finpress/data types
+declare module '@finpress/data' {
 	// Derive typings for select(), dispatch(), useSelect(), and useDispatch()calls
 	// by store name. The StoreMap interface can be augmented to add custom stores.
 	interface StoreMap {
@@ -45,7 +45,7 @@ declare module '@wordpress/data' {
 	type TKey = keyof StoreMap;
 	type TStore< T > = T extends keyof StoreMap ? StoreMap[ T ] : never;
 	// Store names whose selectors are already in their final form (without state parameter)
-	// as they are imported from `@types/wordpress__*` packages.
+	// as they are imported from `@types/finpress__*` packages.
 	type SpecialStoreName =
 		| 'core/block-editor'
 		| 'core/editor'
@@ -125,11 +125,11 @@ declare module '@wordpress/data' {
 	}
 }
 
-declare module '@wordpress/block-editor' {
+declare module '@finpress/block-editor' {
 	export const __experimentalLibrary: any;
 	export const __experimentalListView: any;
 
-	// types for 'useSetting' are missing in @types/wordpress__block-editor
+	// types for 'useSetting' are missing in @types/finpress__block-editor
 	export function useSettings( path: string ): unknown;
 	export function useSettings(
 		path1: 'typography.fontSizes',
@@ -141,7 +141,7 @@ declare module '@wordpress/block-editor' {
 	): [ Color[], Gradient[] ];
 	export function useSettings( path: 'typography.fontSizes' ): [ FontSize[] ];
 
-	// types for 'gradients' are missing in @types/wordpress__block-editor
+	// types for 'gradients' are missing in @types/finpress__block-editor
 	export interface EditorSettings {
 		gradients: {
 			name: string;

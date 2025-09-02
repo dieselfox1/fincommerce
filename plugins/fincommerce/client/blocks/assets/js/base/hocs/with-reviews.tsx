@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { Component } from '@finpress/element';
+import isShallowEqual from '@finpress/is-shallow-equal';
 import type { Review } from '@fincommerce/base-components/reviews/types';
 import { ErrorObject } from '@fincommerce/editor-components/error-placeholder';
 

@@ -83,7 +83,7 @@ You can also use the `wc_admin_current_screen_id` filter to make any changes nec
 
 ### Registering a React-powered Page
 
-Registering a React-powered page is similar to connecting a PHP page, but with some key differences. Registering pages will automatically create WordPress menu items for them, with the appropriate hierarchy based on `parent`.
+Registering a React-powered page is similar to connecting a PHP page, but with some key differences. Registering pages will automatically create finpress menu items for them, with the appropriate hierarchy based on `parent`.
 
 Register pages with `wc_admin_register_page()` using these parameters:
 
@@ -100,7 +100,7 @@ Register pages with `wc_admin_register_page()` using these parameters:
 Add our new report using the appropriate filter:
 
 ```javascript
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter( 'fincommerce_admin_reports_list', 'my-namespace', ( reports ) => {
 	reports.push( {
@@ -153,8 +153,8 @@ add_action( 'admin_menu', 'add_extension_register_page' );
 Supply a React component on the client side.
 
 ```javascript
-import { addFilter } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+import { addFilter } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 
 const MyExamplePage = () => <h1>My Example Extension</h1>;
 

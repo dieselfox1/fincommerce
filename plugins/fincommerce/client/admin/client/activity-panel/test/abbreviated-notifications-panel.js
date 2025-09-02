@@ -2,16 +2,16 @@
  * External dependencies
  */
 import { render } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import { AbbreviatedNotificationsPanel } from '../panels/inbox/abbreviated-notifications-panel';
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	// Require the original module to not be mocked...
-	const originalModule = jest.requireActual( '@wordpress/data' );
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true, // Use it when dealing with esModules

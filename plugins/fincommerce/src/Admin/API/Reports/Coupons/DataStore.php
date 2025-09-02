@@ -344,7 +344,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			) AS tt";
 
 			$db_records_count = (int) $wpdb->get_var(
-				$coupon_subquery // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$coupon_subquery // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			);
 
 			$total_results = $db_records_count;
@@ -355,7 +355,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		}
 
 		$coupon_data = $wpdb->get_results(
-			$coupons_query, // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$coupons_query, // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			ARRAY_A
 		);
 		if ( null === $coupon_data ) {
@@ -399,7 +399,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$table_name     = self::get_db_table_name();
 		$existing_items = $wpdb->get_col(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT coupon_id FROM {$table_name} WHERE order_id = %d",
 				$order_id
 			)
@@ -455,7 +455,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			array_unshift( $existing_items, $order_id );
 			$wpdb->query(
 				$wpdb->prepare(
-					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 					"DELETE FROM {$table_name} WHERE order_id = %d AND coupon_id in ({$format})",
 					$existing_items
 				)
@@ -501,7 +501,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$query .= " AND ID IN ({$included_coupons})";
 		}
 
-		return $wpdb->get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return $wpdb->get_results( $query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Icon, closeSmall, arrowRight, arrowDown } from '@wordpress/icons';
+import { Icon, closeSmall, arrowRight, arrowDown } from '@finpress/icons';
 import { Label } from '@fincommerce/blocks-components';
-import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
-import { getBlockSupport } from '@wordpress/blocks';
+import { ToolbarGroup, ToolbarButton } from '@finpress/components';
+import { getBlockSupport } from '@finpress/blocks';
 import {
 	InspectorControls,
 	useBlockProps,
@@ -14,12 +14,12 @@ import {
 	BlockControls,
 	withColors,
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
 	// @ts-expect-error - no types.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

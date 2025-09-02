@@ -220,7 +220,7 @@ class WC_Meta_Box_Product_Data {
 	 * @return array
 	 */
 	private static function prepare_children() {
-		return isset( $_POST['grouped_products'] ) ? array_filter( array_map( 'intval', (array) $_POST['grouped_products'] ) ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		return isset( $_POST['grouped_products'] ) ? array_filter( array_map( 'intval', (array) $_POST['grouped_products'] ) ) : array(); // phpcs:ignore finpress.Security.NonceVerification.Missing
 	}
 
 	/**
@@ -234,7 +234,7 @@ class WC_Meta_Box_Product_Data {
 		$attributes = array();
 
 		if ( ! $data ) {
-			$data = stripslashes_deep( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$data = stripslashes_deep( $_POST ); // phpcs:ignore finpress.Security.NonceVerification.Missing
 		}
 
 		if ( isset( $data['attribute_names'], $data['attribute_values'] ) ) {
@@ -303,9 +303,9 @@ class WC_Meta_Box_Product_Data {
 					$attribute_key = sanitize_title( $attribute->get_name() );
 
 					if ( ! is_null( $index ) ) {
-						$value = isset( $_POST[ $key_prefix . $attribute_key ][ $index ] ) ? wp_unslash( $_POST[ $key_prefix . $attribute_key ][ $index ] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+						$value = isset( $_POST[ $key_prefix . $attribute_key ][ $index ] ) ? wp_unslash( $_POST[ $key_prefix . $attribute_key ][ $index ] ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Missing, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 					} else {
-						$value = isset( $_POST[ $key_prefix . $attribute_key ] ) ? wp_unslash( $_POST[ $key_prefix . $attribute_key ] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+						$value = isset( $_POST[ $key_prefix . $attribute_key ] ) ? wp_unslash( $_POST[ $key_prefix . $attribute_key ] ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Missing, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 					}
 
 					if ( $attribute->is_taxonomy() ) {
@@ -330,7 +330,7 @@ class WC_Meta_Box_Product_Data {
 	 * @param WP_Post $post Post object.
 	 */
 	public static function save( $post_id, $post ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		// Process product type first so we have the correct class to run setters.
 		$product_type = empty( $_POST['product-type'] ) ? WC_Product_Factory::get_product_type( $post_id ) : sanitize_title( wp_unslash( $_POST['product-type'] ) );
 		$classname    = WC_Product_Factory::get_product_classname( $post_id, $product_type ? $product_type : ProductType::SIMPLE );
@@ -357,7 +357,7 @@ class WC_Meta_Box_Product_Data {
 			$date_on_sale_from = wc_clean( wp_unslash( $_POST['_sale_price_dates_from'] ) );
 
 			if ( ! empty( $date_on_sale_from ) ) {
-				$date_on_sale_from = date( 'Y-m-d 00:00:00', strtotime( $date_on_sale_from ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+				$date_on_sale_from = date( 'Y-m-d 00:00:00', strtotime( $date_on_sale_from ) ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 			}
 		}
 
@@ -366,7 +366,7 @@ class WC_Meta_Box_Product_Data {
 			$date_on_sale_to = wc_clean( wp_unslash( $_POST['_sale_price_dates_to'] ) );
 
 			if ( ! empty( $date_on_sale_to ) ) {
-				$date_on_sale_to = date( 'Y-m-d 23:59:59', strtotime( $date_on_sale_to ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+				$date_on_sale_to = date( 'Y-m-d 23:59:59', strtotime( $date_on_sale_to ) ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 			}
 		}
 
@@ -402,9 +402,9 @@ class WC_Meta_Box_Product_Data {
 				'download_expiry'    => isset( $_POST['_download_expiry'] ) && '' !== $_POST['_download_expiry'] ? absint( wp_unslash( $_POST['_download_expiry'] ) ) : '',
 				// Those are sanitized inside prepare_downloads.
 				'downloads'          => self::prepare_downloads(
-					isset( $_POST['_wc_file_names'] ) ? wp_unslash( $_POST['_wc_file_names'] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-					isset( $_POST['_wc_file_urls'] ) ? wp_unslash( $_POST['_wc_file_urls'] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-					isset( $_POST['_wc_file_hashes'] ) ? wp_unslash( $_POST['_wc_file_hashes'] ) : array() // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					isset( $_POST['_wc_file_names'] ) ? wp_unslash( $_POST['_wc_file_names'] ) : array(), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+					isset( $_POST['_wc_file_urls'] ) ? wp_unslash( $_POST['_wc_file_urls'] ) : array(), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+					isset( $_POST['_wc_file_hashes'] ) ? wp_unslash( $_POST['_wc_file_hashes'] ) : array() // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 				),
 				'product_url'        => isset( $_POST['_product_url'] ) ? esc_url_raw( wp_unslash( $_POST['_product_url'] ) ) : '',
 				'button_text'        => isset( $_POST['_button_text'] ) ? wc_clean( wp_unslash( $_POST['_button_text'] ) ) : '',
@@ -444,7 +444,7 @@ class WC_Meta_Box_Product_Data {
 		}
 		/* phpcs:disable FinCommerce.Commenting.CommentHooks.MissingHookComment */
 		do_action( 'fincommerce_process_product_meta_' . $product_type, $post_id );
-		/* phpcs:enable WordPress.Security.NonceVerification.Missing and FinCommerce.Commenting.CommentHooks.MissingHookComment */
+		/* phpcs:enable finpress.Security.NonceVerification.Missing and FinCommerce.Commenting.CommentHooks.MissingHookComment */
 	}
 
 	/**
@@ -456,13 +456,13 @@ class WC_Meta_Box_Product_Data {
 	public static function save_variations( $post_id, $post ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		if ( isset( $_POST['variable_post_id'] ) ) {
 			$parent = wc_get_product( $post_id );
 			$parent->set_default_attributes( self::prepare_set_attributes( $parent->get_attributes(), 'default_attribute_' ) );
 			$parent->save();
 
-			$max_loop   = max( array_keys( wp_unslash( $_POST['variable_post_id'] ) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$max_loop   = max( array_keys( wp_unslash( $_POST['variable_post_id'] ) ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$data_store = $parent->get_data_store();
 			$data_store->sort_all_product_variations( $parent->get_id() );
 			$new_variation_menu_order_id    = ! empty( $_POST['new_variation_menu_order_id'] ) ? wc_clean( wp_unslash( $_POST['new_variation_menu_order_id'] ) ) : false;
@@ -515,7 +515,7 @@ class WC_Meta_Box_Product_Data {
 					$date_on_sale_from = wc_clean( wp_unslash( $_POST['variable_sale_price_dates_from'][ $i ] ) );
 
 					if ( ! empty( $date_on_sale_from ) ) {
-						$date_on_sale_from = date( 'Y-m-d 00:00:00', strtotime( $date_on_sale_from ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+						$date_on_sale_from = date( 'Y-m-d 00:00:00', strtotime( $date_on_sale_from ) ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 					}
 				}
 
@@ -524,7 +524,7 @@ class WC_Meta_Box_Product_Data {
 					$date_on_sale_to = wc_clean( wp_unslash( $_POST['variable_sale_price_dates_to'][ $i ] ) );
 
 					if ( ! empty( $date_on_sale_to ) ) {
-						$date_on_sale_to = date( 'Y-m-d 23:59:59', strtotime( $date_on_sale_to ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+						$date_on_sale_to = date( 'Y-m-d 23:59:59', strtotime( $date_on_sale_to ) ); // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 					}
 				}
 
@@ -543,9 +543,9 @@ class WC_Meta_Box_Product_Data {
 						'download_expiry'   => isset( $_POST['variable_download_expiry'][ $i ] ) ? wc_clean( wp_unslash( $_POST['variable_download_expiry'][ $i ] ) ) : null,
 						// Those are sanitized inside prepare_downloads.
 						'downloads'         => self::prepare_downloads(
-							isset( $_POST['_wc_variation_file_names'][ $variation_id ] ) ? wp_unslash( $_POST['_wc_variation_file_names'][ $variation_id ] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-							isset( $_POST['_wc_variation_file_urls'][ $variation_id ] ) ? wp_unslash( $_POST['_wc_variation_file_urls'][ $variation_id ] ) : array(), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-							isset( $_POST['_wc_variation_file_hashes'][ $variation_id ] ) ? wp_unslash( $_POST['_wc_variation_file_hashes'][ $variation_id ] ) : array() // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+							isset( $_POST['_wc_variation_file_names'][ $variation_id ] ) ? wp_unslash( $_POST['_wc_variation_file_names'][ $variation_id ] ) : array(), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+							isset( $_POST['_wc_variation_file_urls'][ $variation_id ] ) ? wp_unslash( $_POST['_wc_variation_file_urls'][ $variation_id ] ) : array(), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+							isset( $_POST['_wc_variation_file_hashes'][ $variation_id ] ) ? wp_unslash( $_POST['_wc_variation_file_hashes'][ $variation_id ] ) : array() // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 						),
 						'manage_stock'      => isset( $_POST['variable_manage_stock'][ $i ] ),
 						'stock_quantity'    => $stock,
@@ -592,6 +592,6 @@ class WC_Meta_Box_Product_Data {
 				/* phpcs: enable */
 			}
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 }

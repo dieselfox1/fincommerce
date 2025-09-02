@@ -1,5 +1,5 @@
 /**
- * Based on the @wordpress/components `Notice` component.
+ * Based on the @finpress/components `Notice` component.
  * Adjusted to meet FinCommerce Admin Design Library.
  */
 
@@ -7,12 +7,12 @@
  * External dependencies
  */
 import React, { ComponentProps } from 'react';
-import { __ } from '@wordpress/i18n';
-import { useEffect, renderToString } from '@wordpress/element';
-import { speak } from '@wordpress/a11y';
+import { __ } from '@finpress/i18n';
+import { useEffect, renderToString } from '@finpress/element';
+import { speak } from '@finpress/a11y';
 import clsx from 'clsx';
-import { Button } from '@wordpress/components';
-import { check, info } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { check, info } from '@finpress/icons';
 import NoticeOutlineIcon from 'gridicons/dist/notice-outline';
 import NoticeIcon from 'gridicons/dist/notice';
 import CloseIcon from 'gridicons/dist/cross-small';

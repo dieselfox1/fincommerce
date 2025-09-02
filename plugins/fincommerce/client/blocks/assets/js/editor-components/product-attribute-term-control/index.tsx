@@ -2,13 +2,13 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import {
 	SearchListControl,
 	SearchListItem,
 } from '@fincommerce/editor-components/search-list-control';
-import { SelectControl } from '@wordpress/components';
-import { withInstanceId } from '@wordpress/compose';
+import { SelectControl } from '@finpress/components';
+import { withInstanceId } from '@finpress/compose';
 import useProductAttributes from '@fincommerce/base-context/hooks/use-product-attributes';
 import ErrorMessage from '@fincommerce/editor-components/error-placeholder/error-message';
 import ExpandableSearchListItem from '@fincommerce/editor-components/expandable-search-list-item/expandable-search-list-item';

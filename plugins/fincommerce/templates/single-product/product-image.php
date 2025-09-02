@@ -52,7 +52,7 @@ $wrapper_classes   = apply_filters(
 			$html             .= '</div>';
 		}
 
-		echo apply_filters( 'fincommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable finpress.XSS.EscapeOutput.OutputNotEscaped
 
 		do_action( 'fincommerce_product_thumbnails' );
 		?>

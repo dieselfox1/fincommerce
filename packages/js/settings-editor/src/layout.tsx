@@ -5,17 +5,17 @@ import {
 	useViewportMatch,
 	useResizeObserver,
 	useReducedMotion,
-} from '@wordpress/compose';
+} from '@finpress/compose';
 /* eslint-disable @fincommerce/dependency-group */
 import {
 	// @ts-expect-error missing type.
 	EditorSnackbars,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 import {
 	__unstableMotion as motion,
 	__unstableAnimatePresence as AnimatePresence,
-} from '@wordpress/components';
-import { createElement, Fragment } from '@wordpress/element';
+} from '@finpress/components';
+import { createElement, Fragment } from '@finpress/element';
 import { SidebarContent } from '@automattic/site-admin';
 
 /**

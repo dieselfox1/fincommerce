@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { controls as dataControls } from '@wordpress/data-controls';
+import { controls as dataControls } from '@finpress/data-controls';
 import { AnyAction } from 'redux';
 
 export const awaitResponseJson = (

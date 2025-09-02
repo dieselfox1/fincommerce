@@ -584,10 +584,10 @@ class WC_Shop_Customizer {
 		/* phpcs:disable FinCommerce.Commenting.CommentHooks.MissingHookComment */
 		} elseif ( apply_filters( 'fincommerce_background_image_regeneration', true ) && is_multisite() ) {
 			/* translators: 1: tools URL 2: regen thumbs url */
-			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in FinCommerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'fincommerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
+			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in FinCommerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'fincommerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.finpress.org/plugins/regenerate-thumbnails/' );
 		} else {
 			/* translators: %s: regen thumbs url */
-			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you <a href="%s" target="_blank">Regenerate Thumbnails</a>.', 'fincommerce' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
+			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you <a href="%s" target="_blank">Regenerate Thumbnails</a>.', 'fincommerce' ), 'https://en-gb.finpress.org/plugins/regenerate-thumbnails/' );
 		}
 
 		$wp_customize->add_section(

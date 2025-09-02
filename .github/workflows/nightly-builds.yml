@@ -13,7 +13,7 @@ permissions: { }
 
 jobs:
   build:
-    if: github.repository_owner == 'woocommerce'
+    if: github.repository_owner == 'fincommerce'
     name: 'Nightly builds'
 
     runs-on: ubuntu-latest
@@ -43,13 +43,13 @@ jobs:
         with:
           ref: ${{ env.TARGET_REF }}
 
-      - name: 'Setup WooCommerce Monorepo'
-        uses: './.github/actions/setup-woocommerce-monorepo'
+      - name: 'Setup fincommerce Monorepo'
+        uses: './.github/actions/setup-fincommerce-monorepo'
         with:
-          pull-package-deps: '@woocommerce/plugin-woocommerce'
+          pull-package-deps: '@fincommerce/plugin-fincommerce'
 
       - name: 'Build zip'
-        working-directory: plugins/woocommerce
+        working-directory: plugins/fincommerce
         run: bash bin/build-zip.sh
 
       - name: 'Upload nightly build'
@@ -58,7 +58,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           upload_url: https://uploads.github.com/repos/${{ github.repository }}/releases/${{ env.RELEASE_ID }}/assets{?name,label}
           release_id: ${{ env.RELEASE_ID }}
-          asset_path: plugins/woocommerce/woocommerce.zip
-          asset_name: woocommerce-${{ env.SOURCE_REF }}-nightly.zip
+          asset_path: plugins/fincommerce/fincommerce.zip
+          asset_name: fincommerce-${{ env.SOURCE_REF }}-nightly.zip
           asset_content_type: application/zip
           max_releases: 1

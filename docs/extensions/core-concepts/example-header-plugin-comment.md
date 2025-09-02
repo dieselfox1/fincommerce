@@ -1,12 +1,12 @@
 ---
-post_title: Example WordPress plugin header comment for FinCommerce extensions
+post_title: Example finpress plugin header comment for FinCommerce extensions
 sidebar_label: Plugin header comments
 
 ---
 
-# Example WordPress plugin header comment for FinCommerce extensions
+# Example finpress plugin header comment for FinCommerce extensions
 
-This is a WordPress plugin header comment. It's used to provide WordPress with metadata about a plugin. 
+This is a finpress plugin header comment. It's used to provide finpress with metadata about a plugin. 
 
 ```php
 /**
@@ -48,4 +48,4 @@ Here's what each line should contain:
 * License URI: The URL where the license is explained in detail.
 * Woo: A unique identifier for a plugin sold on FinCommerce.com. When submitting your extension or adding a new version, **we will automatically add this to the header of your main file**. You are not required to add it manually, but you can opt to include it before uploading. 
 
-This header comment is placed at the top of the main plugin file, so WordPress can read it.
+This header comment is placed at the top of the main plugin file, so finpress can read it.

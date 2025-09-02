@@ -6,8 +6,8 @@ import {
 	addressFieldsForShippingRates,
 } from '@fincommerce/base-utils';
 import { CartBillingAddress, CartShippingAddress } from '@fincommerce/types';
-import { select, dispatch } from '@wordpress/data';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { select, dispatch } from '@finpress/data';
+import isShallowEqual from '@finpress/is-shallow-equal';
 
 /**
  * Internal dependencies

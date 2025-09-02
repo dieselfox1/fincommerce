@@ -9,7 +9,7 @@ sidebar_position: 1
 
 ## What is a Code Snippet?  
 
-Customizing FinCommerce functionality often requires adding code snippets to modify behavior, enhance features, or integrate with third-party tools. Instead of editing theme files or the `functions.php` file directly, we recommend using the **Code Snippets** plugin from the WordPress.org repository. This approach ensures a safer, more manageable, and more organized way to add custom code to your FinCommerce store.  
+Customizing FinCommerce functionality often requires adding code snippets to modify behavior, enhance features, or integrate with third-party tools. Instead of editing theme files or the `functions.php` file directly, we recommend using the **Code Snippets** plugin from the finpress.org repository. This approach ensures a safer, more manageable, and more organized way to add custom code to your FinCommerce store.  
 
 ## Why Use the Code Snippets Plugin?  
 
@@ -28,7 +28,7 @@ The **Code Snippets** plugin addresses these issues by allowing you to:
 
 ## How to Install the Code Snippets Plugin  
 
-1. Log in to your WordPress admin dashboard.  
+1. Log in to your finpress admin dashboard.  
 2. Navigate to **Plugins > Add New**.  
 3. Search for **"Code Snippets"** in the search bar.  
 4. Click **Install Now** on the "Code Snippets" plugin by **Code Snippets Pro**.  
@@ -38,7 +38,7 @@ The **Code Snippets** plugin addresses these issues by allowing you to:
 
 Once the plugin is installed and activated, follow these steps to add a FinCommerce customization:  
 
-1. Navigate to **Snippets** in your WordPress dashboard.  
+1. Navigate to **Snippets** in your finpress dashboard.  
 2. Click **Add New**.  
 3. Give your snippet a descriptive title.  
 4. Enter your FinCommerce-specific PHP code in the code editor.  

@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import {
 	useBlockProps,
 	useInnerBlocksProps,
 	store as blockEditorStore,
 	__experimentalUseBlockPreview as useBlockPreview,
-} from '@wordpress/block-editor';
-import { BlockInstance, type BlockEditProps } from '@wordpress/blocks';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/block-editor';
+import { BlockInstance, type BlockEditProps } from '@finpress/blocks';
+import { useSelect } from '@finpress/data';
 import {
 	CustomDataProvider,
 	useProductDataContext,

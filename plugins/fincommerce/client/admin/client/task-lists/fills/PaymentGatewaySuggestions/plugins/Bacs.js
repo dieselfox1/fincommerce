@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import { Form, H, TextControl } from '@fincommerce/components';
 import { optionsStore } from '@fincommerce/data';
-import { registerPlugin } from '@wordpress/plugins';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { registerPlugin } from '@finpress/plugins';
+import { useDispatch, useSelect } from '@finpress/data';
 import { WooPaymentGatewaySetup } from '@fincommerce/onboarding';
 
 const initialFormValues = {

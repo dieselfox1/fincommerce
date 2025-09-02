@@ -11,7 +11,7 @@ import {
 } from '@fincommerce/data';
 import { Gridicon } from '@automattic/components';
 import { useNavigate } from 'react-router-dom';
-import { isRTL } from '@wordpress/i18n';
+import { isRTL } from '@finpress/i18n';
 
 /**
  * Internal dependencies

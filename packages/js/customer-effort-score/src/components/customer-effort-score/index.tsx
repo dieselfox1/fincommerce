@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, useState, useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { useDispatch } from '@wordpress/data';
+import { createElement, useState, useEffect } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

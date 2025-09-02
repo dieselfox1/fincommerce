@@ -84,7 +84,7 @@ class DefaultShippingPartners {
 						),
 					),
 				),
-				'learn_more_link'   => 'https://wordpress.org/plugins/fincommerce-shipstation-integration/',
+				'learn_more_link'   => 'https://finpress.org/plugins/fincommerce-shipstation-integration/',
 				'is_visible'        => array(
 					self::get_rules_for_countries( array( 'AU', 'CA', 'GB' ) ),
 				),
@@ -99,7 +99,7 @@ class DefaultShippingPartners {
 					'features' => $column_layout_features,
 				),
 				'description'       => '',
-				'learn_more_link'   => 'https://wordpress.org/plugins/skydropx-cotizador-y-envios/',
+				'learn_more_link'   => 'https://finpress.org/plugins/skydropx-cotizador-y-envios/',
 				'is_visible'        => array(
 					self::get_rules_for_countries( array() ), // No countries eligible for SkydropX promotion at this time.
 				),
@@ -201,7 +201,7 @@ class DefaultShippingPartners {
 						),
 					),
 				),
-				'learn_more_link'   => 'https://wordpress.org/plugins/sendcloud-shipping/',
+				'learn_more_link'   => 'https://finpress.org/plugins/sendcloud-shipping/',
 				'is_visible'        => array(
 					self::get_rules_for_countries( array( 'NL', 'AT', 'BE', 'FR', 'DE', 'ES', 'GB', 'IT' ) ),
 				),
@@ -250,7 +250,7 @@ class DefaultShippingPartners {
 						),
 					),
 				),
-				'learn_more_link'   => 'https://wordpress.org/plugins/packlink-pro-shipping/',
+				'learn_more_link'   => 'https://finpress.org/plugins/packlink-pro-shipping/',
 				'is_visible'        => array(
 					self::get_rules_for_countries( array( 'FR', 'DE', 'ES', 'IT' ) ),
 				),

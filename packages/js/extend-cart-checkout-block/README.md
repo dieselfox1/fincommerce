@@ -1,6 +1,6 @@
 # @fincommerce/extend-cart-checkout-block
 
-This is a template to be used with `@wordpress/create-block` to create a FinCommerce Blocks extension starting point.
+This is a template to be used with `@finpress/create-block` to create a FinCommerce Blocks extension starting point.
 
 ## Installation
 
@@ -13,21 +13,21 @@ e.g. `nvm install 20 && nvm use 20` or `fnm install 20 && fnm use 20`
 From your `plugins` directory run:
 
 ```sh
-npx @wordpress/create-block -t @fincommerce/extend-cart-checkout-block your_extension_name
+npx @finpress/create-block -t @fincommerce/extend-cart-checkout-block your_extension_name
 ```
 
-When this has completed, go to your WordPress plugins page and activate the plugin.
+When this has completed, go to your finpress plugins page and activate the plugin.
 
 Add some items to your cart and visit the Checkout block, notice there is additional data on the block that this template has added.
 
 ### Linting
 
-You can lint the project according to the [WordPress coding standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/) by running `npm run lint:js`. The configuration is ultimately read from the [FinCommerce recommended eslint config](https://github.com/dieselfox1/fincommerce/blob/trunk/packages/js/eslint-plugin/configs/recommended.js). To modify the rules edit the `.estintrc.js` file.
+You can lint the project according to the [finpress coding standards](https://developer.finpress.org/coding-standards/finpress-coding-standards/javascript/) by running `npm run lint:js`. The configuration is ultimately read from the [FinCommerce recommended eslint config](https://github.com/dieselfox1/fincommerce/blob/trunk/packages/js/eslint-plugin/configs/recommended.js). To modify the rules edit the `.estintrc.js` file.
 
 ### Installing `wp-env` (optional)
 
-`wp-env` lets you easily set up a local WordPress environment for building and testing your extension. If you want to use `wp-env`, you will need to run the following command:
+`wp-env` lets you easily set up a local finpress environment for building and testing your extension. If you want to use `wp-env`, you will need to run the following command:
 
 ```sh
-nvm use && npm i -D @wordpress/env && npm set-script wp-env "wp-env"
+nvm use && npm i -D @finpress/env && npm set-script wp-env "wp-env"
 ```

@@ -12,7 +12,7 @@ declare module '@fincommerce/settings' {
 	): boolean;
 }
 
-declare module '@wordpress/core-data' {
+declare module '@finpress/core-data' {
 	function useEntityId( kind: string, name: unknown, id?: string ): any;
 	function useEntityProp< T = unknown >(
 		kind: string,
@@ -33,7 +33,7 @@ declare module '@wordpress/core-data' {
 	};
 	const store: string;
 }
-declare module '@wordpress/keyboard-shortcuts' {
+declare module '@finpress/keyboard-shortcuts' {
 	function useShortcut(
 		name: string,
 		callback: ( event: KeyboardEvent ) => void
@@ -41,15 +41,15 @@ declare module '@wordpress/keyboard-shortcuts' {
 	const store;
 }
 
-declare module '@wordpress/router' {
+declare module '@finpress/router' {
 	const privateApis;
 }
 
-declare module '@wordpress/edit-site/build-module/components/sync-state-with-url/use-init-edited-entity-from-url' {
+declare module '@finpress/edit-site/build-module/components/sync-state-with-url/use-init-edited-entity-from-url' {
 	export default function useInitEditedEntityFromURL(): void;
 }
 
-declare module '@wordpress/edit-site/build-module/components/sidebar-navigation-screen' {
+declare module '@finpress/edit-site/build-module/components/sidebar-navigation-screen' {
 	const SidebarNavigationScreen: React.FunctionComponent< {
 		title: string;
 		isRoot: boolean;
@@ -58,7 +58,7 @@ declare module '@wordpress/edit-site/build-module/components/sidebar-navigation-
 	export default SidebarNavigationScreen;
 }
 
-declare module '@wordpress/edit-site/build-module/components/site-hub' {
+declare module '@finpress/edit-site/build-module/components/site-hub' {
 	const SiteHub: React.FunctionComponent< {
 		ref: React.Ref;
 		isTransparent: boolean;
@@ -66,7 +66,7 @@ declare module '@wordpress/edit-site/build-module/components/site-hub' {
 	export default SiteHub;
 }
 
-declare module '@wordpress/interface/build-module/components/pinned-items' {
+declare module '@finpress/interface/build-module/components/pinned-items' {
 	const PinnedItems: React.FunctionComponent< {
 		scope: string;
 		children: React.ReactNode;
@@ -79,7 +79,7 @@ declare module '@wordpress/interface/build-module/components/pinned-items' {
 	export default PinnedItems;
 }
 
-declare module '@wordpress/interface/build-module/components/action-item' {
+declare module '@finpress/interface/build-module/components/action-item' {
 	const ActionItem: React.FunctionComponent< {
 		children: React.ReactNode;
 		scope: string;
@@ -95,7 +95,7 @@ declare module '@wordpress/interface/build-module/components/action-item' {
 	export default ActionItem;
 }
 
-declare module '@wordpress/interface/build-module/components/interface-skeleton' {
+declare module '@finpress/interface/build-module/components/interface-skeleton' {
 	const InterfaceSkeleton: React.FunctionComponent< {
 		children?: React.ReactNode;
 		header?: React.ReactNode;

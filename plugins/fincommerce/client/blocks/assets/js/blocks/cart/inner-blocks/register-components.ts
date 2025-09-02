@@ -28,7 +28,7 @@ import CartOrderSummaryShippingFrontend from '@fincommerce/block-library/assets/
 import CartOrderSummaryTotalsFrontend from '@fincommerce/block-library/assets/js/blocks/cart/inner-blocks/cart-order-summary-totals/frontend';
 import CartOrderSummaryTaxesFrontend from '@fincommerce/block-library/assets/js/blocks/cart/inner-blocks/cart-order-summary-taxes/frontend';
 
-// Modify webpack publicPath at runtime based on location of WordPress Plugin.
+// Modify webpack publicPath at runtime based on location of finpress Plugin.
 // eslint-disable-next-line no-undef,camelcase
 __webpack_public_path__ = WC_BLOCKS_BUILD_URL;
 

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { controls as dataControls } from '@wordpress/data-controls';
-import apiFetch, { APIFetchOptions } from '@wordpress/api-fetch';
+import { controls as dataControls } from '@finpress/data-controls';
+import apiFetch, { APIFetchOptions } from '@finpress/api-fetch';
 import { AnyAction } from 'redux';
 
 export const fetchWithHeaders = (

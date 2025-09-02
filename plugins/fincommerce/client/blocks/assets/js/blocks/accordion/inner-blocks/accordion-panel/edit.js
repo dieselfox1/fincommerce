@@ -8,7 +8,7 @@ import {
 	__experimentalUseColorProps as useColorProps,
 	__experimentalGetSpacingClassesAndStyles as useSpacingProps,
 	__experimentalGetShadowClassesAndStyles as useShadowProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import clsx from 'clsx';
 
 export default function Edit( { attributes } ) {

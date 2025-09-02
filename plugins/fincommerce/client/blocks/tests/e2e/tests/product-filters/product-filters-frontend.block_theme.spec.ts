@@ -89,7 +89,7 @@ test.describe( 'fincommerce/product-filters - Frontend', () => {
 			await expect( overlay ).not.toBeInViewport();
 		} );
 
-		// Skipping these tests until we can move this block to @wordpress/interactivity.
+		// Skipping these tests until we can move this block to @finpress/interactivity.
 		// eslint-disable-next-line playwright/no-skipped-test
 		test.skip( 'filter is working inside overlay', async ( { page } ) => {
 			await page.setViewportSize( { width: 400, height: 600 } );

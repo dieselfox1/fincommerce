@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { useEffect } from 'react';
-import { compose } from '@wordpress/compose';
-import { withDispatch, withSelect } from '@wordpress/data';
-import { createElement, Fragment } from '@wordpress/element';
+import { compose } from '@finpress/compose';
+import { withDispatch, withSelect } from '@finpress/data';
+import { createElement, Fragment } from '@finpress/element';
 import { optionsStore } from '@fincommerce/data';
 
 /**

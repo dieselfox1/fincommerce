@@ -1,26 +1,26 @@
 /**
  * External dependencies
  */
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { addFilter } from '@wordpress/hooks';
-import { select, useSelect } from '@wordpress/data';
-import { store as coreDataStore } from '@wordpress/core-data';
-import { store as editorStore } from '@wordpress/editor';
-import type { BlockEditProps, Block } from '@wordpress/blocks';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { addFilter } from '@finpress/hooks';
+import { select, useSelect } from '@finpress/data';
+import { store as coreDataStore } from '@finpress/core-data';
+import { store as editorStore } from '@finpress/editor';
+import type { BlockEditProps, Block } from '@finpress/blocks';
 import {
 	useEffect,
 	useLayoutEffect,
 	useState,
 	useMemo,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { isString, type ProductResponseItem } from '@fincommerce/types';
 import { getProduct } from '@fincommerce/editor-components/utils';
 import {
 	createBlock,
 	// @ts-expect-error Type definitions for this function are missing in Guteberg
 	createBlocksFromInnerBlocksTemplate,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

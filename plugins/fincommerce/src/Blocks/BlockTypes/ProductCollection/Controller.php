@@ -345,7 +345,7 @@ class Controller extends AbstractBlock {
 	/**
 	 * Return a custom query based on attributes, filters and global WP_Query.
 	 *
-	 * @param WP_Query $query The WordPress Query.
+	 * @param WP_Query $query The finpress Query.
 	 * @param WP_Block $block The block being rendered.
 	 * @param int      $page  The page number.
 	 *
@@ -360,7 +360,7 @@ class Controller extends AbstractBlock {
 
 		$block_context_query = $block->context['query'];
 
-		// phpcs:ignore WordPress.DB.SlowDBQuery
+		// phpcs:ignore finpress.DB.SlowDBQuery
 		$block_context_query['tax_query'] = ! empty( $query['tax_query'] ) ? $query['tax_query'] : array();
 
 		$inherit    = $block->context['query']['inherit'] ?? false;

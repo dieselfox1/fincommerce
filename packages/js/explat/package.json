@@ -8,7 +8,7 @@
 		"node": "^20.11.1"
 	},
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce",
 		"abtest",
 		"explat"
@@ -55,8 +55,8 @@
 	"dependencies": {
 		"@automattic/explat-client": "^0.0.5",
 		"@automattic/explat-client-react-helpers": "^0.0.6",
-		"@wordpress/api-fetch": "wp-6.6",
-		"@wordpress/hooks": "wp-6.6",
+		"@finpress/api-fetch": "wp-6.6",
+		"@finpress/hooks": "wp-6.6",
 		"cookie": "^0.4.2",
 		"qs": "^6.11.2"
 	},

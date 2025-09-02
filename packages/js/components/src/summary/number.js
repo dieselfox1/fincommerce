@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { Button, Tooltip } from '@wordpress/components';
-import { sprintf, __ } from '@wordpress/i18n';
+import { Button, Tooltip } from '@finpress/components';
+import { sprintf, __ } from '@finpress/i18n';
 import clsx from 'clsx';
 import ChevronDownIcon from 'gridicons/dist/chevron-down';
 import { isNil, noop } from 'lodash';
 import PropTypes from 'prop-types';
-import { createElement } from '@wordpress/element';
-import { Icon, info } from '@wordpress/icons';
+import { createElement } from '@finpress/element';
+import { Icon, info } from '@finpress/icons';
 
 /**
  * Internal dependencies
@@ -64,14 +64,14 @@ const SummaryNumber = ( {
 
 	let screenReaderLabel =
 		delta > 0
-			? // eslint-disable-next-line @wordpress/valid-sprintf -- false positive from %%
+			? // eslint-disable-next-line @finpress/valid-sprintf -- false positive from %%
 			  sprintf(
 					/* translators: percentage change upwards */
 					__( 'Up %f%% from %s', 'fincommerce' ),
 					delta,
 					prevLabel
 			  )
-			: // eslint-disable-next-line @wordpress/valid-sprintf -- false positive from %%
+			: // eslint-disable-next-line @finpress/valid-sprintf -- false positive from %%
 			  sprintf(
 					/* translators: percentage change downwards */
 					__( 'Down %f%% from %s', 'fincommerce' ),
@@ -155,7 +155,7 @@ const SummaryNumber = ( {
 						>
 							<Text variant="caption" size="12" lineHeight="16px">
 								{ ! isNil( delta )
-									? // eslint-disable-next-line @wordpress/valid-sprintf -- false positive from %%
+									? // eslint-disable-next-line @finpress/valid-sprintf -- false positive from %%
 									  sprintf(
 											/* translators: percentage change */
 											__( '%f%%', 'fincommerce' ),

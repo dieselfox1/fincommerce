@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { store as editorStore } from '@wordpress/editor';
-import { useSelect } from '@wordpress/data';
+import { store as editorStore } from '@finpress/editor';
+import { useSelect } from '@finpress/data';
 import { isString } from '@fincommerce/types';
 
 export const useIsDescendentOfSingleProductTemplate = () => {

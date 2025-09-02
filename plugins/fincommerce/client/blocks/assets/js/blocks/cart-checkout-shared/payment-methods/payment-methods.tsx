@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Label } from '@fincommerce/blocks-components';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { paymentStore } from '@fincommerce/block-data';
 import { CheckoutPaymentSkeleton } from '@fincommerce/base-components/skeleton/patterns/checkout-payment';
 import { DelayedContentWithSkeleton } from '@fincommerce/base-components/delayed-content-with-skeleton';

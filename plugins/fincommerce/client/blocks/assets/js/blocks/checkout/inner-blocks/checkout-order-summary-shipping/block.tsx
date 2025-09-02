@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { TotalsShipping } from '@fincommerce/base-components/cart-checkout';
 import { useStoreCart } from '@fincommerce/base-context';
 import { TotalsWrapper } from '@fincommerce/blocks-checkout';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 import {
 	filterShippingRatesByPrefersCollection,

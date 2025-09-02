@@ -207,7 +207,7 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 				'<div class="cogs_value">' . esc_html( $this->object->get_cogs_value() ?? '0' ) . '</div>' :
 				'';
 
-		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped -- the COGS value is already escaped.
+		// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped -- the COGS value is already escaped.
 		/* Custom inline data for fincommerce. */
 		echo '
 			<div class="hidden" id="fincommerce_inline_' . absint( $this->object->get_id() ) . '">
@@ -233,7 +233,7 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 				<div class="low_stock_amount">' . esc_html( $this->object->get_low_stock_amount() ) . '</div>'
 				. $cogs_value_html .
 			'</div>';
-		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -528,12 +528,12 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 		}
 
 		// Stock status filter.
-		if ( ! empty( $_GET['stock_status'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['stock_status'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			add_filter( 'posts_clauses', array( $this, 'filter_stock_status_post_clauses' ) );
 		}
 
 		// Shipping class taxonomy.
-		if ( ! empty( $_GET['product_shipping_class'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['product_shipping_class'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$query_vars['tax_query'][] = array(
 				'taxonomy' => 'product_shipping_class',
 				'field'    => 'slug',
@@ -691,9 +691,9 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 	 */
 	public function filter_stock_status_post_clauses( $args ) {
 		global $wpdb;
-		if ( ! empty( $_GET['stock_status'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['stock_status'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$args['join']   = $this->append_product_sorting_table_join( $args['join'] );
-			$args['where'] .= $wpdb->prepare( ' AND wc_product_meta_lookup.stock_status=%s ', wc_clean( wp_unslash( $_GET['stock_status'] ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$args['where'] .= $wpdb->prepare( ' AND wc_product_meta_lookup.stock_status=%s ', wc_clean( wp_unslash( $_GET['stock_status'] ) ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 		return $args;
 	}

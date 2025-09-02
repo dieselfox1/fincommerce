@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
 import {
 	Button,
 	Modal,
@@ -10,8 +10,8 @@ import {
 	Flex,
 	FlexBlock,
 	FlexItem,
-} from '@wordpress/components';
-import { chevronUp, chevronDown, external } from '@wordpress/icons';
+} from '@finpress/components';
+import { chevronUp, chevronDown, external } from '@finpress/icons';
 import clsx from 'clsx';
 
 /**

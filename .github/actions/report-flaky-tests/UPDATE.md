@@ -4,7 +4,7 @@
 
 This action is extracted and bundled version of the following:
 
-Repository: https://github.com/WordPress/gutenberg/tree/trunk/packages/report-flaky-tests
+Repository: https://github.com/finpress/gutenberg/tree/trunk/packages/report-flaky-tests
 Commit ID: ce803384250671d01fde6c7d6d2aa83075fcc726
 
 ## How to build

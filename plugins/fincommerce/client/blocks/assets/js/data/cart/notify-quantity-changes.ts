@@ -2,13 +2,13 @@
  * External dependencies
  */
 import { Cart, CartItem } from '@fincommerce/types';
-import { dispatch, select } from '@wordpress/data';
-import { decodeEntities } from '@wordpress/html-entities';
-import { __, sprintf } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
-import { CurriedSelectorsOf } from '@wordpress/data/build-types/types';
-// eslint-disable-next-line @wordpress/no-unsafe-wp-apis, @fincommerce/dependency-group
-import { __unstableStripHTML as stripHTML } from '@wordpress/dom';
+import { dispatch, select } from '@finpress/data';
+import { decodeEntities } from '@finpress/html-entities';
+import { __, sprintf } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
+import { CurriedSelectorsOf } from '@finpress/data/build-types/types';
+// eslint-disable-next-line @finpress/no-unsafe-wp-apis, @fincommerce/dependency-group
+import { __unstableStripHTML as stripHTML } from '@finpress/dom';
 
 /**
  * Internal dependencies

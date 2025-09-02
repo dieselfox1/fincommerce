@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { onboardingStore, TaskType } from '@fincommerce/data';
 import { TaskItem, useSlot } from '@fincommerce/experimental';
-import { useCallback } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { useCallback } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 
 import { WooOnboardingTaskListItem } from '@fincommerce/onboarding';
 import clsx from 'clsx';

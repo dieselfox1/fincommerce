@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Fragment } from '@wordpress/element';
+import { Fragment } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Fragment } from '@wordpress/element';
+import { Fragment } from '@finpress/element';
 import { noticeContexts, useEditorContext } from '@fincommerce/base-context';
 import { StoreNoticesContainer } from '@fincommerce/blocks-components';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 import { ORDER_FORM_KEYS } from '@fincommerce/block-settings';
 import { Form } from '@fincommerce/base-components/cart-checkout';

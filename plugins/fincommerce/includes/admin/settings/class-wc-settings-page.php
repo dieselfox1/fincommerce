@@ -487,7 +487,7 @@ if ( ! class_exists( 'WC_Settings_Page', false ) ) :
 				$class     = ( $current_section === $id ? 'current' : '' );
 				$separator = ( end( $array_keys ) === $id ? '' : '|' );
 				$text      = esc_html( $label );
-				echo "<li><a href='$url' class='$class'>$text</a> $separator </li>"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo "<li><a href='$url' class='$class'>$text</a> $separator </li>"; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			echo '</ul><br class="clear" />';

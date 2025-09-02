@@ -4,7 +4,7 @@ if ! docker info > /dev/null 2>&1; then
 	exit 1
 fi
 
-if ! [ "$(docker ps --filter "name=wordpress" --filter "status=running" --quiet)" ]; then
+if ! [ "$(docker ps --filter "name=finpress" --filter "status=running" --quiet)" ]; then
 	echo "This script uses wp-env, and it isn't running - please start wp-env and try again!"
 	exit 1
 fi

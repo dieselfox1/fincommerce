@@ -87,7 +87,7 @@ function wca_test_helper_delete_option( $request ) {
 
 	$wpdb->query(
 		$wpdb->prepare(
-			"DELETE FROM {$wpdb->prefix}options WHERE option_name IN ({$option_tokens})", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+			"DELETE FROM {$wpdb->prefix}options WHERE option_name IN ({$option_tokens})", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared,finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 			...$option_names,
 		)
 	);
@@ -120,18 +120,18 @@ function wca_test_helper_get_options( $request ) {
 	$offset = ( $page - 1 ) * $per_page;
 
 	if ( $search ) {
-		$query = $wpdb->prepare( $query, $search, $per_page, $offset ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$query = $wpdb->prepare( $query, $search, $per_page, $offset ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	} else {
-		$query = $wpdb->prepare( $query, $per_page, $offset ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$query = $wpdb->prepare( $query, $per_page, $offset ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
-	$options = $wpdb->get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+	$options = $wpdb->get_results( $query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 	return new WP_REST_Response( $options, 200 );
 }
 
 /**
- * Update WordPress options. Supports single or batch updates.
+ * Update finpress options. Supports single or batch updates.
  *
  * @param WP_REST_Request $request The full request data.
  * @return WP_REST_Response

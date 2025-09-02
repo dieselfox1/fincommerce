@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import type { BlockAttributes } from '@wordpress/blocks';
-import { Button } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import type { BlockAttributes } from '@finpress/blocks';
+import { Button } from '@finpress/components';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import { Product } from '@fincommerce/data';
-import { useEntityProp } from '@wordpress/core-data';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

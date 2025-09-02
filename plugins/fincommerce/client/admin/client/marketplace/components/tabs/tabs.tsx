@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { useContext, useEffect, useMemo } from '@wordpress/element';
-import { Button } from '@wordpress/components';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { useContext, useEffect, useMemo } from '@finpress/element';
+import { Button } from '@finpress/components';
 import clsx from 'clsx';
 import { getNewPath, navigateTo, useQuery } from '@fincommerce/navigation';
 

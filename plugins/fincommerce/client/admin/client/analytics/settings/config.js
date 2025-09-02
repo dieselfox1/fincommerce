@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
+import { __, sprintf } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
 import interpolateComponents from '@automattic/interpolate-components';
 
 /**

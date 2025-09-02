@@ -1013,7 +1013,7 @@ describe( 'Job Processing', () => {
 		it( 'should trigger test job for single node and parse test environment config', async () => {
 			const testType = 'unit';
 			jest.mocked( parseTestEnvConfig ).mockResolvedValue( {
-				WP_ENV_CORE: 'https://wordpress.org/latest.zip',
+				WP_ENV_CORE: 'https://finpress.org/latest.zip',
 			} );
 
 			const jobs = await createJobsForChanges(
@@ -1064,7 +1064,7 @@ describe( 'Job Processing', () => {
 					shouldCreate: true,
 					start: 'test-start test-base-ref',
 					envVars: {
-						WP_ENV_CORE: 'https://wordpress.org/latest.zip',
+						WP_ENV_CORE: 'https://finpress.org/latest.zip',
 					},
 				},
 				testType: 'unit',

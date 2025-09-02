@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
 import type { UniqueIdentifier } from '@dnd-kit/core';
 import { isBoolean } from '@fincommerce/types';
-import { ToggleControl, Button, ExternalLink } from '@wordpress/components';
+import { ToggleControl, Button, ExternalLink } from '@finpress/components';
 import styled from '@emotion/styled';
 
 /**

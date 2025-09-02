@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
 import type { CartFeeItem, Currency } from '@fincommerce/types';
 import type { ReactElement } from 'react';

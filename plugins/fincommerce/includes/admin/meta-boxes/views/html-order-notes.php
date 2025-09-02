@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 					<?php
 					$content = wp_kses_post( $note->content );
 					$content = wc_wptexturize_order_note( $content );
-					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped -- the content goes through wp_kses_post above.
+					// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped -- the content goes through wp_kses_post above.
 					echo wpautop( $content );
 					?>
 				</div>

@@ -21,7 +21,7 @@ class WC_Customer_Data_Store_CPT_Test extends WC_Unit_Test_Case {
 
 		add_filter( 'wc_allow_changing_orders_storage_while_sync_is_pending', '__return_true' );
 
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		remove_filter( 'query', array( $this, '_create_temporary_tables' ) );
 		remove_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 		OrderHelper::delete_order_custom_tables();
@@ -114,10 +114,10 @@ class WC_Customer_Data_Store_CPT_Test extends WC_Unit_Test_Case {
 
 		$customer_1_id = $customer_1->get_id();
 		$customer_2_id = $customer_2->get_id();
-		//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$query = $wpdb->prepare( $sql, $customer_1_id, $last_valid_order->get_id(), $customer_1_id, $customer_1_id, $customer_2_id, $customer_2_id );
 		$wpdb->query( $query );
-		//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$sut          = new WC_Customer_Data_Store();
 		$actual_order = $sut->get_last_order( $customer_1 );
@@ -206,10 +206,10 @@ class WC_Customer_Data_Store_CPT_Test extends WC_Unit_Test_Case {
 
 		$customer_1_id = $customer_1->get_id();
 		$customer_2_id = $customer_2->get_id();
-		//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$query = $wpdb->prepare( $sql, $customer_1_id, $customer_1_id, $customer_1_id, $customer_1_id, $customer_2_id, $customer_2_id );
 		$wpdb->query( $query );
-		//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$sut          = new WC_Customer_Data_Store();
 		$actual_count = $sut->get_order_count( $customer_1 );
@@ -265,10 +265,10 @@ class WC_Customer_Data_Store_CPT_Test extends WC_Unit_Test_Case {
 
 		$customer_1_id = $customer_1->get_id();
 		$customer_2_id = $customer_2->get_id();
-		//phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$query = $wpdb->prepare( $sql, $customer_1_id, $customer_1_id, $customer_1_id, $customer_1_id, $customer_2_id, $customer_2_id );
 		$wpdb->query( $query );
-		//phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		//phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 		$sut          = new WC_Customer_Data_Store();
 		$actual_spent = $sut->get_total_spent( $customer_1 );

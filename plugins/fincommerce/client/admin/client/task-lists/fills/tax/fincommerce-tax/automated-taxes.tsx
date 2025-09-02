@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
 import interpolateComponents from '@automattic/interpolate-components';
 import { H } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';

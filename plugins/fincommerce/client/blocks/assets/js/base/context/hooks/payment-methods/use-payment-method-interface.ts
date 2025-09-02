@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
-import { useCallback, useEffect, useRef } from '@wordpress/element';
+import { useCallback, useEffect, useRef } from '@finpress/element';
 import PaymentMethodLabel from '@fincommerce/base-components/cart-checkout/payment-method-label';
 import PaymentMethodIcons from '@fincommerce/base-components/cart-checkout/payment-method-icons';
 import { getSetting } from '@fincommerce/settings';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 import LoadingMask from '@fincommerce/base-components/loading-mask';
 import { type PaymentMethodInterface, responseTypes } from '@fincommerce/types';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import {
 	checkoutStore,
 	paymentStore,

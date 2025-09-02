@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { combineReducers } from '@wordpress/data';
+import { combineReducers } from '@finpress/data';
 
 /**
  * Internal dependencies

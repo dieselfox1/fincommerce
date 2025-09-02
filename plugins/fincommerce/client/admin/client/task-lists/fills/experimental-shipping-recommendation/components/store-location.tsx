@@ -3,8 +3,8 @@
  */
 import { settingsStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useEffect } from '@wordpress/element';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useEffect } from '@finpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

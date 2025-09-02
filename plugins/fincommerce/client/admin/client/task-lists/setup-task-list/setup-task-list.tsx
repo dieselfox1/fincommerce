@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect, useRef, useState, createElement } from '@wordpress/element';
-import { Button, Card } from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useEffect, useRef, useState, createElement } from '@finpress/element';
+import { Button, Card } from '@finpress/components';
+import { useSelect, useDispatch } from '@finpress/data';
 import { EllipsisMenu } from '@fincommerce/components';
 import { navigateTo, getNewPath } from '@fincommerce/navigation';
 import { WooOnboardingTaskListHeader } from '@fincommerce/onboarding';

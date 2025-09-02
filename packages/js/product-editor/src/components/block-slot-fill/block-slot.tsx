@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Slot } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { Slot } from '@finpress/components';
+import { createElement } from '@finpress/element';
 import {
 	// @ts-expect-error no exported member.
 	useBlockEditContext,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

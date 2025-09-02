@@ -22,7 +22,7 @@ class User_Theme {
 	);
 
 	/**
-	 * Core theme loaded from the WordPress core.
+	 * Core theme loaded from the finpress core.
 	 *
 	 * @var WP_Post | null
 	 */

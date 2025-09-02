@@ -12,7 +12,7 @@ module.exports = {
 	},
 	presets: [
 		[
-			'@wordpress/babel-preset-default',
+			'@finpress/babel-preset-default',
 			{
 				targets: {
 					node: 'current',

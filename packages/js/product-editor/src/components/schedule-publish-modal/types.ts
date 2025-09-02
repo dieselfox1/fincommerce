@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Modal } from '@wordpress/components';
+import { Modal } from '@finpress/components';
 
 export type SchedulePublishModalProps = Omit<
 	React.ComponentProps< typeof Modal >,

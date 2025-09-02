@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createRoot } from '@wordpress/element';
-import { createSlotFill, SlotFillProvider } from '@wordpress/components';
-import { PluginArea, registerPlugin } from '@wordpress/plugins';
-import { __ } from '@wordpress/i18n';
+import { createRoot } from '@finpress/element';
+import { createSlotFill, SlotFillProvider } from '@finpress/components';
+import { PluginArea, registerPlugin } from '@finpress/plugins';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
+import { __, sprintf } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
 import moment from 'moment';
-import { Spinner } from '@wordpress/components';
+import { Spinner } from '@finpress/components';
 
 const HISTORICAL_DATA_STATUS_FILTER = 'fincommerce_admin_import_status';
 
@@ -52,7 +52,7 @@ function HistoricalDataStatus( { importDate, status } ) {
 							'fincommerce'
 						),
 						// @todo The date formatting should be localized ( 'll' ), but this is currently broken in Gutenberg.
-						// See https://github.com/WordPress/gutenberg/issues/12626 for details.
+						// See https://github.com/finpress/gutenberg/issues/12626 for details.
 						moment( importDate ).format( 'YYYY-MM-DD' )
 				  ),
 	} );

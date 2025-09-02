@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import { ProductListContainer } from '@fincommerce/base-components/product-list';
 import { InnerBlockLayoutContextProvider } from '@fincommerce/shared-context';
 import { gridBlockPreview } from '@fincommerce/resource-previews';

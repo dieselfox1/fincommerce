@@ -1,15 +1,15 @@
 /**
- * This hook was directly copied from https://github.com/WordPress/gutenberg/blob/master/packages/compose/src/hooks/use-focus-on-mount/index.js
- * to avoid its absence in older versions of WordPress.
+ * This hook was directly copied from https://github.com/finpress/gutenberg/blob/master/packages/compose/src/hooks/use-focus-on-mount/index.js
+ * to avoid its absence in older versions of finpress.
  *
- * This can be removed once the minimum supported version of WordPress includes this hook.
+ * This can be removed once the minimum supported version of finpress includes this hook.
  */
 
 /**
  * External dependencies
  */
-import { useRef, useEffect, useCallback } from '@wordpress/element';
-import { focus } from '@wordpress/dom';
+import { useRef, useEffect, useCallback } from '@finpress/element';
+import { focus } from '@finpress/dom';
 
 /**
  * Hook used to focus the first tabbable element on mount.
@@ -19,7 +19,7 @@ import { focus } from '@wordpress/dom';
  *
  * @example
  * ```js
- * import { useFocusOnMount } from '@wordpress/compose';
+ * import { useFocusOnMount } from '@finpress/compose';
  *
  * const WithFocusOnMount = () => {
  *     const ref = useFocusOnMount()

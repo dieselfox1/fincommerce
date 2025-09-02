@@ -127,7 +127,7 @@ abstract class AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 */
 	protected function initialize() {
 		if ( empty( $this->block_name ) ) {
@@ -215,7 +215,7 @@ abstract class AbstractBlock {
 		return $chunks;
 	}
 	/**
-	 * Registers the block type with WordPress.
+	 * Registers the block type with finpress.
 	 *
 	 * @return string[] Chunks paths.
 	 */

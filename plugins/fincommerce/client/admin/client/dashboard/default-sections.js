@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
-import { lazy, Suspense } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
+import { lazy, Suspense } from '@finpress/element';
 import { Spinner } from '@fincommerce/components';
-import { arrowRight, chartBar } from '@wordpress/icons';
+import { arrowRight, chartBar } from '@finpress/icons';
 import ListOrdered from 'gridicons/dist/list-ordered';
 
 /**

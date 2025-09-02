@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { Button, ExternalLink } from '@wordpress/components';
-import { compose } from '@wordpress/compose';
+import { __, sprintf } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { Button, ExternalLink } from '@finpress/components';
+import { compose } from '@finpress/compose';
 import interpolateComponents from '@automattic/interpolate-components';
 import PropTypes from 'prop-types';
 import { pluginsStore } from '@fincommerce/data';
-import { withDispatch, withSelect } from '@wordpress/data';
+import { withDispatch, withSelect } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { getSetting, getAdminLink } from '@fincommerce/settings';
 import { Link } from '@fincommerce/components';
@@ -429,7 +429,7 @@ export class ShippingBanner extends Component {
 								components: {
 									tosLink: (
 										<ExternalLink
-											href="https://wordpress.com/tos"
+											href="https://finpress.com/tos"
 											target="_blank"
 											type="external"
 										/>

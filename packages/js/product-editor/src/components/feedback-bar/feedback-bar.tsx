@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	BaseControl,
 	Button,
 	TextControl,
 	TextareaControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	createElement,
 	createInterpolateElement,
 	Fragment,
-} from '@wordpress/element';
-import { closeSmall } from '@wordpress/icons';
+} from '@finpress/element';
+import { closeSmall } from '@finpress/icons';
 import { Pill } from '@fincommerce/components';
 import { useCustomerEffortScoreModal } from '@fincommerce/customer-effort-score';
 import { recordEvent } from '@fincommerce/tracks';

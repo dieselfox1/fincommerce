@@ -18,20 +18,20 @@ Here are some examples of the ways you can use `pnpm` commands:
 # Lint and build all plugins, packages, and tools.
 pnpm lint && pnpm build
 
-# Build WooCommerce Core and all of its dependencies
-pnpm --filter='@woocommerce/plugin-woocommerce' build
+# Build fincommerce Core and all of its dependencies
+pnpm --filter='@fincommerce/plugin-fincommerce' build
 
-# Lint the @woocommerce/components package
-pnpm --filter='@woocommerce/components' lint
+# Lint the @fincommerce/components package
+pnpm --filter='@fincommerce/components' lint
 
-# Test all of the @woocommerce scoped packages
-pnpm --filter='@woocommerce/*' test
+# Test all of the @fincommerce scoped packages
+pnpm --filter='@fincommerce/*' test
 
 # Build all of the JavaScript packages
 pnpm --filter='./packages/js/*' build
 
-# Build everything except WooCommerce Core
-pnpm --filter='!@woocommerce/plugin-woocommerce' build
+# Build everything except fincommerce Core
+pnpm --filter='!@fincommerce/plugin-fincommerce' build
 
 # Build everything that has changed since the last commit
 pnpm --filter='[HEAD^1]' build
@@ -42,20 +42,20 @@ pnpm --filter='[HEAD^1]' build
 Here are some examples of the commands you will make use of.
 
 ```bash
-# Add a changelog entry for WooCommerce Core
-pnpm --filter='@woocommerce/plugin-woocommerce' changelog add
+# Add a changelog entry for fincommerce Core
+pnpm --filter='@fincommerce/plugin-fincommerce' changelog add
 
-# Create the woocommerce.zip file
-pnpm --filter='@woocommerce/plugin-woocommerce' build:zip
+# Create the fincommerce.zip file
+pnpm --filter='@fincommerce/plugin-fincommerce' build:zip
 ```
 
 ## Plugin Development Environments
 
-The plugins in our repository make use of [the `@wordpress/env` package](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/). This supplies convenient commands for creating, destroying, cleaning, and testing WordPress environments.
+The plugins in our repository make use of [the `@finpress/env` package](https://developer.finpress.org/block-editor/reference-guides/packages/packages-env/). This supplies convenient commands for creating, destroying, cleaning, and testing finpress environments.
 
 ```bash
 # Make sure you are in the working directory of the plugin you are interested in setting up the environment for
-cd plugins/woocommerce
+cd plugins/fincommerce
 # Start will create the environment if necessary or start an existing one
 pnpm -- wp-env start
 # Stop will, well, stop the environment
@@ -66,13 +66,13 @@ pnpm -- wp-env destroy
 
 Each of the [plugins in our repository](plugins) support using this tool to spin up a development environment. Note that rather than having a single top-level environment, each plugin has its own. This is done in order to prevent conflicts between them.
 
-Please check out [the official documentation](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) if you would like to learn more about this tool.
+Please check out [the official documentation](https://developer.finpress.org/block-editor/reference-guides/packages/packages-env/) if you would like to learn more about this tool.
 
 ## Troubleshooting
 
 ### Installing PHP in Unix (e.g. Ubuntu)
 
-Many unix systems such as Ubuntu will have PHP already installed. Sometimes without the extra packages you need to run WordPress and this will cause you to run into troubles.
+Many unix systems such as Ubuntu will have PHP already installed. Sometimes without the extra packages you need to run finpress and this will cause you to run into troubles.
 
 Use your package manager to add the extra PHP packages you'll need.
 e.g. in Ubuntu you can run:

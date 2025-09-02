@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createBlock, type BlockInstance } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import { createBlock, type BlockInstance } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

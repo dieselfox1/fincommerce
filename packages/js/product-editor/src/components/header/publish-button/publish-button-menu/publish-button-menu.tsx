@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { MenuGroup, MenuItem } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { useDispatch } from '@wordpress/data';
-import { createElement, Fragment, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { MenuGroup, MenuItem } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { useDispatch } from '@finpress/data';
+import { createElement, Fragment, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import type { ProductStatus } from '@fincommerce/data';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import { getAdminLink } from '@fincommerce/settings';

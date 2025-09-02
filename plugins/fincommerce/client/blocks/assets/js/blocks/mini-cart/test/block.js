@@ -10,7 +10,7 @@ import {
 	waitForElementToBeRemoved,
 } from '@testing-library/react';
 import { previewCart } from '@fincommerce/resource-previews';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { CART_STORE_KEY as storeKey } from '@fincommerce/block-data';
 import { SlotFillProvider } from '@fincommerce/blocks-checkout';
 import { server, http, HttpResponse } from '@fincommerce/test-utils/msw';

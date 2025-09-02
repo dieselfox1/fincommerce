@@ -135,7 +135,7 @@ class CheckoutFields {
 				}
 			}
 		} catch ( \Throwable $e ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error(
 				sprintf(
 					'Error adding session meta keys for checkout fields. %s',
@@ -866,7 +866,7 @@ class CheckoutFields {
 
 		} catch ( \Throwable $e ) {
 			// One of the filters errored so skip it. This allows the checkout process to continue.
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error(
 				sprintf(
 					'Field sanitization for %s encountered an error. %s',
@@ -926,7 +926,7 @@ class CheckoutFields {
 		} catch ( \Throwable $e ) {
 
 			// One of the filters errored so skip them and validate the field. This allows the checkout process to continue.
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error(
 				sprintf(
 					'Field validation for %s encountered an error. %s',
@@ -1072,7 +1072,7 @@ class CheckoutFields {
 		} catch ( \Throwable $e ) {
 
 			// One of the filters errored so skip them. This allows the checkout process to continue.
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error(
 				sprintf(
 					'The action %s encountered an error. The field location %s may not have any custom validation applied to it. %s',

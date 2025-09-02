@@ -7,9 +7,9 @@ import {
 	useBlockProps,
 	useHasRecursion,
 	Warning,
-} from '@wordpress/block-editor';
-import { useEntityProp } from '@wordpress/core-data';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/block-editor';
+import { useEntityProp } from '@finpress/core-data';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

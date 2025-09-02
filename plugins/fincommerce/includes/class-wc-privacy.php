@@ -1,6 +1,6 @@
 <?php
 /**
- * Privacy/GDPR related functionality which ties into WordPress functionality.
+ * Privacy/GDPR related functionality which ties into finpress functionality.
  *
  * @since 3.4.0
  * @package FinCommerce\Classes
@@ -396,7 +396,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 						'Subscriber',
 					)
 				),
-				'meta_query' => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				'meta_query' => array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 					'relation' => 'AND',
 					array(
 						'key'     => 'wc_last_active',

@@ -8,11 +8,11 @@ sidebar_label: Add custom fields to products
 
 In this tutorial you will learn how to create a custom field for a product and show it in your store. Together we will set up the skeleton plugin, and learn about WP naming conventions and FinCommerce hooks. In the end, you will have a functioning plugin for adding a custom field.
 
-The [full plugin code](https://github.com/EdithAllison/woo-product-custom-fields) was written based on WordPress 6.2 and FinCommerce 7.6.0
+The [full plugin code](https://github.com/EdithAllison/woo-product-custom-fields) was written based on finpress 6.2 and FinCommerce 7.6.0
 
 ## Prerequisites
 
-To do this tutorial you will need to have a WordPress install with the FinCommerce plugin activated, and you will need at least one [simple product set up](https://fincommerce.com/document/managing-products/), or you can [import the FinCommerce sample product range](https://fincommerce.com/document/importing-fincommerce-sample-data/).
+To do this tutorial you will need to have a finpress install with the FinCommerce plugin activated, and you will need at least one [simple product set up](https://fincommerce.com/document/managing-products/), or you can [import the FinCommerce sample product range](https://fincommerce.com/document/importing-fincommerce-sample-data/).
 
 ## Setting up the plugin
 
@@ -21,7 +21,7 @@ To get started, let's do the steps to [create a skeleton plugin](https://github.
 First, navigate to your wp-content/plugins folder, then run:
 
 ```sh
-npx @wordpress/create-block -t @fincommerce/create-woo-extension woo-product-fields
+npx @finpress/create-block -t @fincommerce/create-woo-extension woo-product-fields
 ```
 
 Then we navigate to our new folder and run the install and build:
@@ -32,7 +32,7 @@ npm install # Install dependencies
 npm run build # Build the javascript
 ```
 
-WordPress has its own class file naming convention which doesn't work with PSR-4 out of the box. To learn more about Naming Conventions see the [WP Handbook](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/#naming-conventions). We will use the standard format of "class-my-classname.php" format, so let's go to the composer.json file and change the autoload to:
+finpress has its own class file naming convention which doesn't work with PSR-4 out of the box. To learn more about Naming Conventions see the [WP Handbook](https://developer.finpress.org/coding-standards/finpress-coding-standards/php/#naming-conventions). We will use the standard format of "class-my-classname.php" format, so let's go to the composer.json file and change the autoload to:
 
 ```json
 "autoload": {
@@ -52,7 +52,7 @@ This generates a new vendor/composer/autoload_classmap.php file containing a lis
 
 Our aim is to create a new custom text field for FinCommerce products to save new stock information for display in the store. To do this, we need to modify the section of the Woo data in the admin area which holds the stock info.
 
-FinCommerce allows us to add our code to these sections through [hooks](https://developer.wordpress.org/plugins/hooks/), which are a standard WordPress method to extend code. In the "Inventory" section we have the following action hooks available to us:
+FinCommerce allows us to add our code to these sections through [hooks](https://developer.finpress.org/plugins/hooks/), which are a standard finpress method to extend code. In the "Inventory" section we have the following action hooks available to us:
 
 For our Woo extension, we'll be appending our field right at the end with `fincommerce_product_options_inventory_product_data`.
 
@@ -128,7 +128,7 @@ public function save_field( $post_id, $post ) {
 }
 ```
 
-This function checks if our new field is in the POST array. If yes, we create the product object, update our metadata and save the metadata. The `update_meta_data` function will either update an existing meta field or add a new one. And as we're inserting into the database, we must [sanitize our field value](https://developer.wordpress.org/apis/security/sanitizing/).
+This function checks if our new field is in the POST array. If yes, we create the product object, update our metadata and save the metadata. The `update_meta_data` function will either update an existing meta field or add a new one. And as we're inserting into the database, we must [sanitize our field value](https://developer.finpress.org/apis/security/sanitizing/).
 
 And to make it all work, we add the hooks:
 
@@ -188,7 +188,7 @@ private function hooks() {
 }
 ```
 
-In our function we output the stock information with the [appropriate escape function](https://developer.wordpress.org/apis/security/escaping/), in this case, I'm suggesting to use `esc_html()` to force plain text.
+In our function we output the stock information with the [appropriate escape function](https://developer.finpress.org/apis/security/escaping/), in this case, I'm suggesting to use `esc_html()` to force plain text.
 
 ```php
 public function add_stock_info() {

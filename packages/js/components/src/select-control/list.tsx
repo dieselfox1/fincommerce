@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { RefObject } from 'react';
 import clsx from 'clsx';
-import { createElement, Component, createRef } from '@wordpress/element';
+import { createElement, Component, createRef } from '@finpress/element';
 import { isEqual, isNumber } from 'lodash';
-import { ENTER, ESCAPE, UP, DOWN, LEFT, RIGHT, TAB } from '@wordpress/keycodes';
+import { ENTER, ESCAPE, UP, DOWN, LEFT, RIGHT, TAB } from '@finpress/keycodes';
 import { FixedSizeList } from 'react-window';
 
 /**

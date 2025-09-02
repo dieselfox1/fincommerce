@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button, Modal, TextControl } from '@wordpress/components';
-import { Icon, check, warning } from '@wordpress/icons';
-import apiFetch from '@wordpress/api-fetch';
-import { useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { Button, Modal, TextControl } from '@finpress/components';
+import { Icon, check, warning } from '@finpress/icons';
+import apiFetch from '@finpress/api-fetch';
+import { useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import { isValidEmail } from '@fincommerce/product-editor/build/utils/validate-email'; // Import from the build directory so we don't load the entire product editor since we only need this one function.
 

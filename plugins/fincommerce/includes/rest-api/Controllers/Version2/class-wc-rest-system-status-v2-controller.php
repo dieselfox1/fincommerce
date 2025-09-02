@@ -177,37 +177,37 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 							'readonly'    => true,
 						),
 						'wp_version'                => array(
-							'description' => __( 'WordPress version.', 'fincommerce' ),
+							'description' => __( 'finpress version.', 'fincommerce' ),
 							'type'        => 'string',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
 						),
 						'wp_multisite'              => array(
-							'description' => __( 'Is WordPress multisite?', 'fincommerce' ),
+							'description' => __( 'Is finpress multisite?', 'fincommerce' ),
 							'type'        => 'boolean',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
 						),
 						'wp_memory_limit'           => array(
-							'description' => __( 'WordPress memory limit.', 'fincommerce' ),
+							'description' => __( 'finpress memory limit.', 'fincommerce' ),
 							'type'        => 'integer',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
 						),
 						'wp_debug_mode'             => array(
-							'description' => __( 'Is WordPress debug mode active?', 'fincommerce' ),
+							'description' => __( 'Is finpress debug mode active?', 'fincommerce' ),
 							'type'        => 'boolean',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
 						),
 						'wp_cron'                   => array(
-							'description' => __( 'Are WordPress cron jobs enabled?', 'fincommerce' ),
+							'description' => __( 'Are finpress cron jobs enabled?', 'fincommerce' ),
 							'type'        => 'boolean',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
 						),
 						'language'                  => array(
-							'description' => __( 'WordPress language.', 'fincommerce' ),
+							'description' => __( 'finpress language.', 'fincommerce' ),
 							'type'        => 'string',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
@@ -934,7 +934,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 		// WP memory limit.
 		$wp_memory_limit = wc_let_to_num( WP_MEMORY_LIMIT );
 		if ( function_exists( 'memory_get_usage' ) ) {
-			$wp_memory_limit = max( $wp_memory_limit, wc_let_to_num( @ini_get( 'memory_limit' ) ) ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+			$wp_memory_limit = max( $wp_memory_limit, wc_let_to_num( @ini_get( 'memory_limit' ) ) ); // phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged
 		}
 
 		// Test POST requests.

@@ -43,7 +43,7 @@ $GLOBALS['wc_container'] = new Automattic\FinCommerce\Container();
  * @since  2.1
  * @return FinCommerce
  */
-function WC() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
+function WC() { // phpcs:ignore finpress.NamingConventions.ValidFunctionName.FunctionNameInvalid
 	return FinCommerce::instance();
 }
 

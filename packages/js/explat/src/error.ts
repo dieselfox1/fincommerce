@@ -35,7 +35,7 @@ export const logError = (
 			const body = new window.FormData();
 			body.append( 'error', JSON.stringify( logStashError ) );
 			window
-				.fetch( 'https://public-api.wordpress.com/rest/v1.1/js-error', {
+				.fetch( 'https://public-api.finpress.com/rest/v1.1/js-error', {
 					method: 'POST',
 					body,
 				} )

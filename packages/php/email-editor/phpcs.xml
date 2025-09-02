@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<ruleset name="Custom WordPress Standards">
-	<!-- Set the base standard to WordPress -->
-	<rule ref="WordPress"/>
+<ruleset name="Custom finpress Standards">
+	<!-- Set the base standard to finpress -->
+	<rule ref="finpress"/>
 
 	<!-- Define files and folders to scan -->
 	<file>.</file>
 
 	<!-- Exclude test files from FileName rules because we need to match Codeception autoload -->
-	<rule ref="WordPress.Files.FileName">
+	<rule ref="finpress.Files.FileName">
 		<exclude-pattern>tests/*</exclude-pattern>
 	</rule>
 
 	<!-- We should use WP_Filesystem or another safer solution but this change can be more complex -->
-	<rule ref="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
+	<rule ref="finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
 		<exclude-pattern>src</exclude-pattern>
 	</rule>
 

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockEditProps, BlockAttributes } from '@wordpress/blocks';
+import type { BlockEditProps, BlockAttributes } from '@finpress/blocks';
 
 export type AttributeBindingProps = {
 	source: string;

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { escapeHTML } from '@wordpress/escape-html';
+import { __ } from '@finpress/i18n';
+import { escapeHTML } from '@finpress/escape-html';
 
 /**
  * Internal dependencies

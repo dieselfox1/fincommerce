@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import ProductIcon from 'gridicons/dist/product';
 import CloudOutlineIcon from 'gridicons/dist/cloud-outline';
 import TypesIcon from 'gridicons/dist/types';
-import { Icon, chevronRight } from '@wordpress/icons';
+import { Icon, chevronRight } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 import { getAdminLink } from '@fincommerce/settings';
 

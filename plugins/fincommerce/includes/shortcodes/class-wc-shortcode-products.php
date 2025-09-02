@@ -181,7 +181,7 @@ class WC_Shortcode_Products {
 			'post_status'         => 'publish',
 			'ignore_sticky_posts' => true,
 			'no_found_rows'       => false === wc_string_to_bool( $this->attributes['paginate'] ),
-			'orderby'             => empty( $_GET['orderby'] ) ? $this->attributes['orderby'] : wc_clean( wp_unslash( $_GET['orderby'] ) ), // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			'orderby'             => empty( $_GET['orderby'] ) ? $this->attributes['orderby'] : wc_clean( wp_unslash( $_GET['orderby'] ) ), // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		);
 
 		$orderby_value         = explode( '-', $query_args['orderby'] );
@@ -191,7 +191,7 @@ class WC_Shortcode_Products {
 		$query_args['order']   = $order;
 
 		if ( wc_string_to_bool( $this->attributes['paginate'] ) ) {
-			$this->attributes['page'] = absint( empty( $_GET['product-page'] ) ? 1 : $_GET['product-page'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$this->attributes['page'] = absint( empty( $_GET['product-page'] ) ? 1 : $_GET['product-page'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
 		if ( ! empty( $this->attributes['rows'] ) ) {
@@ -202,14 +202,14 @@ class WC_Shortcode_Products {
 		$query_args['orderby'] = $ordering_args['orderby'];
 		$query_args['order']   = $ordering_args['order'];
 		if ( $ordering_args['meta_key'] ) {
-			$query_args['meta_key'] = $ordering_args['meta_key']; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			$query_args['meta_key'] = $ordering_args['meta_key']; // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		}
 		$query_args['posts_per_page'] = intval( $this->attributes['limit'] );
 		if ( 1 < $this->attributes['page'] ) {
 			$query_args['paged'] = absint( $this->attributes['page'] );
 		}
-		$query_args['meta_query'] = WC()->query->get_meta_query(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
-		$query_args['tax_query']  = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+		$query_args['meta_query'] = WC()->query->get_meta_query(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
+		$query_args['tax_query']  = array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 
 		// Visibility.
 		$this->set_visibility_query_args( $query_args );
@@ -394,7 +394,7 @@ class WC_Shortcode_Products {
 	 * @param array $query_args Query args.
 	 */
 	protected function set_best_selling_products_query_args( &$query_args ) {
-		$query_args['meta_key'] = 'total_sales'; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		$query_args['meta_key'] = 'total_sales'; // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		$query_args['order']    = 'DESC';
 		$query_args['orderby']  = 'meta_value_num';
 	}
@@ -406,7 +406,7 @@ class WC_Shortcode_Products {
 	 * @param array $query_args Query args.
 	 */
 	protected function set_top_rated_products_query_args( &$query_args ) {
-		$query_args['meta_key'] = '_wc_average_rating'; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		$query_args['meta_key'] = '_wc_average_rating'; // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		$query_args['order']    = 'DESC';
 		$query_args['orderby']  = 'meta_value_num';
 	}
@@ -483,7 +483,7 @@ class WC_Shortcode_Products {
 	 * @param array $query_args Query args.
 	 */
 	protected function set_visibility_featured_query_args( &$query_args ) {
-		$query_args['tax_query'] = array_merge( $query_args['tax_query'], WC()->query->get_tax_query() ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+		$query_args['tax_query'] = array_merge( $query_args['tax_query'], WC()->query->get_tax_query() ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 
 		$query_args['tax_query'][] = array(
 			'taxonomy'         => 'product_visibility',
@@ -504,7 +504,7 @@ class WC_Shortcode_Products {
 		if ( method_exists( $this, 'set_visibility_' . $this->attributes['visibility'] . '_query_args' ) ) {
 			$this->{'set_visibility_' . $this->attributes['visibility'] . '_query_args'}( $query_args );
 		} else {
-			$query_args['tax_query'] = array_merge( $query_args['tax_query'], WC()->query->get_tax_query() ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			$query_args['tax_query'] = array_merge( $query_args['tax_query'], WC()->query->get_tax_query() ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 		}
 	}
 
@@ -657,7 +657,7 @@ class WC_Shortcode_Products {
 
 			if ( wc_get_loop_prop( 'total' ) ) {
 				foreach ( $products->ids as $product_id ) {
-					$GLOBALS['post'] = get_post( $product_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+					$GLOBALS['post'] = get_post( $product_id ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 					setup_postdata( $GLOBALS['post'] );
 
 					// Set custom product visibility when querying hidden products.
@@ -671,7 +671,7 @@ class WC_Shortcode_Products {
 				}
 			}
 
-			$GLOBALS['post'] = $original_post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$GLOBALS['post'] = $original_post; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			fincommerce_product_loop_end();
 
 			if ( wc_string_to_bool( $this->attributes['paginate'] ) ) {

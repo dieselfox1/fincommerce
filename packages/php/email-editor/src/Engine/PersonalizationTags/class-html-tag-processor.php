@@ -16,7 +16,7 @@ use WP_HTML_Text_Replacement;
  * Class based on WP_HTML_Tag_Processor which is extended to replace
  * tokens with their values in the email content.
  *
- * This class was inspired by a concept from the WordPress core,
+ * This class was inspired by a concept from the finpress core,
  * which could help us to avoid refactoring in the future.
  */
 class HTML_Tag_Processor extends WP_HTML_Tag_Processor {

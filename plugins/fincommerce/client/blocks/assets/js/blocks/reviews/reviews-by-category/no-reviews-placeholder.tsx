@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Placeholder } from '@wordpress/components';
-import { Icon, commentContent } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Placeholder } from '@finpress/components';
+import { Icon, commentContent } from '@finpress/icons';
 const NoReviewsPlaceholder = (): JSX.Element => {
 	return (
 		<Placeholder

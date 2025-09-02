@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { isNil } from 'lodash';
 
 function HistoricalDataProgress( { label, progress, total } ) {

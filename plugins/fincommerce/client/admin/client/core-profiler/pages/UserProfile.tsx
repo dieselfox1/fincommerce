@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { useState } from '@finpress/element';
 import { SelectControl } from '@fincommerce/components';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { Icon, chevronDown } from '@finpress/icons';
 import clsx from 'clsx';
 
 /**
@@ -109,8 +109,8 @@ const platformOptions = [
 		value: 'wix' as const,
 	},
 	{
-		label: __( 'WordPress', 'fincommerce' ),
-		value: 'wordpress' as const,
+		label: __( 'finpress', 'fincommerce' ),
+		value: 'finpress' as const,
 	},
 ];
 

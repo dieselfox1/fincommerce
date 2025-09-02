@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import ServerSideRender from '@wordpress/server-side-render';
-import { Placeholder } from '@wordpress/components';
-import { Icon, file } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import ServerSideRender from '@finpress/server-side-render';
+import { Placeholder } from '@finpress/components';
+import { Icon, file } from '@finpress/icons';
 import { gridBlockPreview } from '@fincommerce/resource-previews';
 
 /**

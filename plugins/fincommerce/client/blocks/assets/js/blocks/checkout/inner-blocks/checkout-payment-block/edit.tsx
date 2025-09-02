@@ -2,16 +2,16 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { PanelBody, ExternalLink } from '@wordpress/components';
-import { payment } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
+import { PanelBody, ExternalLink } from '@finpress/components';
+import { payment } from '@finpress/icons';
 import { ADMIN_URL, getSetting } from '@fincommerce/settings';
 import ExternalLinkCard from '@fincommerce/editor-components/external-link-card';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
 import Noninteractive from '@fincommerce/base-components/noninteractive';
 import { GlobalPaymentMethod } from '@fincommerce/types';
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 import { paymentStore } from '@fincommerce/block-data';
 import { blocksConfig } from '@fincommerce/block-settings';
 import { trimCharacters, trimWords } from '@fincommerce/utils';

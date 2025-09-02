@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { NavigableMenu } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
+import { NavigableMenu } from '@finpress/components';
+import { useEffect, useState } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

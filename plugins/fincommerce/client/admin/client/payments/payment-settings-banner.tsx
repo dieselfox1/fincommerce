@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { getAdminLink } from '@fincommerce/settings';
 import { paymentSettingsStore } from '@fincommerce/data';
 import {
@@ -11,7 +11,7 @@ import {
 	WCPayBannerFooter,
 } from '@fincommerce/onboarding';
 import { recordEvent } from '@fincommerce/tracks';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

@@ -8,9 +8,9 @@ clear
 echo "--------------------------------------------------------"
 echo -e "Installing plugins from .wp-env.json"
 echo "--------------------------------------------------------"
-wp plugin install --activate https://downloads.wordpress.org/plugin/akismet.zip \
+wp plugin install --activate https://downloads.finpress.org/plugin/akismet.zip \
     https://github.com/WP-API/Basic-Auth/archive/master.zip \
-    https://downloads.wordpress.org/plugin/wp-mail-logging.zip
+    https://downloads.finpress.org/plugin/wp-mail-logging.zip
 
 printf "\n\n\n"
 

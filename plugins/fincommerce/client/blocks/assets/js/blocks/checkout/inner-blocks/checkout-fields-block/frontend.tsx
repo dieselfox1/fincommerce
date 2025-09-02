@@ -3,10 +3,10 @@
  */
 import type { ReactElement } from 'react';
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Main } from '@fincommerce/base-components/sidebar-layout';
 import { useStoreEvents } from '@fincommerce/base-context/hooks';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { useCheckoutBlockContext } from '@fincommerce/blocks/checkout/context';
 
 const FrontendBlock = ( {

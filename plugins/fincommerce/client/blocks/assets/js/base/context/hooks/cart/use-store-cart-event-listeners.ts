@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { cartStore } from '@fincommerce/block-data';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import {
 	translateJQueryEventToNative,
 	getNavigationType,

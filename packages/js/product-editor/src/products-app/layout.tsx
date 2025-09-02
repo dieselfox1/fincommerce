@@ -1,24 +1,24 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment, useRef } from '@wordpress/element';
+import { createElement, Fragment, useRef } from '@finpress/element';
 import {
 	useViewportMatch,
 	useResizeObserver,
 	useReducedMotion,
-} from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 import {
 	// @ts-expect-error missing type.
 	EditorSnackbars,
 	// @ts-expect-error missing type.
 	privateApis as editorPrivateApis,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	__unstableMotion as motion,
 	__unstableAnimatePresence as AnimatePresence,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

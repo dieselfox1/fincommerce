@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { useSelect, useDispatch } from '@finpress/data';
 import {
 	optionsStore,
 	TaskType,
 	getVisibleTasks,
 	onboardingStore,
 } from '@fincommerce/data';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { Link } from '@fincommerce/components';
 import { getAdminLink } from '@fincommerce/settings';
-import { close as closeIcon } from '@wordpress/icons';
+import { close as closeIcon } from '@finpress/icons';
 import interpolateComponents from '@automattic/interpolate-components';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { getQuery } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';
 

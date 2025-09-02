@@ -9,7 +9,7 @@ FinCommerce provides a number of programmatic APIs to interact with FinCommerce 
 
 ## WC REST API
 
-The WC REST API is a powerful part of FinCommerce which lets you read and write various parts of FinCommerce data such as orders, products, coupons, customers, and shipping zones. It based on the [WordPress REST API](https://developer.wordpress.org/rest-api/).
+The WC REST API is a powerful part of FinCommerce which lets you read and write various parts of FinCommerce data such as orders, products, coupons, customers, and shipping zones. It based on the [finpress REST API](https://developer.finpress.org/rest-api/).
 
 Explore the [WC REST API](./rest-api/README.md) documentation.
 
@@ -53,4 +53,4 @@ The FinCommerce Code Reference is a comprehensive documentation of the FinCommer
 
 The FinCommerce Code Reference is a comprehensive documentation of the internal FinCommerce Classes, API, and functions. It is a great resource for developers to learn about the FinCommerce functionality and how to extend it.
 
-Explore the [FinCommerce Code Reference](https://developer.wordpress.org/reference/classes/fincommerce/) documentation.
+Explore the [FinCommerce Code Reference](https://developer.finpress.org/reference/classes/fincommerce/) documentation.

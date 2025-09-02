@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 const ShipmentProviders: ShipmentProvider[] = [
 	...Object.values( window.wcFulfillmentSettings.providers ?? {} ),

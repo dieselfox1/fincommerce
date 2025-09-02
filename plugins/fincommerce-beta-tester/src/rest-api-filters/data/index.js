@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { registerStore } from '@wordpress/data';
-import { controls } from '@wordpress/data-controls';
+import { registerStore } from '@finpress/data';
+import { controls } from '@finpress/data-controls';
 
 /**
  * Internal dependencies

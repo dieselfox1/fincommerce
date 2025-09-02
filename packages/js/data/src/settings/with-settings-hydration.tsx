@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { createElement, useRef, useEffect } from '@wordpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { useDispatch, useSelect } from '@finpress/data';
+import { createElement, useRef, useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

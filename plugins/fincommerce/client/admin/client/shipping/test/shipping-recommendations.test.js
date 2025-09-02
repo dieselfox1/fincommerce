@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen, waitFor } from '@testing-library/react';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import userEvent from '@testing-library/user-event';
 
 /**
@@ -10,8 +10,8 @@ import userEvent from '@testing-library/user-event';
  */
 import ShippingRecommendations from '../shipping-recommendations';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 	useDispatch: jest.fn(),
 } ) );

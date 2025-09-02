@@ -38,7 +38,7 @@ class DataSynchronizerTests extends \HposTestCase {
 		$container = wc_get_container();
 		$container->reset_all_resolved();
 
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		remove_filter( 'query', array( $this, '_create_temporary_tables' ) );
 		remove_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 		OrderHelper::delete_order_custom_tables(); // We need this since non-temporary tables won't drop automatically.
@@ -183,7 +183,7 @@ class DataSynchronizerTests extends \HposTestCase {
 		update_option( $this->sut::ORDERS_DATA_SYNC_ENABLED_OPTION, 'yes' );
 		update_option( CustomOrdersTableController::CUSTOM_ORDERS_TABLE_USAGE_ENABLED_OPTION, 'no' );
 
-		// When a new order is manually created in the admin environment, WordPress automatically creates an empty
+		// When a new order is manually created in the admin environment, finpress automatically creates an empty
 		// draft post for us.
 		$order_id = (int) wp_insert_post(
 			array(
@@ -200,7 +200,7 @@ class DataSynchronizerTests extends \HposTestCase {
 		// record in the COT table.
 		$this->assertEquals(
 			'draft',
-			$wpdb->get_var( "SELECT status FROM $orders_table WHERE id = $order_id" ), // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$wpdb->get_var( "SELECT status FROM $orders_table WHERE id = $order_id" ), // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			'When HPOS is enabled but the posts data store is authoritative, saving an order will result in a duplicate with the same status being saved in the COT table.'
 		);
 
@@ -211,7 +211,7 @@ class DataSynchronizerTests extends \HposTestCase {
 		$order->save();
 		$this->assertEquals(
 			OrderInternalStatus::PENDING,
-			$wpdb->get_var( "SELECT status FROM $orders_table WHERE id = $order_id" ), //phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$wpdb->get_var( "SELECT status FROM $orders_table WHERE id = $order_id" ), //phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			'When the order status is updated, the change should be observed by the DataSynhronizer and a matching update will take place in the COT table.'
 		);
 	}

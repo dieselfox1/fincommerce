@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import type { LazyExoticComponent } from '@wordpress/element';
-import type { BlockConfiguration } from '@wordpress/blocks';
+import type { LazyExoticComponent } from '@finpress/element';
+import type { BlockConfiguration } from '@finpress/blocks';
 import type { RegisteredBlockComponent } from '@fincommerce/types';
 
 export enum innerBlockAreas {

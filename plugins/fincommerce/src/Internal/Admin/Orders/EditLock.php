@@ -3,7 +3,7 @@ namespace Automattic\FinCommerce\Internal\Admin\Orders;
 
 /**
  * This class takes care of the edit lock logic when HPOS is enabled.
- * For better interoperability with WordPress, edit locks are stored in the same format as posts. That is, as a metadata
+ * For better interoperability with finpress, edit locks are stored in the same format as posts. That is, as a metadata
  * in the order object (key: '_edit_lock') in the format "timestamp:user_id".
  *
  * @since 7.8.0

@@ -25,7 +25,7 @@ We need a more robust solution to show only relevant filter data under the curre
 
 Learning from `WC_Query`, `Filterer`, and `ProductCollectionData`, we create a new service named it `ProducFilters`, which can be used in all contexts. The key difference between the new service and existing solutions is the data we pass to the service: `WP_Query` arguments.
 
-Every loop in WordPress is powered by `WP_Query`. By taking the common contract (query arguments) to recreate the product query being requested we can ensure a safe boundary for filter data calculation. In other words, filter data is always calculated from the set of products being displayed, which eliminates the possibility of data mismatch between filter data and actual products.
+Every loop in finpress is powered by `WP_Query`. By taking the common contract (query arguments) to recreate the product query being requested we can ensure a safe boundary for filter data calculation. In other words, filter data is always calculated from the set of products being displayed, which eliminates the possibility of data mismatch between filter data and actual products.
 
 #### Consequences
 

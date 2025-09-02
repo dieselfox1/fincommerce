@@ -14,10 +14,10 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	BlockContextProvider,
-} from '@wordpress/block-editor';
-import { withSpokenMessages } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/block-editor';
+import { withSpokenMessages } from '@finpress/components';
+import { useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { getSetting } from '@fincommerce/settings';
 
 /**

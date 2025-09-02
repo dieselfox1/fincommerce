@@ -194,7 +194,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$total_pages   = (int) ceil( $total_results / $params['per_page'] );
 		} else {
 			$db_records_count = (int) $wpdb->get_var(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 				"SELECT COUNT(*) FROM ( {$this->subquery->get_query_statement()} ) AS tt"
 			);
 
@@ -218,7 +218,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$taxes_query = $this->subquery->get_query_statement();
 
 		$tax_data = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$taxes_query,
 			ARRAY_A
 		);

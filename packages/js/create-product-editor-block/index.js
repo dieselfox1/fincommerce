@@ -26,12 +26,12 @@ module.exports = {
 			inserter: false,
 		},
 		npmDevDependencies: [
-			'@types/wordpress__block-editor@^7.0.0',
-			'@types/wordpress__blocks@^11.0.9',
+			'@types/finpress__block-editor@^7.0.0',
+			'@types/finpress__blocks@^11.0.9',
 			'@fincommerce/dependency-extraction-webpack-plugin',
 			'@fincommerce/eslint-plugin',
-			'@wordpress/prettier-config',
-			'@wordpress/stylelint-config',
+			'@finpress/prettier-config',
+			'@finpress/stylelint-config',
 			'eslint-import-resolver-typescript',
 			'@fincommerce/product-editor',
 			'ajv-keywords@^3.5.2', // Adding ajv-keywords to fix a dependency issue caused by legacy-peer-deps = true.

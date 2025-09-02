@@ -48,7 +48,7 @@ class EmailImprovements {
 	);
 
 	/**
-	 * Hook into WordPress.
+	 * Hook into finpress.
 	 */
 	public function __construct() {
 		add_action( 'admin_init', array( __CLASS__, 'add_email_improvements_modal_to_url' ) );
@@ -138,7 +138,7 @@ class EmailImprovements {
 	 */
 	public static function add_email_improvements_modal_to_url() {
 		// Check if we're on the FinCommerce Home page.
-		if ( ! isset( $_GET['page'] ) || 'wc-admin' !== $_GET['page'] || isset( $_GET['path'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! isset( $_GET['page'] ) || 'wc-admin' !== $_GET['page'] || isset( $_GET['path'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return;
 		}
 

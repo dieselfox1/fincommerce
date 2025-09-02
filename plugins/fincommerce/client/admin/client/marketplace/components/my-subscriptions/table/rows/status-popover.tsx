@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Popover } from '@wordpress/components';
-import { useState, useRef, useEffect } from '@wordpress/element';
+import { Popover } from '@finpress/components';
+import { useState, useRef, useEffect } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

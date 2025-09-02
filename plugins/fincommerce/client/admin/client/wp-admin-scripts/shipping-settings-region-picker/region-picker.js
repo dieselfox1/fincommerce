@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import { TreeSelectControl } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 const everywhere = '__WC_TREE_SELECT_COMPONENT_ROOT__';
 

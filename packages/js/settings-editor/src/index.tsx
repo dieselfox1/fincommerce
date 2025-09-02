@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement, useContext, useEffect } from '@wordpress/element';
-import { useSelect, dispatch } from '@wordpress/data';
-import { SnackbarList } from '@wordpress/components';
-import { store as noticesStore } from '@wordpress/notices';
+import { createElement, useContext, useEffect } from '@finpress/element';
+import { useSelect, dispatch } from '@finpress/data';
+import { SnackbarList } from '@finpress/components';
+import { store as noticesStore } from '@finpress/notices';
 import { RouterProvider } from '@automattic/site-admin';
 
 /**

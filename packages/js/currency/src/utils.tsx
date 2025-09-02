@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
-import { sprintf } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
+import { sprintf } from '@finpress/i18n';
 import { NumberConfig, numberFormat, parseNumber } from '@fincommerce/number';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 
 /**
  * @typedef {import('@fincommerce/number').NumberConfig} NumberConfig
@@ -66,7 +66,7 @@ const CurrencyFactoryBase = function ( currencySetting?: CurrencyConfig ) {
 	let currency: Currency;
 
 	function stripTags( str: string ) {
-		// sanitize Polyfill - see https://github.com/WordPress/WordPress/blob/master/wp-includes/js/wp-sanitize.js
+		// sanitize Polyfill - see https://github.com/finpress/finpress/blob/master/wp-includes/js/wp-sanitize.js
 		const strippedStr = str
 			.replace( /<!--[\s\S]*?(-->|$)/g, '' )
 			.replace( /<(script|style)[^>]*>[\s\S]*?(<\/\1>|$)/gi, '' )
@@ -153,7 +153,7 @@ const CurrencyFactoryBase = function ( currencySetting?: CurrencyConfig ) {
 
 		const { priceFormat, symbol, code } = currency;
 
-		// eslint-disable-next-line @wordpress/valid-sprintf
+		// eslint-disable-next-line @finpress/valid-sprintf
 		return sprintf( priceFormat, useCode ? code : symbol, formattedNumber );
 	}
 

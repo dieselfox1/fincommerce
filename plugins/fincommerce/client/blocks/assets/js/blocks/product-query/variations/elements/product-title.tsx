@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Icon } from '@wordpress/components';
+import { Icon } from '@finpress/components';
 import {
 	title,
 	description,
 } from '@fincommerce/atomic-blocks/product-elements/title/block.json';
-import { heading } from '@wordpress/icons';
+import { heading } from '@finpress/icons';
 
 /**
  * Internal dependencies

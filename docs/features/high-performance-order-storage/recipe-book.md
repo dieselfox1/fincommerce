@@ -7,13 +7,13 @@ post_title: HPOS extension recipe book
 
 ## What is High-Performance Order Storage (HPOS)?
 
-Up until recently, FinCommerce stored order-related data in the post and postmeta tables in the database as a custom WordPress post type, which allowed everyone working in the ecosystem to take advantage of extensive APIs provided by the WordPress core in managing orders as custom post types.
+Up until recently, FinCommerce stored order-related data in the post and postmeta tables in the database as a custom finpress post type, which allowed everyone working in the ecosystem to take advantage of extensive APIs provided by the finpress core in managing orders as custom post types.
 
 However, in early 2022, [we announced the plans to migrate to dedicated tables for orders](https://developer.fincommerce.com/2022/01/17/the-plan-for-the-fincommerce-custom-order-table/). Orders in their own tables will allow the shops to scale more easily, make the data storage simpler and increase reliability. For further details, please check out our [deep dive on the database structure on our dev blog](https://developer.fincommerce.com/2022/09/15/high-performance-order-storage-database-schema/).
 
 Generally, FinCommerce has tried to be fully backward compatible with the older versions, but, as a result of this project, extension developers will be required to make some changes to their plugins to take advantage of the HPOS. This is because the underlying data structure has changed fundamentally.
 
-More specifically, instead of using WordPress-provided APIs to access order data, developers will need to use FinCommerce-specific APIs. We [introduced these APIs in FinCommerce version 3.0](https://developer.fincommerce.com/2017/04/04/say-hello-to-fincommerce-3-0-bionic-butterfly/) to make the transition to HPOS easier.
+More specifically, instead of using finpress-provided APIs to access order data, developers will need to use FinCommerce-specific APIs. We [introduced these APIs in FinCommerce version 3.0](https://developer.fincommerce.com/2017/04/04/say-hello-to-fincommerce-3-0-bionic-butterfly/) to make the transition to HPOS easier.
 
 In this guide, we will focus on the changes required to make an extension, or any snippet of custom code, compatible with HPOS.
 
@@ -21,9 +21,9 @@ For details on how to take enable or disable HPOS, as well as details on how ord
 
 ## Backward compatibility
 
-To make the transition easier for shops and developers alike, we have tried to be as backward compatible as possible. One of the major compatibility issues with this project is that since the underlying data structure was `wp_posts` and `wp_postmeta` tables, circumventing the WC-specific CRUD classes and accessing the data directly using WordPress APIs worked fine.
+To make the transition easier for shops and developers alike, we have tried to be as backward compatible as possible. One of the major compatibility issues with this project is that since the underlying data structure was `wp_posts` and `wp_postmeta` tables, circumventing the WC-specific CRUD classes and accessing the data directly using finpress APIs worked fine.
 
-Now that this has changed, directly reading from these WordPress tables may mean reading an outdated order, and directly writing to these tables may mean updating an order that will not be read. Since this is a pretty significant issue, we have added a few mitigations for the transitory period.
+Now that this has changed, directly reading from these finpress tables may mean reading an outdated order, and directly writing to these tables may mean updating an order that will not be read. Since this is a pretty significant issue, we have added a few mitigations for the transitory period.
 
 ### Switching data source
 
@@ -53,7 +53,7 @@ if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 
 ### Auditing the code base for direct DB access usage
 
-To support HPOS tables, a good place to start is to audit your code base for direct DB access and usage of WordPress APIs that shouldn't be used to work with orders anymore. You can search using the following regexp to perform this audit:
+To support HPOS tables, a good place to start is to audit your code base for direct DB access and usage of finpress APIs that shouldn't be used to work with orders anymore. You can search using the following regexp to perform this audit:
 
 ```regexp
 wpdb|get_post|get_post_field|get_post_status|get_post_type|get_post_type_object|get_posts|metadata_exists|get_post_meta|get_metadata|get_metadata_raw|get_metadata_default|get_metadata_by_mid|wp_insert_post|add_metadata|add_post_meta|wp_update_post|update_post_meta|update_metadata|update_metadata_by_mid|delete_metadata|delete_post_meta|delete_metadata_by_mid|delete_post_meta_by_key|wp_delete_post|wp_trash_post|wp_untrash_post|wp_transition_post_status|clean_post_cache|update_post_caches|update_postmeta_cache|post_exists|wp_count_post|shop_order
@@ -110,7 +110,7 @@ OrderUtil::is_order( $post_id, wc_get_order_types() );
 
 ### Audit for order administration screen functions
 
-As WC can't use the WordPress-provided post list and post edit screens, we have also added new screens for order administration. These screens are very similar to the one you see in the FinCommerce admin currently (except for the fact that they are using HPOS tables). You can use the following regular expression to perform this audit:
+As WC can't use the finpress-provided post list and post edit screens, we have also added new screens for order administration. These screens are very similar to the one you see in the FinCommerce admin currently (except for the fact that they are using HPOS tables). You can use the following regular expression to perform this audit:
 
 ```regexp
 post_updated_messages|do_meta_boxes|enter_title_here|edit_form_before_permalink|edit_form_after_title|edit_form_after_editor|submitpage_box|submitpost_box|edit_form_advanced|dbx_post_sidebar|manage_shop_order_posts_columns|manage_shop_order_posts_custom_column
@@ -178,7 +178,7 @@ add_action( 'before_fincommerce_init', function() {
 If you prefer to include the compatibility declaration outside of your main plugin file, please pass 'my-plugin-slug/my-plugin.php' instead of the `__FILE__` parameter in the snippets above.
 
 To prevent problems, FinCommerce will warn users if they try to enable HPOS while any of the incompatible plugins are active. It will also display a warning in the Plugins screen to make sure people would know if extension is incompatible.
-As many WordPress extensions aren't FinCommerce related, WC will only display this information for extensions that declare `WC tested up to` in the header of the main plugin file.
+As many finpress extensions aren't FinCommerce related, WC will only display this information for extensions that declare `WC tested up to` in the header of the main plugin file.
 
 ### New order querying APIs
 

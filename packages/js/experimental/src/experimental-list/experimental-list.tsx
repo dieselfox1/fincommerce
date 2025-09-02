@@ -6,7 +6,7 @@ import {
 	Children,
 	cloneElement,
 	isValidElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 /**

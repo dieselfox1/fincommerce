@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { miniCartAlt } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
-import { registerBlockType } from '@wordpress/blocks';
-import { addFilter } from '@wordpress/hooks';
+import { Icon } from '@finpress/icons';
+import { registerBlockType } from '@finpress/blocks';
+import { addFilter } from '@finpress/hooks';
 /**
  * Internal dependencies
  */

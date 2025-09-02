@@ -144,12 +144,12 @@ class WC_Admin_Status {
 	 * Show the log page contents for db log handler.
 	 */
 	public static function status_logs_db() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce handled in flush_db_logs().
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended -- Nonce handled in flush_db_logs().
 		if ( isset( $_REQUEST['flush-logs'] ) ) {
 			self::flush_db_logs();
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce handled in log_table_bulk_actions().
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended -- Nonce handled in log_table_bulk_actions().
 		if ( isset( $_REQUEST['action'] ) && isset( $_REQUEST['log'] ) ) {
 			self::log_table_bulk_actions();
 		}
@@ -460,7 +460,7 @@ class WC_Admin_Status {
 						<?php
 						/* translators: %s: plugin author */
 						printf( esc_html__( 'by %s', 'fincommerce' ), esc_html( $plugin['author_name'] ) );
-						echo ' &ndash; ' . esc_html( $version_string ) . $untested_string . $network_string; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo ' &ndash; ' . esc_html( $version_string ) . $untested_string . $network_string; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 						?>
 					</td>
 				</tr>

@@ -8,7 +8,7 @@
 declare(strict_types = 1);
 
 // phpcs:disable Generic.Files.InlineHTML.Found
-// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 /**
  * Template file to render the current 'wp_template', specifcally for emails.
  *

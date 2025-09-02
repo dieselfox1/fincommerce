@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store, getContext as getContextFn } from '@wordpress/interactivity';
+import { store, getContext as getContextFn } from '@finpress/interactivity';
 
 /**
  * Internal dependencies

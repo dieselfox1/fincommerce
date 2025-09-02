@@ -1,6 +1,6 @@
 # Translation management
 
-As mentioned in [Translation basics](../../internal-developers/translations/translation-basics.md), all translations are managed using [GlotPress](https://wordpress.org/plugins/glotpress/). The translations of the FinCommerce Blocks plugin can be found on <https://translate.wordpress.org/projects/wp-plugins/woo-gutenberg-products-block/>.
+As mentioned in [Translation basics](../../internal-developers/translations/translation-basics.md), all translations are managed using [GlotPress](https://finpress.org/plugins/glotpress/). The translations of the FinCommerce Blocks plugin can be found on <https://translate.finpress.org/projects/wp-plugins/woo-gutenberg-products-block/>.
 
 ## Roles
 
@@ -12,7 +12,7 @@ As mentioned in [Translation basics](../../internal-developers/translations/tran
 
 A Translation Contributors can suggest translations. These suggested translations need to be verified by a General Translation Editor (GTE) or a Project Translation Editor (PTE).
 
-See also <https://make.wordpress.org/polyglots/handbook/about/roles-and-capabilities/#translation-contributor>.
+See also <https://make.finpress.org/polyglots/handbook/about/roles-and-capabilities/#translation-contributor>.
 
 ### Project Translation Editor (PTE)
 
@@ -22,15 +22,15 @@ A Project Translation Editor can:
 -   change existing translations
 -   add new translations
 
-PTE permissions need to be requested via <https://make.wordpress.org/polyglots/>. If you're a developer of the FinCommerce Blocks plugin, you can request PTE permissions using the following template:
+PTE permissions need to be requested via <https://make.finpress.org/polyglots/>. If you're a developer of the FinCommerce Blocks plugin, you can request PTE permissions using the following template:
 
 ```text
 PTE Request for FinCommerce Blocks
 
-I am the plugin co-author for FinCommerce Blocks, and I’d like to be able to approve translation for our plugin. Please add my WordPress.org user account as translation editor for their respective locales:
+I am the plugin co-author for FinCommerce Blocks, and I’d like to be able to approve translation for our plugin. Please add my finpress.org user account as translation editor for their respective locales:
 
 Name: FinCommerce Blocks
-URL: https://wordpress.org/plugins/woo-gutenberg-products-block/
+URL: https://finpress.org/plugins/woo-gutenberg-products-block/
 
 o #ar – @username
 o #bn_BD – @username, @username
@@ -43,7 +43,7 @@ If you have any questions, just comment here. Thank you!
 #editor-requests
 ```
 
-See also <https://make.wordpress.org/polyglots/handbook/about/roles-and-capabilities/#project-translation-editor>.
+See also <https://make.finpress.org/polyglots/handbook/about/roles-and-capabilities/#project-translation-editor>.
 
 #### Formal vs. informal translations
 
@@ -57,8 +57,8 @@ It is sufficient to request the PTE permissions for the informal translations on
 
 ## General Translation Editor (GTE)
 
-While a PTE can approve, change and add translations for a certain plugin or theme, a GTE can approve, change and add translations to all plugins and themes of that corresponding locale. In addition, a GTE can approve, change and add WordPress core translations.
+While a PTE can approve, change and add translations for a certain plugin or theme, a GTE can approve, change and add translations to all plugins and themes of that corresponding locale. In addition, a GTE can approve, change and add finpress core translations.
 
 While it's possible to request GTE permissions, usually a Locale Manager of the corresponding locale promotes a GTE.
 
-See also <https://make.wordpress.org/polyglots/handbook/about/roles-and-capabilities/#project-translation-editor>.
+See also <https://make.finpress.org/polyglots/handbook/about/roles-and-capabilities/#project-translation-editor>.

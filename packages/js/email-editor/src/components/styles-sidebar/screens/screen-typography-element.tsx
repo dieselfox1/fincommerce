@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
+import { __, _x } from '@finpress/i18n';
+import { useState } from '@finpress/element';
 import {
 	__experimentalToggleGroupControl as ToggleGroupControl, // eslint-disable-line
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption, // eslint-disable-line
 	__experimentalSpacer as Spacer, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -2138,7 +2138,7 @@ class PaymentsExtensionSuggestions {
 		// Process any append instructions.
 		if ( isset( $country_details['_append'] ) ) {
 			if ( ! is_array( $country_details['_append'] ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 				throw new \Exception( 'Malformed country extension details _append entry.' );
 			}
 			foreach ( $country_details['_append'] as $append_key => $append_list ) {
@@ -2147,7 +2147,7 @@ class PaymentsExtensionSuggestions {
 					! is_array( $append_list ) ||
 					! ArrayUtil::array_is_list( $append_list )
 				) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( 'Malformed country extension details _append details.' );
 				}
 				// If the target entry doesn't exist, create it as an empty list.
@@ -2157,7 +2157,7 @@ class PaymentsExtensionSuggestions {
 				if ( ! is_array( $base_details[ $append_key ] ) ||
 					! ArrayUtil::array_is_list( $base_details[ $append_key ] )
 				) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( 'Invalid country extension details _append target.' );
 				}
 
@@ -2171,7 +2171,7 @@ class PaymentsExtensionSuggestions {
 		// Process any remove instructions.
 		if ( isset( $country_details['_remove'] ) ) {
 			if ( ! is_array( $country_details['_remove'] ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 				throw new \Exception( 'Malformed country extension details _remove entry.' );
 			}
 			foreach ( $country_details['_remove'] as $removal_key => $removal_list ) {
@@ -2180,7 +2180,7 @@ class PaymentsExtensionSuggestions {
 					! is_array( $removal_list ) ||
 					! ArrayUtil::array_is_list( $removal_list )
 				) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( 'Malformed country extension details _remove details.' );
 				}
 				if ( ! isset( $base_details[ $removal_key ] ) ) {
@@ -2190,7 +2190,7 @@ class PaymentsExtensionSuggestions {
 				if ( ! is_array( $base_details[ $removal_key ] ) ||
 					! ArrayUtil::array_is_list( $base_details[ $removal_key ] )
 				) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( 'Invalid country extension details _remove target.' );
 				}
 
@@ -2204,7 +2204,7 @@ class PaymentsExtensionSuggestions {
 		// Process any merge on type instructions.
 		if ( isset( $country_details['_merge_on_type'] ) ) {
 			if ( ! is_array( $country_details['_merge_on_type'] ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 				throw new \Exception( 'Malformed country extension details _merge_on_type entry.' );
 			}
 			foreach ( $country_details['_merge_on_type'] as $merge_key => $merge_list ) {
@@ -2214,7 +2214,7 @@ class PaymentsExtensionSuggestions {
 					! ArrayUtil::array_is_list( $merge_list ) ||
 					count( array_column( $merge_list, '_type' ) ) !== count( $merge_list )
 				) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( 'Malformed country extension details _merge_on_type details.' );
 				}
 				if ( ! isset( $base_details[ $merge_key ] ) ) {
@@ -2225,7 +2225,7 @@ class PaymentsExtensionSuggestions {
 					! ArrayUtil::array_is_list( $base_details[ $merge_key ] ) ||
 					count( array_column( $base_details[ $merge_key ], '_type' ) ) !== count( $base_details[ $merge_key ] )
 				) {
-					// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+					// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 					throw new \Exception( 'Invalid country extension details _merge_on_type target.' );
 				}
 

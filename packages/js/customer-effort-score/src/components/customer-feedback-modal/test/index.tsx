@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

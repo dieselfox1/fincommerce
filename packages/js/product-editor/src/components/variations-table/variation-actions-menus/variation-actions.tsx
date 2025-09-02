@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { MenuGroup, MenuItem } from '@wordpress/components';
-import { createElement, Fragment } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { MenuGroup, MenuItem } from '@finpress/components';
+import { createElement, Fragment } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import clsx from 'clsx';
 

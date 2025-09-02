@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export default function WelcomeGuideImage( { nonAnimatedSrc, animatedSrc } ) {
 	return (

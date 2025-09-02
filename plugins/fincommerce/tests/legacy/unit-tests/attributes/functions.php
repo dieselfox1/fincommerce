@@ -106,7 +106,7 @@ class WC_Tests_Attributes_Functions extends WC_Unit_Test_Case {
 
 		// Check everything looks good before updating the attribute.
 		$meta_before_update         = $wpdb->get_results( $wpdb->prepare( "SELECT meta_value FROM {$wpdb->postmeta} WHERE meta_key = '_product_attributes' AND post_id = %d", $product->get_id() ), ARRAY_A );
-		$product_meta_before_update = @unserialize( $meta_before_update[0]['meta_value'] ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize
+		$product_meta_before_update = @unserialize( $meta_before_update[0]['meta_value'] ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.PHP.DiscouragedPHPFunctions.serialize_unserialize
 		$this->assertNotFalse( $product_meta_before_update, 'Meta should be an unserializable string' );
 
 		$expected_local_attribute_data  = array(
@@ -142,7 +142,7 @@ class WC_Tests_Attributes_Functions extends WC_Unit_Test_Case {
 
 		// Changes to the global attribute should update in the product without causing side-effects.
 		$meta_after_update         = $wpdb->get_results( $wpdb->prepare( "SELECT meta_value FROM {$wpdb->postmeta} WHERE meta_key = '_product_attributes' AND post_id = %d", $product->get_id() ), ARRAY_A );
-		$product_meta_after_update = @unserialize( $meta_after_update[0]['meta_value'] ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize
+		$product_meta_after_update = @unserialize( $meta_after_update[0]['meta_value'] ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.PHP.DiscouragedPHPFunctions.serialize_unserialize
 		$this->assertNotFalse( $product_meta_after_update, 'Meta should be an unserializable string' );
 
 		$expected_global_attribute_data = array(

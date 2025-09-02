@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { doAction } from '@wordpress/hooks';
+import { doAction } from '@finpress/hooks';
 
 /**
  * Internal dependencies

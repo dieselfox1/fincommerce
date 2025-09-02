@@ -712,9 +712,9 @@ export const PRODUCTS_DATA = [
 	},
 	{
 		id: 247,
-		name: 'WordPress Pennant',
-		slug: 'wordpress-pennant',
-		permalink: 'http://locale.local/product/wordpress-pennant/',
+		name: 'finpress Pennant',
+		slug: 'finpress-pennant',
+		permalink: 'http://locale.local/product/finpress-pennant/',
 		date_created: '2024-08-27T19:48:51',
 		date_created_gmt: '2024-08-27T19:48:51',
 		date_modified: '2024-08-27T19:48:56',
@@ -743,8 +743,8 @@ export const PRODUCTS_DATA = [
 		download_limit: 0,
 		download_expiry: 0,
 		external_url:
-			'https://mercantile.wordpress.org/product/wordpress-pennant/',
-		button_text: 'Buy on the WordPress swag store!',
+			'https://mercantile.finpress.org/product/finpress-pennant/',
+		button_text: 'Buy on the finpress swag store!',
 		tax_status: 'taxable',
 		tax_class: '',
 		manage_stock: false,

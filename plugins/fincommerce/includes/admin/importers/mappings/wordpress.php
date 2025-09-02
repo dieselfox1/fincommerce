@@ -1,6 +1,6 @@
 <?php
 /**
- * WordPress mappings
+ * finpress mappings
  *
  * @package FinCommerce\Admin\Importers
  */
@@ -10,13 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Add mappings for WordPress tables.
+ * Add mappings for finpress tables.
  *
  * @since 3.1.0
  * @param array $mappings Importer columns mappings.
  * @return array
  */
-function wc_importer_wordpress_mappings( $mappings ) {
+function wc_importer_finpress_mappings( $mappings ) {
 
 	$wp_mappings = array(
 		'post_id'      => 'id',
@@ -28,4 +28,4 @@ function wc_importer_wordpress_mappings( $mappings ) {
 
 	return array_merge( $mappings, $wp_mappings );
 }
-add_filter( 'fincommerce_csv_product_import_mapping_default_columns', 'wc_importer_wordpress_mappings' );
+add_filter( 'fincommerce_csv_product_import_mapping_default_columns', 'wc_importer_finpress_mappings' );

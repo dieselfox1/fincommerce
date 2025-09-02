@@ -4,7 +4,7 @@
 import { useArgs } from '@storybook/client-api';
 import type { Story, Meta } from '@storybook/react';
 import { INTERACTION_TIMEOUT } from '@fincommerce/storybook-controls';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 
 /**

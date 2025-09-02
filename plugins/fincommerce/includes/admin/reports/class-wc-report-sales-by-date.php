@@ -594,7 +594,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 			'refund_amount'    => '#e74c3c',
 		);
 
-		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( wp_unslash( $_GET['range'] ) ) : '7day'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( wp_unslash( $_GET['range'] ) ) : '7day'; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 
 		if ( ! in_array( $current_range, array( 'custom', 'year', 'last_month', 'month', '7day' ), true ) ) {
 			$current_range = '7day';
@@ -610,7 +610,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 	 * Output an export link.
 	 */
 	public function get_export_button() {
-		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( wp_unslash( $_GET['range'] ) ) : '7day'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( wp_unslash( $_GET['range'] ) ) : '7day'; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		?>
 		<a
 			href="#"
@@ -747,7 +747,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							points: { show: true, radius: 5, lineWidth: 2, fillColor: '#fff', fill: true },
 							lines: { show: true, lineWidth: 2, fill: false },
 							shadowSize: 0,
-							<?php echo $this->get_currency_tooltip();  // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $this->get_currency_tooltip();  // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped ?>
 						},
 						{
 							label: "<?php echo esc_js( __( 'Shipping amount', 'fincommerce' ) ); ?>",
@@ -757,7 +757,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							points: { show: true, radius: 5, lineWidth: 2, fillColor: '#fff', fill: true },
 							lines: { show: true, lineWidth: 2, fill: false },
 							shadowSize: 0,
-							prepend_tooltip: "<?php echo get_fincommerce_currency_symbol(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+							prepend_tooltip: "<?php echo get_fincommerce_currency_symbol(); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped ?>"
 						},
 						{
 							label: "<?php echo esc_js( __( 'Gross sales amount', 'fincommerce' ) ); ?>",
@@ -767,7 +767,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							points: { show: true, radius: 5, lineWidth: 2, fillColor: '#fff', fill: true },
 							lines: { show: true, lineWidth: 2, fill: false },
 							shadowSize: 0,
-							<?php echo $this->get_currency_tooltip(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $this->get_currency_tooltip(); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped ?>
 						},
 						{
 							label: "<?php echo esc_js( __( 'Net sales amount', 'fincommerce' ) ); ?>",
@@ -777,7 +777,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							points: { show: true, radius: 6, lineWidth: 4, fillColor: '#fff', fill: true },
 							lines: { show: true, lineWidth: 5, fill: false },
 							shadowSize: 0,
-							<?php echo $this->get_currency_tooltip(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $this->get_currency_tooltip(); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped ?>
 						},
 						{
 							label: "<?php echo esc_js( __( 'Refund amount', 'fincommerce' ) ); ?>",
@@ -787,7 +787,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							points: { show: true, radius: 5, lineWidth: 2, fillColor: '#fff', fill: true },
 							lines: { show: true, lineWidth: 2, fill: false },
 							shadowSize: 0,
-							prepend_tooltip: "<?php echo get_fincommerce_currency_symbol(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+							prepend_tooltip: "<?php echo get_fincommerce_currency_symbol(); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped ?>"
 						},
 					];
 

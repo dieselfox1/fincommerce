@@ -167,7 +167,7 @@ class Renderer_Test extends \Email_Editor_Integration_Test_Case {
 ### 3. When to Write Integration Tests
 
 - Testing interactions between multiple classes
-- Testing WordPress hooks and filters
+- Testing finpress hooks and filters
 - Testing database operations
 - Testing email template rendering
 - Testing API endpoints
@@ -194,7 +194,7 @@ class Renderer_Test extends \Email_Editor_Integration_Test_Case {
    - Test edge cases and error conditions
 
 4. **Mocking**:
-   - Use WordPress test utilities
+   - Use finpress test utilities
    - Mock external dependencies
    - Use test doubles when appropriate
    - Keep mocks simple and focused

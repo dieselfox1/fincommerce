@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { MenuItem } from '@wordpress/components';
-import { createElement, useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { MediaUpload } from '@wordpress/media-utils';
+import { MenuItem } from '@finpress/components';
+import { createElement, useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { MediaUpload } from '@finpress/media-utils';
 import { recordEvent } from '@fincommerce/tracks';
 import { ProductVariationImage } from '@fincommerce/data';
 

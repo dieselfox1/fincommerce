@@ -1,9 +1,9 @@
 /* eslint-disable @fincommerce/dependency-group, jest/expect-expect, jest/no-test-callback, array-callback-return, jest/no-identical-title */
 
 /**
- * WordPress dependencies
+ * finpress dependencies
  */
-import { test, Metrics } from '@wordpress/e2e-test-utils-playwright';
+import { test, Metrics } from '@finpress/e2e-test-utils-playwright';
 
 /**
  * Internal dependencies
@@ -11,7 +11,7 @@ import { test, Metrics } from '@wordpress/e2e-test-utils-playwright';
 import { getTotalBlockingTime, median } from '../utils';
 import { wpCLI } from '../../e2e-pw/utils/cli';
 
-// See https://github.com/WordPress/gutenberg/issues/51383#issuecomment-1613460429
+// See https://github.com/finpress/gutenberg/issues/51383#issuecomment-1613460429
 const BROWSER_IDLE_WAIT = 1000;
 const NEW_EDITOR_ADD_PRODUCT_URL =
 	'wp-admin/admin.php?page=wc-admin&path=%2Fadd-product';

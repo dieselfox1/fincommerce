@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { uniqueId } from 'lodash';
-import type { WPNoticeAction } from '@wordpress/notices/build-types/store/actions';
+import type { WPNoticeAction } from '@finpress/notices/build-types/store/actions';
 
 /**
  * Internal dependencies

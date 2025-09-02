@@ -190,7 +190,7 @@ class Init {
 
 	/**
 	 * Retrieve the script URLs from the provided script handles.
-	 * This will also filter out scripts from WordPress core since they only need to be loaded once.
+	 * This will also filter out scripts from finpress core since they only need to be loaded once.
 	 *
 	 * @param array $script_handles Array of script handles.
 	 * @return array Array of script URLs.
@@ -204,7 +204,7 @@ class Init {
 				continue;
 			}
 
-			// Skip scripts from WordPress core since they only need to be loaded once.
+			// Skip scripts from finpress core since they only need to be loaded once.
 			if ( strpos( $registered_script->src, '/' . WPINC . '/js' ) === 0 || strpos( $registered_script->src, '/wp-admin/js' ) === 0 ) {
 				continue;
 			}

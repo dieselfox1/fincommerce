@@ -2,7 +2,7 @@
 
 A reusable text field for the product editor.
 
-![Product text field screenshot](https://fincommerce.files.wordpress.com/2023/10/fincommerceproduct-text-field.png)
+![Product text field screenshot](https://fincommerce.files.finpress.com/2023/10/fincommerceproduct-text-field.png)
 
 ## Attributes
 

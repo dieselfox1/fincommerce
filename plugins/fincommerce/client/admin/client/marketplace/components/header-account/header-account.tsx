@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { ComponentProps } from 'react';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import {
 	DropdownMenu,
 	MenuGroup,
 	MenuItem as OriginalMenuItem,
-} from '@wordpress/components';
-import { Icon, commentAuthorAvatar, external, linkOff } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { Icon, commentAuthorAvatar, external, linkOff } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

@@ -3,14 +3,14 @@
  */
 import 'core-js/features/object/assign';
 import 'core-js/features/array/from';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import { createElement, Component, createRef } from '@wordpress/element';
+import { createElement, Component, createRef } from '@finpress/element';
 import { DayPickerRangeController } from 'react-dates';
 import moment from 'moment';
 import { partial } from 'lodash';
 import PropTypes from 'prop-types';
-import { withViewportMatch } from '@wordpress/viewport';
+import { withViewportMatch } from '@finpress/viewport';
 
 import { validateDateInputForRange } from '@fincommerce/date';
 import 'react-dates/initialize';
@@ -49,7 +49,7 @@ class DateRange extends Component {
 	 * This focus loss closes the date picker popover.
 	 * Ideally we should add an upstream commit on react-dates to fix this issue.
 	 *
-	 * See: https://github.com/WordPress/gutenberg/pull/17201.
+	 * See: https://github.com/finpress/gutenberg/pull/17201.
 	 */
 	keepFocusInside( blurSource, e ) {
 		if ( ! this.nodeRef.current ) {

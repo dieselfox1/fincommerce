@@ -4,9 +4,9 @@
 import type {
 	InnerBlockTemplate,
 	BlockVariationScope,
-} from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
-import { Icon, chartBar } from '@wordpress/icons';
+} from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
+import { Icon, chartBar } from '@finpress/icons';
 
 /**
  * Internal dependencies

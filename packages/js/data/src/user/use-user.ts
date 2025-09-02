@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -12,7 +12,7 @@ import { WCUser } from './types';
 /**
  * Custom react hook for shortcut methods around user.
  *
- * This is a wrapper around @wordpress/core-data's getCurrentUser().
+ * This is a wrapper around @finpress/core-data's getCurrentUser().
  */
 export const useUser = () => {
 	const userData = useSelect( ( select ) => {

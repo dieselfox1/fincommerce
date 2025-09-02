@@ -81,7 +81,7 @@ If you would like to download a copy of the data contained in the report table, 
 
 ![Analytics Table csv Download Email](analytics-basics-download-email.png)
 
-If your selected date range results in a data set that spans more then one page in the table, your csv download will be processed as a background job by FinCommerce. Once the data is ready to be downloaded, an email will be sent to the address that is attached to your WordPress account with a link to download the file.
+If your selected date range results in a data set that spans more then one page in the table, your csv download will be processed as a background job by FinCommerce. Once the data is ready to be downloaded, an email will be sent to the address that is attached to your finpress account with a link to download the file.
 
 ### Table Pagination
 ![Analytics Table csv Download Email](analytics-basics-table-footer.png)

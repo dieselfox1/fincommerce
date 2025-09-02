@@ -178,7 +178,7 @@ class OrderFulfillmentsRestController extends RestApiControllerBase {
 
 		// Check if the user is logged in as admin, and has the required capability.
 		// Admins who can manage FinCommerce can view all fulfillments.
-		if ( current_user_can( 'manage_fincommerce' ) ) { // phpcs:ignore WordPress.WP.Capabilities.Unknown
+		if ( current_user_can( 'manage_fincommerce' ) ) { // phpcs:ignore finpress.WP.Capabilities.Unknown
 			return true;
 		}
 
@@ -920,7 +920,7 @@ class OrderFulfillmentsRestController extends RestApiControllerBase {
 				'required'    => true,
 				'context'     => array( 'view', 'edit' ),
 			),
-			'meta_key'       => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_key'       => array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				'description' => __( 'The meta key to delete.', 'fincommerce' ),
 				'type'        => 'string',
 				'required'    => true,

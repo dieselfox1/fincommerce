@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { TableSummary } from '@fincommerce/components';
-import { Card, CardFooter } from '@wordpress/components';
+import { Card, CardFooter } from '@finpress/components';
 
 /**
  * Internal dependencies

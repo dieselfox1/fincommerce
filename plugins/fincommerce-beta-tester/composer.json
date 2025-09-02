@@ -2,7 +2,7 @@
 	"name": "dieselfox1/fincommerce-beta-tester",
 	"description": "Run the beta versions of FinCommerce.",
 	"homepage": "https://fincommerce.com/",
-	"type": "wordpress-plugin",
+	"type": "finpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"prefer-stable": true,
 	"minimum-stability": "dev",
@@ -32,7 +32,7 @@
 	"extra": {
 		"scripts-description": {
 			"test": "Run unit tests",
-			"phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+			"phpcs": "Analyze code against the finpress coding standards with PHP_CodeSniffer",
 			"phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
 		},
 		"changelogger": {
@@ -48,7 +48,7 @@
 				"performance": "Address performance issues",
 				"enhancement": "Improve existing functionality"
 			},
-			"versioning": "wordpress",
+			"versioning": "finpress",
 			"changelog": "CHANGELOG.md"
 		}
 	},

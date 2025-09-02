@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { Button } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 

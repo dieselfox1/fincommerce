@@ -2,13 +2,13 @@
  * External dependencies
  */
 import type { FormEvent } from 'react';
-import { createElement, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createElement, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	Button,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

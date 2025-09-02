@@ -25,7 +25,7 @@ class RelatedProducts extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 * - Hook into pre_render_block to update the query.
 	 */
 	protected function initialize() {
@@ -90,7 +90,7 @@ class RelatedProducts extends AbstractBlock {
 	/**
 	 * Return a custom query based on attributes, filters and global WP_Query.
 	 *
-	 * @param WP_Query $query The WordPress Query.
+	 * @param WP_Query $query The finpress Query.
 	 * @param WP_Block $block The block being rendered.
 	 * @return array
 	 */

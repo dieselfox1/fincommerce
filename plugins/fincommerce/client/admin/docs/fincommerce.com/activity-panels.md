@@ -6,7 +6,7 @@ Activity Panels can be accessed wherever the FinCommerce Admin navigation bar is
 
 ![Activity Panels Tabs Overview](images/activity-panels-tabs.png)
 
-There are five panels: Inbox, Orders, Stock, Reviews, and WordPress Notices. You can read more about each panel below.
+There are five panels: Inbox, Orders, Stock, Reviews, and finpress Notices. You can read more about each panel below.
 
 Each panel has an orange indicator denoting "unread" items.
 
@@ -72,8 +72,8 @@ The Reviews Panel will reflect when there are no Reviews pending moderation.
 
 If you don't see the Reviews Panel and expect to, double check your settings at FinCommerce > Settings > Products. Ensure that "enable product reviews" is checked.
 
-## WordPress Notices Panel
+## finpress Notices Panel
 
-![WordPress Notices Activity Panel](images/activity-panels-wp-notices.png)
+![finpress Notices Activity Panel](images/activity-panels-wp-notices.png)
 
-The WordPress Notices panel collects (and hides) notices from WordPress to reduce visual clutter on the screen. Activating the panel will show the notices. The button will only be displayed if there are notices to view.
+The finpress Notices panel collects (and hides) notices from finpress to reduce visual clutter on the screen. Activating the panel will show the notices. The button will only be displayed if there are notices to view.

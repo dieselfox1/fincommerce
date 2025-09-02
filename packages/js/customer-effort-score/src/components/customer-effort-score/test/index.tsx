@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { render, screen } from '@testing-library/react';
-import { createElement } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { createElement } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -12,8 +12,8 @@ import { CustomerEffortScore } from '..';
 
 const noop = () => {};
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true,

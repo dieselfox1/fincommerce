@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { useInstanceId } from '@wordpress/compose';
+import { createElement } from '@finpress/element';
+import { useInstanceId } from '@finpress/compose';
 
 export function Products( { ...props }: React.SVGProps< SVGSVGElement > ) {
 	const clipPathId0 = useInstanceId( Products, 'clip-path' ) as string;

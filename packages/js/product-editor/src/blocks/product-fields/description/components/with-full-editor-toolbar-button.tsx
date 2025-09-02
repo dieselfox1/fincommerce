@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { BlockControls } from '@wordpress/block-editor';
+import { createElement, Fragment } from '@finpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { BlockControls } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

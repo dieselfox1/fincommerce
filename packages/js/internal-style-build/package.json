@@ -8,7 +8,7 @@
 		"node": "^20.11.1"
 	},
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce"
 	],
 	"homepage": "https://github.com/dieselfox1/fincommerce/tree/trunk/packages/js/internal-style-build/README.md",
@@ -37,8 +37,8 @@
 	},
 	"dependencies": {
 		"@automattic/color-studio": "^4.0.0",
-		"@wordpress/base-styles": "wp-6.6",
-		"@wordpress/postcss-plugins-preset": "wp-6.6",
+		"@finpress/base-styles": "wp-6.6",
+		"@finpress/postcss-plugins-preset": "wp-6.6",
 		"css-loader": "6.11.x",
 		"fork-ts-checker-webpack-plugin": "9.0.x",
 		"json2php": "^0.0.7",

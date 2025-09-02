@@ -12,7 +12,7 @@ module.exports = function ( api ) {
 				},
 			],
 			'@babel/preset-typescript',
-			'@wordpress/babel-preset-default',
+			'@finpress/babel-preset-default',
 		],
 		sourceType: 'unambiguous',
 		plugins: [],

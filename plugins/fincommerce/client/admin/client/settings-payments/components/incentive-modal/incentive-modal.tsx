@@ -8,9 +8,9 @@ import {
 	CardBody,
 	CardMedia,
 	Modal,
-} from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { createInterpolateElement, useState } from '@wordpress/element';
+} from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { createInterpolateElement, useState } from '@finpress/element';
 import { Link } from '@fincommerce/components';
 import {
 	PaymentsProviderIncentive,

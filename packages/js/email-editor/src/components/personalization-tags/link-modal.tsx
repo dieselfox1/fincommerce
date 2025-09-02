@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Modal, TextControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
+import { Button, Modal, TextControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
 
 const LinkModal = ( { onInsert, isOpened, closeCallback, tag } ) => {
 	const [ linkText, setLinkText ] = useState( __( 'Link', 'fincommerce' ) );

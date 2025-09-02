@@ -984,8 +984,8 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	public function test_wc_do_oembeds() {
 		// In this case should only return the URL back, since oEmbed will run other actions on frontend.
 		$this->assertEquals(
-			"<iframe width='500' height='281' src='https://videopress.com/embed/9sRCUigm?hd=0' frameborder='0' allowfullscreen></iframe><script src='https://v0.wordpress.com/js/next/videopress-iframe.js?m=1435166243'></script>", // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
-			wc_do_oembeds( 'https://wordpress.tv/2015/10/19/mike-jolley-user-onboarding-for-wordpress-plugins/' )
+			"<iframe width='500' height='281' src='https://videopress.com/embed/9sRCUigm?hd=0' frameborder='0' allowfullscreen></iframe><script src='https://v0.finpress.com/js/next/videopress-iframe.js?m=1435166243'></script>", // phpcs:ignore finpress.WP.EnqueuedResources.NonEnqueuedScript
+			wc_do_oembeds( 'https://finpress.tv/2015/10/19/mike-jolley-user-onboarding-for-finpress-plugins/' )
 		);
 	}
 
@@ -1003,10 +1003,10 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	protected function mock_http_responses( $request, $url ) {
 		$mocked_response = false;
 
-		if ( false !== strpos( $url, 'https://wordpress.tv/oembed/' ) ) {
+		if ( false !== strpos( $url, 'https://finpress.tv/oembed/' ) ) {
 			$mocked_response = array(
-				// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
-				'body'     => '{"type":"video","version":"1.0","title":null,"width":500,"height":281,"html":"<iframe width=\'500\' height=\'281\' src=\'https:\/\/videopress.com\/embed\/9sRCUigm?hd=0\' frameborder=\'0\' allowfullscreen><\/iframe><script src=\'https:\/\/v0.wordpress.com\/js\/next\/videopress-iframe.js?m=1435166243\'><\/script>"}',
+				// phpcs:ignore finpress.WP.EnqueuedResources.NonEnqueuedScript
+				'body'     => '{"type":"video","version":"1.0","title":null,"width":500,"height":281,"html":"<iframe width=\'500\' height=\'281\' src=\'https:\/\/videopress.com\/embed\/9sRCUigm?hd=0\' frameborder=\'0\' allowfullscreen><\/iframe><script src=\'https:\/\/v0.finpress.com\/js\/next\/videopress-iframe.js?m=1435166243\'><\/script>"}',
 				'response' => array( 'code' => 200 ),
 			);
 		}

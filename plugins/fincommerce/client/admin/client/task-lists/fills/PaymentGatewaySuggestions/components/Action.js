@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Spinner } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, Spinner } from '@finpress/components';
 import { updateQueryString } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 /**
  * Internal dependencies
  */

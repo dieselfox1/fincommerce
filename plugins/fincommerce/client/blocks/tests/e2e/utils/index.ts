@@ -1,4 +1,4 @@
-export { PageUtils } from '@wordpress/e2e-test-utils-playwright';
+export { PageUtils } from '@finpress/e2e-test-utils-playwright';
 
 export * from './wp-cli';
 export * from './constants';

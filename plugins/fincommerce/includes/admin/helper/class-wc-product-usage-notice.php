@@ -326,11 +326,11 @@ class WC_Product_Usage_Notice {
 
 		$qs = $rule['screens'][ $screen->id ]['qs'];
 		foreach ( $qs as $key => $val ) {
-			// phpcs:disable WordPress.Security.NonceVerification.Recommended
+			// phpcs:disable finpress.Security.NonceVerification.Recommended
 			if ( empty( $_GET[ $key ] ) || $_GET[ $key ] !== $val ) {
 				return false;
 			}
-			// phpcs:enable WordPress.Security.NonceVerification.Recommended
+			// phpcs:enable finpress.Security.NonceVerification.Recommended
 		}
 		return true;
 	}

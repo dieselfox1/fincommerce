@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { TextControlWithAffixes } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const Examples = () => {
 	const [ state, setState ] = useState( {

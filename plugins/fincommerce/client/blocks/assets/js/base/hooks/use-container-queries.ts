@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useResizeObserver } from '@wordpress/compose';
+import { useResizeObserver } from '@finpress/compose';
 
 /**
  * Returns a resizeListener element and a class name based on its width.
  * Class names are based on the smaller of the breakpoints:
- * https://github.com/WordPress/gutenberg/tree/master/packages/viewport#usage
+ * https://github.com/finpress/gutenberg/tree/master/packages/viewport#usage
  * Values are also based on those breakpoints minus ~80px which is approximately
  * the left + right margin in Storefront with a font-size of 16px.
  * _Note: `useContainerQueries` will return an empty class name `` until after

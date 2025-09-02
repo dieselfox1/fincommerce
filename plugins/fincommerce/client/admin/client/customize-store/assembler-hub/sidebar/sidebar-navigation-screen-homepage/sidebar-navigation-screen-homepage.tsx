@@ -1,24 +1,24 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useCallback, useMemo, useEffect } from '@wordpress/element';
-import { Spinner } from '@wordpress/components';
-import { store as coreStore } from '@wordpress/core-data';
-import { BlockInstance } from '@wordpress/blocks';
-import { select, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useCallback, useMemo, useEffect } from '@finpress/element';
+import { Spinner } from '@finpress/components';
+import { store as coreStore } from '@finpress/core-data';
+import { BlockInstance } from '@finpress/blocks';
+import { select, useSelect } from '@finpress/data';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useIsSiteEditorLoading } from '@wordpress/edit-site/build-module/components/layout/hooks';
+import { useIsSiteEditorLoading } from '@finpress/edit-site/build-module/components/layout/hooks';
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	// @ts-expect-error No types for this exist yet.
 	__experimentalBlockPatternsList as BlockPatternList,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

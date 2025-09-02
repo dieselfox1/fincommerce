@@ -57,7 +57,7 @@ class Html2Text {
 		foreach ( array_keys( $options ) as $key ) {
 			if ( ! in_array( $key, array_keys( static::default_options() ), true ) ) {
 				// Log invalid option for debugging purposes without exposing in exception.
-				// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- Security: Logging sensitive data separately from user-facing exception messages.
+				// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log -- Security: Logging sensitive data separately from user-facing exception messages.
 				error_log( 'Html2Text: Invalid option provided: ' . htmlspecialchars( (string) $key, ENT_QUOTES, 'UTF-8' ) . '. Valid options are: ' . htmlspecialchars( implode( ',', array_keys( static::default_options() ) ), ENT_QUOTES, 'UTF-8' ) );
 				// Throw generic error message to avoid exposing user input.
 				throw new \InvalidArgumentException( 'Invalid option provided for html2text conversion.' );
@@ -257,11 +257,11 @@ class Html2Text {
 		}
 
 		if ( ! empty( $options['ignore_errors'] ) ) {
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$doc->strictErrorChecking = false;
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$doc->recover = true;
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$doc->xmlStandalone  = true;
 			$old_internal_errors = libxml_use_internal_errors( true );
 			$load_result         = $doc->loadHTML( $header . $html, LIBXML_NOWARNING | LIBXML_NOERROR | LIBXML_NONET | LIBXML_PARSEHUGE );
@@ -273,7 +273,7 @@ class Html2Text {
 		if ( ! $load_result ) {
 			// Log truncated HTML content for debugging purposes (limit to 500 chars to prevent log bloat).
 			$html_preview = strlen( $html ) > 500 ? substr( $html, 0, 500 ) . '...[truncated]' : $html;
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- Security: Logging sensitive data separately from user-facing exception messages.
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log -- Security: Logging sensitive data separately from user-facing exception messages.
 			error_log( 'Html2Text: Failed to load HTML content: ' . htmlspecialchars( $html_preview, ENT_QUOTES, 'UTF-8' ) );
 			// Throw a generic error message to avoid exposing sensitive data.
 			throw new Html2Text_Exception( 'Could not load HTML - the content may be malformed.' );
@@ -308,17 +308,17 @@ class Html2Text {
 	 * @return string|null The next child name.
 	 */
 	private static function next_child_name( ?\DOMNode $node ): ?string {
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		if ( null === $node || null === $node->nextSibling ) {
 			return null;
 		}
 
 		// Get the next child.
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$next_node = $node->nextSibling;
 		while ( null !== $next_node ) {
 			if ( $next_node instanceof \DOMText ) {
-				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 				if ( ! self::is_whitespace( $next_node->wholeText ) ) {
 					break;
 				}
@@ -328,13 +328,13 @@ class Html2Text {
 				break;
 			}
 
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$next_node = $next_node->nextSibling;
 		}
 
 		$next_name = null;
 		if ( $next_node instanceof \DOMElement || $next_node instanceof \DOMText ) {
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$next_name = strtolower( $next_node->nodeName );
 		}
 
@@ -355,7 +355,7 @@ class Html2Text {
 		if ( $node instanceof \DOMText ) {
 			// Replace whitespace characters with a space (equivalent to \s).
 			if ( $in_pre ) {
-				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 				$text = "\n" . trim( self::render_text( $node->wholeText ), "\n\r\t " ) . "\n";
 
 				// Remove trailing whitespace only.
@@ -365,7 +365,7 @@ class Html2Text {
 				// Armor newlines with \r.
 				return str_replace( "\n", "\r", $text );
 			}
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$text   = self::render_text( $node->wholeText );
 			$result = preg_replace( "/[\\t\\n\\f\\r ]+/im", ' ', $text );
 			$text   = null !== $result ? $result : $text;
@@ -381,7 +381,7 @@ class Html2Text {
 			return '';
 		}
 
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$name      = strtolower( $node->nodeName );
 		$next_name = self::next_child_name( $node );
 
@@ -461,10 +461,10 @@ class Html2Text {
 				break;
 		}
 
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		if ( $node->childNodes->length > 0 ) {
 
-			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			$n                      = $node->childNodes->item( 0 );
 			$previous_sibling_names = array();
 			$previous_sibling_name  = null;
@@ -482,14 +482,14 @@ class Html2Text {
 					// Keep current previousSiblingName, these are invisible.
 					++$trailing_whitespace;
 				} else {
-					// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+					// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 					$previous_sibling_name    = strtolower( $n->nodeName );
 					$previous_sibling_names[] = $previous_sibling_name;
 					$trailing_whitespace      = 0;
 				}
 
 				$node->removeChild( $n );
-				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				// phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 				$n = $node->childNodes->item( 0 );
 
 				$parts[] = $text;

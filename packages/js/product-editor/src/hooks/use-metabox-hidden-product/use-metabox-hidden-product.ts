@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { WCUser, useUser } from '@fincommerce/data';
-import { useEntityProp, store as coreStore } from '@wordpress/core-data';
-import { dispatch } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { useEntityProp, store as coreStore } from '@finpress/core-data';
+import { dispatch } from '@finpress/data';
+import { useState } from '@finpress/element';
 
 export function useMetaboxHiddenProduct() {
 	const [ isSaving, setIsSaving ] = useState( false );

@@ -76,7 +76,7 @@ class WC_REST_Setting_Options_Controller extends WC_REST_Setting_Options_V2_Cont
 			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'fincommerce' ), array( 'status' => 404 ) );
 		}
 
-		$settings = apply_filters( 'fincommerce_settings-' . $group_id, array() ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+		$settings = apply_filters( 'fincommerce_settings-' . $group_id, array() ); // phpcs:ignore finpress.NamingConventions.ValidHookName.UseUnderscores
 
 		if ( empty( $settings ) ) {
 			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'fincommerce' ), array( 'status' => 404 ) );

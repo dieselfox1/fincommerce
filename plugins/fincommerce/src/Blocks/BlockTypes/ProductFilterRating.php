@@ -27,7 +27,7 @@ final class ProductFilterRating extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 */
 	protected function initialize() {
 		parent::initialize();
@@ -211,7 +211,7 @@ final class ProductFilterRating extends AbstractBlock {
 		$query_vars = ProductCollectionUtils::get_query_vars( $block, 1 );
 
 		if ( ! empty( $query_vars['tax_query'] ) ) {
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 			$query_vars['tax_query'] = ProductCollectionUtils::remove_query_array( $query_vars['tax_query'], 'rating_filter', true );
 		}
 

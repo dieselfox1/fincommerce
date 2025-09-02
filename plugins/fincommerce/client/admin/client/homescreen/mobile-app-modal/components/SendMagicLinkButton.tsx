@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { Spinner } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 export const SendMagicLinkButton = ( {
 	onClickHandler,

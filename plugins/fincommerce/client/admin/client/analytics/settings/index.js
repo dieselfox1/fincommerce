@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { Fragment, useEffect, useRef } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { withDispatch } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { Fragment, useEffect, useRef } from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { withDispatch } from '@finpress/data';
 import { SectionHeader, ScrollTo } from '@fincommerce/components';
 import { useSettings } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';

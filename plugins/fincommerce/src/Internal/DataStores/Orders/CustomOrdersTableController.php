@@ -641,7 +641,7 @@ class CustomOrdersTableController {
 			'title'       => __( 'Order data storage', 'fincommerce' ),
 			'type'        => 'radio',
 			'options'     => array(
-				'no'  => __( 'WordPress posts storage (legacy)', 'fincommerce' ),
+				'no'  => __( 'finpress posts storage (legacy)', 'fincommerce' ),
 				'yes' => __( 'High-performance order storage (recommended)', 'fincommerce' ),
 			),
 			'value'       => $get_value,
@@ -749,7 +749,7 @@ class CustomOrdersTableController {
 			'id'                   => DataSynchronizer::ORDERS_DATA_SYNC_ENABLED_OPTION,
 			'title'                => '',
 			'type'                 => 'checkbox',
-			'desc'                 => __( 'Enable compatibility mode (Synchronize orders between High-performance order storage and WordPress posts storage).', 'fincommerce' ),
+			'desc'                 => __( 'Enable compatibility mode (Synchronize orders between High-performance order storage and finpress posts storage).', 'fincommerce' ),
 			'value'                => $get_value,
 			'desc_tip'             => $get_sync_message,
 			'description_is_error' => $get_description_is_error,

@@ -3,7 +3,7 @@
 ## Table of contents <!-- omit in toc -->
 
 -   [Cloning the Git Repository](#cloning-the-git-repository)
--   [Configuring your WordPress site](#configuring-your-wordpress-site)
+-   [Configuring your finpress site](#configuring-your-finpress-site)
 -   [Installing dependencies](#installing-dependencies)
 -   [Building the plugin files](#building-the-plugin-files)
 -   [Create a plugin package in ZIP format](#create-a-plugin-package-in-zip-format)
@@ -27,9 +27,9 @@ To do so from the command line, ensure you have [`git`](https://git-scm.com) ins
 git clone https://github.com/dieselfox1/fincommerce-blocks.git
 ```
 
-## Configuring your WordPress site
+## Configuring your finpress site
 
-When developing this plugin, you'll must add the following to the `wp-config.php` file attached to the WordPress instance you are using to test the plugin against:
+When developing this plugin, you'll must add the following to the `wp-config.php` file attached to the finpress instance you are using to test the plugin against:
 
 ```php
 define( 'JETPACK_AUTOLOAD_DEV', true );
@@ -75,7 +75,7 @@ You can also run `$ npx webpack` to run the development build and not keep watch
 
 ## Create a plugin package in ZIP format
 
-Run `$ npm run package-plugin` to trigger install and build, and then create a zip file which you can use to install FinCommerce Blocks in WordPress admin.
+Run `$ npm run package-plugin` to trigger install and build, and then create a zip file which you can use to install FinCommerce Blocks in finpress admin.
 
 You can also do different variations of this command. By default it builds a production version of the plugin. You can also:
 
@@ -96,9 +96,9 @@ Note; linters are also ran before commits via Git. If there are any violations, 
 
 ## Running the Blocks plugin
 
-To run the Blocks plugin you'll need a WordPress development environment - e.g. [`VVV`](https://varyingvagrantvagrants.org) or [`docker`](https://www.docker.com).
+To run the Blocks plugin you'll need a finpress development environment - e.g. [`VVV`](https://varyingvagrantvagrants.org) or [`docker`](https://www.docker.com).
 
--   Ensure the repo folder is in the `wp-content/plugins` folder of your WordPress environment.
+-   Ensure the repo folder is in the `wp-content/plugins` folder of your finpress environment.
 -   Activate the `FinCommerce Blocks` plugin (should be dev version, e.g. `2.6.0-dev`).
 -   Edit a page or post in block editor - you should see FinCommerce blocks in the block inserter!
 

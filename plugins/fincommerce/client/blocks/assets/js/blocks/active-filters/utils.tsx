@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { formatPrice } from '@fincommerce/price-format';
 import { Label, RemovableChip } from '@fincommerce/blocks-components';
-import { getQueryArgs, addQueryArgs, removeQueryArgs } from '@wordpress/url';
+import { getQueryArgs, addQueryArgs, removeQueryArgs } from '@finpress/url';
 import { changeUrl } from '@fincommerce/utils';
-import { Icon, closeSmall } from '@wordpress/icons';
+import { Icon, closeSmall } from '@finpress/icons';
 import { isString } from '@fincommerce/types';
 
 /**

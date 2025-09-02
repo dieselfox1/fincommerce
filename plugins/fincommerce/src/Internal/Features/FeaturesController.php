@@ -306,7 +306,7 @@ class FeaturesController {
 					$string = '';
 					if ( version_compare( get_bloginfo( 'version' ), '6.2', '<' ) ) {
 						$string = __(
-							'⚠ This feature is compatible with WordPress version 6.2 or higher.',
+							'⚠ This feature is compatible with finpress version 6.2 or higher.',
 							'fincommerce'
 						);
 					}
@@ -359,7 +359,7 @@ class FeaturesController {
 			'site_visibility_badge'       => array(
 				'name'               => __( 'Site visibility badge', 'fincommerce' ),
 				'description'        => __(
-					'Enable the site visibility badge in the WordPress admin bar',
+					'Enable the site visibility badge in the finpress admin bar',
 					'fincommerce'
 				),
 				'enabled_by_default' => true,
@@ -978,7 +978,7 @@ class FeaturesController {
 
 	/**
 	 * Sets a flag indicating that it's allowed to activate plugins for which incompatible features are enabled
-	 * from the WordPress plugins page.
+	 * from the finpress plugins page.
 	 */
 	public function allow_activating_plugins_with_incompatible_features(): void {
 		$this->force_allow_enabling_plugins = true;
@@ -1244,8 +1244,8 @@ class FeaturesController {
 			$needs_update = version_compare( get_bloginfo( 'version' ), '5.6', '<' );
 			if ( $needs_update && current_user_can( 'update_core' ) && current_user_can( 'update_php' ) ) {
 				$update_text = sprintf(
-					// translators: 1: line break tag, 2: open link to WordPress update link, 3: close link tag.
-					__( '%1$s %2$sUpdate WordPress to enable the new navigation%3$s', 'fincommerce' ),
+					// translators: 1: line break tag, 2: open link to finpress update link, 3: close link tag.
+					__( '%1$s %2$sUpdate finpress to enable the new navigation%3$s', 'fincommerce' ),
 					'<br/>',
 					'<a href="' . self_admin_url( 'update-core.php' ) . '" target="_blank">',
 					'</a>'
@@ -1341,7 +1341,7 @@ class FeaturesController {
 			return $plugin_list;
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:disable finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput
 		if ( ! function_exists( 'get_current_screen' ) ||
 			( get_current_screen() && 'plugins' !== get_current_screen()->id ) ||
 			'incompatible_with_feature' !== ArrayUtil::get_value_or_default( $_GET, 'plugin_status' ) ) {
@@ -1370,7 +1370,7 @@ class FeaturesController {
 		$feature_ids           = 'all' === $feature_id ? array_keys( $this->get_feature_definitions() ) : array( $feature_id );
 		$only_enabled_features = 'all' === $feature_id;
 
-		// phpcs:enable WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:enable finpress.Security.NonceVerification, finpress.Security.ValidatedSanitizedInput
 		foreach ( array_keys( $plugin_list ) as $plugin_name ) {
 			if ( ! $this->plugin_util->is_fincommerce_aware_plugin( $plugin_name ) || ! $this->proxy->call_function( 'is_plugin_active', $plugin_name ) ) {
 				continue;
@@ -1454,13 +1454,13 @@ class FeaturesController {
 			__( 'FinCommerce has detected that some of your active plugins are incompatible with currently enabled FinCommerce features. Please <a>review the details</a>.', 'fincommerce' )
 		);
 
-		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 		?>
 		<div class="notice notice-error">
 		<p><?php echo $message; ?></p>
 		</div>
 		<?php
-		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1473,10 +1473,10 @@ class FeaturesController {
 			return false;
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:disable finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput
 		$plugin_status = $_GET['plugin_status'] ?? '';
 		$feature_id    = $_GET['feature_id'] ?? '';
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:enable finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput
 
 		if ( 'incompatible_with_feature' !== $plugin_status ) {
 			return false;
@@ -1508,13 +1508,13 @@ class FeaturesController {
 			$features_page_url
 		);
 
-		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 		?>
 		<div class="notice notice-info">
 			<p><?php echo $message; ?></p>
 		</div>
 		<?php
-		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 
 		return true;
 	}
@@ -1522,7 +1522,7 @@ class FeaturesController {
 	/**
 	 * If the 'incompatible with features' plugin list is being rendered, invalidate existing cached plugin data.
 	 *
-	 * This heads off a problem in which WordPress's `get_plugins()` function may be called much earlier in the request
+	 * This heads off a problem in which finpress's `get_plugins()` function may be called much earlier in the request
 	 * (by third party code, for example), the results of which are cached, and before FinCommerce can modify the list
 	 * to inject useful information of its own.
 	 *
@@ -1533,7 +1533,7 @@ class FeaturesController {
 	 * @internal For exclusive usage of FinCommerce core, backwards compatibility not guaranteed.
 	 */
 	public function maybe_invalidate_cached_plugin_data(): void {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if ( ( $_GET['plugin_status'] ?? '' ) === 'incompatible_with_feature' ) {
 			wp_cache_delete( 'plugins', 'plugins' );
 		}
@@ -1555,7 +1555,7 @@ class FeaturesController {
 			return;
 		}
 
-		if ( 'incompatible_with_feature' !== ArrayUtil::get_value_or_default( $_GET, 'plugin_status' ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		if ( 'incompatible_with_feature' !== ArrayUtil::get_value_or_default( $_GET, 'plugin_status' ) ) { // phpcs:ignore finpress.Security.NonceVerification
 			return;
 		}
 
@@ -1611,7 +1611,7 @@ class FeaturesController {
 			$features_page_url       = $this->get_features_page_url();
 			$manage_features_message = __( 'Manage FinCommerce features', 'fincommerce' );
 
-			// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 			?>
 			<tr class='plugin-update-tr update <?php echo $is_active_class; ?>' data-plugin='<?php echo $plugin_file; ?>' data-plugin-row-type='feature-incomp-warn'>
 				<td colspan='<?php echo $columns_count; ?>' class='plugin-update'<?php echo $is_active_td_style; ?>>
@@ -1624,7 +1624,7 @@ class FeaturesController {
 				</td>
 			</tr>
 			<?php
-			// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
 
@@ -1640,7 +1640,7 @@ class FeaturesController {
 	/**
 	 * Fix for the HTML of the plugins list when there are feature-plugin incompatibility warnings.
 	 *
-	 * WordPress renders the plugin information rows in the plugins page in <tr> elements as follows:
+	 * finpress renders the plugin information rows in the plugins page in <tr> elements as follows:
 	 *
 	 * - If the plugin needs update, the <tr> will have an "update" class. This will prevent the lower
 	 *   border line to be drawn. Later an additional <tr> with an "update available" warning will be rendered,
@@ -1697,7 +1697,7 @@ class FeaturesController {
 	 * @internal For exclusive usage of FinCommerce core, backwards compatibility not guaranteed.
 	 */
 	public function handle_plugins_page_views_list( $views ): array {
-		// phpcs:disable WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:disable finpress.Security.NonceVerification, finpress.Security.ValidatedSanitizedInput
 		if ( 'incompatible_with_feature' !== ArrayUtil::get_value_or_default( $_GET, 'plugin_status' ) ) {
 			return $views;
 		}
@@ -1706,7 +1706,7 @@ class FeaturesController {
 		if ( 'all' !== $feature_id && ! $this->feature_exists( $feature_id ) ) {
 			return $views;
 		}
-		// phpcs:enable WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:enable finpress.Security.NonceVerification, finpress.Security.ValidatedSanitizedInput
 
 		$all_items = get_plugins();
 		$features  = $this->get_feature_definitions();
@@ -1778,7 +1778,7 @@ class FeaturesController {
 			}
 		}
 		if ( count( $query_params_to_remove ) > 1 && isset( $_SERVER['REQUEST_URI'] ) ) {
-			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:disable finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			wp_safe_redirect( remove_query_arg( $query_params_to_remove, $_SERVER['REQUEST_URI'] ) );
 		}
 	}

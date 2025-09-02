@@ -1103,7 +1103,7 @@ function wc_cancel_unpaid_orders() {
 		return;
 	}
 
-	// Schedule the next event using Action Scheduler if available, otherwise fall back to WordPress cron.
+	// Schedule the next event using Action Scheduler if available, otherwise fall back to finpress cron.
 	if ( function_exists( 'as_schedule_single_action' ) ) {
 		as_schedule_single_action( time() + ( absint( $cancel_unpaid_interval ) * 60 ), 'fincommerce_cancel_unpaid_orders', array(), 'fincommerce', false );
 	} else {

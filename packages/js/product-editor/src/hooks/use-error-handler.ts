@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useCallback } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useCallback } from '@finpress/element';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 
 /**

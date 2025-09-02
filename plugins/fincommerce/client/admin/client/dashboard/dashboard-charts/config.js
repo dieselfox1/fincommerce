@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
+import { __ } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies

@@ -17,10 +17,10 @@ jest.mock( '@fincommerce/tracks', () => ( {
 jest.mock( 'react-router-dom', () => ( { useParams: jest.fn() } ) );
 
 // Mocks to prevent crashes.
-jest.mock( '@wordpress/api-fetch', () => ( {
+jest.mock( '@finpress/api-fetch', () => ( {
 	apiFetch: jest.fn(),
 } ) );
-jest.mock( '@wordpress/core-data', () => ( {
+jest.mock( '@finpress/core-data', () => ( {
 	apiFetch: jest.fn(),
 } ) );
 jest.mock( '../hooks/use-product-entity-record', () => ( {

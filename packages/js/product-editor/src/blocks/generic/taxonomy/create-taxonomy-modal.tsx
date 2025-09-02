@@ -1,21 +1,21 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BaseControl, Button, Modal, TextControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { BaseControl, Button, Modal, TextControl } from '@finpress/components';
 import {
 	useState,
 	useEffect,
 	createElement,
 	createInterpolateElement,
 	useCallback,
-} from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+} from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import {
 	__experimentalSelectTreeControl as SelectTree,
 	TreeItemType as Item,
 } from '@fincommerce/components';
-import { useDebounce, useInstanceId } from '@wordpress/compose';
+import { useDebounce, useInstanceId } from '@finpress/compose';
 import clsx from 'clsx';
 
 /**

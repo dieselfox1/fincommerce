@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { act, render, waitFor, screen } from '@testing-library/react';
-import { useState, createElement } from '@wordpress/element';
-import { resolveSelect } from '@wordpress/data';
+import { useState, createElement } from '@finpress/element';
+import { resolveSelect } from '@finpress/data';
 import { ProductAttributeTerm } from '@fincommerce/data';
 
 /**
@@ -11,16 +11,16 @@ import { ProductAttributeTerm } from '@fincommerce/data';
  */
 import { AttributeTermInputField } from '../attribute-term-input-field';
 
-jest.mock( '@wordpress/core-data', () => ( {
+jest.mock( '@finpress/core-data', () => ( {
 	registerStore: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	resolveSelect: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/components', () => {
+jest.mock( '@finpress/components', () => {
 	return {
 		__esModule: true,
 		Spinner: () => <div>spinner</div>,

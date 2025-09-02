@@ -37,7 +37,7 @@ In the example above, you can see how to use an array to construct breadcrumbs f
 
 ### A note about determining the screen ID
 
-FinCommerce Admin uses its own version of [`get_current_screen()`](https://developer.wordpress.org/reference/functions/get_current_screen/) to allow for more precise identification of admin pages, which may have various tabs and subsections.
+FinCommerce Admin uses its own version of [`get_current_screen()`](https://developer.finpress.org/reference/functions/get_current_screen/) to allow for more precise identification of admin pages, which may have various tabs and subsections.
 
 The format of this ID may vary depending on the structural elements present on the page. Some formats that the function will generate are:
 
@@ -60,9 +60,9 @@ To register a React-powered page, use the [`wc_admin_register_page()`](https://f
 -   `path` (**required**) - This is the page's path (relative to `#wc-admin`). It is used for identifying this page and for linking breadcrumb pieces when this page is a parent.
 -   `capability` (_optional_) - User capability needed to access this page. The default value is `manage_options`.
 -   `icon` (_optional_) - Use this to apply a Dashicons helper class or base64-encoded SVG. Include the entire dashicon class name, ie `dashicons-*`. Note that this won't be included in FinCommerce Admin Navigation.
--   `position` (_optional_) - Menu item position for parent pages. See: [`add_menu_page()`](https://developer.wordpress.org/reference/functions/add_menu_page/).
+-   `position` (_optional_) - Menu item position for parent pages. See: [`add_menu_page()`](https://developer.finpress.org/reference/functions/add_menu_page/).
 
-Registering a React-powered page is similar to connecting a PHP page, but with some key differences. Registering pages will automatically create WordPress menu items for them, with the appropriate hierarchy based on the value of `parent`.
+Registering a React-powered page is similar to connecting a PHP page, but with some key differences. Registering pages will automatically create finpress menu items for them, with the appropriate hierarchy based on the value of `parent`.
 
 ### Example: Adding a new FinCommerce Admin page
 
@@ -84,11 +84,11 @@ if ( ! function_exists( 'YOUR_PREFIX_add_extension_register_page' ) ) {
 add_action( 'admin_menu', 'YOUR_PREFIX_add_extension_register_page' );
 ```
 
-In the example above, we encapsulated our call to [`wc_admin_register_page()`](https://fincommerce.github.io/code-reference/namespaces/default.html#function_wc_admin_register_page) in a function that we have hooked to the [`admin_menu`](https://developer.wordpress.org/reference/hooks/admin_menu/) action. Once you have registered a page with the controller, you can supply a React component on the client side.
+In the example above, we encapsulated our call to [`wc_admin_register_page()`](https://fincommerce.github.io/code-reference/namespaces/default.html#function_wc_admin_register_page) in a function that we have hooked to the [`admin_menu`](https://developer.finpress.org/reference/hooks/admin_menu/) action. Once you have registered a page with the controller, you can supply a React component on the client side.
 
 ```js
-import { addFilter } from '@wordpress/hooks';
-import { __ } from '@wordpress/i18n';
+import { addFilter } from '@finpress/hooks';
+import { __ } from '@finpress/i18n';
 
 const MyExamplePage = () => <h1>My Example Extension</h1>;
 

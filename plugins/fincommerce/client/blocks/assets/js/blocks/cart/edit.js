@@ -3,19 +3,19 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useBlockProps,
 	InnerBlocks,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import BlockErrorBoundary from '@fincommerce/base-components/block-error-boundary';
 import { EditorProvider, CartProvider } from '@fincommerce/base-context';
 import { previewCart } from '@fincommerce/resource-previews';
 import { SlotFillProvider } from '@fincommerce/blocks-checkout';
-import { useEffect, useRef } from '@wordpress/element';
-import { getQueryArg } from '@wordpress/url';
-import { dispatch, select } from '@wordpress/data';
+import { useEffect, useRef } from '@finpress/element';
+import { getQueryArg } from '@finpress/url';
+import { dispatch, select } from '@finpress/data';
 
 /**
  * Internal dependencies

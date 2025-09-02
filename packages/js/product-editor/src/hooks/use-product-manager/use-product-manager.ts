@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEntityProp, store as coreStore } from '@wordpress/core-data';
-import { dispatch, useSelect, select as wpSelect } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { useEntityProp, store as coreStore } from '@finpress/core-data';
+import { dispatch, useSelect, select as wpSelect } from '@finpress/data';
+import { useState } from '@finpress/element';
 import { Product, ProductStatus, productsStore } from '@fincommerce/data';
 
 /**

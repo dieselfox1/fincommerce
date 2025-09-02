@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createElement, Component, Fragment } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { createElement, Component, Fragment } from '@finpress/element';
 import { find } from 'lodash';
 import PropTypes from 'prop-types';
 import { updateQueryString } from '@fincommerce/navigation';

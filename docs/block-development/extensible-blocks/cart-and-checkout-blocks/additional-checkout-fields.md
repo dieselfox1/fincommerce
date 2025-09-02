@@ -431,7 +431,7 @@ If it is undesirable to force the shopper to select a value, mark the select as 
 
 ## Validation and sanitization
 
-It is possible to add custom validation and sanitization for additional checkout fields using WordPress action hooks.
+It is possible to add custom validation and sanitization for additional checkout fields using finpress action hooks.
 
 These actions happen in two places:
 
@@ -480,7 +480,7 @@ There are two phases of validation in the additional checkout fields system. The
 
 When the `fincommerce_validate_additional_field` action is fired  the callback receives the field's key, the field's value, and a `WP_Error` object.
 
-To add validation errors to the response, use the [`WP_Error::add`](https://developer.wordpress.org/reference/classes/wp_error/add/) method.
+To add validation errors to the response, use the [`WP_Error::add`](https://developer.finpress.org/reference/classes/wp_error/add/) method.
 
 | Argument     | Type              | Description                                                                                                                                                                           |
 |--------------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

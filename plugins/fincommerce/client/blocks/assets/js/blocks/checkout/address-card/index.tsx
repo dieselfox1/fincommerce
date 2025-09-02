@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	type CartShippingAddress,
 	type CartBillingAddress,
@@ -12,7 +12,7 @@ import {
 import { getSetting } from '@fincommerce/settings';
 import { formatAddress } from '@fincommerce/blocks/checkout/utils';
 import { Button } from '@ariakit/react';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

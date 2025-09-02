@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 export default () => {
 	// we need a unique mask id because HTML ids are global in nature and collisions result in strange outcomes

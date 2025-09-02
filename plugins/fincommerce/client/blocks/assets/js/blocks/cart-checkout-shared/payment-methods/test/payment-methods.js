@@ -3,7 +3,7 @@
  */
 import { act, render, screen, waitFor } from '@testing-library/react';
 import { previewCart } from '@fincommerce/resource-previews';
-import * as wpDataFunctions from '@wordpress/data';
+import * as wpDataFunctions from '@finpress/data';
 import { CART_STORE_KEY, paymentStore } from '@fincommerce/block-data';
 import { server, http, HttpResponse } from '@fincommerce/test-utils/msw';
 import {
@@ -13,7 +13,7 @@ import {
 	__experimentalDeRegisterExpressPaymentMethod,
 } from '@fincommerce/blocks-registry';
 import userEvent from '@testing-library/user-event';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -48,8 +48,8 @@ jest.mock( '@fincommerce/blocks-components', () => {
 	};
 } );
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	const originalBlockDataModule = jest.requireActual(
 		'@fincommerce/block-data'
 	);

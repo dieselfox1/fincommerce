@@ -3,10 +3,10 @@
  */
 import { FormEvent } from 'react';
 import clsx from 'clsx';
-import { useInstanceId } from '@wordpress/compose';
-import { createElement, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { BaseControl, Button, Modal } from '@wordpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { createElement, useState } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { BaseControl, Button, Modal } from '@finpress/components';
 
 /**
  * Internal dependencies

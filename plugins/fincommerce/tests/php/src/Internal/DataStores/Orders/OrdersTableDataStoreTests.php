@@ -83,9 +83,9 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		$this->reset_legacy_proxy_mocks();
 		$this->original_time_zone = wp_timezone_string();
-		//phpcs:ignore WordPress.DateTime.RestrictedFunctions.timezone_change_date_default_timezone_set -- We need to change the timezone to test the date sync fields.
+		//phpcs:ignore finpress.DateTime.RestrictedFunctions.timezone_change_date_default_timezone_set -- We need to change the timezone to test the date sync fields.
 		update_option( 'timezone_string', 'Asia/Kolkata' );
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		$this->setup_cot();
 		$this->cot_state = OrderUtil::custom_orders_table_usage_is_enabled();
 		$this->toggle_cot_feature_and_usage( false );
@@ -101,7 +101,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 	 */
 	public function tearDown(): void {
 		global $wpdb;
-		//phpcs:ignore WordPress.DateTime.RestrictedFunctions.timezone_change_date_default_timezone_set -- We need to change the timezone to test the date sync fields.
+		//phpcs:ignore finpress.DateTime.RestrictedFunctions.timezone_change_date_default_timezone_set -- We need to change the timezone to test the date sync fields.
 		update_option( 'timezone_string', $this->original_time_zone );
 		$this->toggle_cot_feature_and_usage( $this->cot_state );
 		$this->clean_up_cot_setup();
@@ -426,14 +426,14 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 	public function test_order_dates_are_gmt(): void {
 		global $wpdb;
 
-		// Switch to the COT datastore, set WordPress to use a non-UTC timezone, and create a new order.
+		// Switch to the COT datastore, set finpress to use a non-UTC timezone, and create a new order.
 		update_option( CustomOrdersTableController::CUSTOM_ORDERS_TABLE_USAGE_ENABLED_OPTION, 'yes' );
 		update_option( 'timezone_string', 'America/Los_Angeles' );
 
 		$order = new WC_Order();
 		$this->sut->create( $order );
 		$date_created_gmt = $wpdb->get_var(
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			'SELECT date_created_gmt FROM ' . OrdersTableDataStore::get_orders_table_name() . ' WHERE id = ' . $order->get_id()
 		);
 
@@ -547,7 +547,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$order->delete();
 
 		$orders_table = $this->sut::get_orders_table_name();
-		$this->assertEquals( OrderStatus::TRASH, $wpdb->get_var( $wpdb->prepare( "SELECT status FROM {$orders_table} WHERE id = %d", $order_id ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$this->assertEquals( OrderStatus::TRASH, $wpdb->get_var( $wpdb->prepare( "SELECT status FROM {$orders_table} WHERE id = %d", $order_id ) ) ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 
 		// Make sure order data persists in the database.
 		$this->assertNotEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}fincommerce_order_items WHERE order_id = %d", $order_id ) ) );
@@ -557,7 +557,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 				continue;
 			}
 
-			$this->assertNotEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$table} WHERE order_id = %d", $order_id ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$this->assertNotEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$table} WHERE order_id = %d", $order_id ) ) ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		}
 	}
 
@@ -578,7 +578,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		$this->sut->trash_order( $order );
 
-		//phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders
+		//phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders
 		$orders_table = $this->sut::get_orders_table_name();
 		$this->assertEquals( OrderStatus::TRASH, $wpdb->get_var( $wpdb->prepare( "SELECT status FROM {$orders_table} WHERE id = %d", $order_id ) ) );
 		$this->assertEquals( OrderStatus::TRASH, $wpdb->get_var( $wpdb->prepare( "SELECT post_status FROM {$wpdb->posts} WHERE id = %d", $order_id ) ) );
@@ -592,7 +592,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		$this->assertEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$this->sut->get_meta_table_name()} WHERE order_id = %d AND meta_key LIKE %s", $order_id, '_wp_trash_meta_%' ) ) );
 		$this->assertEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$wpdb->postmeta} WHERE post_id = %d AND meta_key LIKE '_wp_trash_meta_%'", $order_id ) ) );
-		//phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders
+		//phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders
 	}
 
 	/**
@@ -613,7 +613,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		foreach ( $this->sut->get_all_table_names() as $table ) {
 			$field_name = ( $table === $this->sut::get_orders_table_name() ) ? 'id' : 'order_id';
-			$this->assertEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$table} WHERE {$field_name} = %d", $order_id ) ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$this->assertEmpty( $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$table} WHERE {$field_name} = %d", $order_id ) ) ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		}
 	}
 
@@ -718,7 +718,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$order3->set_status( OrderStatus::COMPLETED );
 		$order3->save();
 
-		// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_query,WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_query,finpress.DB.SlowDBQuery.slow_db_query_meta_key
 
 		// Orders with color=green.
 		$query = new OrdersTableQuery(
@@ -826,7 +826,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$query_args = array(
 			'orderby'  => 'id',
 			'order'    => 'ASC',
-			'meta_key' => 'color', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_key' => 'color', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		);
 
 		// Check that orders are in order (when no meta ordering is involved).
@@ -841,7 +841,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		// When ordering by 'numeric_meta' 1000 < 500 (due to alphabetical sorting by default).
 		// Also tests that 'meta_value' is a valid synonym for the primary meta query.
-		$query_args['meta_key'] = 'numeric_meta'; // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		$query_args['meta_key'] = 'numeric_meta'; // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 		$query_args['orderby']  = 'meta_value';
 		$q                      = new OrdersTableQuery( $query_args );
 		$this->assertEquals( $q->orders, array( $order1->get_id(), $order2->get_id() ) );
@@ -853,7 +853,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		// Sorting by 'animal' meta is ambiguous. Test that we can order by various meta fields (and use the names in 'orderby').
 		unset( $query_args['meta_key'] );
-		$query_args['meta_query'] = array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		$query_args['meta_query'] = array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			'animal_meta' => array(
 				'key' => 'animal',
 			),
@@ -1230,9 +1230,9 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 	 * @testDox Test `get_unpaid_orders()`.
 	 */
 	public function test_get_unpaid_orders(): void {
-		// phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested -- Intentional usage since timezone is changed for this file.
+		// phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested -- Intentional usage since timezone is changed for this file.
 		$now_gmt = time();
-		// phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested -- Testing a legacy code that does expect the offset timestamp.
+		// phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested -- Testing a legacy code that does expect the offset timestamp.
 		$now_ist = current_time( 'timestamp', 0 ); // IST (Indian standard time) is 5.5 hours ahead of GMT and is set as timezone for this class.
 
 		// Create a few orders.
@@ -1860,7 +1860,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$this->assertEqualsCanonicalizing( array( $order_ids[0], $order_ids[1] ), $query->orders );
 
 		// ... but only Planck is more than 80 years old.
-		// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional usage for test.
+		// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional usage for test.
 		$args['meta_query'] = array(
 			array(
 				'key'     => 'customer_age',
@@ -1873,7 +1873,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		// Max and Werner are born in either 1858, or 1901.
 		$args  = array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional usage for test.
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional usage for test.
 			'meta_query' => array(
 				array(
 					'key'     => 'customer_birthdate',
@@ -1887,7 +1887,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 
 		// Let's do the same query, other way around, by excluding Édouard.
 		$args  = array(
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional usage for test.
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional usage for test.
 			'meta_query' => array(
 				array(
 					'key'     => 'customer_birthdate',
@@ -2279,7 +2279,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		// Assert that we are not duplicating address indexes.
 		$result = $wpdb->get_var(
 			$wpdb->prepare(
-				"SELECT COUNT(*) FROM {$order_meta_table} WHERE order_id = %d AND meta_key = '_billing_address_index'", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				"SELECT COUNT(*) FROM {$order_meta_table} WHERE order_id = %d AND meta_key = '_billing_address_index'", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				$order->get_id()
 			)
 		);
@@ -3390,7 +3390,7 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$order->save();
 		$order_id = $order->get_id();
 
-		$wpdb->query( "INSERT INTO {$order_meta_table} (order_id, meta_key, meta_value) VALUES ({$order_id}, '{$meta_key}', '{$meta_value}')" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.SlowDBQuery.slow_db_query_meta_key,WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+		$wpdb->query( "INSERT INTO {$order_meta_table} (order_id, meta_key, meta_value) VALUES ({$order_id}, '{$meta_key}', '{$meta_value}')" ); // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared,finpress.DB.SlowDBQuery.slow_db_query_meta_key,finpress.DB.SlowDBQuery.slow_db_query_meta_value
 		$order->save(); // Trigger a meta cache purge since the above was a direct DB write.
 
 		// Test fetching an order with meta data containing an object of a non-existent class.
@@ -3762,13 +3762,13 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$meta_value = 'test_meta_value';
 
 		$query = $wpdb->prepare(
-			"SELECT COUNT(*) FROM {$this->sut::get_meta_table_name()} WHERE meta_key = %s AND meta_value = %s", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- variable is a table name.
+			"SELECT COUNT(*) FROM {$this->sut::get_meta_table_name()} WHERE meta_key = %s AND meta_value = %s", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- variable is a table name.
 			$meta_key,
 			$meta_value
 		);
 
 		// Confirm there's no meta at the start.
-		$this->assertEquals( $wpdb->get_var( $query ), 0 ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
+		$this->assertEquals( $wpdb->get_var( $query ), 0 ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
 
 		// Confirm there's no meta.
 		$order = new \WC_Order();
@@ -3776,15 +3776,15 @@ class OrdersTableDataStoreTests extends \HposTestCase {
 		$order->save_meta_data();
 
 		// Confirm there's still no meta after calling `save_meta_data()` on an unsaved order.
-		$this->assertEquals( $wpdb->get_var( $query ), 0 ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
+		$this->assertEquals( $wpdb->get_var( $query ), 0 ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
 
 		// Confirm that saving the order persists everything.
 		$order->save();
-		$this->assertEquals( $wpdb->get_var( $query ), 1 ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
+		$this->assertEquals( $wpdb->get_var( $query ), 1 ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
 
 		// Calling `save_meta_data()` on an already saved order does update metadata.
 		$order->add_meta_data( $meta_key, $meta_value, false );
 		$order->save_meta_data();
-		$this->assertEquals( $wpdb->get_var( $query ), 2 ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
+		$this->assertEquals( $wpdb->get_var( $query ), 2 ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- query has already been prepared.
 	}
 }

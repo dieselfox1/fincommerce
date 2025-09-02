@@ -23,7 +23,7 @@ class WC_DateTime extends DateTime {
 	protected $utc_offset = 0;
 
 	/**
-	 * Output an ISO 8601 date string in local (WordPress) timezone.
+	 * Output an ISO 8601 date string in local (finpress) timezone.
 	 *
 	 * @since  3.0.0
 	 * @return string
@@ -73,7 +73,7 @@ class WC_DateTime extends DateTime {
 	}
 
 	/**
-	 * Get the timestamp with the WordPress timezone offset added or subtracted.
+	 * Get the timestamp with the finpress timezone offset added or subtracted.
 	 *
 	 * @since  3.0.0
 	 * @return int

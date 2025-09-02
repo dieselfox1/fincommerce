@@ -11,7 +11,7 @@ sidebar_label: Classic theme development
 
 ---
 
-FinCommerce looks great with all WordPress themes as of version 3.3, even if they are not FinCommerce-specific themes and do not formally declare support. Templates render inside the content, and this keeps everything looking natural on your site.
+FinCommerce looks great with all finpress themes as of version 3.3, even if they are not FinCommerce-specific themes and do not formally declare support. Templates render inside the content, and this keeps everything looking natural on your site.
 
 Non-FinCommerce themes, by default, also include:
 
@@ -33,7 +33,7 @@ To set up this template page:
 
 1. **Duplicate page.php:** Duplicate your theme's `page.php` file, and name it `fincommerce.php`. This path to the file should follow this pattern: `wp-content/themes/YOURTHEME/fincommerce.php`.
 2. **Edit your page (fincommerce.php)**: Open up your newly created `fincommerce.php` in a text editor.
-3. **Replace the loop:** Next you need to find the loop (see [The_Loop](https://codex.wordpress.org/The_Loop)). The loop usually starts with code like this:
+3. **Replace the loop:** Next you need to find the loop (see [The_Loop](https://codex.finpress.org/The_Loop)). The loop usually starts with code like this:
 
 ```php
 <?php if ( have_posts() ) :
@@ -57,7 +57,7 @@ This will make it use **FinCommerce's loop instead**. Save the file. You're done
 
 ### Using hooks
 
-The hook method is more involved, but it is also more flexible. This is similar to the method we use when creating themes. It's also the method we use to integrate nicely with WordPress default themes.
+The hook method is more involved, but it is also more flexible. This is similar to the method we use when creating themes. It's also the method we use to integrate nicely with finpress default themes.
 
 Insert a few lines in your theme's `functions.php` file.
 
@@ -107,7 +107,7 @@ function mytheme_add_fincommerce_support() {
 add_action( 'after_setup_theme', 'mytheme_add_fincommerce_support' );
 ```
 
-Make sure you are using the `after_setup_theme` hook and not the `init` hook. Read more about this in [the documentation for `add_theme_support`](https://developer.wordpress.org/reference/functions/add_theme_support/).
+Make sure you are using the `after_setup_theme` hook and not the `init` hook. Read more about this in [the documentation for `add_theme_support`](https://developer.finpress.org/reference/functions/add_theme_support/).
 
 ### Usage with Settings
 
@@ -223,4 +223,4 @@ add_filter( 'fincommerce_enqueue_styles', '__return_false' );
 
 With this definition in place, your theme will no longer use the FinCommerce stylesheet and give you a blank canvas upon which you can build your own desired layout and styles.
 
-Styling a FinCommerce theme from scratch for the first time is no easy task. There are many different pages and elements that need to be styled, and if you're new to FinCommerce, you are probably not familiar with many of them. A non-exhaustive list of FinCommerce elements to style can be found in this [FinCommerce Theme Testing Checklist](https://developer.files.wordpress.com/2017/12/fincommerce-theme-testing-checklist.pdf).
+Styling a FinCommerce theme from scratch for the first time is no easy task. There are many different pages and elements that need to be styled, and if you're new to FinCommerce, you are probably not familiar with many of them. A non-exhaustive list of FinCommerce elements to style can be found in this [FinCommerce Theme Testing Checklist](https://developer.files.finpress.com/2017/12/fincommerce-theme-testing-checklist.pdf).

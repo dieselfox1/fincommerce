@@ -10,7 +10,7 @@ import type {
 	ObjectType,
 	FieldValidationStatus,
 } from '@fincommerce/types';
-import { DataRegistry } from '@wordpress/data';
+import { DataRegistry } from '@finpress/data';
 
 /**
  * Internal dependencies

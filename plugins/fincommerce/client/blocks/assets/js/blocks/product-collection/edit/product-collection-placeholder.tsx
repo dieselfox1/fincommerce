@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	store as blockEditorStore,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import { Placeholder } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
+} from '@finpress/block-editor';
+import { Placeholder } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -26,7 +26,7 @@ const ProductCollectionPlaceholder = (
 	const { clientId, tracksLocation } = props;
 
 	// @ts-expect-error Type definitions for this function are missing
-	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/wordpress__blocks/store/actions.d.ts
+	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/finpress__blocks/store/actions.d.ts
 	const { replaceBlock } = useDispatch( blockEditorStore );
 
 	const onCollectionClick = ( collectionName: CollectionName ) => {

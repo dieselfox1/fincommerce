@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createSlotFill } from '@wordpress/components';
-import { registerPlugin, getPlugin } from '@wordpress/plugins';
+import { createSlotFill } from '@finpress/components';
+import { registerPlugin, getPlugin } from '@finpress/plugins';
 
 /**
  * Internal dependencies

@@ -14,7 +14,7 @@ jest.mock( '@fincommerce/settings', () => ( {
 import { recordEvent } from '@fincommerce/tracks';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

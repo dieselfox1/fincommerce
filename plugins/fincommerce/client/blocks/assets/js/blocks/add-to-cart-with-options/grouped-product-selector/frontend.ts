@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store, getContext, getConfig } from '@wordpress/interactivity';
+import { store, getContext, getConfig } from '@finpress/interactivity';
 import type {
 	ClientCartItem,
 	Store as FinCommerce,

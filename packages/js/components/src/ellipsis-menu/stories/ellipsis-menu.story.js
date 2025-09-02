@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Fragment, useState } from '@wordpress/element';
-import { Icon } from '@wordpress/icons';
+import { Fragment, useState } from '@finpress/element';
+import { Icon } from '@finpress/icons';
 import CrossSmall from 'gridicons/dist/cross-small';
 import { EllipsisMenu, MenuItem, MenuTitle } from '@fincommerce/components';
 

@@ -1,16 +1,16 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import {
 	StrictMode,
 	createRoot,
 	useEffect,
 	useLayoutEffect,
 	useState,
-} from '@wordpress/element';
-import { applyFilters } from '@wordpress/hooks';
-import '@wordpress/format-library'; // Enables text formatting capabilities
+} from '@finpress/element';
+import { applyFilters } from '@finpress/hooks';
+import '@finpress/format-library'; // Enables text formatting capabilities
 
 /**
  * Internal dependencies

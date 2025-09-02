@@ -544,7 +544,7 @@ class Note extends \WC_Data {
 	/**
 	 * Set date note was created. NULL is not allowed
 	 *
-	 * @param string|integer $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed.
+	 * @param string|integer $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed.
 	 */
 	public function set_date_created( $date ) {
 		if ( empty( $date ) ) {
@@ -560,7 +560,7 @@ class Note extends \WC_Data {
 	/**
 	 * Set date admin should be reminded of note. NULL IS allowed
 	 *
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_reminder( $date ) {
 		if ( is_string( $date ) && ! is_numeric( $date ) ) {
@@ -690,7 +690,7 @@ class Note extends \WC_Data {
 	/**
 	 * Add a nonce to an existing note action.
 	 *
-	 * @link https://codex.wordpress.org/WordPress_Nonces
+	 * @link https://codex.finpress.org/finpress_Nonces
 	 *
 	 * @param string $note_action_name Name of action to add a nonce to.
 	 * @param string $nonce_action The nonce action.

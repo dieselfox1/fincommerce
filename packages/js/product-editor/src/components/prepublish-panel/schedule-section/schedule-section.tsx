@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { PanelBody } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { PanelBody } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	// @ts-expect-error __experimentalPublishDateTimePicker does not exist
 	__experimentalPublishDateTimePicker as PublishDateTimePicker,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

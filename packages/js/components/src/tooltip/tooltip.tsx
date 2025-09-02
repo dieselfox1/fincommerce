@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Button, Popover } from '@wordpress/components';
-import { createElement, Fragment, useState } from '@wordpress/element';
+import { Button, Popover } from '@finpress/components';
+import { createElement, Fragment, useState } from '@finpress/element';
 import { KeyboardEvent } from 'react';
-import { Icon, help } from '@wordpress/icons';
-import { useInstanceId } from '@wordpress/compose';
+import { Icon, help } from '@finpress/icons';
+import { useInstanceId } from '@finpress/compose';
 
 type Position =
 	| 'top left'

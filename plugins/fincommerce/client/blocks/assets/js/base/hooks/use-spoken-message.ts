@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEffect, renderToString } from '@wordpress/element';
-import { speak } from '@wordpress/a11y';
+import { useEffect, renderToString } from '@finpress/element';
+import { speak } from '@finpress/a11y';
 
 /**
  * Custom hook which announces the message with the given politeness, if a

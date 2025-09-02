@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { difference } from 'lodash';
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 import { Stepper } from '@fincommerce/components';
 import { optionsStore, pluginsStore, settingsStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -110,7 +110,7 @@ export const Setup = ( {
 			key: 'connect',
 			label: __( 'Connect your store', 'fincommerce' ),
 			description: __(
-				'Connect your store to WordPress.com to enable automated sales tax calculations',
+				'Connect your store to finpress.com to enable automated sales tax calculations',
 				'fincommerce'
 			),
 			content: <Connect { ...stepProps } />,

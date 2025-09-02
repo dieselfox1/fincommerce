@@ -3,7 +3,7 @@
  */
 import { FrameLocator, Locator, Page } from '@playwright/test';
 import { Editor, Admin, BLOCK_THEME_SLUG } from '@fincommerce/e2e-utils';
-import { BlockRepresentation } from '@wordpress/e2e-test-utils-playwright/build-types/editor/insert-block';
+import { BlockRepresentation } from '@finpress/e2e-test-utils-playwright/build-types/editor/insert-block';
 
 export const BLOCK_LABELS = {
 	productTemplate: 'Block: Product Template',

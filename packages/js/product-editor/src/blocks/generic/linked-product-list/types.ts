@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockAttributes } from '@wordpress/blocks';
+import { BlockAttributes } from '@finpress/blocks';
 
 export type LinkedProductListBlockEmptyState = {
 	image: string | 'CashRegister' | 'ShoppingBags';

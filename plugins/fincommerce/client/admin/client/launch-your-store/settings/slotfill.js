@@ -6,22 +6,22 @@ import {
 	ToggleControl,
 	RadioControl,
 	Button,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	useState,
 	createInterpolateElement,
 	createElement,
 	useEffect,
 	useRef,
-} from '@wordpress/element';
-import { registerPlugin, getPlugin } from '@wordpress/plugins';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { registerPlugin, getPlugin } from '@finpress/plugins';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { useCopyToClipboard } from '@wordpress/compose';
+import { useCopyToClipboard } from '@finpress/compose';
 import { recordEvent } from '@fincommerce/tracks';
 import { getSetting, getAdminLink } from '@fincommerce/settings';
-import { useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+import { useSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 
 /**
  * Internal dependencies

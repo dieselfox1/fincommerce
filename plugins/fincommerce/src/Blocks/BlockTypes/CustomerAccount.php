@@ -44,7 +44,7 @@ class CustomerAccount extends AbstractBlock {
 	protected function initialize() {
 		parent::initialize();
 		/**
-		 * The hooked_block_{$hooked_block_type} filter was added in WordPress 6.5.
+		 * The hooked_block_{$hooked_block_type} filter was added in finpress 6.5.
 		 * We are the only code adding the filter 'hooked_block_fincommerce/customer-account'.
 		 * Using has_filter() for a compatibility check won't work because add_filter() is used in the same file.
 		 */

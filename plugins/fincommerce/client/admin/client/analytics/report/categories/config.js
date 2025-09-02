@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
-import { dispatch } from '@wordpress/data';
+import { __, _x } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
+import { dispatch } from '@finpress/data';
 import { STORE_KEY as CES_STORE_KEY } from '@fincommerce/customer-effort-score';
 
 /**

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 
 export const SearchIcon = () => (
 	<svg

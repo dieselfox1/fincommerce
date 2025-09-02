@@ -110,8 +110,8 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 
 			$query['where']  .= "AND order_item_meta.meta_key = '_qty' ";
 			$query['where']  .= "AND order_item_meta_2.meta_key = '_product_id' ";
-			$query['where']  .= "AND orders.{$orders_column_date} >= '" . gmdate( 'Y-m-01', current_time( 'timestamp' ) ) . "' "; // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
-			$query['where']  .= "AND orders.{$orders_column_date} <= '" . gmdate( 'Y-m-d H:i:s', current_time( 'timestamp' ) ) . "' "; // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
+			$query['where']  .= "AND orders.{$orders_column_date} >= '" . gmdate( 'Y-m-01', current_time( 'timestamp' ) ) . "' "; // phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested
+			$query['where']  .= "AND orders.{$orders_column_date} <= '" . gmdate( 'Y-m-d H:i:s', current_time( 'timestamp' ) ) . "' "; // phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested
 			$query['groupby'] = 'GROUP BY product_id';
 			$query['orderby'] = 'ORDER BY qty DESC';
 			$query['limits']  = 'LIMIT 1';
@@ -126,7 +126,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 			$query = apply_filters( 'fincommerce_dashboard_status_widget_top_seller_query', $query );
 
 			$sql = implode( ' ', $query );
-			return $wpdb->get_row( $sql ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			return $wpdb->get_row( $sql ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		}
 
 		/**
@@ -194,7 +194,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				$net_sales_link      = $status_widget_reports['net_sales_link'];
 				$top_seller_link     = $status_widget_reports['top_seller_link'];
 
-				$days = max( 7, (int) gmdate( 'd', current_time( 'timestamp' ) ) ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested
+				$days = max( 7, (int) gmdate( 'd', current_time( 'timestamp' ) ) ); // phpcs:ignore finpress.DateTime.CurrentTimeTimestamp.Requested
 
 				$sparkline_allowed_html = array(
 					'span' => array(
@@ -218,7 +218,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 							/* translators: %s: net sales */
 							esc_html__( '%s net sales this month', 'fincommerce' ),
 							'<strong>' . wc_price( $report_data->net_sales ) . '</strong>'
-						); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+						); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 					?>
 					</a>
 				</li>
@@ -239,7 +239,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 							esc_html__( '%1$s top seller this month (sold %2$d)', 'fincommerce' ),
 							'<strong>' . get_the_title( $top_seller->product_id ) . '</strong>',
 							$top_seller->qty
-						); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+						); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 					?>
 					</a>
 				</li>
@@ -288,7 +288,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 						/* translators: %s: order count */
 						_n( '<strong>%s order</strong> awaiting processing', '<strong>%s orders</strong> awaiting processing', $processing_count, 'fincommerce' ),
 						$processing_count
-					); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+					); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 				?>
 				</a>
 			</li>
@@ -299,7 +299,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 						/* translators: %s: order count */
 						_n( '<strong>%s order</strong> on-hold', '<strong>%s orders</strong> on-hold', $on_hold_count, 'fincommerce' ),
 						$on_hold_count
-					); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+					); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 				?>
 				</a>
 			</li>
@@ -393,7 +393,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 						/* translators: %s: order count */
 						_n( '<strong>%s product</strong> low in stock', '<strong>%s products</strong> low in stock', $lowinstock_count, 'fincommerce' ),
 						$lowinstock_count
-					); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+					); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 				?>
 				</a>
 			</li>
@@ -404,7 +404,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 						/* translators: %s: order count */
 						_n( '<strong>%s product</strong> out of stock', '<strong>%s products</strong> out of stock', $outofstock_count, 'fincommerce' ),
 						$outofstock_count
-					); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+					); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 				?>
 				</a>
 			</li>
@@ -431,7 +431,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 			);
 
 			$comments = $wpdb->get_results(
-				"SELECT posts.ID, posts.post_title, comments.comment_author, comments.comment_author_email, comments.comment_ID, comments.comment_content {$query_from};" // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				"SELECT posts.ID, posts.post_title, comments.comment_author, comments.comment_author_email, comments.comment_ID, comments.comment_content {$query_from};" // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			);
 
 			if ( $comments ) {

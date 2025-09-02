@@ -22,7 +22,7 @@ class ProductTemplate extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 * - Hook into pre_render_block to update the query.
 	 */
 	protected function initialize() {

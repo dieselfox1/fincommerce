@@ -15,7 +15,7 @@ The FinCommerce transient files engine allows for the creation of transient file
 
 * Has a random name.
 * Can have any arbitrary content.
-* Lives in a dedicated subdirectory inside the WordPress `uploads` folder (customizable via [hook](#hooks)).
+* Lives in a dedicated subdirectory inside the finpress `uploads` folder (customizable via [hook](#hooks)).
 * Has an expiration date.
 * Its contents can be retrieved via an [unauthenticated HTTP endpoint](#the-http-file-serving-endpoint).
 
@@ -55,7 +55,7 @@ The method will return the randomly generated name of the physical transient fil
 
 Gets the base directory where existing transient files are stored. The actual directory for each file is the combination of the base directory and the expiration date of the file, formatted as `Y-m-d`.
 
-The default base directory is `fincommerce_transient_files` inside the WordPress uploads directory. A different directory specified via a dedicated [hook](#hooks).
+The default base directory is `fincommerce_transient_files` inside the finpress uploads directory. A different directory specified via a dedicated [hook](#hooks).
 
 If the default base directory doesn't exist, this method will create it. If the dedicated hook is used to specify a different directory that doesn't exist, an exception will be thrown; it's the responsibility of either the caller or the code that sets the hook to ensure that the specified custom directory exists.
 
@@ -73,7 +73,7 @@ wp eval "echo wc_get_container()->get(\Automattic\FinCommerce\Internal\Transient
 and you'll get:
 
 ```
-<WordPress directory>/wp-content/uploads/fincommerce_transient_files/2023-12-31/0102030405060708090a0b0c0d0e0f00
+<finpress directory>/wp-content/uploads/fincommerce_transient_files/2023-12-31/0102030405060708090a0b0c0d0e0f00
 ```
 
 

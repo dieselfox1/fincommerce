@@ -33,7 +33,7 @@ jest.mock( '../../../context/fulfillment-context', () => ( {
 } ) );
 
 // Mock ToggleControl to make testing easier
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	ToggleControl: ( props ) => (
 		<div data-testid="toggle-control">
 			<input

@@ -36,8 +36,8 @@ class WC_Download_Handler {
 	 * Check if we need to download a file and check validity.
 	 */
 	public static function download_product() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
-		$product_id = absint( $_GET['download_file'] ); // phpcs:ignore WordPress.VIP.SuperGlobalInputUsage.AccessDetected, WordPress.VIP.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
+		$product_id = absint( $_GET['download_file'] ); // phpcs:ignore finpress.VIP.SuperGlobalInputUsage.AccessDetected, finpress.VIP.ValidatedSanitizedInput.InputNotValidated, finpress.Security.ValidatedSanitizedInput.InputNotValidated
 		$product    = wc_get_product( $product_id );
 		$downloads  = $product ? $product->get_downloads() : array();
 		$data_store = WC_Data_Store::load( 'customer-download' );
@@ -58,7 +58,7 @@ class WC_Download_Handler {
 		if ( empty( $_GET['email'] ) && empty( $_GET['uid'] ) ) { // WPCS: input var ok, CSRF ok.
 			self::download_error( __( 'Invalid download link.', 'fincommerce' ) );
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		$order_id = wc_get_order_id_by_order_key( wc_clean( wp_unslash( $_GET['order'] ) ) ); // WPCS: input var ok, CSRF ok.
 		$order    = wc_get_order( $order_id );
@@ -565,10 +565,10 @@ class WC_Download_Handler {
 	private static function check_server_config() {
 		wc_set_time_limit( 0 );
 		if ( function_exists( 'apache_setenv' ) ) {
-			@apache_setenv( 'no-gzip', 1 ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_apache_setenv
+			@apache_setenv( 'no-gzip', 1 ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.PHP.DiscouragedPHPFunctions.runtime_configuration_apache_setenv
 		}
-		@ini_set( 'zlib.output_compression', 'Off' ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_ini_set
-		@session_write_close(); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.VIP.SessionFunctionsUsage.session_session_write_close
+		@ini_set( 'zlib.output_compression', 'Off' ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.PHP.DiscouragedPHPFunctions.runtime_configuration_ini_set
+		@session_write_close(); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.VIP.SessionFunctionsUsage.session_session_write_close
 	}
 
 	/**
@@ -617,7 +617,7 @@ class WC_Download_Handler {
 		if ( ! defined( 'WC_CHUNK_SIZE' ) ) {
 			define( 'WC_CHUNK_SIZE', 1024 * 1024 );
 		}
-		$handle = @fopen( $file, 'r' ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fopen
+		$handle = @fopen( $file, 'r' ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_system_read_fopen
 
 		if ( false === $handle ) {
 			return false;
@@ -641,7 +641,7 @@ class WC_Download_Handler {
 					$read_length = $end - $p + 1;
 				}
 
-				echo @fread( $handle, $read_length ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.XSS.EscapeOutput.OutputNotEscaped, WordPress.WP.AlternativeFunctions.file_system_read_fread
+				echo @fread( $handle, $read_length ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.XSS.EscapeOutput.OutputNotEscaped, finpress.WP.AlternativeFunctions.file_system_read_fread
 				$p = @ftell( $handle ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
 
 				if ( ob_get_length() ) {
@@ -659,7 +659,7 @@ class WC_Download_Handler {
 			}
 		}
 
-		return @fclose( $handle ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.file_system_read_fclose
+		return @fclose( $handle ); // phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged, finpress.WP.AlternativeFunctions.file_system_read_fclose
 	}
 
 	/**

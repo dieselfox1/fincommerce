@@ -56,7 +56,7 @@ class GroupedProductItem extends AbstractBlock {
 		// Since this template uses the core/post-title block to show the product name
 		// a temporally replacement of the global post is needed. This is reverted back
 		// to its initial post value that is stored in the $previous_post variable.
-		$post    = get_post( $product_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$post    = get_post( $product_id ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$product = wc_get_product( $product_id );
 
 		add_filter( 'render_block_context', array( $this, 'set_is_descendant_of_grouped_product_selector_context' ), 10, 2 );
@@ -73,7 +73,7 @@ class GroupedProductItem extends AbstractBlock {
 
 		remove_filter( 'render_block_context', array( $this, 'set_is_descendant_of_grouped_product_selector_context' ) );
 
-		$post    = $previous_post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$post    = $previous_post; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$product = $previous_product;
 		return $block_content;
 	}

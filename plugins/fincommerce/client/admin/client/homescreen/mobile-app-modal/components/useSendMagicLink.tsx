@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useState, useCallback } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useState, useCallback } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { WC_ADMIN_NAMESPACE } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
-import apiFetch from '@wordpress/api-fetch';
+import { useDispatch } from '@finpress/data';
+import apiFetch from '@finpress/api-fetch';
 import { recordEvent } from '@fincommerce/tracks';
 
 export const SendMagicLinkStates = {

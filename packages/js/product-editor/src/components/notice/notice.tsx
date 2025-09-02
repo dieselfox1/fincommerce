@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { ReactNode } from 'react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import clsx from 'clsx';
-import { Button } from '@wordpress/components';
-import { closeSmall } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { closeSmall } from '@finpress/icons';
 
 export type NoticeProps = {
 	title?: string;

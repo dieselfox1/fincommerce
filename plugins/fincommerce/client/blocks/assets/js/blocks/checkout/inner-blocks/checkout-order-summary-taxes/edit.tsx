@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { useBlockProps, InspectorControls } from '@finpress/block-editor';
+import { PanelBody, ToggleControl } from '@finpress/components';
 import { getSetting } from '@fincommerce/settings';
 
 /**

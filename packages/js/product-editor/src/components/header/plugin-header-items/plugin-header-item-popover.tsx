@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment, useState } from '@wordpress/element';
-import { Button, Popover } from '@wordpress/components';
-import { plugins } from '@wordpress/icons';
+import { createElement, Fragment, useState } from '@finpress/element';
+import { Button, Popover } from '@finpress/components';
+import { plugins } from '@finpress/icons';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import PinnedItems from '@wordpress/interface/build-module/components/pinned-items';
+import PinnedItems from '@finpress/interface/build-module/components/pinned-items';
 
 /**
  * Internal dependencies

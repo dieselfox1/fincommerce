@@ -6,11 +6,11 @@ import '../../test/__mocks__/setup-shared-mocks';
  */
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import {
 	// @ts-expect-error -- It is not exported yet.
 	useEntitiesSavedStatesIsDirty,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies
@@ -19,7 +19,7 @@ import { SendButton } from '../send-button';
 import { storeName } from '../../../store';
 import { recordEvent } from '../../../events';
 
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	Button: ( props ) => <button { ...props }>{ props.children }</button>,
 } ) );
 

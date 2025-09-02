@@ -12,12 +12,12 @@ import {
 	__experimentalProductMVPFeedbackModalContainer as ProductMVPFeedbackModalContainer,
 } from '@fincommerce/product-editor';
 import { recordEvent } from '@fincommerce/tracks';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { WooFooterItem } from '@fincommerce/admin-layout';
-import { registerPlugin, unregisterPlugin } from '@wordpress/plugins';
+import { registerPlugin, unregisterPlugin } from '@finpress/plugins';
 import { useParams } from 'react-router-dom';
-import { Spinner } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Spinner } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

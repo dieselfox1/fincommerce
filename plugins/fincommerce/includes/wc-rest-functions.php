@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * Parses and formats a date for ISO8601/RFC3339.
  *
  * Required WP 4.4 or later.
- * See https://developer.wordpress.org/reference/functions/mysql_to_rfc3339/
+ * See https://developer.finpress.org/reference/functions/mysql_to_rfc3339/
  *
  * @since  2.6.0
  * @param  string|null|WC_DateTime $date Date.

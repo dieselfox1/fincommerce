@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { CurrencyContext } from '@fincommerce/currency';
-import { useContext } from '@wordpress/element';
+import { useContext } from '@finpress/element';
 
 /**
  * Internal dependencies

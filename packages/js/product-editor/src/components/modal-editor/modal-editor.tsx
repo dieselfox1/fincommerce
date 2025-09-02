@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
-import { createElement } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+import { BlockInstance } from '@finpress/blocks';
+import { createElement } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import {
 	EditorSettings,
 	EditorBlockListSettings,
-} from '@wordpress/block-editor';
-import { Modal } from '@wordpress/components';
-import { useDebounce } from '@wordpress/compose';
+} from '@finpress/block-editor';
+import { Modal } from '@finpress/components';
+import { useDebounce } from '@finpress/compose';
 
 /**
  * Internal dependencies

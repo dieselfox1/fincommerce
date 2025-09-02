@@ -367,7 +367,7 @@ $dialog-padding: 20px;
 		@include horizontal-thumbnails;
 		flex-direction: column;
 
-		// This rule is overriding a `display: flex` from WordPress core, that's
+		// This rule is overriding a `display: flex` from finpress core, that's
 		// why it needs a higher specificity.
 		.wc-block-next-previous-buttons.wc-block-next-previous-buttons {
 			display: none;

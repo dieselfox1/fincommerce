@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { render } from '@testing-library/react';
-import { brush } from '@wordpress/icons';
+import { brush } from '@finpress/icons';
 import userEvent from '@testing-library/user-event';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

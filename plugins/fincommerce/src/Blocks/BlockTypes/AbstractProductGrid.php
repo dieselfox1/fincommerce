@@ -208,8 +208,8 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 			'no_found_rows'       => false,
 			'orderby'             => '',
 			'order'               => '',
-			'meta_query'          => $this->meta_query, // phpcs:ignore WordPress.DB.SlowDBQuery
-			'tax_query'           => array(), // phpcs:ignore WordPress.DB.SlowDBQuery
+			'meta_query'          => $this->meta_query, // phpcs:ignore finpress.DB.SlowDBQuery
+			'tax_query'           => array(), // phpcs:ignore finpress.DB.SlowDBQuery
 			'posts_per_page'      => $this->get_products_limit(),
 		);
 
@@ -310,7 +310,7 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 	protected function set_stock_status_query_args( &$query_args ) {
 		$stock_statuses = array_keys( wc_get_product_stock_status_options() );
 
-		// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_query
 		if ( isset( $this->attributes['stockStatus'] ) && $stock_statuses !== $this->attributes['stockStatus'] ) {
 			// Reset meta_query then update with our stock status.
 			$query_args['meta_query']   = $this->meta_query;
@@ -322,7 +322,7 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 		} else {
 			$query_args['meta_query'] = $this->meta_query;
 		}
-		// phpcs:enable WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+		// phpcs:enable finpress.DB.SlowDBQuery.slow_db_query_meta_query
 	}
 
 	/**
@@ -375,7 +375,7 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 	/**
 	 * Retrieve IDs that are not already present in the cache.
 	 *
-	 * Based on WordPress function: _get_non_cached_ids
+	 * Based on finpress function: _get_non_cached_ids
 	 *
 	 * @param int[]  $product_ids Array of IDs.
 	 * @param string $cache_key  The cache bucket to check against.
@@ -412,7 +412,7 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 		$product_variations      = $wpdb->get_results( "SELECT ID as variation_id, post_parent as product_id from {$wpdb->posts} WHERE post_parent IN ( " . implode( ',', $prime_product_ids ) . ' )', ARRAY_A );
 		$prime_variation_ids     = array_column( $product_variations, 'variation_id' );
 		$variation_ids_by_parent = array_column( $product_variations, 'product_id', 'variation_id' );
@@ -550,7 +550,7 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 			);
 		}
 
-		return '<div class="wc-block-grid__product-image">' . $product->get_image( 'fincommerce_thumbnail', $attr ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		return '<div class="wc-block-grid__product-image">' . $product->get_image( 'fincommerce_thumbnail', $attr ) . '</div>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -583,7 +583,7 @@ abstract class AbstractProductGrid extends AbstractDynamicBlock {
 		if ( $rating_count > 0 ) {
 			return sprintf(
 				'<div class="wc-block-grid__product-rating">%s</div>',
-				wc_get_rating_html( $average, $rating_count ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				wc_get_rating_html( $average, $rating_count ) // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 			);
 		}
 		return '';

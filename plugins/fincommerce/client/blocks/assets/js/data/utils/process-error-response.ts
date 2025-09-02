@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { createNotice, DEFAULT_ERROR_MESSAGE } from '@fincommerce/base-utils';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import {
 	objectHasProp,
 	ApiErrorResponse,

@@ -117,7 +117,7 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 	 * @param mixed $wc_order_id The order id to check the response against.
 	 */
 	public function check_response_for_order( $wc_order_id ) {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( empty( $_REQUEST['tx'] ) ) {
 			return;
 		}
@@ -127,7 +127,7 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$transaction        = wc_clean( wp_unslash( $_REQUEST['tx'] ) );
 		$transaction_result = $this->validate_transaction( $transaction );
 

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getElement, store, getContext } from '@wordpress/interactivity';
+import { getElement, store, getContext } from '@finpress/interactivity';
 import '@fincommerce/stores/fincommerce/product-data';
 import type { ProductDataStore } from '@fincommerce/stores/fincommerce/product-data';
 import type {

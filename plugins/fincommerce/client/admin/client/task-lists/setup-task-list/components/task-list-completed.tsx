@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Button, Card, CardHeader } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { Button, Card, CardHeader } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

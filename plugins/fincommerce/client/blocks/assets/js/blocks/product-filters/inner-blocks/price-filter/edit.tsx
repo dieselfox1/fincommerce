@@ -5,9 +5,9 @@ import {
 	BlockContextProvider,
 	useBlockProps,
 	InnerBlocks,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { useCollectionData } from '@fincommerce/base-context/hooks';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

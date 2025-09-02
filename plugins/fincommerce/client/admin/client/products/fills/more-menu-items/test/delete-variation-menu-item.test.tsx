@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, fireEvent } from '@testing-library/react';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 import { useParams } from 'react-router-dom';
 
@@ -11,8 +11,8 @@ import { useParams } from 'react-router-dom';
  */
 import { DeleteVariationMenuItem } from '../delete-variation-menu-item';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useDispatch: jest.fn(),
 	useSelect: jest.fn(),
 } ) );
@@ -20,7 +20,7 @@ jest.mock( '@fincommerce/tracks', () => ( { recordEvent: jest.fn() } ) );
 
 jest.mock( 'react-router-dom', () => ( { useParams: jest.fn() } ) );
 
-jest.mock( '@wordpress/core-data', () => ( {
+jest.mock( '@finpress/core-data', () => ( {
 	useEntityId: jest.fn().mockReturnValue( 'variation_1' ),
 	useEntityProp: jest
 		.fn()

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG } from '@wordpress/primitives';
+import { SVG } from '@finpress/primitives';
 import clsx from 'clsx';
 
 interface ComponentProps {

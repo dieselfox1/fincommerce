@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Location } from 'react-router-dom';
-import { useEffect, useMemo } from '@wordpress/element';
+import { useEffect, useMemo } from '@finpress/element';
 
 /**
  * Internal dependencies

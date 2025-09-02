@@ -5,8 +5,8 @@ import {
 	useBlockProps,
 	InnerBlocks,
 	InspectorControls,
-} from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
+} from '@finpress/block-editor';
+import { PanelBody } from '@finpress/components';
 
 /**
  * Internal dependencies

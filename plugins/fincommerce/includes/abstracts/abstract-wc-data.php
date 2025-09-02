@@ -632,7 +632,7 @@ abstract class WC_Data {
 		}
 
 		if ( ! empty( $this->cache_group ) ) {
-			// Prefix by group allows invalidation by group until https://core.trac.wordpress.org/ticket/4476 is implemented.
+			// Prefix by group allows invalidation by group until https://core.trac.finpress.org/ticket/4476 is implemented.
 			$cache_key = $this->get_meta_cache_key();
 		}
 

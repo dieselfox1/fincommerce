@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useMemo } from '@wordpress/element';
+import { useState, useEffect, useMemo } from '@finpress/element';
 import { useDebounce } from 'use-debounce';
 import {
 	objectHasProp,

@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useLayoutEffect } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { ToolbarGroup, ToolbarDropdownMenu } from '@wordpress/components';
-import { BlockControls } from '@wordpress/block-editor';
-import { Icon } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { useLayoutEffect } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { ToolbarGroup, ToolbarDropdownMenu } from '@finpress/components';
+import { BlockControls } from '@finpress/block-editor';
+import { Icon } from '@finpress/icons';
 import { eye } from '@fincommerce/icons';
 
 /**

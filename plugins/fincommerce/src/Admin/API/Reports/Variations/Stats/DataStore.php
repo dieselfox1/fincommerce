@@ -185,7 +185,7 @@ class DataStore extends VariationsDataStore implements DataStoreInterface {
 		$this->get_limit_sql_params( $query_args );
 		$this->interval_query->add_sql_clause( 'where_time', $this->get_sql_clause( 'where_time' ) );
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.NotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.NotPrepared */
 		$db_intervals = $wpdb->get_col(
 			$this->interval_query->get_query_statement()
 		);
@@ -198,7 +198,7 @@ class DataStore extends VariationsDataStore implements DataStoreInterface {
 		$this->total_query->add_sql_clause( 'select', $selections );
 		$this->total_query->add_sql_clause( 'where_time', $this->get_sql_clause( 'where_time' ) );
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.NotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.NotPrepared */
 		$totals = $wpdb->get_results(
 			$this->total_query->get_query_statement(),
 			ARRAY_A
@@ -234,7 +234,7 @@ class DataStore extends VariationsDataStore implements DataStoreInterface {
 			$this->interval_query->add_sql_clause( 'select', ', ' . $selections );
 		}
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.NotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.NotPrepared */
 		$intervals = $wpdb->get_results(
 			$this->interval_query->get_query_statement(),
 			ARRAY_A

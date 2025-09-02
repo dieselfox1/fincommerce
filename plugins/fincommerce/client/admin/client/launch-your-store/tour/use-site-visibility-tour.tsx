@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { optionsStore, useUserPreferences } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useState } from 'react';
 
 export const useSiteVisibilityTour = () => {

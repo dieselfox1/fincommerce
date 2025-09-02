@@ -168,8 +168,8 @@ class Integration {
 		}
 
 		// We need to check early if we are on the email editor page. The check runs early so we can't use current_screen() here.
-		if ( is_admin() && isset( $_GET['post'] ) && isset( $_GET['action'] ) && 'edit' === $_GET['action'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
-			$post = get_post( (int) $_GET['post'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
+		if ( is_admin() && isset( $_GET['post'] ) && isset( $_GET['action'] ) && 'edit' === $_GET['action'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
+			$post = get_post( (int) $_GET['post'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended -- We are not verifying the nonce here because we are not using the nonce in the function and the data is okay in this context (WP-admin errors out gracefully).
 			return $post && self::EMAIL_POST_TYPE === $post->post_type;
 		}
 
@@ -278,8 +278,8 @@ class Integration {
 		if ( $post_body ) {
 			$decoded_body = json_decode( $post_body );
 
-			if ( json_last_error() === JSON_ERROR_NONE && isset( $decoded_body->postId ) ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-				$post_id = absint( $decoded_body->postId ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			if ( json_last_error() === JSON_ERROR_NONE && isset( $decoded_body->postId ) ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				$post_id = absint( $decoded_body->postId ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 
 				$email_type = WCTransactionalEmailPostsManager::get_instance()->get_email_type_from_post_id( $post_id );
 				if ( ! empty( $email_type ) ) {
@@ -323,7 +323,7 @@ class Integration {
 	 * @return string The updated preview HTML with placeholders replaced.
 	 */
 	public function update_preview_post_template_html_data( $data ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		// Nonce verification is disabled here because the preview action doesn't modify data,
 		// and the check caused issues with the 'Preview in new tab' feature due to context changes.
 		$type_param = isset( $_GET['woo_email'] ) ? sanitize_text_field( wp_unslash( $_GET['woo_email'] ) ) : '';

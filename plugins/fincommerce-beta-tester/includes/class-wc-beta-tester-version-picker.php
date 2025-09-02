@@ -37,7 +37,7 @@ class WC_Beta_Tester_Version_Picker {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if ( ! wp_verify_nonce( wp_unslash( $_GET['_wpnonce'] ), 'wcbt_switch_version_nonce' ) ) {
 			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'fincommerce-beta-tester' ) );
 		}
@@ -59,7 +59,7 @@ class WC_Beta_Tester_Version_Picker {
 				'title'   => 'Version switch result',
 				'plugin'  => $plugin_name,
 				'version' => $version,
-				'nonce'   => wp_unslash( $_GET['_wpnonce'] ), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				'nonce'   => wp_unslash( $_GET['_wpnonce'] ), // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			);
 
 			$skin     = new Automatic_Upgrader_Skin( $skin_args );
@@ -130,10 +130,10 @@ class WC_Beta_Tester_Version_Picker {
 		$versions_html = '';
 
 		// The nonce is validated upstream.
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! empty( $_GET['switched'] ) ) {
 			/* translators: %s: FinCommerce version  */
-			$versions_html .= '<div class="notice notice-success"><p>' . sprintf( esc_html__( 'Successfully switched version to %s.', 'fincommerce-beta-tester' ), esc_html( sanitize_text_field( wp_unslash( $_GET['switched'] ) ) ) ) . '</p></div>'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$versions_html .= '<div class="notice notice-success"><p>' . sprintf( esc_html__( 'Successfully switched version to %s.', 'fincommerce-beta-tester' ), esc_html( sanitize_text_field( wp_unslash( $_GET['switched'] ) ) ) ) . '</p></div>'; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
 		$versions_html        .= '<ul class="wcbt-version-list">';
@@ -180,7 +180,7 @@ class WC_Beta_Tester_Version_Picker {
 						<a href="#wcbt-modal-version-switch-confirm" class="button-primary" id="wcbt-modal-version-switch-confirm"><?php esc_html_e( 'Switch version', 'fincommerce-beta-tester' ); ?></a>
 					</div>
 					<div class="wcbt-versions-wrap">
-						<?php echo $this->get_versions_html( $channel ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo $this->get_versions_html( $channel ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 					</div>
 					<div class="wcbt-submit-wrap">
 						<a href="#wcbt-modal-version-switch-confirm" class="button-primary" id="wcbt-modal-version-switch-confirm"><?php esc_html_e( 'Switch version', 'fincommerce-beta-tester' ); ?></a>
@@ -222,7 +222,7 @@ class WC_Beta_Tester_Version_Picker {
 											</tbody>
 										</table>
 
-										<p class="wcbt-notice"><?php esc_html_e( 'Notice: We strongly recommend you perform the test on a staging site and create a complete backup of your WordPress files and database prior to performing a version switch. We are not responsible for any misuse, deletions, white screens, fatal errors, or any other issue arising from using this plugin.', 'fincommerce-beta-tester' ); ?></p>
+										<p class="wcbt-notice"><?php esc_html_e( 'Notice: We strongly recommend you perform the test on a staging site and create a complete backup of your finpress files and database prior to performing a version switch. We are not responsible for any misuse, deletions, white screens, fatal errors, or any other issue arising from using this plugin.', 'fincommerce-beta-tester' ); ?></p>
 									</article>
 									<footer>
 										<input type="submit" value="<?php esc_attr_e( 'Switch version', 'fincommerce-beta-tester' ); ?>" class="button-primary wcbt-go" id="wcbt-submit-version-switch"/>&nbsp;

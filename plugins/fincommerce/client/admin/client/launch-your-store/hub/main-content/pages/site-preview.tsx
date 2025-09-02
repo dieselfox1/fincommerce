@@ -2,15 +2,15 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useState, useRef, useEffect } from '@wordpress/element';
+import { useState, useRef, useEffect } from '@finpress/element';
 import { Spinner } from '@fincommerce/components';
-import { useResizeObserver } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { useResizeObserver } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore No types for this exist yet.
 	__unstableMotion as motion,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

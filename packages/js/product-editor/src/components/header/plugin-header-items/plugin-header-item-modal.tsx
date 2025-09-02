@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment, useState } from '@wordpress/element';
-import { Button, Modal } from '@wordpress/components';
-import { plugins } from '@wordpress/icons';
-import PinnedItems from '@wordpress/interface/build-module/components/pinned-items';
+import { createElement, Fragment, useState } from '@finpress/element';
+import { Button, Modal } from '@finpress/components';
+import { plugins } from '@finpress/icons';
+import PinnedItems from '@finpress/interface/build-module/components/pinned-items';
 
 /**
  * Internal dependencies

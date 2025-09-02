@@ -113,7 +113,7 @@ class MercadoPago extends PaymentGateway {
 		global $mercadopago;
 
 		try {
-			// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:disable finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			if ( class_exists( '\MercadoPago\Fincommerce\fincommerceMercadoPago' ) &&
 				class_exists( '\MercadoPago\Fincommerce\Configs\Store' ) &&
 				$mercadopago instanceof \MercadoPago\Fincommerce\fincommerceMercadoPago &&
@@ -154,7 +154,7 @@ class MercadoPago extends PaymentGateway {
 		global $mercadopago;
 
 		try {
-			// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			// phpcs:disable finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 			if ( class_exists( '\MercadoPago\Fincommerce\fincommerceMercadoPago' ) &&
 				class_exists( '\MercadoPago\Fincommerce\Configs\Seller' ) &&
 				$mercadopago instanceof \MercadoPago\Fincommerce\fincommerceMercadoPago &&

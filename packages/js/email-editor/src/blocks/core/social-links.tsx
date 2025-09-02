@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { InspectorControls } from '@wordpress/block-editor';
-import { addFilter } from '@wordpress/hooks';
-import { registerBlockVariation } from '@wordpress/blocks';
-import type { Block, InnerBlockTemplate } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import { InspectorControls } from '@finpress/block-editor';
+import { addFilter } from '@finpress/hooks';
+import { registerBlockVariation } from '@finpress/blocks';
+import type { Block, InnerBlockTemplate } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 // Add support for top social networks
 const supportedVariations = [
@@ -33,7 +33,7 @@ const supportedVariations = [
 	'twitch',
 	'twitter',
 	'vimeo',
-	'wordpress',
+	'finpress',
 	'whatsapp',
 	'x',
 	'youtube',
@@ -72,8 +72,8 @@ function registerCustomSocialLinksBlockVariation() {
 			// @ts-expect-error Type not complete.
 			name: 'core/social-link',
 			attributes: {
-				service: 'wordpress',
-				url: 'https://wordpress.org',
+				service: 'finpress',
+				url: 'https://finpress.org',
 			},
 		},
 		{
@@ -81,7 +81,7 @@ function registerCustomSocialLinksBlockVariation() {
 			name: 'core/social-link',
 			attributes: {
 				service: 'facebook',
-				url: 'https://www.facebook.com/WordPress/',
+				url: 'https://www.facebook.com/finpress/',
 			},
 		},
 		{
@@ -89,7 +89,7 @@ function registerCustomSocialLinksBlockVariation() {
 			name: 'core/social-link',
 			attributes: {
 				service: 'x',
-				url: 'https://x.com/WordPress',
+				url: 'https://x.com/finpress',
 			},
 		},
 	];
@@ -115,7 +115,7 @@ const disableIconColor =
 		}
 		// we are doing this because we don't want to show the icon color picker in the social links block (we can't change png image color)
 		// and there isn't a great way to remove the icon color from the core block attributes
-		// eslint-disable-next-line @wordpress/i18n-text-domain -- using core label.
+		// eslint-disable-next-line @finpress/i18n-text-domain -- using core label.
 		const labelText = __( 'Icon color' );
 		const customCss = `
 		.block-editor-tools-panel-color-gradient-settings__item:has([title="${ labelText }"]) {

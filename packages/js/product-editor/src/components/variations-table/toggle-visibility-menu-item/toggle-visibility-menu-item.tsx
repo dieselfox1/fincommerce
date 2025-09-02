@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { MenuItem } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { MenuItem } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

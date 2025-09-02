@@ -9,15 +9,15 @@ import {
 	useMultipleSelection,
 	GetInputPropsOptions,
 } from 'downshift';
-import { useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@finpress/compose';
 import {
 	useState,
 	useEffect,
 	createElement,
 	Fragment,
 	useRef,
-} from '@wordpress/element';
-import { chevronDown } from '@wordpress/icons';
+} from '@finpress/element';
+import { chevronDown } from '@finpress/icons';
 
 /**
  * Internal dependencies

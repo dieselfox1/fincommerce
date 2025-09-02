@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { Gridicon } from '@automattic/components';
-import { Button, Placeholder, SelectControl } from '@wordpress/components';
-import React, { lazy, Suspense, useEffect } from '@wordpress/element';
+import { Button, Placeholder, SelectControl } from '@finpress/components';
+import React, { lazy, Suspense, useEffect } from '@finpress/element';
 import {
 	unstable_HistoryRouter as HistoryRouter,
 	Route,
@@ -11,7 +11,7 @@ import {
 	useLocation,
 } from 'react-router-dom';
 import { getHistory, getNewPath } from '@fincommerce/navigation';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { SearchListControl } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const SearchListControlExample = ( { showCount, isCompact, isSingle } ) => {
 	const [ selected, setSelected ] = useState( [] );

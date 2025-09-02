@@ -5,9 +5,9 @@ import {
 	AlignmentToolbar,
 	BlockControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
-import { useEffect } from '@wordpress/element';
-import type { BlockAlignment } from '@wordpress/blocks';
+} from '@finpress/block-editor';
+import { useEffect } from '@finpress/element';
+import type { BlockAlignment } from '@finpress/blocks';
 import { isExperimentalWcRestApiEnabled } from '@fincommerce/block-settings';
 import { useProduct } from '@fincommerce/entities';
 

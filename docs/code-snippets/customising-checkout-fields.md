@@ -208,7 +208,7 @@ Priority in regards to PHP code helps establish when a bit of code - called a fu
 
 Code with a higher number set as the priority will run after code with a lower number, meaning code with a priority of 20 will run after code with 10 priority.
 
-The priority argument is set during the [add_action](https://developer.wordpress.org/reference/functions/add_action/) function, after you establish which hook you're connecting to and what the name of your custom function will be.
+The priority argument is set during the [add_action](https://developer.finpress.org/reference/functions/add_action/) function, after you establish which hook you're connecting to and what the name of your custom function will be.
 
 In the example below, blue text is the name of the hook we're modifying, green text is the name of our custom function, and red is the priority we set.
 

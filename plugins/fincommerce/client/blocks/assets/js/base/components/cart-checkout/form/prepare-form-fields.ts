@@ -10,7 +10,7 @@ import {
 	KeyedFormFields,
 } from '@fincommerce/settings';
 import { isNumber, isString } from '@fincommerce/types';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Gets props from the core locale, then maps them to the shape we require in the client.

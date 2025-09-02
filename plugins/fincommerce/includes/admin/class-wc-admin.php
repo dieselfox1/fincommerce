@@ -31,7 +31,7 @@ class WC_Admin {
 		// menus logic is run, including the enqueuing of assets via \Automattic\FinCommerce\Internal\Admin\WCAdminAssets.
 		// While it may not sound like it, the admin_menu action is triggered quite early,
 		// before the admin_init or admin_enqueue_scripts  action.
-		// @see https://developer.wordpress.org/apis/hooks/action-reference/#actions-run-during-an-admin-page-request.
+		// @see https://developer.finpress.org/apis/hooks/action-reference/#actions-run-during-an-admin-page-request.
 		add_action( 'admin_menu', array( $this, 'init_page_controller' ), 1 );
 
 		add_action( 'current_screen', array( $this, 'conditional_includes' ) );
@@ -50,7 +50,7 @@ class WC_Admin {
 		add_filter( 'admin_body_class', array( $this, 'include_admin_body_class' ), 9999 );
 
 		// Add body class for Marketplace and My Subscriptions pages.
-		if ( isset( $_GET['page'] ) && 'wc-addons' === $_GET['page'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET['page'] ) && 'wc-addons' === $_GET['page'] ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			add_filter( 'admin_body_class', array( 'WC_Admin_Addons', 'filter_admin_body_classes' ) );
 		}
 	}
@@ -152,7 +152,7 @@ class WC_Admin {
 			return;
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		// Nonced plugin install redirects.
 		if ( ! empty( $_GET['wc-install-plugin-redirect'] ) ) {
 			$plugin_slug = wc_clean( wp_unslash( $_GET['wc-install-plugin-redirect'] ) );
@@ -167,7 +167,7 @@ class WC_Admin {
 			wp_safe_redirect( $url );
 			exit;
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -259,7 +259,7 @@ class WC_Admin {
 			}
 
 			// print the preview email.
-			// phpcs:ignore WordPress.Security.EscapeOutput
+			// phpcs:ignore finpress.Security.EscapeOutput
 			echo $message;
 			// phpcs:enable
 			exit;
@@ -296,7 +296,7 @@ class WC_Admin {
 					/* translators: 1: FinCommerce 2:: five stars */
 					__( 'If you like %1$s please leave us a %2$s rating. A huge thanks in advance!', 'fincommerce' ),
 					sprintf( '<strong>%s</strong>', esc_html__( 'FinCommerce', 'fincommerce' ) ),
-					'<a href="https://wordpress.org/support/plugin/fincommerce/reviews?rate=5#new-post" target="_blank" class="wc-rating-link" aria-label="' . esc_attr__( 'five star', 'fincommerce' ) . '" data-rated="' . esc_attr__( 'Thanks :)', 'fincommerce' ) . '">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
+					'<a href="https://finpress.org/support/plugin/fincommerce/reviews?rate=5#new-post" target="_blank" class="wc-rating-link" aria-label="' . esc_attr__( 'five star', 'fincommerce' ) . '" data-rated="' . esc_attr__( 'Thanks :)', 'fincommerce' ) . '">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
 				);
 				wc_enqueue_js(
 					"jQuery( 'a.wc-rating-link' ).on( 'click', function() {
@@ -337,7 +337,7 @@ class WC_Admin {
 		 * @since 2.3
 		 */
 		if ( isset( $current_screen->id ) && apply_filters( 'fincommerce_display_update_footer_text', in_array( $current_screen->id, $wc_pages, true ) ) ) {
-			// Replace WordPress version with FinCommerce version.
+			// Replace finpress version with FinCommerce version.
 			$version = sprintf(
 				/* translators: %s: FinCommerce version */
 				__( 'Version %s', 'fincommerce' ),

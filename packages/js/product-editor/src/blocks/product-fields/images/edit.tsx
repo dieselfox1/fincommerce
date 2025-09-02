@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { DragEvent } from 'react';
-import { __, sprintf } from '@wordpress/i18n';
-import { BlockAttributes } from '@wordpress/blocks';
-import { DropZone } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { BlockAttributes } from '@finpress/blocks';
+import { DropZone } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
 import clsx from 'clsx';
-import { createElement, useState } from '@wordpress/element';
-import { Icon, trash } from '@wordpress/icons';
-import { MediaItem } from '@wordpress/media-utils';
+import { createElement, useState } from '@finpress/element';
+import { Icon, trash } from '@finpress/icons';
+import { MediaItem } from '@finpress/media-utils';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import {
 	MediaUploader,
@@ -21,7 +21,7 @@ import { recordEvent } from '@fincommerce/tracks';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityProp } from '@wordpress/core-data';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

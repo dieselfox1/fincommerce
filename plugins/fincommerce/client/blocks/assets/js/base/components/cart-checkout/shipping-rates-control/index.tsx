@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
 import { usePrevious } from '@fincommerce/base-hooks';
 import LoadingMask from '@fincommerce/base-components/loading-mask';
 import { ExperimentalOrderShippingPackages } from '@fincommerce/blocks-checkout';

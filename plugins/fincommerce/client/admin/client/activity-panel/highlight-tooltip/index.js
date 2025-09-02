@@ -2,7 +2,7 @@
  * External dependencies
  */
 import PropTypes from 'prop-types';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	Popover,
 	Card,
@@ -10,9 +10,9 @@ import {
 	CardHeader,
 	CardFooter,
 	Button,
-} from '@wordpress/components';
-import { useState, useEffect, createPortal } from '@wordpress/element';
-import { close } from '@wordpress/icons';
+} from '@finpress/components';
+import { useState, useEffect, createPortal } from '@finpress/element';
+import { close } from '@finpress/icons';
 import { noop } from 'lodash';
 
 /**

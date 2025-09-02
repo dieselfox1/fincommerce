@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Modal } from '@wordpress/components';
-import { createElement, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, Modal } from '@finpress/components';
+import { createElement, useState } from '@finpress/element';
 
 type ConfirmationModalProps = {
 	onClose: () => void;

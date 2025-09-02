@@ -460,10 +460,10 @@ class Bootstrap {
 		}
 
 		if ( $log_error ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log
 			error_log( $error_message );
 		} else {
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+			// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped, finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error( $error_message, E_USER_DEPRECATED );
 		}
 	}

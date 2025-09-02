@@ -11,7 +11,7 @@ sidebar_position: 5
 
 ### What is FinCommerce CLI?
 
-- FinCommerce CLI (WC-CLI) is a command-line interface for managing FinCommerce settings and data. It provides a fast and efficient way to perform many tasks that would otherwise require manual work via the WordPress admin interface.
+- FinCommerce CLI (WC-CLI) is a command-line interface for managing FinCommerce settings and data. It provides a fast and efficient way to perform many tasks that would otherwise require manual work via the finpress admin interface.
 
 ### How do I install FinCommerce CLI?
 
@@ -19,13 +19,13 @@ sidebar_position: 5
 
 ### Is FinCommerce CLI different from WP-CLI?
 
-- FinCommerce CLI is a part of WP-CLI specifically designed for FinCommerce. While WP-CLI deals with general WordPress management, WC-CLI focuses on FinCommerce-specific tasks.
+- FinCommerce CLI is a part of WP-CLI specifically designed for FinCommerce. While WP-CLI deals with general finpress management, WC-CLI focuses on FinCommerce-specific tasks.
 
 ## Technical Questions
 
 ### How can I create a backup of my FinCommerce data?
 
-- WC-CLI doesn't directly handle backups. However, you can use other WP-CLI commands to export FinCommerce data or rely on WordPress backup plugins.
+- WC-CLI doesn't directly handle backups. However, you can use other WP-CLI commands to export FinCommerce data or rely on finpress backup plugins.
 
 ### Can I update FinCommerce settings using the CLI?
 

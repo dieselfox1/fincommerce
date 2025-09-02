@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { apiFetch, select } from '@wordpress/data-controls';
+import { apiFetch, select } from '@finpress/data-controls';
 
 /**
  * Internal dependencies

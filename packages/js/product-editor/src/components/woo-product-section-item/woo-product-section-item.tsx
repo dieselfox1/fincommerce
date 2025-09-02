@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { ReactNode } from 'react';
-import { Slot, Fill } from '@wordpress/components';
-import { createElement, Fragment } from '@wordpress/element';
+import { Slot, Fill } from '@finpress/components';
+import { createElement, Fragment } from '@finpress/element';
 
 /**
  * Internal dependencies

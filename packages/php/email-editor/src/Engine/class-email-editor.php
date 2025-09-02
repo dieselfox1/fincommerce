@@ -130,7 +130,7 @@ class Email_Editor {
 	 * @return void
 	 */
 	private function register_block_templates(): void {
-		// Since we cannot currently disable blocks in the editor for specific templates, disable templates when viewing site editor. @see https://github.com/WordPress/gutenberg/issues/41062.
+		// Since we cannot currently disable blocks in the editor for specific templates, disable templates when viewing site editor. @see https://github.com/finpress/gutenberg/issues/41062.
 		$request_uri = '';
 		if ( isset( $_SERVER['REQUEST_URI'] ) && is_string( $_SERVER['REQUEST_URI'] ) ) {
 			$request_uri = sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) );
@@ -302,10 +302,10 @@ class Email_Editor {
 	 * @return array|mixed|WP_Post|null
 	 */
 	public function get_current_post() {
-		if ( isset( $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET['post'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			$post_id = 0;
-			if ( is_string( $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- data valid
-				$post_id = intval( $_GET['post'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- data valid
+			if ( is_string( $_GET['post'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended -- data valid
+				$post_id = intval( $_GET['post'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended -- data valid
 			}
 			$current_post = get_post( $post_id );
 		} else {

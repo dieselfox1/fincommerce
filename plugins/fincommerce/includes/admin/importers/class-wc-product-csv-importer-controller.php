@@ -171,7 +171,7 @@ class WC_Product_CSV_Importer_Controller {
 
 		$this->steps = apply_filters( 'fincommerce_product_csv_importer_steps', $default_steps );
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$this->step               = isset( $_REQUEST['step'] ) ? sanitize_key( $_REQUEST['step'] ) : current( array_keys( $this->steps ) );
 		$this->file               = isset( $_REQUEST['file'] ) ? wc_clean( wp_unslash( $_REQUEST['file'] ) ) : '';
 		$this->update_existing    = isset( $_REQUEST['update_existing'] ) ? (bool) $_REQUEST['update_existing'] : false;
@@ -290,7 +290,7 @@ class WC_Product_CSV_Importer_Controller {
 		$output = '';
 
 		try {
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing
+			// phpcs:ignore finpress.Security.NonceVerification.Missing
 			if ( ! empty( $_POST['save_step'] ) && ! empty( $this->steps[ $this->step ]['handler'] ) ) {
 				if ( is_callable( $this->steps[ $this->step ]['handler'] ) ) {
 					call_user_func( $this->steps[ $this->step ]['handler'], $this );
@@ -311,7 +311,7 @@ class WC_Product_CSV_Importer_Controller {
 		$this->output_header();
 		$this->output_steps();
 		$this->output_errors();
-		echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- output is HTML we've generated ourselves.
+		echo $output; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped -- output is HTML we've generated ourselves.
 		$this->output_footer();
 	}
 
@@ -469,7 +469,7 @@ class WC_Product_CSV_Importer_Controller {
 	 * @return string|WP_Error
 	 */
 	public function handle_upload() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- Nonce already verified in WC_Product_CSV_Importer_Controller::upload_form_handler()
+		// phpcs:disable finpress.Security.NonceVerification.Missing -- Nonce already verified in WC_Product_CSV_Importer_Controller::upload_form_handler()
 		$file_url = isset( $_POST['file_url'] ) ? wc_clean( wp_unslash( $_POST['file_url'] ) ) : '';
 
 		try {
@@ -660,7 +660,7 @@ class WC_Product_CSV_Importer_Controller {
 
 		/*
 		 * @hooked wc_importer_generic_mappings - 10
-		 * @hooked wc_importer_wordpress_mappings - 10
+		 * @hooked wc_importer_finpress_mappings - 10
 		 * @hooked wc_importer_default_english_mappings - 100
 		 */
 		$default_columns = $this->normalize_columns_names(

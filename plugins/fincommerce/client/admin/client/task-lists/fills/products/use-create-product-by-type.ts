@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { itemsStore } from '@fincommerce/data';
 import { navigateTo } from '@fincommerce/navigation';
 import { getAdminLink } from '@fincommerce/settings';
 import { loadExperimentAssignment } from '@fincommerce/explat';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

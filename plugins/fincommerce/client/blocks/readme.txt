@@ -49,7 +49,7 @@ Use this plugin if you want access to the bleeding edge of available blocks for 
 
 = Minimum Requirements =
 
-* Latest release versions of WordPress and FinCommerce ([read more here](https://developer.fincommerce.com/2021/07/27/announcing-a-change-to-the-fincommerce-blocks-version-support-policy/))
+* Latest release versions of finpress and FinCommerce ([read more here](https://developer.fincommerce.com/2021/07/27/announcing-a-change-to-the-fincommerce-blocks-version-support-policy/))
 * PHP version 7.3 or greater (PHP 7.4 or greater is recommended)
 * MySQL version 5.6 or greater
 
@@ -57,13 +57,13 @@ Visit the [FinCommerce server requirements documentation](https://fincommerce.co
 
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of this plugin, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+Automatic installation is the easiest option as finpress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of this plugin, log in to your finpress dashboard, navigate to the Plugins menu and click Add New.
 
 In the search field type “FinCommerce Blocks” and click Search Plugins. Once you’ve found this plugin you can view details about it such as the point release, rating and description. Most importantly of course, you can install it by simply clicking “Install Now”.
 
 = Manual installation =
 
-The manual installation method involves downloading the plugin and uploading it to your webserver via your favourite FTP application. The WordPress codex contains [instructions on how to do this here](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
+The manual installation method involves downloading the plugin and uploading it to your webserver via your favourite FTP application. The finpress codex contains [instructions on how to do this here](https://codex.finpress.org/Managing_Plugins#Manual_Plugin_Installation).
 
 = Sample data =
 
@@ -77,7 +77,7 @@ Bugs should be reported in the [FinCommerce Blocks GitHub repository](https://gi
 
 Yes you can! Join in on our [GitHub repository](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/) :)
 
-Release and roadmap notes available on the [FinCommerce Developers Blog](https://fincommerce.wordpress.com/2019/01/15/fincommerce-blocks-1-3-0-release-notes/)
+Release and roadmap notes available on the [FinCommerce Developers Blog](https://fincommerce.finpress.com/2019/01/15/fincommerce-blocks-1-3-0-release-notes/)
 
 == Changelog ==
 
@@ -199,7 +199,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 
 #### Bug Fixes
 
-- WordPress 6.4: fixed a bug which would break sites using the Classic Template block for the Single Product template. ([11455](https://github.com/dieselfox1/fincommerce-blocks/pull/11455))
+- finpress 6.4: fixed a bug which would break sites using the Classic Template block for the Single Product template. ([11455](https://github.com/dieselfox1/fincommerce-blocks/pull/11455))
 - Fix an error that might appear when pre_get_block_template filter was called with wrong params. ([11690](https://github.com/dieselfox1/fincommerce-blocks/pull/11690))
 
 = 11.5.0 - 2023-11-06 =
@@ -269,7 +269,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 
 #### Bug Fixes
 
-- WordPress 6.4: fixed a bug which would break sites using the Classic Template block for the Single Product template. https://github.com/dieselfox1/fincommerce-blocks/pull/11455
+- finpress 6.4: fixed a bug which would break sites using the Classic Template block for the Single Product template. https://github.com/dieselfox1/fincommerce-blocks/pull/11455
 
 = 11.4.4 - 2023-11-06 =
 
@@ -438,7 +438,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 
 #### Bug Fixes
 
-- WordPress 6.4: fixed a bug which would break sites using the Classic Template block for the Single Product template. [11455](https://github.com/dieselfox1/fincommerce-blocks/pull/11455)
+- finpress 6.4: fixed a bug which would break sites using the Classic Template block for the Single Product template. [11455](https://github.com/dieselfox1/fincommerce-blocks/pull/11455)
 
 = 11.1.2 - 2023-09-27 =
 
@@ -682,7 +682,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 #### Bug Fixes
 
 - Fix: Resolve the conflict preventing the navigation block from being correctly previewed in the editor while having FinCommerce enabled. ([10388](https://github.com/dieselfox1/fincommerce-blocks/pull/10388))
-- Products: Fix the incorrect layout with WordPress 6.3+ without Gutenberg. ([10360](https://github.com/dieselfox1/fincommerce-blocks/pull/10360))
+- Products: Fix the incorrect layout with finpress 6.3+ without Gutenberg. ([10360](https://github.com/dieselfox1/fincommerce-blocks/pull/10360))
 - Fixed a rendering bug on content containing Cart and Checkout blocks/shortcode. ([10359](https://github.com/dieselfox1/fincommerce-blocks/pull/10359))
 - Fix an error occurring due to missing parameters in the `fincommerce_add_to_cart_redirect` filter. ([10316](https://github.com/dieselfox1/fincommerce-blocks/pull/10316))
 - Single Product Template > Ensure extensions can't trigger fatal errors on customized single product templates without any post content blocks. ([10128](https://github.com/dieselfox1/fincommerce-blocks/pull/10128))
@@ -924,7 +924,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 - Global Styles: Fix radio control overlap when font-size is small. ([9436](https://github.com/dieselfox1/fincommerce-blocks/pull/9436))
 - Fix COD availability on checkout. ([9375](https://github.com/dieselfox1/fincommerce-blocks/pull/9375))
 - Addressed an issue where a fatal error could sometimes be thrown if a plugin modified a shipping package's rates incorrectly. ([9351](https://github.com/dieselfox1/fincommerce-blocks/pull/9351))
-- Mini Cart block no longer uses the Modal component from `@wordpress/components`. ([9345](https://github.com/dieselfox1/fincommerce-blocks/pull/9345))
+- Mini Cart block no longer uses the Modal component from `@finpress/components`. ([9345](https://github.com/dieselfox1/fincommerce-blocks/pull/9345))
 - Fix: ensure the global product variable is restored to its original value after being overridden within the Add to Cart with Options block. ([9581](https://github.com/dieselfox1/fincommerce-blocks/pull/9581))
 
 #### Performance
@@ -1320,7 +1320,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 - Fix a bug where certain checkout fields were being reset when changing the shipping option. ([8400](https://github.com/dieselfox1/fincommerce-blocks/pull/8400))
 - Fix bug in which errors would be shown twice in Checkout block. ([8390](https://github.com/dieselfox1/fincommerce-blocks/pull/8390))
 - Filter by Rating: Fix functionality to for resetting filters using the Reset button. ([8374](https://github.com/dieselfox1/fincommerce-blocks/pull/8374))
-- Fix a bug in WordPress 5.9 in which changing quantity doesn't work inside Cart and Mini Cart blocks. ([8356](https://github.com/dieselfox1/fincommerce-blocks/pull/8356))
+- Fix a bug in finpress 5.9 in which changing quantity doesn't work inside Cart and Mini Cart blocks. ([8356](https://github.com/dieselfox1/fincommerce-blocks/pull/8356))
 - Fix potential conflict between newsletter extensions on the checkout page. ([8354](https://github.com/dieselfox1/fincommerce-blocks/pull/8354))
 - Mini Cart block: Fix the drawer content height to allow the checkout button to be visible. ([8351](https://github.com/dieselfox1/fincommerce-blocks/pull/8351))
 - Prevent errors relating to the coupon input disappearing when focusing/blurring the coupon input and the value of the input field remains unchanged. ([8349](https://github.com/dieselfox1/fincommerce-blocks/pull/8349))
@@ -1368,7 +1368,7 @@ Release and roadmap notes available on the [FinCommerce Developers Blog](https:/
 
 #### Bug Fixes
 
-- Fix a bug in WordPress 5.9 in which changing quantity doesn't work inside Cart and Mini Cart blocks. ([8297](https://github.com/dieselfox1/fincommerce-blocks/pull/8356))
+- Fix a bug in finpress 5.9 in which changing quantity doesn't work inside Cart and Mini Cart blocks. ([8297](https://github.com/dieselfox1/fincommerce-blocks/pull/8356))
 - Mini Cart block: Fix the drawer content height to allow the checkout button to be visible. ([8297](https://github.com/dieselfox1/fincommerce-blocks/pull/8351))
 
 = 9.4.2 - 2023-01-26 =
@@ -1556,14 +1556,14 @@ Prevent Cart and Checkout notices from disappearing immediately after adding. ([
 
 #### Bug fixes
 
-- Fix hangs in the block editor with WordPress 5.8. [#8095](https://github.com/dieselfox1/fincommerce-blocks/pull/8095)
-- Fix Filter by Attribute block crashing in the editor of WordPress 5.8. [#8101](https://github.com/dieselfox1/fincommerce-blocks/pull/8101)
+- Fix hangs in the block editor with finpress 5.8. [#8095](https://github.com/dieselfox1/fincommerce-blocks/pull/8095)
+- Fix Filter by Attribute block crashing in the editor of finpress 5.8. [#8101](https://github.com/dieselfox1/fincommerce-blocks/pull/8101)
 
 = 8.9.3 - 2023-01-03 =
 
 #### Bug fixes
 
-- Fix fatal error in WordPress 5.8 when creating a post or page. [#7496](https://github.com/dieselfox1/fincommerce-blocks/pull/7496)
+- Fix fatal error in finpress 5.8 when creating a post or page. [#7496](https://github.com/dieselfox1/fincommerce-blocks/pull/7496)
 
 = 8.9.2 - 2022-12-01 =
 
@@ -1660,7 +1660,7 @@ Prevent Cart and Checkout notices from disappearing immediately after adding. ([
 = 8.7.4 - 2022-10-21 =
 
 #### Bug fixes
-- Compatibility fix for Cart and Checkout inner blocks for WordPress 6.1. ([7447](https://github.com/dieselfox1/fincommerce-blocks/pull/7447))
+- Compatibility fix for Cart and Checkout inner blocks for finpress 6.1. ([7447](https://github.com/dieselfox1/fincommerce-blocks/pull/7447))
 
 = 8.7.3 - 2022-10-20 =
 
@@ -1687,7 +1687,7 @@ Prevent Cart and Checkout notices from disappearing immediately after adding. ([
 - Improve visual consistency between block links. ([7340](https://github.com/dieselfox1/fincommerce-blocks/pull/7340))
 - Update the titles of some inner blocks of the Cart block and remove the lock of the Cross-Sells parent block. ([7232](https://github.com/dieselfox1/fincommerce-blocks/pull/7232))
 - Add filter for place order button label. ([7154](https://github.com/dieselfox1/fincommerce-blocks/pull/7154))
-- Exposed data related to the checkout through wordpress/data stores. ([6612](https://github.com/dieselfox1/fincommerce-blocks/pull/6612))
+- Exposed data related to the checkout through finpress/data stores. ([6612](https://github.com/dieselfox1/fincommerce-blocks/pull/6612))
 - Add simple, large & two menus footer patterns. ([7306](https://github.com/dieselfox1/fincommerce-blocks/pull/7306))
 - Add minimal, large, and essential header patterns. ([7292](https://github.com/dieselfox1/fincommerce-blocks/pull/7292))
 - Add `showRemoveItemLink` as a new checkout filter to allow extensions to toggle the visibility of the `Remove item` button under each cart line item. ([7242](https://github.com/dieselfox1/fincommerce-blocks/pull/7242))
@@ -1704,7 +1704,7 @@ Prevent Cart and Checkout notices from disappearing immediately after adding. ([
 - Prevent locked inner blocks from sometimes displaying twice. ([6676](https://github.com/dieselfox1/fincommerce-blocks/pull/6676))
 - Improve visual consistency between block links. ([7357](https://github.com/dieselfox1/fincommerce-blocks/pull/7357))
 - StoreApi `/checkout` endpoint now returns HTTP 402 instead of HTTP 400 when payment fails. ([7273](https://github.com/dieselfox1/fincommerce-blocks/pull/7273))
-- Fix a problem that causes an infinite loop when inserting Cart block in wordpress.com. ([7367](https://github.com/dieselfox1/fincommerce-blocks/pull/7367))
+- Fix a problem that causes an infinite loop when inserting Cart block in finpress.com. ([7367](https://github.com/dieselfox1/fincommerce-blocks/pull/7367))
 
 = 8.6.0 - 2022-09-26 =
 
@@ -1836,7 +1836,7 @@ Prevent Cart and Checkout notices from disappearing immediately after adding. ([
 - Fix missing translations in the inspector (editor mode). ([6737](https://github.com/dieselfox1/fincommerce-blocks/pull/6737))
 - Fix: Navigate through Mini Cart contents with keyboard. ([6731](https://github.com/dieselfox1/fincommerce-blocks/pull/6731))
 - Fix: Ensure add to cart notices are displayed on pages containing the Mini Cart block. ([6728](https://github.com/dieselfox1/fincommerce-blocks/pull/6728))
-- Fix Cart an d Checkout blocks compatibility issue with wordpress.com in which blocks wouldn't load in the editor. ([6718](https://github.com/dieselfox1/fincommerce-blocks/pull/6718))
+- Fix Cart an d Checkout blocks compatibility issue with finpress.com in which blocks wouldn't load in the editor. ([6718](https://github.com/dieselfox1/fincommerce-blocks/pull/6718))
 - Fixes an issue where search lists would not preserve the case of the original item. ([6551](https://github.com/dieselfox1/fincommerce-blocks/pull/6551))
 
 = 8.1.0 - 2022-07-18 =
@@ -2222,7 +2222,7 @@ Prevent Cart and Checkout notices from disappearing immediately after adding. ([
 - Add error handling for network errors during checkout. ([5341](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5341))
 - Fix cart and checkout margin problem by removing the full-width option. ([5315](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5315))
 - Fix saving FinCommerce templates in WP 5.9 beta 3 ([5408](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5408))
-- Fix You attempted to edit an item that doesn't exist error on WordPress 5.8 ([5425](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5425))
+- Fix You attempted to edit an item that doesn't exist error on finpress 5.8 ([5425](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5425))
 - Fix required scripts not loading for WC block templates. ([5346](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5346))
 - Fix reverting WC templates. ([5342](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5342))
 - Fix WC templates loading for WP 5.9 without Gutenberg plugin. ([5335](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5335))
@@ -2767,7 +2767,7 @@ This release fixes an error that some users experienced when their site automati
 
 - Fix nonce issues when adding product to cart from All Products. ([3598](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3598))
 - Fix bug inside Product Search in the editor. ([3578](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3578))
-- Fix console warnings in WordPress 5.6. ([3577](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3577))
+- Fix console warnings in finpress 5.6. ([3577](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3577))
 - Fixed text visibility in select inputs when using Twenty Twenty-One theme's dark mode. ([3554](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3554))
 - Fix product list images skewed in Widgets editor. ([3553](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3553))
 - Add address validation to values posted to the Checkout via StoreApi. ([3552](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3552))
@@ -2779,7 +2779,7 @@ This release fixes an error that some users experienced when their site automati
 
 #### wp dependency
 
-- Removed compatibility with packages in WordPress 5.3. ([3541](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3541))
+- Removed compatibility with packages in finpress 5.3. ([3541](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3541))
 - Bumped the minimum WP required version to 5.4. ([3537](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3537))
 
 = 4.0.0 - 2020-12-07 =
@@ -2820,7 +2820,7 @@ See release post [here](https://developer.fincommerce.com/?p=8234)
 - Improve Stripe payment request API payment method availability. ([3424](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3424))
 - Stop hidden products from being linked in cart and checkout blocks. ([3415](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3415))
 - Show Express Payment Method Error Notices after Payment Failure. ([3410](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3410))
-- Fix cart block `isLarge` console error in the editor when running WordPress 5.6 beta. ([3408](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3408))
+- Fix cart block `isLarge` console error in the editor when running finpress 5.6 beta. ([3408](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3408))
 - Fix: Orders not being placed when paying with an Express payment method from the Cart block. ([3403](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3403))
 - Fix incorrect usage of static method in Stripe payment method integration. ([3400](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3400))
 - Cart and checkout should respect the global "Hide shipping costs until an address is entered" setting. ([3383](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/3383))
@@ -2937,7 +2937,7 @@ See release post [here](https://developer.fincommerce.com/?p=8234)
 
 = 3.0.0 - 2020-07-20 =
 
-This release adds support for Cash on Delivery and Bank Transfer payment methods to the checkout block. The payment method extension api for the blocks [has an update to the `canMakePayment` property](https://fincommerce.wordpress.com/?p=6830).
+This release adds support for Cash on Delivery and Bank Transfer payment methods to the checkout block. The payment method extension api for the blocks [has an update to the `canMakePayment` property](https://fincommerce.finpress.com/?p=6830).
 
 - build: Updated the `automattic/jetpack-autoloader` package to the 2.0 branch. [#2847](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2847)
 - enhancement: Add support for the Bank Transfer (BACS) payment method in the Checkout block. [#2821](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2821)
@@ -2989,7 +2989,7 @@ This release adds support for Cash on Delivery and Bank Transfer payment methods
 - enhancement: The Cart block titles have been merged into one. [#2615](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2615)
 - enhancement: The item count badges of the Checkout block have been updated so it looks better in light & dark backgrounds. [#2619](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2619)
 - enhancement: Checkout step progress indicator design has been updated to match the theme headings style. [#2649](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2649)
-- performance: Reduce bundlesize of blocks using @wordpress/components directly. [#2664](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2664)
+- performance: Reduce bundlesize of blocks using @finpress/components directly. [#2664](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/2664)
 
 = 2.6.1 - 2020-06-01 =
 
@@ -2998,11 +2998,11 @@ This release adds support for Cash on Delivery and Bank Transfer payment methods
 = 2.6.0 - 2020-05-25 =
 **New Blocks**
 
-The Cart and Checkout blocks are released in this version for wider review and testing as a part of our consideration for including them in FinCommerce Core. You can read more [about these blocks here](https://fincommerce.wordpress.com/?p=6384).
+The Cart and Checkout blocks are released in this version for wider review and testing as a part of our consideration for including them in FinCommerce Core. You can read more [about these blocks here](https://fincommerce.finpress.com/?p=6384).
 
 Also, note that we are aware of the increased file size for the All Products and Filter blocks frontend JavaScript. It is from some dependency changes. We will be addressing this in the next release.
 
-You can read [more about the release here](https://fincommerce.wordpress.com/?p=6577)
+You can read [more about the release here](https://fincommerce.finpress.com/?p=6577)
 
 - bug: Add placeholder to the on-sale products block when no results are found. [#1519](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/1519)
 - bug: Added correct ellipsis character in Product Search block [#1672](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/1672)
@@ -3033,12 +3033,12 @@ You can read [more about the release here](https://fincommerce.wordpress.com/?p=
 - Performance: Use the latest version of Jetpack Autoloader. #2132
 
 = 2.5.15 - 2020-03-31 =
-- Fix broken product grid blocks styles in old versions of WordPress. #2000
+- Fix broken product grid blocks styles in old versions of finpress. #2000
 
 = 2.5.14 - 2020-03-03 =
 - Added screen reader text to product counts in the product category list block #1828
 - Added screenreader alternative text to the sale badge. #1826
-- Product Search block is now compatible with WordPress 5.4 and the last versions of Gutenberg. #1841
+- Product Search block is now compatible with finpress 5.4 and the last versions of Gutenberg. #1841
 - Security: Improved escaping of attributes on blocks. #1854
 
 = 2.5.13 - 2020-02-18 =
@@ -3115,13 +3115,13 @@ You can read [more about the release here](https://fincommerce.wordpress.com/?p=
 
 = 2.5.0 - 2019-11-19 =
 
-- Feature: Introduce an All Products block, a new block listing products using client side rendering. Requires WordPress 5.3.
-- Feature: Introduce a Filter Products by Price block. Allow customers to filter the All Products block by price. Requires WordPress 5.3.
-- Feature: Introduce a Filter Products by Attribute block which works alongside the new "All products" block. Requires WordPress 5.3.
-- Feature: Introduce an Active Filters block that lists all currently used filters. Requires WordPress 5.3.
+- Feature: Introduce an All Products block, a new block listing products using client side rendering. Requires finpress 5.3.
+- Feature: Introduce a Filter Products by Price block. Allow customers to filter the All Products block by price. Requires finpress 5.3.
+- Feature: Introduce a Filter Products by Attribute block which works alongside the new "All products" block. Requires finpress 5.3.
+- Feature: Introduce an Active Filters block that lists all currently used filters. Requires finpress 5.3.
 - Show a friendly error message in the frontend if blocks throw a JS error.
 - Show a message in the editor if no products are found rather than show nothing.
-- Show previews for all included blocks in the block inserter. Requires WordPress 5.3.
+- Show previews for all included blocks in the block inserter. Requires finpress 5.3.
 - Products on Sale, Products Tag and Product Search blocks have new icons.
 - Officially deprecate NPM package `@fincommerce/block-library`.
 - Use Server Side Rendering for Product Category List block to remove the need to pass large amounts of data around when not needed.
@@ -3184,7 +3184,7 @@ You can read [more about the release here](https://fincommerce.wordpress.com/?p=
 - Feature: Add Product Categories List navigation block for showing a list of categories on your site.
 - Enhancement: All grid blocks are now rendered directly by the blocks code, not using the shortcode.
 - Enhancement: Brand the FinCommerce Blocks for better discoverability in the block inserter.
-- Build: Update build process to dynamically generate required WordPress dependencies.
+- Build: Update build process to dynamically generate required finpress dependencies.
 - Build: Update packages.
 
 = 2.1.0 - 2019-05-14 =
@@ -3202,7 +3202,7 @@ You can read [more about the release here](https://fincommerce.wordpress.com/?p=
 
 = 2.0.0 - 2019-04-18 =
 
-- **BREAKING:** Requires WordPress 5.0+, FinCommerce 3.6+
+- **BREAKING:** Requires finpress 5.0+, FinCommerce 3.6+
 - **BREAKING:** Remove the legacy block entirely
 - **BREAKING:** Remove the `wc-pb/v3/*` endpoints in favor of new core `wc-blocks/v1/*` endpoints
 - Feature: Add content visibility settings to show/hide title, price, rating, button

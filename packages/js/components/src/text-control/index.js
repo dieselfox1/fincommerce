@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { createElement, Component } from '@wordpress/element';
+import { createElement, Component } from '@finpress/element';
 import PropTypes from 'prop-types';
 import {
 	TextControl as BaseComponent,
 	withFocusOutside,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * An input field use for text inputs in forms.

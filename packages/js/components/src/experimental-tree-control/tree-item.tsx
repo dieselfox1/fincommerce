@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Button, CheckboxControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { chevronDown, chevronUp } from '@wordpress/icons';
+import { Button, CheckboxControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { chevronDown, chevronUp } from '@finpress/icons';
 import clsx from 'clsx';
 import { createElement, forwardRef } from 'react';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

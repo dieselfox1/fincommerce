@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { applyFilters } from '@wordpress/hooks';
-import { Card, CardBody, CardHeader } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { applyFilters } from '@finpress/hooks';
+import { Card, CardBody, CardHeader } from '@finpress/components';
 import {
 	megaphone,
 	box,
@@ -13,7 +13,7 @@ import {
 	percent,
 	payment,
 	pencil,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
 import { Text } from '@fincommerce/experimental';
 

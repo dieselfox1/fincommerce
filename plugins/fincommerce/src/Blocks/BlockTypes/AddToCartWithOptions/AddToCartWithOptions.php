@@ -175,7 +175,7 @@ class AddToCartWithOptions extends AbstractBlock {
 			}
 
 			if ( '' === $template_part_contents ) {
-				$template_part_contents = file_get_contents( $template_part_path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+				$template_part_contents = file_get_contents( $template_part_path ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 			}
 
 			$default_quantity = $product->get_min_purchase_quantity();
@@ -280,7 +280,7 @@ class AddToCartWithOptions extends AbstractBlock {
 					$child_product = wc_get_product( $child_product_id );
 					if ( $child_product ) {
 
-						$default_child_quantity = isset( $_POST['quantity'][ $child_product->get_id() ] ) ? wc_stock_amount( wc_clean( wp_unslash( $_POST['quantity'][ $child_product->get_id() ] ) ) ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Missing
+						$default_child_quantity = isset( $_POST['quantity'][ $child_product->get_id() ] ) ? wc_stock_amount( wc_clean( wp_unslash( $_POST['quantity'][ $child_product->get_id() ] ) ) ) : 0; // phpcs:ignore finpress.Security.NonceVerification.Missing
 
 						$context['quantity'][ $child_product_id ] = $default_child_quantity;
 
@@ -650,7 +650,7 @@ class AddToCartWithOptions extends AbstractBlock {
 					</button>
 				</div>
 			</template>
-			<?php echo $form_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			<?php echo $form_html; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 		</div>
 		<?php
 		return ob_get_clean();

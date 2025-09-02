@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
+import { createElement } from '@finpress/element';
+import { privateApis as routerPrivateApis } from '@finpress/router';
 import {
 	UnsavedChangesWarning,
 	// @ts-expect-error No types for this exist yet.
 	privateApis as editorPrivateApis,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import { isEmpty } from '@fincommerce/types';
 import {
 	SearchListControl,
@@ -11,7 +11,7 @@ import type {
 	SearchListControlProps,
 	RenderItemArgs,
 } from '@fincommerce/editor-components/search-list-control/types';
-import { withInstanceId } from '@wordpress/compose';
+import { withInstanceId } from '@finpress/compose';
 import {
 	withProductVariations,
 	withSearchedProducts,

@@ -5,7 +5,7 @@
 .git/
 .eslintrc
 .eslintignore
-.wordpress-org/
+.finpress-org/
 .turbo/
 composer.json
 composer.lock

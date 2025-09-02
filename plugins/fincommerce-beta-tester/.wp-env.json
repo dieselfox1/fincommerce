@@ -2,6 +2,6 @@
 	"phpVersion": "8.1",
 	"plugins": [ 
         ".",
-        "https://downloads.wordpress.org/plugin/fincommerce.zip"
+        "https://downloads.finpress.org/plugin/fincommerce.zip"
      ]
 }

@@ -121,14 +121,14 @@ class WC_Settings_Tax extends WC_Settings_Page {
 	 * Save settings.
 	 */
 	public function save() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		global $current_section;
 
 		if ( ! $current_section ) {
 			$this->save_settings_for_current_section();
 
 			if ( isset( $_POST['fincommerce_tax_classes'] ) ) {
-				$this->save_tax_classes( wp_unslash( $_POST['fincommerce_tax_classes'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				$this->save_tax_classes( wp_unslash( $_POST['fincommerce_tax_classes'] ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			}
 		} elseif ( ! empty( $_POST['tax_rate_country'] ) ) {
 			$this->save_tax_rates();
@@ -141,7 +141,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 		// Invalidate caches.
 		WC_Cache_Helper::invalidate_cache_group( 'taxes' );
 		WC_Cache_Helper::get_transient_version( 'shipping', true );
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 
 	/**
@@ -225,7 +225,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 				'wc_tax_nonce'  => wp_create_nonce( 'wc_tax_nonce-class:' . $current_class ),
 				'base_url'      => $base_url,
 				'rates'         => array_values( WC_Tax::get_rates_for_tax_class( $current_class ) ),
-				'page'          => ! empty( $_GET['p'] ) ? absint( $_GET['p'] ) : 1, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				'page'          => ! empty( $_GET['p'] ) ? absint( $_GET['p'] ) : 1, // phpcs:ignore finpress.Security.NonceVerification.Recommended
 				'limit'         => 100,
 				'countries'     => $countries,
 				'states'        => $states,
@@ -293,7 +293,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 	 * @return array
 	 */
 	private function get_posted_tax_rate( $key, $order, $class ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- this is called from 'save_tax_rates' only, where nonce is already verified.
+		// phpcs:disable finpress.Security.NonceVerification.Missing -- this is called from 'save_tax_rates' only, where nonce is already verified.
 		$tax_rate      = array();
 		$tax_rate_keys = array(
 			'tax_rate_country',
@@ -303,7 +303,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 			'tax_rate_priority',
 		);
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		foreach ( $tax_rate_keys as $tax_rate_key ) {
 			if ( isset( $_POST[ $tax_rate_key ], $_POST[ $tax_rate_key ][ $key ] ) ) {
 				$tax_rate[ $tax_rate_key ] = wc_clean( wp_unslash( $_POST[ $tax_rate_key ][ $key ] ) );
@@ -314,21 +314,21 @@ class WC_Settings_Tax extends WC_Settings_Page {
 		$tax_rate['tax_rate_shipping'] = isset( $_POST['tax_rate_shipping'][ $key ] ) ? 1 : 0;
 		$tax_rate['tax_rate_order']    = $order;
 		$tax_rate['tax_rate_class']    = $class;
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 
 		return $tax_rate;
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 
 	/**
 	 * Save tax rates.
 	 */
 	public function save_tax_rates() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- this is called via "do_action('fincommerce_settings_save_'...") in base class, where nonce is verified first.
+		// phpcs:disable finpress.Security.NonceVerification.Missing -- this is called via "do_action('fincommerce_settings_save_'...") in base class, where nonce is verified first.
 		global $wpdb;
 
 		$current_class = sanitize_title( self::get_current_tax_class() );
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.NonceVerification.Missing
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotValidated, finpress.Security.NonceVerification.Missing
 		$posted_countries = wc_clean( wp_unslash( $_POST['tax_rate_country'] ) );
 
 		// get the tax rate id of the first submitted row.
@@ -340,7 +340,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 		$index = isset( $tax_rate_order ) ? $tax_rate_order : 0;
 
 		// Loop posted fields.
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		foreach ( $posted_countries as $key => $value ) {
 			$mode     = ( 0 === strpos( $key, 'new-' ) ) ? 'insert' : 'update';
 			$tax_rate = $this->get_posted_tax_rate( $key, $index ++, $current_class );
@@ -363,7 +363,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 				WC_Tax::_update_tax_rate_cities( $tax_rate_id, wc_clean( wp_unslash( $_POST['tax_rate_city'][ $key ] ) ) );
 			}
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 }
 

@@ -254,7 +254,7 @@ class WC_Customer_Download extends WC_Data implements ArrayAccess {
 	/**
 	 * Set access_granted.
 	 *
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_access_granted( $date = null ) {
 		$this->set_date_prop( 'access_granted', $date );
@@ -263,7 +263,7 @@ class WC_Customer_Download extends WC_Data implements ArrayAccess {
 	/**
 	 * Set access_expires.
 	 *
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_access_expires( $date = null ) {
 		$this->set_date_prop( 'access_expires', $date );
@@ -306,7 +306,7 @@ downloads_remaining = IF( downloads_remaining = '', '', GREATEST( 0, downloads_r
 WHERE permission_id = %d",
 			$this->get_id()
 		);
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query( $query );
 
 		// Re-read this download from the data store to pull updated counts.

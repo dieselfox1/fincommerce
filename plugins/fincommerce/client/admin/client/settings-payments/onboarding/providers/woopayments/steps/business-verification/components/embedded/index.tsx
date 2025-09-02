@@ -12,7 +12,7 @@ import {
 	ConnectAccountOnboarding,
 	ConnectComponentsProvider,
 } from '@stripe/react-connect-js';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

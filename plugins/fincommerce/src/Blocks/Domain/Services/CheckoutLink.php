@@ -91,7 +91,7 @@ class CheckoutLink {
 	 * @return array The products (keys) and their quantities (values).
 	 */
 	protected function get_products_from_checkout_link() {
-		$raw_products = array_filter( explode( ',', wc_clean( wp_unslash( $_GET['products'] ?? '' ) ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$raw_products = array_filter( explode( ',', wc_clean( wp_unslash( $_GET['products'] ?? '' ) ) ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$products     = [];
 
 		foreach ( $raw_products as $product_id_qty ) {
@@ -164,7 +164,7 @@ class CheckoutLink {
 		}
 
 		// Apply coupon if provided.
-		$coupon = wc_format_coupon_code( wp_unslash( $_GET['coupon'] ?? '' ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$coupon = wc_format_coupon_code( wp_unslash( $_GET['coupon'] ?? '' ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		if ( wc_coupons_enabled() && ! empty( $coupon ) ) {
 			try {
@@ -187,7 +187,7 @@ class CheckoutLink {
 					'coupon',
 					'checkout-link',
 				],
-				add_query_arg( wp_unslash( $_SERVER['QUERY_STRING'] ), '', $redirect_url ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				add_query_arg( wp_unslash( $_SERVER['QUERY_STRING'] ), '', $redirect_url ) // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			);
 		}
 

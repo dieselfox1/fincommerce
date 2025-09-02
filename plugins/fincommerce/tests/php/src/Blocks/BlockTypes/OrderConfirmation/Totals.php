@@ -181,7 +181,7 @@ class Totals extends \WP_UnitTestCase {
 		$status   = $response->get_status();
 		$data     = $response->get_data();
 
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 		$this->assertEquals( $status, 200, print_r( $data, true ) );
 		$this->assertTrue( $data['customer_id'] > 0 );
 

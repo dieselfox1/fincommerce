@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { ToggleControl, SelectControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { ToggleControl, SelectControl } from '@finpress/components';
 
 export const getSharedContentControls = ( attributes, setAttributes ) => {
 	const { contentVisibility } = attributes;

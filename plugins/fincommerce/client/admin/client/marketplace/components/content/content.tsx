@@ -6,10 +6,10 @@ import {
 	useEffect,
 	useState,
 	useCallback,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useQuery } from '@fincommerce/navigation';
-import { speak } from '@wordpress/a11y';
-import { __, sprintf } from '@wordpress/i18n';
+import { speak } from '@finpress/a11y';
+import { __, sprintf } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

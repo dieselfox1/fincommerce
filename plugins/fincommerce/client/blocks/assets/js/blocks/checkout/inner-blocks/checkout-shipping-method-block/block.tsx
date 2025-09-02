@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useShippingData } from '@fincommerce/base-context/hooks';
 import clsx from 'clsx';
-import { Icon, store, shipping } from '@wordpress/icons';
-import { useEffect } from '@wordpress/element';
+import { Icon, store, shipping } from '@finpress/icons';
+import { useEffect } from '@finpress/element';
 import { cartStore, validationStore } from '@fincommerce/block-data';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { isPackageRateCollectable } from '@fincommerce/base-utils';
 import { getSetting } from '@fincommerce/settings';
 import { Button } from '@ariakit/react';

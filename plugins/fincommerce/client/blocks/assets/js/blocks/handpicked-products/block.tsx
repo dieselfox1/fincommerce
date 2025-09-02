@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import ServerSideRender from '@wordpress/server-side-render';
+import ServerSideRender from '@finpress/server-side-render';
 import { gridBlockPreview } from '@fincommerce/resource-previews';
 
 /**

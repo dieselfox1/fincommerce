@@ -3,7 +3,7 @@
  */
 import { eye } from '@fincommerce/icons';
 import { useProductDataContext } from '@fincommerce/shared-context';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import {
 	Icon,
@@ -11,7 +11,7 @@ import {
 
 	// @ts-expect-error no exported member.
 	ToolbarDropdownMenu,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

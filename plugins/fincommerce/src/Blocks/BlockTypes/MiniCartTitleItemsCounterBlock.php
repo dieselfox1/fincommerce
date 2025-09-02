@@ -40,7 +40,7 @@ class MiniCartTitleItemsCounterBlock extends AbstractInnerBlock {
 
 		// The following translation is a temporary workaround. It will be
 		// reverted to the previous form `(%d items)` as soon as the
-		// `@wordpress/i18n` package is available as a script module.
+		// `@finpress/i18n` package is available as a script module.
 
 		// translators: %d number of items in the cart.
 		$cart_item_text = __( '(items: %d)', 'fincommerce' );
@@ -68,7 +68,7 @@ class MiniCartTitleItemsCounterBlock extends AbstractInnerBlock {
 
 		ob_start();
 		?>
-		<span <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<span <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 		</span>
 		<?php
 		return ob_get_clean();

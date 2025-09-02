@@ -9,10 +9,10 @@
 	"moduleDirectories": [ "node_modules" ],
 	"moduleNameMapper": {
 		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/tests/js/config/file-mock.js",
-		"@wordpress/private-apis": "<rootDir>/node_modules/@wordpress/private-apis",
-		"@wordpress/core-data/build/(.*)$": "<rootDir>/node_modules/@wordpress/core-data/build/$1",
-		"@wordpress/core-data": "<rootDir>/node_modules/@wordpress/core-data",
-		"@wordpress/components": "<rootDir>/node_modules/@wordpress/components",
+		"@finpress/private-apis": "<rootDir>/node_modules/@finpress/private-apis",
+		"@finpress/core-data/build/(.*)$": "<rootDir>/node_modules/@finpress/core-data/build/$1",
+		"@finpress/core-data": "<rootDir>/node_modules/@finpress/core-data",
+		"@finpress/components": "<rootDir>/node_modules/@finpress/components",
 		"@fincommerce/data": "<rootDir>/node_modules/@fincommerce/data/build",
 		"@fincommerce/atomic-blocks": "assets/js/atomic/blocks",
 		"@fincommerce/atomic-utils": "assets/js/atomic/utils",
@@ -45,7 +45,7 @@
 		"^react-dom$": "<rootDir>/node_modules/react-dom",
 		"^(.+)/build-module/(.*)$": "$1/build/$2"
 	},
-	"preset": "@wordpress/jest-preset-default",
+	"preset": "@finpress/jest-preset-default",
 	"setupFiles": [ "<rootDir>/tests/js/config/global-mocks.js" ],
 	"setupFilesAfterEnv": [
 		"<rootDir>/tests/js/config/testing-library.js",

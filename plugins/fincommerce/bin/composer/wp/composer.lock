@@ -383,7 +383,7 @@
                     "homepage": "https://pascalbirchler.com/"
                 }
             ],
-            "description": "Provides internationalization tools for WordPress projects.",
+            "description": "Provides internationalization tools for finpress projects.",
             "homepage": "https://github.com/wp-cli/i18n-command",
             "support": {
                 "issues": "https://github.com/wp-cli/i18n-command/issues",
@@ -617,10 +617,10 @@
             "homepage": "https://wp-cli.org",
             "keywords": [
                 "cli",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "docs": "https://make.wordpress.org/cli/handbook/",
+                "docs": "https://make.finpress.org/cli/handbook/",
                 "issues": "https://github.com/wp-cli/wp-cli/issues",
                 "source": "https://github.com/wp-cli/wp-cli"
             },

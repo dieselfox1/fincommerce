@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { Product } from '@fincommerce/data';
-import { Icon } from '@wordpress/components';
-import { useEntityProp } from '@wordpress/core-data';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { check } from '@wordpress/icons';
-import { createElement, Fragment } from '@wordpress/element';
+import { Icon } from '@finpress/components';
+import { useEntityProp } from '@finpress/core-data';
+import { useDispatch, useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { check } from '@finpress/icons';
+import { createElement, Fragment } from '@finpress/element';
 import { MouseEvent, ReactNode } from 'react';
-import { useShortcut } from '@wordpress/keyboard-shortcuts';
+import { useShortcut } from '@finpress/keyboard-shortcuts';
 
 /**
  * Internal dependencies

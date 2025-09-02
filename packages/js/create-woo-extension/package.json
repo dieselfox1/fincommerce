@@ -1,7 +1,7 @@
 {
 	"name": "@fincommerce/create-woo-extension",
 	"version": "1.1.0",
-	"description": "A template to be used with `@wordpress/create-block` to create a FinCommerce extension.",
+	"description": "A template to be used with `@finpress/create-block` to create a FinCommerce extension.",
 	"main": "index.js",
 	"engines": {
 		"node": "^20.11.1"

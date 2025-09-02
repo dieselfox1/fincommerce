@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import type { User, Context } from '@wordpress/core-data';
+import type { User, Context } from '@finpress/core-data';
 
 export type UserPreferences = {
 	activity_panel_inbox_last_read?: string;

@@ -8,7 +8,7 @@ parameters:
 		- ../../tests/unit/stubs.php # The stubs file contains mocks for some WP classes.
 		- vendor/php-stubs/fincommerce-stubs/fincommerce-stubs.php
 		- vendor/php-stubs/fincommerce-stubs/fincommerce-packages-stubs.php
-		- vendor/php-stubs/wordpress-tests-stubs/wordpress-tests-stubs.php
+		- vendor/php-stubs/finpress-tests-stubs/finpress-tests-stubs.php
 
 	paths:
 		- ../../src
@@ -30,8 +30,8 @@ parameters:
 		analyseAndScan:
 			- ../../tests/unit/stubs.php # Contains stubs for WP classes etc.
 			- ../../tests/integration/bootstrap.php
-			- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+			- vendor/php-stubs/finpress-stubs/finpress-stubs.php
 
 includes:
-	- vendor/szepeviktor/phpstan-wordpress/extension.neon
+	- vendor/szepeviktor/phpstan-finpress/extension.neon
 	- vendor/phpstan/phpstan-phpunit/extension.neon

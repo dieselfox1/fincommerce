@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createContext } from '@wordpress/element';
+import { createContext } from '@finpress/element';
 
 export const LogoBlockContext = createContext< {
 	logoBlockIds: Array< string >;

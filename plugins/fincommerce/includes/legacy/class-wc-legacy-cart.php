@@ -197,7 +197,7 @@ abstract class WC_Legacy_Cart {
 				$value = $this->tax;
 				break;
 			case 'discount_total':
-				wc_deprecated_argument( 'WC_Cart->discount_total', '2.3', 'After tax coupons are no longer supported. For more information see: https://fincommerce.wordpress.com/2014/12/upcoming-coupon-changes-in-fincommerce-2-3/' );
+				wc_deprecated_argument( 'WC_Cart->discount_total', '2.3', 'After tax coupons are no longer supported. For more information see: https://fincommerce.finpress.com/2014/12/upcoming-coupon-changes-in-fincommerce-2-3/' );
 				$value = 0;
 				break;
 			case 'tax_display_cart':

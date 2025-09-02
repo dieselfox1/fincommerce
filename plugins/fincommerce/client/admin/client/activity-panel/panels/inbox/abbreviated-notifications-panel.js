@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import { Text } from '@fincommerce/experimental';
 import { recordEvent } from '@fincommerce/tracks';
 import { AbbreviatedCard } from '@fincommerce/components';
-import { useSelect } from '@wordpress/data';
-import { box, comment, page } from '@wordpress/icons';
-import { createSlotFill } from '@wordpress/components';
+import { useSelect } from '@finpress/data';
+import { box, comment, page } from '@finpress/icons';
+import { createSlotFill } from '@finpress/components';
 import { isWCAdmin } from '@fincommerce/navigation';
 
 /**

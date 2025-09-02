@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { useConfirmUnsavedChanges } from '@fincommerce/navigation';
-import { useEntityId } from '@wordpress/core-data';
+import { useEntityId } from '@finpress/core-data';
 
 /**
  * Internal dependencies

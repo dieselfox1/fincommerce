@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button, __unstableMotion as motion } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-import { Icon, arrowLeft, wordpress } from '@wordpress/icons';
-import { applyFilters } from '@wordpress/hooks';
-import { useSelect } from '@wordpress/data';
+import { Button, __unstableMotion as motion } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+import { Icon, arrowLeft, finpress } from '@finpress/icons';
+import { applyFilters } from '@finpress/hooks';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -86,7 +86,7 @@ export const BackButtonContent = () => {
 								<div className="fincommerce-email-editor__view-mode-toggle-icon">
 									<Icon
 										className="fincommerce-email-editor-icon__icon"
-										icon={ wordpress }
+										icon={ finpress }
 										size={ 48 }
 									/>
 								</div>

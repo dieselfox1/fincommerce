@@ -90,7 +90,7 @@ class CartSelectShippingRate extends AbstractCartRoute {
 				}
 			}
 		} catch ( \WC_Rest_Exception $e ) {
-			throw new RouteException( $e->getErrorCode(), $e->getMessage(), $e->getCode() ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new RouteException( $e->getErrorCode(), $e->getMessage(), $e->getCode() ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 
 		/**

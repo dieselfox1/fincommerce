@@ -40,14 +40,14 @@
 -   Add new VerticalCSSTransition component for handling height transitions. #7203
 -   Add a delete option to completed tasks #7300
 -   Make the action button optionable in TaskItem. #7263
--   Fix WordPress 5.8 compatibility UI fixes #7255
+-   Fix finpress 5.8 compatibility UI fixes #7255
 -   Fix inbox note dismiss dropdown not closing on Safari #7278
 -   Update TaskItem to make use of the VerticalCSSTransition. #7203
 -   Update CollapsibleList to support nested transitional items. #7263
 
 # 1.3.0
 
--   Remove the use of Dashicons and replace with @wordpress/icons or gridicons #7020
+-   Remove the use of Dashicons and replace with @finpress/icons or gridicons #7020
 -   Add expanded item text and CTA button. #6956
 -   Add inbox note components (InboxNoteCard, InboxNotePlaceholder, and InboxDismissConfirmationModal). #7006
 -   Add transition animation to expanding TaskItems.

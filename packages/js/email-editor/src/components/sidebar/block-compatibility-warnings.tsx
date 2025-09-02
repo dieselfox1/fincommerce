@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { hasBlockSupport, getBlockSupport } from '@wordpress/blocks';
-import { Fill, Notice } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { hasBlockSupport, getBlockSupport } from '@finpress/blocks';
+import { Fill, Notice } from '@finpress/components';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 
 export const hasBackgroundImageSupport = ( nameOrType: string ) => {
 	const backgroundSupport = getBlockSupport(
@@ -30,7 +30,7 @@ export function BlockCompatibilityWarnings(): JSX.Element {
 			'border',
 			false
 		) ||
-		// We can remove the check for __experimentalBorder after we support WordPress 6.8+.
+		// We can remove the check for __experimentalBorder after we support finpress 6.8+.
 		hasBlockSupport(
 			selectedBlock?.name,
 			// @ts-expect-error Border is not yet supported in the types

@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { CartResponseItem } from '@fincommerce/types';
-import { createRef, useEffect, useRef } from '@wordpress/element';
+import { createRef, useEffect, useRef } from '@finpress/element';
 import type { RefObject } from 'react';
 import { CartLineItemsCartSkeleton } from '@fincommerce/base-components/skeleton/patterns/cart-line-items';
 import { DelayedContentWithSkeleton } from '@fincommerce/base-components/delayed-content-with-skeleton';

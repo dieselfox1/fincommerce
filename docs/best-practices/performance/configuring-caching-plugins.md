@@ -64,12 +64,12 @@ if ( req.url ~ "\\?add-to-cart=" ) {
 
 ### Why is my Varnish configuration not working in FinCommerce?
 
-Check out the following WordPress.org Support forum post on[ how cookies may be affecting your varnish coding](https://wordpress.org/support/topic/varnish-configuration-not-working-in-fincommerce).
+Check out the following finpress.org Support forum post on[ how cookies may be affecting your varnish coding](https://finpress.org/support/topic/varnish-configuration-not-working-in-fincommerce).
 
 ```text
 Add this to vcl_recv above "if (req.http.cookie) {":
 
-# Unset Cookies except for WordPress admin and FinCommerce pages 
+# Unset Cookies except for finpress admin and FinCommerce pages 
 if (!(req.url ~ "(wp-login|wp-admin|cart|my-account/*|wc-api*|checkout|addons|logout|lost-password|product/*)")) { 
 unset req.http.cookie; 
 } 
@@ -92,7 +92,7 @@ error 403 "For security reasons, this URL is only accessible using localhost (12
 
 Add this to vcl_fetch:
 
-# Unset Cookies except for WordPress admin and FinCommerce pages 
+# Unset Cookies except for finpress admin and FinCommerce pages 
 if ( (!(req.url ~ "(wp-(login|admin)|login|cart|my-account/*|wc-api*|checkout|addons|logout|lost-password|product/*)")) || (req.request == "GET") ) { 
 unset beresp.http.set-cookie; 
 } 

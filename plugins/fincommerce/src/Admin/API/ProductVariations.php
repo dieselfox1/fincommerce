@@ -77,8 +77,8 @@ class ProductVariations extends \WC_REST_Product_Variations_Controller {
 		if ( $search ) {
 			$like       = '%' . $wpdb->esc_like( $search ) . '%';
 			$conditions = array(
-				$wpdb->prepare( "{$wpdb->posts}.post_title LIKE %s", $like ), // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-				$wpdb->prepare( 'attr_search_meta.meta_value LIKE %s', $like ), // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				$wpdb->prepare( "{$wpdb->posts}.post_title LIKE %s", $like ), // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
+				$wpdb->prepare( 'attr_search_meta.meta_value LIKE %s', $like ), // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			);
 
 			if ( wc_product_sku_enabled() ) {

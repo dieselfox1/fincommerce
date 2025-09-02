@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { SelectControl } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { SelectControl } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

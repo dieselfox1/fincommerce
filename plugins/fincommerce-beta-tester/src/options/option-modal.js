@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 import PropTypes from 'prop-types';
-import { Button, Modal } from '@wordpress/components';
+import { Button, Modal } from '@finpress/components';
 
 export const OptionModal = ( props ) => {
 	const [ value, setValue ] = useState( props.option.content );

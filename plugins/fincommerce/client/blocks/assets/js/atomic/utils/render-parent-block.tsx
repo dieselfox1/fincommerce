@@ -8,7 +8,7 @@ import {
 	Suspense,
 	isValidElement,
 	cloneElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 import parse from 'html-react-parser';
 import {
 	getRegisteredBlocks,

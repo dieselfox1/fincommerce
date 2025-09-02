@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	AlignmentToolbar,
 	BlockControls as BlockControlsWrapper,
 	MediaReplaceFlow,
-} from '@wordpress/block-editor';
-import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
-import { crop } from '@wordpress/icons';
+} from '@finpress/block-editor';
+import { ToolbarButton, ToolbarGroup } from '@finpress/components';
+import { crop } from '@finpress/icons';
 import { WP_REST_API_Category } from 'wp-types';
 import { ProductResponseItem } from '@fincommerce/types';
 import type { ComponentType, Dispatch, SetStateAction } from 'react';
-import type { BlockAlignment } from '@wordpress/blocks';
+import type { BlockAlignment } from '@finpress/blocks';
 
 /**
  * Internal dependencies

@@ -88,7 +88,7 @@ class RuntimeContainer {
 			return $this->resolved_cache[ $class_name ];
 		}
 
-		// phpcs:disable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.ExceptionNotEscaped
 
 		if ( in_array( $class_name, $resolve_chain, true ) ) {
 			throw new ContainerException( "Recursive resolution of class '$class_name'. Resolution chain: " . implode( ', ', $resolve_chain ) );
@@ -118,7 +118,7 @@ class RuntimeContainer {
 			throw new ContainerException( "Reflection error when resolving '$class_name': (" . get_class( $e ) . ") {$e->getMessage()}", 0, $e );
 		}
 
-		// phpcs:enable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.ExceptionNotEscaped
 
 		$this->resolved_cache[ $class_name ] = $instance;
 
@@ -141,7 +141,7 @@ class RuntimeContainer {
 	private function instantiate_class_using_reflection( string $class_name, array &$resolve_chain ): object {
 		$ref_class = new \ReflectionClass( $class_name );
 
-		// phpcs:disable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.ExceptionNotEscaped
 
 		$constructor = $ref_class->getConstructor();
 		if ( ! is_null( $constructor ) ) {
@@ -184,7 +184,7 @@ class RuntimeContainer {
 			$init_args
 		);
 
-		// phpcs:enable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.ExceptionNotEscaped
 
 		$init_method->invoke( $instance, ...$init_arg_instances );
 

@@ -85,7 +85,7 @@ class UI {
 			return;
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( isset( $_REQUEST['action'] ) && 'edit' === $_REQUEST['action'] && isset( $_REQUEST['url'] ) ) {
 			$this->edit_screen( (int) $_REQUEST['url'] );
 			return;
@@ -107,7 +107,7 @@ class UI {
 	 * @return bool
 	 */
 	private function is_download_urls_screen(): bool {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		return isset( $_GET['tab'] )
 			&& 'products' === $_GET['tab']
 			&& isset( $_GET['section'] )
@@ -119,7 +119,7 @@ class UI {
 	 * Process bulk and single-row actions.
 	 */
 	private function process_actions() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$ids = isset( $_REQUEST['url'] ) ? array_map( 'absint', (array) $_REQUEST['url'] ) : array();
 
 		if ( empty( $ids ) || empty( $_REQUEST['action'] ) ) {
@@ -162,8 +162,8 @@ class UI {
 	 * as part of the URL query. This method is a simple shim to bridge the resulting gap.
 	 */
 	private function handle_search() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 
 		// If a search value has not been POSTed, or if it was POSTed but is already equal to the
 		// same value in the URL query, we need take no further action.
@@ -191,7 +191,7 @@ class UI {
 	 * @param int $url_id The ID of the rule to be edited/created. Zero if we are creating a new entry.
 	 */
 	private function process_edits( int $url_id ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		$url     = esc_url_raw( wp_unslash( $_POST['approved_directory_url'] ?? '' ) );
 		$enabled = (bool) sanitize_text_field( wp_unslash( $_POST['approved_directory_enabled'] ?? '' ) );
 
@@ -223,7 +223,7 @@ class UI {
 
 		wp_safe_redirect( $redirect_url );
 		exit;
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		// phpcs:enable finpress.Security.NonceVerification.Missing
 	}
 
 	/**
@@ -321,7 +321,7 @@ class UI {
 			<h2 class='wc-table-list-header'>
 				<?php esc_html_e( 'Approved Download Directories', 'fincommerce' ); ?>
 				<a href='<?php echo esc_url( $this->table->get_action_url( 'edit', 0 ) ); ?>' class='page-title-action'><?php esc_html_e( 'Add New', 'fincommerce' ); ?></a>
-				<?php echo $turn_on_off; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo $turn_on_off; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 			</h2>
 		<?php
 	}
@@ -345,7 +345,7 @@ class UI {
 			? __( 'Edit Approved Directory', 'fincommerce' )
 			: __( 'Add New Approved Directory', 'fincommerce' );
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$submitted    = sanitize_text_field( wp_unslash( $_GET['submitted-url'] ?? '' ) );
 		$existing_url = $existing ? $existing->get_url() : '';
 		$enabled      = $existing ? $existing->is_enabled() : true;
@@ -387,7 +387,7 @@ class UI {
 	 * Displays any admin notices that might be needed.
 	 */
 	private function admin_notices() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$successfully_deleted  = isset( $_GET['deleted-ids'] ) ? (int) $_GET['deleted-ids'] : 0;
 		$successfully_enabled  = isset( $_GET['enabled-ids'] ) ? (int) $_GET['enabled-ids'] : 0;
 		$successfully_disabled = isset( $_GET['disabled-ids'] ) ? (int) $_GET['disabled-ids'] : 0;

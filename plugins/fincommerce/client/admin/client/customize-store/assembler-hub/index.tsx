@@ -1,43 +1,43 @@
-// Reference: https://github.com/WordPress/gutenberg/tree/v16.4.0/packages/edit-site/src/index.js
+// Reference: https://github.com/finpress/gutenberg/tree/v16.4.0/packages/edit-site/src/index.js
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * External dependencies
  */
-import { createContext, useEffect, useRef, useState } from '@wordpress/element';
-import { dispatch } from '@wordpress/data';
+import { createContext, useEffect, useRef, useState } from '@finpress/element';
+import { dispatch } from '@finpress/data';
 import {
 	__experimentalFetchLinkSuggestions as fetchLinkSuggestions,
 	__experimentalFetchUrlData as fetchUrlData,
 	// @ts-ignore No types for this exist yet.
-} from '@wordpress/core-data';
+} from '@finpress/core-data';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
 	registerCoreBlocks,
 	__experimentalGetCoreBlocks,
 	// @ts-ignore No types for this exist yet.
-} from '@wordpress/block-library';
+} from '@finpress/block-library';
 import {
 	getBlockType,
 	// @ts-ignore No types for this exist yet.
 	store as blocksStore,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 // @ts-ignore No types for this exist yet.
-import { privateApis as routerPrivateApis } from '@wordpress/router';
+import { privateApis as routerPrivateApis } from '@finpress/router';
 // @ts-ignore No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 // @ts-ignore No types for this exist yet.
-import { ShortcutProvider } from '@wordpress/keyboard-shortcuts';
+import { ShortcutProvider } from '@finpress/keyboard-shortcuts';
 // @ts-ignore No types for this exist yet.
-import { store as preferencesStore } from '@wordpress/preferences';
+import { store as preferencesStore } from '@finpress/preferences';
 // @ts-ignore No types for this exist yet.
-import { store as editorStore } from '@wordpress/editor';
+import { store as editorStore } from '@finpress/editor';
 // @ts-ignore No types for this exist yet.
-import { store as editSiteStore } from '@wordpress/edit-site/build-module/store';
+import { store as editSiteStore } from '@finpress/edit-site/build-module/store';
 // @ts-ignore No types for this exist yet.
-import { GlobalStylesProvider } from '@wordpress/edit-site/build-module/components/global-styles/global-styles-provider';
-import { MediaUpload } from '@wordpress/media-utils';
-import { addFilter } from '@wordpress/hooks';
+import { GlobalStylesProvider } from '@finpress/edit-site/build-module/components/global-styles/global-styles-provider';
+import { MediaUpload } from '@finpress/media-utils';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Internal dependencies

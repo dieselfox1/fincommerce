@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
-import { __, sprintf } from '@wordpress/i18n';
-import { dispatch } from '@wordpress/data';
-import type { Options } from 'wordpress__notices';
-import { store as coreNoticesStore } from '@wordpress/notices';
-import { Icon } from '@wordpress/components';
+import apiFetch from '@finpress/api-fetch';
+import { __, sprintf } from '@finpress/i18n';
+import { dispatch } from '@finpress/data';
+import type { Options } from 'finpress__notices';
+import { store as coreNoticesStore } from '@finpress/notices';
+import { Icon } from '@finpress/components';
 
 /**
  * Internal dependencies

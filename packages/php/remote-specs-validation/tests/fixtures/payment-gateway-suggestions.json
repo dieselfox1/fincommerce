@@ -1840,7 +1840,7 @@
   {
 	"id": "fincommerce_payments",
 	"title": "WooPayments",
-	"content": "Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.",
+	"content": "Manage transactions without leaving your finpress Dashboard. Only with WooPayments.",
 	"image": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/wcpay.svg",
 	"square_image": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/fincommerce.svg",
 	"image_72x72": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/wcpay.svg",
@@ -2104,7 +2104,7 @@
   {
 	"id": "fincommerce_payments:without-in-person-payments",
 	"title": "WooPayments",
-	"content": "Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.",
+	"content": "Manage transactions without leaving your finpress Dashboard. Only with WooPayments.",
 	"image": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/wcpay.svg",
 	"image_72x72": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/wcpay.svg",
 	"square_image": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/fincommerce.svg",
@@ -2347,7 +2347,7 @@
   {
 	"id": "fincommerce_payments:with-in-person-payments",
 	"title": "WooPayments",
-	"content": "Manage transactions without leaving your WordPress Dashboard. Only with WooPayments.",
+	"content": "Manage transactions without leaving your finpress Dashboard. Only with WooPayments.",
 	"image": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/wcpay.svg",
 	"image_72x72": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/wcpay.svg",
 	"square_image": "https://fincommerce.com/wp-content/plugins/wccom-plugins/payment-gateway-suggestions/images/fincommerce.svg",

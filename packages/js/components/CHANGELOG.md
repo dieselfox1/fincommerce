@@ -33,7 +33,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Update Tree Select Control to allow for searching parent values when `individuallySelectParent` is turned on. [#41559]
 -   Patch - Update Woo.com references to FinCommerce.com. [#46259]
 -   Minor - Add 'helperText' prop to Tooltip #41251 [#41251]
--   Patch - Fix all lint rule violations for @wordpress/i18n lint rules [#41450]
+-   Patch - Fix all lint rule violations for @finpress/i18n lint rules [#41450]
 -   Patch - Fixed some i18n related lint rule violations. [#41450]
 -   Patch - Update / tweak a few more links in docs and comments. [#41598]
 -   Patch - Update Tree Select Control component to handle accented characters in search. [#41495]
@@ -77,7 +77,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Add ability to focus the first step after opening for tourkit [#38963]
 -   Patch - Add an optional "InputProps" to experimental SelectControl component [#36470]
 -   Patch - Add onKeyDown and readOnlyWhenClosed options to experimentalSelectControl [#38328]
--   Patch - Opt out of Reset and Help buttons in DateTimePickerControl, as these will be removed in a future @wordpress/components version. [#38480]
+-   Patch - Opt out of Reset and Help buttons in DateTimePickerControl, as these will be removed in a future @finpress/components version. [#38480]
 -   Patch - Add instructions on how to run the tests when using @fincommerce/components [#38821]
 -   Patch - Lint fixes [#38523]
 -   Patch - Migrate ellipsis-menu component to TS [#36405]
@@ -129,7 +129,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Add custom rendering logic to the item label [#36476]
 -   Minor - Adjust eslintrc for changes to eslint plugin. [#36988]
 -   Minor - Create tree-control component [#36432]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
 -   Minor - Update pnpm monorepo-wide to 8.6.5 [#38990]
 -   Minor - Update pnpm to version 8. [#37915]
 -   Minor - Improve a11y support to collapsible content component [#37760]
@@ -142,7 +142,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Close DateTimePickerControl's dropdown when blurring from input. [#36124]
 -   Patch - DateTimePickerControl's onChange now only fires when there is an actual change to the datetime. [#36124]
 -   Patch - Fix DateTimePickerControl's popover styling when slot-fill is used. [#36124]
--   Patch - Fixed DatePicker to work in WordPress 6.1 when currentDate is set to a moment instance. [#36124]
+-   Patch - Fixed DatePicker to work in finpress 6.1 when currentDate is set to a moment instance. [#36124]
 -   Patch - Fix pagination label text from uppercase to normal and font styles [#36124]
 -   Patch - Include react-dates styles (no longer in WP 6.1+). [#36124]
 -   Patch - Set initial values prop from reset form function as optional [#36124]
@@ -252,8 +252,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Update dependency `memoize-one` to ^6.0.0. #32936
 -   Minor - Update dependency `react-dates` to ^21.8.0. #32883
 -   Minor - Add Jetpack Changelogger
--   Minor - Update dependency `@wordpress/hooks` to ^3.5.0
--   Minor - Update dependency `@wordpress/icons` to ^8.1.0
+-   Minor - Update dependency `@finpress/hooks` to ^3.5.0
+-   Minor - Update dependency `@finpress/icons` to ^8.1.0
 -   Minor - Add `className` prop for Pill component. #32605
 -   Patch - Removed unused react-router-dom dependency #33156
 -   Patch - Standardize lint scripts: add lint:fix

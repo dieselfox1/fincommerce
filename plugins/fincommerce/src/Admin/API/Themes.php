@@ -74,7 +74,7 @@ class Themes extends \WC_REST_Data_Controller {
 	 */
 	public function upload_theme( $request ) {
 		if (
-			! isset( $_FILES['pluginzip'] ) || ! isset( $_FILES['pluginzip']['tmp_name'] ) || ! is_uploaded_file( $_FILES['pluginzip']['tmp_name'] ) || ! is_file( $_FILES['pluginzip']['tmp_name'] ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash,  WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			! isset( $_FILES['pluginzip'] ) || ! isset( $_FILES['pluginzip']['tmp_name'] ) || ! is_uploaded_file( $_FILES['pluginzip']['tmp_name'] ) || ! is_file( $_FILES['pluginzip']['tmp_name'] ) ) { // phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash,  finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			return new \WP_Error( 'fincommerce_rest_invalid_file', __( 'Specified file failed upload test.', 'fincommerce' ) );
 		}
 

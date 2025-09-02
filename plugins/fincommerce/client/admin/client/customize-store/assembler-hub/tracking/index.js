@@ -3,7 +3,7 @@
 /**
  * External dependencies
  */
-import { use } from '@wordpress/data';
+import { use } from '@finpress/data';
 
 /**
  * Internal dependencies

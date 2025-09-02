@@ -580,7 +580,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	 * Set expiration date.
 	 *
 	 * @since  3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_expires( $date ) {
 		$this->set_date_prop( 'date_expires', $date );
@@ -590,7 +590,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	 * Set date_created
 	 *
 	 * @since  3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_created( $date ) {
 		$this->set_date_prop( 'date_created', $date );
@@ -600,7 +600,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	 * Set date_modified
 	 *
 	 * @since  3.0.0
-	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
+	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_modified( $date ) {
 		$this->set_date_prop( 'date_modified', $date );
@@ -1047,7 +1047,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 				break;
 			case self::E_WC_COUPON_NOT_YOURS_REMOVED:
 				// We check for supplied billing email. On shortcode, this will be present for checkout requests.
-				$billing_email = \Automattic\FinCommerce\Utilities\ArrayUtil::get_value_or_default( $_POST, 'billing_email' ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+				$billing_email = \Automattic\FinCommerce\Utilities\ArrayUtil::get_value_or_default( $_POST, 'billing_email' ); // phpcs:ignore finpress.Security.NonceVerification.Missing
 				if ( ! is_null( $billing_email ) ) {
 					$err = sprintf(
 						/* translators: %s: coupon code */

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { gallery as icon } from '@wordpress/icons';
+import { gallery as icon } from '@finpress/icons';
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
-import { createBlock } from '@wordpress/blocks';
+import { createBlock } from '@finpress/blocks';
 
 /**
  * Internal dependencies

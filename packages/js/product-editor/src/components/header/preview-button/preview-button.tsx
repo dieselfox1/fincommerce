@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { Button } from '@finpress/components';
+import { createElement } from '@finpress/element';
 import { getNewPath, navigateTo } from '@fincommerce/navigation';
 import { Product } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { addQueryArgs, removeQueryArgs } from '@wordpress/url';
-import { QueryArgs } from '@wordpress/url/build-types/get-query-args';
+import { addQueryArgs, removeQueryArgs } from '@finpress/url';
+import { QueryArgs } from '@finpress/url/build-types/get-query-args';
 import {
 	getUrlParameter,
 	PREFIX_QUERY_ARG_FILTER_TYPE,

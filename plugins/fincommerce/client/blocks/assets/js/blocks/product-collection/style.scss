@@ -5,7 +5,7 @@
 
 	&:has(.is-product-collection-layout-carousel) {
 		@include breakpoint("<600px") {
-			// This rule is overriding a `display: flex` from WordPress core, that's
+			// This rule is overriding a `display: flex` from finpress core, that's
 			// why it needs a higher specificity.
 			:where(.wc-block-next-previous-buttons.wc-block-next-previous-buttons) {
 				display: none;

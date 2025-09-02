@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockAlignment } from '@wordpress/blocks';
+import type { BlockAlignment } from '@finpress/blocks';
 
 export interface Attributes {
 	align?: BlockAlignment;

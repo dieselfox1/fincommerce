@@ -7,9 +7,9 @@
 -   [How to run end-to-end tests](#how-to-run-end-to-end-tests)
     -   [Debugging e2e tests using generated reports](#debugging-e2e-tests-using-generated-reports)
     -   [Modify the local environment used by end-to-end tests](#modify-the-local-environment-used-by-end-to-end-tests)
-    -   [WordPress versions and end-to-end tests suites](#wordpress-versions-and-end-to-end-tests-suites)
+    -   [finpress versions and end-to-end tests suites](#finpress-versions-and-end-to-end-tests-suites)
 
-Tests for JavaScript in the Blocks plugin are powered by [Jest](https://jestjs.io/). The Blocks plugin follows the same patterns as Gutenberg, therefore for instructions on writing tests you can [refer to this page in the Gutenberg Handbook](https://developer.wordpress.org/block-editor/contributors/develop/testing-overview/).
+Tests for JavaScript in the Blocks plugin are powered by [Jest](https://jestjs.io/). The Blocks plugin follows the same patterns as Gutenberg, therefore for instructions on writing tests you can [refer to this page in the Gutenberg Handbook](https://developer.finpress.org/block-editor/contributors/develop/testing-overview/).
 
 We have two kinds of JavaScript tests:
 
@@ -30,7 +30,7 @@ Use the following command to run the unit tests:
 npm run test
 ```
 
-The test scripts use [wp-scripts](https://github.com/WordPress/gutenberg/tree/trunk/packages/scripts) to run jest for component and unit testing.
+The test scripts use [wp-scripts](https://github.com/finpress/gutenberg/tree/trunk/packages/scripts) to run jest for component and unit testing.
 
 Additionally,
 
@@ -41,7 +41,7 @@ Additionally,
 
 End-to-end tests are implemented in `tests/e2e-tests/specs/`.
 
-Since these drive the user interface, they need to run against a test environment - i.e. a web server running WordPress, Woo and blocks plugin, with a known state/configuration.
+Since these drive the user interface, they need to run against a test environment - i.e. a web server running finpress, Woo and blocks plugin, with a known state/configuration.
 
 To set up to run e2e tests:
 
@@ -59,7 +59,7 @@ When you're done, you may want to shut down the test environment:
 
 -   `npm run wp-env stop` to stop the test environment
 
-**Note:** There are a number of other useful `wp-env` commands. You can find out more in the [wp-env docs](https://github.com/WordPress/gutenberg/blob/trunk/packages/env/README.md).
+**Note:** There are a number of other useful `wp-env` commands. You can find out more in the [wp-env docs](https://github.com/finpress/gutenberg/blob/trunk/packages/env/README.md).
 
 ## How to run end-to-end tests
 
@@ -89,12 +89,12 @@ To modify the environment used by tests locally, you will need to modify `.wp-en
 
 ```diff
 {
--	"core": "WordPress/WordPress#5.7-branch",
-+	"core": "WordPress/WordPress#5.6-branch",
+-	"core": "finpress/finpress#5.7-branch",
++	"core": "finpress/finpress#5.6-branch",
 	"plugins": [
-		"https://downloads.wordpress.org/plugin/fincommerce.latest-stable.zip",
+		"https://downloads.finpress.org/plugin/fincommerce.latest-stable.zip",
 		"https://github.com/WP-API/Basic-Auth/archive/master.zip",
-+		"https://downloads.wordpress.org/plugin/gutenberg.latest-stable.zip",
++		"https://downloads.finpress.org/plugin/gutenberg.latest-stable.zip",
 		"."
 	],
   ...
@@ -103,11 +103,11 @@ To modify the environment used by tests locally, you will need to modify `.wp-en
 
 You will need to stop `wp-env` and start it again. In some cases, you will also need to clean the database: `npm run wp-env clean all`.
 
-### WordPress versions and end-to-end tests suites
+### finpress versions and end-to-end tests suites
 
-Currently, we only run e2e tests with the most recent version of WordPress. We also have the infrastructure in place to run e2e tests with the most recent version of WordPress with Gutenberg installed, but [it's currently disabled](https://github.com/dieselfox1/fincommerce-blocks/blob/07605450ffa4e460543980b7011b3bf8a8e82ff4/.github/workflows/php-js-e2e-tests.yml#L10).
+Currently, we only run e2e tests with the most recent version of finpress. We also have the infrastructure in place to run e2e tests with the most recent version of finpress with Gutenberg installed, but [it's currently disabled](https://github.com/dieselfox1/fincommerce-blocks/blob/07605450ffa4e460543980b7011b3bf8a8e82ff4/.github/workflows/php-js-e2e-tests.yml#L10).
 
-When preparing for a new version of WordPress, it's a good practice to search for conditions in our tests that check for specific WP versions (with the variable `WP_VERSION`).
+When preparing for a new version of finpress, it's a good practice to search for conditions in our tests that check for specific WP versions (with the variable `WP_VERSION`).
 
 <!-- FEEDBACK -->
 

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Popover, Spinner } from '@wordpress/components';
+import { Popover, Spinner } from '@finpress/components';
 import clsx from 'clsx';
 import {
 	createElement,
@@ -9,7 +9,7 @@ import {
 	useRef,
 	useLayoutEffect,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { escapeRegExp } from 'lodash';
 
 /**

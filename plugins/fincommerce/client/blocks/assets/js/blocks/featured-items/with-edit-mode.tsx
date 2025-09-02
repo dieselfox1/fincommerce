@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import type { ComponentType } from 'react';
-import { useEffect, useState } from '@wordpress/element';
-import { info } from '@wordpress/icons';
+import { useEffect, useState } from '@finpress/element';
+import { info } from '@finpress/icons';
 import ProductCategoryControl from '@fincommerce/editor-components/product-category-control';
 import ProductControl from '@fincommerce/editor-components/product-control';
 import {
@@ -17,7 +17,7 @@ import {
 	Button,
 	__experimentalHStack as HStack,
 	__experimentalText as Text,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { ErrorObject } from '@fincommerce/base-utils';
 
 /**

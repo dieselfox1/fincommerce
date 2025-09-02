@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import clsx from 'clsx';
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import {
 	useStoreEvents,
 	useStoreAddToCart,
 } from '@fincommerce/base-context/hooks';
 import { useStyleProps } from '@fincommerce/base-hooks';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { CART_URL } from '@fincommerce/block-settings';
 import { getSetting } from '@fincommerce/settings';
 import {

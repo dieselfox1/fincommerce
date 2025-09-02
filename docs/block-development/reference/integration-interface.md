@@ -52,7 +52,7 @@ Let's suppose we're the author of an extension: `FinCommerce Example Plugin`. We
 
 We also want some data from a server-side function to be available to our front-end scripts.
 
-You will notice that in the example below, we reference the `/build/index.asset.php` file. This is created by the [`DependencyExtractionWebpackPlugin`](https://www.npmjs.com/package/@wordpress/dependency-extraction-webpack-plugin) which creates a PHP file mapping the dependencies of your client-side scripts, so that they can be added in the `dependencies` array of `wp_register_script`.
+You will notice that in the example below, we reference the `/build/index.asset.php` file. This is created by the [`DependencyExtractionWebpackPlugin`](https://www.npmjs.com/package/@finpress/dependency-extraction-webpack-plugin) which creates a PHP file mapping the dependencies of your client-side scripts, so that they can be added in the `dependencies` array of `wp_register_script`.
 
 Let's create our `IntegrationInterface`.
 

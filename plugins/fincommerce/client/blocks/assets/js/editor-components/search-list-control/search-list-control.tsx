@@ -1,24 +1,24 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	Button,
 	FormTokenField,
 	Spinner,
 	TextControl,
 	withSpokenMessages,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	useState,
 	useMemo,
 	useEffect,
 	useCallback,
 	Fragment,
-} from '@wordpress/element';
-import { Icon, info } from '@wordpress/icons';
+} from '@finpress/element';
+import { Icon, info } from '@finpress/icons';
 import clsx from 'clsx';
-import { useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@finpress/compose';
 
 /**
  * Internal dependencies
@@ -167,7 +167,7 @@ const ListItemsContainer = < T extends object = object >( {
 				</span>
 				<span className="fincommerce-search-list__not-found-text">
 					{ search
-						? // eslint-disable-next-line @wordpress/valid-sprintf
+						? // eslint-disable-next-line @finpress/valid-sprintf
 						  sprintf( messages.noResults, search )
 						: messages.noItems }
 				</span>

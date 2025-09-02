@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import { SearchListControl } from '@fincommerce/editor-components/search-list-control';
 import PropTypes from 'prop-types';
 import { withSearchedProducts } from '@fincommerce/block-hocs';
 import ErrorMessage from '@fincommerce/editor-components/error-placeholder/error-message';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * The products control exposes a custom selector for searching and selecting

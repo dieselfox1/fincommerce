@@ -6,9 +6,9 @@
 namespace Automattic\FinCommerce\Proxies;
 
 /**
- * Proxy for interacting with WordPress actions and filters.
+ * Proxy for interacting with finpress actions and filters.
  *
- * This class should be used instead of directly accessing the WordPress functions, to ease unit testing.
+ * This class should be used instead of directly accessing the finpress functions, to ease unit testing.
  */
 class ActionsProxy {
 

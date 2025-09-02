@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import { isString, isObject } from '@fincommerce/types';
-import type { Style as StyleEngineProperties } from '@wordpress/style-engine/src/types';
+import type { Style as StyleEngineProperties } from '@finpress/style-engine/src/types';
 import type { CSSProperties } from 'react';
 
 /**

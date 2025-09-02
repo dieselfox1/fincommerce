@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import { type OfflinePaymentMethodProvider } from '@fincommerce/data';
 
 /**

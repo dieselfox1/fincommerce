@@ -2,10 +2,10 @@
 /**
  * External dependencies
  */
-import { dispatch, useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
-import { useEffect, useMemo, useState } from '@wordpress/element';
-import { parse } from '@wordpress/blocks';
+import { dispatch, useSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
+import { useEffect, useMemo, useState } from '@finpress/element';
+import { parse } from '@finpress/blocks';
 /**
  * Internal dependencies
  */

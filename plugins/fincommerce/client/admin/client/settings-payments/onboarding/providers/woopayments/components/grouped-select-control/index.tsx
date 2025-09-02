@@ -2,9 +2,9 @@
  * External dependencies
  */
 import React, { useRef, useState } from 'react';
-import { check, chevronDown, chevronUp, Icon } from '@wordpress/icons';
+import { check, chevronDown, chevronUp, Icon } from '@finpress/icons';
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useSelect, UseSelectState } from 'downshift';
 
 /**

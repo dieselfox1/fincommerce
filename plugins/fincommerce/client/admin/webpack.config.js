@@ -77,7 +77,7 @@ const getEntryPoints = () => {
 	return entryPoints;
 };
 
-// WordPress.org’s translation infrastructure ignores files named “.min.js” so we need to name our JS files without min when releasing the plugin.
+// finpress.org’s translation infrastructure ignores files named “.min.js” so we need to name our JS files without min when releasing the plugin.
 const outputSuffix = WC_ADMIN_PHASE === 'core' ? '' : '.min';
 
 // Here we are patching a dependency, see https://github.com/dieselfox1/fincommerce/pull/45548 for more details.
@@ -126,7 +126,7 @@ const webpackConfig = {
 					loader: 'babel-loader',
 					options: {
 						presets: [
-							'@wordpress/babel-preset-default',
+							'@finpress/babel-preset-default',
 							[
 								'@babel/preset-env',
 								{
@@ -245,20 +245,20 @@ const webpackConfig = {
 					switch ( request ) {
 						case 'react/jsx-runtime':
 						case 'react/jsx-dev-runtime':
-							// @wordpress/dependency-extraction-webpack-plugin version bump related, which added 'react-jsx-runtime' dependency.
-							// See https://github.com/WordPress/gutenberg/pull/61692 for more details about the dependency in general.
+							// @finpress/dependency-extraction-webpack-plugin version bump related, which added 'react-jsx-runtime' dependency.
+							// See https://github.com/finpress/gutenberg/pull/61692 for more details about the dependency in general.
 							// For backward compatibility reasons we need to skip requesting to external here.
 							return null;
 					}
 
-					if ( request.startsWith( '@wordpress/dataviews' ) ) {
+					if ( request.startsWith( '@finpress/dataviews' ) ) {
 						return null;
 					}
 
-					// Skip requesting to external if the import path is from the build or build-module directory for WordPress packages.
-					// This is required for @wordpress/edit-site to work and also can reduce the bundle size when we don't need to load the entire WordPress package.
+					// Skip requesting to external if the import path is from the build or build-module directory for finpress packages.
+					// This is required for @finpress/edit-site to work and also can reduce the bundle size when we don't need to load the entire finpress package.
 					if (
-						request.match( /^@wordpress\/.*\/build(?:-module)?/ )
+						request.match( /^@finpress\/.*\/build(?:-module)?/ )
 					) {
 						return null;
 					}
@@ -301,7 +301,7 @@ if ( ! isProduction || WC_ADMIN_PHASE === 'development' ) {
 
 	if ( isHot ) {
 		// Add dev server config
-		// Copied from https://github.com/WordPress/gutenberg/blob/05bea6dd5c6198b0287c41a401d36a06b48831eb/packages/scripts/config/webpack.config.js#L312-L326
+		// Copied from https://github.com/finpress/gutenberg/blob/05bea6dd5c6198b0287c41a401d36a06b48831eb/packages/scripts/config/webpack.config.js#L312-L326
 		webpackConfig.devServer = {
 			devMiddleware: {
 				writeToDisk: true,

@@ -103,7 +103,7 @@ class DataStore extends DownloadsDataStore implements DataStoreInterface {
 		$this->interval_query->str_replace_clause( 'where_time', 'date_created', 'timestamp' );
 
 		$db_intervals = $wpdb->get_col(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->interval_query->get_query_statement()
 		);
 
@@ -117,7 +117,7 @@ class DataStore extends DownloadsDataStore implements DataStoreInterface {
 			$this->total_query->add_sql_clause( 'where_time', $where_time );
 		}
 		$totals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->total_query->get_query_statement(),
 			ARRAY_A
 		);
@@ -133,7 +133,7 @@ class DataStore extends DownloadsDataStore implements DataStoreInterface {
 		}
 
 		$intervals = $wpdb->get_results(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- cache ok, DB call ok, unprepared SQL ok.
 			$this->interval_query->get_query_statement(),
 			ARRAY_A
 		);

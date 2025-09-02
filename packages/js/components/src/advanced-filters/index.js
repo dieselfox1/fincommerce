@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	Button,
 	Card,
@@ -10,8 +10,8 @@ import {
 	CardHeader,
 	Dropdown,
 	SelectControl,
-} from '@wordpress/components';
-import { createElement, Component, createRef } from '@wordpress/element';
+} from '@finpress/components';
+import { createElement, Component, createRef } from '@finpress/element';
 import { partial, isEqual } from 'lodash';
 import PropTypes from 'prop-types';
 import AddOutlineIcon from 'gridicons/dist/add-outline';

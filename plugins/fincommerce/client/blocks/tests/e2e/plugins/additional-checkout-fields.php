@@ -26,7 +26,7 @@ class Additional_Checkout_Fields_Test_Helper {
 	 * Define URL endpoint for enabling additional checkout fields.
 	 */
 	public function enable_custom_checkout_fields(): void {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['enable_custom_checkout_fields'] ) ) {
 			update_option( $this->additional_checkout_fields_option_name, 'yes' );
 			echo 'Enabled custom checkout fields';
@@ -36,7 +36,7 @@ class Additional_Checkout_Fields_Test_Helper {
 	 * Define URL endpoint for disabling additional checkout fields.
 	 */
 	public function disable_custom_checkout_fields(): void {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['disable_custom_checkout_fields'] ) ) {
 			update_option( $this->additional_checkout_fields_option_name, 'no' );
 			echo 'Disabled custom checkout fields';

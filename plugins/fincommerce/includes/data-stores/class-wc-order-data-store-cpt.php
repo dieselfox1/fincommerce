@@ -981,7 +981,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 			$wp_query_args['date_query'] = array();
 		}
 		if ( ! isset( $wp_query_args['meta_query'] ) ) {
-			// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+			// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			$wp_query_args['meta_query'] = array();
 		}
 
@@ -1244,12 +1244,12 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 		$order_ids           = esc_sql( $non_cached_ids );
 		$order_ids_in        = "'" . implode( "', '", $order_ids ) . "'";
 		$raw_meta_data_array = $wpdb->get_results(
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			"SELECT post_id as object_id, meta_id, meta_key, meta_value
 				FROM {$wpdb->postmeta}
 				WHERE post_id IN ( $order_ids_in )
 				ORDER BY post_id"
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		);
 		$raw_meta_data_collection = array_reduce(
 			$raw_meta_data_array,

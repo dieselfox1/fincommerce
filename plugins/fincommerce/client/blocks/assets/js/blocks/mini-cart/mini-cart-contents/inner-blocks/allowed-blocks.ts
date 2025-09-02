@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getBlockTypes } from '@wordpress/blocks';
+import { getBlockTypes } from '@finpress/blocks';
 
 const EXCLUDED_BLOCKS: readonly string[] = [
 	'fincommerce/mini-cart',

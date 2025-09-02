@@ -4,20 +4,20 @@ Create Product Editor Block scaffolds a fully functional modern development envi
 
 ## Default tooling
 
-You can use the built-in [wp-env](https://github.com/WordPress/gutenberg/tree/trunk/packages/env) support to easily get a local WordPress environment up and running. It is configured to load the latest released version of WordPress, the latest FinCommerce nightly build and the latest version of the [FinCommerce Beta Tester](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce-beta-tester).
+You can use the built-in [wp-env](https://github.com/finpress/gutenberg/tree/trunk/packages/env) support to easily get a local finpress environment up and running. It is configured to load the latest released version of finpress, the latest FinCommerce nightly build and the latest version of the [FinCommerce Beta Tester](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce-beta-tester).
 
-If you want to change which version of WordPress and FinCommerce are used, you can do so by modifying the `.wp-env.override.json` file.
+If you want to change which version of finpress and FinCommerce are used, you can do so by modifying the `.wp-env.override.json` file.
 
 Tooling support for linting, code formatting, and compilation are configured by default.
 
-If you already have a local WordPress development environment configured, you can map the generated project folder under your `plugins` folder.
+If you already have a local finpress development environment configured, you can map the generated project folder under your `plugins` folder.
 
 ## Usage
 
 ### Generate project folder
 
 ```
-npx @wordpress/create-block --template @fincommerce/create-product-editor-block my-extension-name
+npx @finpress/create-block --template @fincommerce/create-product-editor-block my-extension-name
 ```
 
 ### Get started developing
@@ -25,7 +25,7 @@ npx @wordpress/create-block --template @fincommerce/create-product-editor-block 
 
 ```bash
 cd my-extension-name
-npx wp-env start # Start Wordpress environment
+npx wp-env start # Start finpress environment
 ```
 
 By default, the `wp-env` environment created will have the new block-based product editor enabled. You can disable this by using the FinCommerce Beta Tester (disable the `product-block-editor` feature).
@@ -45,7 +45,7 @@ npm run build # Build the javascript
 For development of this tool itself, you can also point to a local directory when creating a product editor block:
 
 ```bash
-npx @wordpress/create-block --template ./path/to/fincommerce/packages/js/create-product-editor-block my-extension-name
+npx @finpress/create-block --template ./path/to/fincommerce/packages/js/create-product-editor-block my-extension-name
 ```
 
-This tool is a template to be used with [`@wordpress/create-block`](https://github.com/WordPress/gutenberg/tree/trunk/packages/create-block) to create a FinCommerce Product Editor Block starting point.
+This tool is a template to be used with [`@finpress/create-block`](https://github.com/finpress/gutenberg/tree/trunk/packages/create-block) to create a FinCommerce Product Editor Block starting point.

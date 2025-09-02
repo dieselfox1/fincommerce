@@ -17,8 +17,8 @@ jest.mock( '@fincommerce/data', () => ( {
 		.fn()
 		.mockReturnValue( { updateUserPreferences: jest.fn() } ),
 } ) );
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true,

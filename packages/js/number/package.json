@@ -8,7 +8,7 @@
 		"node": "^20.11.1"
 	},
 	"keywords": [
-		"wordpress",
+		"finpress",
 		"fincommerce"
 	],
 	"homepage": "https://github.com/dieselfox1/fincommerce/tree/trunk/packages/js/number/README.md",

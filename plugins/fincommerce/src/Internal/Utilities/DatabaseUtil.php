@@ -15,7 +15,7 @@ use Vtiful\Kernel\Format;
 class DatabaseUtil {
 
 	/**
-	 * Wrapper for the WordPress dbDelta function, allows to execute a series of SQL queries.
+	 * Wrapper for the finpress dbDelta function, allows to execute a series of SQL queries.
 	 *
 	 * @param string $queries The SQL queries to execute.
 	 * @param bool   $execute Ture to actually execute the queries, false to only simulate the execution.
@@ -74,7 +74,7 @@ class DatabaseUtil {
 			$table_name = $wpdb->prefix . $table_name;
 		}
 
-		//phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		//phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		return $wpdb->query( "DROP TABLE IF EXISTS `{$table_name}`" );
 	}
 
@@ -92,7 +92,7 @@ class DatabaseUtil {
 			return false;
 		}
 
-		// phpcs:ignore WordPress.DB.PreparedSQL
+		// phpcs:ignore finpress.DB.PreparedSQL
 		$wpdb->query( "ALTER TABLE $table_name DROP INDEX $index_name" );
 		return true;
 	}
@@ -111,7 +111,7 @@ class DatabaseUtil {
 			return false;
 		}
 
-		// phpcs:ignore WordPress.DB.PreparedSQL
+		// phpcs:ignore finpress.DB.PreparedSQL
 		$wpdb->query( "ALTER TABLE $table_name ADD PRIMARY KEY(`" . join( '`,`', $columns ) . '`)' );
 		return true;
 	}
@@ -130,7 +130,7 @@ class DatabaseUtil {
 			$index_name = 'PRIMARY';
 		}
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$results = $wpdb->get_results( $wpdb->prepare( "SHOW INDEX FROM $table_name WHERE Key_name = %s", $index_name ) );
 
 		if ( empty( $results ) ) {
@@ -255,7 +255,7 @@ class DatabaseUtil {
 		$column_clause       = '`' . implode( '`, `', $columns ) . '`';
 		$value_format_clause = implode( ', ', $value_format );
 		$on_duplicate_clause = $this->generate_on_duplicate_statement_clause( $columns );
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Values are escaped in $wpdb->prepare.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Values are escaped in $wpdb->prepare.
 		$sql = $wpdb->prepare(
 			"
 INSERT INTO $table_name ( $column_clause )
@@ -265,7 +265,7 @@ $on_duplicate_clause
 			$values
 		);
 		// phpcs:enable
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- $sql is prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- $sql is prepared.
 		return $wpdb->query( $sql );
 	}
 
@@ -307,10 +307,10 @@ $on_duplicate_clause
 		}
 
 		$conditions = implode( ' AND ', $conditions );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $primary_key_column and $table_name are hardcoded. $conditions is being prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $primary_key_column and $table_name are hardcoded. $conditions is being prepared.
 		$query = $wpdb->prepare( "SELECT `$primary_key_column` FROM `$table_name` WHERE $conditions LIMIT 1", $values );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- $query is prepared above.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- $query is prepared above.
 		$row_id = $wpdb->get_var( $query );
 
 		if ( $row_id ) {
@@ -356,7 +356,7 @@ $on_duplicate_clause
 	public function create_fts_index_order_address_table(): void {
 		global $wpdb;
 		$address_table = $wpdb->prefix . 'wc_order_addresses';
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $address_table is hardcoded.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $address_table is hardcoded.
 		$wpdb->query( "CREATE FULLTEXT INDEX order_addresses_fts ON $address_table (first_name, last_name, company, address_1, address_2, city, state, postcode, country, email, phone)" );
 	}
 
@@ -370,7 +370,7 @@ $on_duplicate_clause
 	public function drop_fts_index_order_address_table(): void {
 		global $wpdb;
 		$address_table = $wpdb->prefix . 'wc_order_addresses';
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $address_table is hardcoded.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $address_table is hardcoded.
 		$wpdb->query( "ALTER TABLE $address_table DROP INDEX order_addresses_fts;" );
 	}
 
@@ -410,7 +410,7 @@ $on_duplicate_clause
 	public function fts_index_on_order_address_table_exists(): bool {
 		global $wpdb;
 		$address_table = $wpdb->prefix . 'wc_order_addresses';
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $address_table is hardcoded.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $address_table is hardcoded.
 		return ! empty( $wpdb->get_results( "SHOW INDEX FROM $address_table WHERE Key_name = 'order_addresses_fts'" ) );
 	}
 
@@ -422,7 +422,7 @@ $on_duplicate_clause
 	public function create_fts_index_order_item_table(): void {
 		global $wpdb;
 		$order_item_table = $wpdb->prefix . 'fincommerce_order_items';
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $order_item_table is hardcoded.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $order_item_table is hardcoded.
 		$wpdb->query( "CREATE FULLTEXT INDEX order_item_fts ON $order_item_table (order_item_name)" );
 	}
 
@@ -434,7 +434,7 @@ $on_duplicate_clause
 	public function fts_index_on_order_item_table_exists(): bool {
 		global $wpdb;
 		$order_item_table = $wpdb->prefix . 'fincommerce_order_items';
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $order_item_table is hardcoded.
+		// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $order_item_table is hardcoded.
 		return ! empty( $wpdb->get_results( "SHOW INDEX FROM $order_item_table WHERE Key_name = 'order_item_fts'" ) );
 	}
 }

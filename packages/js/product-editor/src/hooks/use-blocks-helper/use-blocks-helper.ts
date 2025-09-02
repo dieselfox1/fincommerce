@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 
 export function useBlocksHelper() {
 	function getClosestParentTabId( clientId: string ) {

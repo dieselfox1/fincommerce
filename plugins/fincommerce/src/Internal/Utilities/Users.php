@@ -154,7 +154,7 @@ class Users {
 	/**
 	 * Site-specific method of retrieving the requested user meta.
 	 *
-	 * This is a multisite-aware wrapper around WordPress's own `get_user_meta()` function, and works by prefixing the
+	 * This is a multisite-aware wrapper around finpress's own `get_user_meta()` function, and works by prefixing the
 	 * supplied meta key with a blog-specific meta key.
 	 *
 	 * @param int    $user_id User ID.
@@ -175,7 +175,7 @@ class Users {
 	/**
 	 * Site-specific means of updating user meta.
 	 *
-	 * This is a multisite-aware wrapper around WordPress's own `update_user_meta()` function, and works by prefixing
+	 * This is a multisite-aware wrapper around finpress's own `update_user_meta()` function, and works by prefixing
 	 * the supplied meta key with a blog-specific meta key.
 	 *
 	 * @param int    $user_id    User ID.
@@ -196,7 +196,7 @@ class Users {
 	/**
 	 * Site-specific means of deleting user meta.
 	 *
-	 * This is a multisite-aware wrapper around WordPress's own `delete_user_meta()` function, and works by prefixing
+	 * This is a multisite-aware wrapper around finpress's own `delete_user_meta()` function, and works by prefixing
 	 * the supplied meta key with a blog-specific meta key.
 	 *
 	 * @param int    $user_id    User ID.

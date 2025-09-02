@@ -35,7 +35,7 @@ do_action( 'fincommerce_before_account_orders', $has_orders ); ?>
 		<tbody>
 			<?php
 			foreach ( $customer_orders->orders as $customer_order ) {
-				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+				$order      = wc_get_order( $customer_order ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 				$item_count = $order->get_item_count() - $order->get_item_count_refunded();
 				?>
 				<tr class="fincommerce-orders-table__row fincommerce-orders-table__row--status-<?php echo esc_attr( $order->get_status() ); ?> order">
@@ -74,7 +74,7 @@ do_action( 'fincommerce_before_account_orders', $has_orders ); ?>
 								$actions = wc_get_account_orders_actions( $order );
 
 								if ( ! empty( $actions ) ) {
-									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+									foreach ( $actions as $key => $action ) { // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 										if ( empty( $action['aria-label'] ) ) {
 											// Generate the aria-label based on the action name.
 											/* translators: %1$s Action name, %2$s Order number. */

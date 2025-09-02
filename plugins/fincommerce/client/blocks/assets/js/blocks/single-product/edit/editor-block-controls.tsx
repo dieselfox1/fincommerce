@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BlockControls } from '@wordpress/block-editor';
-import { ToolbarGroup } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { BlockControls } from '@finpress/block-editor';
+import { ToolbarGroup } from '@finpress/components';
 
 interface EditorBlockControlsProps {
 	isEditing: boolean;

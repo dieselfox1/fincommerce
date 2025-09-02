@@ -48,7 +48,7 @@ class WC_Helper_Sanitization {
 				if ( preg_match(
 					'/^https?:\/\/(([\w-]+\.)*fincommerce\.com|' .
 					'([\w-]+\.)*fincommerce\.test|' .
-					'([\w-]+\.)*WordPress\.com|' .
+					'([\w-]+\.)*finpress\.com|' .
 					'([\w-]+\.)*wp\.com)/ix',
 					$url
 				) ) {

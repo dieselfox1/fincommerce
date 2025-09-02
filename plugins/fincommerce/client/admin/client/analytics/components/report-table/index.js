@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { CheckboxControl, Button } from '@wordpress/components';
-import { applyFilters } from '@wordpress/hooks';
-import { Fragment, useRef, useState } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { focus } from '@wordpress/dom';
-import { withDispatch, withSelect } from '@wordpress/data';
+import { CheckboxControl, Button } from '@finpress/components';
+import { applyFilters } from '@finpress/hooks';
+import { Fragment, useRef, useState } from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { focus } from '@finpress/dom';
+import { withDispatch, withSelect } from '@finpress/data';
 import { get, partial, uniq } from 'lodash';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import PropTypes from 'prop-types';
 import { STORE_KEY as CES_STORE_KEY } from '@fincommerce/customer-effort-score';
 import {

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createBlock } from '@wordpress/blocks';
+import { createBlock } from '@finpress/blocks';
 
 /**
  * Internal dependencies

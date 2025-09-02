@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { trash } from '@wordpress/icons';
-import { store as blockEditorStore } from '@wordpress/block-editor';
+import { ToolbarButton, ToolbarGroup } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { trash } from '@finpress/icons';
+import { store as blockEditorStore } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

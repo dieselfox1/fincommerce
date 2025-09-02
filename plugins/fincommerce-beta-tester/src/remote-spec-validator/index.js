@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { withDispatch, withSelect } from '@wordpress/data';
-import { compose } from '@wordpress/compose';
-import { useState } from '@wordpress/element';
+import { withDispatch, withSelect } from '@finpress/data';
+import { compose } from '@finpress/compose';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

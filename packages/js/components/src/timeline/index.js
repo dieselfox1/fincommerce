@@ -3,9 +3,9 @@
  */
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { __ } from '@wordpress/i18n';
-import { format } from '@wordpress/date';
-import { createElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { format } from '@finpress/date';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

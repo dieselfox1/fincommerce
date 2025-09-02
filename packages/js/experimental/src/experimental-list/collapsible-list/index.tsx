@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Icon, chevronUp, chevronDown } from '@wordpress/icons';
+import { Icon, chevronUp, chevronDown } from '@finpress/icons';
 import {
 	createElement,
 	useState,
@@ -11,7 +11,7 @@ import {
 	useRef,
 	isValidElement,
 	cloneElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 import {
 	Transition,
 	CSSTransition,

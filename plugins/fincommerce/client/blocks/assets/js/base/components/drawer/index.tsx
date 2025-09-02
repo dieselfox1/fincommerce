@@ -1,6 +1,6 @@
 /**
  * Some code of the Drawer component is based on the Modal component from Gutenberg:
- * https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/modal/index.tsx
+ * https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/modal/index.tsx
  */
 /**
  * External dependencies
@@ -8,19 +8,19 @@
 import clsx from 'clsx';
 import { useDebounce } from 'use-debounce';
 import type { ForwardedRef, KeyboardEvent, RefObject } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	createPortal,
 	useEffect,
 	useRef,
 	forwardRef,
-} from '@wordpress/element';
-import { close, Icon } from '@wordpress/icons';
+} from '@finpress/element';
+import { close, Icon } from '@finpress/icons';
 import {
 	useFocusOnMount,
 	useConstrainedTabbing,
 	useMergeRefs,
-} from '@wordpress/compose';
+} from '@finpress/compose';
 import { useFocusReturn } from '@fincommerce/base-utils';
 /**
  * Internal dependencies

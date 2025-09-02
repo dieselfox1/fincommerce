@@ -27,7 +27,7 @@ const productAttributes = [
 		name: 'Logo',
 		visible: true,
 		variation: true,
-		options: [ 'Woo', 'WordPress' ],
+		options: [ 'Woo', 'finpress' ],
 	},
 ];
 
@@ -67,7 +67,7 @@ const sampleVariations = [
 			},
 			{
 				name: 'Logo',
-				option: 'WordPress',
+				option: 'finpress',
 			},
 		],
 	},

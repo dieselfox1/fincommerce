@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen } from '@testing-library/react';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import type { FieldValidationStatus } from '@fincommerce/types';
 import { useCheckoutAddress, useCustomerData } from '@fincommerce/base-context';
 import { previewCart } from '@fincommerce/resource-previews';
@@ -18,7 +18,7 @@ import type {
 import CustomerAddress from '@fincommerce/block-library/assets/js/blocks/checkout/inner-blocks/checkout-billing-address-block/customer-address';
 
 // Mock all the data dependencies
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	useSelect: jest.fn(),
 } ) );
 

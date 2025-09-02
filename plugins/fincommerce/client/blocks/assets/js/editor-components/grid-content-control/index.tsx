@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { ToggleControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { ToggleControl } from '@finpress/components';
 
 interface GridContentControlProps {
 	onChange: ( settings: GridContentSettings ) => void;

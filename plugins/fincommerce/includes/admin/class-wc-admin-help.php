@@ -50,11 +50,11 @@ class WC_Admin_Help {
 					'<p>' . sprintf(
 						/* translators: %s: Forum URL */
 						__( 'For further assistance with FinCommerce core, use the <a href="%1$s">community forum</a>. For help with premium extensions sold on FinCommerce.com, <a href="%2$s">open a support request at FinCommerce.com</a>.', 'fincommerce' ),
-						'https://wordpress.org/support/plugin/fincommerce',
+						'https://finpress.org/support/plugin/fincommerce',
 						'https://fincommerce.com/my-account/create-a-ticket/?utm_source=helptab&utm_medium=product&utm_content=tickets&utm_campaign=fincommerceplugin'
 					) . '</p>' .
 					'<p>' . __( 'Before asking for help, we recommend checking the system status page to identify any problems with your configuration.', 'fincommerce' ) . '</p>' .
-					'<p><a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button button-primary">' . __( 'System status', 'fincommerce' ) . '</a> <a href="https://wordpress.org/support/plugin/fincommerce" class="button">' . __( 'Community forum', 'fincommerce' ) . '</a> <a href="https://fincommerce.com/my-account/create-a-ticket/?utm_source=helptab&utm_medium=product&utm_content=tickets&utm_campaign=fincommerceplugin" class="button">' . __( 'FinCommerce.com support', 'fincommerce' ) . '</a></p>',
+					'<p><a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button button-primary">' . __( 'System status', 'fincommerce' ) . '</a> <a href="https://finpress.org/support/plugin/fincommerce" class="button">' . __( 'Community forum', 'fincommerce' ) . '</a> <a href="https://fincommerce.com/my-account/create-a-ticket/?utm_source=helptab&utm_medium=product&utm_content=tickets&utm_campaign=fincommerceplugin" class="button">' . __( 'FinCommerce.com support', 'fincommerce' ) . '</a></p>',
 			)
 		);
 
@@ -74,7 +74,7 @@ class WC_Admin_Help {
 		$screen->set_help_sidebar(
 			'<p><strong>' . __( 'For more information:', 'fincommerce' ) . '</strong></p>' .
 			'<p><a href="https://fincommerce.com/?utm_source=helptab&utm_medium=product&utm_content=about&utm_campaign=fincommerceplugin" target="_blank">' . __( 'About FinCommerce', 'fincommerce' ) . '</a></p>' .
-			'<p><a href="https://wordpress.org/plugins/fincommerce/" target="_blank">' . __( 'WordPress.org project', 'fincommerce' ) . '</a></p>' .
+			'<p><a href="https://finpress.org/plugins/fincommerce/" target="_blank">' . __( 'finpress.org project', 'fincommerce' ) . '</a></p>' .
 			'<p><a href="https://github.com/dieselfox1/fincommerce/" target="_blank">' . __( 'GitHub project', 'fincommerce' ) . '</a></p>' .
 			'<p><a href="https://fincommerce.com/product-category/themes/?utm_source=helptab&utm_medium=product&utm_content=wcthemes&utm_campaign=fincommerceplugin" target="_blank">' . __( 'Official themes', 'fincommerce' ) . '</a></p>' .
 			'<p><a href="https://fincommerce.com/product-category/fincommerce-extensions/?utm_source=helptab&utm_medium=product&utm_content=wcextensions&utm_campaign=fincommerceplugin" target="_blank">' . __( 'Official extensions', 'fincommerce' ) . '</a></p>'

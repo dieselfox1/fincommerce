@@ -182,7 +182,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 		$num_webhooks   = $data_store->get_count_webhooks_by_status();
 		$total_webhooks = array_sum( (array) $num_webhooks );
 		$statuses       = array_keys( wc_get_webhook_statuses() );
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$class = empty( $_REQUEST['status'] ) && empty( $_REQUEST['legacy'] ) ? ' class="current"' : '';
 
 		/* translators: %s: count */
@@ -195,7 +195,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 				continue;
 			}
 
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			if ( isset( $_REQUEST['status'] ) && sanitize_key( wp_unslash( $_REQUEST['status'] ) ) === $status_name ) {
 				$class = ' class="current"';
 			}
@@ -209,7 +209,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 		if ( $legacy_webhooks_count > 0 ) {
 			$class = '';
 
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			if ( 'true' === sanitize_key( wp_unslash( $_REQUEST['legacy'] ?? '' ) ) ) {
 				$class = ' class="current"';
 			}
@@ -327,7 +327,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 
 		$args['paginate'] = true;
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( 'true' === sanitize_key( wp_unslash( $_REQUEST['legacy'] ?? null ) ) ) {
 			$args['api_version'] = -1;
 		}

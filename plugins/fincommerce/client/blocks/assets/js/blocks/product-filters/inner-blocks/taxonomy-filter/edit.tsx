@@ -5,12 +5,12 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	BlockContextProvider,
-} from '@wordpress/block-editor';
-import { withSpokenMessages } from '@wordpress/components';
-import { useEffect, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+} from '@finpress/block-editor';
+import { withSpokenMessages } from '@finpress/components';
+import { useEffect, useState } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 import { useCollectionData } from '@fincommerce/base-context/hooks';
 import { objectHasProp } from '@fincommerce/types';
 
@@ -99,7 +99,7 @@ const Edit = ( props: EditProps ) => {
 		! isPreview
 	);
 
-	// Fetch taxonomy terms using WordPress core data
+	// Fetch taxonomy terms using finpress core data
 	const { taxonomyTerms, isTermsLoading } = useSelect(
 		( select ) => {
 			if ( isPreview || ! taxonomy ) {

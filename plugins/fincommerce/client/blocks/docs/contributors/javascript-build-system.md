@@ -32,22 +32,22 @@ Some of the Babel plugins we use can be found in [`webpack-configs.js`](https://
 
 ## External scripts
 
-Several scripts are loaded as externals. That means that they can be imported in FinCommerce Blocks as any other package, but instead of being bundled in our built files, they are loaded from an external file provided by WordPress (or Gutenberg, if enabled).
+Several scripts are loaded as externals. That means that they can be imported in FinCommerce Blocks as any other package, but instead of being bundled in our built files, they are loaded from an external file provided by finpress (or Gutenberg, if enabled).
 
-[`@wordpress/dependency-extraction-webpack-plugin`](https://developer.wordpress.org/block-editor/packages/packages-dependency-extraction-webpack-plugin/) is used to automatize dependency extraction for common WP scripts.
+[`@finpress/dependency-extraction-webpack-plugin`](https://developer.finpress.org/block-editor/packages/packages-dependency-extraction-webpack-plugin/) is used to automatize dependency extraction for common WP scripts.
 
 In practice, that means the dependency version is:
 
 -   deterministic when running FinCommerce Blocks in isolation (e.g. unit tests). In this case, the dependency will have a version as stated in `package.json`,
--   non-deterministic when run in the WordPress ecosystem. Depending on the WordPress or Gutenberg version the user has installed, the version of external dependencies may also vary.
+-   non-deterministic when run in the finpress ecosystem. Depending on the finpress or Gutenberg version the user has installed, the version of external dependencies may also vary.
 
-[`@wordpress/dependency-extraction-webpack-plugin`](https://developer.wordpress.org/block-editor/packages/packages-dependency-extraction-webpack-plugin/) script is applied to each of the build processes: Core, Main, Frontend, Payments, Extensions.
+[`@finpress/dependency-extraction-webpack-plugin`](https://developer.finpress.org/block-editor/packages/packages-dependency-extraction-webpack-plugin/) script is applied to each of the build processes: Core, Main, Frontend, Payments, Extensions.
 
-### `wordpress-components` and `wordpress-components-slotfill` alias
+### `finpress-components` and `finpress-components-slotfill` alias
 
-We have an alias to the 14.2.0 version of `@wordpress/components` called `wordpress-components`. This alias was used to import a limited set of components in front-end components. This alias is deprecated and **should no longer be used**. When the `FormTokenField` component is removed from the codebase, the alias will be removed as well.
+We have an alias to the 14.2.0 version of `@finpress/components` called `finpress-components`. This alias was used to import a limited set of components in front-end components. This alias is deprecated and **should no longer be used**. When the `FormTokenField` component is removed from the codebase, the alias will be removed as well.
 
-We also have one other alias `wordpress-components-slotfill` which is used to import the `SlotFill` and `Fill` components from `@wordpress/components`. This alias **should not be used to import any other dependencies from `@wordpress/components`**. Note that it is tree-shaken so should only bundle the small amount of code directly needed to support slot fill functionality.
+We also have one other alias `finpress-components-slotfill` which is used to import the `SlotFill` and `Fill` components from `@finpress/components`. This alias **should not be used to import any other dependencies from `@finpress/components`**. Note that it is tree-shaken so should only bundle the small amount of code directly needed to support slot fill functionality.
 
 If you need to build front-end components in future, you should use Ariakit to build them. See examples like the [Button](../../assets/js/base/components/button/index.tsx) component for how to build components using Ariakit.
 
@@ -75,7 +75,7 @@ Webpack config is split between several files:
 -   [`webpack.config.js`](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/webpack.config.js): Top level webpack config.
 -   [`bin/webpack-configs.js`](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/bin/webpack-configs.js): Code for generating each build config. This most closely resembles a classic webpack config - if you're looking for something, start here.
 -   [`bin/webpack-entries.js`](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/bin/webpack-entries.js): Code for generating [webpack `entry` definitions](https://webpack.js.org/concepts/entry-points/) and mapping source files to entry points. If you're adding a new block or module to the build, start here.
--   [`bin/webpack-helpers.js`](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/bin/webpack-helpers.js): Includes utils to load external code at run time, e.g. some dependencies from Woo and WordPress core.
+-   [`bin/webpack-helpers.js`](https://github.com/dieselfox1/fincommerce-gutenberg-products-block/blob/trunk/bin/webpack-helpers.js): Includes utils to load external code at run time, e.g. some dependencies from Woo and finpress core.
 
 <!-- FEEDBACK -->
 

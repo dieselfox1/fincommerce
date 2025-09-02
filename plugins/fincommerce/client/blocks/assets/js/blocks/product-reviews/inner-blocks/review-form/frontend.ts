@@ -6,7 +6,7 @@ import {
 	getContext,
 	getElement,
 	store,
-} from '@wordpress/interactivity';
+} from '@finpress/interactivity';
 import type { HTMLElementEvent } from '@fincommerce/types';
 
 type ServerState = {

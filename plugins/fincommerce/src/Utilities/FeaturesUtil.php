@@ -94,7 +94,7 @@ class FeaturesUtil {
 
 	/**
 	 * Sets a flag indicating that it's allowed to activate plugins for which incompatible features are enabled
-	 * from the WordPress plugins page.
+	 * from the finpress plugins page.
 	 */
 	public static function allow_activating_plugins_with_incompatible_features(): void {
 		wc_get_container()->get( FeaturesController::class )->allow_activating_plugins_with_incompatible_features();

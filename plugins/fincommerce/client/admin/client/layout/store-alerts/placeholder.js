@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import PropTypes from 'prop-types';
-import { Card, CardBody, CardFooter, CardHeader } from '@wordpress/components';
+import { Card, CardBody, CardFooter, CardHeader } from '@finpress/components';
 import clsx from 'clsx';
 
 class StoreAlertsPlaceholder extends Component {

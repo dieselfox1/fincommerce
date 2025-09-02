@@ -33,12 +33,12 @@ curl "https://example-store.com/wp-json/wc/store/v1/cart/coupons"
 		"_links": {
 			"self": [
 				{
-					"href": "http://local.wordpress.test/wp-json/wc/store/v1/cart/coupons/20off"
+					"href": "http://local.finpress.test/wp-json/wc/store/v1/cart/coupons/20off"
 				}
 			],
 			"collection": [
 				{
-					"href": "http://local.wordpress.test/wp-json/wc/store/v1/cart/coupons"
+					"href": "http://local.finpress.test/wp-json/wc/store/v1/cart/coupons"
 				}
 			]
 		}

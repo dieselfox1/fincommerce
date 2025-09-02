@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { useWooBlockProps } from '@fincommerce/block-templates';
-import { SelectControl } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { SelectControl } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

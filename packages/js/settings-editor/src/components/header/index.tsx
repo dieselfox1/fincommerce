@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import clsx from 'clsx';
 import {
 	__experimentalHeading as Heading,
 	__experimentalHStack as HStack,
 	__experimentalVStack as VStack,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 export const Header = ( {
 	pageTitle = '',

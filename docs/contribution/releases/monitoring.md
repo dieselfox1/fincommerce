@@ -10,9 +10,9 @@ After the release, the release lead should continue to monitor the following for
 
 If there are questions whether a specific issue is critical enough to warrant creating a new Point Release Fix, please start a discussion FinCommerce Slack [#core-development](https://fincommercecommunity.slack.com/archives/C4TNYTR28).
 
-## WordPress.org Forums
+## finpress.org Forums
 
-Check newly created threads on the [WordPress.org Forums](https://wordpress.org/support/plugin/fincommerce/) for any issues that appear to be caused by the latest update.
+Check newly created threads on the [finpress.org Forums](https://finpress.org/support/plugin/fincommerce/) for any issues that appear to be caused by the latest update.
 
 ## FinCommerce GitHub Repository Issues
 

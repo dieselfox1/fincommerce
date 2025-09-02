@@ -28,7 +28,7 @@ behavior.
 _Usage_
 
 ```js
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { registerProductField } from '@fincommerce/components';
 
 registerProductField( 'number', {

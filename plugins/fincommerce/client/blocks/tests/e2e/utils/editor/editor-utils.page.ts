@@ -5,7 +5,7 @@ import { Page } from '@playwright/test';
 import {
 	Editor as CoreEditor,
 	expect,
-} from '@wordpress/e2e-test-utils-playwright';
+} from '@finpress/e2e-test-utils-playwright';
 
 type EditorConstructorProps = {
 	page: Page;
@@ -181,7 +181,7 @@ export class Editor extends CoreEditor {
 	}
 
 	async createTemplate( { templateName }: { templateName: string } ) {
-		// We need to take into account two versions of WordPress where label has changed.
+		// We need to take into account two versions of finpress where label has changed.
 		await this.page
 			.getByLabel( 'Add Template' )
 			.or( this.page.getByText( 'Add New Template' ) )
@@ -232,7 +232,7 @@ export class Editor extends CoreEditor {
 	 * time. This is an upstream issue with the `saveSiteEditorEntities` method.
 	 * It should be removed once the upstream issue is fixed.
 	 *
-	 * @see https://github.com/WordPress/gutenberg/issues/69042
+	 * @see https://github.com/finpress/gutenberg/issues/69042
 	 */
 	saveSiteEditorEntities = async ( {
 		isOnlyCurrentEntityDirty = false,

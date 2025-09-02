@@ -3,15 +3,15 @@
  */
 import { render, screen } from '@testing-library/react';
 import { useUser } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
  */
 import RecommendationsEligibilityWrapper from '../recommendations-eligibility-wrapper';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 } ) );
 jest.mock( '@fincommerce/data', () => ( {

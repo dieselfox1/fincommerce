@@ -6,10 +6,10 @@ import {
 	Fragment,
 	useEffect,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Icon, check } from '@wordpress/icons';
-import { Button, Tooltip } from '@wordpress/components';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Icon, check } from '@finpress/icons';
+import { Button, Tooltip } from '@finpress/components';
 import NoticeOutline from 'gridicons/dist/notice-outline';
 import { EllipsisMenu } from '@fincommerce/components';
 import clsx from 'clsx';

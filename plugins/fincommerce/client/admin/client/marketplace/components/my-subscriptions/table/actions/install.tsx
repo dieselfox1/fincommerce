@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { ComponentProps } from 'react';
-import { Button } from '@wordpress/components';
-import { dispatch, useSelect } from '@wordpress/data';
-import { useContext } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { dispatch, useSelect } from '@finpress/data';
+import { useContext } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

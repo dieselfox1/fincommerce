@@ -8,9 +8,9 @@ import {
 	Spinner,
 	Button,
 	Icon,
-} from '@wordpress/components';
-import { closeSmall, upload, check, warning } from '@wordpress/icons';
-import { __, sprintf } from '@wordpress/i18n';
+} from '@finpress/components';
+import { closeSmall, upload, check, warning } from '@finpress/icons';
+import { __, sprintf } from '@finpress/i18n';
 import { useMachine } from '@xstate5/react';
 import {
 	assertEvent,
@@ -19,10 +19,10 @@ import {
 	fromPromise,
 	setup,
 } from 'xstate5';
-import apiFetch from '@wordpress/api-fetch';
-import { dispatch } from '@wordpress/data';
+import apiFetch from '@finpress/api-fetch';
+import { dispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { createInterpolateElement } from '@wordpress/element';
+import { createInterpolateElement } from '@finpress/element';
 import { getAdminLink } from '@fincommerce/settings';
 
 /**

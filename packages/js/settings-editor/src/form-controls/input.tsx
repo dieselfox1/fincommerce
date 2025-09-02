@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import type { DataFormControlProps } from '@wordpress/dataviews';
-import { __experimentalInputControl as InputControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import type { DataFormControlProps } from '@finpress/dataviews';
+import { __experimentalInputControl as InputControl } from '@finpress/components';
 
 /**
  * Internal dependencies

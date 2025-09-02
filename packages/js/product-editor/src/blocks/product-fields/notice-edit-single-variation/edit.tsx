@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, createInterpolateElement } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { createElement, createInterpolateElement } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import { Product } from '@fincommerce/data';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { recordEvent } from '@fincommerce/tracks';
@@ -11,7 +11,7 @@ import { getNewPath } from '@fincommerce/navigation';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityProp, store as coreStore } from '@wordpress/core-data';
+import { useEntityProp, store as coreStore } from '@finpress/core-data';
 
 /**
  * Internal dependencies

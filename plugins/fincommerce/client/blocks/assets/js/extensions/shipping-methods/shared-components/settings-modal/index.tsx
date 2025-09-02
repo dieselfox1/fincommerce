@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Modal } from '@wordpress/components';
+import { Modal } from '@finpress/components';
 import styled from '@emotion/styled';
 
 const StyledModal = styled( Modal )`

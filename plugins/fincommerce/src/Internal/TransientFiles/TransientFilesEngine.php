@@ -70,7 +70,7 @@ class TransientFilesEngine implements RegisterHooksInterface {
 	/**
 	 * Get the base directory where transient files are stored.
 	 *
-	 * The default base directory is the WordPress uploads directory plus "fincommerce_transient_files". This can
+	 * The default base directory is the finpress uploads directory plus "fincommerce_transient_files". This can
 	 * be changed by using the fincommerce_transient_files_directory filter.
 	 *
 	 * If the fincommerce_transient_files_directory filter is not used and the default base directory
@@ -447,7 +447,7 @@ class TransientFilesEngine implements RegisterHooksInterface {
 		return $vars;
 	}
 
-	// phpcs:disable Squiz.Commenting.FunctionCommentThrowTag.Missing, WordPress.WP.AlternativeFunctions
+	// phpcs:disable Squiz.Commenting.FunctionCommentThrowTag.Missing, finpress.WP.AlternativeFunctions
 
 	/**
 	 * Handle the "parse_request" action for the "wc/file/transient" endpoint.
@@ -463,7 +463,7 @@ class TransientFilesEngine implements RegisterHooksInterface {
 	public function handle_parse_request() {
 		global $wp;
 
-		// phpcs:ignore WordPress.Security
+		// phpcs:ignore finpress.Security
 		$query_arg = wp_unslash( $_GET['wc-transient-file-name'] ?? null );
 		if ( ! is_null( $query_arg ) ) {
 			$wp->query_vars['wc-transient-file-name'] = $query_arg;
@@ -473,7 +473,7 @@ class TransientFilesEngine implements RegisterHooksInterface {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput
 		if ( 'GET' !== ( $_SERVER['REQUEST_METHOD'] ?? null ) ) {
 			status_header( 405 );
 			exit();
@@ -522,7 +522,7 @@ class TransientFilesEngine implements RegisterHooksInterface {
 
 		try {
 			while ( ! feof( $file_handle ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				echo fread( $file_handle, 1024 );
 			}
 

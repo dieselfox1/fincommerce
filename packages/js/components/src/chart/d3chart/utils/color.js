@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { findIndex } from 'lodash';
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies

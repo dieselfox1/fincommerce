@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { registerPlugin, getPlugin } from '@wordpress/plugins';
-import { __ } from '@wordpress/i18n';
+import { registerPlugin, getPlugin } from '@finpress/plugins';
+import { __ } from '@finpress/i18n';
 import interpolateComponents from '@automattic/interpolate-components';
-import { Button, Card, CardBody, createSlotFill } from '@wordpress/components';
-import { Icon, closeSmall } from '@wordpress/icons';
-import { useEffect, useState } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
-import { store as noticesStore } from '@wordpress/notices';
+import { Button, Card, CardBody, createSlotFill } from '@finpress/components';
+import { Icon, closeSmall } from '@finpress/icons';
+import { useEffect, useState } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
+import { store as noticesStore } from '@finpress/notices';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

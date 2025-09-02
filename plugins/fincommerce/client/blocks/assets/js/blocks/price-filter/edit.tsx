@@ -1,24 +1,24 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
 import { getAdminLink } from '@fincommerce/settings';
 import { blocksConfig } from '@fincommerce/block-settings';
 import BlockTitle from '@fincommerce/editor-components/block-title';
-import { Icon, currencyDollar, external } from '@wordpress/icons';
-import type { BlockEditProps } from '@wordpress/blocks';
+import { Icon, currencyDollar, external } from '@finpress/icons';
+import type { BlockEditProps } from '@finpress/blocks';
 import {
 	Placeholder,
 	Disabled,
 	PanelBody,
 	ToggleControl,
 	Button,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

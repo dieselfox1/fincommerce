@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Card, CardBody, CardHeader } from '@wordpress/components';
-import { Children } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, Card, CardBody, CardHeader } from '@finpress/components';
+import { Children } from '@finpress/element';
 import clsx from 'clsx';
 import { getAdminLink } from '@fincommerce/settings';
 

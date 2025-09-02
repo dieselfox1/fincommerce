@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	useInnerBlockLayoutContext,
@@ -10,7 +10,7 @@ import {
 import { useStyleProps } from '@fincommerce/base-hooks';
 import { withProductDataContext } from '@fincommerce/shared-hocs';
 import { isNumber, ProductResponseItem } from '@fincommerce/types';
-import { Disabled } from '@wordpress/components';
+import { Disabled } from '@finpress/components';
 
 const getRatingCount = ( product: ProductResponseItem ) => {
 	const count = isNumber( product.review_count )

@@ -753,7 +753,7 @@
 	  {
 		"locale": "en_US",
 		"title": "Action required: Critical vulnerabilities in FinCommerce",
-		"content": "In response to a critical vulnerability identified on July 13, 2021, we are working with the WordPress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br /><br />Our investigation into this vulnerability is ongoing, but <strong>we wanted to let you know now about the importance of updating immediately</strong>.<br /><br />For more information on which actions you should take, as well as answers to FAQs, please urgently review our blog post detailing this issue."
+		"content": "In response to a critical vulnerability identified on July 13, 2021, we are working with the finpress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br /><br />Our investigation into this vulnerability is ongoing, but <strong>we wanted to let you know now about the importance of updating immediately</strong>.<br /><br />For more information on which actions you should take, as well as answers to FAQs, please urgently review our blog post detailing this issue."
 	  }
 	],
 	"actions": [
@@ -1149,7 +1149,7 @@
 	  {
 		"locale": "en_US",
 		"title": "Action required: Critical vulnerabilities in FinCommerce Blocks",
-		"content": "In response to a critical vulnerability identified on July 13, 2021, we are working with the WordPress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br/><br/>Our investigation into this vulnerability is ongoing, but <strong>we wanted to let you know now about the importance of updating immediately</strong>.<br/><br/>For more information on which actions you should take, as well as answers to FAQs, please urgently review our blog post detailing this issue."
+		"content": "In response to a critical vulnerability identified on July 13, 2021, we are working with the finpress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br/><br/>Our investigation into this vulnerability is ongoing, but <strong>we wanted to let you know now about the importance of updating immediately</strong>.<br/><br/>For more information on which actions you should take, as well as answers to FAQs, please urgently review our blog post detailing this issue."
 	  }
 	],
 	"actions": [
@@ -1383,7 +1383,7 @@
 	  {
 		"locale": "en_US",
 		"title": "Solved: Critical vulnerabilities patched in FinCommerce",
-		"content": "In response to a critical vulnerability identified on July 13, 2021, we worked with the WordPress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br/><br/><strong>Your store has been updated to the latest secure version(s)</strong>. For more information and answers to FAQs, please review our blog post detailing this issue."
+		"content": "In response to a critical vulnerability identified on July 13, 2021, we worked with the finpress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br/><br/><strong>Your store has been updated to the latest secure version(s)</strong>. For more information and answers to FAQs, please review our blog post detailing this issue."
 	  }
 	],
 	"actions": [
@@ -1596,7 +1596,7 @@
 	  {
 		"locale": "en_US",
 		"title": "Solved: Critical vulnerabilities patched in FinCommerce Blocks",
-		"content": "In response to a critical vulnerability identified on July 13, 2021, we worked with the WordPress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br/><br/><strong>Your store has been updated to the latest secure version(s)</strong>. For more information and answers to FAQs, please review our blog post detailing this issue."
+		"content": "In response to a critical vulnerability identified on July 13, 2021, we worked with the finpress Plugins Team to deploy software updates to stores running FinCommerce (versions 3.3 to 5.5) and the FinCommerce Blocks feature plugin (versions 2.5 to 5.5).<br/><br/><strong>Your store has been updated to the latest secure version(s)</strong>. For more information and answers to FAQs, please review our blog post detailing this issue."
 	  }
 	],
 	"actions": [
@@ -1907,7 +1907,7 @@
 	  {
 		"locale": "en_US",
 		"title": "Security auto-update of FinCommerce",
-		"content": "<strong>Your store has been updated to the latest secure version of FinCommerce</strong>. We worked with WordPress to deploy PayPal Standard security updates for stores running FinCommerce (version 3.5 to 6.3). It’s recommended to disable PayPal Standard, and use <a href=\"https://fincommerce.com/products/fincommerce-paypal-payments/\" target=\"_blank\">PayPal Payments</a> to accept PayPal."
+		"content": "<strong>Your store has been updated to the latest secure version of FinCommerce</strong>. We worked with finpress to deploy PayPal Standard security updates for stores running FinCommerce (version 3.5 to 6.3). It’s recommended to disable PayPal Standard, and use <a href=\"https://fincommerce.com/products/fincommerce-paypal-payments/\" target=\"_blank\">PayPal Payments</a> to accept PayPal."
 	  }
 	],
 	"actions": [
@@ -2162,7 +2162,7 @@
 	  {
 		"locale": "en_US",
 		"title": "Security auto-update of FinCommerce",
-		"content": "<strong>Your store has been updated to the latest secure version of FinCommerce</strong>. We worked with WordPress to deploy security updates related to PayPal Standard payment gateway for stores running FinCommerce (version 3.5 to 6.3)."
+		"content": "<strong>Your store has been updated to the latest secure version of FinCommerce</strong>. We worked with finpress to deploy security updates related to PayPal Standard payment gateway for stores running FinCommerce (version 3.5 to 6.3)."
 	  }
 	],
 	"actions": [
@@ -2571,7 +2571,7 @@
 	  {
 		"locale": "en_US",
 		"title": "FinCommerce Payments has been automatically updated",
-		"content": "You’re now running the latest secure version of FinCommerce Payments. We’ve worked with the WordPress Plugins team to deploy a security update to stores running FinCommerce Payments (version 3.9 to 4.5). For further information, please review the article below."
+		"content": "You’re now running the latest secure version of FinCommerce Payments. We’ve worked with the finpress Plugins team to deploy a security update to stores running FinCommerce Payments (version 3.9 to 4.5). For further information, please review the article below."
 	  }
 	],
 	"actions": [
@@ -2756,7 +2756,7 @@
 	  {
 		"locale": "en_US",
 		"title": "FinCommerce Eway Gateway has been automatically updated",
-		"content": "Your store is now running the latest secure version of FinCommerce Eway Gateway. We worked with the WordPress Plugins team to deploy a software update to stores running FinCommerce Eway Gateway (versions 3.1.0 to 3.5.0) in response to a security vulnerability that was discovered."
+		"content": "Your store is now running the latest secure version of FinCommerce Eway Gateway. We worked with the finpress Plugins team to deploy a software update to stores running FinCommerce Eway Gateway (versions 3.1.0 to 3.5.0) in response to a security vulnerability that was discovered."
 	  }
 	],
 	"actions": [
@@ -2844,8 +2844,8 @@
 	"locales": [
 	  {
 		"locale": "en_US",
-		"title": "Navigating FinCommerce on WordPress.com",
-		"content": "We are improving the FinCommerce navigation on WordPress.com and would love your help to make it better! Please share your experience with us in this 2-minute survey."
+		"title": "Navigating FinCommerce on finpress.com",
+		"content": "We are improving the FinCommerce navigation on finpress.com and would love your help to make it better! Please share your experience with us in this 2-minute survey."
 	  }
 	],
 	"actions": [
@@ -3035,7 +3035,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://wordpress-528155-2231771.cloudwaysapps.com/",
+			"value": "http://finpress-528155-2231771.cloudwaysapps.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -3112,7 +3112,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://barrettfitnessenterprises.wordpress.com/",
+			"value": "http://barrettfitnessenterprises.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -3273,7 +3273,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://tkechilifestdotcom.wordpress.com/",
+			"value": "http://tkechilifestdotcom.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -3392,7 +3392,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://designerdab.wordpress.com/",
+			"value": "http://designerdab.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -3630,7 +3630,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://yourworstnightmarehaunt.wordpress.com/",
+			"value": "http://yourworstnightmarehaunt.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -4315,7 +4315,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://wordpress-528155-2231771.cloudwaysapps.com/",
+			"value": "http://finpress-528155-2231771.cloudwaysapps.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -4392,7 +4392,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://barrettfitnessenterprises.wordpress.com/",
+			"value": "http://barrettfitnessenterprises.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -4553,7 +4553,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://tkechilifestdotcom.wordpress.com/",
+			"value": "http://tkechilifestdotcom.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -4672,7 +4672,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://designerdab.wordpress.com/",
+			"value": "http://designerdab.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -4910,7 +4910,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://yourworstnightmarehaunt.wordpress.com/",
+			"value": "http://yourworstnightmarehaunt.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -6426,7 +6426,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://arequestionscom.wordpress.com/",
+			"value": "http://arequestionscom.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -6818,7 +6818,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://findthemenu.wordpress.com/",
+			"value": "http://findthemenu.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -7493,7 +7493,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://arequestionscom.wordpress.com/",
+			"value": "http://arequestionscom.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },
@@ -7885,7 +7885,7 @@
 		  {
 			"type": "option",
 			"option_name": "siteurl",
-			"value": "http://findthemenu.wordpress.com/",
+			"value": "http://findthemenu.finpress.com/",
 			"default": "",
 			"operation": "="
 		  },

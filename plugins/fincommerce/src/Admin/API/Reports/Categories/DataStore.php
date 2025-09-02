@@ -274,7 +274,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			$categories_query = $this->subquery->get_query_statement();
 		}
 		$categories_data = $wpdb->get_results(
-			$categories_query, // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$categories_query, // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			ARRAY_A
 		);
 

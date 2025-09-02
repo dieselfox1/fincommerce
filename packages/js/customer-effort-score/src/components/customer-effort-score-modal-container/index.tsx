@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
 import { optionsStore } from '@fincommerce/data';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

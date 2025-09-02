@@ -108,12 +108,12 @@ The `TaskList` class represents a task list. It contains properties and methods 
 In addition to registering the task in PHP, You need to build the task component with JavaScript, set its configuration, and add it to the task list. For example, the JavaScript file for a simple task might look something like this:
 
 ```js
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import {
 	WooOnboardingTask,
 	WooOnboardingTaskListItem,
 } from '@fincommerce/onboarding';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 
 const Task = ( { onComplete, task, query } ) => {
 	// Implement your task UI/feature here.
@@ -157,12 +157,12 @@ In the example above, the extension does a few different things. Let's break it 
 First, import any functions, components, or other utilities from external dependencies.
 
 ```js
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import {
 	WooOnboardingTask,
 	WooOnboardingTaskListItem,
 } from '@fincommerce/onboarding';
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 ```
 
 #### Construct the component
@@ -171,7 +171,7 @@ Next, we create a [functional component](https://reactjs.org/docs/components-and
 
 ```js
 import { onboardingStore } from '@fincommerce/data';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 
 const Task = ( { onComplete, task } ) => {
 	const { actionTask } = useDispatch( onboardingStore );
@@ -212,7 +212,7 @@ In the example above, we're using the `Card` and `CardBody` components to constr
 
 #### Register the Plugin for Task Content
 
-Next, we register the Task component as a plugin named "add-task-content" using [SlotFills](https://developer.wordpress.org/block-editor/reference-guides/slotfills/). This plugin nests the Task component within a WooOnboardingTask component and passes the necessary properties. We also specify the scope of the plugin as "fincommerce-tasks" to make it effective only within FinCommerce's task list.
+Next, we register the Task component as a plugin named "add-task-content" using [SlotFills](https://developer.finpress.org/block-editor/reference-guides/slotfills/). This plugin nests the Task component within a WooOnboardingTask component and passes the necessary properties. We also specify the scope of the plugin as "fincommerce-tasks" to make it effective only within FinCommerce's task list.
 
 ```js
 registerPlugin( 'add-task-content', {
@@ -259,7 +259,7 @@ In summary, the JavaScript file for a simple task extends and customizes the fun
 
 ### Registering the task with JavaScript
 
-In addition to registering the task in php, you'll also need to register and enqueue the transpiled JavaScript file containing your task component and its configuration. A common way to do this is to create a dedicated registration function that hooks into the `admin_enqueue_scripts` action in WordPress. Below is an annotated example of how this registration might look:
+In addition to registering the task in php, you'll also need to register and enqueue the transpiled JavaScript file containing your task component and its configuration. A common way to do this is to create a dedicated registration function that hooks into the `admin_enqueue_scripts` action in finpress. Below is an annotated example of how this registration might look:
 
 ```php
 /**
@@ -290,7 +290,7 @@ add_action( 'admin_enqueue_scripts', 'add_task_register_script' );
 
 By following these steps, your custom task should appear in the FinCommerce onboarding tasklist.
 
-For a complete example of adding a custom task as a WordPress plugin, you can check out the [add-task examples directory](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/client/admin/docs/examples/extensions/add-task).
+For a complete example of adding a custom task as a finpress plugin, you can check out the [add-task examples directory](https://github.com/dieselfox1/fincommerce/tree/trunk/plugins/fincommerce/client/admin/docs/examples/extensions/add-task).
 
 To learn more about the tasklist, you can refer to the [tasklist documentation](https://github.com/dieselfox1/fincommerce/blob/trunk/plugins/fincommerce/client/admin/docs/features/onboarding-tasks.md).
 
@@ -311,13 +311,13 @@ Adding your own store management links is a simple process that involves:
 
 ### Installing the Icons package
 
-Store management links use the `@wordpress/icons` package. If your extension isn't already using it, you'll need to add it to your extension's list of dependencies.
+Store management links use the `@finpress/icons` package. If your extension isn't already using it, you'll need to add it to your extension's list of dependencies.
 
-`npm` `install` ` @wordpress``/icons ` `--save`
+`npm` `install` ` @finpress``/icons ` `--save`
 
 ### Enqueuing the JavaScript
 
-The logic that adds your custom link to the store management section will live in a JavaScript file. We'll register and enqueue that file with WordPress in our PHP file:
+The logic that adds your custom link to the store management section will live in a JavaScript file. We'll register and enqueue that file with finpress in our PHP file:
 
 ```js
 function custom_store_management_link() {
@@ -332,19 +332,19 @@ add_action( 'admin_enqueue_scripts', 'custom_store_management_link' );
 
 ```
 
-The first argument of this call is a handle, the name by which WordPress will refer to the script we're enqueuing. The second argument is the URL where the script is located.
+The first argument of this call is a handle, the name by which finpress will refer to the script we're enqueuing. The second argument is the URL where the script is located.
 
 The third argument is an array of script dependencies. By supplying the `wp-hooks` handle in that array, we're ensuring that our script will have access to the `addFilter` function we'll be using to add our link to FinCommerce's list.
 
-The fourth argument is a priority, which determines the order in which JavaScripts are loaded in WordPress. We're setting a priority of 10 in our example. It's important that your script runs before the store management section is rendered. With that in mind, make sure your priority value is lower than 15 to ensure your link is rendered properly.
+The fourth argument is a priority, which determines the order in which JavaScripts are loaded in finpress. We're setting a priority of 10 in our example. It's important that your script runs before the store management section is rendered. With that in mind, make sure your priority value is lower than 15 to ensure your link is rendered properly.
 
 ### Supply your link via JavaScript
 
 Finally, in the JavaScript file you enqueued above, hook in to the `fincommerce_admin_homescreen_quicklinks` filter and supply your task as a simple JavaScript object.
 
 ```js
-import { megaphone } from '@wordpress/icons';
-import { addFilter } from '@wordpress/hooks';
+import { megaphone } from '@finpress/icons';
+import { addFilter } from '@finpress/hooks';
  
 addFilter(
     'fincommerce_admin_homescreen_quicklinks',
@@ -388,7 +388,7 @@ The recommended approach for using Admin Notes is to encapsulate your note withi
  
 namespace My\Wonderfully\Namespaced\Extension\Area;
  
-// Exit if this code is accessed outside of WordPress.
+// Exit if this code is accessed outside of finpress.
 defined ( 'ABSPATH' ) || exit;
  
 // Check for Admin Note support
@@ -503,7 +503,7 @@ Let's break down the example above to examine what each section does.
 
 #### Namespacing and feature availability checks
 
-First, we're doing some basic namespacing and feature availability checks, along with a safeguard to make sure this file only executes within the WordPress application space.
+First, we're doing some basic namespacing and feature availability checks, along with a safeguard to make sure this file only executes within the finpress application space.
 
 ```php
 namespace My\Wonderfully\Namespaced\Extension\Area;

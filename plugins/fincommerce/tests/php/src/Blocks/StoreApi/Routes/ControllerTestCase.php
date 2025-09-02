@@ -79,7 +79,7 @@ abstract class ControllerTestCase extends \WP_Test_REST_TestCase {
 
 		foreach ( $fields as $field_name => $field_value ) {
 			$this->assertObjectHasProperty( $field_name, $object, $message . " Property $field_name does not exist on the object." );
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 			$this->assertSame( $field_value, $object->$field_name, $message . " Value of property $field_name is not" . print_r( $field_value, true ) );
 		}
 	}

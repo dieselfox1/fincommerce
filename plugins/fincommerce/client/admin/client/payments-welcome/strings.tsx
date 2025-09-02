@@ -2,8 +2,8 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { createInterpolateElement } from '@wordpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
 
 export default {
 	noThanks: __( 'No thanks', 'fincommerce' ),
@@ -26,7 +26,7 @@ export default {
 			a1: (
 				// eslint-disable-next-line jsx-a11y/anchor-has-content
 				<a
-					href="https://wordpress.com/tos"
+					href="https://finpress.com/tos"
 					target="_blank"
 					rel="noopener noreferrer"
 				/>
@@ -50,7 +50,7 @@ export default {
 			a1: (
 				// eslint-disable-next-line jsx-a11y/anchor-has-content
 				<a
-					href="https://wordpress.com/tos"
+					href="https://finpress.com/tos"
 					target="_blank"
 					rel="noopener noreferrer"
 				/>
@@ -66,7 +66,7 @@ export default {
 			a3: (
 				// eslint-disable-next-line jsx-a11y/anchor-has-content
 				<a
-					href="https://wordpress.com/tos/#more-woopay-specifically"
+					href="https://finpress.com/tos/#more-woopay-specifically"
 					target="_blank"
 					rel="noopener noreferrer"
 				/>

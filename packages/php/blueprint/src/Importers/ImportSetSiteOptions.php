@@ -18,7 +18,7 @@ class ImportSetSiteOptions implements StepProcessor {
 	use UseWPFunctions;
 
 	/**
-	 * List of WordPress options that should not be modified.
+	 * List of finpress options that should not be modified.
 	 *
 	 * @var array<string>
 	 */

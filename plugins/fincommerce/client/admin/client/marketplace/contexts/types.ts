@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { Options } from 'wordpress__notices';
+import type { Options } from 'finpress__notices';
 
 /**
  * Internal dependencies

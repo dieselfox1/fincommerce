@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 import { __experimentalRegisterProductCollection as registerProductCollection } from '@fincommerce/blocks-registry';
 import {
 	// @ts-expect-error Type definition is missing
 	store as blocksStore,
 	type BlockVariation,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies
@@ -55,13 +55,13 @@ export const getCollectionByName = ( collectionName?: CollectionName ) => {
 	}
 
 	// @ts-expect-error Type definitions are missing
-	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/wordpress__blocks/store/selectors.d.ts
+	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/finpress__blocks/store/selectors.d.ts
 	const variations = select( blocksStore ).getBlockVariations(
 		blockJson.name
 	);
 
 	// @ts-expect-error Type definitions are missing
-	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/wordpress__blocks/store/selectors.d.ts
+	// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/finpress__blocks/store/selectors.d.ts
 	return variations.find( ( { name } ) => name === collectionName );
 };
 

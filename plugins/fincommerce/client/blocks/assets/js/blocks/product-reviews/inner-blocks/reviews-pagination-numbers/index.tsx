@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { queryPaginationNumbers as icon } from '@wordpress/icons';
-import { registerBlockType } from '@wordpress/blocks';
+import { queryPaginationNumbers as icon } from '@finpress/icons';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies

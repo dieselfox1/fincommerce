@@ -107,7 +107,7 @@ We may add, update and delete any of them.
 
 ## Logging
 
-The email editor package includes logging functionality to help developers identify and debug issues. The package provides a simple logger that can either write to WordPress debug log or delegate to another logger.
+The email editor package includes logging functionality to help developers identify and debug issues. The package provides a simple logger that can either write to finpress debug log or delegate to another logger.
 
 ### Usage
 
@@ -128,7 +128,7 @@ The following log levels are supported:
 
 ### Log Locations
 
-By default, logs are written to the WordPress debug log if `WP_DEBUG_LOG` is enabled. The behavior depends on how `WP_DEBUG_LOG` is configured:
+By default, logs are written to the finpress debug log if `WP_DEBUG_LOG` is enabled. The behavior depends on how `WP_DEBUG_LOG` is configured:
 
 - If `WP_DEBUG_LOG` is set to `true`, logs are written to `wp-content/debug.log`
 - If `WP_DEBUG_LOG` is set to a string path (e.g., `/path/to/custom/debug.log`), logs are written to that custom location
@@ -155,7 +155,7 @@ Example log entry:
 You can customize the logging behavior by:
 
 1. Setting a delegate logger using `set_logger()` method to use another logging system (e.g., FinCommerce's logger)
-2. Configuring WordPress debug logging through `WP_DEBUG_LOG` constant in wp-config.php to enable/disable logging to wp-content/debug.log
+2. Configuring finpress debug logging through `WP_DEBUG_LOG` constant in wp-config.php to enable/disable logging to wp-content/debug.log
 
 ### Best Practices
 

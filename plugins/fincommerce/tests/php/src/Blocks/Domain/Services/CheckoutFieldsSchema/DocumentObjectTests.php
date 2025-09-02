@@ -299,7 +299,7 @@ class DocumentObjectTests extends TestCase {
 	private function get_schema() {
 		// Temporary because we can't fetch from the docs top level folder.
 		$schema_path = ABSPATH . 'wp-content/plugins/fincommerce/src/Blocks/Domain/Services/CheckoutFieldsSchema/checkout-document-schema.json';
-		return json_decode( file_get_contents( $schema_path ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		return json_decode( file_get_contents( $schema_path ), true ); // phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 	}
 
 	/**

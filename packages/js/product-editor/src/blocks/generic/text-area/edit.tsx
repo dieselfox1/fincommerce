@@ -2,12 +2,12 @@
  * External dependencies
  */
 import { LegacyRef } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useWooBlockProps } from '@fincommerce/block-templates';
-import { createElement, useRef } from '@wordpress/element';
-import { BaseControl, TextareaControl } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
-import { BlockControls, RichText } from '@wordpress/block-editor';
+import { createElement, useRef } from '@finpress/element';
+import { BaseControl, TextareaControl } from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { BlockControls, RichText } from '@finpress/block-editor';
 import clsx from 'clsx';
 
 /**
@@ -67,7 +67,7 @@ export function TextAreaBlockEdit( {
 
 	// This is a workaround to hide the toolbar when the block is blurred.
 	// This is a temporary solution until using Gutenberg 18 with the
-	// fix from https://github.com/WordPress/gutenberg/pull/59800
+	// fix from https://github.com/finpress/gutenberg/pull/59800
 	const { handleBlur: hideToolbar } = useClearSelectedBlockOnBlur();
 
 	function setAlignment( value: TextAreaBlockEditAttributes[ 'align' ] ) {

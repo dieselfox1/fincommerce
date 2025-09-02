@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	BaseControl,
 	MenuItem,
 	TextControl,
 	TextareaControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	createElement,
 	createInterpolateElement,
 	Fragment,
-} from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+} from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 import { STORE_KEY as CES_STORE_KEY } from '@fincommerce/customer-effort-score';
 import { useLayoutContext } from '@fincommerce/admin-layout';
 import { isValidEmail } from '@fincommerce/product-editor';

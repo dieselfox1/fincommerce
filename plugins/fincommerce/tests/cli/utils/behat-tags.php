@@ -2,7 +2,7 @@
 /**
  * Generate a list of tags to skip during the test run.
  *
- * Require a minimum version of WordPress:
+ * Require a minimum version of finpress:
  *
  *   @require-wp-4.0
  *   Scenario: Core translation CRUD

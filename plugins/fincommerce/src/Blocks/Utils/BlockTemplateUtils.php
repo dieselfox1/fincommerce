@@ -222,7 +222,7 @@ class BlockTemplateUtils {
 		$template_is_from_theme = 'theme' === $template_file->source;
 		$theme_name             = wp_get_theme()->get( 'TextDomain' );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$template_content  = file_get_contents( $template_file->path );
 		$template          = new \WP_Block_Template();
 		$template->id      = $template_is_from_theme ? $theme_name . '//' . $template_file->slug : self::PLUGIN_SLUG . '//' . $template_file->slug;
@@ -233,7 +233,7 @@ class BlockTemplateUtils {
 		if ( ProductCatalogTemplate::SLUG === $template_file->slug ) {
 			$template->content = str_replace( '<!-- wp:term-description {"align":"wide"} /-->', '', $template->content );
 		}
-		// Plugin was agreed as a valid source value despite existing inline docs at the time of creating: https://github.com/WordPress/gutenberg/issues/36597#issuecomment-976232909.
+		// Plugin was agreed as a valid source value despite existing inline docs at the time of creating: https://github.com/finpress/gutenberg/issues/36597#issuecomment-976232909.
 		$template->source         = $template_file->source ? $template_file->source : 'plugin';
 		$template->slug           = $template_file->slug;
 		$template->type           = $template_type;
@@ -283,7 +283,7 @@ class BlockTemplateUtils {
 			'path'        => $template_file,
 			'type'        => $template_type,
 			'theme'       => $template_is_from_theme ? $theme_name : self::PLUGIN_SLUG,
-			// Plugin was agreed as a valid source value despite existing inline docs at the time of creating: https://github.com/WordPress/gutenberg/issues/36597#issuecomment-976232909.
+			// Plugin was agreed as a valid source value despite existing inline docs at the time of creating: https://github.com/finpress/gutenberg/issues/36597#issuecomment-976232909.
 			'source'      => $template_is_from_theme ? 'theme' : 'plugin',
 			'title'       => self::get_block_template_title( $template_slug ),
 			'description' => self::get_block_template_description( $template_slug ),
@@ -429,7 +429,7 @@ class BlockTemplateUtils {
 	/**
 	 * Gets the first matching template part within themes directories
 	 *
-	 * Since [Gutenberg 12.1.0](https://github.com/WordPress/gutenberg/releases/tag/v12.1.0), the conventions for
+	 * Since [Gutenberg 12.1.0](https://github.com/finpress/gutenberg/releases/tag/v12.1.0), the conventions for
 	 * block templates and parts directory has changed from `block-templates` and `block-templates-parts`
 	 * to `templates` and `parts` respectively.
 	 *
@@ -537,7 +537,7 @@ class BlockTemplateUtils {
 	/**
 	 * Removes templates from the theme or FinCommerce which have the same slug
 	 * as template saved in the database with the `dieselfox1/fincommerce` theme.
-	 * Before WC migrated to the Template Registration API from WordPress, templates
+	 * Before WC migrated to the Template Registration API from finpress, templates
 	 * were saved in the database with the `dieselfox1/fincommerce` theme instead
 	 * of the theme's slug.
 	 *
@@ -718,7 +718,7 @@ class BlockTemplateUtils {
 			'post_type'      => $template_type,
 			'posts_per_page' => -1,
 			'no_found_rows'  => true,
-			'tax_query'      => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
+			'tax_query'      => array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_tax_query
 				array(
 					'taxonomy' => 'wp_theme',
 					'field'    => 'name',
@@ -762,7 +762,7 @@ class BlockTemplateUtils {
 		if ( $template_part && ! empty( $template_part->content ) ) {
 			return $template_part->content;
 		}
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		return file_get_contents( self::get_templates_directory( 'wp_template_part' ) . DIRECTORY_SEPARATOR . $slug . '.html' );
 	}
 }

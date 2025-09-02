@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { NoticeList } from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { store as noticesStore } from '@wordpress/notices';
+import { NoticeList } from '@finpress/components';
+import { useSelect, useDispatch } from '@finpress/data';
+import { store as noticesStore } from '@finpress/notices';
 
 /**
  * Internal dependencies
@@ -12,7 +12,7 @@ import { ValidationNotices } from './validation-notices';
 import { EditorSnackbars } from './snackbars';
 import { NoticesSlot } from '../../hacks/notices-slot';
 
-// See: https://github.com/WordPress/gutenberg/blob/5be0ec4153c3adf9f0f2513239f4f7a358ba7948/packages/editor/src/components/editor-notices/index.js
+// See: https://github.com/finpress/gutenberg/blob/5be0ec4153c3adf9f0f2513239f4f7a358ba7948/packages/editor/src/components/editor-notices/index.js
 
 export function EditorNotices() {
 	const { notices } = useSelect(

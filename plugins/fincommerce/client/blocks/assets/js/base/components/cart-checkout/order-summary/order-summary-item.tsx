@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { sprintf, _n } from '@wordpress/i18n';
+import { sprintf, _n } from '@finpress/i18n';
 import { Label } from '@fincommerce/blocks-components';
 import ProductPrice from '@fincommerce/base-components/product-price';
 import ProductName from '@fincommerce/base-components/product-name';
@@ -16,7 +16,7 @@ import {
 } from '@fincommerce/blocks-checkout';
 import Dinero from 'dinero.js';
 import { getSetting } from '@fincommerce/settings';
-import { useMemo } from '@wordpress/element';
+import { useMemo } from '@finpress/element';
 import { useStoreCart } from '@fincommerce/base-context/hooks';
 import { CartItem, isString } from '@fincommerce/types';
 

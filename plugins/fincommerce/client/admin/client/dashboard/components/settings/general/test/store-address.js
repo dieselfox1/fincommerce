@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useCallback } from '@wordpress/element';
+import { useState, useEffect, useCallback } from '@finpress/element';
 import { render, fireEvent } from '@testing-library/react';
 
 /**
@@ -216,8 +216,8 @@ describe( 'getStateFilter', () => {
 	);
 } );
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true,

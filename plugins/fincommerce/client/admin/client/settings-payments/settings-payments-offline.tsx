@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useEffect, useState } from '@wordpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useEffect, useState } from '@finpress/element';
 import {
 	type OfflinePaymentMethodProvider,
 	paymentSettingsStore,

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { sprintf, _n } from '@wordpress/i18n';
+import { sprintf, _n } from '@finpress/i18n';
 import interpolateComponents from '@automattic/interpolate-components';
 import { Link } from '@fincommerce/components';
 import { ExtensionList } from '@fincommerce/data';
@@ -50,7 +50,7 @@ export const PluginsTermsOfService = ( {
 					span: <span />,
 					link: (
 						<Link
-							href="https://wordpress.com/tos/"
+							href="https://finpress.com/tos/"
 							target="_blank"
 							type="external"
 						/>

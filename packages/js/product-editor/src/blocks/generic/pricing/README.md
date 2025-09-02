@@ -2,7 +2,7 @@
 
 A product price block with currency display.
 
-![Product pricing field](https://fincommerce.files.wordpress.com/2023/09/fincommerceproduct-pricing-field.png)
+![Product pricing field](https://fincommerce.files.finpress.com/2023/09/fincommerceproduct-pricing-field.png)
 
 ## Attributes
 

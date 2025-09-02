@@ -3,7 +3,7 @@
  */
 import { createElement, MouseEvent, useRef, forwardRef } from 'react';
 import clsx from 'clsx';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { Icon, chevronDown } from '@finpress/icons';
 
 type ComboBoxProps = {
 	children?: React.ReactNode | null;

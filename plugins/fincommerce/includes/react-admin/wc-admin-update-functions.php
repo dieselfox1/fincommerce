@@ -26,7 +26,7 @@ function wc_admin_update_0201_order_status_index() {
 
 	if ( property_exists( $index, 'Sub_part' ) ) {
 		// The index was created with the right length. Time to bail.
-		if ( $max_index_length === $index->Sub_part ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+		if ( $max_index_length === $index->Sub_part ) { // phpcs:ignore finpress.NamingConventions.ValidVariableName
 			return;
 		}
 

@@ -130,7 +130,7 @@ class ProductAttributeTerms extends \WC_REST_Product_Attribute_Terms_Controller 
 			}
 
 			$query_results[ $defined_value ] = (object) array(
-				'meta_value'    => $defined_value, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_value'    => $defined_value, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 				'product_count' => 0,
 			);
 		}

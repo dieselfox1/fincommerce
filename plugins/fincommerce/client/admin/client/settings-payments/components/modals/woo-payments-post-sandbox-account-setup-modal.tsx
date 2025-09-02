@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button, Modal } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Button, Modal } from '@finpress/components';
 import { Link } from '@fincommerce/components';
 import { getAdminLink } from '@fincommerce/settings';
 import interpolateComponents from '@automattic/interpolate-components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

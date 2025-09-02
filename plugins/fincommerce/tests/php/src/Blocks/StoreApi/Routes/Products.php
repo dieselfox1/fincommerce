@@ -222,7 +222,7 @@ class Products extends ControllerTestCase {
 		$validate   = new ValidateSchema( $schema );
 
 		$diff = $validate->get_diff_from_object( $response->get_data() );
-		$this->assertEmpty( $diff, print_r( $diff, true ) ); // @phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+		$this->assertEmpty( $diff, print_r( $diff, true ) ); // @phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_print_r
 	}
 
 	/**

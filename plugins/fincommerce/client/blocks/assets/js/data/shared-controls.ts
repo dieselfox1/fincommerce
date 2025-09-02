@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import triggerFetch, { APIFetchOptions } from '@wordpress/api-fetch';
+import { __ } from '@finpress/i18n';
+import triggerFetch, { APIFetchOptions } from '@finpress/api-fetch';
 import DataLoader from 'dataloader';
 import {
 	ApiResponse,

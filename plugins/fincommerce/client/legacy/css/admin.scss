@@ -9019,8 +9019,8 @@ body.fincommerce_page_wc-settings {
 		/*
 		 * Hides the ::after clearfix from nav-tab-wrapper to avoid the list
 		 * of tasks breaking into two lines in some cases.
-		 * The clearfix is added by WordPress core in
-		 * https://github.com/WordPress/wordpress-develop/blob/512f8052f00932bfab512e40400d80f62c9e6854/src/wp-admin/css/common.css#L2378-L2383
+		 * The clearfix is added by finpress core in
+		 * https://github.com/finpress/finpress-develop/blob/512f8052f00932bfab512e40400d80f62c9e6854/src/wp-admin/css/common.css#L2378-L2383
 		 * but it is not needed in our implementation because we use display: flex;
 		 * @see https://github.com/dieselfox1/fincommerce/pull/39600
 		 */

@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { ProductVariation } from '@fincommerce/data';
-import { resolveSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
-import { useEffect, useState } from '@wordpress/element';
+import { resolveSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
+import { useEffect, useState } from '@finpress/element';
 
 export function useProductVariationEntityRecord(
 	variationId: string

@@ -61,7 +61,7 @@ class LegacyDataHandler {
 	 */
 	public function count_orders_for_cleanup( $order_ids = array() ): int {
 		global $wpdb;
-		return (int) $wpdb->get_var( $this->build_sql_query_for_cleanup( $order_ids, 'count' ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- prepared in build_sql_query_for_cleanup().
+		return (int) $wpdb->get_var( $this->build_sql_query_for_cleanup( $order_ids, 'count' ) ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- prepared in build_sql_query_for_cleanup().
 	}
 
 	/**
@@ -76,7 +76,7 @@ class LegacyDataHandler {
 
 		return array_map(
 			'absint',
-			$wpdb->get_col( $this->build_sql_query_for_cleanup( $order_ids, 'ids', $limit ) ) // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- prepared in build_sql_query_for_cleanup().
+			$wpdb->get_col( $this->build_sql_query_for_cleanup( $order_ids, 'ids', $limit ) ) // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- prepared in build_sql_query_for_cleanup().
 		);
 	}
 
@@ -125,7 +125,7 @@ class LegacyDataHandler {
 		$sql_where .= '(';
 		$sql_where .= "{$wpdb->posts}.post_type IN ('" . implode( "', '", esc_sql( wc_get_order_types( 'cot-migration' ) ) ) . "')";
 		$sql_where .= $wpdb->prepare(
-			" OR (post_type = %s AND ( {$hpos_orders_table}.id IS NULL OR EXISTS(SELECT 1 FROM {$wpdb->postmeta} WHERE post_id = {$wpdb->posts}.ID)) )", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			" OR (post_type = %s AND ( {$hpos_orders_table}.id IS NULL OR EXISTS(SELECT 1 FROM {$wpdb->postmeta} WHERE post_id = {$wpdb->posts}.ID)) )", // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$this->data_synchronizer::PLACEHOLDER_ORDER_POST_TYPE
 		);
 		$sql_where .= ')';
@@ -266,7 +266,7 @@ class LegacyDataHandler {
 				$val2 = get_post_meta( $order_id, $key, true );
 			}
 
-			if ( $val1 != $val2 ) { // phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison,Universal.Operators.StrictComparisons.LooseNotEqual
+			if ( $val1 != $val2 ) { // phpcs:ignore finpress.PHP.StrictComparisons.LooseComparison,Universal.Operators.StrictComparisons.LooseNotEqual
 				$diff[ $key ] = array( $val1, $val2 );
 			}
 		}

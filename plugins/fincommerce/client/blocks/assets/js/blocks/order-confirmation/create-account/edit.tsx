@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import type { TemplateArray, BlockAttributes } from '@wordpress/blocks';
+import type { TemplateArray, BlockAttributes } from '@finpress/blocks';
 import {
 	Disabled,
 	PanelBody,
 	ToggleControl,
 	ExternalLink,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	InnerBlocks,
 	useBlockProps,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { getSetting, ADMIN_URL } from '@fincommerce/settings';
 
 /**

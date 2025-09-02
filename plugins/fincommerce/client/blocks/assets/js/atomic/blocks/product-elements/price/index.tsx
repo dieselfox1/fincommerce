@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
-import { currencyDollar, Icon } from '@wordpress/icons';
+import { currencyDollar, Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

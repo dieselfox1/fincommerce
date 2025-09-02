@@ -8,7 +8,7 @@ sidebar_label: Using CRUD objects
 
 CRUD is an abbreviation of the four basic operations you can do to a database or resource - Create, Read, Update, Delete.
 
-[FinCommerce 3.0 introduced CRUD objects](https://fincommerce.wordpress.com/2016/10/27/the-new-crud-classes-in-fincommerce-2-7/) for working with FinCommerce data. **Whenever possible these objects should be used in your code instead of directly updating metadata or using WordPress post objects.**
+[FinCommerce 3.0 introduced CRUD objects](https://fincommerce.finpress.com/2016/10/27/the-new-crud-classes-in-fincommerce-2-7/) for working with FinCommerce data. **Whenever possible these objects should be used in your code instead of directly updating metadata or using finpress post objects.**
 
 Each of these objects contains a schema for the data it controls (properties), a getter and setter for each property, and a save/delete method which talks to a data store. The data store handles the actual saving/reading from the database. The object itself does not need to be aware of where the data is stored.
 

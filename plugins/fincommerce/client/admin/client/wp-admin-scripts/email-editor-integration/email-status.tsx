@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { select, dispatch } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { select, dispatch } from '@finpress/data';
 import {
 	PanelRow,
 	Button,
@@ -10,9 +10,9 @@ import {
 	FlexItem,
 	Dropdown,
 	RadioControl,
-} from '@wordpress/components';
-import { closeSmall } from '@wordpress/icons';
-import { store as coreDataStore, useEntityProp } from '@wordpress/core-data';
+} from '@finpress/components';
+import { closeSmall } from '@finpress/icons';
+import { store as coreDataStore, useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

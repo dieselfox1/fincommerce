@@ -292,7 +292,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$selections = $this->selected_columns( $query_args );
 		$params     = $this->get_limit_params( $query_args );
 		$this->add_sql_query_params( $query_args );
-		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 		$db_records_count = (int) $wpdb->get_var(
 			"SELECT COUNT( DISTINCT tt.order_id ) FROM (
 				{$this->subquery->get_query_statement()}
@@ -319,7 +319,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$this->subquery->add_sql_clause( 'select', $selections );
 		$this->subquery->add_sql_clause( 'order_by', $this->get_sql_clause( 'order_by' ) );
 		$this->subquery->add_sql_clause( 'limit', $this->get_sql_clause( 'limit' ) );
-		/* phpcs:disable WordPress.DB.PreparedSQL.NotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.NotPrepared */
 		$orders_data = $wpdb->get_results(
 			$this->subquery->get_query_statement(),
 			ARRAY_A
@@ -485,7 +485,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$order_product_lookup_table = $wpdb->prefix . 'wc_order_product_lookup';
 		$included_order_ids         = implode( ',', $order_ids );
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 		$products = $wpdb->get_results(
 			"SELECT
 				order_id,
@@ -534,7 +534,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			return array();
 		}
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 		$customer_ids = implode( ',', $customer_ids );
 		$customers    = $wpdb->get_results(
 			"SELECT * FROM {$customer_lookup_table} WHERE customer_id IN ({$customer_ids})",
@@ -556,7 +556,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$order_coupon_lookup_table = $wpdb->prefix . 'wc_order_coupon_lookup';
 		$included_order_ids        = implode( ',', $order_ids );
 
-		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 		$coupons = $wpdb->get_results(
 			"SELECT order_id, coupon_id, post_title as coupon_code
 				FROM {$wpdb->posts}
@@ -583,7 +583,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$included_order_ids = implode( ',', array_map( 'absint', $order_ids ) );
 
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 			$order_attributions_meta = $wpdb->get_results(
 				"SELECT order_id, meta_key, meta_value
 					FROM $order_meta_table
@@ -594,7 +594,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			);
 			/* phpcs:enable */
 		} else {
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 			$order_attributions_meta = $wpdb->get_results(
 				"SELECT post_id as order_id, meta_key, meta_value
 					FROM $wpdb->postmeta
@@ -627,7 +627,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 
 		$statuses = get_transient( self::ORDERS_STATUSES_ALL_TRANSIENT );
 		if ( false === $statuses ) {
-			/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+			/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 			$table_name = self::get_db_table_name();
 			$statuses   = $wpdb->get_col(
 				"SELECT DISTINCT status FROM {$table_name}"

@@ -95,8 +95,8 @@ class WC_Beta_Tester {
 			'plugin_file'        => WC_PLUGIN_BASENAME,
 			'slug'               => 'fincommerce',
 			'proper_folder_name' => 'fincommerce',
-			'api_url'            => 'https://api.wordpress.org/plugins/info/1.0/fincommerce.json',
-			'repo_url'           => 'https://wordpress.org/plugins/fincommerce/',
+			'api_url'            => 'https://api.finpress.org/plugins/info/1.0/fincommerce.json',
+			'repo_url'           => 'https://finpress.org/plugins/fincommerce/',
 		);
 
 		add_filter( "plugin_action_links_{$this->plugin_name}", array( $this, 'plugin_action_links' ), 10, 1 );
@@ -332,7 +332,7 @@ class WC_Beta_Tester {
 	 *
 	 * @param string      $source        File source location.
 	 * @param string      $remote_source Remote file source location.
-	 * @param WP_Upgrader $upgrader      WordPress Upgrader instance.
+	 * @param WP_Upgrader $upgrader      finpress Upgrader instance.
 	 * @return string
 	 */
 	public function upgrader_source_selection( $source, $remote_source, $upgrader ) {

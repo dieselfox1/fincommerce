@@ -110,7 +110,7 @@ class MiniCart extends AbstractBlock {
 	 * Initialize this block type.
 	 *
 	 * - Hook into WP lifecycle.
-	 * - Register the block with WordPress.
+	 * - Register the block with finpress.
 	 */
 	protected function initialize() {
 		parent::initialize();
@@ -529,7 +529,7 @@ class MiniCart extends AbstractBlock {
 
 			// The following translation is a temporary workaround. It will be
 			// reverted to the previous form (`%1$d item in cart`) as soon as the
-			// `@wordpress/i18n` package is available as a script module.
+			// `@finpress/i18n` package is available as a script module.
 			$button_aria_label_template = isset( $attributes['hasHiddenPrice'] ) && false !== $attributes['hasHiddenPrice']
 				/* translators: %d is the number of products in the cart. */
 				? __( 'Number of items in the cart: %d', 'fincommerce' )
@@ -587,7 +587,7 @@ class MiniCart extends AbstractBlock {
 				data-wp-interactive="fincommerce/mini-cart"
 				data-wp-init="callbacks.setupOpenDrawerListener"
 				data-wp-watch="callbacks.disableScrollingOnBody"
-				<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php echo wp_interactivity_data_wp_context( $context ); ?>
 				class="<?php echo esc_attr( $wrapper_classes ); ?>"
 				style="<?php echo esc_attr( $wrapper_styles ); ?>"
@@ -596,11 +596,11 @@ class MiniCart extends AbstractBlock {
 					data-wp-on--click="callbacks.openDrawer"
 					data-wp-bind--aria-label="state.buttonAriaLabel"
 					class="wc-block-mini-cart__button"
-					<?php echo $button_role; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo $button_role; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				>
 					<span class="wc-block-mini-cart__quantity-badge">
 						<?php
-							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 							echo $icon;
 						?>
 						<?php if ( 'never' !== $product_count_visibility ) : ?>
@@ -657,7 +657,7 @@ class MiniCart extends AbstractBlock {
 				<div class="wc-block-components-drawer__content">
 					<div class="wc-block-mini-cart__template-part">
 						<?php
-							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 							echo $template_part_contents;
 						?>
 					</div>
@@ -665,7 +665,7 @@ class MiniCart extends AbstractBlock {
 			</div>
 		</div>				
 		<?php
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo wp_interactivity_process_directives( ob_get_clean() );
 	}
 
@@ -757,7 +757,7 @@ class MiniCart extends AbstractBlock {
 		}
 
 		if ( '' === $template_part_contents ) {
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 			$file_contents = file_get_contents( Package::get_path() . 'templates/' . BlockTemplateUtils::DIRECTORY_NAMES['TEMPLATE_PARTS'] . '/' . $template_name . '.html' );
 			if ( $do_blocks ) {
 				$template_part_contents = do_blocks(

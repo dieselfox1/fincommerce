@@ -6,18 +6,18 @@ import { Logger } from '@fincommerce/monorepo-utils/src/core/logger';
 
 // Typing just the things we need from the WP.com Post object.
 // (which is not the same as WP Post object or API Post object).
-// See example response here: https://developer.wordpress.com/docs/api/1.1/get/sites/%24site/posts/ to add more props.
-type WordpressComPost = {
+// See example response here: https://developer.finpress.com/docs/api/1.1/get/sites/%24site/posts/ to add more props.
+type finpressComPost = {
 	title: string;
 	URL: string;
 };
 
 /**
- * Fetch a post from WordPress.com
+ * Fetch a post from finpress.com
  *
  * @param {string} siteId    - The site to fetch from.
  * @param {string} postId    - The id of the post to fetch.
- * @param {string} authToken - WordPress.com auth token.
+ * @param {string} authToken - finpress.com auth token.
  * @return {Promise}      - A promise that resolves to the JSON API response.
  */
 export const fetchWpComPost = async (
@@ -27,7 +27,7 @@ export const fetchWpComPost = async (
 ) => {
 	try {
 		const post = await fetch(
-			`https://public-api.wordpress.com/rest/v1.1/sites/${ siteId }/posts/${ postId }`,
+			`https://public-api.finpress.com/rest/v1.1/sites/${ siteId }/posts/${ postId }`,
 			{
 				headers: {
 					Authorization: `Bearer ${ authToken }`,
@@ -57,7 +57,7 @@ export const searchForPostsByCategory = async (
 ) => {
 	try {
 		const post = await fetch(
-			`https://public-api.wordpress.com/rest/v1.1/sites/${ siteId }/posts?${ new URLSearchParams(
+			`https://public-api.finpress.com/rest/v1.1/sites/${ siteId }/posts?${ new URLSearchParams(
 				{ search, category }
 			) }`,
 			{
@@ -74,7 +74,7 @@ export const searchForPostsByCategory = async (
 			throw new Error( `Error creating draft post: ${ text }` );
 		}
 
-		return ( await post.json() ).posts as WordpressComPost[];
+		return ( await post.json() ).posts as finpressComPost[];
 	} catch ( e: unknown ) {
 		if ( e instanceof Error ) {
 			Logger.error( e.message );
@@ -83,12 +83,12 @@ export const searchForPostsByCategory = async (
 };
 
 /**
- * Edit a post on wordpress.com
+ * Edit a post on finpress.com
  *
  * @param {string} siteId      - The site to post to.
  * @param {string} postId      - The post to edit.
  * @param {string} postContent - Post content.
- * @param {string} authToken   - WordPress.com auth token.
+ * @param {string} authToken   - finpress.com auth token.
  * @return {Promise}           - A promise that resolves to the JSON API response.
  */
 export const editWpComPostContent = async (
@@ -99,7 +99,7 @@ export const editWpComPostContent = async (
 ) => {
 	try {
 		const post = await fetch(
-			`https://public-api.wordpress.com/rest/v1.2/sites/${ siteId }/posts/${ postId }`,
+			`https://public-api.finpress.com/rest/v1.2/sites/${ siteId }/posts/${ postId }`,
 			{
 				method: 'POST',
 				headers: {
@@ -126,12 +126,12 @@ export const editWpComPostContent = async (
 };
 
 /**
- * Create a draft of a post on wordpress.com
+ * Create a draft of a post on finpress.com
  *
  * @param {string} siteId      - The site to post to.
  * @param {string} postTitle   - Post title.
  * @param {string} postContent - Post content.
- * @param {string} authToken   - WordPress.com auth token.
+ * @param {string} authToken   - finpress.com auth token.
  * @return {Promise}           - A promise that resolves to the JSON API response.
  */
 export const createWpComDraftPost = async (
@@ -143,7 +143,7 @@ export const createWpComDraftPost = async (
 ) => {
 	try {
 		const post = await fetch(
-			`https://public-api.wordpress.com/rest/v1.2/sites/${ siteId }/posts/new`,
+			`https://public-api.finpress.com/rest/v1.2/sites/${ siteId }/posts/new`,
 			{
 				method: 'POST',
 				headers: {

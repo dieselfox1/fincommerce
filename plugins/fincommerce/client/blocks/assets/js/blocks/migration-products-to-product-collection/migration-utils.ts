@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { getSettingWithCoercion } from '@fincommerce/settings';
-import { type BlockInstance } from '@wordpress/blocks';
-import { select } from '@wordpress/data';
+import { type BlockInstance } from '@finpress/blocks';
+import { select } from '@finpress/data';
 import { isBoolean, isNumber } from '@fincommerce/types';
 
 /**
@@ -54,7 +54,7 @@ const checkIfBlockCanBeInserted = (
 	// We need to duplicate checks that are happening within replaceBlocks method
 	// as replacement is initially blocked and there's no information returned
 	// that would determine if replacement happened or not.
-	// https://github.com/WordPress/gutenberg/issues/46740
+	// https://github.com/finpress/gutenberg/issues/46740
 	const rootClientId =
 		select( 'core/block-editor' ).getBlockRootClientId( clientId ) ||
 		undefined;

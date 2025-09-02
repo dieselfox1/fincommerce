@@ -417,7 +417,7 @@ class Site_Style_Sync_Controller_Test extends \Email_Editor_Integration_Test_Cas
 	}
 
 	/**
-	 * Test initialization occurs on WordPress init hook.
+	 * Test initialization occurs on finpress init hook.
 	 */
 	public function test_initialization_on_init_hook(): void {
 		// Create new controller to test initialization.

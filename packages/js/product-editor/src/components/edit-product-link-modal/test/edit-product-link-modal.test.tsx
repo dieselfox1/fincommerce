@@ -4,7 +4,7 @@
 import { render } from '@testing-library/react';
 import { Product } from '@fincommerce/data';
 import userEvent from '@testing-library/user-event';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

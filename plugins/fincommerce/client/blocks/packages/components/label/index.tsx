@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Fragment, RawHTML } from '@wordpress/element';
+import { Fragment, RawHTML } from '@finpress/element';
 import { sanitizeHTML } from '@fincommerce/utils';
 import clsx from 'clsx';
 import type { ReactElement, HTMLProps } from 'react';

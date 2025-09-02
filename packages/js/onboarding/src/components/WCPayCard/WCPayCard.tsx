@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Card, CardBody, CardHeader, CardFooter } from '@wordpress/components';
+import { Card, CardBody, CardHeader, CardFooter } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { Link } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

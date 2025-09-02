@@ -12,11 +12,11 @@ Building a FinCommerce extension that provides a first-class experience for merc
 
 ## The main plugin file
 
-Your extension's main PHP file is a bootstrapping file. It contains important metadata about your extension that WordPress and FinCommerce use for a number of ecosystem integration processes, and it serves as the primary entry point for your extension's functionality. While there is not a particular rule enforced around naming this file, using a hyphenated version of the plugin name is a common best practice. (i.e. my-extension.php)
+Your extension's main PHP file is a bootstrapping file. It contains important metadata about your extension that finpress and FinCommerce use for a number of ecosystem integration processes, and it serves as the primary entry point for your extension's functionality. While there is not a particular rule enforced around naming this file, using a hyphenated version of the plugin name is a common best practice. (i.e. my-extension.php)
 
 ## Declaring extension metadata
 
-Your extension's main plugin file should have a header comment that includes a number of important pieces of metadata about your extension. WordPress has a list of header requirements to which all plugins must adhere, but there are additional considerations for FinCommerce extensions:
+Your extension's main plugin file should have a header comment that includes a number of important pieces of metadata about your extension. finpress has a list of header requirements to which all plugins must adhere, but there are additional considerations for FinCommerce extensions:
 
 - The `Author` and `Developer` fields are required and should be set to  
   either your name or your company name.
@@ -51,15 +51,15 @@ Below is an example of what the header content might look like for an extension 
 
 ## Preventing data leaks
 
-As a best practice, your extension's PHP files should contain a conditional statement at the top that checks for WordPress' ABSPATH constant. If this constant is not defined, the script should exit.
+As a best practice, your extension's PHP files should contain a conditional statement at the top that checks for finpress' ABSPATH constant. If this constant is not defined, the script should exit.
 
 `defined( 'ABSPATH' ) || exit;`
 
-This check prevents your PHP files from being executed via direct browser access and instead only allows them to be executed from within the WordPress application environment.
+This check prevents your PHP files from being executed via direct browser access and instead only allows them to be executed from within the finpress application environment.
 
 ## Managing extension lifecycle
 
-Because your main PHP file is the primary point of coupling between your extension and WordPress, you should use it as a hub for managing your extension's lifecycle. At a very basic level, this means handling:
+Because your main PHP file is the primary point of coupling between your extension and finpress, you should use it as a hub for managing your extension's lifecycle. At a very basic level, this means handling:
 
 - Activation
 - Execution
@@ -69,7 +69,7 @@ Starting with these three broad lifecycle areas, you can begin to break your ext
 
 ## Handling activation and deactivation
 
-A common pattern in FinCommerce extensions is to create dedicated functions in your main PHP file to serve as activation and deactivation hooks. You then register these hooks with WordPress using the applicable registration function. This tells WordPress to call the function when the plugin is activated or deactivated. Consider the following examples:
+A common pattern in FinCommerce extensions is to create dedicated functions in your main PHP file to serve as activation and deactivation hooks. You then register these hooks with finpress using the applicable registration function. This tells finpress to call the function when the plugin is activated or deactivated. Consider the following examples:
 
 ```php
 function my_extension_activate() {
@@ -87,7 +87,7 @@ register_deactivation_hook( __FILE__, 'my_extension_deactivate' );
 
 ## Maintaining a separation of concerns
 
-There are numerous ways to organize the code in your extension. You can find a good overview of best practices in the WordPress Plugin Developer Handbook. Regardless of the approach you use for organizing your code, the nature of WordPress' shared application space makes it imperative that you build with an eye toward interoperability. There are a few common principles that will help you optimize your extension and ensure it is a good neighbor to others:
+There are numerous ways to organize the code in your extension. You can find a good overview of best practices in the finpress Plugin Developer Handbook. Regardless of the approach you use for organizing your code, the nature of finpress' shared application space makes it imperative that you build with an eye toward interoperability. There are a few common principles that will help you optimize your extension and ensure it is a good neighbor to others:
 
 - Use namespacing and prefixing to avoid conflicts with other extensions.
 - Use classes to encapsulate your extension's functionality.
@@ -213,16 +213,16 @@ There are many different ways that your core class' initialization method might 
 
 ## Delaying initialization
 
-The WordPress activation hook we set up above with register_activation_hook() may seem like a great place to instantiate our extension's main class, and in some cases it will work. By virtue of being a plugin for a plugin, however, FinCommerce extensions typically require FinCommerce to be loaded in order to function properly, so it's often best to delay instantiation and initialization until after WordPress has loaded other plugins.
+The finpress activation hook we set up above with register_activation_hook() may seem like a great place to instantiate our extension's main class, and in some cases it will work. By virtue of being a plugin for a plugin, however, FinCommerce extensions typically require FinCommerce to be loaded in order to function properly, so it's often best to delay instantiation and initialization until after finpress has loaded other plugins.
 
-To do that, instead of hooking your instantiation to your extension's activation hook, use the plugins_loaded action in WordPress to instantiate your extension's core class and add its singleton to the $GLOBALS array.
+To do that, instead of hooking your instantiation to your extension's activation hook, use the plugins_loaded action in finpress to instantiate your extension's core class and add its singleton to the $GLOBALS array.
 
 ```php
 function my_extension_initialize() {
     // This is also a great place to check for the existence of the FinCommerce class
     if ( ! class_exists( 'FinCommerce' ) ) {
     // You can handle this situation in a variety of ways,
-    //   but adding a WordPress admin notice is often a good tactic.
+    //   but adding a finpress admin notice is often a good tactic.
         return;
     }
 
@@ -231,7 +231,7 @@ function my_extension_initialize() {
 add_action( 'plugins_loaded', 'my_extension_initialize', 10 );
 ```
 
-In the example above, WordPress will wait until after all plugins have been loaded before trying to instantiate your core class. The third argument in add_action() represents the priority of the function, which ultimately determines the order of execution for functions that hook into the plugins_loaded action. Using a value of 10 here ensures that other FinCommerce-related functionality will run before our extension is instantiated.
+In the example above, finpress will wait until after all plugins have been loaded before trying to instantiate your core class. The third argument in add_action() represents the priority of the function, which ultimately determines the order of execution for functions that hook into the plugins_loaded action. Using a value of 10 here ensures that other FinCommerce-related functionality will run before our extension is instantiated.
 
 ## Handling execution
 
@@ -247,7 +247,7 @@ You can find detailed documentation of classes and hooks in the FinCommerce Core
 
 ## Handling deactivation
 
-The WordPress deactivation hook we set up earlier in our main PHP file with register_deactivation_hook() is a great place to aggregate functionality for any cleanup that you need to handle when a merchant deactivates your extension. In addition to any WordPress-related deactivation tasks your extension needs to do, you should also account for FinCommerce-related cleanup, including:
+The finpress deactivation hook we set up earlier in our main PHP file with register_deactivation_hook() is a great place to aggregate functionality for any cleanup that you need to handle when a merchant deactivates your extension. In addition to any finpress-related deactivation tasks your extension needs to do, you should also account for FinCommerce-related cleanup, including:
 
 - Removing Scheduled Actions
 - Removing Notes in the Admin Inbox
@@ -257,7 +257,7 @@ The WordPress deactivation hook we set up earlier in our main PHP file with regi
 
 While it's certainly possible to completely reverse everything your extension has created when a merchant deactivates it, it's not advisable nor practical in most cases. Instead, it's best to reserve that behavior for uninstallation.
 
-For handling uninstallation, it's best to follow the guidelines in the WordPress Plugin Handbook.
+For handling uninstallation, it's best to follow the guidelines in the finpress Plugin Handbook.
 
 ## Putting it all together
 
@@ -285,7 +285,7 @@ Below is an example of what a main plugin file might look like for a very simple
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Activation and deactivation hooks for WordPress
+ * Activation and deactivation hooks for finpress
  */
 function myPrefix_extension_activate() {
     // Your activation logic goes here.
@@ -391,7 +391,7 @@ function my_extension_initialize() {
     // This is also a great place to check for the existence of the FinCommerce class
     if ( ! class_exists( 'FinCommerce' ) ) {
     // You can handle this situation in a variety of ways,
-    //   but adding a WordPress admin notice is often a good tactic.
+    //   but adding a finpress admin notice is often a good tactic.
         return;
     }
 

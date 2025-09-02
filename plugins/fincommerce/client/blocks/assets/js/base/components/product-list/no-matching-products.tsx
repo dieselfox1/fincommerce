@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useInnerBlockLayoutContext } from '@fincommerce/shared-context';
-import { Icon, search } from '@wordpress/icons';
+import { Icon, search } from '@finpress/icons';
 
 /**
  * Internal dependencies

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import { Component, ReactNode, ErrorInfo } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 /**
  * Internal dependencies
  */

@@ -785,7 +785,7 @@ function wc_string_to_datetime( $time_string ) {
 
 /**
  * FinCommerce Timezone - helper to retrieve the timezone string for a site until.
- * a WP core method exists (see https://core.trac.wordpress.org/ticket/24730).
+ * a WP core method exists (see https://core.trac.finpress.org/ticket/24730).
  *
  * Adapted from https://secure.php.net/manual/en/function.timezone-name-from-abbr.php#89155.
  *
@@ -793,7 +793,7 @@ function wc_string_to_datetime( $time_string ) {
  * @return string PHP timezone string for the site
  */
 function wc_timezone_string() {
-	// Added in WordPress 5.3 Ref https://developer.wordpress.org/reference/functions/wp_timezone_string/.
+	// Added in finpress 5.3 Ref https://developer.finpress.org/reference/functions/wp_timezone_string/.
 	if ( function_exists( 'wp_timezone_string' ) ) {
 		return wp_timezone_string();
 	}
@@ -822,8 +822,8 @@ function wc_timezone_string() {
 	// Last try, guess timezone string manually.
 	foreach ( timezone_abbreviations_list() as $abbr ) {
 		foreach ( $abbr as $city ) {
-			// WordPress restrict the use of date(), since it's affected by timezone settings, but in this case is just what we need to guess the correct timezone.
-			if ( (bool) date( 'I' ) === (bool) $city['dst'] && $city['timezone_id'] && intval( $city['offset'] ) === $utc_offset ) { // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+			// finpress restrict the use of date(), since it's affected by timezone settings, but in this case is just what we need to guess the correct timezone.
+			if ( (bool) date( 'I' ) === (bool) $city['dst'] && $city['timezone_id'] && intval( $city['offset'] ) === $utc_offset ) { // phpcs:ignore finpress.DateTime.RestrictedFunctions.date_date
 				return $city['timezone_id'];
 			}
 		}

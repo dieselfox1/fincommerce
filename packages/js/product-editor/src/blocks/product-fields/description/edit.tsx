@@ -6,20 +6,20 @@ import {
 	useEffect,
 	useState,
 	Fragment,
-} from '@wordpress/element';
-import { BlockInstance, parse, serialize } from '@wordpress/blocks';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/element';
+import { BlockInstance, parse, serialize } from '@finpress/blocks';
+import { useSelect } from '@finpress/data';
 import clsx from 'clsx';
 import { useWooBlockProps } from '@fincommerce/block-templates';
-import { useEntityProp } from '@wordpress/core-data';
-import { __ } from '@wordpress/i18n';
+import { useEntityProp } from '@finpress/core-data';
+import { __ } from '@finpress/i18n';
 import {
 	BlockControls,
 	// @ts-expect-error no exported member.
 	useInnerBlocksProps,
 	// @ts-expect-error no exported member.
 	BlockPreview,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

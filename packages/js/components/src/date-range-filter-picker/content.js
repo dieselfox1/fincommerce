@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	createElement,
 	Component,
 	createRef,
 	Fragment,
-} from '@wordpress/element';
-import { TabPanel, Button } from '@wordpress/components';
+} from '@finpress/element';
+import { TabPanel, Button } from '@finpress/components';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';

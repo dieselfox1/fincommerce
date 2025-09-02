@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { PluginArea } from '@wordpress/plugins';
+import { PluginArea } from '@finpress/plugins';
 import { CURRENT_USER_IS_ADMIN } from '@fincommerce/settings';
 import BlockErrorBoundary from '@fincommerce/base-components/block-error-boundary';
 /**

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useSelect } from '@wordpress/data';
-import { store as blockEditorStore } from '@wordpress/block-editor';
-import { getBlockSupport } from '@wordpress/blocks';
+import { useSelect } from '@finpress/data';
+import { store as blockEditorStore } from '@finpress/block-editor';
+import { getBlockSupport } from '@finpress/blocks';
 
 const isBlockSupported = ( blockName: string ) => {
 	// Client side navigation can be true in two states:

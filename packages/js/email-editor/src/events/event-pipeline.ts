@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { debounce } from 'lodash';
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 
 const isEventTrackingEnabled = () => {
 	return applyFilters(

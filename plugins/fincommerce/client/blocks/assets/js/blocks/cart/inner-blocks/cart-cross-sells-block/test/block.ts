@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerCoreBlocks } from '@wordpress/block-library';
+import { registerCoreBlocks } from '@finpress/block-library';
 
 /**
  * Internal dependencies

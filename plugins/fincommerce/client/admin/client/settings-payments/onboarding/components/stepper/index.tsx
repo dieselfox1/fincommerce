@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

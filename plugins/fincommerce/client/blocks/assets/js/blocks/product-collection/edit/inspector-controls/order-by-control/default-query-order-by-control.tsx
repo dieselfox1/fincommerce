@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { store as coreStore } from '@wordpress/core-data';
-import { dispatch, select } from '@wordpress/data';
-import { useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { store as coreStore } from '@finpress/core-data';
+import { dispatch, select } from '@finpress/data';
+import { useState } from '@finpress/element';
 import {
 	CoreFilterNames,
 	TrackInteraction,

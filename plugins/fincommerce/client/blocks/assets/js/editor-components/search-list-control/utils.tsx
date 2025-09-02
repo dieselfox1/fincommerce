@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Fragment } from '@wordpress/element';
-import { __, _n, sprintf } from '@wordpress/i18n';
+import { Fragment } from '@finpress/element';
+import { __, _n, sprintf } from '@finpress/i18n';
 import { keyBy } from '@fincommerce/base-utils';
 
 /**

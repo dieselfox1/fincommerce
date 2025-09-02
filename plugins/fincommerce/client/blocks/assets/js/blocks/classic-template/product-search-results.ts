@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	INNER_BLOCKS_TEMPLATE as productCollectionInnerBlocksTemplate,
 	DEFAULT_ATTRIBUTES as productCollectionDefaultAttributes,
@@ -13,7 +13,7 @@ import {
 	createBlocksFromInnerBlocksTemplate,
 	type BlockInstance,
 	type InnerBlockTemplate,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

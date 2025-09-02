@@ -102,7 +102,7 @@ class WC_Products_Tracking_Test extends \WC_Unit_Test_Case {
 	 */
 	public function test_products_view(): void {
 		$_GET['post_type'] = 'product';
-		// phpcs:disable WordPress.NamingConventions.ValidHookName.UseUnderscores
+		// phpcs:disable finpress.NamingConventions.ValidHookName.UseUnderscores
 		// phpcs:ignore FinCommerce.Commenting.CommentHooks.MissingHookComment
 		do_action( 'load-edit.php' );
 		$this->assertRecordedTracksEvent( 'wcadmin_products_view' );

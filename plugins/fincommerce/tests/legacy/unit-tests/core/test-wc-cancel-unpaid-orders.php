@@ -197,7 +197,7 @@ class WC_Tests_Cancel_Unpaid_Orders extends WC_Unit_Test_Case {
 			'No action should be scheduled when hold stock minutes is 0'
 		);
 
-		// Also check WordPress cron.
+		// Also check finpress cron.
 		$this->assertFalse(
 			wp_next_scheduled( 'fincommerce_cancel_unpaid_orders' ),
 			'No WP cron event should be scheduled when hold stock minutes is 0'
@@ -227,7 +227,7 @@ class WC_Tests_Cancel_Unpaid_Orders extends WC_Unit_Test_Case {
 			'No action should be scheduled when stock management is disabled'
 		);
 
-		// Also check WordPress cron.
+		// Also check finpress cron.
 		$this->assertFalse(
 			wp_next_scheduled( 'fincommerce_cancel_unpaid_orders' ),
 			'No WP cron event should be scheduled when stock management is disabled'
@@ -267,7 +267,7 @@ class WC_Tests_Cancel_Unpaid_Orders extends WC_Unit_Test_Case {
 			'No action should be scheduled when interval is filtered to 0 to prevent endless loops'
 		);
 
-		// Also check WordPress cron.
+		// Also check finpress cron.
 		$this->assertFalse(
 			wp_next_scheduled( 'fincommerce_cancel_unpaid_orders' ),
 			'No WP cron event should be scheduled when interval is filtered to 0'

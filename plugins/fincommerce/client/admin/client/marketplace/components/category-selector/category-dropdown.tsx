@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Dropdown } from '@wordpress/components';
-import { chevronDown, chevronUp, Icon } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { Dropdown } from '@finpress/components';
+import { chevronDown, chevronUp, Icon } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import { navigateTo, getNewPath } from '@fincommerce/navigation';
 import clsx from 'clsx';
 import { recordEvent } from '@fincommerce/tracks';

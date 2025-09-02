@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 import clsx from 'clsx';
-import { Icon, currencyDollar } from '@wordpress/icons';
-import { useBlockProps } from '@wordpress/block-editor';
+import { Icon, currencyDollar } from '@finpress/icons';
+import { useBlockProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

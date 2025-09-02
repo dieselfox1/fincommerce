@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __experimentalHeading as Heading } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { DataForm } from '@wordpress/dataviews';
+import { __experimentalHeading as Heading } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { DataForm } from '@finpress/dataviews';
 /**
  * Internal dependencies
  */

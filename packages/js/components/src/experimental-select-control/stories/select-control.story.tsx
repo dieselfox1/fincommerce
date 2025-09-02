@@ -7,11 +7,11 @@ import {
 	Modal,
 	SlotFillProvider,
 	Spinner,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { useCallback } from 'react';
 
-import { createElement, useState } from '@wordpress/element';
-import { tag } from '@wordpress/icons';
+import { createElement, useState } from '@finpress/element';
+import { tag } from '@finpress/icons';
 
 /**
  * Internal dependencies

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { sprintf, __ } from '@wordpress/i18n';
-import { CheckboxControl, Icon } from '@wordpress/components';
-import { useState, createElement, Fragment } from '@wordpress/element';
-import { plus } from '@wordpress/icons';
+import { sprintf, __ } from '@finpress/i18n';
+import { CheckboxControl, Icon } from '@finpress/components';
+import { useState, createElement, Fragment } from '@finpress/element';
+import { plus } from '@finpress/icons';
 import {
 	__experimentalSelectControl as SelectControl,
 	__experimentalSelectControlMenu as Menu,

@@ -107,7 +107,7 @@ class Batch extends AbstractRoute implements RouteInterface {
 	 * Get the route response.
 	 *
 	 * @see WP_REST_Server::serve_batch_request_v1
-	 * https://developer.wordpress.org/reference/classes/wp_rest_server/serve_batch_request_v1/
+	 * https://developer.finpress.org/reference/classes/wp_rest_server/serve_batch_request_v1/
 	 *
 	 * @throws RouteException On error.
 	 *

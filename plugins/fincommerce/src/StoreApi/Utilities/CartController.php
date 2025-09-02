@@ -251,7 +251,7 @@ class CartController {
 		$quantity_validation = ( new QuantityLimits() )->validate_cart_item_quantity( $quantity, $cart_item );
 
 		if ( is_wp_error( $quantity_validation ) ) {
-			throw new RouteException( $quantity_validation->get_error_code(), $quantity_validation->get_error_message(), 400 ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new RouteException( $quantity_validation->get_error_code(), $quantity_validation->get_error_message(), 400 ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 
 		$cart = $this->get_cart_instance();
@@ -549,7 +549,7 @@ class CartController {
 		if ( empty( $cart_items ) ) {
 			throw new InvalidCartException(
 				'fincommerce_cart_error',
-				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Errors are converted to response objects later.
+				// phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped -- Errors are converted to response objects later.
 				new WP_Error( 'fincommerce_rest_cart_empty', esc_html__( 'Cannot place an order, your cart is empty.', 'fincommerce' ), 400 ),
 				400
 			);
@@ -1024,7 +1024,7 @@ class CartController {
 				'fincommerce_rest_cart_coupon_error',
 				esc_html( wp_strip_all_tags( $valid->get_error_message() ) ),
 				400,
-				$valid->get_error_data() // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+				$valid->get_error_data() // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 			);
 		}
 

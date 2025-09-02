@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register, subscribe } from '@wordpress/data';
-import { controls as dataControls } from '@wordpress/data-controls';
+import { createReduxStore, register, subscribe } from '@finpress/data';
+import { controls as dataControls } from '@finpress/data-controls';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect, useRef, useState } from '@wordpress/element';
+import { useEffect, useRef, useState } from '@finpress/element';
 
 function isAtBottom() {
 	return window.innerHeight + window.scrollY >= document.body.scrollHeight;

@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { QRCodeSVG } from 'qrcode.react';
-import React from '@wordpress/element';
+import React from '@finpress/element';
 import interpolateComponents from '@automattic/interpolate-components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 import { Link } from '@fincommerce/components';
 

@@ -1,8 +1,8 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /**
  * External dependencies
  */
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
 import { formatPrice } from '@fincommerce/price-format';
 import {
 	PanelBody,
@@ -12,15 +12,15 @@ import {
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	RadioControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { getSetting } from '@fincommerce/settings';
-import { __, isRTL } from '@wordpress/i18n';
+import { __, isRTL } from '@finpress/i18n';
 import Noninteractive from '@fincommerce/base-components/noninteractive';
 import { isSiteEditorPage } from '@fincommerce/utils';
 import type { ReactElement } from 'react';
-import { useRef } from '@wordpress/element';
+import { useRef } from '@finpress/element';
 import { cartOutline, bag, bagAlt } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 import { WC_BLOCKS_IMAGE_URL } from '@fincommerce/block-settings';
 import { ColorPanel } from '@fincommerce/editor-components/color-panel';
 import type { ColorPaletteOption } from '@fincommerce/editor-components/color-panel/types';

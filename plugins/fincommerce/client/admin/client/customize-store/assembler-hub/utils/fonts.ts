@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
-import { resolveSelect } from '@wordpress/data';
+import apiFetch from '@finpress/api-fetch';
+import { resolveSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

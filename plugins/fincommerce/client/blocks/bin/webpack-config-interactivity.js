@@ -2,7 +2,7 @@
  * External dependencies
  */
 const path = require( 'path' );
-const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
+const DependencyExtractionWebpackPlugin = require( '@finpress/dependency-extraction-webpack-plugin' );
 const { DefinePlugin } = require( 'webpack' );
 
 /**
@@ -15,16 +15,16 @@ const { NODE_ENV: mode = 'development' } = process.env;
 // Config to build and incubate the interactivity API within FinCommerce.
 module.exports = {
 	entry: {
-		'@wordpress/interactivity': path.resolve(
+		'@finpress/interactivity': path.resolve(
 			__dirname,
 			'..',
-			'node_modules/@wordpress/interactivity/src/index.ts'
+			'node_modules/@finpress/interactivity/src/index.ts'
 		),
 
-		'@wordpress/interactivity-router': path.resolve(
+		'@finpress/interactivity-router': path.resolve(
 			__dirname,
 			'..',
-			'node_modules/@wordpress/interactivity-router/src/index.ts'
+			'node_modules/@finpress/interactivity-router/src/index.ts'
 		),
 	},
 	optimization: sharedOptimizationConfig,
@@ -66,7 +66,7 @@ module.exports = {
 						options: {
 							presets: [
 								require.resolve(
-									'@wordpress/babel-preset-default'
+									'@finpress/babel-preset-default'
 								),
 							],
 						},

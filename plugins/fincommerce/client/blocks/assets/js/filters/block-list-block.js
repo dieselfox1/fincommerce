@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Component } from '@wordpress/element';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { getBlockType } from '@wordpress/blocks';
-import { addFilter } from '@wordpress/hooks';
+import { Component } from '@finpress/element';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { getBlockType } from '@finpress/blocks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * withDefaultAttributes HOC for editor.BlockListBlock.
@@ -81,7 +81,7 @@ const withDefaultAttributes = createHigherOrderComponent(
  * This is a workaround for Gutenberg which does not save "default" attributes
  * to the post, which means if defaults change, all existing blocks change too.
  *
- * See https://github.com/WordPress/gutenberg/issues/7342
+ * See https://github.com/finpress/gutenberg/issues/7342
  *
  * To use this, the block name needs a `fincommerce/` prefix, and as well
  * as defining `attributes` during block registration, you must also declare an

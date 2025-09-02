@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { type BlockInstance } from '@wordpress/blocks';
+import { type BlockInstance } from '@finpress/blocks';
 
 type TemplateDetail = {
 	type: string;

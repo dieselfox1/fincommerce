@@ -34,7 +34,7 @@ jest.mock( '~/hooks/useIsScrolled', () => ( {
 	default: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/html-entities', () => ( {
+jest.mock( '@finpress/html-entities', () => ( {
 	decodeEntities: ( content ) => content,
 } ) );
 

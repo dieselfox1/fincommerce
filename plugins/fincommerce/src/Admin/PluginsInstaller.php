@@ -28,7 +28,7 @@ class PluginsInstaller {
 	 * Check if an install or activation is being requested via URL query.
 	 */
 	public static function possibly_install_activate_plugins() {
-		/* phpcs:disable WordPress.Security.NonceVerification.Recommended */
+		/* phpcs:disable finpress.Security.NonceVerification.Recommended */
 		if (
 			! isset( $_GET['plugin_action'] ) ||
 			! isset( $_GET['plugins'] ) ||
@@ -46,7 +46,7 @@ class PluginsInstaller {
 
 		$plugins       = sanitize_text_field( wp_unslash( $_GET['plugins'] ) );
 		$plugin_action = sanitize_text_field( wp_unslash( $_GET['plugin_action'] ) );
-		/* phpcs:enable WordPress.Security.NonceVerification.Recommended */
+		/* phpcs:enable finpress.Security.NonceVerification.Recommended */
 
 		$plugins_api     = new Plugins();
 		$install_result  = null;

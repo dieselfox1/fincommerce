@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Product } from '@fincommerce/data';
-import { BlockAttributes } from '@wordpress/blocks';
+import { BlockAttributes } from '@finpress/blocks';
 
 export interface CatalogVisibilityBlockAttributes extends BlockAttributes {
 	label: string;

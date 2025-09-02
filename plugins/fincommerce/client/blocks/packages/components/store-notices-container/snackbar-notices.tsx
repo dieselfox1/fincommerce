@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import SnackbarList from '@fincommerce/base-components/snackbar-list';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import type { NoticeType } from '@fincommerce/types';
 
 const SnackbarNotices = ( {

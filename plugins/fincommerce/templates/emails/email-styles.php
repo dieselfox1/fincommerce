@@ -131,7 +131,7 @@ body {
 	font-weight: bold;
 	line-height: 100%;
 	vertical-align: middle;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 }
 
 #template_header h1,
@@ -170,7 +170,7 @@ body {
 
 .email-logo-text {
 	color: <?php echo esc_attr( $link_color ); ?>;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: 18px;
 }
 
@@ -186,7 +186,7 @@ body {
 
 #body_content table td td.email-additional-content {
 	color: <?php echo esc_attr( $text ); ?>;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	padding: 32px 0 0;
 }
 
@@ -217,7 +217,7 @@ body {
 		border-top: 1px solid <?php echo esc_attr( $border_color ); ?>;
 	<?php endif; ?>
 	color: <?php echo esc_attr( $footer_text ); ?>;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: 12px;
 	line-height: <?php echo $email_improvements_enabled ? '140%' : '150%'; ?>;
 	text-align: center;
@@ -332,7 +332,7 @@ body {
 
 #body_content_inner {
 	color: <?php echo esc_attr( $text_lighter_20 ); ?>;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: <?php echo $email_improvements_enabled ? '16px' : '14px'; ?>;
 	line-height: 150%;
 	text-align: <?php echo is_rtl() ? 'right' : 'left'; ?>;
@@ -378,7 +378,7 @@ body {
 .address-title,
 .order-item-data {
 	color: <?php echo esc_attr( $text ); ?>;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 }
 
 .link {
@@ -403,7 +403,7 @@ body {
 
 h1 {
 	color: <?php echo esc_attr( $email_improvements_enabled ? $text : $base ); ?>;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: <?php echo $email_improvements_enabled ? '32px' : '30px'; ?>;
 	font-weight: <?php echo $email_improvements_enabled ? 700 : 300; ?>;
 	<?php if ( $email_improvements_enabled ) : ?>
@@ -420,7 +420,7 @@ h1 {
 h2 {
 	color: <?php echo esc_attr( $email_improvements_enabled ? $text : $base ); ?>;
 	display: block;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: <?php echo $email_improvements_enabled ? '20px' : '18px'; ?>;
 	font-weight: bold;
 	line-height: <?php echo $email_improvements_enabled ? '160%' : '130%'; ?>;
@@ -431,7 +431,7 @@ h2 {
 h3 {
 	color: <?php echo esc_attr( $email_improvements_enabled ? $text : $base ); ?>;
 	display: block;
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: <?php echo $email_improvements_enabled ? '160%' : '130%'; ?>;
@@ -467,7 +467,7 @@ h2.email-order-detail-heading span {
 }
 
 .font-family {
-	font-family: <?php echo $safe_font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-family: <?php echo $safe_font_family; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>;
 }
 
 .text-align-left {

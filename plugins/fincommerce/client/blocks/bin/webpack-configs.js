@@ -7,7 +7,7 @@ const { paramCase } = require( 'change-case' );
 const RemoveFilesPlugin = require( '@fincommerce/block-library/bin/remove-files-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const ProgressBarPlugin = require( 'progress-bar-webpack-plugin' );
-const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
+const DependencyExtractionWebpackPlugin = require( '@finpress/dependency-extraction-webpack-plugin' );
 const WebpackRTLPlugin = require( '@fincommerce/block-library/bin/webpack-rtl-plugin' );
 const CircularDependencyPlugin = require( 'circular-dependency-plugin' );
 const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );
@@ -105,7 +105,7 @@ const getCoreConfig = ( options = {} ) => {
 					use: {
 						loader: 'babel-loader',
 						options: {
-							presets: [ '@wordpress/babel-preset-default' ],
+							presets: [ '@finpress/babel-preset-default' ],
 							plugins: [],
 							cacheDirectory: BABEL_CACHE_DIR,
 							cacheCompression: false,
@@ -166,7 +166,7 @@ const getMainConfig = ( options = {} ) => {
 			// This is a cache busting mechanism which ensures that the script is loaded via the browser with a ?ver=hash
 			// string. The hash is based on the built file contents.
 			// @see https://github.com/webpack/webpack/issues/2329
-			// Using the ?ver string is needed here so the filename does not change between builds. The WordPress
+			// Using the ?ver string is needed here so the filename does not change between builds. The finpress
 			// i18n system relies on the hash of the filename, so changing that frequently would result in broken
 			// translations which we must avoid.
 			// @see https://github.com/Automattic/jetpack/pull/20926
@@ -184,7 +184,7 @@ const getMainConfig = ( options = {} ) => {
 					use: {
 						loader: 'babel-loader',
 						options: {
-							presets: [ '@wordpress/babel-preset-default' ],
+							presets: [ '@finpress/babel-preset-default' ],
 							plugins: [
 								isProduction
 									? require.resolve(
@@ -288,7 +288,7 @@ const getFrontConfig = ( options = {} ) => {
 			// This is a cache busting mechanism which ensures that the script is loaded via the browser with a ?ver=hash
 			// string. The hash is based on the built file contents.
 			// @see https://github.com/webpack/webpack/issues/2329
-			// Using the ?ver string is needed here so the filename does not change between builds. The WordPress
+			// Using the ?ver string is needed here so the filename does not change between builds. The finpress
 			// i18n system relies on the hash of the filename, so changing that frequently would result in broken
 			// translations which we must avoid.
 			// @see https://github.com/Automattic/jetpack/pull/20926
@@ -309,12 +309,12 @@ const getFrontConfig = ( options = {} ) => {
 						options: {
 							presets: [
 								[
-									'@wordpress/babel-preset-default',
+									'@finpress/babel-preset-default',
 									{
 										modules: false,
 										targets: {
 											browsers: [
-												'extends @wordpress/browserslist-config',
+												'extends @finpress/browserslist-config',
 											],
 										},
 									},
@@ -408,12 +408,12 @@ const getPaymentsConfig = ( options = {} ) => {
 						options: {
 							presets: [
 								[
-									'@wordpress/babel-preset-default',
+									'@finpress/babel-preset-default',
 									{
 										modules: false,
 										targets: {
 											browsers: [
-												'extends @wordpress/browserslist-config',
+												'extends @finpress/browserslist-config',
 											],
 										},
 									},
@@ -496,12 +496,12 @@ const getExtensionsConfig = ( options = {} ) => {
 						options: {
 							presets: [
 								[
-									'@wordpress/babel-preset-default',
+									'@finpress/babel-preset-default',
 									{
 										modules: false,
 										targets: {
 											browsers: [
-												'extends @wordpress/browserslist-config',
+												'extends @finpress/browserslist-config',
 											],
 										},
 									},
@@ -584,12 +584,12 @@ const getSiteEditorConfig = ( options = {} ) => {
 						options: {
 							presets: [
 								[
-									'@wordpress/babel-preset-default',
+									'@finpress/babel-preset-default',
 									{
 										modules: false,
 										targets: {
 											browsers: [
-												'extends @wordpress/browserslist-config',
+												'extends @finpress/browserslist-config',
 											],
 										},
 									},
@@ -722,7 +722,7 @@ const getStylingConfig = ( options = {} ) => {
 					use: {
 						loader: 'babel-loader',
 						options: {
-							presets: [ '@wordpress/babel-preset-default' ],
+							presets: [ '@finpress/babel-preset-default' ],
 							plugins: [
 								isProduction
 									? require.resolve(
@@ -825,7 +825,7 @@ const getCartAndCheckoutFrontendConfig = ( options = {} ) => {
 			// This is a cache busting mechanism which ensures that the script is loaded via the browser with a ?ver=hash
 			// string. The hash is based on the built file contents.
 			// @see https://github.com/webpack/webpack/issues/2329
-			// Using the ?ver string is needed here so the filename does not change between builds. The WordPress
+			// Using the ?ver string is needed here so the filename does not change between builds. The finpress
 			// i18n system relies on the hash of the filename, so changing that frequently would result in broken
 			// translations which we must avoid.
 			// @see https://github.com/Automattic/jetpack/pull/20926
@@ -855,12 +855,12 @@ const getCartAndCheckoutFrontendConfig = ( options = {} ) => {
 						options: {
 							presets: [
 								[
-									'@wordpress/babel-preset-default',
+									'@finpress/babel-preset-default',
 									{
 										modules: false,
 										targets: {
 											browsers: [
-												'extends @wordpress/browserslist-config',
+												'extends @finpress/browserslist-config',
 											],
 										},
 									},

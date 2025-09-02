@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
-import { store as keyboardShortcutsStore } from '@wordpress/keyboard-shortcuts';
-import { isAppleOS } from '@wordpress/keycodes';
+import { useEffect } from '@finpress/element';
+import { useDispatch } from '@finpress/data';
+import { __ } from '@finpress/i18n';
+import { store as keyboardShortcutsStore } from '@finpress/keyboard-shortcuts';
+import { isAppleOS } from '@finpress/keycodes';
 
 export const RegisterKeyboardShortcuts = () => {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment

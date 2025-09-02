@@ -5,7 +5,7 @@ import {
 	getContext as getContextFn,
 	getElement,
 	store,
-} from '@wordpress/interactivity';
+} from '@finpress/interactivity';
 
 export type Notice = {
 	notice: string;
@@ -23,7 +23,7 @@ const getStoreNoticeContext = getContextFn< {
 } >;
 
 // Todo: Go back to the Store Notices block context once more than one context
-// can be added to an element (https://github.com/WordPress/gutenberg/discussions/62720).
+// can be added to an element (https://github.com/finpress/gutenberg/discussions/62720).
 const getProductCollectionContext = () =>
 	getContextFn< {
 		notices: NoticeWithId[];

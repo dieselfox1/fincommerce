@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useState, useMemo } from '@wordpress/element';
-import { edit, external } from '@wordpress/icons';
-import { Icon } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-// @ts-expect-error - We need to use this /wp see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-dataviews/#dataviews
-import { DataViews, View } from '@wordpress/dataviews/wp'; // eslint-disable-line @fincommerce/dependency-group
+import { useState, useMemo } from '@finpress/element';
+import { edit, external } from '@finpress/icons';
+import { Icon } from '@finpress/components';
+import { __ } from '@finpress/i18n';
+// @ts-expect-error - We need to use this /wp see https://developer.finpress.org/block-editor/reference-guides/packages/packages-dataviews/#dataviews
+import { DataViews, View } from '@finpress/dataviews/wp'; // eslint-disable-line @fincommerce/dependency-group
 
 /**
  * Internal dependencies

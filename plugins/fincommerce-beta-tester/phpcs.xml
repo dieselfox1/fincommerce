@@ -22,7 +22,7 @@
 	<!-- Rules -->
 	<rule ref="FinCommerce-Core" />
 
-	<rule ref="WordPress.WP.I18n">
+	<rule ref="finpress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array" value="fincommerce-beta-tester" />
 		</properties>

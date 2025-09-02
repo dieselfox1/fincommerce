@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 import type { RegisteredBlockComponent } from '@fincommerce/types';
 
 /**

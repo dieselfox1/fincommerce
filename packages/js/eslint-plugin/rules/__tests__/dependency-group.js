@@ -24,7 +24,7 @@ ruleTester.run( 'dependency-group', rule, {
  */
 import { get } from 'lodash';
 import classnames from 'classnames';
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import { SearchListControl } from '@fincommerce/components';
 import { withProductVariations } from '@fincommerce/block-hocs';
 /**
@@ -48,7 +48,7 @@ import { withProductVariations } from '@fincommerce/block-hocs';
  */
 import edit from './edit';
 import classnames from 'classnames';
-import { Component } from '@wordpress/element';
+import { Component } from '@finpress/element';
 import { SearchListControl } from '@fincommerce/components';`,
 			errors: [
 				{

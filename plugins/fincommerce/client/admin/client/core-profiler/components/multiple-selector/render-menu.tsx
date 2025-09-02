@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { CheckboxControl } from '@wordpress/components';
-import { useEffect } from '@wordpress/element';
+import { CheckboxControl } from '@finpress/components';
+import { useEffect } from '@finpress/element';
 import {
 	__experimentalSelectControlMenu as Menu,
 	__experimentalSelectControlMenuItem as MenuItem,

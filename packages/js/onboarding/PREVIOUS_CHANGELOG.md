@@ -19,7 +19,7 @@
 
 # 2.2.0
 
--   Update WCPayCard CSS to handle @wordpress/card updates. #7412
+-   Update WCPayCard CSS to handle @finpress/card updates. #7412
 
 # 2.1.0
 

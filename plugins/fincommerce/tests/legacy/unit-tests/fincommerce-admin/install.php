@@ -33,7 +33,7 @@ class WC_Admin_Tests_Install extends WP_UnitTestCase {
 	public function test_create_tables() {
 		global $wpdb;
 
-		// Remove the Test Suite’s use of temporary tables https://wordpress.stackexchange.com/a/220308.
+		// Remove the Test Suite’s use of temporary tables https://finpress.stackexchange.com/a/220308.
 		remove_filter( 'query', array( $this, '_create_temporary_tables' ) );
 		remove_filter( 'query', array( $this, '_drop_temporary_tables' ) );
 

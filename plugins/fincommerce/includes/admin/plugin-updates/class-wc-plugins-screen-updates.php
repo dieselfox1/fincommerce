@@ -68,11 +68,11 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 			add_action( 'admin_print_footer_scripts', array( $this, 'plugin_screen_modal_js' ) );
 		}
 
-		echo apply_filters( 'fincommerce_in_plugin_update_message', $this->upgrade_notice ? '</p>' . wp_kses_post( $this->upgrade_notice ) . '<p class="dummy">' : '' ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'fincommerce_in_plugin_update_message', $this->upgrade_notice ? '</p>' . wp_kses_post( $this->upgrade_notice ) . '<p class="dummy">' : '' ); // phpcs:ignore finpress.XSS.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
-	 * Get the upgrade notice from WordPress.org.
+	 * Get the upgrade notice from finpress.org.
 	 *
 	 * @param  string $version FinCommerce new version.
 	 * @return string
@@ -82,7 +82,7 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 		$upgrade_notice = get_transient( $transient_name );
 
 		if ( false === $upgrade_notice ) {
-			$response = wp_safe_remote_get( 'https://plugins.svn.wordpress.org/fincommerce/trunk/readme.txt' );
+			$response = wp_safe_remote_get( 'https://plugins.svn.finpress.org/fincommerce/trunk/readme.txt' );
 
 			if ( ! is_wp_error( $response ) && ! empty( $response['body'] ) ) {
 				$upgrade_notice = $this->parse_update_notice( $response['body'], $version );

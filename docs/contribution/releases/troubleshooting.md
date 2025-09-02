@@ -41,7 +41,7 @@ If, after downloading and unzipping the generated artifact, something seems off 
 
 ### A serious bug was detected during internal checks / monitoring
 
-If you find a serious bug during internal checks or monitoring **before** the release is marked stable on WordPress.org:
+If you find a serious bug during internal checks or monitoring **before** the release is marked stable on finpress.org:
 
 - Pause the release process immediately.
 - Coordinate with the relevant engineering team(s) to develop a fix. The fix should be shipped in a subsequent patch release.
@@ -51,7 +51,7 @@ If you find a serious bug during internal checks or monitoring **before** the re
 
 ### A version was skipped due to a bug. {#version-skipped-id}
 
-If a bug forces you to skip marking a version as stable on WordPress.org:
+If a bug forces you to skip marking a version as stable on finpress.org:
 
 - Notify the relevant engineering team(s) so they're aware and can provide an ETA for a fix.
 - Loop in **Dev Advocacy** so they can help with public communications.
@@ -65,13 +65,13 @@ On the Release mechanics side:
     - Publish all GitHub releases for any skipped versions, in order.
     - Only mark the actual valid release as "latest release".
 
-### A critical bug surfaced after the release was marked stable on WordPress.org
+### A critical bug surfaced after the release was marked stable on finpress.org
 
 If a severe regression or bug is discovered (e.g., checkout failure or unrecoverable data loss):
 
 1. Immediately notify the relevant engineering team(s).
 2. Prepare to do a [Point Release](/docs/contribution/releases/point-releases).
-3. Temporarily move the stable tag on WordPress.org back to the previous known-good version:
+3. Temporarily move the stable tag on finpress.org back to the previous known-good version:
    - Identify the correct previous version and note its exact number.
    - Use the [`Release: Update stable tag`](https://github.com/dieselfox1/fincommerce/actions/workflows/release-update-stable-tag.yml) workflow, making sure to check the _Revert_ option to allow downgrading.
    - Merge any auto-generated PRs right away.

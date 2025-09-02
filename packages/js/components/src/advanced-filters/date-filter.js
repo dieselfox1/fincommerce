@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createElement, Component, Fragment } from '@wordpress/element';
-import { SelectControl } from '@wordpress/components';
+import { createElement, Component, Fragment } from '@finpress/element';
+import { SelectControl } from '@finpress/components';
 import { find, partial } from 'lodash';
 import clsx from 'clsx';
-import { __, _x } from '@wordpress/i18n';
+import { __, _x } from '@finpress/i18n';
 import { isoDateFormat, toMoment } from '@fincommerce/date';
 import moment from 'moment';
 

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Card, CardBody } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Card, CardBody } from '@finpress/components';
 import {
 	optionsStore,
 	PAYMENT_GATEWAYS_STORE_NAME,
@@ -11,8 +11,8 @@ import {
 import { Plugins, Stepper } from '@fincommerce/components';
 import { WooPaymentGatewaySetup } from '@fincommerce/onboarding';
 import { recordEvent } from '@fincommerce/tracks';
-import { useEffect, useState, useMemo } from '@wordpress/element';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useEffect, useState, useMemo } from '@finpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
 import { useSlot } from '@fincommerce/experimental';
 
 /**

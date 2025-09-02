@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useEntityProp } from '@wordpress/core-data';
-import { useCallback } from '@wordpress/element';
+import { useEntityProp } from '@finpress/core-data';
+import { useCallback } from '@finpress/element';
 
 export function useProductURL( productType: string ) {
 	const [ permalink ] = useEntityProp< string >(

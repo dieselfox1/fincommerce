@@ -1,4 +1,4 @@
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	select: jest.fn(),
 	useDispatch: jest.fn(),
 	useSelect: jest.fn(),

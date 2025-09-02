@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState } from '@finpress/element';
 import { EllipsisMenu } from '@fincommerce/components';
 import { recordEvent } from '@fincommerce/tracks';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { optionsStore, WEEK } from '@fincommerce/data';
-import { Button, Card, CardHeader } from '@wordpress/components';
+import { Button, Card, CardHeader } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
 import {
 	ADMIN_INSTALL_TIMESTAMP_OPTION_NAME,
@@ -16,7 +16,7 @@ import {
 	CustomerFeedbackSimple,
 	SHOWN_FOR_ACTIONS_OPTION_NAME,
 } from '@fincommerce/customer-effort-score';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

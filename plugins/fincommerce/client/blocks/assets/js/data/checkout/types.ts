@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { WPNotice } from '@wordpress/notices/build-types/store/selectors';
+import type { WPNotice } from '@finpress/notices/build-types/store/selectors';
 import type { FieldValidationStatus } from '@fincommerce/types';
 import { AdditionalValues } from '@fincommerce/settings';
 

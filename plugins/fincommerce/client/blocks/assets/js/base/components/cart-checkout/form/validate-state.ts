@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { dispatch, select } from '@wordpress/data';
+import { dispatch, select } from '@finpress/data';
 import { KeyedFormFields, ShippingAddress } from '@fincommerce/settings';
 import { validationStore } from '@fincommerce/block-data';
-import { __, sprintf } from '@wordpress/i18n';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { __, sprintf } from '@finpress/i18n';
+import isShallowEqual from '@finpress/is-shallow-equal';
 
 function previousAddress( initialValue?: ShippingAddress ) {
 	let lastValue = initialValue;

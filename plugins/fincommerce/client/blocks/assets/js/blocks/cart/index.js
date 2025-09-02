@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { InnerBlocks } from '@wordpress/block-editor';
-import { registerBlockType, createBlock } from '@wordpress/blocks';
+import { InnerBlocks } from '@finpress/block-editor';
+import { registerBlockType, createBlock } from '@finpress/blocks';
 /**
  * Internal dependencies
  */

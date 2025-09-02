@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { addQueryArgs } from '@wordpress/url';
-import apiFetch from '@wordpress/api-fetch';
+import { __ } from '@finpress/i18n';
+import { addQueryArgs } from '@finpress/url';
+import apiFetch from '@finpress/api-fetch';
 import interpolateComponents from '@automattic/interpolate-components';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

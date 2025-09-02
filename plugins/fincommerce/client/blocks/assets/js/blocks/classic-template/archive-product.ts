@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	INNER_BLOCKS_TEMPLATE as productCollectionInnerBlocksTemplate,
 	DEFAULT_ATTRIBUTES as productCollectionDefaultAttributes,
@@ -13,7 +13,7 @@ import {
 	// @ts-expect-error Type definitions for this function are missing in Gutenberg
 	createBlocksFromInnerBlocksTemplate,
 	type BlockInstance,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies

@@ -11,7 +11,7 @@ import { parseTestEnvConfig } from '../test-environment';
 
 jest.mock( 'node:http' );
 
-function mockWordPressAPI(
+function mockfinpressAPI(
 	stableCheckResponse: any,
 	versionCheckResponse: any
 ) {
@@ -19,12 +19,12 @@ function mockWordPressAPI(
 		const getStream = new Stream();
 		callback( getStream as IncomingMessage );
 
-		if ( url === 'http://api.wordpress.org/core/stable-check/1.0/' ) {
+		if ( url === 'http://api.finpress.org/core/stable-check/1.0/' ) {
 			getStream.emit( 'data', JSON.stringify( stableCheckResponse ) );
 		} else if (
 			url
 				.toString()
-				.includes( 'http://api.wordpress.org/core/version-check/1.7' )
+				.includes( 'http://api.finpress.org/core/version-check/1.7' )
 		) {
 			getStream.emit( 'data', JSON.stringify( versionCheckResponse ) );
 		} else {
@@ -45,9 +45,9 @@ describe( 'Test Environment', () => {
 		} );
 
 		describe( 'wpVersion', () => {
-			// We're going to mock an implementation of the request to the WordPress.org API.
+			// We're going to mock an implementation of the request to the finpress.org API.
 			// This simulates what happens when we call https.get() for it.
-			mockWordPressAPI(
+			mockfinpressAPI(
 				{
 					'5.9': 'insecure',
 					'6.0': 'insecure',
@@ -63,7 +63,7 @@ describe( 'Test Environment', () => {
 							response: 'development',
 							version: '6.3-beta1',
 							download:
-								'https://wordpress.org/wordpress-6.3-beta1.zip',
+								'https://finpress.org/finpress-6.3-beta1.zip',
 						},
 					],
 				}
@@ -75,7 +75,7 @@ describe( 'Test Environment', () => {
 				} );
 
 				expect( envVars ).toEqual( {
-					WP_ENV_CORE: 'WordPress/WordPress#master',
+					WP_ENV_CORE: 'finpress/finpress#master',
 					WP_VERSION: 'master',
 				} );
 
@@ -84,7 +84,7 @@ describe( 'Test Environment', () => {
 				} );
 
 				expect( envVars ).toEqual( {
-					WP_ENV_CORE: 'WordPress/WordPress#master',
+					WP_ENV_CORE: 'finpress/finpress#master',
 					WP_VERSION: 'master',
 				} );
 			} );
@@ -96,7 +96,7 @@ describe( 'Test Environment', () => {
 
 				expect( envVars ).toEqual( {
 					WP_ENV_CORE:
-						'https://wordpress.org/nightly-builds/wordpress-latest.zip',
+						'https://finpress.org/nightly-builds/finpress-latest.zip',
 					WP_VERSION: 'nightly',
 				} );
 			} );
@@ -107,7 +107,7 @@ describe( 'Test Environment', () => {
 				} );
 
 				expect( envVars ).toEqual( {
-					WP_ENV_CORE: 'https://wordpress.org/latest.zip',
+					WP_ENV_CORE: 'https://finpress.org/latest.zip',
 					WP_VERSION: 'latest',
 				} );
 			} );
@@ -118,7 +118,7 @@ describe( 'Test Environment', () => {
 				} );
 
 				expect( envVars ).toEqual( {
-					WP_ENV_CORE: 'https://wordpress.org/wordpress-5.9.zip',
+					WP_ENV_CORE: 'https://finpress.org/finpress-5.9.zip',
 					WP_VERSION: '5.9',
 				} );
 			} );
@@ -129,7 +129,7 @@ describe( 'Test Environment', () => {
 				} );
 
 				expect( envVars ).toEqual( {
-					WP_ENV_CORE: 'https://wordpress.org/wordpress-6.0.1.zip',
+					WP_ENV_CORE: 'https://finpress.org/finpress-6.0.1.zip',
 					WP_VERSION: '6.0.1',
 				} );
 			} );
@@ -151,7 +151,7 @@ describe( 'Test Environment', () => {
 				} );
 
 				expect( envVars ).toEqual( {
-					WP_ENV_CORE: 'https://wordpress.org/wordpress-6.1.2.zip',
+					WP_ENV_CORE: 'https://finpress.org/finpress-6.1.2.zip',
 					WP_VERSION: '6.1.2',
 				} );
 			} );
@@ -174,13 +174,13 @@ describe( 'Test Environment', () => {
 
 				expect( envVars ).toEqual( {
 					WP_ENV_CORE:
-						'https://wordpress.org/wordpress-6.3-beta1.zip',
+						'https://finpress.org/finpress-6.3-beta1.zip',
 					WP_VERSION: '6.3-beta1',
 				} );
 			} );
 
 			it( 'should not create env vars if no prerelease is offered', async () => {
-				mockWordPressAPI(
+				mockfinpressAPI(
 					{
 						'6.1.1': 'insecure',
 						'6.1.2': 'outdated',
@@ -192,7 +192,7 @@ describe( 'Test Environment', () => {
 								response: 'latest',
 								version: '6.2',
 								download:
-									'https://wordpress.org/wordpress-6.2.zip',
+									'https://finpress.org/finpress-6.2.zip',
 							},
 						],
 					}

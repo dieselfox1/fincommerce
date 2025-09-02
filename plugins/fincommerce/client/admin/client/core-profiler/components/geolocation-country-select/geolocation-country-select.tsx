@@ -5,11 +5,11 @@ import {
 	useEffect,
 	useState,
 	createInterpolateElement,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { Button, Notice } from '@wordpress/components';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { Button, Notice } from '@finpress/components';
 import { SelectControl } from '@fincommerce/components';
-import { Icon, chevronDown } from '@wordpress/icons';
+import { Icon, chevronDown } from '@finpress/icons';
 import { findCountryOption, getCountry } from '@fincommerce/onboarding';
 import { GeolocationResponse } from '@fincommerce/data';
 

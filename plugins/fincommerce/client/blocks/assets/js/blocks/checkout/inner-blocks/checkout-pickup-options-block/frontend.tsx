@@ -4,7 +4,7 @@
 import clsx from 'clsx';
 import { withFilteredAttributes } from '@fincommerce/shared-hocs';
 import { FormStep } from '@fincommerce/blocks-components';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { checkoutStore as checkoutStoreDescriptor } from '@fincommerce/block-data';
 import { LOCAL_PICKUP_ENABLED } from '@fincommerce/block-settings';
 import { useCheckoutBlockContext } from '@fincommerce/blocks/checkout/context';

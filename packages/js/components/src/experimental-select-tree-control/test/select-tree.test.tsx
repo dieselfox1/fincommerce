@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { act, useState } from 'react';
-import React, { createElement } from '@wordpress/element';
+import React, { createElement } from '@finpress/element';
 import { SelectTree } from '../select-tree';
 import { Item } from '../../experimental-tree-control';
 

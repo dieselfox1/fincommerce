@@ -8,13 +8,13 @@ import {
 	forwardRef,
 	useImperativeHandle,
 	useRef,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 import { isObject } from '@fincommerce/types';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 import { usePrevious } from '@fincommerce/base-hooks';
-import { useInstanceId } from '@wordpress/compose';
+import { useInstanceId } from '@finpress/compose';
 
 /**
  * Internal dependencies

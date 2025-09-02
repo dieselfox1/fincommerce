@@ -45,7 +45,7 @@ class WC_Beta_Tester_Remote_Inbox_Notifications_Helper {
 	/**
 	 * Delete all notifications and their associated actions from the database.
 	 *
-	 * @global wpdb $wpdb WordPress database abstraction object.
+	 * @global wpdb $wpdb finpress database abstraction object.
 	 * @return array Associative array containing the count of deleted notes and actions.
 	 */
 	public static function delete_all() {

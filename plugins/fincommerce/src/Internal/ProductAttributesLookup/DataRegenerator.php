@@ -142,7 +142,7 @@ class DataRegenerator {
 	public function truncate_lookup_table() {
 		global $wpdb;
 
-		$wpdb->query( "TRUNCATE TABLE {$this->lookup_table_name}" ); // phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$wpdb->query( "TRUNCATE TABLE {$this->lookup_table_name}" ); // phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 
 	/**
@@ -372,7 +372,7 @@ class DataRegenerator {
 	private function initiate_regeneration_from_tools_page() {
 		$this->verify_tool_execution_nonce();
 
-		//phpcs:disable WordPress.Security.NonceVerification.Recommended
+		//phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( isset( $_REQUEST['regenerate_product_attribute_lookup_data_product_id'] ) ) {
 			$product_id = (int) $_REQUEST['regenerate_product_attribute_lookup_data_product_id'];
 			$this->check_can_do_lookup_table_regeneration( $product_id );
@@ -380,7 +380,7 @@ class DataRegenerator {
 		} else {
 			$this->initiate_regeneration();
 		}
-		//phpcs:enable WordPress.Security.NonceVerification.Recommended
+		//phpcs:enable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -500,7 +500,7 @@ class DataRegenerator {
 	 * @throws \Exception Missing or invalid nonce received.
 	 */
 	private function verify_tool_execution_nonce() {
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		// phpcs:ignore finpress.Security.ValidatedSanitizedInput
 		if ( ! isset( $_REQUEST['_wpnonce'] ) || wp_verify_nonce( $_REQUEST['_wpnonce'], 'debug_action' ) === false ) {
 			throw new \Exception( 'Invalid nonce' );
 		}

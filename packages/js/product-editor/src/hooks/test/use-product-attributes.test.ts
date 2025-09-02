@@ -6,7 +6,7 @@ import type {
 	ProductProductAttribute,
 	ProductAttributeTerm,
 } from '@fincommerce/data';
-import { resolveSelect } from '@wordpress/data';
+import { resolveSelect } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -85,8 +85,8 @@ const attributeTerms: Record< number, ProductAttributeTerm[] > = {
 };
 
 jest.useFakeTimers();
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	resolveSelect: jest.fn().mockReturnValue( {
 		getProductAttributeTerms: jest
 			.fn()

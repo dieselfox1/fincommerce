@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 /**
  * List of homepage stats enabled by default
  *

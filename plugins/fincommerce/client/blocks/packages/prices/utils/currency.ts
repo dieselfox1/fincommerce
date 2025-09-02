@@ -104,8 +104,8 @@ const formatNumberAsCurrencyString = (
 	) }${ suffix }`;
 
 	// Use a textarea to decode HTML currency symbols.
-	// This used to use @wordpress/html-entities, but that was not necessary
-	// for this simple use case and avoids issues with ESM modules / @wordpress packages.
+	// This used to use @finpress/html-entities, but that was not necessary
+	// for this simple use case and avoids issues with ESM modules / @finpress packages.
 	const txt = document.createElement( 'textarea' );
 	txt.innerHTML = formattedValue;
 	return txt.value;

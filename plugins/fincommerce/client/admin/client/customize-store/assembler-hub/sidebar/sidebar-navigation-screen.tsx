@@ -1,11 +1,11 @@
-// Reference: https://github.com/WordPress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/sidebar-navigation-screen/index.js
+// Reference: https://github.com/finpress/gutenberg/blob/v16.4.0/packages/edit-site/src/components/sidebar-navigation-screen/index.js
 /* eslint-disable @fincommerce/dependency-group */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import {
 	// @ts-ignore No types for this exist yet.
 	__experimentalHStack as HStack,
@@ -15,15 +15,15 @@ import {
 	__experimentalUseNavigator as useNavigator,
 	// @ts-ignore No types for this exist yet.
 	__experimentalVStack as VStack,
-} from '@wordpress/components';
-import { isRTL, __ } from '@wordpress/i18n';
-import { chevronRight, chevronLeft } from '@wordpress/icons';
+} from '@finpress/components';
+import { isRTL, __ } from '@finpress/i18n';
+import { chevronRight, chevronLeft } from '@finpress/icons';
 // @ts-ignore No types for this exist yet.
-import { privateApis as routerPrivateApis } from '@wordpress/router';
+import { privateApis as routerPrivateApis } from '@finpress/router';
 // @ts-ignore No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 // @ts-ignore No types for this exist yet.
-import SidebarButton from '@wordpress/edit-site/build-module/components/sidebar-button';
+import SidebarButton from '@finpress/edit-site/build-module/components/sidebar-button';
 import { GoBackWarningModal } from '../go-back-warning-modal';
 
 /**

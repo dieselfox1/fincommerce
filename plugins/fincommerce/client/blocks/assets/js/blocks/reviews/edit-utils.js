@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createInterpolateElement } from '@wordpress/element';
-import { BlockControls } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { createInterpolateElement } from '@finpress/element';
+import { BlockControls } from '@finpress/block-editor';
 import { getAdminLink, getSetting } from '@fincommerce/settings';
 import {
 	Notice,
@@ -11,11 +11,11 @@ import {
 	ToolbarGroup,
 	RangeControl,
 	SelectControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 export const getBlockControls = ( editMode, setAttributes, buttonTitle ) => (
 	<BlockControls>

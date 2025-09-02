@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Disabled, Placeholder } from '@wordpress/components';
-import ServerSideRender from '@wordpress/server-side-render';
+import { __ } from '@finpress/i18n';
+import { Disabled, Placeholder } from '@finpress/components';
+import ServerSideRender from '@finpress/server-side-render';
 import { gridBlockPreview } from '@fincommerce/resource-previews';
-import { Icon, percent } from '@wordpress/icons';
-import { useBlockProps } from '@wordpress/block-editor';
+import { Icon, percent } from '@finpress/icons';
+import { useBlockProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

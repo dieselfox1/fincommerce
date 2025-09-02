@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerPlugin } from '@wordpress/plugins';
+import { registerPlugin } from '@finpress/plugins';
 import { WooHeaderItem } from '@fincommerce/admin-layout';
 import { useUserPreferences } from '@fincommerce/data';
 

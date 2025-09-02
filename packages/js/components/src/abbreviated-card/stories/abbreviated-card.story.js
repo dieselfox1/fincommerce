@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { page } from '@wordpress/icons';
+import { page } from '@finpress/icons';
 /**
  * Internal dependencies
  */

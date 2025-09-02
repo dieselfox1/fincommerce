@@ -241,7 +241,7 @@ _For internal development:_
 
 ```jsx
 import { useCheckoutContext } from '@fincommerce/base-contexts';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 const Component = () => {
 	const { onCheckoutValidation } = useCheckoutContext();
@@ -346,7 +346,7 @@ _For internal development:_
 
 ```jsx
 import { usePaymentEventsContext } from '@fincommerce/base-contexts';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 const Component = () => {
 	const { onPaymentSetup } = usePaymentEventsContext();
@@ -419,7 +419,7 @@ _For internal development:_
 
 ```jsx
 import { useCheckoutContext } from '@fincommerce/base-contexts';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 const Component = () => {
 	const { onCheckoutSuccess } = useCheckoutContext();
@@ -472,7 +472,7 @@ _For internal development:_
 
 ```jsx
 import { useCheckoutContext } from '@fincommerce/base-contexts';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 const Component = () => {
 	const { onCheckoutFail } = useCheckoutContext();

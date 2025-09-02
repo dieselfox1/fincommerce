@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useDispatch } from '@wordpress/data';
-import { useCallback, useContext, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useDispatch } from '@finpress/data';
+import { useCallback, useContext, useState } from '@finpress/element';
 import * as WooNumber from '@fincommerce/number';
 import {
 	Product,

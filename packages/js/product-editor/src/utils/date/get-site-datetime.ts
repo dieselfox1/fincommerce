@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { date as formatDate, getDate } from '@wordpress/date';
+import { date as formatDate, getDate } from '@finpress/date';
 
 export function getSiteDatetime( value?: string ) {
 	const datetime = getDate( value ?? null );

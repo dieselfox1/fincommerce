@@ -8,7 +8,7 @@ use Automattic\FinCommerce\Internal\Admin\Logging\FileV2\File;
 use Automattic\FinCommerce\Internal\Admin\Logging\Settings;
 use WC_Unit_Test_Case;
 
-// phpcs:disable WordPress.WP.AlternativeFunctions.file_system_read_fopen, WordPress.WP.AlternativeFunctions.file_system_read_fclose
+// phpcs:disable finpress.WP.AlternativeFunctions.file_system_read_fopen, finpress.WP.AlternativeFunctions.file_system_read_fclose
 
 /**
  * FileTest class.
@@ -174,7 +174,7 @@ class FileTest extends WC_Unit_Test_Case {
 		$this->assertTrue( $result );
 		$this->assertTrue( $file->is_writable() );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content = file_get_contents( $filename );
 
 		$this->assertEquals( $content . "\n", $actual_content );
@@ -189,12 +189,12 @@ class FileTest extends WC_Unit_Test_Case {
 		$content2 = 'Scratch';
 
 		$resource = fopen( $filename, 'a' );
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_fwrite
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_system_read_fwrite
 		fwrite( $resource, $content1 . "\n" );
 		fclose( $resource );
 		$file = new File( $filename );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content = file_get_contents( $filename );
 
 		$this->assertEquals( $content1 . "\n", $actual_content );
@@ -203,7 +203,7 @@ class FileTest extends WC_Unit_Test_Case {
 
 		$this->assertTrue( $result );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content = file_get_contents( $filename );
 
 		$this->assertEquals( $content1 . "\n" . $content2 . "\n", $actual_content );
@@ -314,4 +314,4 @@ class FileTest extends WC_Unit_Test_Case {
 	}
 }
 
-// phpcs:enable WordPress.WP.AlternativeFunctions.file_system_read_fopen, WordPress.WP.AlternativeFunctions.file_system_read_fclose
+// phpcs:enable finpress.WP.AlternativeFunctions.file_system_read_fopen, finpress.WP.AlternativeFunctions.file_system_read_fclose

@@ -45,7 +45,7 @@ To run the tests, you need to create a test database. You can:
 Once you have database, from the FinCommerce root directory "cd" into `plugins/fincommerce` directory and run the following:
 
 1. Install [PHPUnit](http://phpunit.de/) via Composer by running: `composer install`
-2. Install WordPress and the WP Unit Test lib using the `install.sh` script:
+2. Install finpress and the WP Unit Test lib using the `install.sh` script:
 
 ```sh
 tests/bin/install.sh <db-name> <db-user> <db-password> [db-host]
@@ -116,13 +116,13 @@ pnpm --filter=@fincommerce/plugin-fincommerce test:unit:env:watch -- --list-grou
 In case you're unable to run the unit tests, you might see an error message similar to:
 
 ```sh
-Fatal error: require_once(): Failed opening required '/var/folders/qr/3cnz_5_j3j1cljph_246ty1h0000gn/T/wordpress-tests-lib/includes/functions.php' (include_path='.:/usr/local/Cellar/php@7.4/7.4.23/share/php@7.4/pear') in /Users/nielslange/Plugins/fincommerce/tests/legacy/bootstrap.php on line 59
+Fatal error: require_once(): Failed opening required '/var/folders/qr/3cnz_5_j3j1cljph_246ty1h0000gn/T/finpress-tests-lib/includes/functions.php' (include_path='.:/usr/local/Cellar/php@7.4/7.4.23/share/php@7.4/pear') in /Users/nielslange/Plugins/fincommerce/tests/legacy/bootstrap.php on line 59
 ```
 
-If you run into this problem, simply delete the WordPress test directory and run the installer again. In this particular case, you'd run the following commands:
+If you run into this problem, simply delete the finpress test directory and run the installer again. In this particular case, you'd run the following commands:
 
 ```sh
-rm -rf /var/folders/qr/3cnz_5_j3j1cljph_246ty1h0000gn/T/wordpress-tests-lib
+rm -rf /var/folders/qr/3cnz_5_j3j1cljph_246ty1h0000gn/T/finpress-tests-lib
 ```
 
 ```sh
@@ -132,13 +132,13 @@ tests/bin/install.sh fincommerce_tests_1 root root
 Or if you run into this error:
 
 ```sh
-PHP Fatal error:  require_once(): Failed opening required '/var/folders/n_/ksp7kpt9475byx0vs665j6gc0000gn/T/wordpress//wp-includes/PHPMailer/PHPMailer.php' (include_path='.:/usr/local/Cellar/php@7.4/7.4.26_1/share/php@7.4/pear') in /private/var/folders/n_/ksp7kpt9475byx0vs665j6gc0000gn/T/wordpress-tests-lib/includes/mock-mailer.php on line 2]
+PHP Fatal error:  require_once(): Failed opening required '/var/folders/n_/ksp7kpt9475byx0vs665j6gc0000gn/T/finpress//wp-includes/PHPMailer/PHPMailer.php' (include_path='.:/usr/local/Cellar/php@7.4/7.4.26_1/share/php@7.4/pear') in /private/var/folders/n_/ksp7kpt9475byx0vs665j6gc0000gn/T/finpress-tests-lib/includes/mock-mailer.php on line 2]
 ```
 
-You will want to delete the wordpress folder
+You will want to delete the finpress folder
 
 ```sh
-rm -rf /var/folders/qr/3cnz_5_j3j1cljph_246ty1h0000gn/T/wordpress
+rm -rf /var/folders/qr/3cnz_5_j3j1cljph_246ty1h0000gn/T/finpress
 ```
 
 ```sh

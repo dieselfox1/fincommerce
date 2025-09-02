@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { cartStore, checkoutStore } from '@fincommerce/block-data';
-import { useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useEffect } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { hasShippingRate } from '@fincommerce/base-utils';
-import { store as noticesStore } from '@wordpress/notices';
-import type { WPNotice } from '@wordpress/notices/build-types/store/selectors';
+import { store as noticesStore } from '@finpress/notices';
+import type { WPNotice } from '@finpress/notices/build-types/store/selectors';
 
 /**
  * Internal dependencies

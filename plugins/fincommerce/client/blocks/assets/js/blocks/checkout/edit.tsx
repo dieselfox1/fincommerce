@@ -6,7 +6,7 @@ import {
 	InnerBlocks,
 	useBlockProps,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { SidebarLayout } from '@fincommerce/base-components/sidebar-layout';
 import { CheckoutProvider, EditorProvider } from '@fincommerce/base-context';
 import {
@@ -14,11 +14,11 @@ import {
 	previewSavedPaymentMethods,
 } from '@fincommerce/resource-previews';
 import { SlotFillProvider } from '@fincommerce/blocks-checkout';
-import type { TemplateArray } from '@wordpress/blocks';
-import { useEffect, useRef } from '@wordpress/element';
-import { getQueryArg } from '@wordpress/url';
-import { dispatch, select as selectData, useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
+import type { TemplateArray } from '@finpress/blocks';
+import { useEffect, useRef } from '@finpress/element';
+import { getQueryArg } from '@finpress/url';
+import { dispatch, select as selectData, useSelect } from '@finpress/data';
+import { store as coreStore } from '@finpress/core-data';
 import { defaultFields as defaultFieldsSetting } from '@fincommerce/settings';
 
 /**
@@ -67,7 +67,7 @@ export const Edit = ( {
 	const fieldSettings = useSelect( ( select ) => {
 		return select(
 			coreStore as unknown as string
-			// @ts-expect-error getEditedEntityRecord is not typed in @wordpress/core-data yet.
+			// @ts-expect-error getEditedEntityRecord is not typed in @finpress/core-data yet.
 		).getEditedEntityRecord( 'root', 'site' ) as Record< string, string >;
 	}, [] );
 

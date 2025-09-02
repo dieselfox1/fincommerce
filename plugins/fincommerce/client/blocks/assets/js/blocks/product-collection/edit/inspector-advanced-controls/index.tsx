@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { InspectorAdvancedControls } from '@wordpress/block-editor';
+import { InspectorAdvancedControls } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

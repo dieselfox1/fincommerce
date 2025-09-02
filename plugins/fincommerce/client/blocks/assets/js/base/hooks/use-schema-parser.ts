@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useRef, useMemo } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { useRef, useMemo } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import { snakeCaseKeys } from '@fincommerce/base-utils';
 import type {
 	OrderFormValues,

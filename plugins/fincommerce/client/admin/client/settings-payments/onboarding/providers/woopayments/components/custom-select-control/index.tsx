@@ -1,6 +1,6 @@
 /**
  * This is a copy of the CustomSelectControl component, found here:
- * https://github.com/WordPress/gutenberg/tree/7aa042605ff42bb437e650c39132c0aa8eb4ef95/packages/components/src/custom-select-control
+ * https://github.com/finpress/gutenberg/tree/7aa042605ff42bb437e650c39132c0aa8eb4ef95/packages/components/src/custom-select-control
  *
  * It has been modified to support using a custom component as option, and placeholder. A functionality
  * that was not possible within the current implementation of CustomSelectControl.
@@ -10,11 +10,11 @@
  * External dependencies
  */
 import React from 'react';
-import { Button } from '@wordpress/components';
-import { check, chevronDown, Icon } from '@wordpress/icons';
-import { useCallback } from '@wordpress/element';
+import { Button } from '@finpress/components';
+import { check, chevronDown, Icon } from '@finpress/icons';
+import { useCallback } from '@finpress/element';
 import clsx from 'clsx';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import { useSelect, UseSelectState } from 'downshift';
 
 /**

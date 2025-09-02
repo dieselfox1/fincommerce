@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { TextControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { TextControl } from '@finpress/components';
 
 /**
  * Internal dependencies

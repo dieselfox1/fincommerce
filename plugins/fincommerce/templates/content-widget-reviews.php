@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php do_action( 'fincommerce_widget_product_review_item_start', $args ); ?>
 
 	<?php
-	// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+	// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 	?>
 
 	<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 	</span>
 
 	<?php
-	// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+	// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 	?>
 
 	<?php do_action( 'fincommerce_widget_product_review_item_end', $args ); ?>

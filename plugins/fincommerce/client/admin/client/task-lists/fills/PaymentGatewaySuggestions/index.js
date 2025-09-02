@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { __ } from '@finpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
 import {
 	optionsStore,
 	onboardingStore,
@@ -10,8 +10,8 @@ import {
 	settingsStore,
 } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { useMemo, useCallback, useEffect } from '@wordpress/element';
-import { registerPlugin } from '@wordpress/plugins';
+import { useMemo, useCallback, useEffect } from '@finpress/element';
+import { registerPlugin } from '@finpress/plugins';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 import { getNewPath, getQuery } from '@fincommerce/navigation';
 import { getAdminLink } from '@fincommerce/settings';

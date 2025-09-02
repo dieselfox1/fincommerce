@@ -110,10 +110,10 @@ class ProductFilterPriceSlider extends AbstractBlock {
 
 		ob_start();
 		?>
-		<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+		<div <?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div class="<?php echo esc_attr( $content_class ); ?>">
 				<?php if ( $inline_input ) : ?>
-					<?php echo $left_input; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo $left_input; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php endif; ?>
 				<div
 					class="wc-block-product-filter-price-slider__range"
@@ -146,7 +146,7 @@ class ProductFilterPriceSlider extends AbstractBlock {
 					/>
 				</div>
 				<?php if ( ! $inline_input ) : ?>
-					<?php echo $left_input; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo $left_input; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php endif; ?>
 				<div class="wc-block-product-filter-price-slider__right text">
 					<?php if ( $show_input_fields ) : ?>

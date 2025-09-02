@@ -37,8 +37,8 @@ concurrency:
 
 jobs:
   bump-version:
-    name: Bump WooCommerce Version
-    runs-on: ${{ ( github.repository == 'woocommerce/woocommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
+    name: Bump fincommerce Version
+    runs-on: ${{ ( github.repository == 'fincommerce/fincommerce' && 'blacksmith-2vcpu-ubuntu-2404' ) || 'ubuntu-latest' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
       - name: Get current version
         id: get-current-version
         run: |
-          version=$( cat plugins/woocommerce/woocommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
+          version=$( cat plugins/fincommerce/fincommerce.php | grep -oP '(?<=Version: )(.+)' | head -n1 )
           echo "Current version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
 
@@ -122,10 +122,10 @@ jobs:
           NEXT_STABLE: ${{ steps.compute-new-version.outputs.nextStable }}
           CLEAR_CHANGELOG: ${{ steps.compute-new-version.outputs.clearChangelog }}
         run: |
-          cd plugins/woocommerce
+          cd plugins/fincommerce
 
-          # Update version header in woocommerce.php.
-          sed -i -E "s/Version: [0-9]+\.[0-9]+\.[0-9]+.*$/Version: $NEXT_VERSION/" woocommerce.php
+          # Update version header in fincommerce.php.
+          sed -i -E "s/Version: [0-9]+\.[0-9]+\.[0-9]+.*$/Version: $NEXT_VERSION/" fincommerce.php
 
           # Update changelog in readme.txt.
           sed -i -E "s/^= [0-9]+\.[0-9]+\.[0-9]+(\-[a-z]+(\.[0-9]+)*)? (.*) =/= $NEXT_VERSION \3 =/" readme.txt
@@ -140,8 +140,8 @@ jobs:
             mv tmp.json ${filename}
           done
 
-          # Update $version property in class-woocommerce.php.
-          sed -i -E "s/public \\\$version = '[0-9]+\.[0-9]+\.[0-9]+.*';/public \\\$version = '$NEXT_VERSION'\;/" includes/class-woocommerce.php
+          # Update $version property in class-fincommerce.php.
+          sed -i -E "s/public \\\$version = '[0-9]+\.[0-9]+\.[0-9]+.*';/public \\\$version = '$NEXT_VERSION'\;/" includes/class-fincommerce.php
 
           if git diff --quiet; then
             echo "::error::No changes to commit."
@@ -167,7 +167,7 @@ jobs:
 
           # Open PR.
           gh pr create \
-            --title 'Bump WooCommerce version to ${{ steps.compute-new-version.outputs.nextVersion }}' \
+            --title 'Bump fincommerce version to ${{ steps.compute-new-version.outputs.nextVersion }}' \
             --body 'This PR updates the versions in ${{ inputs.branch }} to ${{ steps.compute-new-version.outputs.nextVersion }}.' \
             --base ${{ inputs.branch }} \
             --head ${branch_name} \

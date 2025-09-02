@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockAttributes } from '@wordpress/blocks';
+import { BlockAttributes } from '@finpress/blocks';
 
 export interface InventoryEmailBlockAttributes extends BlockAttributes {
 	name: string;

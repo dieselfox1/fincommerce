@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BlockInstance } from '@wordpress/blocks';
-import { useDebounce } from '@wordpress/compose';
-import { useCallback, useState } from '@wordpress/element';
+import { BlockInstance } from '@finpress/blocks';
+import { useDebounce } from '@finpress/compose';
+import { useCallback, useState } from '@finpress/element';
 
 type useEditorHistoryProps = {
 	maxHistory?: number;

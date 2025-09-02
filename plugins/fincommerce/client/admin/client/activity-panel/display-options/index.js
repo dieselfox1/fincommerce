@@ -6,9 +6,9 @@ import {
 	DropdownMenu,
 	MenuGroup,
 	MenuItemsChoice,
-} from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import { useUserPreferences, optionsStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 

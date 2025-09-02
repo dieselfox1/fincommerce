@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { useMemo } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+import { __, sprintf } from '@finpress/i18n';
+import { useMemo } from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import { getVisibleTasks, onboardingStore } from '@fincommerce/data';
 import { getSetting } from '@fincommerce/settings';
 

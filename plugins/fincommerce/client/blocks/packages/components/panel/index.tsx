@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import clsx from 'clsx';
-import { Icon, chevronUp, chevronDown } from '@wordpress/icons';
+import { Icon, chevronUp, chevronDown } from '@finpress/icons';
 import type { ReactNode, ReactElement } from 'react';
 import { Button } from '@ariakit/react';
-import deprecated from '@wordpress/deprecated';
+import deprecated from '@finpress/deprecated';
 /**
  * Internal dependencies
  */

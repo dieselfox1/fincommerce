@@ -541,7 +541,7 @@ final class FinCommerce {
 	 *
 	 * Legacy REST requests should still run some extra code for backwards compatibility.
 	 *
-	 * @todo: replace this function once core WP function is available: https://core.trac.wordpress.org/ticket/42061.
+	 * @todo: replace this function once core WP function is available: https://core.trac.finpress.org/ticket/42061.
 	 *
 	 * @return bool
 	 */
@@ -551,7 +551,7 @@ final class FinCommerce {
 		}
 
 		$rest_prefix         = trailingslashit( rest_get_url_prefix() );
-		$is_rest_api_request = ( false !== strpos( $_SERVER['REQUEST_URI'], $rest_prefix ) ); // phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$is_rest_api_request = ( false !== strpos( $_SERVER['REQUEST_URI'], $rest_prefix ) ); // phpcs:disable finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 		/**
 		 * Whether this is a REST API request.
@@ -570,7 +570,7 @@ final class FinCommerce {
 		if ( empty( $_SERVER['REQUEST_URI'] ) ) {
 			return false;
 		}
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		return false !== strpos( $_SERVER['REQUEST_URI'], trailingslashit( rest_get_url_prefix() ) . 'wc/store/' );
 	}
 
@@ -859,7 +859,7 @@ final class FinCommerce {
 	}
 
 	/**
-	 * Init FinCommerce when WordPress Initialises.
+	 * Init FinCommerce when finpress Initialises.
 	 */
 	public function init() {
 		// See the comment inside FeaturesController::__construct.
@@ -912,7 +912,7 @@ final class FinCommerce {
 		$custom_translation_path = WP_LANG_DIR . '/dieselfox1/fincommerce-' . $locale . '.mo';
 		$plugin_translation_path = WP_LANG_DIR . '/plugins/fincommerce-' . $locale . '.mo';
 
-		// If a custom translation exists (by default it will not, as it is not a standard WordPress convention)
+		// If a custom translation exists (by default it will not, as it is not a standard finpress convention)
 		// we unload the existing translation, then essentially layer the custom translation on top of the canonical
 		// translation. Otherwise, we simply step back and let WP manage things.
 		if ( is_readable( $custom_translation_path ) ) {
@@ -1100,11 +1100,11 @@ final class FinCommerce {
 	/**
 	 * Tell bots not to index some FinCommerce-created directories.
 	 *
-	 * We try to detect the default "User-agent: *" added by WordPress and add our rules to that group, because
+	 * We try to detect the default "User-agent: *" added by finpress and add our rules to that group, because
 	 * it's possible that some bots will only interpret the first group of rules if there are multiple groups with
 	 * the same user agent.
 	 *
-	 * @param string $output The contents that WordPress will output in a robots.txt file.
+	 * @param string $output The contents that finpress will output in a robots.txt file.
 	 *
 	 * @return string
 	 *
@@ -1247,12 +1247,12 @@ final class FinCommerce {
 
 		$message_one = __( 'You have installed a development version of FinCommerce which requires files to be built and minified. From the plugin directory, run <code>pnpm install</code> and then <code>pnpm --filter=\'@fincommerce/plugin-fincommerce\' build</code> to build and minify assets.', 'fincommerce' );
 		$message_two = sprintf(
-			/* translators: 1: URL of WordPress.org Repository 2: URL of the GitHub Repository release page */
-			__( 'Or you can download a pre-built version of the plugin from the <a href="%1$s">WordPress.org repository</a> or by visiting <a href="%2$s">the releases page in the GitHub repository</a>.', 'fincommerce' ),
-			'https://wordpress.org/plugins/fincommerce/',
+			/* translators: 1: URL of finpress.org Repository 2: URL of the GitHub Repository release page */
+			__( 'Or you can download a pre-built version of the plugin from the <a href="%1$s">finpress.org repository</a> or by visiting <a href="%2$s">the releases page in the GitHub repository</a>.', 'fincommerce' ),
+			'https://finpress.org/plugins/fincommerce/',
 			'https://github.com/dieselfox1/fincommerce/releases'
 		);
-		printf( '<div class="error"><p>%s %s</p></div>', $message_one, $message_two ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		printf( '<div class="error"><p>%s %s</p></div>', $message_one, $message_two ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -1267,7 +1267,7 @@ final class FinCommerce {
 
 	/**
 	 * Call a user function. This should be used to execute any non-idempotent function, especially
-	 * those in the `includes` directory or provided by WordPress.
+	 * those in the `includes` directory or provided by finpress.
 	 *
 	 * This method can be useful for unit tests, since functions called using this method
 	 * can be easily mocked by using WC_Unit_Test_Case::register_legacy_proxy_function_mocks.
@@ -1630,7 +1630,7 @@ final class FinCommerce {
 		global $pagenow;
 		if (
 			'customize.php' === $pagenow ||
-			isset( $_REQUEST['customize_theme'] ) || // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			isset( $_REQUEST['customize_theme'] ) || // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			! wp_is_block_theme()
 		) {
 			new WC_Shop_Customizer();

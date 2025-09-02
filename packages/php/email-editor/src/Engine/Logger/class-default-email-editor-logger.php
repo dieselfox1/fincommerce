@@ -10,7 +10,7 @@ declare(strict_types = 1);
 namespace Automattic\FinCommerce\EmailEditor\Engine\Logger;
 
 /**
- * Default implementation of the email editor logger that writes to WordPress debug log.
+ * Default implementation of the email editor logger that writes to finpress debug log.
  */
 class Default_Email_Editor_Logger implements Email_Editor_Logger_Interface {
 	/**
@@ -159,7 +159,7 @@ class Default_Email_Editor_Logger implements Email_Editor_Logger_Interface {
 			! empty( $context ) ? wp_json_encode( $context ) : ''
 		);
 
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- This is a logging class, error_log is the intended functionality.
+		// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log -- This is a logging class, error_log is the intended functionality.
 		error_log( $entry . PHP_EOL, 3, $this->log_file );
 	}
 }

@@ -121,7 +121,7 @@ If the default settings are not adequate for your needs, you can always create y
 import { createSelectors } from '../crud/selectors';
 import { createResolvers } from '../crud/resolvers';
 import { createActions } from '../crud/actions';
-import { registerStore, combineReducers } from '@wordpress/data';
+import { registerStore, combineReducers } from '@finpress/data';
 
 const dataStoreArgs = {
     resourceName: 'MyThing',

@@ -315,7 +315,7 @@ class ArrayUtil {
 
 		if ( $throw_if_existing_is_not_array && ! is_array( $items[ $key ] ) ) {
 			$type = is_object( $items[ $key ] ) ? get_class( $items[ $key ] ) : gettype( $items[ $key ] );
-            // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+            // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 			throw new \Exception( "Array key exists but it's not an array, it's a {$type}" );
 		}
 

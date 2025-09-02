@@ -1,3 +1,3 @@
-jest.mock( '@wordpress/preferences', () => ( {
+jest.mock( '@finpress/preferences', () => ( {
 	combineReducers: jest.fn(),
 } ) );

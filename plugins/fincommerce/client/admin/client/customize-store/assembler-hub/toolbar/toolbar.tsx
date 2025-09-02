@@ -2,22 +2,22 @@
  * External dependencies
  */
 
-import { BlockInstance } from '@wordpress/blocks';
+import { BlockInstance } from '@finpress/blocks';
 import {
 	ToolbarGroup,
 	Toolbar as WPToolbar,
 	Popover,
-} from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/components';
+import { useSelect } from '@finpress/data';
 import {
 	useContext,
 	useEffect,
 	useMemo,
 	useRef,
 	useState,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useQuery } from '@fincommerce/navigation';
-import { BlockMover, store as blockEditorStore } from '@wordpress/block-editor';
+import { BlockMover, store as blockEditorStore } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

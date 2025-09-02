@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { TextControl } from '@fincommerce/components';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 const Example = () => {
 	const [ value, setValue ] = useState( '' );

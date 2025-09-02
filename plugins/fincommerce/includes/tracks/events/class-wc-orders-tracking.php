@@ -71,7 +71,7 @@ class WC_Orders_Tracking {
 	 * @since 8.6.0
 	 */
 	public function track_search_in_orders_list() {
-		if ( ! OrderUtil::is_order_list_table_screen() || empty( $_REQUEST['s'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! OrderUtil::is_order_list_table_screen() || empty( $_REQUEST['s'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return;
 		}
 
@@ -86,7 +86,7 @@ class WC_Orders_Tracking {
 			return;
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
+		// phpcs:disable finpress.Security.NonceVerification, finpress.Security.ValidatedSanitizedInput
 		$properties = array(
 			'status' => sanitize_text_field( $_GET['post_status'] ?? ( $_GET['status'] ?? 'all' ) ),
 		);
@@ -133,7 +133,7 @@ class WC_Orders_Tracking {
 		}
 
 		$date_created = $order->get_date_created() ? $order->get_date_created()->date( 'Y-m-d H:i:s' ) : '';
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		$new_date = sprintf(
 			'%s %2d:%02d:%02d',
 			isset( $_POST['order_date'] ) ? wc_clean( wp_unslash( $_POST['order_date'] ) ) : '',
@@ -159,7 +159,7 @@ class WC_Orders_Tracking {
 	 * @param int $order_id Order ID.
 	 */
 	public function track_order_action( $order_id ) {
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		if ( ! empty( $_POST['wc_order_action'] ) ) {
 			$order      = wc_get_order( $order_id );
 			$action     = wc_clean( wp_unslash( $_POST['wc_order_action'] ) );

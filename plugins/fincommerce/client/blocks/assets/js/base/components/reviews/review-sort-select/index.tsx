@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { SortSelect } from '@fincommerce/blocks-components';
 import type { ChangeEventHandler } from 'react';
 

@@ -1,23 +1,23 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	createElement,
 	Component,
 	createRef,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { formatDefaultLocale as d3FormatDefaultLocale } from 'd3-format';
 import { isEqual, partial, without } from 'lodash';
 import LineGraphIcon from 'gridicons/dist/line-graph';
 import StatsAltIcon from 'gridicons/dist/stats-alt';
-import { Button, NavigableMenu, SelectControl } from '@wordpress/components';
+import { Button, NavigableMenu, SelectControl } from '@finpress/components';
 import { interpolateViridis as d3InterpolateViridis } from 'd3-scale-chromatic';
 import memoize from 'memoize-one';
 import PropTypes from 'prop-types';
-import { withViewportMatch } from '@wordpress/viewport';
+import { withViewportMatch } from '@finpress/viewport';
 import { sanitize } from 'dompurify';
 import { getIdsFromQuery, updateQueryString } from '@fincommerce/navigation';
 

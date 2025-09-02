@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useState, useEffect, useRef } from '@wordpress/element';
+import { useState, useEffect, useRef } from '@finpress/element';
 import { useQuery } from '@fincommerce/navigation';
-import { Icon } from '@wordpress/components';
-import { useDebounce } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { Icon } from '@finpress/components';
+import { useDebounce } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

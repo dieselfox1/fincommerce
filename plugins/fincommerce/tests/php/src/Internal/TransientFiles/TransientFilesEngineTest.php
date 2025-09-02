@@ -94,7 +94,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 	public function test_create_transient_file_throws_if_directory_cant_be_created() {
 		$this->register_legacy_proxy_function_mocks(
 			array(
-				'wp_upload_dir' => fn() => array( 'basedir' => '/wordpress/uploads' ),
+				'wp_upload_dir' => fn() => array( 'basedir' => '/finpress/uploads' ),
 				'realpath'      => fn( $path ) => '/real' . $path,
 				'is_dir'        => fn() => false,
 				'wp_mkdir_p'    => fn() => false,
@@ -104,7 +104,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 		);
 
 		$this->expectException( \Exception::class );
-		$this->expectExceptionMessage( "Can't create directory: /real/wordpress/uploads/fincommerce_transient_files" );
+		$this->expectExceptionMessage( "Can't create directory: /real/finpress/uploads/fincommerce_transient_files" );
 
 		$this->sut->create_transient_file( 'foobar', '2023-12-02' );
 	}
@@ -115,7 +115,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 	public function test_create_transient_file_throws_if_file_cant_be_created() {
 		$this->register_legacy_proxy_function_mocks(
 			array(
-				'wp_upload_dir' => fn() => array( 'basedir' => '/wordpress/uploads' ),
+				'wp_upload_dir' => fn() => array( 'basedir' => '/finpress/uploads' ),
 				'realpath'      => fn( $path ) => '/real' . $path,
 				'is_dir'        => fn() => true,
 				'random_bytes'  => fn( $length ) => implode( array_map( 'chr', array( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ) ) ),
@@ -139,7 +139,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 		);
 
 		$this->expectException( \Exception::class );
-		$this->expectExceptionMessage( "Can't create file: /real/wordpress/uploads/fincommerce_transient_files/2023-12-02/000102030405060708090a0b0c0d0e0f" );
+		$this->expectExceptionMessage( "Can't create file: /real/finpress/uploads/fincommerce_transient_files/2023-12-02/000102030405060708090a0b0c0d0e0f" );
 
 		$this->sut->create_transient_file( 'foobar', '2023-12-02' );
 	}
@@ -170,25 +170,25 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 		$this->assertEquals( '7e7c0' . substr( $expiration_date, strlen( $expiration_date ) - 1 ) . $expected_file_name, $result );
 		$this->assertTrue( is_file( $expected_file_path ) );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$file_content = file_get_contents( $expected_file_path );
 		$this->assertEquals( 'foobar', $file_content );
 	}
 
 	/**
-	 * @testdox The default base directory for the transient files is fincommerce_transient_files inside the WordPress uploads directory.
+	 * @testdox The default base directory for the transient files is fincommerce_transient_files inside the finpress uploads directory.
 	 */
 	public function test_transient_files_directory_is_rooted_in_uploads_directory() {
 		$this->register_legacy_proxy_function_mocks(
 			array(
-				'wp_upload_dir' => fn() => array( 'basedir' => '/wordpress/uploads' ),
+				'wp_upload_dir' => fn() => array( 'basedir' => '/finpress/uploads' ),
 				'realpath'      => fn( $path ) => '/real' . $path,
 			)
 		);
 
 		$result = $this->sut->get_transient_files_directory();
 
-		$this->assertEquals( '/real/wordpress/uploads/fincommerce_transient_files', $result );
+		$this->assertEquals( '/real/finpress/uploads/fincommerce_transient_files', $result );
 	}
 
 	/**
@@ -207,7 +207,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 
 		$this->register_legacy_proxy_function_mocks(
 			array(
-				'wp_upload_dir' => fn() => array( 'basedir' => '/wordpress/uploads' ),
+				'wp_upload_dir' => fn() => array( 'basedir' => '/finpress/uploads' ),
 				'realpath'      => fn( $path ) => '/real' . $path,
 			)
 		);
@@ -216,7 +216,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 
 		remove_all_filters( 'fincommerce_transient_files_directory' );
 
-		$this->assertEquals( '/wordpress/uploads/fincommerce_transient_files', $original_directory );
+		$this->assertEquals( '/finpress/uploads/fincommerce_transient_files', $original_directory );
 		$this->assertEquals( '/real/my/files', $result );
 	}
 
@@ -228,7 +228,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 
 		$this->register_legacy_proxy_function_mocks(
 			array(
-				'wp_upload_dir' => fn() => array( 'basedir' => '/wordpress/uploads' ),
+				'wp_upload_dir' => fn() => array( 'basedir' => '/finpress/uploads' ),
 				'realpath'      => fn( $path ) => false,
 			)
 		);
@@ -251,7 +251,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 
 		$this->register_legacy_proxy_function_mocks(
 			array(
-				'wp_upload_dir' => fn() => array( 'basedir' => '/wordpress/uploads' ),
+				'wp_upload_dir' => fn() => array( 'basedir' => '/finpress/uploads' ),
 				'realpath'      => fn( $path ) => false,
 				'wp_mkdir_p'    => function( $directory ) use ( &$created_dir ) {
 					$created_dir = $directory;
@@ -277,11 +277,11 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 		);
 
 		$this->sut->get_transient_files_directory();
-		$this->assertEquals( '/wordpress/uploads/fincommerce_transient_files', $created_dir );
+		$this->assertEquals( '/finpress/uploads/fincommerce_transient_files', $created_dir );
 
 		$expected_created_files = array(
-			'/wordpress/uploads/fincommerce_transient_files/.htaccess' => 'deny from all',
-			'/wordpress/uploads/fincommerce_transient_files/index.html' => '',
+			'/finpress/uploads/fincommerce_transient_files/.htaccess' => 'deny from all',
+			'/finpress/uploads/fincommerce_transient_files/index.html' => '',
 		);
 		$this->assertEquals( $expected_created_files, $fake_wp_filesystem->created_files );
 	}
@@ -831,7 +831,7 @@ class TransientFilesEngineTest extends \WC_REST_Unit_Test_Case {
 		}
 
 		$dir = opendir( $dirname );
-		// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+		// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while ( false !== ( $file = readdir( $dir ) ) ) {
 			if ( ( '.' !== $file ) && ( '..' !== $file ) ) {
 				$full = $dirname . '/' . $file;

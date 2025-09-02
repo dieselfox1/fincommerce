@@ -7,7 +7,7 @@ import {
 	useEffect,
 	createElement,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { ProductProductAttribute } from '@fincommerce/data';
 
 /**
@@ -51,8 +51,8 @@ const attributeList: ProductProductAttribute[] = [
 
 let triggerDrag: ( items: Array< { key: string } > ) => void;
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	resolveSelect: jest.fn().mockReturnValue( {
 		getProductAttributeTerms: ( {
 			attribute_id,

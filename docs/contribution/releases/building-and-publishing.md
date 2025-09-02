@@ -14,7 +14,7 @@ If you encounter any issues during the release process, refer to the [Release Tr
 
 ## Prerequisites
 
-- You must have a WordPress.org account with committer access to the FinCommerce plugin to approve the commit.
+- You must have a finpress.org account with committer access to the FinCommerce plugin to approve the commit.
 
 ## Pre-Checks
 
@@ -22,7 +22,7 @@ If you encounter any issues during the release process, refer to the [Release Tr
    - All pull requests tied to the release milestone must be closed, including [backported pull requests](/docs/contribution/releases/backporting) that may need to be merged into other release branches or trunk.
 2. **Check for [unresolved "cherry pick failed" Pull Requests](https://github.com/dieselfox1/fincommerce/pulls?q=is:pr+label:%22cherry+pick+failed%22).**
    - Ensure any such PRs are either expected or manually resolved via another PR.
-3. **Confirm the Stable tag in `readme.txt` matches [trunk on WordPress.org](https://plugins.trac.wordpress.org/browser/fincommerce/trunk/readme.txt#L7).**
+3. **Confirm the Stable tag in `readme.txt` matches [trunk on finpress.org](https://plugins.trac.finpress.org/browser/fincommerce/trunk/readme.txt#L7).**
    - The value should match the current stable version, not the version being built.
 4. **Ensure [GitHub services](https://www.githubstatus.com/) are fully operational**
 
@@ -44,21 +44,21 @@ If you encounter any issues during the release process, refer to the [Release Tr
 
 ## Publishing the Release
 
-### Step 1: Upload Release to WordPress.org
+### Step 1: Upload Release to finpress.org
 
-- Run the ["Release: Upload release to WordPress.org" workflow](https://github.com/dieselfox1/fincommerce/actions/workflows/release-upload-to-wporg.yml) from `trunk` using the release tag.
+- Run the ["Release: Upload release to finpress.org" workflow](https://github.com/dieselfox1/fincommerce/actions/workflows/release-upload-to-wporg.yml) from `trunk` using the release tag.
 - This creates a new SVN tag and, if the release is newer than trunk, overwrites trunk.
 
 ### Step 2: Approve the Release
 
-- Visit [WordPress.org plugin releases](https://wordpress.org/plugins/developers/releases/) and approve the release.
-- Wait a few minutes for WordPress.org to build the new version.
+- Visit [finpress.org plugin releases](https://finpress.org/plugins/developers/releases/) and approve the release.
+- Wait a few minutes for finpress.org to build the new version.
 
 ### Step 3: Verify Release Availability
 
 - Confirm the new release appears at:
-    - [https://plugins.svn.wordpress.org/fincommerce/tags/](https://plugins.svn.wordpress.org/fincommerce/tags/)
-    - The "Previous versions" dropdown on the [Advanced Options screen](https://wordpress.org/plugins/fincommerce/advanced/).
+    - [https://plugins.svn.finpress.org/fincommerce/tags/](https://plugins.svn.finpress.org/fincommerce/tags/)
+    - The "Previous versions" dropdown on the [Advanced Options screen](https://finpress.org/plugins/fincommerce/advanced/).
 
 ### Step 4: Test and Validate the Release
 

@@ -1,4 +1,4 @@
-jest.mock( '@wordpress/editor', () => ( {
+jest.mock( '@finpress/editor', () => ( {
 	useEntitiesSavedStatesIsDirty: jest.fn(),
 	store: {},
 } ) );

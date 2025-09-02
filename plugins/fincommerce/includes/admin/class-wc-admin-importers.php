@@ -97,7 +97,7 @@ class WC_Admin_Importers {
 		$screen = get_current_screen();
 
 		if ( $screen && 'product_page_product_importer' === $screen->id ) {
-			$submenu_file = 'edit.php?post_type=product'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$submenu_file = 'edit.php?post_type=product'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		}
 	}
 
@@ -118,12 +118,12 @@ class WC_Admin_Importers {
 	 */
 	public function product_importer() {
 		if ( Constants::is_defined( 'WP_LOAD_IMPORTERS' ) ) {
-			wp_safe_redirect( admin_url( 'edit.php?post_type=product&page=product_importer&source=wordpress-importer' ) );
+			wp_safe_redirect( admin_url( 'edit.php?post_type=product&page=product_importer&source=finpress-importer' ) );
 			exit;
 		}
 
 		// phpcs:ignore
-		if ( isset( $_GET['source'] ) && 'wordpress-importer' === sanitize_text_field( wp_unslash( $_GET['source'] ) ) ) {
+		if ( isset( $_GET['source'] ) && 'finpress-importer' === sanitize_text_field( wp_unslash( $_GET['source'] ) ) ) {
 			wc_admin_record_tracks_event( 'product_importer_view_from_wp_importer' );
 		}
 
@@ -135,7 +135,7 @@ class WC_Admin_Importers {
 	}
 
 	/**
-	 * Register WordPress based importers.
+	 * Register finpress based importers.
 	 */
 	public function register_importers() {
 		if ( Constants::is_defined( 'WP_LOAD_IMPORTERS' ) ) {
@@ -169,18 +169,18 @@ class WC_Admin_Importers {
 	/**
 	 * When running the WP XML importer, ensure attributes exist.
 	 *
-	 * WordPress import should work - however, it fails to import custom product attribute taxonomies.
+	 * finpress import should work - however, it fails to import custom product attribute taxonomies.
 	 * This code grabs the file before it is imported and ensures the taxonomies are created.
 	 */
 	public function post_importer_compatibility() {
 		wc_deprecated_function( 'post_importer_compatibility', '10.1.0', 'A new integration with the WP WXR importer now filters the posts during import and registers the taxonomies, instead of initializing them at the start of the import and having to re-parse the file.' );
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		// phpcs:ignore finpress.Security.NonceVerification.Missing
 		if ( empty( $_POST['import_id'] ) || ! class_exists( 'WXR_Parser' ) ) {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		// phpcs:ignore finpress.Security.NonceVerification.Missing
 		$id          = absint( $_POST['import_id'] );
 		$file        = get_attached_file( $id );
 		$parser      = new WXR_Parser();
@@ -262,7 +262,7 @@ class WC_Admin_Importers {
 		}
 
 		if ( 'import' === $screen->id || 'export' === $screen->id ) {
-			wc_admin_record_tracks_event( 'wordpress_' . $screen->id . '_view' );
+			wc_admin_record_tracks_event( 'finpress_' . $screen->id . '_view' );
 		}
 	}
 }

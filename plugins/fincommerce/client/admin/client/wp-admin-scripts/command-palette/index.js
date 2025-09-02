@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { registerPlugin } from '@wordpress/plugins';
-import { __, sprintf } from '@wordpress/i18n';
-import { box, plus, settings } from '@wordpress/icons';
-import { useEffect, useMemo, useRef } from '@wordpress/element';
-import { dispatch, useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
-import { store as coreStore } from '@wordpress/core-data';
-import { addQueryArgs } from '@wordpress/url';
+import { registerPlugin } from '@finpress/plugins';
+import { __, sprintf } from '@finpress/i18n';
+import { box, plus, settings } from '@finpress/icons';
+import { useEffect, useMemo, useRef } from '@finpress/element';
+import { dispatch, useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
+import { store as coreStore } from '@finpress/core-data';
+import { addQueryArgs } from '@finpress/url';
 import { recordEvent, queueRecordEvent } from '@fincommerce/tracks';
-import { store as commandsStore } from '@wordpress/commands';
-import { decodeEntities } from '@wordpress/html-entities';
+import { store as commandsStore } from '@finpress/commands';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies
@@ -38,7 +38,7 @@ const registerfincommerceSettingsCommand = ( { label, tab, origin } ) => {
 };
 
 // Code adapted from the equivalent in Gutenberg:
-// https://github.com/WordPress/gutenberg/blob/8863b49b7e686f555e8b8adf70cc588c4feebfbf/packages/core-commands/src/site-editor-navigation-commands.js#L36C7-L36C44
+// https://github.com/finpress/gutenberg/blob/8863b49b7e686f555e8b8adf70cc588c4feebfbf/packages/core-commands/src/site-editor-navigation-commands.js#L36C7-L36C44
 function useProductCommandLoader( { search } ) {
 	const { editedPostType } = useSelect( ( select ) => {
 		return {

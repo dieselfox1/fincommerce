@@ -110,7 +110,7 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 	 * Output the settings.
 	 */
 	public function output() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		global $current_section;
 
 		// We don't want to output anything from the action for now. So we buffer it and discard it.
@@ -243,7 +243,7 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 	private function render_classic_gateway_settings_page( array $payment_gateways, string $current_section ) {
 		foreach ( $payment_gateways as $gateway ) {
 			if ( in_array( $current_section, array( $gateway->id, sanitize_title( get_class( $gateway ) ) ), true ) ) {
-				if ( isset( $_GET['toggle_enabled'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				if ( isset( $_GET['toggle_enabled'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 					$enabled = $gateway->get_option( 'enabled' );
 
 					if ( $enabled ) {

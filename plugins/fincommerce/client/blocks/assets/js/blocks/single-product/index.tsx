@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@finpress/blocks';
 
 /**
  * Internal dependencies
@@ -12,7 +12,7 @@ import edit from '@fincommerce/block-library/assets/js/blocks/single-product/edi
 import save from '@fincommerce/block-library/assets/js/blocks/single-product/save';
 import deprecated from '@fincommerce/block-library/assets/js/blocks/single-product/deprecated';
 
-// @ts-expect-error: `registerBlockType` is a function that is typed in WordPress core.
+// @ts-expect-error: `registerBlockType` is a function that is typed in finpress core.
 registerBlockType( metadata, {
 	icon: BLOCK_ICON,
 	edit,

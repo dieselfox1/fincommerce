@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
-import { Disabled } from '@wordpress/components';
-import { __, _x } from '@wordpress/i18n';
+import { useBlockProps } from '@finpress/block-editor';
+import { Disabled } from '@finpress/components';
+import { __, _x } from '@finpress/i18n';
 
 /**
  * Internal dependencies

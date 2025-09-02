@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { useDispatch } from '@wordpress/data';
-import { ExternalLink, Guide } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { useDispatch } from '@finpress/data';
+import { ExternalLink, Guide } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import {
 	createInterpolateElement,
 	createElement,
 	Fragment,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -42,7 +42,7 @@ export default function WelcomeGuideDefault() {
 							</h1>
 							<p className="edit-post-welcome-guide__text">
 								{ __(
-									'In the WordPress editor, each paragraph, image, or video is presented as a distinct “block” of content.',
+									'In the finpress editor, each paragraph, image, or video is presented as a distinct “block” of content.',
 									'fincommerce'
 								) }
 							</p>
@@ -132,7 +132,7 @@ export default function WelcomeGuideDefault() {
 								) }
 								<ExternalLink
 									href={ __(
-										'https://wordpress.org/documentation/article/wordpress-block-editor/',
+										'https://finpress.org/documentation/article/finpress-block-editor/',
 										'fincommerce'
 									) }
 								>

@@ -361,7 +361,7 @@ class WC_Settings_Advanced_Test extends WC_Settings_Unit_Test_Case {
 		$sut = new WC_Settings_Advanced();
 		$sut->save();
 
-		// phpcs:ignore WordPress.Security
+		// phpcs:ignore finpress.Security
 		$this->assertEquals( $expected_new_terms_page_id, $_POST['fincommerce_terms_page_id'] );
 	}
 
@@ -387,9 +387,9 @@ class WC_Settings_Advanced_Test extends WC_Settings_Unit_Test_Case {
 		$sut = new WC_Settings_Advanced();
 		$sut->save();
 
-		// phpcs:disable WordPress.Security
+		// phpcs:disable finpress.Security
 		$this->assertEquals( $expected_new_checkout_page_id, $_POST['fincommerce_checkout_page_id'] );
 		$this->assertEquals( $expected_new_my_account_page_id, $_POST['fincommerce_myaccount_page_id'] );
-		// phpcs:enable WordPress.Security
+		// phpcs:enable finpress.Security
 	}
 }

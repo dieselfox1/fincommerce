@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { Button } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import { Button } from '@finpress/components';
 import clsx from 'clsx';
 
 export default function SidebarButton(

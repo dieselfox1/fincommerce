@@ -52,7 +52,7 @@ These three filters together add the new column to the database query, adds the 
 To finish this off by adding support for columns generated in browser, another filter needs to be added to your plugin's JavaScript:
 
 ```js
-import { addFilter } from "@wordpress/hooks";
+import { addFilter } from "@finpress/hooks";
 function addAccessExpiresToDownloadsReport(reportTableData) {
   const { endpoint, items } = reportTableData;
   if ("downloads" !== endpoint) {

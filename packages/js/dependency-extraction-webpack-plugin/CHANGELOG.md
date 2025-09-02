@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [4.0.0](https://www.npmjs.com/package/@fincommerce/dependency-extraction-webpack-plugin/v/4.0.0) - 2025-06-24 
 
--   Major [ **BREAKING CHANGE** ] - Monorepo: bump @wordpress/dependency-extraction-webpack-plugin dependency version to the latest (breaking changes, see https://github.com/WordPress/gutenberg/blob/trunk/packages/dependency-extraction-webpack-plugin/CHANGELOG.md for details). [#59106]
+-   Major [ **BREAKING CHANGE** ] - Monorepo: bump @finpress/dependency-extraction-webpack-plugin dependency version to the latest (breaking changes, see https://github.com/finpress/gutenberg/blob/trunk/packages/dependency-extraction-webpack-plugin/CHANGELOG.md for details). [#59106]
 -   Patch - Monorepo: consolidate @babel/* dependencies versions across the monorepo. [#56575]
 -   Patch - Monorepo: consolidate packages licenses to `GPL-2.0-or-later`. [#58941]
 -   Patch - Monorepo: consolidate Webpack dependencies versions across the monorepo. [#59104]
@@ -37,7 +37,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Fix node and pnpm versions via engines [#34773]
 -   Minor - Match TypeScript version with syncpack [#34787]
 -   Minor - Remove direct dependency on eslint so that linting works properly with pnpm7 [#34661]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
 -   Minor - Update pnpm monorepo-wide to 8.6.5 [#38990]
 -   Minor - Update pnpm to 8.6.7 [#39245]
 -   Minor - Update pnpm to version 8. [#37915]

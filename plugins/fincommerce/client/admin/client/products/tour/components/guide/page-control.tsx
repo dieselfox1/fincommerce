@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

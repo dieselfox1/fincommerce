@@ -516,7 +516,7 @@ function wc_render_invalid_variation_notice( $product_object ) {
 	$variation_count = count( $variation_ids );
 
 	// Check if a variation exists without pricing data.
-	// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+	// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 	$valid_variation_count = $wpdb->get_var(
 		"
 		SELECT count(post_id) FROM {$wpdb->postmeta}
@@ -526,7 +526,7 @@ function wc_render_invalid_variation_notice( $product_object ) {
 		AND meta_value != ''
 		"
 	);
-	// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+	// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 
 	$invalid_variation_count = $variation_count - $valid_variation_count;
 

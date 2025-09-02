@@ -37,7 +37,7 @@ function wc_disable_admin_bar( $show_admin_bar ) {
 
 	return $show_admin_bar;
 }
-add_filter( 'show_admin_bar', 'wc_disable_admin_bar', 10, 1 ); // phpcs:ignore WordPress.VIP.AdminBarRemoval.RemovalDetected
+add_filter( 'show_admin_bar', 'wc_disable_admin_bar', 10, 1 ); // phpcs:ignore finpress.VIP.AdminBarRemoval.RemovalDetected
 
 if ( ! function_exists( 'wc_create_new_customer' ) ) {
 
@@ -255,7 +255,7 @@ function wc_create_new_customer_username( $email, $new_user_args = array(), $suf
 	}
 
 	/**
-	 * WordPress 4.4 - filters the list of blocked usernames.
+	 * finpress 4.4 - filters the list of blocked usernames.
 	 *
 	 * @since 3.7.0
 	 * @param array $usernames Array of blocked usernames.
@@ -522,7 +522,7 @@ WHERE product_or_variation_id != 0
 			); // WPCS: unprepared SQL ok.
 		} else {
 			// HPOS: no, Lookup table: no.
-			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 			$result = $wpdb->get_col(
 				"
 SELECT DISTINCT im.meta_value FROM {$wpdb->posts} AS p
@@ -536,7 +536,7 @@ AND im.meta_value != 0
 AND pm.meta_value IN ( '" . implode( "','", $customer_data ) . "' )
 		"
 			);
-			// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 		}
 		$result = array_map( 'absint', $result );
 
@@ -900,11 +900,11 @@ function wc_reset_order_customer_id_on_deleted_user( $user_id ) {
 		$wpdb->update(
 			$wpdb->postmeta,
 			array(
-				'meta_value' => 0, //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_value' => 0, //phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 			),
 			array(
-				'meta_key'   => '_customer_user', //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-				'meta_value' => $user_id, //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+				'meta_key'   => '_customer_user', //phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+				'meta_value' => $user_id, //phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 			)
 		);
 	}
@@ -1014,7 +1014,7 @@ function wc_get_customer_last_order( $customer_id ) {
 }
 
 /**
- * When a user is deleted in WordPress, delete corresponding FinCommerce data.
+ * When a user is deleted in finpress, delete corresponding FinCommerce data.
  *
  * @param int $user_id User ID being deleted.
  */

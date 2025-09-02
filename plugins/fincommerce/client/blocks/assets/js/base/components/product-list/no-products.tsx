@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { useInnerBlockLayoutContext } from '@fincommerce/shared-context';
-import { Icon, warning } from '@wordpress/icons';
+import { Icon, warning } from '@finpress/icons';
 
 const NoProducts = (): JSX.Element => {
 	const { parentClassName } = useInnerBlockLayoutContext();

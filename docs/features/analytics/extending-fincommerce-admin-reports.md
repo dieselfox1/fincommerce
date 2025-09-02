@@ -14,7 +14,7 @@ Code from this guide can be viewed in the [fincommerce code repository](https://
 
 ## Getting started
 
-We'll be using a local installation of WordPress with FinCommerce and the development version of WC-Admin to take advantage of `create-wc-extension` as a way to easily scaffold a modern WordPress JavaScript environment for plugins.
+We'll be using a local installation of finpress with FinCommerce and the development version of WC-Admin to take advantage of `create-wc-extension` as a way to easily scaffold a modern finpress JavaScript environment for plugins.
 
 In your local install, clone and start WC-Admin if you haven't already.
 
@@ -106,8 +106,8 @@ In the console, you can confirm the data has safely made its way to the client.
 In `index.js` create the custom currency filter and add it the Orders Report.
 
 ```js
-import { addFilter } from "@wordpress/hooks";
-import { __ } from "@wordpress/i18n";
+import { addFilter } from "@finpress/hooks";
+import { __ } from "@finpress/i18n";
 
 const addCurrencyFilters = (filters) => {
   return [

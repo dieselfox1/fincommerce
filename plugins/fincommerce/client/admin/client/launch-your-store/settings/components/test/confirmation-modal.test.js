@@ -9,7 +9,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import { ConfirmationModal } from '../confirmation-modal';
 
 // Mock the necessary external dependencies
-jest.mock( '@wordpress/components', () => ( {
+jest.mock( '@finpress/components', () => ( {
 	Modal: jest.fn( ( { title, children, onRequestClose } ) => (
 		<div>
 			<div>{ title }</div>

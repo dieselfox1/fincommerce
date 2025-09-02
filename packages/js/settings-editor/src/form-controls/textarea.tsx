@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import type { DataFormControlProps } from '@wordpress/dataviews';
-import { TextareaControl } from '@wordpress/components';
+import { createElement } from '@finpress/element';
+import type { DataFormControlProps } from '@finpress/dataviews';
+import { TextareaControl } from '@finpress/components';
 
 /**
  * Internal dependencies

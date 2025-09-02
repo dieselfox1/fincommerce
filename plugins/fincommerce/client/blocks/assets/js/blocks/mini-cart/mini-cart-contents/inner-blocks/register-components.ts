@@ -3,7 +3,7 @@
  */
 import { WC_BLOCKS_BUILD_URL } from '@fincommerce/block-settings';
 import { registerCheckoutBlock } from '@fincommerce/blocks-checkout';
-import { lazy } from '@wordpress/element';
+import { lazy } from '@finpress/element';
 /**
  * Internal dependencies
  */
@@ -19,7 +19,7 @@ import miniCartShoppingButtonMetadata from '@fincommerce/block-library/assets/js
 import miniCartCartButtonMetadata from '@fincommerce/block-library/assets/js/blocks/mini-cart/mini-cart-contents/inner-blocks/mini-cart-cart-button-block/block.json';
 import miniCartCheckoutButtonMetadata from '@fincommerce/block-library/assets/js/blocks/mini-cart/mini-cart-contents/inner-blocks/mini-cart-checkout-button-block/block.json';
 
-// Modify webpack publicPath at runtime based on location of WordPress Plugin.
+// Modify webpack publicPath at runtime based on location of finpress Plugin.
 // eslint-disable-next-line no-undef,camelcase
 __webpack_public_path__ = WC_BLOCKS_BUILD_URL;
 

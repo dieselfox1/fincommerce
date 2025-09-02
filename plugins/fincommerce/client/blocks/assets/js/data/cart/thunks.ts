@@ -20,7 +20,7 @@ import {
 	type CurriedSelectorsOf,
 	type ConfigOf,
 	type ActionCreatorsOf,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 import { cartStore } from '@fincommerce/block-data';
 
 /**

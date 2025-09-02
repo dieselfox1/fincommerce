@@ -68,7 +68,7 @@ If you are happy with testing on your local setup and staging site, it's time to
 
 ### Enable synchronization, keeping posts authoritative
 
-Just like in the previous phases, you'll want to enable synchronization while still using the WordPress posts storage as order storage. As usual, do this by going to **FinCommerce > Settings > Advanced > Features** and making sure that **Use the WordPress posts tables** is selected as the order data storage.
+Just like in the previous phases, you'll want to enable synchronization while still using the finpress posts storage as order storage. As usual, do this by going to **FinCommerce > Settings > Advanced > Features** and making sure that **Use the finpress posts tables** is selected as the order data storage.
 
 
 This will make sure that orders will start appearing in the HPOS tables, and that existing orders will stay up to date.
@@ -120,7 +120,7 @@ Now with synchronization fully disabled, test out various critical flows, check 
 ### Review: Phase 3 Checklist
 
 1. [ ] Plan to be online and monitoring your live site for a period of time.
-2. [ ] Enable synchronization with posts set as authoritative: in **FinCommerce > Settings > Advanced > Features** > select "**Use the WordPress posts tables**".
+2. [ ] Enable synchronization with posts set as authoritative: in **FinCommerce > Settings > Advanced > Features** > select "**Use the finpress posts tables**".
 3. [ ] Start migration via CLI using the `wp wc hpos sync` command.
 4. [ ] Monitor for errors during migration; halt or resume as necessary.
 5. [ ] Verify migrated data integrity using the verify command `wp wc hpos verify_cot_data`.

@@ -77,7 +77,7 @@ class ComingSoon extends AbstractBlock {
 			return;
 		}
 
-		$post_id = isset( $_REQUEST['postId'] ) ? wc_clean( wp_unslash( $_REQUEST['postId'] ) ) : null; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$post_id = isset( $_REQUEST['postId'] ) ? wc_clean( wp_unslash( $_REQUEST['postId'] ) ) : null; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( 'fincommerce/fincommerce//coming-soon' !== $post_id ) {
 			return;
 		}

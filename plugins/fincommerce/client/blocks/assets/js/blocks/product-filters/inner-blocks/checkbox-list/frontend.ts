@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getContext, store } from '@wordpress/interactivity';
+import { getContext, store } from '@finpress/interactivity';
 
 type CheckboxListContext = {
 	showAll: boolean;

@@ -32,7 +32,7 @@ class ProcessCoreProfilerPluginInstallOptions {
 	private WC_Logger_Interface $logger;
 
 	private const DISALLOWED_OPTIONS = array(
-		'siteurl',              // The URL to your WordPress installation.
+		'siteurl',              // The URL to your finpress installation.
 		'home',                 // The home URL of the site.
 		'admin_email',          // Administrator email address.
 		'wp_user_roles',        // Serialized roles and capabilities.
@@ -100,7 +100,7 @@ class ProcessCoreProfilerPluginInstallOptions {
 	}
 
 	/**
-	 * Updates an install option in the WordPress database.
+	 * Updates an install option in the finpress database.
 	 *
 	 * @param object $install_option Install option object.
 	 */
@@ -145,7 +145,7 @@ class ProcessCoreProfilerPluginInstallOptions {
 	}
 
 	/**
-	 * Updates an option in the WordPress database.
+	 * Updates an option in the finpress database.
 	 *
 	 * @param string $name Option name.
 	 * @param mixed  $value Option value.

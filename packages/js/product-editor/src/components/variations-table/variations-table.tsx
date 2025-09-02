@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button, CheckboxControl, Notice } from '@wordpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { Button, CheckboxControl, Notice } from '@finpress/components';
 import {
 	PartialProductVariation,
 	Product,
@@ -15,12 +15,12 @@ import {
 	forwardRef,
 	useMemo,
 	useEffect,
-} from '@wordpress/element';
-import { useDispatch } from '@wordpress/data';
+} from '@finpress/element';
+import { useDispatch } from '@finpress/data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId, useEntityProp } from '@wordpress/core-data';
+import { useEntityId, useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

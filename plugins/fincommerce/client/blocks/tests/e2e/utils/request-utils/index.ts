@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { RequestUtils as CoreRequestUtils } from '@wordpress/e2e-test-utils-playwright';
+import { RequestUtils as CoreRequestUtils } from '@finpress/e2e-test-utils-playwright';
 
 /**
  * Internal dependencies

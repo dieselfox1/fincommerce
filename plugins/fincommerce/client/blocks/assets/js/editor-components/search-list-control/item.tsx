@@ -2,10 +2,10 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { CheckboxControl } from '@wordpress/components';
-import { useCallback, useEffect } from '@wordpress/element';
+import { CheckboxControl } from '@finpress/components';
+import { useCallback, useEffect } from '@finpress/element';
 import { arrayDifferenceBy, arrayUnionBy } from '@fincommerce/utils';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

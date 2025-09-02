@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
-import type { BlockConfiguration } from '@wordpress/blocks';
+import type { BlockConfiguration } from '@finpress/blocks';
 
 /**
  * Internal dependencies

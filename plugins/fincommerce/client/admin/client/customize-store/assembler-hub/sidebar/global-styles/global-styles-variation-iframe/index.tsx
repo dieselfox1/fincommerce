@@ -9,11 +9,11 @@ import {
 	__unstableEditorStyles as EditorStyles,
 	// @ts-expect-error No types for this
 	privateApis as blockEditorPrivateApis,
-} from '@wordpress/block-editor';
-import { useRefEffect } from '@wordpress/compose';
+} from '@finpress/block-editor';
+import { useRefEffect } from '@finpress/compose';
 import { MutableRefObject, useMemo } from 'react';
 // @ts-ignore No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies
@@ -78,7 +78,7 @@ export const GlobalStylesVariationIframe = ( {
 			loadStyles={ false }
 			contentRef={ useRefEffect( ( bodyElement ) => {
 				// Disable moving focus to the writing flow wrapper if the focus disappears
-				// See https://github.com/WordPress/gutenberg/blob/aa8e1c52c7cb497e224a479673e584baaca97113/packages/block-editor/src/components/writing-flow/use-tab-nav.js#L136
+				// See https://github.com/finpress/gutenberg/blob/aa8e1c52c7cb497e224a479673e584baaca97113/packages/block-editor/src/components/writing-flow/use-tab-nav.js#L136
 				const handleFocusOut = ( event: Event ) => {
 					event.stopImmediatePropagation();
 					// Explicitly call the focusOut handler, if available.

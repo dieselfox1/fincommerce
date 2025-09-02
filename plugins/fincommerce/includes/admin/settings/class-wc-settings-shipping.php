@@ -237,7 +237,7 @@ class WC_Settings_Shipping extends WC_Settings_Page {
 	 * Handles output of the shipping zones page in admin.
 	 */
 	protected function output_zones_screen() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		global $hide_save_button;
 
 		if ( isset( $_REQUEST['zone_id'] ) ) {
@@ -249,7 +249,7 @@ class WC_Settings_Shipping extends WC_Settings_Page {
 			$hide_save_button = true;
 			$this->zones_screen();
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -411,7 +411,7 @@ class WC_Settings_Shipping extends WC_Settings_Page {
 
 		if ( ! empty( $_POST['save'] ) ) {
 
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			if ( empty( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( wp_unslash( $_REQUEST['_wpnonce'] ), 'fincommerce-settings' ) ) {
 				echo '<div class="updated error"><p>' . esc_html__( 'Edit failed. Please try again.', 'fincommerce' ) . '</p></div>';
 			}

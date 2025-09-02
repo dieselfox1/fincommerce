@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	forwardRef,
 	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
-} from '@wordpress/element';
-import { addQueryArgs } from '@wordpress/url';
-import { useDebounce } from '@wordpress/compose';
+} from '@finpress/element';
+import { addQueryArgs } from '@finpress/url';
+import { useDebounce } from '@finpress/compose';
 import { TreeSelectControl } from '@fincommerce/components';
 import { getSetting } from '@fincommerce/settings';
 import { recordEvent } from '@fincommerce/tracks';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { store as editorStore } from '@wordpress/editor';
+import { useMemo } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { store as editorStore } from '@finpress/editor';
 import deepmerge from 'deepmerge';
 
 /**

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createRoot } from '@wordpress/element';
-import { createSlotFill, SlotFillProvider } from '@wordpress/components';
-import { PluginArea } from '@wordpress/plugins';
+import { createRoot } from '@finpress/element';
+import { createSlotFill, SlotFillProvider } from '@finpress/components';
+import { PluginArea } from '@finpress/plugins';
 
 export const SETTINGS_SLOT_FILL_CONSTANT =
 	'__EXPERIMENTAL__WcAdminSettingsSlots';

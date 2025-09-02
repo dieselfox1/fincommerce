@@ -20,13 +20,13 @@ jobs:
           list-files: 'json'
           filters: |
             rest:
-              - 'plugins/woocommerce/src/StoreApi/**'
-              - 'plugins/woocommerce/src/Admin/API/**'
-              - 'plugins/woocommerce/src/Utilities/RestApiUtil.php'
-              - 'plugins/woocommerce/src/Internal/**/*RestApi**'
-              - 'plugins/woocommerce/src/**/*RestController*'
-              - 'plugins/woocommerce/includes/rest-api/**'
-              - 'plugins/woocommerce/includes/*-wc-rest-*'
+              - 'plugins/fincommerce/src/StoreApi/**'
+              - 'plugins/fincommerce/src/Admin/API/**'
+              - 'plugins/fincommerce/src/Utilities/RestApiUtil.php'
+              - 'plugins/fincommerce/src/Internal/**/*RestApi**'
+              - 'plugins/fincommerce/src/**/*RestController*'
+              - 'plugins/fincommerce/includes/rest-api/**'
+              - 'plugins/fincommerce/includes/*-wc-rest-*'
 
       - name: Send notification
         if: steps.filter.outputs.rest == 'true'
@@ -52,5 +52,5 @@ jobs:
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '⚠️ **API Documentation Reminder**\n\nHi @${{ github.event.pull_request.user.login }}! Your PR contains REST API changes. Please consider updating the [REST API documentation](https://github.com/woocommerce/woocommerce-rest-api-docs) if your changes affect the public API.\n\nChanged API files:\n```\n${{ join(fromJson(steps.filter.outputs.rest_files || '[]'), '\n') }}\n```'
+              body: '⚠️ **API Documentation Reminder**\n\nHi @${{ github.event.pull_request.user.login }}! Your PR contains REST API changes. Please consider updating the [REST API documentation](https://github.com/fincommerce/fincommerce-rest-api-docs) if your changes affect the public API.\n\nChanged API files:\n```\n${{ join(fromJson(steps.filter.outputs.rest_files || '[]'), '\n') }}\n```'
             });

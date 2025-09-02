@@ -43,7 +43,7 @@ do_action( 'fincommerce_before_add_to_cart_form' ); ?>
 			foreach ( $grouped_products as $grouped_product_child ) {
 				$post_object        = get_post( $grouped_product_child->get_id() );
 				$quantites_required = $quantites_required || ( $grouped_product_child->is_purchasable() && ! $grouped_product_child->has_options() );
-				$post               = $post_object; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+				$post               = $post_object; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 				setup_postdata( $post );
 
 				if ( $grouped_product_child->is_in_stock() ) {
@@ -89,7 +89,7 @@ do_action( 'fincommerce_before_add_to_cart_form' ); ?>
 								fincommerce_quantity_input(
 									array(
 										'input_name'  => 'quantity[' . $grouped_product_child->get_id() . ']',
-										'input_value' => isset( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ? wc_stock_amount( wc_clean( wp_unslash( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ) ) : '', // phpcs:ignore WordPress.Security.NonceVerification.Missing
+										'input_value' => isset( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ? wc_stock_amount( wc_clean( wp_unslash( $_POST['quantity'][ $grouped_product_child->get_id() ] ) ) ) : '', // phpcs:ignore finpress.Security.NonceVerification.Missing
 										'min_value'   => apply_filters( 'fincommerce_quantity_input_min', 0, $grouped_product_child ),
 										'max_value'   => $grouped_product_child->get_max_purchase_quantity(),
 										'placeholder' => '0',
@@ -114,14 +114,14 @@ do_action( 'fincommerce_before_add_to_cart_form' ); ?>
 							break;
 					}
 
-					echo '<td class="fincommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'fincommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</td>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo '<td class="fincommerce-grouped-product-list-item__' . esc_attr( $column_id ) . '">' . apply_filters( 'fincommerce_grouped_product_list_column_' . $column_id, $value, $grouped_product_child ) . '</td>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 
 					do_action( 'fincommerce_grouped_product_list_after_' . $column_id, $grouped_product_child );
 				}
 
 				echo '</tr>';
 			}
-			$post = $previous_post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+			$post = $previous_post; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 			setup_postdata( $post );
 
 			do_action( 'fincommerce_grouped_product_list_after', $grouped_product_columns, $quantites_required, $product );

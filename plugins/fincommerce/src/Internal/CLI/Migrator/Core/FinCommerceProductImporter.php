@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
  * fincommerceProductImporter class.
  *
  * Handles the creation and updating of FinCommerce products from mapped data.
- * This class focuses on the actual product creation logic, following WordPress
+ * This class focuses on the actual product creation logic, following finpress
  * coding standards and our established architecture patterns.
  *
  * @internal This class is part of the CLI Migrator feature and should not be used directly.
@@ -308,8 +308,8 @@ class fincommerceProductImporter {
 				array(
 					'post_type'   => 'product',
 					'post_status' => 'any', // Find regardless of status.
-					'meta_key'    => '_original_product_id', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-					'meta_value'  => $product_data['original_product_id'], // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+					'meta_key'    => '_original_product_id', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_value'  => $product_data['original_product_id'], // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 					'fields'      => 'ids',
 					'numberposts' => 1,
 				)
@@ -684,8 +684,8 @@ class fincommerceProductImporter {
 					'post_type'   => 'product_variation',
 					'numberposts' => 1,
 					'post_status' => 'any',
-					'meta_key'    => '_original_variant_id', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
-					'meta_value'  => $original_variant_id, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+					'meta_key'    => '_original_variant_id', // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
+					'meta_value'  => $original_variant_id, // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 					'fields'      => 'ids',
 				);
 

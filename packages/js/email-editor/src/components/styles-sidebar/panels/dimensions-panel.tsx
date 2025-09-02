@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { isEqual } from 'lodash';
 import {
 	// We can remove the ts-expect-error comments once the types are available.
-	// @ts-expect-error TS7016: Could not find a declaration file for module '@wordpress/block-editor'.
+	// @ts-expect-error TS7016: Could not find a declaration file for module '@finpress/block-editor'.
 	__experimentalSpacingSizesControl as SpacingSizesControl, // eslint-disable-line
 	useSettings,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 // eslint-disable-next-line
 import {
 	__experimentalToolsPanel as ToolsPanel, // eslint-disable-line
 	__experimentalToolsPanelItem as ToolsPanelItem, // eslint-disable-line
 	__experimentalUseCustomUnits as useCustomUnits, // eslint-disable-line
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

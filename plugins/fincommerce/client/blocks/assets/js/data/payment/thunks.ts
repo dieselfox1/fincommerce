@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { store as noticesStore } from '@wordpress/notices';
-import deprecated from '@wordpress/deprecated';
+import { store as noticesStore } from '@finpress/notices';
+import deprecated from '@finpress/deprecated';
 import type { BillingAddress, ShippingAddress } from '@fincommerce/settings';
 import {
 	isObject,
@@ -19,7 +19,7 @@ import type {
 	CurriedSelectorsOf,
 	DispatchFunction,
 	SelectFunction,
-} from '@wordpress/data/build-types/types';
+} from '@finpress/data/build-types/types';
 import { paymentStore } from '@fincommerce/block-data';
 
 /**

@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { ToolbarButton } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { ToolbarButton } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
-import { dispatch } from '@wordpress/data';
-import { useEntityProp } from '@wordpress/core-data';
-import { parse, rawHandler } from '@wordpress/blocks';
+import { dispatch } from '@finpress/data';
+import { useEntityProp } from '@finpress/core-data';
+import { parse, rawHandler } from '@finpress/blocks';
 
 /**
  * Internal dependencies
@@ -17,7 +17,7 @@ import { getContentFromFreeform } from '../edit';
 import { getGutenbergVersion } from '../../../../utils/get-gutenberg-version';
 
 // There is a bug in Gutenberg 17.9 that causes a crash in the full editor.
-// This should be fixed in Gutenberg 18.0 (see https://github.com/WordPress/gutenberg/pull/59800).
+// This should be fixed in Gutenberg 18.0 (see https://github.com/finpress/gutenberg/pull/59800).
 // Once we only support Gutenberg 18.0 and above, we can remove this check.
 function isGutenbergVersionWithCrashInFullEditor() {
 	const gutenbergVersion = getGutenbergVersion();

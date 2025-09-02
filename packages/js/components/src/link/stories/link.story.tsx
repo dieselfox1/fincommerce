@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { withConsole } from '@storybook/addon-console';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Internal dependencies

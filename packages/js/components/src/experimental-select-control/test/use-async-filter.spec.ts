@@ -2,15 +2,15 @@
  * External dependencies
  */
 import { act, renderHook } from '@testing-library/react';
-import { useDebounce } from '@wordpress/compose';
+import { useDebounce } from '@finpress/compose';
 
 /**
  * Internal dependencies
  */
 import { useAsyncFilter } from '../';
 
-jest.mock( '@wordpress/compose', () => ( {
-	...jest.requireActual( '@wordpress/compose' ),
+jest.mock( '@finpress/compose', () => ( {
+	...jest.requireActual( '@finpress/compose' ),
 	useDebounce: jest.fn( ( cb: CallableFunction ) => cb ),
 } ) );
 

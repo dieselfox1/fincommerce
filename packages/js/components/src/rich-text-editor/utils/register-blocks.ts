@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { BlockInstance, getBlockType } from '@wordpress/blocks';
+import { BlockInstance, getBlockType } from '@finpress/blocks';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore We need this to import the block modules for registration.
 	__experimentalGetCoreBlocks,
 	registerCoreBlocks as wpRegisterCoreBlocks,
-} from '@wordpress/block-library';
+} from '@finpress/block-library';
 
 export const PARAGRAPH_BLOCK_ID = 'core/paragraph';
 export const HEADING_BLOCK_ID = 'core/heading';

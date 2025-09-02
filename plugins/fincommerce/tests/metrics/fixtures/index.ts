@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { Page } from '@playwright/test';
 import { readFile } from '../utils.js';
-import { expect } from '@wordpress/e2e-test-utils-playwright';
+import { expect } from '@finpress/e2e-test-utils-playwright';
 
 type PerfUtilsConstructorProps = {
 	page: Page;

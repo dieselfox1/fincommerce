@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import * as wpDataFunctions from '@wordpress/data';
+import * as wpDataFunctions from '@finpress/data';
 import { cartStore, validationStore } from '@fincommerce/block-data';
-import type { StoreDescriptor } from '@wordpress/data';
+import type { StoreDescriptor } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -38,8 +38,8 @@ let getCustomerDataMock = jest.fn().mockReturnValue( {
 } );
 
 // Mocking select and dispatch here so we can control the actions/selectors used in pushChanges.
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	__esModule: true,
 	select: jest.fn(),
 	dispatch: jest.fn(),
@@ -104,7 +104,7 @@ describe( 'pushChanges', () => {
 				if ( storeNameOrDescriptor === cartStore ) {
 					return {
 						...jest
-							.requireActual( '@wordpress/data' )
+							.requireActual( '@finpress/data' )
 							.select( storeNameOrDescriptor ),
 						hasFinishedResolution: () => true,
 						getCustomerData: getCustomerDataMock,
@@ -113,7 +113,7 @@ describe( 'pushChanges', () => {
 				if ( storeNameOrDescriptor === validationStore ) {
 					return {
 						...jest
-							.requireActual( '@wordpress/data' )
+							.requireActual( '@finpress/data' )
 							.select( storeNameOrDescriptor ),
 						getValidationError: jest
 							.fn()
@@ -121,7 +121,7 @@ describe( 'pushChanges', () => {
 					};
 				}
 				return jest
-					.requireActual( '@wordpress/data' )
+					.requireActual( '@finpress/data' )
 					.select( storeNameOrDescriptor );
 			}
 		);
@@ -130,13 +130,13 @@ describe( 'pushChanges', () => {
 				if ( storeNameOrDescriptor === cartStore ) {
 					return {
 						...jest
-							.requireActual( '@wordpress/data' )
+							.requireActual( '@finpress/data' )
 							.dispatch( storeNameOrDescriptor ),
 						updateCustomerData: updateCustomerDataMock,
 					};
 				}
 				return jest
-					.requireActual( '@wordpress/data' )
+					.requireActual( '@finpress/data' )
 					.dispatch( storeNameOrDescriptor );
 			}
 		);

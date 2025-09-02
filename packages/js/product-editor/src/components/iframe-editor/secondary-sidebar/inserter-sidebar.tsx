@@ -1,23 +1,23 @@
 /**
  * External dependencies
  */
-import { useViewportMatch } from '@wordpress/compose';
+import { useViewportMatch } from '@finpress/compose';
 import {
 	createElement,
 	useCallback,
 	useContext,
 	useEffect,
 	useRef,
-} from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { ESCAPE } from '@wordpress/keycodes';
+} from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { ESCAPE } from '@finpress/keycodes';
 import {
 	store as blockEditorStore,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore This is actively used in the GB repo and probably safe to use.
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
+	// eslint-disable-next-line @finpress/no-unsafe-wp-apis
 	__experimentalLibrary as Library,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

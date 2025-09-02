@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { renderHook } from '@testing-library/react';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@finpress/block-editor';
 
 /**
  * Internal dependencies
  */
 import { useWooBlockProps } from '../use-woo-block-props';
 
-jest.mock( '@wordpress/block-editor', () => ( {
+jest.mock( '@finpress/block-editor', () => ( {
 	useBlockProps: jest.fn(),
 } ) );
 

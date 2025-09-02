@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import type { TemplateArray } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import type { TemplateArray } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
 
 export const Edit = (): JSX.Element => {
 	const blockProps = useBlockProps( {

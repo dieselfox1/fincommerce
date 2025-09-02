@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { compose } from '@wordpress/compose';
-import { withSelect, withDispatch } from '@wordpress/data';
-import { createElement, useState } from '@wordpress/element';
+import { compose } from '@finpress/compose';
+import { withSelect, withDispatch } from '@finpress/data';
+import { createElement, useState } from '@finpress/element';
 import { optionsStore } from '@fincommerce/data';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

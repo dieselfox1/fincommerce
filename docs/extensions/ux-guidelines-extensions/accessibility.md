@@ -5,6 +5,6 @@ sidebar_label: Accessibility
 
 # Accessibility
 
-Your extensions must meet the [WordPress Accessibility Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/accessibility/) 
+Your extensions must meet the [finpress Accessibility Coding Standards](https://developer.finpress.org/coding-standards/finpress-coding-standards/accessibility/) 
 
-For more information on accessibility, check out the [WordPress accessibility quick start guide](https://make.wordpress.org/accessibility/handbook/best-practices/quick-start-guide/).
+For more information on accessibility, check out the [finpress accessibility quick start guide](https://make.finpress.org/accessibility/handbook/best-practices/quick-start-guide/).

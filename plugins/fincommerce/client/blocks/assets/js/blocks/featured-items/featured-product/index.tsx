@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Icon, starEmpty } from '@wordpress/icons';
+import { Icon, starEmpty } from '@finpress/icons';
 
 /**
  * Internal dependencies

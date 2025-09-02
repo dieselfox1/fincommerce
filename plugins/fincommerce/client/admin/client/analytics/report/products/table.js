@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __, _n, _x, sprintf } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
-import { decodeEntities } from '@wordpress/html-entities';
-import { withSelect } from '@wordpress/data';
+import { __, _n, _x, sprintf } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { compose } from '@finpress/compose';
+import { decodeEntities } from '@finpress/html-entities';
+import { withSelect } from '@finpress/data';
 import { map } from 'lodash';
 import { getNewPath, getPersistedQuery } from '@fincommerce/navigation';
 import { Link, Tag } from '@fincommerce/components';

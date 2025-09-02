@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register, select } from '@wordpress/data';
+import { createReduxStore, register, select } from '@finpress/data';
 
 /**
  * Internal dependencies

@@ -141,7 +141,7 @@ MESSAGE;
 		$paths = glob( Settings::get_log_directory() . '*.log' );
 		$this->assertCount( 1, $paths );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content   = file_get_contents( reset( $paths ) );
 		$expected_content = gmdate( 'c', $time ) . ' DEBUG ' . $message . "\n";
 
@@ -249,7 +249,7 @@ MESSAGE;
 		$paths = glob( Settings::get_log_directory() . '*.log' );
 		$this->assertCount( 1, $paths );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content  = file_get_contents( reset( $paths ) );
 		$expected_prefix = gmdate( 'c', $time ) . ' DEBUG ' . $message;
 
@@ -277,7 +277,7 @@ MESSAGE;
 		$paths = glob( Settings::get_log_directory() . 'wc_logger*.log' );
 		$this->assertCount( 1, $paths );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content  = file_get_contents( reset( $paths ) );
 		$expected_string = '3 log files from source <code>duck</code> were deleted.';
 		$this->assertStringContainsString( $expected_string, $actual_content );
@@ -309,7 +309,7 @@ MESSAGE;
 		$paths = glob( Settings::get_log_directory() . 'wc_logger*.log' );
 		$this->assertCount( 1, $paths );
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		$actual_content  = file_get_contents( reset( $paths ) );
 		$expected_string = '4 expired log files were deleted.';
 		$this->assertStringContainsString( $expected_string, $actual_content );

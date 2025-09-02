@@ -14,7 +14,7 @@ const test = baseTest.extend( {
 } );
 
 test.beforeAll( async ( { restApi } ) => {
-	// Jetpack Comments replaces the default WordPress comment form when activated, and will cause this test to fail.
+	// Jetpack Comments replaces the default finpress comment form when activated, and will cause this test to fail.
 	// Make sure it's disabled prior to running this test.
 	await test.step( 'disable Jetpack comments if Jetpack is installed and active', async () => {
 		try {

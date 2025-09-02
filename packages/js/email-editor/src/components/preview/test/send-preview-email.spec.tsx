@@ -6,8 +6,8 @@ import '../../test/__mocks__/setup-shared-mocks';
  */
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import * as dataModule from '@wordpress/data';
-import { forwardRef } from '@wordpress/element';
+import * as dataModule from '@finpress/data';
+import { forwardRef } from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -15,11 +15,11 @@ import { forwardRef } from '@wordpress/element';
 import { SendPreviewEmail } from '../send-preview-email';
 import { SendingPreviewStatus } from '../../../store';
 
-jest.mock( '@wordpress/compose', () => ( {
+jest.mock( '@finpress/compose', () => ( {
 	useViewportMatch: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/components', () => {
+jest.mock( '@finpress/components', () => {
 	const TextControl = forwardRef<
 		HTMLInputElement,
 		React.InputHTMLAttributes< HTMLInputElement > & {
@@ -58,14 +58,14 @@ jest.mock( '@wordpress/components', () => {
 	};
 } );
 
-jest.mock( '@wordpress/icons', () => ( {
+jest.mock( '@finpress/icons', () => ( {
 	Icon: ( props: React.HTMLAttributes< HTMLSpanElement > ) => (
 		<span data-testid="icon" { ...props } />
 	),
 	check: 'check',
 } ) );
 
-jest.mock( '@wordpress/keycodes', () => ( {
+jest.mock( '@finpress/keycodes', () => ( {
 	ENTER: 13,
 } ) );
 

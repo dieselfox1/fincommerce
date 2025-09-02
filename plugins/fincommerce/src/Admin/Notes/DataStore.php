@@ -282,7 +282,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 			$clear_actions_query .= sprintf( ' AND action_id NOT IN (%s)', implode( ',', $actions_to_keep ) );
 		}
 
-		$wpdb->query( $clear_actions_query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		$wpdb->query( $clear_actions_query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 
 		// Update/insert the actions in this changeset.
 		foreach ( $changed_actions as $action ) {
@@ -350,13 +350,13 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 		$order_dir = 'asc' === strtolower( $args['order'] ) ? 'ASC' : 'DESC';
 
 		$query = $wpdb->prepare(
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			"SELECT * FROM {$wpdb->prefix}wc_admin_notes WHERE 1=1{$where_clauses} ORDER BY {$order_by} {$order_dir} LIMIT %d, %d",
 			$offset,
 			$args['per_page']
 		);
 
-		return $wpdb->get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return $wpdb->get_results( $query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -383,7 +383,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 
 		$query = "SELECT * FROM {$wpdb->prefix}wc_admin_notes WHERE 1=1{$where_clauses} ORDER BY {$order_by} {$order_dir}";
 
-		return $wpdb->get_results( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return $wpdb->get_results( $query ); // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**
@@ -406,7 +406,7 @@ class DataStore extends \WC_Data_Store_WP implements \WC_Object_Data_Store_Inter
 		);
 
 		if ( ! empty( $where_clauses ) ) {
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			return $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}wc_admin_notes WHERE 1=1{$where_clauses}" );
 		}
 

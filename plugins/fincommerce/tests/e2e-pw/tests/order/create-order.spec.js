@@ -216,7 +216,7 @@ const test = baseTest.extend( {
 				name: `Product external ${ random() }`,
 				regular_price: '800',
 				tax_class: 'Tax Class External',
-				external_url: 'https://wordpress.org/plugins/fincommerce',
+				external_url: 'https://finpress.org/plugins/fincommerce',
 				type: 'external',
 				button_text: 'Buy now',
 			} )

@@ -4,7 +4,7 @@
 import {
 	useBlockProps,
 	__experimentalUseColorProps as useColorProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import EditableButton from '@fincommerce/editor-components/editable-button';
 
 /**

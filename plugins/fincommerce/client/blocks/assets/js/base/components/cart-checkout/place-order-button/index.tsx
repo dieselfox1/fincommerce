@@ -6,8 +6,8 @@ import {
 	useCheckoutSubmit,
 	useStoreCart,
 } from '@fincommerce/base-context/hooks';
-import { check } from '@wordpress/icons';
-import { Icon } from '@wordpress/components';
+import { check } from '@finpress/icons';
+import { Icon } from '@finpress/components';
 import Button from '@fincommerce/base-components/button';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import {

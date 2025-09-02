@@ -108,11 +108,11 @@ class PaymentGatewaysController {
 	 * @param string $gateway_id Gateway ID.
 	 */
 	public static function handle_successfull_connection( $gateway_id ) {
-		// phpcs:disable WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.NonceVerification
 		if ( ! isset( $_GET['success'] ) || 1 !== intval( $_GET['success'] ) ) {
 			return;
 		}
-		// phpcs:enable WordPress.Security.NonceVerification
+		// phpcs:enable finpress.Security.NonceVerification
 
 		$payment_gateways = WC()->payment_gateways()->payment_gateways();
 		$payment_gateway  = isset( $payment_gateways[ $gateway_id ] ) ? $payment_gateways[ $gateway_id ] : null;

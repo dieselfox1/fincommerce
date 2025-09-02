@@ -9,11 +9,11 @@ import { renderHook } from '@testing-library/react-hooks';
 import useProductMetadata from '../use-product-metadata';
 
 const mockFnMetadataProp = jest.fn();
-jest.mock( '@wordpress/core-data', () => ( {
+jest.mock( '@finpress/core-data', () => ( {
 	useEntityId: jest.fn().mockReturnValue( 123 ),
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	useSelect: jest.fn().mockImplementation( ( callback ) => {
 		return callback(
 			jest.fn().mockReturnValue( {

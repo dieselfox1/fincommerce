@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName
+<?php // phpcs:ignore finpress.Files.FileName
 /**
  * Admin notes helper for wc-admin unit tests.
  *

@@ -1,25 +1,25 @@
-/* eslint-disable @wordpress/no-unsafe-wp-apis */
+/* eslint-disable @finpress/no-unsafe-wp-apis */
 /**
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { PanelBody, ToggleControl } from '@wordpress/components';
-import { Icon, store, shipping } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { PanelBody, ToggleControl } from '@finpress/components';
+import { Icon, store, shipping } from '@finpress/icons';
 import { ADMIN_URL, getSetting } from '@fincommerce/settings';
 import { LOCAL_PICKUP_ENABLED } from '@fincommerce/block-settings';
 import {
 	InspectorControls,
 	useBlockProps,
 	RichText,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import { Button } from '@ariakit/react';
 import { useShippingData } from '@fincommerce/base-context/hooks';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { checkoutStore as checkoutStoreDescriptor } from '@fincommerce/block-data';
 import ExternalLinkCard from '@fincommerce/editor-components/external-link-card';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

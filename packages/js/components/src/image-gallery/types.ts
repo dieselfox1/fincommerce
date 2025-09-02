@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { MediaUpload } from '@wordpress/media-utils';
+import { MediaUpload } from '@finpress/media-utils';
 
 export type ImageGalleryChild = JSX.Element;
 

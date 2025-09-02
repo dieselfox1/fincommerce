@@ -3,11 +3,11 @@ name: Test canonical extensions
 on:
   workflow_dispatch:
     inputs:
-      woocommerce_version:
-        description: 'WooCommerce version to use for testing (as per https://qit.woo.com/wp-json/cd/v1/environment)'
+      fincommerce_version:
+        description: 'fincommerce version to use for testing (as per https://qit.woo.com/wp-json/cd/v1/environment)'
         required: true
-      wordpress_version:
-        description: 'WordPress version to use for testing (as per https://qit.woo.com/wp-json/cd/v1/environment)'
+      finpress_version:
+        description: 'finpress version to use for testing (as per https://qit.woo.com/wp-json/cd/v1/environment)'
         required: false
         default: ''
       php_version:
@@ -31,4 +31,4 @@ jobs:
             GH_TOKEN: ${{ secrets.PR_ASSIGN_TOKEN }}
             GH_REPO: ${{ github.repository }}
         run: |
-            printf "${{ github.event.inputs.woocommerce_version }}\n${{ github.event.inputs.wordpress_version }}\n${{ github.event.inputs.php_version }}\n\n" | pnpm run-canonical-extensions-tests
+            printf "${{ github.event.inputs.fincommerce_version }}\n${{ github.event.inputs.finpress_version }}\n${{ github.event.inputs.php_version }}\n\n" | pnpm run-canonical-extensions-tests

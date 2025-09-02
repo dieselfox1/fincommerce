@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen, act } from '@testing-library/react';
-import { addFilter, removeFilter } from '@wordpress/hooks';
+import { addFilter, removeFilter } from '@finpress/hooks';
 import { recordPageView } from '@fincommerce/tracks';
 import * as navigation from '@fincommerce/navigation';
 
@@ -12,8 +12,8 @@ import * as navigation from '@fincommerce/navigation';
 import { PAGES_FILTER } from '../controller';
 import { _Layout as Layout } from '../index';
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn().mockImplementation( ( callback ) => {
 		const selector = {
 			getActivePlugins: jest.fn().mockReturnValue( [] ),

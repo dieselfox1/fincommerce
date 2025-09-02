@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createContext, useCallback, useState } from '@wordpress/element';
+import { createContext, useCallback, useState } from '@finpress/element';
 import clsx from 'clsx';
 
 /**

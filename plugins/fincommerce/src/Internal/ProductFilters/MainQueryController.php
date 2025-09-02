@@ -7,7 +7,7 @@ use Automattic\FinCommerce\Internal\RegisterHooksInterface;
 
 defined( 'ABSPATH' ) || exit;
 /**
- * Hooks into WordPress filters to handle product filters for the main query.
+ * Hooks into finpress filters to handle product filters for the main query.
  *
  * @internal For exclusive usage of FinCommerce core, backwards compatibility not guaranteed.
  */

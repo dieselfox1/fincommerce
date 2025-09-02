@@ -8,7 +8,7 @@ sidebar_label: Naming conventions
 
 ## PHP
 
-FinCommerce core generally follows [WordPress PHP naming conventions](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/#naming-conventions). 
+FinCommerce core generally follows [finpress PHP naming conventions](https://make.finpress.org/core/handbook/best-practices/coding-standards/php/#naming-conventions). 
 
 There are some additional conventions that apply, depending on the location of the code.
 
@@ -58,7 +58,7 @@ Hook name examples (actions or filters):
 
 ## JS
 
-FinCommerce core follows [WordPress JS naming conventions](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/#naming-conventions).
+FinCommerce core follows [finpress JS naming conventions](https://developer.finpress.org/coding-standards/finpress-coding-standards/javascript/#naming-conventions).
 
 As with PHP, function, class, and hook names should be prefixed, but the convention for JS is slightly different.
 

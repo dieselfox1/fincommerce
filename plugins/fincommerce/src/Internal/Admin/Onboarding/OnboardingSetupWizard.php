@@ -76,7 +76,7 @@ class OnboardingSetupWizard {
 			return \wc_is_running_from_async_action_scheduler();
 		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		return isset( $_REQUEST['action'] ) && 'as_async_request_queue_runner' === $_REQUEST['action'];
 	}
 
@@ -96,11 +96,11 @@ class OnboardingSetupWizard {
 		// phpcs:ignore FinCommerce.Commenting.CommentHooks.MissingHookComment
 		if ( get_transient( '_wc_activation_redirect' ) && apply_filters( 'fincommerce_enable_setup_wizard', true ) ) {
 			$do_redirect        = true;
-			$current_page       = isset( $_GET['page'] ) ? wc_clean( wp_unslash( $_GET['page'] ) ) : false; // phpcs:ignore WordPress.Security.NonceVerification
-			$is_onboarding_path = ! isset( $_GET['path'] ) || '/setup-wizard' === wc_clean( wp_unslash( $_GET['page'] ) ); // phpcs:ignore WordPress.Security.NonceVerification
+			$current_page       = isset( $_GET['page'] ) ? wc_clean( wp_unslash( $_GET['page'] ) ) : false; // phpcs:ignore finpress.Security.NonceVerification
+			$is_onboarding_path = ! isset( $_GET['path'] ) || '/setup-wizard' === wc_clean( wp_unslash( $_GET['page'] ) ); // phpcs:ignore finpress.Security.NonceVerification
 
 			// On these pages, or during these events, postpone the redirect.
-			// phpcs:ignore WordPress.WP.Capabilities.Unknown
+			// phpcs:ignore finpress.WP.Capabilities.Unknown
 			if ( wp_doing_ajax() || is_network_admin() || ! current_user_can( 'manage_fincommerce' ) ) {
 				$do_redirect = false;
 			}
@@ -110,7 +110,7 @@ class OnboardingSetupWizard {
 				( 'wc-admin' === $current_page && $is_onboarding_path ) ||
 				// phpcs:ignore FinCommerce.Commenting.CommentHooks.MissingHookComment
 				apply_filters( 'fincommerce_prevent_automatic_wizard_redirect', false ) ||
-				isset( $_GET['activate-multi'] ) // phpcs:ignore WordPress.Security.NonceVerification
+				isset( $_GET['activate-multi'] ) // phpcs:ignore finpress.Security.NonceVerification
 			) {
 				delete_transient( '_wc_activation_redirect' );
 				$do_redirect = false;
@@ -179,7 +179,7 @@ class OnboardingSetupWizard {
 	 * @return bool
 	 */
 	private function is_setup_wizard() {
-		/* phpcs:disable WordPress.Security.NonceVerification */
+		/* phpcs:disable finpress.Security.NonceVerification */
 		return isset( $_GET['page'] ) &&
 			'wc-admin' === $_GET['page'] &&
 			isset( $_GET['path'] ) &&
@@ -193,7 +193,7 @@ class OnboardingSetupWizard {
 	 * @return bool
 	 */
 	private function is_homepage() {
-		/* phpcs:disable WordPress.Security.NonceVerification */
+		/* phpcs:disable finpress.Security.NonceVerification */
 		return isset( $_GET['page'] ) &&
 			'wc-admin' === $_GET['page'] &&
 			! isset( $_GET['path'] );
@@ -277,7 +277,7 @@ class OnboardingSetupWizard {
 	 * @return array
 	 */
 	public function add_loading_classes( $classes ) {
-		/* phpcs:disable WordPress.Security.NonceVerification */
+		/* phpcs:disable finpress.Security.NonceVerification */
 		if ( $this->is_setup_wizard() ) {
 			$classes .= ' fincommerce-admin-full-screen';
 		}

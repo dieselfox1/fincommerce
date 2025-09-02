@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { useState } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { LoadError } from '@stripe/connect-js';
 
 /**

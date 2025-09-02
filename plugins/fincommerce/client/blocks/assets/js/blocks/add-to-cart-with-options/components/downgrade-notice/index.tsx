@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
-import { createBlock } from '@wordpress/blocks';
-import { dispatch, select } from '@wordpress/data';
+import { createBlock } from '@finpress/blocks';
+import { dispatch, select } from '@finpress/data';
 import { UpgradeDowngradeNotice } from '@fincommerce/editor-components/upgrade-downgrade-notice';
 import { findBlock } from '@fincommerce/utils';
 

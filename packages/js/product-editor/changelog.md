@@ -140,7 +140,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Add isLoading to useProductMetadata hook
 -   Minor - Load layout templates via the REST API. Note that layout template modifications must now be hooked up in an action that is called when REST API endpoints are handled, such as `rest_api_init`.
 -   Minor - Use different delays for initial click and hold when incrementing number on NumberControl
--   Minor - Use fincommerce's Tooltip component for Label and checkbox instead of wordpress Tooltip
+-   Minor - Use fincommerce's Tooltip component for Label and checkbox instead of finpress Tooltip
 -   Minor - Add slotFill for variation menus #43441
 -   Minor - Modify feedback modal actions #43005
 
@@ -218,7 +218,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Patch - Rename fincommerce/taxonomy-field to fincommerce/product-taxonomy-field [#40021]
 -   Patch - update references to fincommerce.com to now reference woo.com [#41241]
 -   Patch - Fixed some i18n related lint rule violations. [#41450]
--   Patch - Lint fixes for @wordpress/i18n lint rule violation [#41450]
+-   Patch - Lint fixes for @finpress/i18n lint rule violation [#41450]
 -   Patch - Lint fixes [#38523]
 -   Patch - Make eslint emit JSON report for annotating PRs. [#39704]
 -   Patch - Update eslint to 8.32.0 across the monorepo. [#36700]
@@ -247,7 +247,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Fix error displaying block after removing variation #40255 [#40255]
 -   Minor - Fix infinite category loading state [#40073]
 -   Minor - Fix issue with category parent select control clearing search value when typing. [#37574]
--   Minor - Fix positioning of fixed block toolbar in IFrame editor used for product description, to make work with latest WordPress versions. [#39873]
+-   Minor - Fix positioning of fixed block toolbar in IFrame editor used for product description, to make work with latest finpress versions. [#39873]
 -   Minor - Fix styles for attribute list [#40378]
 -   Minor - Fix styles for modals [#38775]
 -   Minor - Fix summary toolbar positioning and selection on blur [#38086]
@@ -445,7 +445,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 -   Minor - Remove confirmation modal for dismissing unsaved attributes or variation options #40500 [#40500]
 -   Minor - Split product editor blocks into 'generic' and 'product-fields' directories [#40571]
 -   Minor - Suppress errant TS lint errors. [#37094]
--   Minor - Sync @wordpress package versions via syncpack. [#37034]
+-   Minor - Sync @finpress package versions via syncpack. [#37034]
 -   Minor - Update block registration calls. [#40722]
 -   Minor - Update copy in the add variation options modal [#40280]
 -   Minor - Update section description design #41251 [#41251]

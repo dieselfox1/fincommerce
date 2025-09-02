@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import * as React from '@wordpress/element';
-import { MenuGroup, MenuItem } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import * as React from '@finpress/element';
+import { MenuGroup, MenuItem } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 
 const CategoryMenu = ( {
 	groupedTags,

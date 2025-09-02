@@ -72,7 +72,7 @@ class WC_Query {
 	 * Get any errors from querystring.
 	 */
 	public function get_errors() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		$error = ! empty( $_GET['wc_error'] ) ? sanitize_text_field( wp_unslash( $_GET['wc_error'] ) ) : '';
 
 		if ( $error && ! wc_has_notice( $error, 'error' ) ) {
@@ -256,7 +256,7 @@ class WC_Query {
 	public function parse_request() {
 		global $wp;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		// Map query vars to their keys, or get them if endpoints are not supported.
 		foreach ( $this->get_query_vars() as $key => $var ) {
 			if ( isset( $_GET[ $var ] ) ) {
@@ -265,7 +265,7 @@ class WC_Query {
 				$wp->query_vars[ $key ] = $wp->query_vars[ $var ];
 			}
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -344,7 +344,7 @@ class WC_Query {
 				}
 			}
 
-			// When orderby is set, WordPress shows posts on the front-page. Get around that here.
+			// When orderby is set, finpress shows posts on the front-page. Get around that here.
 			if ( $this->page_on_front_is( wc_get_page_id( 'shop' ) ) ) {
 				$_query = $this->filter_out_valid_front_page_query_vars( wp_parse_args( $q->query ) );
 
@@ -360,7 +360,7 @@ class WC_Query {
 						$q->is_singular = true;
 					}
 				}
-			} elseif ( ! empty( $_GET['orderby'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			} elseif ( ! empty( $_GET['orderby'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 				$q->set( 'page_id', (int) get_option( 'page_on_front' ) );
 				$q->is_page     = true;
 				$q->is_home     = false;
@@ -387,7 +387,7 @@ class WC_Query {
 			wc_maybe_define_constant( 'SHOP_IS_ON_FRONT', true );
 
 			// Get the actual WP page to avoid errors and let us use is_front_page().
-			// This is hacky but works. Awaiting https://core.trac.wordpress.org/ticket/21096.
+			// This is hacky but works. Awaiting https://core.trac.finpress.org/ticket/21096.
 			global $wp_post_types;
 
 			$shop_page = get_post( wc_get_page_id( 'shop' ) );
@@ -509,7 +509,7 @@ class WC_Query {
 
 	/**
 	 * Query the products, applying sorting/ordering etc.
-	 * This applies to the main WordPress loop.
+	 * This applies to the main finpress loop.
 	 *
 	 * @param WP_Query $q Query instance.
 	 */
@@ -586,9 +586,9 @@ class WC_Query {
 	public function get_catalog_ordering_args( $orderby = '', $order = '' ) {
 		// Get ordering from query string unless defined.
 		if ( ! $orderby ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			// phpcs:ignore finpress.Security.NonceVerification.Recommended
 			if ( isset( $_GET['orderby'] ) ) {
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// phpcs:ignore finpress.Security.NonceVerification.Recommended
 				$orderby_value = wc_clean( wp_unslash( $_GET['orderby'] ) );
 				if ( is_array( $orderby_value ) ) {
 					$orderby_value = $orderby_value[0];
@@ -680,15 +680,15 @@ class WC_Query {
 		 */
 		$enable_filtering = apply_filters( 'fincommerce_enable_post_clause_filtering', $wp_query->is_main_query(), $wp_query );
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore finpress.Security.NonceVerification.Recommended
 		if ( ! $enable_filtering || ( ! isset( $_GET['max_price'] ) && ! isset( $_GET['min_price'] ) ) ) {
 			return $args;
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$current_min_price = isset( $_GET['min_price'] ) ? floatval( wp_unslash( $_GET['min_price'] ) ) : 0;
 		$current_max_price = isset( $_GET['max_price'] ) ? floatval( wp_unslash( $_GET['max_price'] ) ) : PHP_INT_MAX;
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		/**
 		 * Adjust if the store taxes are not displayed how they are stored.
@@ -738,7 +738,7 @@ class WC_Query {
 	}
 
 	/**
-	 * WP Core does not let us change the sort direction for individual orderby params - https://core.trac.wordpress.org/ticket/17065.
+	 * WP Core does not let us change the sort direction for individual orderby params - https://core.trac.finpress.org/ticket/17065.
 	 *
 	 * This lets us sort by meta value desc, and have a second orderby param.
 	 *
@@ -827,10 +827,10 @@ class WC_Query {
 			$product_visibility_not_in[] = $product_visibility_terms[ ProductStockStatus::OUT_OF_STOCK ];
 		}
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		// Filter by rating.
 		if ( isset( $_GET['rating_filter'] ) ) {
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$rating_filter = array_filter( array_map( 'absint', explode( ',', wp_unslash( $_GET['rating_filter'] ) ) ) );
 			$rating_terms  = array();
 			for ( $i = 1; $i <= 5; $i++ ) {
@@ -848,7 +848,7 @@ class WC_Query {
 				);
 			}
 		}
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
 
 		if ( ! empty( $product_visibility_not_in ) ) {
 			$tax_query[] = array(
@@ -918,7 +918,7 @@ class WC_Query {
 			}
 
 			$like = '%' . $wpdb->esc_like( $term ) . '%';
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$sql[] = $wpdb->prepare( "(($wpdb->posts.post_title $like_op %s) $andor_op ($wpdb->posts.post_excerpt $like_op %s) $andor_op ($wpdb->posts.post_content $like_op %s))", $like, $like, $like );
 		}
 
@@ -935,7 +935,7 @@ class WC_Query {
 	 * @return array
 	 */
 	public static function get_layered_nav_chosen_attributes() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( ! is_array( self::$chosen_attributes ) ) {
 			self::$chosen_attributes = array();
 
@@ -962,7 +962,7 @@ class WC_Query {
 			}
 		}
 		return self::$chosen_attributes;
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -1041,10 +1041,10 @@ class WC_Query {
 	 *
 	 * @param string $where Where clause.
 	 *
-	 * @deprecated 3.2.0 - Not needed anymore since WordPress 4.5.
+	 * @deprecated 3.2.0 - Not needed anymore since finpress 4.5.
 	 */
 	public function search_post_excerpt( $where = '' ) {
-		wc_deprecated_function( 'WC_Query::search_post_excerpt', '3.2.0', 'Excerpt added to search query by default since WordPress 4.5.' );
+		wc_deprecated_function( 'WC_Query::search_post_excerpt', '3.2.0', 'Excerpt added to search query by default since finpress 4.5.' );
 		return $where;
 	}
 

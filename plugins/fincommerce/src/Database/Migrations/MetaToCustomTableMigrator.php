@@ -6,7 +6,7 @@
 namespace Automattic\FinCommerce\Database\Migrations;
 
 /**
- * Base class for implementing migrations from the standard WordPress meta table
+ * Base class for implementing migrations from the standard finpress meta table
  * to custom structured tables.
  *
  * @package Automattic\FinCommerce\Database\Migrations
@@ -121,7 +121,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 
 		list( $value_sql, $column_sql ) = $this->generate_column_clauses( array_merge( $this->core_column_mapping, $this->meta_column_mapping ), $batch );
 
-		return "INSERT INTO $table (`$column_sql`) VALUES $value_sql;"; // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, -- $insert_query is hardcoded, $value_sql is already escaped.
+		return "INSERT INTO $table (`$column_sql`) VALUES $value_sql;"; // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, -- $insert_query is hardcoded, $value_sql is already escaped.
 	}
 
 	/**
@@ -201,7 +201,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 				if ( ! isset( $row[ $column ] ) || is_null( $row[ $column ] ) ) {
 					$row_values[] = 'NULL';
 				} else {
-					// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- $placeholders is a placeholder.
+					// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.NotPrepared -- $placeholders is a placeholder.
 					$row_values[] = $wpdb->prepare( $placeholders[ $index ], $row[ $column ] );
 				}
 			}
@@ -299,7 +299,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 		}
 
 		$queries = $this->generate_insert_sql_for_batch( $batch );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Queries should already be prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Queries should already be prepared.
 		$processed_rows_count = $this->db_query( $queries );
 		$this->maybe_add_insert_or_update_error( 'insert', $processed_rows_count );
 	}
@@ -316,7 +316,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 		}
 
 		$queries = $this->generate_update_sql_for_batch( $batch, $ids_mapping );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Queries should already be prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Queries should already be prepared.
 		$processed_rows_count = $this->db_query( $queries ) / 2;
 		$this->maybe_add_insert_or_update_error( 'update', $processed_rows_count );
 	}
@@ -347,7 +347,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 		}
 
 		$entity_table_query = $this->build_entity_table_query( $entity_ids );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Output of $this->build_entity_table_query is already prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Output of $this->build_entity_table_query is already prepared.
 		$entity_data = $this->db_get_results( $entity_table_query );
 		if ( empty( $entity_data ) ) {
 			return array(
@@ -358,7 +358,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 		$entity_meta_rel_ids = array_column( $entity_data, 'entity_meta_rel_id' );
 
 		$meta_table_query = $this->build_meta_data_query( $entity_meta_rel_ids );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Output of $this->build_meta_data_query is already prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- Output of $this->build_meta_data_query is already prepared.
 		$meta_data = $this->db_get_results( $meta_table_query );
 
 		return $this->process_and_sanitize_data( $entity_data, $meta_data );
@@ -396,7 +396,7 @@ abstract class MetaToCustomTableMigrator extends TableMigrator {
 
 		$already_migrated_entity_ids = $this->db_get_results(
 			$wpdb->prepare(
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- All columns and table names are hardcoded.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- All columns and table names are hardcoded.
 				"
 SELECT source.`$source_primary_key_column` as source_id, destination.`$destination_primary_key_column` as destination_id
 FROM `$destination_table` destination
@@ -446,7 +446,7 @@ WHERE source.`$source_primary_key_column` IN ( $entity_id_placeholder ) $additio
 			}
 		}
 		$entity_column_string = implode( ', ', $entity_keys );
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $source_meta_rel_id_column, $source_destination_rel_id_column etc is escaped for backticks. $where clause and $order_by should already be escaped.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $source_meta_rel_id_column, $source_destination_rel_id_column etc is escaped for backticks. $where clause and $order_by should already be escaped.
 		$query = $wpdb->prepare(
 			"
 SELECT
@@ -483,7 +483,7 @@ WHERE $where_clause;
 		$meta_column_string = implode( ', ', array_fill( 0, count( $meta_keys ), '%s' ) );
 		$entity_id_string   = implode( ', ', array_fill( 0, count( $entity_ids ), '%d' ) );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $meta_table_relational_key, $meta_key_column, $meta_value_column and $meta_table is escaped for backticks. $entity_id_string and $meta_column_string are placeholders.
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $meta_table_relational_key, $meta_key_column, $meta_value_column and $meta_table is escaped for backticks. $entity_id_string and $meta_column_string are placeholders.
 		$query = $wpdb->prepare(
 			"
 SELECT `$meta_table_relational_key` as entity_id, `$meta_key_column` as meta_key, `$meta_value_column` as meta_value
@@ -626,7 +626,7 @@ WHERE
 	public function verify_migrated_data( array $source_ids ) : array {
 		global $wpdb;
 		$query = $this->build_verification_query( $source_ids );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- $query should already be prepared.
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared -- $query should already be prepared.
 		$results = $wpdb->get_results( $query, ARRAY_A );
 		$results = $this->fill_source_metadata( $results, $source_ids );
 		return $this->verify_data( $results );
@@ -705,7 +705,7 @@ WHERE $where_clause
 		$source_ids_placeholder   = implode( ', ', array_fill( 0, count( $source_ids ), '%d' ) );
 
 		$query = $wpdb->prepare(
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 			"SELECT $meta_entity_id_column as entity_id, $meta_key_column as meta_key, $meta_value_column as meta_value
 			FROM $meta_table
 			WHERE $meta_entity_id_column IN ($source_ids_placeholder)
@@ -715,7 +715,7 @@ WHERE $where_clause
 		);
 		//phpcs:enable
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$meta_data            = $wpdb->get_results( $query, ARRAY_A );
 		$source_metadata_rows = array();
 		foreach ( $meta_data as $meta_datum ) {
@@ -751,7 +751,7 @@ WHERE $where_clause
 		$source_ids_placeholder   = implode( ', ', array_fill( 0, count( $source_ids ), '%d' ) );
 
 		return $wpdb->prepare(
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+			// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 			"$source_table.$source_primary_id_column IN ($source_ids_placeholder)",
 			$source_ids
 		);

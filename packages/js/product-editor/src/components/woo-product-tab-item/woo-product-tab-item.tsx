@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { ReactElement, ReactNode } from 'react';
-import { Slot, Fill, TabPanel } from '@wordpress/components';
-import { createElement, Fragment } from '@wordpress/element';
+import { Slot, Fill, TabPanel } from '@finpress/components';
+import { createElement, Fragment } from '@finpress/element';
 
 /**
  * Internal dependencies

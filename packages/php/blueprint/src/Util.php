@@ -122,7 +122,7 @@ class Util {
 	}
 
 	/**
-	 * Check to see if given string is a valid WordPress plugin slug.
+	 * Check to see if given string is a valid finpress plugin slug.
 	 *
 	 * @param string $slug The slug to be validated.
 	 *

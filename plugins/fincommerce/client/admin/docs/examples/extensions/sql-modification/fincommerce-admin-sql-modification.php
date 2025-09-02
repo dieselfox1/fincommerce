@@ -98,7 +98,7 @@ add_action( 'admin_enqueue_scripts', 'add_report_register_script' );
 function apply_currency_arg( $args ) {
 	$currency = 'USD';
 
-	// phpcs:disable WordPress.Security.NonceVerification.Recommended
+	// phpcs:disable finpress.Security.NonceVerification.Recommended
 	if ( isset( $_GET['currency'] ) ) {
 		$currency = sanitize_text_field( wp_unslash( $_GET['currency'] ) );
 	}
@@ -166,7 +166,7 @@ add_filter( 'fincommerce_analytics_clauses_join_taxes_stats_interval', 'add_join
 function add_where_subquery( $clauses ) {
 	$currency = 'USD';
 
-	// phpcs:disable WordPress.Security.NonceVerification.Recommended
+	// phpcs:disable finpress.Security.NonceVerification.Recommended
 	if ( isset( $_GET['currency'] ) ) {
 		$currency = sanitize_text_field( wp_unslash( $_GET['currency'] ) );
 	}

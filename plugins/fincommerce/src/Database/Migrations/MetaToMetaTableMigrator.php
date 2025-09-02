@@ -6,7 +6,7 @@
 namespace Automattic\FinCommerce\Database\Migrations;
 
 /**
- * Base class for implementing migrations from the standard WordPress meta table
+ * Base class for implementing migrations from the standard finpress meta table
  * to custom meta (key-value pairs) tables.
  *
  * @package Automattic\FinCommerce\Database\Migrations
@@ -158,7 +158,7 @@ abstract class MetaToMetaTableMigrator extends TableMigrator {
 		foreach ( $batch as $entity_id => $rows ) {
 			foreach ( $rows as $meta_key => $meta_details ) {
 
-				// phpcs:disable WordPress.DB.PreparedSQL, WordPress.DB.PreparedSQLPlaceholders
+				// phpcs:disable finpress.DB.PreparedSQL, finpress.DB.PreparedSQLPlaceholders
 				$values[] = $wpdb->prepare(
 					"( $placeholder_string )",
 					array( $meta_details['id'], $entity_id, $meta_key, $meta_details['meta_value'] )
@@ -200,7 +200,7 @@ abstract class MetaToMetaTableMigrator extends TableMigrator {
 						$meta_key,
 						$meta_value,
 					);
-					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders
+					// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders
 					$value_sql = $wpdb->prepare( "$placeholder_string", $query_params );
 					$values[]  = $value_sql;
 				}
@@ -241,7 +241,7 @@ abstract class MetaToMetaTableMigrator extends TableMigrator {
 			}
 
 			if ( ! isset( $to_migrate[ $migrate_row->entity_id ][ $migrate_row->meta_key ] ) ) {
-				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+				// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_key
 				$to_migrate[ $migrate_row->entity_id ][ $migrate_row->meta_key ] = array();
 			}
 
@@ -270,7 +270,7 @@ abstract class MetaToMetaTableMigrator extends TableMigrator {
 		$entity_id_type_placeholder = MigrationHelper::get_wpdb_placeholder_for_type( $this->schema_config['destination']['meta']['entity_id_type'] );
 		$entity_ids_placeholder     = implode( ',', array_fill( 0, count( $entity_ids ), $entity_id_type_placeholder ) );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 		$data_already_migrated = $this->db_get_results(
 			$wpdb->prepare(
 				"
@@ -294,7 +294,7 @@ WHERE destination.$destination_entity_id_column in ( $entity_ids_placeholder ) O
 				$already_migrated[ $migrate_row->entity_id ] = array();
 			}
 
-			// phpcs:disable WordPress.DB.SlowDBQuery.slow_db_query_meta_key, WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+			// phpcs:disable finpress.DB.SlowDBQuery.slow_db_query_meta_key, finpress.DB.SlowDBQuery.slow_db_query_meta_value
 			if ( ! isset( $already_migrated[ $migrate_row->entity_id ][ $migrate_row->meta_key ] ) ) {
 				$already_migrated[ $migrate_row->entity_id ][ $migrate_row->meta_key ] = array();
 			}
@@ -341,7 +341,7 @@ WHERE destination.$destination_entity_id_column in ( $entity_ids_placeholder ) O
 						}
 						$to_update[ $entity_id ][ $meta_key ] = array(
 							'id'         => $already_migrated[ $entity_id ][ $meta_key ][0]['id'],
-							// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+							// phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 							'meta_value' => $meta_values[0],
 						);
 						continue;
@@ -386,12 +386,12 @@ WHERE destination.$destination_entity_id_column in ( $entity_ids_placeholder ) O
 
 		if ( isset( $this->schema_config['source']['excluded_keys'] ) && is_array( $this->schema_config['source']['excluded_keys'] ) ) {
 			$key_placeholder = implode( ',', array_fill( 0, count( $this->schema_config['source']['excluded_keys'] ), '%s' ) );
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $source_meta_key_column is escaped for backticks, $key_placeholder is hardcoded.
+			// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- $source_meta_key_column is escaped for backticks, $key_placeholder is hardcoded.
 			$exclude_clause = $wpdb->prepare( "source.$source_meta_key_column NOT IN ( $key_placeholder )", $this->schema_config['source']['excluded_keys'] );
 			$where_clause   = "$where_clause AND $exclude_clause";
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 		return $wpdb->prepare(
 			"
 SELECT

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store } from '@wordpress/interactivity';
+import { store } from '@finpress/interactivity';
 import { HTMLElementEvent } from '@fincommerce/types';
 
 const getInputElementFromEvent = (

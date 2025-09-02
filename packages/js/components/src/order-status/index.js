@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 

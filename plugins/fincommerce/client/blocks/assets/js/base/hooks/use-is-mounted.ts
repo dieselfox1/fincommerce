@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useCallback, useEffect, useRef } from '@wordpress/element';
+import { useCallback, useEffect, useRef } from '@finpress/element';
 
 /**
  * Returns a boolean value based on whether the current component has been mounted.

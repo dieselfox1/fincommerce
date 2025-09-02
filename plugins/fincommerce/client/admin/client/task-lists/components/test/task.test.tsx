@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, act } from '@testing-library/react';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import userEvent from '@testing-library/user-event';
 import { getHistory } from '@fincommerce/navigation';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
@@ -37,9 +37,9 @@ const task: TaskType = {
  */
 import { Task } from '../task';
 
-jest.mock( '@wordpress/data', () => {
+jest.mock( '@finpress/data', () => {
 	// Require the original module to not be mocked...
-	const originalModule = jest.requireActual( '@wordpress/data' );
+	const originalModule = jest.requireActual( '@finpress/data' );
 
 	return {
 		__esModule: true, // Use it when dealing with esModules

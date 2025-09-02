@@ -7,14 +7,14 @@ import {
 	useReducer,
 	useMemo,
 	useEffect,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { useShallowEqual } from '@fincommerce/base-hooks';
 import {
 	productIsPurchasable,
 	productSupportsAddToCartForm,
 } from '@fincommerce/base-utils';
-import { useDispatch } from '@wordpress/data';
+import { useDispatch } from '@finpress/data';
 import { VALIDATION_STORE_KEY } from '@fincommerce/block-data';
 import { isErrorResponse, isFailResponse } from '@fincommerce/types';
 

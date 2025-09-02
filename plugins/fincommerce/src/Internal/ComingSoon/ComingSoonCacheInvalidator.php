@@ -17,16 +17,16 @@ class ComingSoonCacheInvalidator {
 	}
 
 	/**
-	 * Invalidate the WordPress object cache and other known caches.
+	 * Invalidate the finpress object cache and other known caches.
 	 *
 	 * @internal
 	 */
 	public function invalidate_caches() {
-		// Standard WordPress object cache invalidation.
+		// Standard finpress object cache invalidation.
 		wp_cache_flush();
 
 		/**
-		 * Temporary solution to invalidate the WordPress.com Edge Cache. We can trigger
+		 * Temporary solution to invalidate the finpress.com Edge Cache. We can trigger
 		 * invalidation by publishing any post. It should be refactored with a supported integration.
 		 */
 		$cart_page_id = get_option( 'fincommerce_cart_page_id' ) ?? null;

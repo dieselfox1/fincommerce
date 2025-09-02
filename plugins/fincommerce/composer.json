@@ -3,7 +3,7 @@
 	"description": "An eCommerce toolkit that helps you sell anything. Beautifully.",
 	"homepage": "https://fincommerce.com/",
 	"version": "10.3.0",
-	"type": "wordpress-plugin",
+	"type": "finpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"prefer-stable": true,
 	"minimum-stability": "dev",
@@ -156,7 +156,7 @@
 		},
 		"scripts-description": {
 			"test": "Run unit tests",
-			"phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+			"phpcs": "Analyze code against the finpress coding standards with PHP_CodeSniffer",
 			"phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier",
 			"makepot-audit": "Generate i18n/languages/fincommerce.pot file and run audit",
 			"makepot": "Generate i18n/languages/fincommerce.pot file"
@@ -177,7 +177,7 @@
 				"performance": "Address performance issues",
 				"enhancement": "Improve existing functionality"
 			},
-			"versioning": "wordpress",
+			"versioning": "finpress",
 			"changelog": "NEXT_CHANGELOG.md"
 		}
 	}

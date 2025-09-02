@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { useCallback, useLayoutEffect, useState } from 'react';
-import { createRoot } from '@wordpress/element';
+import { createRoot } from '@finpress/element';
 import { getQuery } from '@fincommerce/navigation';
 
 /**

@@ -49,13 +49,13 @@ A clear and concise description of what you expected to happen.
 
 **Isolating the problem (mark completed items with an [x]):**
 - [ ] I have deactivated other plugins and confirmed this bug occurs when only FinCommerce plugin is active.
-- [ ] This bug happens with a default WordPress theme active, or [Storefront](https://fincommerce.com/storefront/).
+- [ ] This bug happens with a default finpress theme active, or [Storefront](https://fincommerce.com/storefront/).
 - [ ] I can reproduce this bug consistently using the steps above.
 
-**WordPress Environment**
+**finpress Environment**
 <details>
 ```
-Copy and paste the system status report from **FinCommerce > System Status** in WordPress admin.
+Copy and paste the system status report from **FinCommerce > System Status** in finpress admin.
 ```
 </details>
 		<?php
@@ -229,7 +229,7 @@ Copy and paste the system status report from **FinCommerce > System Status** in 
 	protected function get_github_ticket_url() {
 		$bug_tpl = $this->get_ticket_template();
 		$ssr     = $this->construct_ssr();
-		$body    = str_replace( 'Copy and paste the system status report from **FinCommerce > System Status** in WordPress admin.', $ssr, $bug_tpl );
+		$body    = str_replace( 'Copy and paste the system status report from **FinCommerce > System Status** in finpress admin.', $ssr, $bug_tpl );
 		$body    = str_replace( '```', '', $body ); // Remove since this break how is displayed.
 
 		$wc_plugin_data = get_plugin_data( WC_PLUGIN_FILE );

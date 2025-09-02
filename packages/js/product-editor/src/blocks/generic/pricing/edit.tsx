@@ -5,13 +5,13 @@ import { useWooBlockProps } from '@fincommerce/block-templates';
 import { Link } from '@fincommerce/components';
 import { getNewPath } from '@fincommerce/navigation';
 import { recordEvent } from '@fincommerce/tracks';
-import { useInstanceId } from '@wordpress/compose';
-import { createElement, createInterpolateElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useInstanceId } from '@finpress/compose';
+import { createElement, createInterpolateElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	BaseControl,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

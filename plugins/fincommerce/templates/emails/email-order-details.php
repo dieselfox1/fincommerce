@@ -83,7 +83,7 @@ do_action( 'fincommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		<tbody>
 			<?php
 			$image_size = $email_improvements_enabled ? 48 : 32;
-			echo wc_get_email_order_items( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo wc_get_email_order_items( // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 				$order,
 				array(
 					'show_sku'      => $sent_to_admin,

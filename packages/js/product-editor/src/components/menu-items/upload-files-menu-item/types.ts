@@ -4,8 +4,8 @@
 import {
 	FormFileUpload,
 	MenuItem as DropdownMenuItem,
-} from '@wordpress/components';
-import { MediaItem, UploadMediaOptions } from '@wordpress/media-utils';
+} from '@finpress/components';
+import { MediaItem, UploadMediaOptions } from '@finpress/media-utils';
 import { MediaUploaderErrorCallback } from '@fincommerce/components';
 
 export type UploadFilesMenuItemProps = Omit<

@@ -3,10 +3,10 @@
  */
 import React from 'react';
 import { Gridicon } from '@automattic/components';
-import { Button, Popover } from '@wordpress/components';
-import { useState, useMemo, useRef } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { decodeEntities } from '@wordpress/html-entities';
+import { Button, Popover } from '@finpress/components';
+import { useState, useMemo, useRef } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
 import {
 	PaymentsEntity,
 	SuggestedPaymentsExtension,

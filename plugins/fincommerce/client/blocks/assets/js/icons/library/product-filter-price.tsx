@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG, Path, Circle } from '@wordpress/primitives';
+import { SVG, Path, Circle } from '@finpress/primitives';
 
 const productFilterPrice = () => (
 	<SVG

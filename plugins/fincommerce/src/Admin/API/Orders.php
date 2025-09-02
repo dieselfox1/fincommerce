@@ -80,7 +80,7 @@ class Orders extends \WC_REST_Orders_Controller {
 		$limit          = intval( $args['posts_per_page'] );
 		if ( OrderUtil::custom_orders_table_usage_is_enabled() ) {
 			$order_table_name = OrdersTableDataStore::get_orders_table_name();
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- $orders_table_name is hardcoded.
+			// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared -- $orders_table_name is hardcoded.
 			$order_ids = $wpdb->get_col(
 				$wpdb->prepare(
 					"SELECT id
@@ -126,7 +126,7 @@ class Orders extends \WC_REST_Orders_Controller {
 		$order_itemmeta_table = $wpdb->prefix . 'fincommerce_order_itemmeta';
 		$products             = $wpdb->get_results(
 			$wpdb->prepare(
-				// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT
 				order_id,
 				order_itemmeta.meta_value as product_id,
@@ -144,7 +144,7 @@ class Orders extends \WC_REST_Orders_Controller {
 				AND order_itemmeta_2.meta_key = '_qty'
 			  	AND order_itemmeta_3.meta_key = '_variation_id'
 			GROUP BY product_id
-			", // phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			", // phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				$order_id
 			),
 			ARRAY_A
@@ -166,7 +166,7 @@ class Orders extends \WC_REST_Orders_Controller {
 
 		$customer = $wpdb->get_row(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT * FROM {$customer_lookup_table} WHERE customer_id = ( %d )",
 				$customer_id
 			),

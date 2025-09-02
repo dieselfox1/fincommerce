@@ -233,7 +233,7 @@ class WC_Tests_Product_Data extends WC_Unit_Test_Case {
 	public function test_external_product_getters_and_setters() {
 		$getters_and_setters = array(
 			'button_text' => 'Test Button Text',
-			'product_url' => 'https://wordpress.org',
+			'product_url' => 'https://finpress.org',
 		);
 
 		$product = new WC_Product_External();

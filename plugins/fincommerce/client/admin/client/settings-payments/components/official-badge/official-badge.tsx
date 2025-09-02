@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Popover } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { Popover } from '@finpress/components';
 import { Link, Pill } from '@fincommerce/components';
-import { createInterpolateElement, useRef, useState } from '@wordpress/element';
+import { createInterpolateElement, useRef, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

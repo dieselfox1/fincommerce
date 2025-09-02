@@ -2,10 +2,10 @@
  * External dependencies
  */
 import type { ComponentProps } from 'react';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 import clsx from 'clsx';
-import { Button, Dropdown, NavigableMenu } from '@wordpress/components';
-import { Icon } from '@wordpress/icons';
+import { Button, Dropdown, NavigableMenu } from '@finpress/components';
+import { Icon } from '@finpress/icons';
 import Ellipsis from 'gridicons/dist/ellipsis';
 import { MouseEvent, KeyboardEvent, ReactNode } from 'react';
 

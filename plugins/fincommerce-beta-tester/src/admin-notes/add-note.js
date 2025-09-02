@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
-import { Button, SelectControl } from '@wordpress/components';
-import apiFetch from '@wordpress/api-fetch';
+import { useState } from '@finpress/element';
+import { Button, SelectControl } from '@finpress/components';
+import apiFetch from '@finpress/api-fetch';
 
 export const AddNote = () => {
 	const [ isAdding, setIsAdding ] = useState( false );

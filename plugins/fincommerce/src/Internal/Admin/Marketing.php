@@ -217,7 +217,7 @@ class Marketing {
 
 		$new_menu_order = array_merge( $new_menu_order, $marketing_submenu );
 
-		$submenu['fincommerce-marketing'] = $new_menu_order;  //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$submenu['fincommerce-marketing'] = $new_menu_order;  //phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 	}
 
 	/**

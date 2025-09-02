@@ -336,7 +336,7 @@ abstract class WP_Background_Process extends WP_Async_Request {
 	 * Memory exceeded
 	 *
 	 * Ensures the batch process never exceeds 90%
-	 * of the maximum WordPress memory.
+	 * of the maximum finpress memory.
 	 *
 	 * @return bool
 	 */

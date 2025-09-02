@@ -1,6 +1,6 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 export const defaultButtonLabel = __( 'Proceed to Checkout', 'fincommerce' );

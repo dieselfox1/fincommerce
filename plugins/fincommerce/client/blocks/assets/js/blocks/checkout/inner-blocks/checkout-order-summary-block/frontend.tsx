@@ -4,9 +4,9 @@
 import { TotalsFooterItem } from '@fincommerce/base-components/cart-checkout';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import { useStoreCart } from '@fincommerce/base-context/hooks';
-import { __ } from '@wordpress/i18n';
-import { Icon, chevronDown, chevronUp } from '@wordpress/icons';
-import { useId, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { Icon, chevronDown, chevronUp } from '@finpress/icons';
+import { useId, useState } from '@finpress/element';
 import clsx from 'clsx';
 /**
  * Internal dependencies

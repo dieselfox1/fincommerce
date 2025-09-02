@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { PanelBody } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { PanelBody } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import GridLayoutControl from '@fincommerce/editor-components/grid-layout-control';
 import { getSetting } from '@fincommerce/settings';
 import GridContentControl from '@fincommerce/editor-components/grid-content-control';
 import ProductAttributeTermControl from '@fincommerce/editor-components/product-attribute-term-control';
 import ProductOrderbyControl from '@fincommerce/editor-components/product-orderby-control';
 import ProductStockControl from '@fincommerce/editor-components/product-stock-control';
-import { InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls } from '@finpress/block-editor';
 
 /**
  * Internal dependencies

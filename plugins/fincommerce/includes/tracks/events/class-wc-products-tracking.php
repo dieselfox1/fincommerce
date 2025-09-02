@@ -49,7 +49,7 @@ class WC_Products_Tracking {
 		//
 		// Otherwise, we would double-record the view and search events.
 
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 		if (
 			isset( $_GET['post_type'] )
 			&& 'product' === wp_unslash( $_GET['post_type'] )
@@ -59,7 +59,7 @@ class WC_Products_Tracking {
 
 			WC_Tracks::record_event( 'products_view' );
 
-			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+			// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 			if (
 				isset( $_GET['s'] )
 				&& 0 < strlen( sanitize_text_field( wp_unslash( $_GET['s'] ) ) )
@@ -81,7 +81,7 @@ class WC_Products_Tracking {
 		//
 		// Otherwise, we would double-record the view and search events.
 
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 		if (
 			isset( $_GET['post_type'] )
 			&& 'product' === wp_unslash( $_GET['post_type'] )
@@ -97,7 +97,7 @@ class WC_Products_Tracking {
 				WC_Tracks::record_event( 'tags_view' );
 			}
 
-			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+			// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 			if (
 				isset( $_GET['s'] )
 				&& 0 < strlen( sanitize_text_field( wp_unslash( $_GET['s'] ) ) )
@@ -117,7 +117,7 @@ class WC_Products_Tracking {
 	 * Send a Tracks event when a product is updated.
 	 *
 	 * @param int    $product_id Product id.
-	 * @param object $post       WordPress post.
+	 * @param object $post       finpress post.
 	 */
 	public function track_product_updated( $product_id, $post ) {
 		if ( 'product' !== $post->post_type ) {
@@ -358,7 +358,7 @@ class WC_Products_Tracking {
 	 * @param int $category_id Category ID.
 	 */
 	public function track_product_category_created( $category_id ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:disable finpress.Security.NonceVerification.Missing, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		// Only track category creation from the edit product screen or the
 		// category management screen (which both occur via AJAX).
 		if (
@@ -401,7 +401,7 @@ class WC_Products_Tracking {
 	 * @param int $category_id Category ID.
 	 */
 	public function track_product_category_updated( $category_id ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		// Only track category creation from the edit product screen or the
 		// category management screen (which both occur via AJAX).
 		if (
@@ -422,7 +422,7 @@ class WC_Products_Tracking {
 	 * @return string|boolean
 	 */
 	protected function get_product_screen( $hook ) {
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 		if (
 			'edit.php' === $hook &&
 			isset( $_GET['post_type'] ) &&
@@ -499,7 +499,7 @@ class WC_Products_Tracking {
 	 * @param string $hook Page hook.
 	 */
 	public function possibly_add_attribute_tracking_scripts( $hook ) {
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 		if (
 			'product_page_product_attributes' !== $hook ||
 			! isset( $_GET['page'] ) ||
@@ -518,7 +518,7 @@ class WC_Products_Tracking {
 	 * @param string $hook Page hook.
 	 */
 	public function possibly_add_tag_tracking_scripts( $hook ) {
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification
 		if (
 			'edit-tags.php' !== $hook ||
 			! isset( $_GET['post_type'] ) ||
@@ -528,7 +528,7 @@ class WC_Products_Tracking {
 		}
 		// phpcs:enable
 
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if (
 			isset( $_GET['taxonomy'] ) &&
 			'product_tag' === wp_unslash( $_GET['taxonomy'] )
@@ -537,7 +537,7 @@ class WC_Products_Tracking {
 			return;
 		}
 
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if (
 			isset( $_GET['taxonomy'] ) &&
 			'product_cat' === wp_unslash( $_GET['taxonomy'] )
@@ -554,7 +554,7 @@ class WC_Products_Tracking {
 	 * @return bool True if importing, false otherwise.
 	 */
 	private function is_importing() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		// Check if the current request is a product import.
 		if ( isset( $_POST['action'] ) && 'fincommerce_do_ajax_product_import' === $_POST['action'] ) {
 			return true;

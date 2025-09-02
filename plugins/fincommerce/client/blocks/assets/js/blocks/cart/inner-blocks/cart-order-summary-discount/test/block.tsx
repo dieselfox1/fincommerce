@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, screen } from '@testing-library/react';
-import { SlotFillProvider } from '@wordpress/components';
+import { SlotFillProvider } from '@finpress/components';
 import {
 	useStoreCart,
 	useStoreCartCoupons,

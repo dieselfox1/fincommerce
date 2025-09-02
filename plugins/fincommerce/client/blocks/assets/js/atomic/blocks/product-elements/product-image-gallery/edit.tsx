@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useBlockProps } from '@wordpress/block-editor';
-import { Disabled } from '@wordpress/components';
+import { useBlockProps } from '@finpress/block-editor';
+import { Disabled } from '@finpress/components';
 import { PLACEHOLDER_IMG_SRC } from '@fincommerce/settings';
 
 /**

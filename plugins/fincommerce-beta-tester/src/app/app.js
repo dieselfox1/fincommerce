@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { TabPanel } from '@wordpress/components';
-import { applyFilters } from '@wordpress/hooks';
-import { getQueryArg, addQueryArgs } from '@wordpress/url';
-import { useEffect, useState } from '@wordpress/element';
+import { TabPanel } from '@finpress/components';
+import { applyFilters } from '@finpress/hooks';
+import { getQueryArg, addQueryArgs } from '@finpress/url';
+import { useEffect, useState } from '@finpress/element';
 
 /**
  * Internal dependencies

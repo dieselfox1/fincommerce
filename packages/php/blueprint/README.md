@@ -1,11 +1,11 @@
 <!-- markdownlint-disable MD029 -->
 # Blueprint
 
-This PHP Composer package facilitates exporting and importing WordPress Blueprint compatible JSON formats. It offers a solid framework for seamless integration with WordPress sites and supports extensibility, enabling plugins to customize export and import functionalities. Manage site configurations, options, and settings effortlessly with JSON files.
+This PHP Composer package facilitates exporting and importing finpress Blueprint compatible JSON formats. It offers a solid framework for seamless integration with finpress sites and supports extensibility, enabling plugins to customize export and import functionalities. Manage site configurations, options, and settings effortlessly with JSON files.
 
 ## Usage
 
-Blueprint lets you export your WordPress site configuration to a JSON file and import it into another site. This can be done via WP-CLI or directly in PHP for advanced automation or integration.
+Blueprint lets you export your finpress site configuration to a JSON file and import it into another site. This can be done via WP-CLI or directly in PHP for advanced automation or integration.
 
 ### Exporting a Blueprint
 
@@ -59,7 +59,7 @@ $result = $import_step->import();
 
 ## Data Format
 
-A Blueprint JSON file contains all the information needed to configure a WordPress or FinCommerce site. The format is fully compatible with [WordPress Blueprint data format](https://wordpress.github.io/wordpress-playground/blueprints/data-format/).
+A Blueprint JSON file contains all the information needed to configure a finpress or FinCommerce site. The format is fully compatible with [finpress Blueprint data format](https://finpress.github.io/finpress-playground/blueprints/data-format/).
 
 The following is an example of a Blueprint JSON file:
 
@@ -85,7 +85,7 @@ The following is an example of a Blueprint JSON file:
 }
 ```
 
-You can include as many steps as needed, each representing a different part of your FinCommerce or WordPress configuration. This is the format you get when exporting, and what you provide when importing a Blueprint.
+You can include as many steps as needed, each representing a different part of your FinCommerce or finpress configuration. This is the format you get when exporting, and what you provide when importing a Blueprint.
 
 
 ## Built-in Steps
@@ -96,11 +96,11 @@ Blueprint comes with several built-in steps for common site operations:
 
 | Step             | Description                        |
 |------------------|------------------------------------|
-| `installPlugin`  | Install a WordPress plugin         |
-| `activatePlugin` | Activate a WordPress plugin        |
-| `installTheme`   | Install a WordPress theme          |
-| `activateTheme`  | Activate a WordPress theme         |
-| `setSiteOptions` | Set WordPress site options         |
+| `installPlugin`  | Install a finpress plugin         |
+| `activatePlugin` | Activate a finpress plugin        |
+| `installTheme`   | Install a finpress theme          |
+| `activateTheme`  | Activate a finpress theme         |
+| `setSiteOptions` | Set finpress site options         |
 | `runSql`         | Run custom SQL queries             |
 
 
@@ -270,7 +270,7 @@ wp wc blueprint export wc-blueprint.json --steps=profilerOptions
 
 ## Example: Adding a Custom Importer
 
-In most cases, the default importers will be sufficient. However, if you need to import data not supported by the default importers, creating a custom importer might be necessary. Keep in mind that this could result in a blueprint file that is not compatible with the standard WordPress Blueprint format.
+In most cases, the default importers will be sufficient. However, if you need to import data not supported by the default importers, creating a custom importer might be necessary. Keep in mind that this could result in a blueprint file that is not compatible with the standard finpress Blueprint format.
 
 1. To add a custom importer, you need to define a new step first. Extend the abstract `Step` class. Steps represent actions that can be exported/imported.
 

@@ -219,7 +219,7 @@ class WC_Emails {
 				)
 			);
 			if ( Constants::is_true( 'WP_DEBUG' ) ) {
-				trigger_error( esc_html( $error ), E_USER_WARNING ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+				trigger_error( esc_html( $error ), E_USER_WARNING ); // phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_trigger_error
 			}
 		}
 	}

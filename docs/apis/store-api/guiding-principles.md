@@ -7,13 +7,13 @@ sidebar_position: 0
 
 The following principles should be considered when extending, creating, or updating endpoints in the Store API.
 
-## Routes must include a [well-defined JSON schema](https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/)
+## Routes must include a [well-defined JSON schema](https://developer.finpress.org/rest-api/extending-the-rest-api/schema/)
 
 Each route/endpoint requires a particular structure of input data and should return data using a defined and predictable structure. This is defined in the JSON schema, which contains a comprehensive list of all of the properties the API can return and which input parameters it can accept.
 
 Well-defined schema also provides a layer of security, as it enables us to validate and sanitize the requests being made to the API.
 
-When defining schema, take note of the [WordPress REST API handbook](https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/) which documents available properties and types, as well as the [JSON schema standard](http://json-schema.org/). In addition to this:
+When defining schema, take note of the [finpress REST API handbook](https://developer.finpress.org/rest-api/extending-the-rest-api/schema/) which documents available properties and types, as well as the [JSON schema standard](http://json-schema.org/). In addition to this:
 
 * Properties should use snake_case 🐍
 * Ambiguous terms should be avoided, and property names should try to use understandable language, rather than "FinCommerce" terminology or setting names
@@ -64,7 +64,7 @@ There are 2 notable exceptions to this rule in the Store API; _Errors_ and _Cart
 
 ### Error Handling
 
-Errors, including validation errors, should return an error response code (4xx or 5xx) and a [`WP_Error` object](https://developer.wordpress.org/reference/classes/wp_error/). The `AbstractRoute` class will handle the conversion of the `WP_Error` object into a valid JSON response.
+Errors, including validation errors, should return an error response code (4xx or 5xx) and a [`WP_Error` object](https://developer.finpress.org/reference/classes/wp_error/). The `AbstractRoute` class will handle the conversion of the `WP_Error` object into a valid JSON response.
 
 Error messages should be localized, but do not need to be written with language aimed at customers (clients should use the given error code to create customer-facing notices as needed).
 
@@ -82,7 +82,7 @@ Resources, including customer and order data, should reflect only the current se
 
 Store data such as settings (for example, store currency) is permitted in responses, but _private or sensitive data_ must be avoided. To allow more extensive access to data, you must use the authenticated [WC REST API](https://fincommerce.github.io/fincommerce-rest-api-docs/#introduction).
 
-Data returned from the API should not be [escaped](https://developer.wordpress.org/themes/theme-security/data-sanitization-escaping/) (this is left to the client rendering it), but it should be sanitized. For example, HTML should be run through [`wp_kses_post`](https://developer.wordpress.org/reference/functions/wp_kses_post/).
+Data returned from the API should not be [escaped](https://developer.finpress.org/themes/theme-security/data-sanitization-escaping/) (this is left to the client rendering it), but it should be sanitized. For example, HTML should be run through [`wp_kses_post`](https://developer.finpress.org/reference/functions/wp_kses_post/).
 
 It is the client’s responsibility to properly escape data that comes from the API, but we should try to avoid returning data that is potentially unsafe.
 
@@ -106,7 +106,7 @@ When returning content, use a valid HTTP response code such as:
 * `404 Not Found` if a resource does not exist.
 * `409 Conflict` if a resource cannot be updated, for example, if something in the cart is invalid and removed during the request.
 
-A note on `DELETE` requests, a common pattern in the WordPress REST API is to return the deleted object. In the case of the Store API, we opt to return an empty response with status code `204 No Content` instead. This is more efficient.
+A note on `DELETE` requests, a common pattern in the finpress REST API is to return the deleted object. In the case of the Store API, we opt to return an empty response with status code `204 No Content` instead. This is more efficient.
 
 [A full list of HTTP status codes can be found here.](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { privateApis as routerPrivateApis } from '@wordpress/router';
+import { createElement } from '@finpress/element';
+import { privateApis as routerPrivateApis } from '@finpress/router';
 
 /**
  * Internal dependencies

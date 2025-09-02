@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema for a number.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#numbers
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#numbers
  */
 class Number_Schema extends Schema {
 	/**

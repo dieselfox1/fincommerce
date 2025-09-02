@@ -2,16 +2,16 @@
  * External dependencies
  */
 import type { ForwardedRef } from 'react';
-import apiFetch from '@wordpress/api-fetch';
-import { useDebounce } from '@wordpress/compose';
+import apiFetch from '@finpress/api-fetch';
+import { useDebounce } from '@finpress/compose';
 import {
 	createElement,
 	forwardRef,
 	useCallback,
 	useMemo,
 	useState,
-} from '@wordpress/element';
-import { addQueryArgs } from '@wordpress/url';
+} from '@finpress/element';
+import { addQueryArgs } from '@finpress/url';
 
 /**
  * Internal dependencies

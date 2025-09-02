@@ -145,7 +145,7 @@ function wc_repair_zero_discount_coupons_lookup_table() {
 	$table_name = $wpdb->prefix . 'wc_order_coupon_lookup';
 
 	// Check if table exists.
-	// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+	// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 	if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) !== $table_name ) {
 		return array(
 			'success' => false,
@@ -156,7 +156,7 @@ function wc_repair_zero_discount_coupons_lookup_table() {
 	// Get entries with zero discount_amount.
 	$zero_discount_entries = $wpdb->get_results(
 		$wpdb->prepare(
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			"SELECT order_id, coupon_id FROM $table_name WHERE discount_amount = %f",
 			0.0
 		),

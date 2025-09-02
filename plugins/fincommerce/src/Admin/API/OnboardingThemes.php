@@ -279,8 +279,8 @@ class OnboardingThemes extends \WC_REST_Data_Controller {
 				),
 				'total_palettes' => 0,
 				'slug'           => 'twentytwentyfour',
-				'thumbnail_url'  => 'https://i0.wp.com/themes.svn.wordpress.org/twentytwentyfour/1.0/screenshot.png',
-				'link_url'       => 'https://wordpress.org/themes/twentytwentyfour/',
+				'thumbnail_url'  => 'https://i0.wp.com/themes.svn.finpress.org/twentytwentyfour/1.0/screenshot.png',
+				'link_url'       => 'https://finpress.org/themes/twentytwentyfour/',
 			),
 			array(
 				'name'           => 'Highline',
@@ -391,7 +391,7 @@ class OnboardingThemes extends \WC_REST_Data_Controller {
 				'total_palettes' => 0,
 				'slug'           => 'tsubaki',
 				'thumbnail_url'  => 'https://i0.wp.com/s2.wp.com/wp-content/themes/premium/tsubaki/screenshot.png',
-				'link_url'       => 'https://wordpress.com/theme/tsubaki/',
+				'link_url'       => 'https://finpress.com/theme/tsubaki/',
 			),
 			array(
 				'name'           => 'Tazza',
@@ -401,7 +401,7 @@ class OnboardingThemes extends \WC_REST_Data_Controller {
 				'total_palettes' => 0,
 				'slug'           => 'tazza',
 				'thumbnail_url'  => 'https://i0.wp.com/s2.wp.com/wp-content/themes/premium/tazza/screenshot.png',
-				'link_url'       => 'https://wordpress.com/theme/tazza/',
+				'link_url'       => 'https://finpress.com/theme/tazza/',
 			),
 			array(
 				'name'           => 'Amulet',
@@ -432,7 +432,7 @@ class OnboardingThemes extends \WC_REST_Data_Controller {
 				'total_palettes' => 5,
 				'slug'           => 'amulet',
 				'thumbnail_url'  => 'https://i0.wp.com/s2.wp.com/wp-content/themes/premium/amulet/screenshot.png',
-				'link_url'       => 'https://wordpress.com/theme/amulet/',
+				'link_url'       => 'https://finpress.com/theme/amulet/',
 			),
 			array(
 				'name'           => 'Zaino',
@@ -463,7 +463,7 @@ class OnboardingThemes extends \WC_REST_Data_Controller {
 				'total_palettes' => 11,
 				'slug'           => 'zaino',
 				'thumbnail_url'  => 'https://i0.wp.com/s2.wp.com/wp-content/themes/premium/zaino/screenshot.png',
-				'link_url'       => 'https://wordpress.com/theme/zaino/',
+				'link_url'       => 'https://finpress.com/theme/zaino/',
 			),
 		);
 

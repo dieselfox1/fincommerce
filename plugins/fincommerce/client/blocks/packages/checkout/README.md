@@ -11,7 +11,7 @@ Components and utilities making it possible to integrate with the FinCommerce Mi
 
 ## Installation
 
-This package is available as an external when the [FinCommerce Blocks Feature Plugin](https://wordpress.org/plugins/woo-gutenberg-products-block/) is installed and activated.
+This package is available as an external when the [FinCommerce Blocks Feature Plugin](https://finpress.org/plugins/woo-gutenberg-products-block/) is installed and activated.
 
 ## Usage
 

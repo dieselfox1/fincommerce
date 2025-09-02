@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { Icon, close } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { Icon, close } from '@finpress/icons';
 
 /**
  * Internal dependencies

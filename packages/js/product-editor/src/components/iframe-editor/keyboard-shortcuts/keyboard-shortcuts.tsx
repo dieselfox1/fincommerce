@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useContext } from '@wordpress/element';
-import { useShortcut } from '@wordpress/keyboard-shortcuts';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useContext } from '@finpress/element';
+import { useShortcut } from '@finpress/keyboard-shortcuts';
 import {
 	store as interfaceStore,
 	// @ts-expect-error No types for this exist yet.
-} from '@wordpress/interface';
+} from '@finpress/interface';
 
 /**
  * Internal dependencies

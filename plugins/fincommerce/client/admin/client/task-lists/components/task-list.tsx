@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { useEffect, useRef, useState } from '@wordpress/element';
-import { Card, CardHeader } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { useEffect, useRef, useState } from '@finpress/element';
+import { Card, CardHeader } from '@finpress/components';
+import { useSelect } from '@finpress/data';
 import { Badge } from '@fincommerce/components';
 import {
 	getVisibleTasks,

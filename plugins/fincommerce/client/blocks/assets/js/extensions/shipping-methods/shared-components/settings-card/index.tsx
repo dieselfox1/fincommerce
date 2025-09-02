@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Card, CardBody } from '@wordpress/components';
+import { Card, CardBody } from '@finpress/components';
 import styled from '@emotion/styled';
 import type { ReactNode } from 'react';
 

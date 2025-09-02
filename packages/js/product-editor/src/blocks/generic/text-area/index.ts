@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { postContent } from '@wordpress/icons';
+import { postContent } from '@finpress/icons';
 
 /**
  * Internal dependencies

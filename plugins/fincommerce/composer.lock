@@ -282,7 +282,7 @@
                 "composer",
                 "jetpack",
                 "plugin",
-                "wordpress"
+                "finpress"
             ],
             "support": {
                 "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.0"
@@ -790,7 +790,7 @@
                 "symfony",
                 "tastyigniter",
                 "typo3",
-                "wordpress",
+                "finpress",
                 "yawik",
                 "zend",
                 "zikula"
@@ -1399,11 +1399,11 @@
                 "wp-cli/wp-cli": "~2.5.0",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "type": "wordpress-plugin",
+            "type": "finpress-plugin",
             "extra": {
                 "scripts-description": {
                     "test": "Run unit tests",
-                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcs": "Analyze code against the finpress coding standards with PHP_CodeSniffer",
                     "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
                 }
             },
@@ -1411,7 +1411,7 @@
             "license": [
                 "GPL-3.0-or-later"
             ],
-            "description": "Action Scheduler for WordPress and FinCommerce",
+            "description": "Action Scheduler for finpress and FinCommerce",
             "homepage": "https://actionscheduler.org/",
             "support": {
                 "issues": "https://github.com/dieselfox1/action-scheduler/issues",
@@ -1437,7 +1437,7 @@
                 "dieselfox1/fincommerce-sniffs": "^1.0.0",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "type": "wordpress-plugin",
+            "type": "finpress-plugin",
             "extra": {
                 "changelogger": {
                     "formatter": {
@@ -1502,7 +1502,7 @@
                 "dieselfox1/fincommerce-sniffs": "1.0.0",
                 "yoast/phpunit-polyfills": "^4.0"
             },
-            "type": "wordpress-plugin",
+            "type": "finpress-plugin",
             "extra": {
                 "changelogger": {
                     "formatter": {
@@ -1556,7 +1556,7 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "description": "Email editor based on WordPress Gutenberg package.",
+            "description": "Email editor based on finpress Gutenberg package.",
             "transport-options": {
                 "symlink": false,
                 "relative": true

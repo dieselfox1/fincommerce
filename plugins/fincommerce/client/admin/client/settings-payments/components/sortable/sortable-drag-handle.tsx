@@ -5,8 +5,8 @@ import {
 	type DraggableSyntheticListeners,
 	type DraggableAttributes,
 } from '@dnd-kit/core';
-import { createContext, useContext } from '@wordpress/element';
-import { dragHandle, Icon } from '@wordpress/icons';
+import { createContext, useContext } from '@finpress/element';
+import { dragHandle, Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createElement, Component, Fragment } from '@wordpress/element';
-import { Button } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+import { createElement, Component, Fragment } from '@finpress/element';
+import { Button } from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Icon, upload } from '@wordpress/icons';
+import { Icon, upload } from '@finpress/icons';
 
 class ImageUpload extends Component {
 	constructor() {

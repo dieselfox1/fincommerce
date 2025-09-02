@@ -75,10 +75,10 @@ class WC_Cache_Helper {
 		/*
 		 * If the user is not logged in, remove the `no-store` directive so that bfcache is not blocked for visitors,
 		 * allowing them to benefit from instant back/forward navigations in the storefront. This essentially undoes
-		 * <https://core.trac.wordpress.org/ticket/61942> which seems to have been excessive since the `private`
+		 * <https://core.trac.finpress.org/ticket/61942> which seems to have been excessive since the `private`
 		 * directive was already being sent to prevent the page from being cached in a proxy server.
 		 *
-		 * Note that <https://core.trac.wordpress.org/ticket/63636> proposes removing `no-store` for logged-in users as
+		 * Note that <https://core.trac.finpress.org/ticket/63636> proposes removing `no-store` for logged-in users as
 		 * well. When that happens, the following if statement can be removed since core would no longer be sending
 		 * `no-store` in the first place.
 		 *

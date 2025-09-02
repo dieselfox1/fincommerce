@@ -122,7 +122,7 @@ export const CUSTOMIZABLE_WC_TEMPLATES: TemplateCustomizationTest[] = [
 				isOnlyCurrentEntityDirty: true,
 			} );
 
-			await page.goto( '/product/wordpress-pennant/' );
+			await page.goto( '/product/finpress-pennant/' );
 		},
 		templateName: 'External Product Add to Cart + Options',
 		templatePath: 'external-product-add-to-cart-with-options',

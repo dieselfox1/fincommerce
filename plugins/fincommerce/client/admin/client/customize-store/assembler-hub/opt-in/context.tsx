@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { optionsStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
-import React, { createContext, useState } from '@wordpress/element';
+import { useSelect } from '@finpress/data';
+import React, { createContext, useState } from '@finpress/element';
 import type { ReactNode } from 'react';
 
 export const enum OPTIN_FLOW_STATUS {

@@ -2,8 +2,8 @@
  * External dependencies
  */
 import TestRenderer, { act } from 'react-test-renderer';
-import { createRegistry, RegistryProvider } from '@wordpress/data';
-import { Component as ReactComponent } from '@wordpress/element';
+import { createRegistry, RegistryProvider } from '@finpress/data';
+import { Component as ReactComponent } from '@finpress/element';
 import { COLLECTIONS_STORE_KEY as storeKey } from '@fincommerce/block-data';
 
 /**

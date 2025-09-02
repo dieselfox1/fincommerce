@@ -22,7 +22,7 @@
                 "shasum": ""
             },
             "require": {
-                "php-stubs/wordpress-stubs": "^5.3 || ^6.0"
+                "php-stubs/finpress-stubs": "^5.3 || ^6.0"
             },
             "require-dev": {
                 "php": "~7.1 || ~8.0",
@@ -30,7 +30,7 @@
             },
             "suggest": {
                 "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
-                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+                "szepeviktor/phpstan-finpress": "finpress extensions for PHPStan"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -43,7 +43,7 @@
                 "PHPStan",
                 "static analysis",
                 "fincommerce",
-                "wordpress"
+                "finpress"
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/fincommerce-stubs/issues",
@@ -52,16 +52,16 @@
             "time": "2025-04-23T03:16:52+00:00"
         },
         {
-            "name": "php-stubs/wordpress-stubs",
+            "name": "php-stubs/finpress-stubs",
             "version": "v6.8.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-stubs/wordpress-stubs.git",
+                "url": "https://github.com/php-stubs/finpress-stubs.git",
                 "reference": "92e444847d94f7c30f88c60004648f507688acd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/92e444847d94f7c30f88c60004648f507688acd5",
+                "url": "https://api.github.com/repos/php-stubs/finpress-stubs/zipball/92e444847d94f7c30f88c60004648f507688acd5",
                 "reference": "92e444847d94f7c30f88c60004648f507688acd5",
                 "shasum": ""
             },
@@ -82,37 +82,37 @@
             "suggest": {
                 "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
                 "symfony/polyfill-php80": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
-                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+                "szepeviktor/phpstan-finpress": "finpress extensions for PHPStan"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WordPress function and class declaration stubs for static analysis.",
-            "homepage": "https://github.com/php-stubs/wordpress-stubs",
+            "description": "finpress function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/finpress-stubs",
             "keywords": [
                 "PHPStan",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.8.1"
+                "issues": "https://github.com/php-stubs/finpress-stubs/issues",
+                "source": "https://github.com/php-stubs/finpress-stubs/tree/v6.8.1"
             },
             "time": "2025-05-02T12:33:34+00:00"
         },
         {
-            "name": "php-stubs/wordpress-tests-stubs",
+            "name": "php-stubs/finpress-tests-stubs",
             "version": "v6.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-stubs/wordpress-tests-stubs.git",
+                "url": "https://github.com/php-stubs/finpress-tests-stubs.git",
                 "reference": "95979e5c671c72350dde78b89e29afdd88c37140"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-tests-stubs/zipball/95979e5c671c72350dde78b89e29afdd88c37140",
+                "url": "https://api.github.com/repos/php-stubs/finpress-tests-stubs/zipball/95979e5c671c72350dde78b89e29afdd88c37140",
                 "reference": "95979e5c671c72350dde78b89e29afdd88c37140",
                 "shasum": ""
             },
@@ -122,23 +122,23 @@
             },
             "suggest": {
                 "symfony/polyfill-php73": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
-                "szepeviktor/phpstan-wordpress": "WordPress extensions for PHPStan"
+                "szepeviktor/phpstan-finpress": "finpress extensions for PHPStan"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WordPress Tests function and class declaration stubs for static analysis.",
-            "homepage": "https://github.com/php-stubs/wordpress-tests-stubs",
+            "description": "finpress Tests function and class declaration stubs for static analysis.",
+            "homepage": "https://github.com/php-stubs/finpress-tests-stubs",
             "keywords": [
                 "PHPStan",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/php-stubs/wordpress-tests-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-tests-stubs/tree/v6.8.0"
+                "issues": "https://github.com/php-stubs/finpress-tests-stubs/issues",
+                "source": "https://github.com/php-stubs/finpress-tests-stubs/tree/v6.8.0"
             },
             "time": "2025-04-15T20:54:04+00:00"
         },
@@ -254,22 +254,22 @@
             "time": "2025-03-26T12:47:06+00:00"
         },
         {
-            "name": "szepeviktor/phpstan-wordpress",
+            "name": "szepeviktor/phpstan-finpress",
             "version": "v2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/szepeviktor/phpstan-wordpress.git",
+                "url": "https://github.com/szepeviktor/phpstan-finpress.git",
                 "reference": "963887b04c21fe7ac78e61c1351f8b00fff9f8f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/szepeviktor/phpstan-wordpress/zipball/963887b04c21fe7ac78e61c1351f8b00fff9f8f8",
+                "url": "https://api.github.com/repos/szepeviktor/phpstan-finpress/zipball/963887b04c21fe7ac78e61c1351f8b00fff9f8f8",
                 "reference": "963887b04c21fe7ac78e61c1351f8b00fff9f8f8",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0",
-                "php-stubs/wordpress-stubs": "^6.6.2",
+                "php-stubs/finpress-stubs": "^6.6.2",
                 "phpstan/phpstan": "^2.0"
             },
             "require-dev": {
@@ -294,24 +294,24 @@
             },
             "autoload": {
                 "psr-4": {
-                    "SzepeViktor\\PHPStan\\WordPress\\": "src/"
+                    "SzepeViktor\\PHPStan\\finpress\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "WordPress extensions for PHPStan",
+            "description": "finpress extensions for PHPStan",
             "keywords": [
                 "PHPStan",
                 "code analyse",
                 "code analysis",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/szepeviktor/phpstan-wordpress/issues",
-                "source": "https://github.com/szepeviktor/phpstan-wordpress/tree/v2.0.2"
+                "issues": "https://github.com/szepeviktor/phpstan-finpress/issues",
+                "source": "https://github.com/szepeviktor/phpstan-finpress/tree/v2.0.2"
             },
             "time": "2025-02-12T18:43:37+00:00"
         }

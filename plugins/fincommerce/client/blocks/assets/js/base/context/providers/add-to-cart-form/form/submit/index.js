@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import triggerFetch from '@wordpress/api-fetch';
-import { useEffect, useCallback, useState } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { __ } from '@finpress/i18n';
+import triggerFetch from '@finpress/api-fetch';
+import { useEffect, useCallback, useState } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 import { triggerAddedToCartEvent } from '@fincommerce/base-utils';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { VALIDATION_STORE_KEY } from '@fincommerce/block-data';
 
 /**

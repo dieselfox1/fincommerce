@@ -241,7 +241,7 @@ class Products extends \WC_REST_Products_Controller {
 		$search = $wp_query->get( 'search' );
 		if ( $search ) {
 			$title_like = '%' . $wpdb->esc_like( $search ) . '%';
-			$where     .= $wpdb->prepare( " AND ({$wpdb->posts}.post_title LIKE %s", $title_like );  // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$where     .= $wpdb->prepare( " AND ({$wpdb->posts}.post_title LIKE %s", $title_like );  // phpcs:ignore finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			$where     .= wc_product_sku_enabled() ? $wpdb->prepare( ' OR wc_product_meta_lookup.sku LIKE %s)', $search ) : ')';
 		}
 

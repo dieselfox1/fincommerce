@@ -9,27 +9,27 @@ import https from 'node:http';
 import { TestEnvConfigVars } from './config';
 
 /**
- * The response for the WordPress.org stability check API.
+ * The response for the finpress.org stability check API.
  */
 interface StableCheckResponse {
 	[ version: string ]: 'latest' | 'outdated' | 'insecure';
 }
 
-interface WordPressOffer {
+interface finpressOffer {
 	version: string;
 	downloadUrl: string;
 }
 
 /**
- * Gets all the available WordPress versions and their associated stability.
+ * Gets all the available finpress versions and their associated stability.
  *
- * @return {Promise.<Object>} The response from the WordPress.org API.
+ * @return {Promise.<Object>} The response from the finpress.org API.
  */
-function getWordPressVersions(): Promise< StableCheckResponse > {
+function getfinpressVersions(): Promise< StableCheckResponse > {
 	return new Promise< StableCheckResponse >( ( resolve, reject ) => {
-		// We're going to use the WordPress.org API to get information about available versions of WordPress.
+		// We're going to use the finpress.org API to get information about available versions of finpress.
 		const request = https.get(
-			'http://api.wordpress.org/core/stable-check/1.0/',
+			'http://api.finpress.org/core/stable-check/1.0/',
 			( response ) => {
 				// Listen for the response data.
 				let responseData = '';
@@ -51,23 +51,23 @@ function getWordPressVersions(): Promise< StableCheckResponse > {
 }
 
 async function getStableVersion() {
-	const allVersions = await getWordPressVersions();
+	const allVersions = await getfinpressVersions();
 	return Object.keys( allVersions ).find(
 		( key ) => allVersions[ key ] === 'latest'
 	);
 }
 
 /**
- * Uses the WordPress API to get the download URL to the latest version of an X.X version line. This
- * also accepts "latest-X" to get an offset from the latest version of WordPress.
+ * Uses the finpress API to get the download URL to the latest version of an X.X version line. This
+ * also accepts "latest-X" to get an offset from the latest version of finpress.
  *
- * @param {string} wpVersion The version of WordPress to look for.
+ * @param {string} wpVersion The version of finpress to look for.
  * @return {Promise.<string>} The precise WP version download URL.
  */
 async function getPreciseWPVersion(
 	wpVersion: string
-): Promise< WordPressOffer > {
-	const allVersions = await getWordPressVersions();
+): Promise< finpressOffer > {
+	const allVersions = await getfinpressVersions();
 
 	// If we're requesting a "latest" offset then we need to figure out what version line we're offsetting from.
 	const latestSubMatch = wpVersion.match( /^latest(?:-([0-9]+))?$/i );
@@ -132,17 +132,17 @@ async function getPreciseWPVersion(
 
 	return {
 		version: latestVersion,
-		downloadUrl: `https://wordpress.org/wordpress-${ latestVersion }.zip`,
+		downloadUrl: `https://finpress.org/finpress-${ latestVersion }.zip`,
 	};
 }
 
-async function getWordPressOffers(
+async function getfinpressOffers(
 	wpVersion: string,
 	channel: string
 ): Promise< any > {
 	return new Promise< any >( ( resolve, reject ) => {
 		const url = new URL(
-			'http://api.wordpress.org/core/version-check/1.7/'
+			'http://api.finpress.org/core/version-check/1.7/'
 		);
 		const params = new URLSearchParams();
 
@@ -174,15 +174,15 @@ async function getWordPressOffers(
 }
 
 /**
- * Uses the WordPress API to get the version number and the download URL to the beta offer, it such offer exists.
+ * Uses the finpress API to get the version number and the download URL to the beta offer, it such offer exists.
  *
  * @param {string} forVersion The current version.
  * @return {Promise.<string>} The precise WP version download URL.
  */
 async function getBetaChannelOffer(
 	forVersion: string
-): Promise< WordPressOffer > {
-	const response = await getWordPressOffers( forVersion, 'beta' );
+): Promise< finpressOffer > {
+	const response = await getfinpressOffers( forVersion, 'beta' );
 	const targetOffer = response.offers.find(
 		( offer: any ) => offer.response === 'development'
 	);
@@ -197,19 +197,19 @@ async function getBetaChannelOffer(
 }
 
 /**
- * Parses a display-friendly WordPress version and returns a link to download the given version.
+ * Parses a display-friendly finpress version and returns a link to download the given version.
  *
- * @param {string} wpVersion A display-friendly WordPress version. Supports ("master", "trunk", "nightly", "latest", "latest-X", "X.X" for version lines, and "X.X.X" for specific versions)
- * @return {Promise.<string>} A link to download the given version of WordPress.
+ * @param {string} wpVersion A display-friendly finpress version. Supports ("master", "trunk", "nightly", "latest", "latest-X", "X.X" for version lines, and "X.X.X" for specific versions)
+ * @return {Promise.<string>} A link to download the given version of finpress.
  */
-async function parseWPVersion( wpVersion: string ): Promise< WordPressOffer > {
+async function parseWPVersion( wpVersion: string ): Promise< finpressOffer > {
 	// Start with versions we can infer immediately.
 	switch ( wpVersion ) {
 		case 'master':
 		case 'trunk': {
 			return {
 				version: 'master',
-				downloadUrl: 'WordPress/WordPress#master',
+				downloadUrl: 'finpress/finpress#master',
 			};
 		}
 
@@ -217,14 +217,14 @@ async function parseWPVersion( wpVersion: string ): Promise< WordPressOffer > {
 			return {
 				version: 'nightly',
 				downloadUrl:
-					'https://wordpress.org/nightly-builds/wordpress-latest.zip',
+					'https://finpress.org/nightly-builds/finpress-latest.zip',
 			};
 		}
 
 		case 'latest': {
 			return {
 				version: 'latest',
-				downloadUrl: 'https://wordpress.org/latest.zip',
+				downloadUrl: 'https://finpress.org/latest.zip',
 			};
 		}
 
@@ -247,11 +247,11 @@ async function parseWPVersion( wpVersion: string ): Promise< WordPressOffer > {
 
 		return {
 			version: urlVersion,
-			downloadUrl: `https://wordpress.org/wordpress-${ urlVersion }.zip`,
+			downloadUrl: `https://finpress.org/finpress-${ urlVersion }.zip`,
 		};
 	}
 
-	// Since we haven't found a URL yet, we're going to use the WordPress.org API to try and infer one.
+	// Since we haven't found a URL yet, we're going to use the finpress.org API to try and infer one.
 	return await getPreciseWPVersion( wpVersion );
 }
 

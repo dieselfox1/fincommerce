@@ -1,3 +1,3 @@
 # Private APIs
 
-This module is used to unlock the private APIs the email editor uses from WordPress.
+This module is used to unlock the private APIs the email editor uses from finpress.

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { Button, ToggleControl } from '@wordpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
+import { Button, ToggleControl } from '@finpress/components';
 
 /**
  * Internal dependencies

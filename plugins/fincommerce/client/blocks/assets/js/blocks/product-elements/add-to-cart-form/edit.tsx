@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { useBlockProps, InspectorControls } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
 import { ProductShortDescriptionSkeleton } from '@fincommerce/base-components/skeleton/patterns/product-short-description';
-import { BlockEditProps } from '@wordpress/blocks';
-import { Disabled, Tooltip } from '@wordpress/components';
+import { BlockEditProps } from '@finpress/blocks';
+import { Disabled, Tooltip } from '@finpress/components';
 import { isSiteEditorPage } from '@fincommerce/utils';
 import { getSetting } from '@fincommerce/settings';
 
@@ -64,7 +64,7 @@ const AddToCartFormEdit = ( props: BlockEditProps< Attributes > ) => {
 									<div className="quantity">
 										<input
 											style={
-												// In the post editor, the editor isn't in an iframe, so WordPress styles are applied. We need to remove them.
+												// In the post editor, the editor isn't in an iframe, so finpress styles are applied. We need to remove them.
 												! isSiteEditor
 													? {
 															backgroundColor:
@@ -105,7 +105,7 @@ const AddToCartFormEdit = ( props: BlockEditProps< Attributes > ) => {
 										</button>
 										<input
 											style={
-												// In the post editor, the editor isn't in an iframe, so WordPress styles are applied. We need to remove them.
+												// In the post editor, the editor isn't in an iframe, so finpress styles are applied. We need to remove them.
 												! isSiteEditor
 													? {
 															backgroundColor:

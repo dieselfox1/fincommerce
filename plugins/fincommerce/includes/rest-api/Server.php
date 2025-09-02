@@ -26,7 +26,7 @@ class Server {
 	protected $controllers = array();
 
 	/**
-	 * Hook into WordPress ready to init the REST API as needed.
+	 * Hook into finpress ready to init the REST API as needed.
 	 */
 	public function init() { // phpcs:ignore FinCommerce.Functions.InternalInjectionMethod -- Not an injection method.
 		add_action( 'rest_api_init', array( $this, 'register_rest_routes' ), 10 );

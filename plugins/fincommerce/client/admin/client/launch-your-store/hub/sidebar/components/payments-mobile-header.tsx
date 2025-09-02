@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { chevronLeft } from '@wordpress/icons';
-import { __, sprintf } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { chevronLeft } from '@finpress/icons';
+import { __, sprintf } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

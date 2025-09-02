@@ -1,27 +1,27 @@
 /**
  * External dependencies
  */
-import { createHigherOrderComponent } from '@wordpress/compose';
+import { createHigherOrderComponent } from '@finpress/compose';
 import {
 	InspectorControls,
 	store as blockEditorStore,
-} from '@wordpress/block-editor';
-import { addFilter, hasFilter } from '@wordpress/hooks';
-import type { StoreDescriptor } from '@wordpress/data';
+} from '@finpress/block-editor';
+import { addFilter, hasFilter } from '@finpress/hooks';
+import type { StoreDescriptor } from '@finpress/data';
 import { DefaultNotice } from '@fincommerce/editor-components/default-notice';
 import { IncompatibleExtensionsNotice } from '@fincommerce/editor-components/incompatible-extension-notice';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { CartCheckoutFeedbackPrompt } from '@fincommerce/editor-components/feedback-prompt';
 
-declare module '@wordpress/editor' {
+declare module '@finpress/editor' {
 	let store: StoreDescriptor;
 }
 
-declare module '@wordpress/core-data' {
+declare module '@finpress/core-data' {
 	let store: StoreDescriptor;
 }
 
-declare module '@wordpress/block-editor' {
+declare module '@finpress/block-editor' {
 	let store: StoreDescriptor;
 }
 

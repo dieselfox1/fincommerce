@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement, forwardRef, useContext } from '@wordpress/element';
-import { listView as listViewIcon } from '@wordpress/icons';
-import { displayShortcut } from '@wordpress/keycodes';
-import { __ } from '@wordpress/i18n';
+import { Button } from '@finpress/components';
+import { createElement, forwardRef, useContext } from '@finpress/element';
+import { listView as listViewIcon } from '@finpress/icons';
+import { displayShortcut } from '@finpress/keycodes';
+import { __ } from '@finpress/i18n';
 import { Ref } from 'react';
 
 /**

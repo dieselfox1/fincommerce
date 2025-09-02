@@ -642,7 +642,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 				$args['customer_id'] = $request['customer'];
 			} else {
 				if ( ! empty( $args['meta_query'] ) ) {
-					$args['meta_query'] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+					$args['meta_query'] = array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				}
 
 				$args['meta_query'][] = array(

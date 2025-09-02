@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 import { CartResponse } from '@fincommerce/types';
 import { previewCart } from '@fincommerce/resource-previews';
 

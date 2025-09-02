@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { getValidBlockAttributes } from '@fincommerce/base-utils';
-import { Children, cloneElement, isValidElement } from '@wordpress/element';
+import { Children, cloneElement, isValidElement } from '@finpress/element';
 import { useStoreCart } from '@fincommerce/base-context';
 import { getRegisteredBlockComponents } from '@fincommerce/blocks-registry';
 

@@ -95,14 +95,14 @@ class ShopifyMapperTest extends \WC_Unit_Test_Case {
 	public function test_catalog_visibility_mapping() {
 		// Test visible product (has onlineStoreUrl).
 		$visible_product                 = $this->create_simple_shopify_product();
-		$visible_product->onlineStoreUrl = 'https://test-store.myshopify.com/products/amazing-t-shirt'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$visible_product->onlineStoreUrl = 'https://test-store.myshopify.com/products/amazing-t-shirt'; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		$result                          = $this->mapper->map_product_data( $visible_product );
 		$this->assertEquals( 'visible', $result['catalog_visibility'] );
 		$this->assertEquals( 'https://test-store.myshopify.com/products/amazing-t-shirt', $result['original_url'] );
 
 		// Test hidden product (onlineStoreUrl is null).
 		$hidden_product                 = $this->create_simple_shopify_product();
-		$hidden_product->onlineStoreUrl = null; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$hidden_product->onlineStoreUrl = null; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		$result                         = $this->mapper->map_product_data( $hidden_product );
 		$this->assertEquals( 'hidden', $result['catalog_visibility'] );
 		$this->assertNull( $result['original_url'] );
@@ -113,8 +113,8 @@ class ShopifyMapperTest extends \WC_Unit_Test_Case {
 	 */
 	public function test_enhanced_status_mapping() {
 		$shopify_product                   = $this->create_simple_shopify_product();
-		$shopify_product->publishedAt      = '2023-06-01T10:00:00Z'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
-		$shopify_product->availableForSale = true; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$shopify_product->publishedAt      = '2023-06-01T10:00:00Z'; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$shopify_product->availableForSale = true; // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		$result                            = $this->mapper->map_product_data( $shopify_product );
 
 		$this->assertEquals( '2023-06-01T10:00:00Z', $result['date_published_gmt'] );
@@ -395,7 +395,7 @@ class ShopifyMapperTest extends \WC_Unit_Test_Case {
 	 */
 	public function test_images_mapping() {
 		$shopify_product                = $this->create_simple_shopify_product();
-		$shopify_product->featuredMedia = (object) array( 'id' => 'gid://shopify/MediaImage/featured123' ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
+		$shopify_product->featuredMedia = (object) array( 'id' => 'gid://shopify/MediaImage/featured123' ); // phpcs:ignore finpress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- GraphQL uses camelCase.
 		$shopify_product->media         = (object) array(
 			'edges' => array(
 				(object) array(

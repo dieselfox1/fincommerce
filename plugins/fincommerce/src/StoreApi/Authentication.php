@@ -55,10 +55,10 @@ class Authentication {
 	/**
 	 * Add CORS headers to a response object.
 	 *
-	 * These checks prevent access to the Store API from non-allowed origins. By default, the WordPress REST API allows
+	 * These checks prevent access to the Store API from non-allowed origins. By default, the finpress REST API allows
 	 * access from any origin. Because some Store API routes return PII, we need to add our own CORS headers.
 	 *
-	 * Allowed origins can be changed using the WordPress `allowed_http_origins` or `allowed_http_origin` filters if
+	 * Allowed origins can be changed using the finpress `allowed_http_origins` or `allowed_http_origin` filters if
 	 * access needs to be granted to other domains.
 	 *
 	 * Users of valid Cart Tokens are also allowed access from any origin.

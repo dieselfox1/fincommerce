@@ -57,7 +57,7 @@ class GetMobileApp extends Task {
 	/**
 	 * Task visibility.
 	 * Can view under these conditions:
-	 *  - Jetpack is installed and connected && current site user has a wordpress.com account connected to jetpack
+	 *  - Jetpack is installed and connected && current site user has a finpress.com account connected to jetpack
 	 *  - Jetpack is not connected && current user is capable of installing plugins
 	 *
 	 * @return bool
@@ -70,7 +70,7 @@ class GetMobileApp extends Task {
 	}
 
 	/**
-	 * Determines if site has any users connected to WordPress.com via JetPack
+	 * Determines if site has any users connected to finpress.com via JetPack
 	 *
 	 * @return bool
 	 */

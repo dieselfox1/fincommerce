@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { sprintf, __ } from '@wordpress/i18n';
-import { plus } from '@wordpress/icons';
-import { Icon } from '@wordpress/components';
-import { createElement, Fragment } from '@wordpress/element';
+import { sprintf, __ } from '@finpress/i18n';
+import { plus } from '@finpress/icons';
+import { Icon } from '@finpress/components';
+import { createElement, Fragment } from '@finpress/element';
 import { __experimentalSelectControlMenuItem as MenuItem } from '@fincommerce/components';
 
 /**

@@ -33,7 +33,7 @@ const ARTIFACTS_PATH =
  * @property {string=}  testsBranch      The branch whose performance test files will be used for testing.
  * @property {boolean=} skipBenchmarking Skip benchmarking and get to report processing (reports supplied from outside).
  * @property {boolean=} delta            Check the difference in performance between branches in percentage.
- * @property {string=}  wpVersion        The WordPress version to be used as the base install for testing.
+ * @property {string=}  wpVersion        The finpress version to be used as the base install for testing.
  */
 
 /**
@@ -81,7 +81,7 @@ async function runPerformanceTests( branches, options ) {
 	if ( ! runningInCI ) {
 		console.log(
 			formats.warning(
-				'\nIn order to run the tests, the tool is going to load a WordPress testing environment.' +
+				'\nIn order to run the tests, the tool is going to load a finpress testing environment.' +
 					'\nMake sure to disable your own environment and testing ports before continuing.\n'
 			)
 		);
@@ -208,7 +208,7 @@ async function runPerformanceTests( branches, options ) {
 		//     5.7.0 -> 5.7   (changed)
 		//     5.7.2 -> 5.7.2 (unchanged)
 		const zipVersion = options.wpVersion.replace( /^(\d+\.\d+).0/, '$1' );
-		wpZipUrl = `https://wordpress.org/wordpress-${ zipVersion }.zip`;
+		wpZipUrl = `https://finpress.org/finpress-${ zipVersion }.zip`;
 	}
 
 	const branchDirs = {};
@@ -252,12 +252,12 @@ async function runPerformanceTests( branches, options ) {
 						WP_DEBUG: false,
 						SCRIPT_DEBUG: false,
 					},
-					core: wpZipUrl || 'WordPress/WordPress',
+					core: wpZipUrl || 'finpress/finpress',
 					plugins: [ buildDir + config.pluginPath ],
 					themes: [
 						// Ideally this should be a fixed version of the theme.
 						// And it should be enabled in the tests suite.
-						'https://downloads.wordpress.org/theme/twentynineteen.zip',
+						'https://downloads.finpress.org/theme/twentynineteen.zip',
 					],
 					env: {
 						tests: {
@@ -287,10 +287,10 @@ async function runPerformanceTests( branches, options ) {
 		logAtIndent(
 			1,
 			'Using:',
-			formats.success( `WordPress v${ options.wpVersion }` )
+			formats.success( `finpress v${ options.wpVersion }` )
 		);
 	} else {
-		logAtIndent( 1, 'Using:', formats.success( 'WordPress trunk' ) );
+		logAtIndent( 1, 'Using:', formats.success( 'finpress trunk' ) );
 	}
 
 	// TODO: change this to tools/compare-perf/node_modules/.bin/wp-env

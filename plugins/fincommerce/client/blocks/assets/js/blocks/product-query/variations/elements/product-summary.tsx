@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Icon } from '@wordpress/components';
-import { page } from '@wordpress/icons';
+import { Icon } from '@finpress/components';
+import { page } from '@finpress/icons';
 import {
 	BLOCK_DESCRIPTION,
 	BLOCK_TITLE,

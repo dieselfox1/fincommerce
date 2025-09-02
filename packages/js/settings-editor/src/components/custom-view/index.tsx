@@ -6,7 +6,7 @@ import {
 	createElement,
 	useMemo,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { sanitize } from 'dompurify';
 
 /**

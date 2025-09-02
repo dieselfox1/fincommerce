@@ -6,8 +6,8 @@ import {
 	useState,
 	useRef,
 	useCallback,
-} from '@wordpress/element';
-import { ResizableBox } from '@wordpress/components';
+} from '@finpress/element';
+import { ResizableBox } from '@finpress/components';
 
 /**
  * Internal dependencies

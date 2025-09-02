@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	Card,
 	CardBody,
@@ -10,8 +10,8 @@ import {
 	CardHeader,
 	CardFooter,
 	Button,
-} from '@wordpress/components';
-import { chevronUp, chevronDown } from '@wordpress/icons';
+} from '@finpress/components';
+import { chevronUp, chevronDown } from '@finpress/icons';
 import clsx from 'clsx';
 
 /**

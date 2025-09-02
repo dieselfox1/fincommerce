@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { _n, sprintf } from '@wordpress/i18n';
-import { decodeEntities } from '@wordpress/html-entities';
+import { _n, sprintf } from '@finpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
 import { Label } from '@fincommerce/blocks-components';
 
 /**

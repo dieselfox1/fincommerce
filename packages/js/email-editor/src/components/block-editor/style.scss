@@ -1,4 +1,4 @@
-@import "~@wordpress/base-styles/colors";
+@import "~@finpress/base-styles/colors";
 
 .spinner-container {
 	align-items: center;
@@ -8,7 +8,7 @@
 	width: 100%;
 }
 
-// Temporary styles for Rich Text HTML comments from the PR: https://github.com/WordPress/gutenberg/pull/62128/files
+// Temporary styles for Rich Text HTML comments from the PR: https://github.com/finpress/gutenberg/pull/62128/files
 [data-rich-text-comment],
 [data-rich-text-format-boundary] {
 	border-radius: 2px;

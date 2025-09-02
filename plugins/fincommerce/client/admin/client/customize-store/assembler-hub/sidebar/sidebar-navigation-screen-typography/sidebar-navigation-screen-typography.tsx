@@ -3,16 +3,16 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	createInterpolateElement,
 	useContext,
 	useState,
-} from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
+} from '@finpress/element';
+import { useSelect } from '@finpress/data';
 import { Link } from '@fincommerce/components';
 import { optionsStore } from '@fincommerce/data';
-import { Button, Modal, CheckboxControl, Spinner } from '@wordpress/components';
+import { Button, Modal, CheckboxControl, Spinner } from '@finpress/components';
 import interpolateComponents from '@automattic/interpolate-components';
 
 /**
@@ -49,7 +49,7 @@ export const SidebarNavigationScreenTypography = ( {
 	let upgradeNotice;
 	if ( isTrackingDisallowed && ! isFontLibraryAvailable ) {
 		upgradeNotice = __(
-			'Upgrade to the <WordPressLink>latest version of WordPress</WordPressLink> and <OptInModal>opt in to usage tracking</OptInModal> to get access to more fonts.',
+			'Upgrade to the <finpressLink>latest version of finpress</finpressLink> and <OptInModal>opt in to usage tracking</OptInModal> to get access to more fonts.',
 			'fincommerce'
 		);
 	} else if ( isTrackingDisallowed && isFontLibraryAvailable ) {
@@ -59,7 +59,7 @@ export const SidebarNavigationScreenTypography = ( {
 		);
 	} else if ( trackingAllowed && ! isFontLibraryAvailable ) {
 		upgradeNotice = __(
-			'Upgrade to the <WordPressLink>latest version of WordPress</WordPressLink> to get access to more fonts.',
+			'Upgrade to the <finpressLink>latest version of finpress</finpressLink> to get access to more fonts.',
 			'fincommerce'
 		);
 	} else {
@@ -106,7 +106,7 @@ export const SidebarNavigationScreenTypography = ( {
 							</h4>
 							<p>
 								{ createInterpolateElement( upgradeNotice, {
-									WordPressLink: (
+									finpressLink: (
 										<Button
 											href={ `${ ADMIN_URL }update-core.php` }
 											variant="link"

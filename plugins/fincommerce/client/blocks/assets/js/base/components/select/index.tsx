@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Icon, chevronDown } from '@wordpress/icons';
-import { useCallback, useId, useMemo, useEffect } from '@wordpress/element';
-import { sprintf, __ } from '@wordpress/i18n';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { Icon, chevronDown } from '@finpress/icons';
+import { useCallback, useId, useMemo, useEffect } from '@finpress/element';
+import { sprintf, __ } from '@finpress/i18n';
+import { useSelect, useDispatch } from '@finpress/data';
 import clsx from 'clsx';
 import { validationStore } from '@fincommerce/block-data';
 import { ValidationInputError } from '@fincommerce/blocks-components';

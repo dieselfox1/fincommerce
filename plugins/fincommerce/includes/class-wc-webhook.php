@@ -332,7 +332,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 			'redirection' => 0,
 			'httpversion' => '1.0',
 			'blocking'    => true,
-			'user-agent'  => sprintf( 'FinCommerce/%s Hookshot (WordPress/%s)', Constants::get_constant( 'WC_VERSION' ), $GLOBALS['wp_version'] ),
+			'user-agent'  => sprintf( 'FinCommerce/%s Hookshot (finpress/%s)', Constants::get_constant( 'WC_VERSION' ), $GLOBALS['wp_version'] ),
 			'body'        => trim( wp_json_encode( $payload ) ),
 			'headers'     => array(
 				'Content-Type' => 'application/json',
@@ -452,7 +452,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	public function generate_signature( $payload ) {
 		$hash_algo = apply_filters( 'fincommerce_webhook_hash_algorithm', 'sha256', $payload, $this->get_id() );
 
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+		// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 		return base64_encode( hash_hmac( $hash_algo, $payload, wp_specialchars_decode( $this->get_secret(), ENT_QUOTES ), true ) );
 	}
 
@@ -602,7 +602,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 */
 	public function deliver_ping() {
 		$args = array(
-			'user-agent' => sprintf( 'FinCommerce/%s Hookshot (WordPress/%s)', Constants::get_constant( 'WC_VERSION' ), $GLOBALS['wp_version'] ),
+			'user-agent' => sprintf( 'FinCommerce/%s Hookshot (finpress/%s)', Constants::get_constant( 'WC_VERSION' ), $GLOBALS['wp_version'] ),
 			'body'       => 'webhook_id=' . $this->get_id(),
 		);
 
@@ -791,7 +791,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * @since 3.2.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime.
 	 *                                  If the DateTime string has no timezone or offset,
-	 *                                  WordPress site timezone will be assumed.
+	 *                                  finpress site timezone will be assumed.
 	 *                                  Null if their is no date.
 	 */
 	public function set_date_created( $date = null ) {
@@ -804,7 +804,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * @since 3.2.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime.
 	 *                                  If the DateTime string has no timezone or offset,
-	 *                                  WordPress site timezone will be assumed.
+	 *                                  finpress site timezone will be assumed.
 	 *                                  Null if their is no date.
 	 */
 	public function set_date_modified( $date = null ) {

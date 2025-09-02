@@ -148,7 +148,7 @@ class WCAdminAssets {
 	 * Render a preload link tag for a dependency, optionally
 	 * checked against a provided allowlist.
 	 *
-	 * See: https://macarthur.me/posts/preloading-javascript-in-wordpress
+	 * See: https://macarthur.me/posts/preloading-javascript-in-finpress
 	 *
 	 * @param WP_Dependency $dependency The WP_Dependency being preloaded.
 	 * @param string        $type Dependency type - 'script' or 'style'.
@@ -177,7 +177,7 @@ class WCAdminAssets {
 	 * Output a preload link tag for dependencies (and their sub dependencies)
 	 * with an optional allowlist.
 	 *
-	 * See: https://macarthur.me/posts/preloading-javascript-in-wordpress
+	 * See: https://macarthur.me/posts/preloading-javascript-in-finpress
 	 *
 	 * @param string $type Dependency type - 'script' or 'style'.
 	 * @param array  $allowlist Optional. List of allowed dependency handles.
@@ -214,7 +214,7 @@ class WCAdminAssets {
 	/**
 	 * Output preload link tags for all enqueued stylesheets and scripts.
 	 *
-	 * See: https://macarthur.me/posts/preloading-javascript-in-wordpress
+	 * See: https://macarthur.me/posts/preloading-javascript-in-finpress
 	 */
 	private function output_header_preload_tags() {
 		$wc_admin_scripts = array(
@@ -273,8 +273,8 @@ class WCAdminAssets {
 				// Remove wp-editor dependency if we're not on a customize store page since we don't use wp-editor in other pages.
 				$is_customize_store_page = (
 					PageController::is_admin_page() &&
-					isset( $_GET['path'] ) && // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-					str_starts_with( wc_clean( wp_unslash( $_GET['path'] ) ), '/customize-store' ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					isset( $_GET['path'] ) && // phpcs:ignore finpress.Security.NonceVerification.Recommended
+					str_starts_with( wc_clean( wp_unslash( $_GET['path'] ) ), '/customize-store' ) // phpcs:ignore finpress.Security.NonceVerification.Recommended
 				);
 				if ( ! $is_customize_store_page ) {
 					$dependencies = array_diff( $dependencies, array( 'wp-editor' ) );
@@ -377,7 +377,7 @@ class WCAdminAssets {
 					);
 				}
 			} catch ( \Exception $e ) {
-				// Avoid crashing WordPress if an asset file could not be loaded.
+				// Avoid crashing finpress if an asset file could not be loaded.
 				wc_caught_exception( $e, __CLASS__ . '::' . __FUNCTION__, $script_path_name );
 			}
 		}
@@ -477,7 +477,7 @@ class WCAdminAssets {
 					$error_handle  = 'wc-settings-dep-in-header';
 					$used_deps     = implode( ', ', array_intersect( $handles_for_injection, $script->deps ) );
 					$error_message = "Scripts that have a dependency on [$used_deps] must be loaded in the footer, {$handle} was registered to load in the header, but has been switched to load in the footer instead. See https://github.com/dieselfox1/fincommerce-gutenberg-products-block/pull/5059";
-					// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter,WordPress.WP.EnqueuedResourceParameters.MissingVersion
+					// phpcs:ignore finpress.WP.EnqueuedResourceParameters.NotInFooter,finpress.WP.EnqueuedResourceParameters.MissingVersion
 					wp_register_script( $error_handle, '' );
 					wp_enqueue_script( $error_handle );
 					wp_add_inline_script(

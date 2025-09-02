@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 export const ENTREPRENEUR_FLOW_QUERY_PARAM_VALUE = 'entrepreneur-signup';
 export const ENTREPRENEUR_FLOW_QUERY_PARAM_KEY = 'ref';

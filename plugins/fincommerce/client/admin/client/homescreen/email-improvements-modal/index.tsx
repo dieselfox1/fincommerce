@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Guide, Button, Icon } from '@wordpress/components';
-import { useState, useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { closeSmall } from '@wordpress/icons';
+import { Guide, Button, Icon } from '@finpress/components';
+import { useState, useEffect } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { closeSmall } from '@finpress/icons';
 import { updateQueryString } from '@fincommerce/navigation';
 import { useSearchParams } from 'react-router-dom';
 

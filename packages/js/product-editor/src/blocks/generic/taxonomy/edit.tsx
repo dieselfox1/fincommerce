@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import type { BlockAttributes } from '@wordpress/blocks';
+import type { BlockAttributes } from '@finpress/blocks';
 import {
 	createElement,
 	useState,
 	Fragment,
 	useCallback,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import '@fincommerce/settings';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { __experimentalSelectTreeControl as SelectTreeControl } from '@fincommerce/components';
-import { useDebounce, useInstanceId } from '@wordpress/compose';
-import { useSelect } from '@wordpress/data';
+import { useDebounce, useInstanceId } from '@finpress/compose';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

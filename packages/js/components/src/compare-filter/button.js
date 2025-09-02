@@ -3,8 +3,8 @@
  */
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { Button, Tooltip } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { Button, Tooltip } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 /**
  * A button used when comparing items, if `count` is less than 2 a hoverable tooltip is added with `helpText`.

@@ -88,7 +88,7 @@ class ExportInstallPluginSteps implements StepExporter {
 				continue;
 			}
 
-			$resource = $has_download_link ? 'wordpress.org/plugins' : 'self/plugins';
+			$resource = $has_download_link ? 'finpress.org/plugins' : 'self/plugins';
 			$steps[]  = new InstallPlugin(
 				$slug,
 				$resource,

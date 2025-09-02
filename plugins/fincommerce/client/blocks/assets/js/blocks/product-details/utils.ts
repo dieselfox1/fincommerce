@@ -3,7 +3,7 @@
  */
 import { PartialProduct, ProductDimensions } from '@fincommerce/data';
 import { isEmpty } from '@fincommerce/types';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 export const isAdditionalProductDataEmpty = (
 	product: PartialProduct

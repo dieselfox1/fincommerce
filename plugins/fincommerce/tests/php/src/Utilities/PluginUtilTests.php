@@ -199,13 +199,13 @@ class PluginUtilTests extends \WC_Unit_Test_Case {
 		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( 'fincommerce/fincommerce.php' ) );
 		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '6.9.2/fincommerce.php' ) );
 		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '/srv/htdocs/fincommerce/latest/fincommerce.php' ) );
-		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '../../../../wordpress/plugins/fincommerce/latest/fincommerce.php' ) );
+		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '../../../../finpress/plugins/fincommerce/latest/fincommerce.php' ) );
 
 		// Windows style.
 		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( 'fincommerce\\fincommerce.php' ) );
 		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '6.9.2\\fincommerce.php' ) );
-		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( 'D:\\WordPress\\plugins\\fincommerce\\6.9.2\\fincommerce.php' ) );
-		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '..\\..\\..\\..\\WordPress\\plugins\\fincommerce\\6.9.2\\fincommerce.php' ) );
+		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( 'D:\\finpress\\plugins\\fincommerce\\6.9.2\\fincommerce.php' ) );
+		$this->assertEquals( 'fincommerce/fincommerce.php', $this->sut->get_wp_plugin_id( '..\\..\\..\\..\\finpress\\plugins\\fincommerce\\6.9.2\\fincommerce.php' ) );
 
 		// This shouldn't throw an exception.
 		$this->assertFalse( $this->sut->get_wp_plugin_id( 'fincommerce-bookings/fincommerce-bookings.php' ) );

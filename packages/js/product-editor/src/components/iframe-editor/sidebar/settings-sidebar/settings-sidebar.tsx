@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { BlockInspector } from '@wordpress/block-editor';
-import { createElement } from '@wordpress/element';
-import { isRTL, __ } from '@wordpress/i18n';
+import { BlockInspector } from '@finpress/block-editor';
+import { createElement } from '@finpress/element';
+import { isRTL, __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

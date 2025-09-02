@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { createElement, createContext, useState } from '@wordpress/element';
+import { createElement, createContext, useState } from '@finpress/element';
 
 const initialData = window.wcSettings?.admin?.settingsData;
 const initialSettingsScripts = window.wcSettings?.admin?.settingsScripts;

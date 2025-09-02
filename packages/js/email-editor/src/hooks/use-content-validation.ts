@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useCallback, useEffect } from '@wordpress/element';
-import { useSelect, subscribe, dispatch } from '@wordpress/data';
-import { store as coreDataStore } from '@wordpress/core-data';
-import { applyFilters } from '@wordpress/hooks';
+import { useCallback, useEffect } from '@finpress/element';
+import { useSelect, subscribe, dispatch } from '@finpress/data';
+import { store as coreDataStore } from '@finpress/core-data';
+import { applyFilters } from '@finpress/hooks';
 
 /**
  * Internal dependencies

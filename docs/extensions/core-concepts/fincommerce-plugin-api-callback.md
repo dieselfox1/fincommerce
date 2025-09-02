@@ -26,7 +26,7 @@ When the callback URL is accessed, FinCommerce will:
 
 - Initialize the `CALLBACK` class, if available
 - Trigger the `fincommerce_api_callback` action
-- Exit WordPress
+- Exit finpress
 
 ## Hooking into the API Callback
 

@@ -4,8 +4,8 @@
 import clsx from 'clsx';
 import { omit, noop } from 'lodash';
 import { useTransition, animated } from '@react-spring/web';
-import { useReducedMotion } from '@wordpress/compose';
-import { useState } from '@wordpress/element';
+import { useReducedMotion } from '@finpress/compose';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { getQueryArg, getQueryArgs, addQueryArgs } from '@wordpress/url';
+import { getQueryArg, getQueryArgs, addQueryArgs } from '@finpress/url';
 import { getSettingWithCoercion } from '@fincommerce/settings';
 import { isBoolean } from '@fincommerce/types';
 
@@ -40,7 +40,7 @@ export function changeUrl( newUrl: string ) {
 		 * of filters and will 404 when the user navigates to it.
 		 *
 		 * There are different pagination formats to consider, as documented here:
-		 * https://github.com/WordPress/gutenberg/blob/317eb8f14c8e1b81bf56972cca2694be250580e3/packages/block-library/src/query-pagination-numbers/index.php#L22-L85
+		 * https://github.com/finpress/gutenberg/blob/317eb8f14c8e1b81bf56972cca2694be250580e3/packages/block-library/src/query-pagination-numbers/index.php#L22-L85
 		 */
 		const url = new URL( newUrl );
 		// When pretty permalinks are enabled, the page number may be in the path name.

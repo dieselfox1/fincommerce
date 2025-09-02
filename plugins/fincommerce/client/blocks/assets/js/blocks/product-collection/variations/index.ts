@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import type { Block } from '@wordpress/blocks';
-import { addFilter } from '@wordpress/hooks';
+import type { Block } from '@finpress/blocks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Internal dependencies

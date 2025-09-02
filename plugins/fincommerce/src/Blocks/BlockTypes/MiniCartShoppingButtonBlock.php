@@ -48,7 +48,7 @@ class MiniCartShoppingButtonBlock extends AbstractInnerBlock {
 		<div class="wp-block-button has-text-align-center">
 			<a
 				href="<?php echo esc_attr( $shop_url ); ?>"
-				<?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo $wrapper_attributes; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 			>
 				<div class="wc-block-components-button__text">
 					<?php echo esc_html( $start_shopping_label ); ?>

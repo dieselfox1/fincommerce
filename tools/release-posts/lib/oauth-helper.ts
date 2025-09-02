@@ -20,7 +20,7 @@ const getCode = (
 ) => {
 	return new Promise( async ( resolve, reject ) => {
 		open(
-			`https://public-api.wordpress.com/oauth2/authorize?client_id=${ clientId }&client_secret=${ clientSecret }&redirect_uri=${ redirectUri }&scope=${ scope }&blog=${ siteId }&response_type=code`
+			`https://public-api.finpress.com/oauth2/authorize?client_id=${ clientId }&client_secret=${ clientSecret }&redirect_uri=${ redirectUri }&scope=${ scope }&blog=${ siteId }&response_type=code`
 		);
 
 		const uri = new URL( redirectUri );
@@ -48,7 +48,7 @@ const getCode = (
 	} );
 };
 
-export const getWordpressComAuthToken = async (
+export const getfinpressComAuthToken = async (
 	clientId: string,
 	clientSecret: string,
 	siteId: string,
@@ -72,7 +72,7 @@ export const getWordpressComAuthToken = async (
 		data.append( 'redirect_uri', redirectUri );
 
 		const res = await fetch(
-			'https://public-api.wordpress.com/oauth2/token',
+			'https://public-api.finpress.com/oauth2/token',
 			{
 				method: 'POST',
 				headers: {

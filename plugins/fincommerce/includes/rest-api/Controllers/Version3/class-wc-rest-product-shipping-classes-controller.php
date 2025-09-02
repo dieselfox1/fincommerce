@@ -73,8 +73,8 @@ class WC_REST_Product_Shipping_Classes_Controller extends WC_REST_Product_Shippi
 			 * Pass a Term object that has only the taxonomy property,
 			 * to induce the wp_unique_term_slug() function to generate a unique slug.
 			 * Otherwise, the function will return the same slug.
-			 * @see https://core.trac.wordpress.org/browser/tags/6.5/src/wp-includes/taxonomy.php#L3130
-			 * @see https://github.com/WordPress/wordpress-develop/blob/a1b1e0339eb6dfa72a30933cac2a1c6ad2bbfe96/src/wp-includes/taxonomy.php#L3078-L3156
+			 * @see https://core.trac.finpress.org/browser/tags/6.5/src/wp-includes/taxonomy.php#L3130
+			 * @see https://github.com/finpress/finpress-develop/blob/a1b1e0339eb6dfa72a30933cac2a1c6ad2bbfe96/src/wp-includes/taxonomy.php#L3078-L3156
 			 */
 			$slug = wp_unique_term_slug( $slug, (object) array( 'taxonomy' => $this->taxonomy ) );
 		}

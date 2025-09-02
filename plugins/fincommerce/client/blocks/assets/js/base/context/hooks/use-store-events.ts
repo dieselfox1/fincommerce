@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { doAction } from '@wordpress/hooks';
-import { select } from '@wordpress/data';
-import { useCallback } from '@wordpress/element';
+import { doAction } from '@finpress/hooks';
+import { select } from '@finpress/data';
+import { useCallback } from '@finpress/element';
 
 type StoreEvent = (
 	eventName: string,
@@ -11,7 +11,7 @@ type StoreEvent = (
 ) => void;
 
 /**
- * Abstraction on top of @wordpress/hooks for dispatching events via doAction for 3rd parties to hook into.
+ * Abstraction on top of @finpress/hooks for dispatching events via doAction for 3rd parties to hook into.
  */
 export const useStoreEvents = (): {
 	dispatchStoreEvent: StoreEvent;

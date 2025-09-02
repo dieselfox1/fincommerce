@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
-import { addQueryArgs } from '@wordpress/url';
+import apiFetch from '@finpress/api-fetch';
+import { addQueryArgs } from '@finpress/url';
 
 /**
  * Internal dependencies
@@ -12,7 +12,7 @@ import { isStoreApiRequest } from '@fincommerce/block-library/assets/js/middlewa
 /**
  * Middleware to add the '_locale=site' query parameter from API requests.
  *
- * TODO: Remove once https://github.com/WordPress/gutenberg/issues/16805 is fixed and replace by removing userLocaleMiddleware middleware.
+ * TODO: Remove once https://github.com/finpress/gutenberg/issues/16805 is fixed and replace by removing userLocaleMiddleware middleware.
  *
  * @param {Object}   options      Fetch options.
  * @param {Object}   options.url  The URL of the request.

@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import type { BlockAttributes } from '@wordpress/blocks';
-import { useSelect } from '@wordpress/data';
-import deprecated from '@wordpress/deprecated';
-import { createElement } from '@wordpress/element';
-import { InnerBlocks } from '@wordpress/block-editor';
+import type { BlockAttributes } from '@finpress/blocks';
+import { useSelect } from '@finpress/data';
+import deprecated from '@finpress/deprecated';
+import { createElement } from '@finpress/element';
+import { InnerBlocks } from '@finpress/block-editor';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { DisplayState } from '@fincommerce/components';
 import { Product } from '@fincommerce/data';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityId } from '@wordpress/core-data';
+import { useEntityId } from '@finpress/core-data';
 
 /**
  * Internal dependencies

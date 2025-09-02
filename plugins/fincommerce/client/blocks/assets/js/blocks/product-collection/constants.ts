@@ -11,7 +11,7 @@
  */
 import { getSetting } from '@fincommerce/settings';
 import { objectOmit } from '@fincommerce/utils';
-import type { InnerBlockTemplate } from '@wordpress/blocks';
+import type { InnerBlockTemplate } from '@finpress/blocks';
 
 /**
  * Internal dependencies

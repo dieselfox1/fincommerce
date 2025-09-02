@@ -98,7 +98,7 @@ class OrderAttributionController implements RegisterHooksInterface {
 	}
 
 	/**
-	 * Hook into WordPress on init.
+	 * Hook into finpress on init.
 	 */
 	public function on_init() {
 		// Bail if the feature is not enabled.
@@ -157,7 +157,7 @@ class OrderAttributionController implements RegisterHooksInterface {
 				}
 
 				// Nonce check is handled by FinCommerce before fincommerce_checkout_order_created hook.
-				// phpcs:ignore WordPress.Security.NonceVerification
+				// phpcs:ignore finpress.Security.NonceVerification
 				$params = $this->get_unprefixed_field_values( $_POST );
 				/**
 				 * Run an action to save order attribution data.
@@ -344,7 +344,7 @@ class OrderAttributionController implements RegisterHooksInterface {
 			return;
 		}
 
-		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter
+		// phpcs:ignore finpress.WP.EnqueuedResourceParameters.NotInFooter
 		wp_enqueue_script(
 			'fincommerce-order-attribution-admin-js',
 			plugins_url( "assets/js/admin/order-attribution-admin{$this->get_script_suffix()}.js", WC_PLUGIN_FILE ),
@@ -420,7 +420,7 @@ class OrderAttributionController implements RegisterHooksInterface {
 	 */
 	private function set_customer_source_data( WC_Customer $customer ) {
 		// Nonce check is handled before user_register hook.
-		// phpcs:ignore WordPress.Security.NonceVerification
+		// phpcs:ignore finpress.Security.NonceVerification
 		foreach ( $this->get_source_values( $this->get_unprefixed_field_values( $_POST ) ) as $key => $value ) {
 			$customer->add_meta_data( $this->get_meta_prefixed_field_name( $key ), $value );
 		}

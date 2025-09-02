@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useState } from '@wordpress/element';
-import { Card, Flex, FlexItem, FlexBlock, Button } from '@wordpress/components';
-import { Icon, trendingUp, megaphone, closeSmall } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { useState } from '@finpress/element';
+import { Card, Flex, FlexItem, FlexBlock, Button } from '@finpress/components';
+import { Icon, trendingUp, megaphone, closeSmall } from '@finpress/icons';
 
 /**
  * Internal dependencies

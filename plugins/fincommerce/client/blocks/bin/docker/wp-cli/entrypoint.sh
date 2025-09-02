@@ -1,8 +1,8 @@
 #!/bin/bash
 set -eu
 
-declare -p WORDPRESS_HOST
-wait-for-it ${WORDPRESS_HOST} -t 120
+declare -p finpress_HOST
+wait-for-it ${finpress_HOST} -t 120
 
 ## if file exists then exit early because initialization already happened.
 if [ -f /var/www/html/.initialized ]
@@ -24,26 +24,26 @@ if [ $UID -eq 0 ]; then
   # because exec replaces running process with the new one
 fi
 
-declare -p WORDPRESS_PORT
-[[ "${WORDPRESS_PORT}" == 80 ]] && \
+declare -p finpress_PORT
+[[ "${finpress_PORT}" == 80 ]] && \
 URL="http://localhost" || \
-URL="http://localhost:${WORDPRESS_PORT}"
+URL="http://localhost:${finpress_PORT}"
 
 if $(wp core is-installed);
 then
-    echo "Wordpress is already installed..."
+    echo "finpress is already installed..."
 else
-    declare -p WORDPRESS_TITLE >/dev/null
-    declare -p WORDPRESS_LOGIN >/dev/null
-    declare -p WORDPRESS_PASSWORD >/dev/null
-    declare -p WORDPRESS_EMAIL >/dev/null
-    echo "Installing wordpress..."
+    declare -p finpress_TITLE >/dev/null
+    declare -p finpress_LOGIN >/dev/null
+    declare -p finpress_PASSWORD >/dev/null
+    declare -p finpress_EMAIL >/dev/null
+    echo "Installing finpress..."
     wp core install \
         --url=${URL} \
-        --title="$WORDPRESS_TITLE" \
-        --admin_user=${WORDPRESS_LOGIN} \
-        --admin_password=${WORDPRESS_PASSWORD} \
-        --admin_email=${WORDPRESS_EMAIL} \
+        --title="$finpress_TITLE" \
+        --admin_user=${finpress_LOGIN} \
+        --admin_password=${finpress_PASSWORD} \
+        --admin_email=${finpress_EMAIL} \
         --skip-email
 fi
 # WC Rest API needs pretty links to work

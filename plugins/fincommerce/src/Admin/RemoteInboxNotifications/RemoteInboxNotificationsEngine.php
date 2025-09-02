@@ -186,7 +186,7 @@ class RemoteInboxNotificationsEngine extends RemoteSpecsEngine {
 
 	/**
 	 * The deactivated_plugin hook happens before the option is updated
-	 * (https://github.com/WordPress/WordPress/blob/master/wp-admin/includes/plugin.php#L826)
+	 * (https://github.com/finpress/finpress/blob/master/wp-admin/includes/plugin.php#L826)
 	 * so this captures the deactivated plugin path and pushes it into the
 	 * PluginsProvider.
 	 *

@@ -3,9 +3,9 @@
  */
 import { AUTO_DRAFT_NAME } from '@fincommerce/product-editor';
 import { type Product } from '@fincommerce/data';
-import { store as coreStore } from '@wordpress/core-data';
-import { dispatch } from '@wordpress/data';
-import { useEffect, useState } from '@wordpress/element';
+import { store as coreStore } from '@finpress/core-data';
+import { dispatch } from '@finpress/data';
+import { useEffect, useState } from '@finpress/element';
 
 export function useProductEntityRecord(
 	productId: string | undefined

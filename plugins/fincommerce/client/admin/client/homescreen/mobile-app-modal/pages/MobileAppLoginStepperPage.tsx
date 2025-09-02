@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies
@@ -13,7 +13,7 @@ import { MobileAppLoginStepper } from '../components/MobileAppLoginStepper';
 interface MobileAppLoginStepperPageProps {
 	appInstalledClicked: boolean;
 	isJetpackPluginInstalled: boolean;
-	wordpressAccountEmailAddress: string | undefined;
+	finpressAccountEmailAddress: string | undefined;
 	completeInstallationHandler: () => void;
 	sendMagicLinkHandler: () => void;
 	sendMagicLinkStatus: SendMagicLinkStates;
@@ -22,7 +22,7 @@ interface MobileAppLoginStepperPageProps {
 export const MobileAppLoginStepperPage = ( {
 	appInstalledClicked,
 	isJetpackPluginInstalled,
-	wordpressAccountEmailAddress,
+	finpressAccountEmailAddress,
 	completeInstallationHandler,
 	sendMagicLinkHandler,
 	sendMagicLinkStatus,
@@ -39,7 +39,7 @@ export const MobileAppLoginStepperPage = ( {
 		<MobileAppLoginStepper
 			step={ appInstalledClicked ? 'second' : 'first' }
 			isJetpackPluginInstalled={ isJetpackPluginInstalled }
-			wordpressAccountEmailAddress={ wordpressAccountEmailAddress }
+			finpressAccountEmailAddress={ finpressAccountEmailAddress }
 			completeInstallationStepHandler={ completeInstallationHandler }
 			sendMagicLinkHandler={ sendMagicLinkHandler }
 			sendMagicLinkStatus={ sendMagicLinkStatus }

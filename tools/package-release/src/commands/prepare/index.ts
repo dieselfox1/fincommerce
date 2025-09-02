@@ -108,7 +108,7 @@ export default class PackagePrepare extends Command {
 						writeChangelog( name );
 					} else {
 						if ( initialRelease ) {
-							// @todo: When the composer.json versioning is "wordpress" as is for plugins, this value needs to be 1.0
+							// @todo: When the composer.json versioning is "finpress" as is for plugins, this value needs to be 1.0
 							nextVersion = '1.0.0';
 						} else {
 							throw new Error(

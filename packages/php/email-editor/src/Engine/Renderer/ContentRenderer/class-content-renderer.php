@@ -37,7 +37,7 @@ class Content_Renderer {
 	const CONTENT_STYLES_FILE = 'content.css';
 
 	/**
-	 * WordPress Block Type Registry.
+	 * finpress Block Type Registry.
 	 *
 	 * @var WP_Block_Type_Registry
 	 */
@@ -212,12 +212,12 @@ class Content_Renderer {
 
 		$_wp_current_template_id      = $template->id;
 		$_wp_current_template_content = $template->content;
-		$wp_query                     = new \WP_Query( array( 'p' => $email_post->ID ) ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- We need to set the query for correct rendering the blocks.
-		$post                         = $email_post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- We need to set the post for correct rendering the blocks.
+		$wp_query                     = new \WP_Query( array( 'p' => $email_post->ID ) ); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited -- We need to set the query for correct rendering the blocks.
+		$post                         = $email_post; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited -- We need to set the post for correct rendering the blocks.
 	}
 
 	/**
-	 * As we use default WordPress filters, we need to remove them after email rendering
+	 * As we use default finpress filters, we need to remove them after email rendering
 	 * so that we don't interfere with possible post rendering that might happen later.
 	 */
 	private function reset(): void {
@@ -230,8 +230,8 @@ class Content_Renderer {
 
 		$_wp_current_template_content = $this->backup_template_content;
 		$_wp_current_template_id      = $this->backup_template_id;
-		$wp_query                     = $this->backup_query;  // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- Restoring of the query.
-		$post                         = $this->backup_post;  // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- Restoring of the post.
+		$wp_query                     = $this->backup_query;  // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited -- Restoring of the query.
+		$post                         = $this->backup_post;  // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited -- Restoring of the post.
 	}
 
 	/**
@@ -269,7 +269,7 @@ class Content_Renderer {
 		$styles              .= $this->theme_controller->get_stylesheet_for_rendering( $post, $template );
 		$block_support_styles = $this->theme_controller->get_stylesheet_from_context( 'block-supports', array() );
 		// Get styles from block-supports stylesheet. This includes rules such as layout (contentWidth) that some blocks use.
-		// @see https://github.com/WordPress/WordPress/blob/3c5da9c74344aaf5bf8097f2e2c6a1a781600e03/wp-includes/script-loader.php#L3134
+		// @see https://github.com/finpress/finpress/blob/3c5da9c74344aaf5bf8097f2e2c6a1a781600e03/wp-includes/script-loader.php#L3134
 		// @internal :where is not supported by emogrifier, so we need to replace it with *.
 		$block_support_styles = str_replace(
 			':where(:not(.alignleft):not(.alignright):not(.alignfull))',

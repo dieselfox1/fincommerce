@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch } from '@finpress/data';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**
@@ -14,8 +14,8 @@ import { createNoticesFromResponse } from '../../lib/notices';
 
 jest.mock( '@fincommerce/tracks', () => ( { recordEvent: jest.fn() } ) );
 
-jest.mock( '@wordpress/data', () => ( {
-	...jest.requireActual( '@wordpress/data' ),
+jest.mock( '@finpress/data', () => ( {
+	...jest.requireActual( '@finpress/data' ),
 	useSelect: jest.fn(),
 	useDispatch: jest.fn().mockImplementation( () => ( {
 		updateOptions: jest.fn(),

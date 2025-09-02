@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { Component, Fragment } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { __ } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { Component, Fragment } from '@finpress/element';
+import { compose } from '@finpress/compose';
 import PropTypes from 'prop-types';
-import { withDispatch, withSelect } from '@wordpress/data';
+import { withDispatch, withSelect } from '@finpress/data';
 import { onboardingStore } from '@fincommerce/data';
 
 /**

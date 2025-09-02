@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { SVG, Path, G, Rect } from '@wordpress/components';
-import { useInstanceId } from '@wordpress/compose';
-import { createElement } from '@wordpress/element';
+import { SVG, Path, G, Rect } from '@finpress/components';
+import { useInstanceId } from '@finpress/compose';
+import { createElement } from '@finpress/element';
 
 export function Pants( {
 	colorOne = '#DDDDDD',

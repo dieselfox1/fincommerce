@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createElement, useState } from '@wordpress/element';
-import { Button, Modal } from '@wordpress/components';
+import { createElement, useState } from '@finpress/element';
+import { Button, Modal } from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
 import clsx from 'clsx';
 

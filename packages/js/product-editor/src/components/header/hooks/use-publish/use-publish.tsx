@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { MouseEvent } from 'react';
-import { useEntityProp } from '@wordpress/core-data';
-import { __ } from '@wordpress/i18n';
+import { useEntityProp } from '@finpress/core-data';
+import { __ } from '@finpress/i18n';
 import type { Product } from '@fincommerce/data';
-import { useShortcut } from '@wordpress/keyboard-shortcuts';
+import { useShortcut } from '@finpress/keyboard-shortcuts';
 
 /**
  * Internal dependencies

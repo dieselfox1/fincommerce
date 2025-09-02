@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useInstanceId } from '@wordpress/compose';
-import { BlockInstance, createBlock } from '@wordpress/blocks';
-import { createElement, useEffect } from '@wordpress/element';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useInstanceId } from '@finpress/compose';
+import { BlockInstance, createBlock } from '@finpress/blocks';
+import { createElement, useEffect } from '@finpress/element';
 import {
 	BlockList,
 	ObserveTyping,
@@ -13,7 +13,7 @@ import {
 	BlockTools,
 	store as blockEditorStore,
 	WritingFlow,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 type EditorWritingFlowProps = {
 	blocks: BlockInstance[];
@@ -48,7 +48,7 @@ export const EditorWritingFlow = ( {
 	// This is a workaround to prevent focusing the block on initialization.
 	// Changing to a mode other than "edit" ensures that no initial position
 	// is found and no element gets subsequently focused.
-	// See https://github.com/WordPress/gutenberg/blob/411b6eee8376e31bf9db4c15c92a80524ae38e9b/packages/block-editor/src/components/block-list/use-block-props/use-focus-first-element.js#L42
+	// See https://github.com/finpress/gutenberg/blob/411b6eee8376e31bf9db4c15c92a80524ae38e9b/packages/block-editor/src/components/block-list/use-block-props/use-focus-first-element.js#L42
 	const setEditorIsInitializing = ( isInitializing: boolean ) => {
 		if ( typeof __unstableSetEditorMode !== 'function' ) {
 			return;

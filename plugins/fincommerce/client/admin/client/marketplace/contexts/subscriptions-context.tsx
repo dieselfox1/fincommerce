@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { useState, createContext, useEffect } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { useState, createContext, useEffect } from '@finpress/element';
+import { __, sprintf } from '@finpress/i18n';
 
 /**
  * Internal dependencies

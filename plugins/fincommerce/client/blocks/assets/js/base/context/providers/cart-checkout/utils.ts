@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import triggerFetch from '@wordpress/api-fetch';
-import { dispatch } from '@wordpress/data';
+import triggerFetch from '@finpress/api-fetch';
+import { dispatch } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 
 /**

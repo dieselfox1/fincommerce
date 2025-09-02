@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Disables layout support for group blocks because the default layout `flex` add gaps between columns that it is not possible to support in emails.

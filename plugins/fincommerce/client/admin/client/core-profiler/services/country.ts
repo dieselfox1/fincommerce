@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { Country } from '@fincommerce/data';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Type definitions

@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import type { BlockInstance } from '@wordpress/blocks';
-import { createElement } from '@wordpress/element';
-import { addFilter } from '@wordpress/hooks';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { useSelect } from '@wordpress/data';
+import type { BlockInstance } from '@finpress/blocks';
+import { createElement } from '@finpress/element';
+import { addFilter } from '@finpress/hooks';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { useSelect } from '@finpress/data';
 import { evaluate } from '@fincommerce/expression-evaluation';
 
 /**

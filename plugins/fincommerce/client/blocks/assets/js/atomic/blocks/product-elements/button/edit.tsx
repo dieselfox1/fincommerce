@@ -7,16 +7,16 @@ import {
 	Button,
 	ButtonGroup,
 	PanelBody,
-} from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { __ } from '@finpress/i18n';
 import {
 	AlignmentToolbar,
 	BlockControls,
 	useBlockProps,
 	InspectorControls,
-} from '@wordpress/block-editor';
-import type { BlockEditProps } from '@wordpress/blocks';
-import { useEffect } from '@wordpress/element';
+} from '@finpress/block-editor';
+import type { BlockEditProps } from '@finpress/blocks';
+import { useEffect } from '@finpress/element';
 import { ProductQueryContext as Context } from '@fincommerce/blocks/product-query/types';
 
 /**

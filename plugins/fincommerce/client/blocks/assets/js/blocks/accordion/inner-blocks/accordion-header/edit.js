@@ -2,7 +2,7 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	useBlockProps,
 	__experimentalUseBorderProps as useBorderProps,
@@ -13,14 +13,14 @@ import {
 	HeadingLevelDropdown,
 	RichText,
 	InspectorControls,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 import {
 	PanelBody,
 	ToolbarGroup,
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
-} from '@wordpress/components';
+} from '@finpress/components';
 /**
  * Internal dependencies
  */

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { useState } from 'react';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { isEmpty, mapValues } from 'lodash';
 
 /**

@@ -5,7 +5,7 @@ namespace Automattic\FinCommerce\Blueprint\ResourceStorages;
 /**
  * Interface ResourceStorage
  *
- * ResourceStorage is an abstraction layer for various storages for WordPress files
+ * ResourceStorage is an abstraction layer for various storages for finpress files
  * such as plugins and themes. It provides a common interface for downloading
  * the files whether they are stored locally or remotely.
  *

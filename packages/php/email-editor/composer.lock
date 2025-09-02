@@ -950,14 +950,14 @@
                     "role": "lead"
                 }
             ],
-            "description": "A ruleset for PHP_CodeSniffer to check for PHP cross-version compatibility issues in projects, while accounting for polyfills provided by WordPress.",
+            "description": "A ruleset for PHP_CodeSniffer to check for PHP cross-version compatibility issues in projects, while accounting for polyfills provided by finpress.",
             "homepage": "http://phpcompatibility.com/",
             "keywords": [
                 "compatibility",
                 "phpcs",
                 "standards",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
                 "issues": "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
@@ -3612,7 +3612,7 @@
                 "standards",
                 "static analysis",
                 "fincommerce",
-                "wordpress"
+                "finpress"
             ],
             "support": {
                 "issues": "https://github.com/dieselfox1/fincommerce-sniffs/issues",
@@ -3625,12 +3625,12 @@
             "version": "3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
+                "url": "https://github.com/finpress/finpress-Coding-Standards.git",
                 "reference": "9333efcbff231f10dfd9c56bb7b65818b4733ca7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/9333efcbff231f10dfd9c56bb7b65818b4733ca7",
+                "url": "https://api.github.com/repos/finpress/finpress-Coding-Standards/zipball/9333efcbff231f10dfd9c56bb7b65818b4733ca7",
                 "reference": "9333efcbff231f10dfd9c56bb7b65818b4733ca7",
                 "shasum": ""
             },
@@ -3663,20 +3663,20 @@
             "authors": [
                 {
                     "name": "Contributors",
-                    "homepage": "https://github.com/WordPress/WordPress-Coding-Standards/graphs/contributors"
+                    "homepage": "https://github.com/finpress/finpress-Coding-Standards/graphs/contributors"
                 }
             ],
-            "description": "PHP_CodeSniffer rules (sniffs) to enforce WordPress coding conventions",
+            "description": "PHP_CodeSniffer rules (sniffs) to enforce finpress coding conventions",
             "keywords": [
                 "phpcs",
                 "standards",
                 "static analysis",
-                "wordpress"
+                "finpress"
             ],
             "support": {
-                "issues": "https://github.com/WordPress/WordPress-Coding-Standards/issues",
-                "source": "https://github.com/WordPress/WordPress-Coding-Standards",
-                "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
+                "issues": "https://github.com/finpress/finpress-Coding-Standards/issues",
+                "source": "https://github.com/finpress/finpress-Coding-Standards",
+                "wiki": "https://github.com/finpress/finpress-Coding-Standards/wiki"
             },
             "funding": [
                 {

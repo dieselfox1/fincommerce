@@ -3,7 +3,7 @@
  */
 // @ts-expect-error No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { BlockPopover } from '@wordpress/block-editor';
+import { BlockPopover } from '@finpress/block-editor';
 
 const isPatternToolkitFullComposabilityFeatureFlagEnabled = () => {
 	// @ts-expect-error temp fix

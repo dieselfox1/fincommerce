@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { renderHook, act } from '@testing-library/react';
-import { resolveSelect, useSelect } from '@wordpress/data';
+import { resolveSelect, useSelect } from '@finpress/data';
 import type { ProductVariation } from '@fincommerce/data';
 
 /**
@@ -10,8 +10,8 @@ import type { ProductVariation } from '@fincommerce/data';
  */
 import { useVariations } from '../use-variations';
 
-// Mock WordPress dependencies
-jest.mock( '@wordpress/core-data', () => ( {
+// Mock finpress dependencies
+jest.mock( '@finpress/core-data', () => ( {
 	createSelector: jest.fn(),
 	useEntityProp: jest.fn().mockReturnValue( [ 123 ] ),
 	useEntityRecord: jest.fn().mockReturnValue( {
@@ -29,7 +29,7 @@ jest.mock( '@fincommerce/data', () => ( {
 	experimentalProductVariationsStore: 'wc/experimental/product-variations',
 } ) );
 
-jest.mock( '@wordpress/data', () => ( {
+jest.mock( '@finpress/data', () => ( {
 	dispatch: jest.fn( () => ( {
 		invalidateResolution: jest.fn(),
 	} ) ),

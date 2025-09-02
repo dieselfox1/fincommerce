@@ -3,11 +3,11 @@
  */
 import { act, screen, waitFor } from '@testing-library/react';
 import { registerCheckoutFilters } from '@fincommerce/blocks-checkout';
-import { type BlockAttributes } from '@wordpress/blocks';
+import { type BlockAttributes } from '@finpress/blocks';
 import { getAllByRole, getByLabelText } from '@testing-library/dom';
 import { userEvent } from '@testing-library/user-event';
 import { previewCart } from '@fincommerce/resource-previews';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { CART_STORE_KEY as storeKey } from '@fincommerce/block-data';
 
 /**

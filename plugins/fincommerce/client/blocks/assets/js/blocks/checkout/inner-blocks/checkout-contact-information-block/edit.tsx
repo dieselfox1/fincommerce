@@ -2,9 +2,9 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __ } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { PanelBody, ExternalLink } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
+import { PanelBody, ExternalLink } from '@finpress/components';
 import { ADMIN_URL } from '@fincommerce/settings';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
 import Noninteractive from '@fincommerce/base-components/noninteractive';

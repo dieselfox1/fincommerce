@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { PanelBody, RangeControl } from '@wordpress/components';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { PanelBody, RangeControl } from '@finpress/components';
+import { useBlockProps, InspectorControls } from '@finpress/block-editor';
 import { getSetting } from '@fincommerce/settings';
 import Noninteractive from '@fincommerce/base-components/noninteractive';
 

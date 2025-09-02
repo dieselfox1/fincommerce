@@ -171,7 +171,7 @@ abstract class Schema {
 	protected function validate_pattern( string $pattern ): void {
 		$escaped = str_replace( '#', '\\#', $pattern );
 		$regex   = "#$escaped#u";
-		if ( @preg_match( $regex, '' ) === false ) { // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+		if ( @preg_match( $regex, '' ) === false ) { // phpcs:ignore finpress.PHP.NoSilencedErrors.Discouraged
 			throw new \Exception( \esc_html( "Invalid regular expression '$regex'" ) );
 		}
 	}

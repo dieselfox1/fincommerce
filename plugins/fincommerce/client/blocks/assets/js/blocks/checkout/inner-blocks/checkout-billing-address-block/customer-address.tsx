@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useCallback, useEffect } from '@wordpress/element';
+import { useCallback, useEffect } from '@finpress/element';
 import { Form } from '@fincommerce/base-components/cart-checkout';
 import {
 	useCheckoutAddress,
@@ -9,7 +9,7 @@ import {
 	useCustomerData,
 } from '@fincommerce/base-context';
 import type { AddressFormValues } from '@fincommerce/settings';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 import { ADDRESS_FORM_KEYS } from '@fincommerce/block-settings';
 

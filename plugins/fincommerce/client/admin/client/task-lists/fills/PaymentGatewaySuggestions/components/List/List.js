@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Card, CardHeader, CardFooter } from '@wordpress/components';
+import { Card, CardHeader, CardFooter } from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useCallback, useLayoutEffect, useRef } from '@wordpress/element';
+import { useCallback, useLayoutEffect, useRef } from '@finpress/element';
 import { useSlot, Text } from '@fincommerce/experimental';
 import clsx from 'clsx';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 import {
 	WC_HEADER_SLOT_NAME,
 	WC_HEADER_PAGE_TITLE_SLOT_NAME,

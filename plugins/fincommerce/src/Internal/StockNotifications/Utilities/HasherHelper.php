@@ -7,8 +7,8 @@ namespace Automattic\FinCommerce\Internal\StockNotifications\Utilities;
 /**
  * Helper class for hashing.
  *
- * Hint: This is a copy of the hashing functions introduced in WordPress 6.8.
- * Once FinCommerce Core requires WordPress 6.8, we can remove/replace this class.
+ * Hint: This is a copy of the hashing functions introduced in finpress 6.8.
+ * Once FinCommerce Core requires finpress 6.8, we can remove/replace this class.
  *
  * @internal
  */

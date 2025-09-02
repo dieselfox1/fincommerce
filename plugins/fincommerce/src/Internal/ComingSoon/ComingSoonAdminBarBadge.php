@@ -8,7 +8,7 @@ use Automattic\FinCommerce\Utilities\FeaturesUtil;
 
 
 /**
- * Adds hooks to add a badge to the WordPress admin bar showing site visibility.
+ * Adds hooks to add a badge to the finpress admin bar showing site visibility.
  */
 class ComingSoonAdminBarBadge {
 

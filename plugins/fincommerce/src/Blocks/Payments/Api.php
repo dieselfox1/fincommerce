@@ -149,10 +149,10 @@ class Api {
 						esc_html( $dep )
 					);
 
-					// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+					// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_error_log
 					error_log( $error_message );
 
-					// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.NotInFooter,WordPress.WP.EnqueuedResourceParameters.MissingVersion
+					// phpcs:ignore finpress.WP.EnqueuedResourceParameters.NotInFooter,finpress.WP.EnqueuedResourceParameters.MissingVersion
 					wp_register_script( $error_handle, '' );
 					wp_enqueue_script( $error_handle );
 					wp_add_inline_script(

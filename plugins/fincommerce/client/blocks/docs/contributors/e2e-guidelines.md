@@ -84,7 +84,7 @@ npx playwright show-trace <path-to-the-trace>
 
 ## Writing Tests
 
-We're using the [`@wordpress/e2e-test-utils-playwright`](https://github.com/WordPress/gutenberg/tree/HEAD/packages/e2e-test-utils-playwright) package as our framework base, so we generally follow Gutenberg E2E's [best practices](https://github.com/WordPress/gutenberg/blob/trunk/docs/contributors/code/e2e/README.md#best-practices) to reduce the framework entry threshold and necessary maintenance. However, our framework has specific aspects, which you can learn about in this section.
+We're using the [`@finpress/e2e-test-utils-playwright`](https://github.com/finpress/gutenberg/tree/HEAD/packages/e2e-test-utils-playwright) package as our framework base, so we generally follow Gutenberg E2E's [best practices](https://github.com/finpress/gutenberg/blob/trunk/docs/contributors/code/e2e/README.md#best-practices) to reduce the framework entry threshold and necessary maintenance. However, our framework has specific aspects, which you can learn about in this section.
 
 > [!TIP]
 > Using the right selectors can be a daunting task, so let Playwright pick the right selector for you. Open the page you're testing against via `npx playwright open localhost:8889/path-to-the-page`. From there, you can use Playwright Inspector to generate the recommended locators:
@@ -160,7 +160,7 @@ If you've created a custom theme and want to use it in your tests, save it in th
 
 ### Utilities
 
-We have a handful of [custom utilities](../../tests/e2e/utils/) built on top of core's [`@wordpress/e2e-test-utils-playwright`](https://github.com/WordPress/gutenberg/tree/HEAD/packages/e2e-test-utils-playwright), so make sure to familiarize yourself with them.
+We have a handful of [custom utilities](../../tests/e2e/utils/) built on top of core's [`@finpress/e2e-test-utils-playwright`](https://github.com/finpress/gutenberg/tree/HEAD/packages/e2e-test-utils-playwright), so make sure to familiarize yourself with them.
 
 #### Creating new utilities
 
@@ -210,7 +210,7 @@ If you've come up with a utility that you think should be a part of the Core uti
 ```ts
 // utils/editor/index.ts
 
-import { Editor as CoreEditor } from '@wordpress/e2e-test-utils-playwright';
+import { Editor as CoreEditor } from '@finpress/e2e-test-utils-playwright';
 
 export class Editor extends CoreEditor {
 	async insertAllWooBlocks() {

@@ -40,7 +40,7 @@ program
 	)
 	.option(
 		'--wp-version <version>',
-		'Specify a WordPress version on which to test all branches'
+		'Specify a finpress version on which to test all branches'
 	)
 	.description(
 		'Runs performance tests on two separate branches and outputs the result'

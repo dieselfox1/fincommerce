@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
-import { Button, Popover } from '@wordpress/components';
-import { Icon, cancelCircleFilled } from '@wordpress/icons';
-import { decodeEntities } from '@wordpress/html-entities';
-import { useInstanceId } from '@wordpress/compose';
-import { useState } from '@wordpress/element';
+import { Button, Popover } from '@finpress/components';
+import { Icon, cancelCircleFilled } from '@finpress/icons';
+import { decodeEntities } from '@finpress/html-entities';
+import { useInstanceId } from '@finpress/compose';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

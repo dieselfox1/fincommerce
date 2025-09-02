@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { useProductDataContext } from '@fincommerce/shared-context';
-import { Disabled, Spinner } from '@wordpress/components';
-import { useBlockProps } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { Disabled, Spinner } from '@finpress/components';
+import { useBlockProps } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BlockAttributes } from '@wordpress/blocks';
-import { useInstanceId } from '@wordpress/compose';
-import { createElement, createInterpolateElement } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { BlockAttributes } from '@finpress/blocks';
+import { useInstanceId } from '@finpress/compose';
+import { createElement, createInterpolateElement } from '@finpress/element';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { Product } from '@fincommerce/data';
 import {
 	BaseControl,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityProp } from '@wordpress/core-data';
+import { useEntityProp } from '@finpress/core-data';
 
 /**
  * Internal dependencies

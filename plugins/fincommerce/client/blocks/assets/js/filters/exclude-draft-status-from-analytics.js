@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { addFilter } from '@wordpress/hooks';
+import { addFilter } from '@finpress/hooks';
 
 addFilter(
 	'fincommerce_admin_analytics_settings',

@@ -8,8 +8,8 @@ import {
 	BillingAddress,
 	getSetting,
 } from '@fincommerce/settings';
-import { useCallback } from '@wordpress/element';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useCallback } from '@finpress/element';
+import { useDispatch, useSelect } from '@finpress/data';
 import { checkoutStore } from '@fincommerce/block-data';
 
 /**

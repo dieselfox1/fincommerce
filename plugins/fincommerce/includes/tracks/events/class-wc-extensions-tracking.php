@@ -29,7 +29,7 @@ class WC_Extensions_Tracking {
 	 * Send a Tracks event when an Extensions page is viewed.
 	 */
 	public function track_extensions_page() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$properties = array(
 			'section' => empty( $_REQUEST['section'] ) ? '_featured' : wc_clean( wp_unslash( $_REQUEST['section'] ) ),
 		);
@@ -55,7 +55,7 @@ class WC_Extensions_Tracking {
 	 * @param string $error Error message.
 	 */
 	public function track_extensions_page_connection_error( string $error = '' ) {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$properties = array(
 			'section' => empty( $_REQUEST['section'] ) ? '_featured' : wc_clean( wp_unslash( $_REQUEST['section'] ) ),
 		);
@@ -91,12 +91,12 @@ class WC_Extensions_Tracking {
 	public function track_helper_connection_complete() {
 		$properties = array();
 
-		if ( ! empty( $_GET['utm_source'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$properties['utm_source'] = wc_clean( wp_unslash( $_GET['utm_source'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['utm_source'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$properties['utm_source'] = wc_clean( wp_unslash( $_GET['utm_source'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
-		if ( ! empty( $_GET['utm_campaign'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$properties['utm_campaign'] = wc_clean( wp_unslash( $_GET['utm_campaign'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_GET['utm_campaign'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$properties['utm_campaign'] = wc_clean( wp_unslash( $_GET['utm_campaign'] ) ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 		}
 
 		WC_Tracks::record_event( 'extensions_subscriptions_connected', $properties );

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import { Params } from 'react-router-dom';
 
 export type Page = {

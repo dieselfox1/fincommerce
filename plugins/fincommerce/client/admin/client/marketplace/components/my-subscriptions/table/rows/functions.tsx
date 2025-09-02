@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { TableRow } from '@fincommerce/components/build-types/table/types';
-import { gmdateI18n } from '@wordpress/date';
-import { __, sprintf } from '@wordpress/i18n';
-import { Icon, plugins } from '@wordpress/icons';
-import { createInterpolateElement } from '@wordpress/element';
+import { gmdateI18n } from '@finpress/date';
+import { __, sprintf } from '@finpress/i18n';
+import { Icon, plugins } from '@finpress/icons';
+import { createInterpolateElement } from '@finpress/element';
 
 /**
  * Internal dependencies

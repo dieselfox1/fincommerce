@@ -17,7 +17,7 @@ import {
 	NavigationItem as NavigationItemComponent,
 	Text as TextComponent,
 	useSlot as useSlotHook,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Prioritize exports of non-experimental components over experimental.

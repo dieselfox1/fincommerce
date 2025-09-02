@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { Button } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { closeSmall, external } from '@wordpress/icons';
+import { Button } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { closeSmall, external } from '@finpress/icons';
 import { getNewPath } from '@fincommerce/navigation';
 import { Product } from '@fincommerce/data';
 import clsx from 'clsx';

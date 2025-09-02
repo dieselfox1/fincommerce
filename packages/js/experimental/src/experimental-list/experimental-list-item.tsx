@@ -2,8 +2,8 @@
  * External dependencies
  */
 import { CSSTransition } from 'react-transition-group';
-import { createElement } from '@wordpress/element';
-import { ENTER } from '@wordpress/keycodes';
+import { createElement } from '@finpress/element';
+import { ENTER } from '@finpress/keycodes';
 import clsx from 'clsx';
 
 function handleKeyDown(

@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import {
 	createElement,
 	useRef,
 	Fragment,
 	useState,
 	useEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { find, get, noop } from 'lodash';
-import { withInstanceId } from '@wordpress/compose';
-import { Icon, chevronUp, chevronDown } from '@wordpress/icons';
-import deprecated from '@wordpress/deprecated';
+import { withInstanceId } from '@finpress/compose';
+import { Icon, chevronUp, chevronDown } from '@finpress/icons';
+import deprecated from '@finpress/deprecated';
 
 /**
  * Internal dependencies

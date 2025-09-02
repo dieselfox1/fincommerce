@@ -162,7 +162,7 @@ class WooPayments extends Incentive {
 		// Query for incentives by calling the WooPayments API.
 		$url = add_query_arg(
 			$store_context,
-			'https://public-api.wordpress.com/wpcom/v2/wcpay/incentives',
+			'https://public-api.finpress.com/wpcom/v2/wcpay/incentives',
 		);
 
 		$response = wp_remote_get(

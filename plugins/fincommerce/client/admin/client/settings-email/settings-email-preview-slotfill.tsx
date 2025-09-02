@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { createSlotFill, Spinner } from '@wordpress/components';
-import { SelectControlSingleSelectionProps } from '@wordpress/components/build-types/select-control/types';
-import { registerPlugin } from '@wordpress/plugins';
-import { useEffect, useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createSlotFill, Spinner } from '@finpress/components';
+import { SelectControlSingleSelectionProps } from '@finpress/components/build-types/select-control/types';
+import { registerPlugin } from '@finpress/plugins';
+import { useEffect, useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { debounce } from 'lodash';
 
 /**

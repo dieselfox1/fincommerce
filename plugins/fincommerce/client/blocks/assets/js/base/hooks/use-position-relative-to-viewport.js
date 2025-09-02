@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useRef, useLayoutEffect, useState } from '@wordpress/element';
+import { useRef, useLayoutEffect, useState } from '@finpress/element';
 
 /** @typedef {import('react')} React */
 

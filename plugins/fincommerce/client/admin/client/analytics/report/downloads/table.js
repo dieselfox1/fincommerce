@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __, _n } from '@wordpress/i18n';
-import { Component } from '@wordpress/element';
-import { withSelect } from '@wordpress/data';
+import { __, _n } from '@finpress/i18n';
+import { Component } from '@finpress/element';
+import { withSelect } from '@finpress/data';
 import { map } from 'lodash';
 import moment from 'moment';
 import { Date, Link } from '@fincommerce/components';

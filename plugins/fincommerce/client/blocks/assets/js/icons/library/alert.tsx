@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { IconProps } from '@wordpress/icons/build-types/icon';
-import { SVG } from '@wordpress/primitives';
+import { IconProps } from '@finpress/icons/build-types/icon';
+import { SVG } from '@finpress/primitives';
 
 interface AlertProps {
 	status?: 'warning' | 'error' | 'success' | 'info';

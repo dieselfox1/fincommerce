@@ -7,19 +7,19 @@ import {
 	createInterpolateElement,
 	useRef,
 	useEffect,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { Form, FormErrors, useFormContext } from '@fincommerce/components';
 import { ProductShippingClass } from '@fincommerce/data';
-import { addQueryArgs } from '@wordpress/url';
-import apiFetch from '@wordpress/api-fetch';
+import { addQueryArgs } from '@finpress/url';
+import apiFetch from '@finpress/api-fetch';
 import {
 	Button,
 	Modal,
 	TextControl,
 	__experimentalInputControl as InputControl,
 	__experimentalInputControlPrefixWrapper as InputControlPrefixWrapper,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 export type ShippingClassFormProps = {
 	onAdd: () => Promise< void >;

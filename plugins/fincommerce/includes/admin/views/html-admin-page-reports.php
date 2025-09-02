@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<strong>
 			<?php
 			/* translators: 1: Link URL */
-			echo wp_kses_post( sprintf( __( 'With the release of FinCommerce 4.0, these reports are being replaced. There is a new and better Analytics section available for users running WordPress 5.3+. Head on over to the <a href="%1$s">FinCommerce Analytics</a> or learn more about the new experience in the <a href="https://fincommerce.com/document/fincommerce-analytics/" target="_blank">FinCommerce Analytics documentation</a>.', 'fincommerce' ), esc_url( wc_admin_url( '&path=/analytics/overview' ) ) ) );
+			echo wp_kses_post( sprintf( __( 'With the release of FinCommerce 4.0, these reports are being replaced. There is a new and better Analytics section available for users running finpress 5.3+. Head on over to the <a href="%1$s">FinCommerce Analytics</a> or learn more about the new experience in the <a href="https://fincommerce.com/document/fincommerce-analytics/" target="_blank">FinCommerce Analytics documentation</a>.', 'fincommerce' ), esc_url( wc_admin_url( '&path=/analytics/overview' ) ) ) );
 			?>
 			</strong>
 		</p>

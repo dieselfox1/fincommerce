@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useMemo } from '@wordpress/element';
-import { useSelect } from '@wordpress/data';
-import { Button, Dropdown, Icon, Tooltip } from '@wordpress/components';
-import { useResizeObserver } from '@wordpress/compose';
-import { __ } from '@wordpress/i18n';
+import { useMemo } from '@finpress/element';
+import { useSelect } from '@finpress/data';
+import { Button, Dropdown, Icon, Tooltip } from '@finpress/components';
+import { useResizeObserver } from '@finpress/compose';
+import { __ } from '@finpress/i18n';
 import {
 	BlockInstance,
 	createBlock,
@@ -15,7 +15,7 @@ import {
 	store as blocksStore,
 	BlockVariation,
 	BlockIcon,
-} from '@wordpress/blocks';
+} from '@finpress/blocks';
 
 /**
  * Internal dependencies
@@ -182,7 +182,7 @@ const CollectionChooser = (
 	// Get Collections
 	const blockCollections = useSelect( ( select ) => {
 		// @ts-expect-error Type definitions are missing
-		// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/wordpress__blocks/store/selectors.d.ts
+		// https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/finpress__blocks/store/selectors.d.ts
 		const { getBlockVariations } = select( blocksStore );
 		return getBlockVariations( blockJson.name );
 	}, [] ) as BlockVariation[];

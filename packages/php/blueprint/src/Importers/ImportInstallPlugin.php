@@ -55,8 +55,8 @@ class ImportInstallPlugin implements StepProcessor {
 		$plugin = $schema->pluginData;
 
 		// We only support CorePluginReference at the moment.
-		if ( 'wordpress.org/plugins' !== $plugin->resource ) {
-			$result->add_info( "Skipped installing a plugin. Unsupported resource type. Only 'wordpress.org/plugins' is supported at the moment." );
+		if ( 'finpress.org/plugins' !== $plugin->resource ) {
+			$result->add_info( "Skipped installing a plugin. Unsupported resource type. Only 'finpress.org/plugins' is supported at the moment." );
 			return $result;
 		}
 

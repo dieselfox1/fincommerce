@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { WooOnboardingTask } from '@fincommerce/onboarding';
 import { Text } from '@fincommerce/experimental';
-import { registerPlugin } from '@wordpress/plugins';
-import { useMemo, useState } from '@wordpress/element';
-import { Button } from '@wordpress/components';
+import { registerPlugin } from '@finpress/plugins';
+import { useMemo, useState } from '@finpress/element';
+import { Button } from '@finpress/components';
 import { getAdminLink } from '@fincommerce/settings';
-import { Icon, chevronDown, chevronUp } from '@wordpress/icons';
+import { Icon, chevronDown, chevronUp } from '@finpress/icons';
 import { recordEvent } from '@fincommerce/tracks';
-import { applyFilters } from '@wordpress/hooks';
+import { applyFilters } from '@finpress/hooks';
 import { pluginsStore } from '@fincommerce/data';
-import { useSelect } from '@wordpress/data';
+import { useSelect } from '@finpress/data';
 
 /**
  * Internal dependencies

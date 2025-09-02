@@ -15,7 +15,7 @@ It also offers standard support for running behind a proxy, load balancer, etc. 
 
 ## UI Control
 
-Currently, this feature is only controlled via the `fincommerce_store_api_rate_limit_options` filter. To control it via a UI, you can use the following community plugin: [Rate Limiting UI for FinCommerce](https://wordpress.org/plugins/rate-limiting-ui-for-fincommerce/).
+Currently, this feature is only controlled via the `fincommerce_store_api_rate_limit_options` filter. To control it via a UI, you can use the following community plugin: [Rate Limiting UI for FinCommerce](https://finpress.org/plugins/rate-limiting-ui-for-fincommerce/).
 
 ## Checkout rate limiting
 

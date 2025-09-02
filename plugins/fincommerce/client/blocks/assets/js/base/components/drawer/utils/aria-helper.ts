@@ -1,5 +1,5 @@
 /**
- * Based on https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/modal/aria-helper.ts
+ * Based on https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/modal/aria-helper.ts
  *
  * Modified to support a custom `data-keep-visible` attribute,
  * which prevents elements from being hidden from screen readers.

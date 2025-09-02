@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-export { store } from '@wordpress/core-data'; // User store is the same as core data store
+export { store } from '@finpress/core-data'; // User store is the same as core data store
 
 /**
  * Internal dependencies

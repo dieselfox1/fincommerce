@@ -2,9 +2,9 @@
  * External dependencies
  */
 import { QUERY_STATE_STORE_KEY as storeKey } from '@fincommerce/block-data';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useRef, useEffect, useCallback } from '@wordpress/element';
-import isShallowEqual from '@wordpress/is-shallow-equal';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useRef, useEffect, useCallback } from '@finpress/element';
+import isShallowEqual from '@finpress/is-shallow-equal';
 import { useShallowEqual, usePrevious } from '@fincommerce/base-hooks';
 
 /**

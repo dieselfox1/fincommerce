@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useState, useRef, useEffect } from '@wordpress/element';
+import { useState, useRef, useEffect } from '@finpress/element';
 
 /**
  * Returns a ref, its dimensions, and its visible viewport dimensions. Useful to know if an element should be sticky or not. This hook only runs when an element changes its intersection or dimensions.

@@ -12,7 +12,7 @@ describe( 'emptyHiddenAddressFields', () => {
 		const address = {
 			first_name: 'Jonny',
 			last_name: 'Awesome',
-			company: 'WordPress',
+			company: 'finpress',
 			address_1: '123 Address Street',
 			address_2: 'Address 2',
 			city: 'Vienna',

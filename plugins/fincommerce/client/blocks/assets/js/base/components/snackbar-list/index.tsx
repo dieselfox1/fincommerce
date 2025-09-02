@@ -3,8 +3,8 @@
  */
 import clsx from 'clsx';
 import type { NoticeType } from '@fincommerce/types';
-import { useReducedMotion } from '@wordpress/compose';
-import { useRef } from '@wordpress/element';
+import { useReducedMotion } from '@finpress/compose';
+import { useRef } from '@finpress/element';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 /**

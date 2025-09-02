@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __, _n, sprintf } from '@wordpress/i18n';
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { __, _n, sprintf } from '@finpress/i18n';
+import { InspectorControls, useBlockProps } from '@finpress/block-editor';
 import {
 	Button,
 	PanelBody,
 	Placeholder,
 	withSpokenMessages,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { SearchListItem } from '@fincommerce/editor-components/search-list-control';
 import ProductControl from '@fincommerce/editor-components/product-control';
-import { commentContent, Icon } from '@wordpress/icons';
-import { decodeEntities } from '@wordpress/html-entities';
+import { commentContent, Icon } from '@finpress/icons';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

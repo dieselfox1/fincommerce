@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { store, getContext } from '@wordpress/interactivity';
+import { store, getContext } from '@finpress/interactivity';
 
 const { state } = store( 'fincommerce/accordion', {
 	state: {

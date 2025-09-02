@@ -65,14 +65,14 @@ module.exports = ( storybookConfig ) => {
 		new CopyWebpackPlugin( {
 			patterns: [
 				{
-					from: path.resolve( __dirname, 'wordpress/css' ),
-					to: 'wordpress/css/[name][ext]',
+					from: path.resolve( __dirname, 'finpress/css' ),
+					to: 'finpress/css/[name][ext]',
 				},
 				{
 					from: require.resolve(
-						'@wordpress/components/build-style/style.css'
+						'@finpress/components/build-style/style.css'
 					),
-					to: 'wordpress/css/components.css',
+					to: 'finpress/css/components.css',
 				},
 				{
 					from: path.resolve(

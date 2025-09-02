@@ -12,7 +12,7 @@ use Automattic\FinCommerce\EmailEditor\Validator\Schema;
 
 /**
  * Represents a schema for an object.
- * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#objects
+ * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#objects
  */
 class Object_Schema extends Schema {
 	/**
@@ -59,7 +59,7 @@ class Object_Schema extends Schema {
 
 	/**
 	 * Keys of $properties are regular expressions without leading/trailing delimiters.
-	 * See: https://developer.wordpress.org/rest-api/extending-the-rest-api/schema/#patternproperties
+	 * See: https://developer.finpress.org/rest-api/extending-the-rest-api/schema/#patternproperties
 	 *
 	 * @param array<string, Schema> $properties Regular expressions and their schemas.
 	 */

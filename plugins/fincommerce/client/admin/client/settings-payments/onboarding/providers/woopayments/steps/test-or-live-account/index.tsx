@@ -2,11 +2,11 @@
  * External dependencies
  */
 import React, { useState } from 'react';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import interpolateComponents from '@automattic/interpolate-components';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 import { Link } from '@fincommerce/components';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

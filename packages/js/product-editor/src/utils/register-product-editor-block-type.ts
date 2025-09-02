@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Block, BlockConfiguration } from '@wordpress/blocks';
+import { Block, BlockConfiguration } from '@finpress/blocks';
 import { registerWooBlockType } from '@fincommerce/block-templates';
-import { useEntityId } from '@wordpress/core-data';
+import { useEntityId } from '@finpress/core-data';
 
 interface BlockRepresentation< T extends Record< string, object > > {
 	name?: string;

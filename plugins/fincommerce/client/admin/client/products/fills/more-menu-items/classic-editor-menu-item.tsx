@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { useDispatch, useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+import { useDispatch, useSelect } from '@finpress/data';
+import { __ } from '@finpress/i18n';
 import { getAdminLink } from '@fincommerce/settings';
 import { optionsStore } from '@fincommerce/data';
-import { MenuItem } from '@wordpress/components';
+import { MenuItem } from '@finpress/components';
 import {
 	ALLOW_TRACKING_OPTION_NAME,
 	STORE_KEY as CES_STORE_KEY,

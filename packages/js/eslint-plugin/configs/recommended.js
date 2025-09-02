@@ -2,7 +2,7 @@ module.exports = {
 	extends: [
 		'plugin:react-hooks/recommended',
 		require.resolve( './custom.js' ),
-		'plugin:@wordpress/eslint-plugin/recommended',
+		'plugin:@finpress/eslint-plugin/recommended',
 		'plugin:@typescript-eslint/recommended',
 	],
 	parser: '@typescript-eslint/parser',
@@ -11,14 +11,14 @@ module.exports = {
 		'jest/globals': true,
 		jest: true,
 	},
-	plugins: [ '@wordpress', '@typescript-eslint' ],
+	plugins: [ '@finpress', '@typescript-eslint' ],
 	rules: {
 		radix: 'error',
 		yoda: [ 'error', 'never' ],
 		// temporary conversion to warnings until the below are all handled.
 		'jsdoc/check-line-alignment': 'warn',
 		'jsdoc/require-returns-check': 'warn',
-		'@wordpress/i18n-text-domain': [
+		'@finpress/i18n-text-domain': [
 			'error',
 			{
 				allowedTextDomain: 'fincommerce',
@@ -33,8 +33,8 @@ module.exports = {
 		'jsdoc/require-param': 'off',
 		// Making use of typescript no-shadow instead, fixes issues with enum.
 		'no-shadow': 'off',
-		'@wordpress/no-unsafe-wp-apis': 'warn',
-		'@wordpress/no-global-active-element': 'warn',
+		'@finpress/no-unsafe-wp-apis': 'warn',
+		'@finpress/no-global-active-element': 'warn',
 		'import/no-extraneous-dependencies': 'warn',
 		'import/no-unresolved': 'warn',
 		'jest/no-deprecated-functions': 'warn',

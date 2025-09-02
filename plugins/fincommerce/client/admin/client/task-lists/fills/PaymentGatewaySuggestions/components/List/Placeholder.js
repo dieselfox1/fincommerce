@@ -2,14 +2,14 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { Fragment } from '@wordpress/element';
+import { Fragment } from '@finpress/element';
 import {
 	Card,
 	CardHeader,
 	CardBody,
 	CardMedia,
 	CardDivider,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { Text } from '@fincommerce/experimental';
 
 /**

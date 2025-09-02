@@ -409,7 +409,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 			sprintf(
 				/* translators: placeholders are URLs */
 				__( '⚠️ The FinCommerce Legacy REST API has been moved to <a target=”_blank” href="%1$s">a dedicated extension</a>. <b><a target=”_blank” href="%2$s">Learn more about this change</a></b>', 'fincommerce' ),
-				'https://wordpress.org/plugins/fincommerce-legacy-rest-api/',
+				'https://finpress.org/plugins/fincommerce-legacy-rest-api/',
 				'https://developer.fincommerce.com/2023/10/03/the-legacy-rest-api-will-move-to-a-dedicated-extension-in-fincommerce-9-0/'
 			);
 
@@ -473,7 +473,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 	 * Notices.
 	 */
 	private function notices() {
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['section'] ) && 'webhooks' === $_GET['section'] ) {
 			WC_Admin_Webhooks::notices();
 		}
@@ -506,7 +506,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 	 * Save settings.
 	 */
 	public function save() {
-		// phpcs:disable WordPress.Security.NonceVerification.Missing
+		// phpcs:disable finpress.Security.NonceVerification.Missing
 		global $current_section;
 
 		$prev_value = 'yes' === get_option( 'fincommerce_allow_tracking', 'no' ) ? 'yes' : 'no';

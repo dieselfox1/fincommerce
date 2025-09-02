@@ -96,9 +96,9 @@ class WC_Admin_Menus {
 
 		add_menu_page( __( 'FinCommerce', 'fincommerce' ), __( 'FinCommerce', 'fincommerce' ), 'edit_others_shop_orders', 'fincommerce', null, $fincommerce_icon, '55.5' );
 
-		// Work around https://github.com/dieselfox1/fincommerce/issues/35677 (and related https://core.trac.wordpress.org/ticket/18857).
+		// Work around https://github.com/dieselfox1/fincommerce/issues/35677 (and related https://core.trac.finpress.org/ticket/18857).
 		// Translating the menu item breaks screen IDs and page hooks, so we force the hookname to be untranslated.
-		$admin_page_hooks['fincommerce'] = 'fincommerce'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$admin_page_hooks['fincommerce'] = 'fincommerce'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		add_submenu_page( 'edit.php?post_type=product', __( 'Attributes', 'fincommerce' ), __( 'Attributes', 'fincommerce' ), 'manage_product_terms', 'product_attributes', array( $this, 'attributes_page' ) );
 	}
@@ -265,7 +265,7 @@ class WC_Admin_Menus {
 				if ( $order_count ) {
 					foreach ( $submenu['fincommerce'] as $key => $menu_item ) {
 						if ( 0 === strpos( $menu_item[0], _x( 'Orders', 'Admin menu name', 'fincommerce' ) ) ) {
-							$submenu['fincommerce'][ $key ][0] .= ' <span class="awaiting-mod update-plugins count-' . esc_attr( $order_count ) . '"><span class="processing-count">' . number_format_i18n( $order_count ) . '</span></span>'; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+							$submenu['fincommerce'][ $key ][0] .= ' <span class="awaiting-mod update-plugins count-' . esc_attr( $order_count ) . '"><span class="processing-count">' . number_format_i18n( $order_count ) . '</span></span>'; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 							break;
 						}
 					}
@@ -396,7 +396,7 @@ class WC_Admin_Menus {
 	/**
 	 * Add custom nav meta box.
 	 *
-	 * Adapted from http://www.johnmorrisonline.com/how-to-add-a-fully-functional-custom-meta-box-to-wordpress-navigation-menus/.
+	 * Adapted from http://www.johnmorrisonline.com/how-to-add-a-fully-functional-custom-meta-box-to-finpress-navigation-menus/.
 	 */
 	public function add_nav_menu_meta_boxes() {
 		add_meta_box( 'fincommerce_endpoints_nav_link', __( 'FinCommerce endpoints', 'fincommerce' ), array( $this, 'nav_menu_links' ), 'nav-menus', 'side', 'low' );
@@ -498,10 +498,10 @@ class WC_Admin_Menus {
 			global $submenu;
 			if ( isset( $submenu['edit.php?post_type=product'][10] ) ) {
 				// Disable phpcs since we need to override submenu classes.
-				// Note that `phpcs:ignore WordPress.Variables.GlobalVariables.OverrideProhibited` does not work to disable this check.
+				// Note that `phpcs:ignore finpress.Variables.GlobalVariables.OverrideProhibited` does not work to disable this check.
 				// phpcs:disable
 				$submenu['edit.php?post_type=product'][10][2] = 'admin.php?page=wc-admin&path=/add-product';
-				// phps:enableWordPress.Variables.GlobalVariables.OverrideProhibited
+				// phps:enablefinpress.Variables.GlobalVariables.OverrideProhibited
 			}
 		}
 	}
@@ -554,7 +554,7 @@ class WC_Admin_Menus {
 
 		$css_classes = empty( $item[4] ) ? self::HIDE_CSS_CLASS : $item[4] . ' ' . self::HIDE_CSS_CLASS;
 
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		// phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$submenu [ $parent_slug ][ $index ][4] = $css_classes;
 	}
 }

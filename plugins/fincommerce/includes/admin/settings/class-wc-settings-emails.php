@@ -76,7 +76,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 		$desc_help_text = sprintf(
 		/* translators: %1$s: Link to WP Mail Logging plugin, %2$s: Link to Email FAQ support page. */
 			__( 'To ensure your store&rsquo;s notifications arrive in your and your customers&rsquo; inboxes, we recommend connecting your email address to your domain and setting up a dedicated SMTP server. If something doesn&rsquo;t seem to be sending correctly, install the <a href="%1$s">WP Mail Logging Plugin</a> or check the <a href="%2$s">Email FAQ page</a>.', 'fincommerce' ),
-			'https://wordpress.org/plugins/wp-mail-logging/',
+			'https://finpress.org/plugins/wp-mail-logging/',
 			'https://fincommerce.com/document/email-faq'
 		);
 
@@ -525,7 +525,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 		$desc_help_text = sprintf(
 			/* translators: %1$s: Link to WP Mail Logging plugin, %2$s: Link to Email FAQ support page. */
 			__( 'To ensure your store&rsquo;s notifications arrive in your and your customers&rsquo; inboxes, we recommend connecting your email address to your domain and setting up a dedicated SMTP server. If something doesn&rsquo;t seem to be sending correctly, install the <a href="%1$s">WP Mail Logging Plugin</a> or check the <a href="%2$s">Email FAQ page</a>.', 'fincommerce' ),
-			'https://wordpress.org/plugins/wp-mail-logging/',
+			'https://finpress.org/plugins/wp-mail-logging/',
 			'https://fincommerce.com/document/email-faq'
 		);
 		$email_post_manager   = WCTransactionalEmailPostsManager::get_instance();
@@ -953,10 +953,10 @@ class WC_Settings_Emails extends WC_Settings_Page {
 		if ( 'email' !== $current_tab ) {
 			return false;
 		}
-		if ( isset( $_GET['section'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET['section'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			return false;
 		}
-		return isset( $_GET['try-new-templates'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return isset( $_GET['try-new-templates'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 	}
 }
 

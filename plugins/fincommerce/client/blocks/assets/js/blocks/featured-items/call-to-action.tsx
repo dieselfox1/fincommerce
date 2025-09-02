@@ -2,8 +2,8 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { RichText, InnerBlocks } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { RichText, InnerBlocks } from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
 
 interface CallToActionProps {
 	itemId: number | 'preview';

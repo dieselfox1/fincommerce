@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { createBlock, registerBlockType } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { createBlock, registerBlockType } from '@finpress/blocks';
 import { thumbUp } from '@fincommerce/icons';
-import { Icon } from '@wordpress/icons';
+import { Icon } from '@finpress/icons';
 
 /**
  * Internal dependencies

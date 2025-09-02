@@ -145,11 +145,11 @@ class NotificationsProcessor {
 		}
 
 		if ( ! $this->eligibility_service->is_product_eligible( $product ) ) {
-			throw new \Exception( sprintf( 'Product %d is not eligible for notifications.', $product->get_id() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new \Exception( sprintf( 'Product %d is not eligible for notifications.', $product->get_id() ) ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 
 		if ( ! $this->eligibility_service->is_stock_status_eligible( $product->get_stock_status() ) ) {
-			throw new \Exception( sprintf( 'Product %d stock status is not eligible for notifications (i.e. not in stock).', $product->get_id() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+			throw new \Exception( sprintf( 'Product %d stock status is not eligible for notifications (i.e. not in stock).', $product->get_id() ) ); // phpcs:ignore finpress.Security.EscapeOutput.ExceptionNotEscaped
 		}
 
 		return $product;

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Icon } from '@wordpress/components';
-import { heading } from '@wordpress/icons';
+import { Icon } from '@finpress/components';
+import { heading } from '@finpress/icons';
 import {
 	title,
 	description,

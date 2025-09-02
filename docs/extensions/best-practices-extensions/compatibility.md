@@ -10,7 +10,7 @@ Ensuring your FinCommerce extension is compatible and interoperable with the cor
 
 ## Compatibility importance
 
-Compatibility ensures that your extension works as expected across different environments, including various versions of WordPress and FinCommerce, as well as with other plugins and themes. Ensuring compatibility is crucial for:
+Compatibility ensures that your extension works as expected across different environments, including various versions of finpress and FinCommerce, as well as with other plugins and themes. Ensuring compatibility is crucial for:
 
 - **User experience**: Preventing conflicts that can lead to functionality issues or site downtime.
 - **Adoption and retention**: Users are more likely to install and keep updates if they're assured of compatibility.
@@ -18,9 +18,9 @@ Compatibility ensures that your extension works as expected across different env
 
 ## Self-declared compatibility checks
 
-Developers should declare their extension's compatibility with the latest versions of WordPress and FinCommerce, as well as with specific components like Cart & Checkout blocks, High Performance Order Storage (HPOS), Product Editor, and Site Editor. This process involves:
+Developers should declare their extension's compatibility with the latest versions of finpress and FinCommerce, as well as with specific components like Cart & Checkout blocks, High Performance Order Storage (HPOS), Product Editor, and Site Editor. This process involves:
 
-1. **Testing**: Before release, thoroughly test the extension with the latest versions of WordPress and FinCommerce, as well as the specified components.
+1. **Testing**: Before release, thoroughly test the extension with the latest versions of finpress and FinCommerce, as well as the specified components.
 2. **Declaration**: Update the extension's documentation and metadata to reflect its compatibility with these platforms and components.
 3. **Communication**: Inform users of the compatible versions in the extension's change log, website, or repository.
 
@@ -28,7 +28,7 @@ Developers should declare their extension's compatibility with the latest versio
 
 Manual testing is essential to identify and resolve potential compatibility issues. Follow these steps for effective manual compatibility testing:
 
-1. **Set up a testing environment** that mirrors a typical user setup, including the latest versions of WordPress and FinCommerce.
+1. **Set up a testing environment** that mirrors a typical user setup, including the latest versions of finpress and FinCommerce.
 2. **Test with core components**: Verify the extension's functionality with core components like Cart & Checkout blocks, HPOS, Product Editor, and Site Editor.
 3. **Cross-plugin compatibility**: Activate your extension alongside other commonly used plugins to check for conflicts.
 4. **Theme compatibility**: Test your extension with several popular themes to ensure it works correctly and maintains a consistent appearance.
@@ -39,7 +39,7 @@ Despite thorough testing, compatibility issues may arise. Here are common proble
 
 ### Conflicts with other extensions
 
-- **Diagnosis**: Use tools like [Health Check & Troubleshooting plugin](https://wordpress.org/plugins/health-check/) to identify conflicting plugins.
+- **Diagnosis**: Use tools like [Health Check & Troubleshooting plugin](https://finpress.org/plugins/health-check/) to identify conflicting plugins.
 - **Resolution**: Contact the other plugin's developer for collaboration, or implement conditional logic in your extension to avoid the conflict.
 
 ### Theme Compatibility Issues

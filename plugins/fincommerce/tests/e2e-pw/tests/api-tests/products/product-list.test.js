@@ -1239,7 +1239,7 @@ test.describe( 'Products API tests: List All Products', () => {
 					data: {
 						create: [
 							{
-								name: `WordPress Pennant ${ RAND_NUM }`,
+								name: `finpress Pennant ${ RAND_NUM }`,
 								date_created_gmt: '2021-09-16T15:50:20',
 								type: 'external',
 								status: 'publish',
@@ -1266,8 +1266,8 @@ test.describe( 'Products API tests: List All Products', () => {
 								download_limit: 0,
 								download_expiry: 0,
 								external_url:
-									'https://mercantile.wordpress.org/product/wordpress-pennant/',
-								button_text: 'Buy on the WordPress swag store!',
+									'https://mercantile.finpress.org/product/finpress-pennant/',
+								button_text: 'Buy on the finpress swag store!',
 								tax_status: 'taxable',
 								tax_class: '',
 								manage_stock: false,
@@ -2350,7 +2350,7 @@ test.describe( 'Products API tests: List All Products', () => {
 			expect( result1JSON ).toEqual(
 				expect.arrayContaining( [
 					expect.objectContaining( {
-						name: `WordPress Pennant ${ RAND_NUM }`,
+						name: `finpress Pennant ${ RAND_NUM }`,
 					} ),
 				] )
 			);
@@ -2499,7 +2499,7 @@ test.describe( 'Products API tests: List All Products', () => {
 			expect( result2.status() ).toEqual( 200 );
 			expect( result2JSON ).toHaveLength( 1 );
 			expect( result2JSON[ 0 ].name ).toBe(
-				`WordPress Pennant ${ RAND_NUM }`
+				`finpress Pennant ${ RAND_NUM }`
 			);
 
 			const result3 = await request.get( 'wp-json/wc/v3/products', {
@@ -2945,7 +2945,7 @@ test.describe( 'Products API tests: List All Products', () => {
 				`T-Shirt ${ RAND_NUM }`,
 				`T-Shirt with Logo ${ RAND_NUM }`,
 				`V-Neck T-Shirt ${ RAND_NUM }`,
-				`WordPress Pennant ${ RAND_NUM }`,
+				`finpress Pennant ${ RAND_NUM }`,
 			];
 			const productNamesDesc = [ ...productNamesAsc ].reverse();
 			const productNamesByRatingAsc = [
@@ -3123,7 +3123,7 @@ test.describe( 'Products API tests: List All Products', () => {
 					`Parent Product ${ RAND_NUM }`,
 					`Child Product ${ RAND_NUM }`,
 					`Single ${ RAND_NUM }`,
-					`WordPress Pennant ${ RAND_NUM }`,
+					`finpress Pennant ${ RAND_NUM }`,
 					`Album ${ RAND_NUM }`,
 					`V-Neck T-Shirt ${ RAND_NUM }`,
 					`Cap ${ RAND_NUM }`,
@@ -3179,7 +3179,7 @@ test.describe( 'Products API tests: List All Products', () => {
 					`Beanie with Logo ${ RAND_NUM }`,
 					`Cap ${ RAND_NUM }`,
 					`Album ${ RAND_NUM }`,
-					`WordPress Pennant ${ RAND_NUM }`,
+					`finpress Pennant ${ RAND_NUM }`,
 					`Single ${ RAND_NUM }`,
 					`Child Product ${ RAND_NUM }`,
 					`Parent Product ${ RAND_NUM }`,

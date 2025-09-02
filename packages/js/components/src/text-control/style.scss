@@ -22,7 +22,7 @@
 		}
 	}
 
-	// @wordpress/components styles for text control target all types, so we must also do that
+	// @finpress/components styles for text control target all types, so we must also do that
 	// to increase specificity and override the styles.
 	.components-text-control__input,
 	.components-text-control__input[type='text'],

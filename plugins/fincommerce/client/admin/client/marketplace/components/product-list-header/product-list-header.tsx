@@ -3,7 +3,7 @@
  */
 import clsx from 'clsx';
 import { Link } from '@fincommerce/components';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

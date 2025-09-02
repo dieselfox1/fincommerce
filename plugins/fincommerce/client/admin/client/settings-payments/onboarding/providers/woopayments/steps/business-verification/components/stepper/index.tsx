@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { createContext, useContext, useState } from 'react';
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 
 /**
  * Internal dependencies

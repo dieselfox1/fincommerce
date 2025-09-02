@@ -36,11 +36,11 @@ defined( 'ABSPATH' ) || exit;
 				<tr class="<?php echo esc_attr( apply_filters( 'fincommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<td class="product-name">
 						<?php echo wp_kses_post( apply_filters( 'fincommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) ) . '&nbsp;'; ?>
-						<?php echo apply_filters( 'fincommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-						<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo apply_filters( 'fincommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times;&nbsp;%s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 					</td>
 					<td class="product-total">
-						<?php echo apply_filters( 'fincommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo apply_filters( 'fincommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 					</td>
 				</tr>
 				<?php
@@ -83,7 +83,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) : ?>
 			<?php if ( 'itemized' === get_option( 'fincommerce_tax_total_display' ) ) : ?>
-				<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
+				<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited ?>
 					<tr class="tax-rate tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 						<th><?php echo esc_html( $tax->label ); ?></th>
 						<td><?php echo wp_kses_post( $tax->formatted_amount ); ?></td>

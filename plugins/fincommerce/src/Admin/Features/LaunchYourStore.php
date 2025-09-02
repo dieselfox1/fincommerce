@@ -113,7 +113,7 @@ class LaunchYourStore {
 		$current_screen  = get_current_screen();
 		$is_setting_page = $current_screen && 'fincommerce_page_wc-settings' === $current_screen->id;
 
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 		$is_woopayments_connect = isset( $_GET['path'] ) &&
 								isset( $_GET['page'] ) &&
 								( '/payments/connect' === sanitize_text_field( wp_unslash( $_GET['path'] ) ) || '/payments/onboarding' === sanitize_text_field( wp_unslash( $_GET['path'] ) ) ) &&
@@ -351,7 +351,7 @@ class LaunchYourStore {
 			'mailpoet_connected' => $this->is_mailpoet_connected(),
 		);
 
-		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion, WordPress.WP.EnqueuedResourceParameters.NotInFooter
+		// phpcs:ignore finpress.WP.EnqueuedResourceParameters.MissingVersion, finpress.WP.EnqueuedResourceParameters.NotInFooter
 		wp_register_script( 'coming-soon-newsletter-mailpoet', '' );
 		wp_enqueue_script( 'coming-soon-newsletter-mailpoet' );
 		wp_add_inline_script( 'coming-soon-newsletter-mailpoet', 'var comingSoonNewsletter = ' . wp_json_encode( $mailpoet ) . ';' );

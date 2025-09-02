@@ -3,7 +3,7 @@
  */
 import { DoneActorEvent } from 'xstate5';
 import { TaskListType } from '@fincommerce/data';
-import apiFetch from '@wordpress/api-fetch';
+import apiFetch from '@finpress/api-fetch';
 
 /**
  * Internal dependencies

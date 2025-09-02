@@ -4,16 +4,16 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { isRTL, __ } from '@wordpress/i18n';
-import { Icon, chevronRight, chevronLeft, close } from '@wordpress/icons';
+import { isRTL, __ } from '@finpress/i18n';
+import { Icon, chevronRight, chevronLeft, close } from '@finpress/icons';
 // @ts-ignore No types for this exist yet.
-import SidebarButton from '@wordpress/edit-site/build-module/components/sidebar-button';
+import SidebarButton from '@finpress/edit-site/build-module/components/sidebar-button';
 import {
 	__experimentalHStack as HStack,
 	__experimentalHeading as Heading,
 	__experimentalVStack as VStack,
 	Button,
-} from '@wordpress/components';
+} from '@finpress/components';
 import React from 'react';
 /**
  * Internal dependencies

@@ -109,8 +109,8 @@ const appendScript = ( attributes: AppendScriptAttributesParam ): void => {
  * needed for translations and any before and after inline scripts. See these
  * documentation pages for more information:
  *
- * https://developer.wordpress.org/reference/functions/wp_set_script_translations/
- * https://developer.wordpress.org/reference/functions/wp_add_inline_script/
+ * https://developer.finpress.org/reference/functions/wp_set_script_translations/
+ * https://developer.finpress.org/reference/functions/wp_add_inline_script/
  */
 const lazyLoadScript = ( {
 	handle,

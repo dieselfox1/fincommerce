@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Popover } from '@wordpress/components';
+import { Popover } from '@finpress/components';
 import clsx from 'clsx';
 import {
 	createElement,
@@ -10,7 +10,7 @@ import {
 	createPortal,
 	Children,
 	useLayoutEffect,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 /**
  * Internal dependencies
@@ -112,7 +112,7 @@ export const Menu = ( {
 export const MenuSlot = () =>
 	createPortal(
 		<div aria-live="off">
-			{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/WordPress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
+			{ /* @ts-expect-error name does exist on PopoverSlot see: https://github.com/finpress/gutenberg/blob/trunk/packages/components/src/popover/index.tsx#L555 */ }
 			<Popover.Slot name="fincommerce-select-control-menu" />
 		</div>,
 		document.body

@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
-import { Icon, cancelCircleFilled } from '@wordpress/icons';
-import { createElement, Component, Fragment } from '@wordpress/element';
+import { __, sprintf } from '@finpress/i18n';
+import { Button } from '@finpress/components';
+import { Icon, cancelCircleFilled } from '@finpress/icons';
+import { createElement, Component, Fragment } from '@finpress/element';
 import { findIndex, isArray } from 'lodash';
 
 /**

@@ -60,7 +60,7 @@ foreach ( $items as $item_id => $item ) :
 				echo esc_html( '(#' . $sku . ")\n" );
 			}
 		} else {
-			// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 			/**
 			 * Email Order Item Name hook.
 			 *
@@ -83,12 +83,12 @@ foreach ( $items as $item_id => $item ) :
 			 */
 			echo ' X ' . apply_filters( 'fincommerce_email_order_item_quantity', $item->get_quantity(), $item );
 			echo ' = ' . $order->get_formatted_line_subtotal( $item ) . "\n";
-			// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 		// allow other plugins to add additional product information here.
 		do_action( 'fincommerce_order_item_meta_start', $item_id, $item, $order, $plain_text );
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		echo strip_tags(
 			wc_display_item_meta(
 				$item,

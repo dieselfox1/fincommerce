@@ -104,7 +104,7 @@ class MenusController {
 	 */
 	public function notifications_page() {
 
-		$action = isset( $_GET['notification_action'] ) ? sanitize_text_field( wp_unslash( $_GET['notification_action'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$action = isset( $_GET['notification_action'] ) ? sanitize_text_field( wp_unslash( $_GET['notification_action'] ) ) : ''; // phpcs:ignore finpress.Security.NonceVerification.Recommended
 
 		if ( ! in_array( $action, array( 'create', 'edit' ), true ) ) {
 			$action = '';

@@ -1,19 +1,19 @@
 /**
  * External dependencies
  */
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	alignCenter,
 	alignJustify,
 	alignLeft,
 	alignRight,
-} from '@wordpress/icons';
+} from '@finpress/icons';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore No types for this exist yet.
 	AlignmentControl,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 export const ALIGNMENT_CONTROLS = [
 	{

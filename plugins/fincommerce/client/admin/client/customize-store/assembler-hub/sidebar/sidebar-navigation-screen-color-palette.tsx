@@ -3,13 +3,13 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useContext } from '@wordpress/element';
-import { PanelBody } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { useContext } from '@finpress/element';
+import { PanelBody } from '@finpress/components';
 // @ts-ignore No types for this exist yet.
-import { privateApis as blockEditorPrivateApis } from '@wordpress/block-editor';
+import { privateApis as blockEditorPrivateApis } from '@finpress/block-editor';
 // @ts-ignore No types for this exist yet.
-import { unlock } from '@wordpress/edit-site/build-module/lock-unlock';
+import { unlock } from '@finpress/edit-site/build-module/lock-unlock';
 
 /**
  * Internal dependencies

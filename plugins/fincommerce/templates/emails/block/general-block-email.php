@@ -75,7 +75,7 @@ if ( 'customer_reset_password' === $email->id && isset( $reset_key, $user_id ) )
 	// Customer reset password email.
 	?>
 <p>
-	<a class="link" href="<?php echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ); ?>"><?php // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound ?>
+	<a class="link" href="<?php echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ); ?>"><?php // phpcs:ignore finpress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound ?>
 		<?php esc_html_e( 'Reset your password', 'fincommerce' ); ?>
 	</a>
 </p>

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { typography, color, layout } from '@wordpress/icons';
+import { __ } from '@finpress/i18n';
+import { typography, color, layout } from '@finpress/icons';
 import {
 	__experimentalVStack as VStack, // eslint-disable-line
 	Card,
@@ -14,7 +14,7 @@ import {
 	__experimentalNavigatorButton as NavigatorButton, // eslint-disable-line
 	Icon,
 	FlexItem,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

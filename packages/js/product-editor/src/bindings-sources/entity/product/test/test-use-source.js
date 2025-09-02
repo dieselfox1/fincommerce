@@ -10,7 +10,7 @@ import productEntitySourceHandler from '..';
 
 let mockState;
 
-jest.mock( '@wordpress/core-data', () => ( {
+jest.mock( '@finpress/core-data', () => ( {
 	useEntityProp: jest.fn().mockImplementation( ( kind, name, key ) => {
 		return mockState?.[ key ] ? mockState[ key ] : [];
 	} ),

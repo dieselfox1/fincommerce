@@ -66,7 +66,7 @@ class WooPaymentsTest extends WC_Unit_Test_Case {
 
 		// Mock the response from the API.
 		$this->response_mock_ref = function ( $preempt, $parsed_args, $url ) {
-			if ( str_contains( $url, 'https://public-api.wordpress.com/wpcom/v2/wcpay/incentives' ) ) {
+			if ( str_contains( $url, 'https://public-api.finpress.com/wpcom/v2/wcpay/incentives' ) ) {
 				return array(
 					'success'  => true,
 					'body'     => wp_json_encode(
@@ -106,7 +106,7 @@ class WooPaymentsTest extends WC_Unit_Test_Case {
 		};
 
 		$this->error_response_mock_ref = function ( $preempt, $parsed_args, $url ) {
-			if ( str_contains( $url, 'https://public-api.wordpress.com/wpcom/v2/wcpay/incentives' ) ) {
+			if ( str_contains( $url, 'https://public-api.finpress.com/wpcom/v2/wcpay/incentives' ) ) {
 				return new \WP_Error( 'http_request_failed', 'Error.' );
 			}
 

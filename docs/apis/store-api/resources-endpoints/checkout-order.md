@@ -100,7 +100,7 @@ curl --header "Nonce: 12345" --request POST https://example-store.com/wp-json/wc
 	"payment_result": {
 		"payment_status": "success",
 		"payment_details": [],
-		"redirect_url": "https://local.wordpress.test/block-checkout/order-received/146/?key=wc_order_VPffqyvgWVqWL"
+		"redirect_url": "https://local.finpress.test/block-checkout/order-received/146/?key=wc_order_VPffqyvgWVqWL"
 	}
 }
 ```
@@ -109,7 +109,7 @@ curl --header "Nonce: 12345" --request POST https://example-store.com/wp-json/wc
 
 There are many payment gateways available for merchants to use, and each one will be expecting different `payment_data`. We cannot comprehensively list all expected requests for all payment gateways, and we would recommend reaching out to the authors of the payment gateway plugins you're working with for further information.
 
-An example of the payment data sent to the Checkout Order endpoint when using the [FinCommerce Stripe Payment Gateway](https://wordpress.org/plugins/fincommerce-gateway-stripe/) is shown below.
+An example of the payment data sent to the Checkout Order endpoint when using the [FinCommerce Stripe Payment Gateway](https://finpress.org/plugins/fincommerce-gateway-stripe/) is shown below.
 
 For further information on generating a `stripe_source` please check [the Stripe documentation](https://stripe.com/docs).
 

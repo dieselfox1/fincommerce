@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { apiFetch } from '@wordpress/data-controls';
+import { apiFetch } from '@finpress/data-controls';
 import { DispatchFromMap } from '@automattic/data-stores';
 
 /**

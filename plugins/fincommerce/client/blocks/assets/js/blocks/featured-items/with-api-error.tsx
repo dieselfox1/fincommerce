@@ -4,7 +4,7 @@
 import ErrorPlaceholder, {
 	ErrorObject,
 } from '@fincommerce/editor-components/error-placeholder';
-import type { Block } from '@wordpress/blocks';
+import type { Block } from '@finpress/blocks';
 import type { ComponentType } from 'react';
 
 /**

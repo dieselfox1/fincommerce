@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { DateSettings, getSettings } from '@wordpress/date';
+import { DateSettings, getSettings } from '@finpress/date';
 
 export function isSiteSettingsTime12HourFormatted() {
 	const settings = getSettings() as DateSettings;

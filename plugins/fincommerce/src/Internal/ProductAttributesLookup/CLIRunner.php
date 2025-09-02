@@ -194,7 +194,7 @@ class CLIRunner {
 		$this->log( "The table contains %C{$info['total_rows']}%n rows corresponding to %G{$info['products_count']}%n products." );
 
 		if ( $info['total_rows'] > 0 ) {
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			$highest_product_id_in_table = $wpdb->get_var( 'select max(product_or_parent_id) from ' . $table_name );
 			$this->log( "The highest product id in the table is %B{$highest_product_id_in_table}%n." );
 		}
@@ -453,7 +453,7 @@ class CLIRunner {
 		global $wpdb;
 
 		$table_name = $this->lookup_data_store->get_lookup_table_name();
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$info = $wpdb->get_row( 'select count(1), count(distinct(product_or_parent_id)) from ' . $table_name, ARRAY_N );
 		return array(
 			'total_rows'     => absint( $info[0] ),

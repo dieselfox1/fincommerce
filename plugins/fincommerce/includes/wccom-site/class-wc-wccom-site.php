@@ -59,8 +59,8 @@ class WC_WCCOM_Site {
 
 		if ( stripos( $auth_header, 'Bearer ' ) === 0 ) {
 			$access_token = trim( substr( $auth_header, 7 ) );
-		} elseif ( ! empty( $_GET['token'] ) && is_string( $_GET['token'] ) ) {  // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$access_token = trim( $_GET['token'] );  // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		} elseif ( ! empty( $_GET['token'] ) && is_string( $_GET['token'] ) ) {  // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$access_token = trim( $_GET['token'] );  // phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		} else {
 			add_filter(
 				self::AUTH_ERROR_FILTER_NAME,
@@ -72,9 +72,9 @@ class WC_WCCOM_Site {
 		}
 
 		if ( ! empty( $_SERVER['HTTP_X_WOO_SIGNATURE'] ) ) {
-			$signature = trim( $_SERVER['HTTP_X_WOO_SIGNATURE'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		} elseif ( ! empty( $_GET['signature'] ) && is_string( $_GET['signature'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$signature = trim( $_GET['signature'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$signature = trim( $_SERVER['HTTP_X_WOO_SIGNATURE'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.MissingUnslash,finpress.Security.ValidatedSanitizedInput.InputNotSanitized
+		} elseif ( ! empty( $_GET['signature'] ) && is_string( $_GET['signature'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$signature = trim( $_GET['signature'] ); // phpcs:ignore finpress.Security.NonceVerification.Recommended, finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		} else {
 			add_filter(
 				self::AUTH_ERROR_FILTER_NAME,
@@ -147,7 +147,7 @@ class WC_WCCOM_Site {
 	 */
 	protected static function get_authorization_header() {
 		if ( ! empty( $_SERVER['HTTP_AUTHORIZATION'] ) ) {
-			return wp_unslash( $_SERVER['HTTP_AUTHORIZATION'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			return wp_unslash( $_SERVER['HTTP_AUTHORIZATION'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		}
 
 		if ( function_exists( 'getallheaders' ) ) {
@@ -171,8 +171,8 @@ class WC_WCCOM_Site {
 	 */
 	protected static function is_request_to_wccom_site_rest_api() {
 
-		if ( isset( $_REQUEST['rest_route'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$route       = wp_unslash( $_REQUEST['rest_route'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_REQUEST['rest_route'] ) ) { // phpcs:ignore finpress.Security.NonceVerification.Recommended
+			$route       = wp_unslash( $_REQUEST['rest_route'] ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized, finpress.Security.NonceVerification.Recommended
 			$rest_prefix = '';
 		} else {
 			$route       = wp_unslash( add_query_arg( array() ) );
@@ -192,7 +192,7 @@ class WC_WCCOM_Site {
 	 * @return bool
 	 */
 	protected static function verify_wccom_request( $body, $signature, $access_token_secret ) {
-		// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotValidated, finpress.Security.ValidatedSanitizedInput.MissingUnslash, finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$data = array(
 			'host'        => $_SERVER['HTTP_HOST'],
 			'request_uri' => urldecode( remove_query_arg( array( 'token', 'signature' ), $_SERVER['REQUEST_URI'] ) ),

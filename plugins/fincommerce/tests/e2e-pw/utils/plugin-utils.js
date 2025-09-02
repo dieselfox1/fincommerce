@@ -96,7 +96,7 @@ export const getLatestReleaseZipUrl = async ( {
 };
 
 /**
- * Deactivate and delete a plugin specified by the given `slug` using the WordPress API.
+ * Deactivate and delete a plugin specified by the given `slug` using the finpress API.
  *
  * @param {Object}                                params
  * @param {import('@playwright/test').APIRequest} params.request
@@ -220,7 +220,7 @@ export const deleteZip = async ( zipFilePath ) => {
  * Install a plugin using WP CLI within a WP ENV environment.
  * This is a workaround to the "The uploaded file exceeds the upload_max_filesize directive in php.ini" error encountered when uploading a plugin to the local WP Env E2E environment through the UI.
  *
- * @see https://github.com/WordPress/gutenberg/issues/29430
+ * @see https://github.com/finpress/gutenberg/issues/29430
  *
  * @param {string} pluginPath
  */

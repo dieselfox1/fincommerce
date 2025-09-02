@@ -176,9 +176,9 @@ class ProductQuery implements QueryClausesGenerator {
 		} else {
 			// For product_variantions we need to convert the tax_query to a meta_query.
 			if ( ! empty( $args['tax_query'] ) ) {
-				$args['meta_query'] = $this->convert_tax_query_to_meta_query( array_merge( $tax_query, $args['tax_query'] ) ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				$args['meta_query'] = $this->convert_tax_query_to_meta_query( array_merge( $tax_query, $args['tax_query'] ) ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			} else {
-				$args['meta_query'] = $this->convert_tax_query_to_meta_query( $tax_query ); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+				$args['meta_query'] = $this->convert_tax_query_to_meta_query( $tax_query ); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 			}
 		}
 
@@ -464,7 +464,7 @@ class ProductQuery implements QueryClausesGenerator {
 			);
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 		return $wpdb->prepare(
 			' AND (
 				wc_product_meta_lookup.tax_status = "taxable" AND ( 0=1 OR ' . implode( ' OR ', $or_queries ) . ')
@@ -472,7 +472,7 @@ class ProductQuery implements QueryClausesGenerator {
 			) ',
 			$price_filter
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared, finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

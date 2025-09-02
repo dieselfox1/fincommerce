@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { Button, Card, CardBody } from '@wordpress/components';
-import { useDispatch } from '@wordpress/data';
-import { useEffect, useCallback, useState } from '@wordpress/element';
-import { plugins } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { Button, Card, CardBody } from '@finpress/components';
+import { useDispatch } from '@finpress/data';
+import { useEffect, useCallback, useState } from '@finpress/element';
+import { plugins } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import { Text } from '@fincommerce/experimental';
 import { recordEvent } from '@fincommerce/tracks';
 import { getPath } from '@fincommerce/navigation';

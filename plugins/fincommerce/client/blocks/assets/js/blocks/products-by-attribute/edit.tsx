@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { BlockControls, useBlockProps } from '@wordpress/block-editor';
+import { BlockControls, useBlockProps } from '@finpress/block-editor';
 import {
 	Disabled,
 	ToolbarGroup,
 	withSpokenMessages,
-} from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/components';
+import { useState } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

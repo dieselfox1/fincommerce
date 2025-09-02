@@ -57,7 +57,7 @@ do_action( 'fincommerce_before_cart' ); ?>
 
 						<td class="product-remove">
 							<?php
-								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								echo apply_filters( // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 									'fincommerce_cart_item_remove_link',
 									sprintf(
 										'<a role="button" href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',

@@ -23,7 +23,7 @@ import {
 	restrictToVerticalAxis,
 } from '@dnd-kit/modifiers';
 import clsx from 'clsx';
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 
 /**
  * Internal dependencies

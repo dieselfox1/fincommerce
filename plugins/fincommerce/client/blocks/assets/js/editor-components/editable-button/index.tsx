@@ -2,7 +2,7 @@
  * External dependencies
  */
 import Button, { ButtonProps } from '@fincommerce/base-components/button';
-import { RichText } from '@wordpress/block-editor';
+import { RichText } from '@finpress/block-editor';
 
 export interface EditableButtonProps
 	extends Omit< ButtonProps, 'onChange' | 'placeholder' | 'value' > {

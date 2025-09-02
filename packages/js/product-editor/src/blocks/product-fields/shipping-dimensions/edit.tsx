@@ -3,14 +3,14 @@
  */
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { optionsStore, Product, ProductDimensions } from '@fincommerce/data';
-import { useEntityProp } from '@wordpress/core-data';
-import { useSelect } from '@wordpress/data';
+import { useEntityProp } from '@finpress/core-data';
+import { useSelect } from '@finpress/data';
 import {
 	createElement,
 	createInterpolateElement,
 	useState,
-} from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+} from '@finpress/element';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

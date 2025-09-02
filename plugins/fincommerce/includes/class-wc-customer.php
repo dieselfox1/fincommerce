@@ -906,7 +906,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	 * Set the date this customer was last updated.
 	 *
 	 * @since  3.0.0
-	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_created( $date = null ) {
 		$this->set_date_prop( 'date_created', $date );
@@ -916,7 +916,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	 * Set the date this customer was last updated.
 	 *
 	 * @since  3.0.0
-	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
+	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, finpress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_modified( $date = null ) {
 		$this->set_date_prop( 'date_modified', $date );

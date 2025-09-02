@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { useContext, useEffect, useState } from '@wordpress/element';
+import { useContext, useEffect, useState } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 
 /**

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { BlockAttributes } from '@wordpress/blocks';
+import { BlockAttributes } from '@finpress/blocks';
 import { Review } from '@fincommerce/base-components/reviews/types';
 
 export default {

@@ -11,7 +11,7 @@ import {
 	CardBody,
 	CardFooter,
 	ComboboxControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 import { useState, Fragment } from 'react';
 import { css } from '@emotion/react';
 

@@ -44,7 +44,7 @@ do_action( 'fincommerce_before_mini_cart' ); ?>
 				?>
 				<li class="fincommerce-mini-cart-item <?php echo esc_attr( apply_filters( 'fincommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ); ?>">
 					<?php
-					echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo apply_filters( // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 						'fincommerce_cart_item_remove_link',
 						sprintf(
 							'<a role="button" href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s" data-success_message="%s">&times;</a>',
@@ -61,14 +61,14 @@ do_action( 'fincommerce_before_mini_cart' ); ?>
 					);
 					?>
 					<?php if ( empty( $product_permalink ) ) : ?>
-						<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 					<?php else : ?>
 						<a href="<?php echo esc_url( $product_permalink ); ?>">
-							<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 						</a>
 					<?php endif; ?>
-					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					<?php echo apply_filters( 'fincommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo apply_filters( 'fincommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped ?>
 				</li>
 				<?php
 			}

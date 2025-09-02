@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createRoot } from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+import { createRoot } from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
-import { Icon, warning } from '@wordpress/icons';
+import { __, sprintf } from '@finpress/i18n';
+import { Icon, warning } from '@finpress/icons';
 
 export const setupErrorTypes = {
 	DOWNLOAD: 'download',

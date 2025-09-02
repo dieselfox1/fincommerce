@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { Button, Icon } from '@wordpress/components';
+import { Button, Icon } from '@finpress/components';
 import React, { ReactNode, useState } from 'react';
 
 /**

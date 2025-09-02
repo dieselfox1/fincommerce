@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register } from '@wordpress/data';
-import type { Options } from 'wordpress__notices';
+import { createReduxStore, register } from '@finpress/data';
+import type { Options } from 'finpress__notices';
 
 /**
  * Internal dependencies

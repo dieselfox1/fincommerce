@@ -160,7 +160,7 @@ class WC_Structured_Data {
 		$data  = $this->get_structured_data( $types );
 
 		if ( $data ) {
-			echo '<script type="application/ld+json">' . wc_esc_json( wp_json_encode( $data ), true ) . '</script>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<script type="application/ld+json">' . wc_esc_json( wp_json_encode( $data ), true ) . '</script>'; // phpcs:ignore finpress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
 
@@ -429,7 +429,7 @@ class WC_Structured_Data {
 					'post_status' => 'publish',
 					'post_type'   => 'product',
 					'parent'      => 0,
-					'meta_query'  => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+					'meta_query'  => array( // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 						array(
 							'key'     => 'rating',
 							'type'    => 'NUMERIC',
@@ -540,7 +540,7 @@ class WC_Structured_Data {
 			if ( ! empty( $crumb[1] ) ) {
 				$markup['itemListElement'][ $key ]['item'] += array( '@id' => $crumb[1] );
 			} elseif ( isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
-				$current_url = set_url_scheme( 'http://' . wp_unslash( $_SERVER['HTTP_HOST'] ) . wp_unslash( $_SERVER['REQUEST_URI'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				$current_url = set_url_scheme( 'http://' . wp_unslash( $_SERVER['HTTP_HOST'] ) . wp_unslash( $_SERVER['REQUEST_URI'] ) ); // phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 				$markup['itemListElement'][ $key ]['item'] += array( '@id' => $current_url );
 			}

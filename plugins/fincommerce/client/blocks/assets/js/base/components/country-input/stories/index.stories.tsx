@@ -2,8 +2,8 @@
  * External dependencies
  */
 import type { Story, Meta } from '@storybook/react';
-import { useDispatch } from '@wordpress/data';
-import { useState, useEffect } from '@wordpress/element';
+import { useDispatch } from '@finpress/data';
+import { useState, useEffect } from '@finpress/element';
 import { validationStore } from '@fincommerce/block-data';
 
 /**

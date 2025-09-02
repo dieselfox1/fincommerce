@@ -416,7 +416,7 @@ class WC_Tests_API_Product extends WC_REST_Unit_Test_Case {
 				'sku'           => 'DUMMY SKU EXTERNAL API',
 				'regular_price' => '10',
 				'button_text'   => 'Test Button',
-				'external_url'  => 'https://wordpress.org',
+				'external_url'  => 'https://finpress.org',
 			)
 		);
 		$response = $this->server->dispatch( $request );
@@ -429,7 +429,7 @@ class WC_Tests_API_Product extends WC_REST_Unit_Test_Case {
 		$this->assertEquals( 'Test External Product', $data['name'] );
 		$this->assertEquals( ProductType::EXTERNAL, $data['type'] );
 		$this->assertEquals( 'Test Button', $data['button_text'] );
-		$this->assertEquals( 'https://wordpress.org', $data['external_url'] );
+		$this->assertEquals( 'https://finpress.org', $data['external_url'] );
 
 		// Create variable.
 		$request = new WP_REST_Request( 'POST', '/wc/v3/products' );

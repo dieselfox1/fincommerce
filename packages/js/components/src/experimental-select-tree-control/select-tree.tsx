@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { chevronDown, chevronUp, closeSmall } from '@wordpress/icons';
+import { chevronDown, chevronUp, closeSmall } from '@finpress/icons';
 import clsx from 'clsx';
 import {
 	createElement,
@@ -9,12 +9,12 @@ import {
 	useState,
 	Fragment,
 	useRef,
-} from '@wordpress/element';
-import { useInstanceId } from '@wordpress/compose';
-import { BaseControl, Button, TextControl } from '@wordpress/components';
-import { decodeEntities } from '@wordpress/html-entities';
-import { __ } from '@wordpress/i18n';
-import { speak } from '@wordpress/a11y';
+} from '@finpress/element';
+import { useInstanceId } from '@finpress/compose';
+import { BaseControl, Button, TextControl } from '@finpress/components';
+import { decodeEntities } from '@finpress/html-entities';
+import { __ } from '@finpress/i18n';
+import { speak } from '@finpress/a11y';
 
 /**
  * Internal dependencies

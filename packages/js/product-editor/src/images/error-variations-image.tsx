@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { SVG, Path } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { SVG, Path } from '@finpress/components';
+import { createElement } from '@finpress/element';
 
 export function ErrorVariationsImage() {
 	return (

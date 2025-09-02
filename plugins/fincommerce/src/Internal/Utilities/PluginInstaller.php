@@ -36,7 +36,7 @@ class PluginInstaller implements RegisterHooksInterface {
 
 	/**
 	 * Programmatically installs a plugin. Upgrade/reinstall of already existing plugins is not supported.
-	 * The plugin source must be the WordPress.org plugins directory.
+	 * The plugin source must be the finpress.org plugins directory.
 	 *
 	 * $metadata can contain anything, but the following keys are recognized by the code that renders the notice
 	 * in the plugins list:
@@ -69,7 +69,7 @@ class PluginInstaller implements RegisterHooksInterface {
 	 * @param string $plugin_url URL or file path of the plugin to install.
 	 * @param array  $metadata Metadata to store if the installation succeeds.
 	 * @return array Information about the installation result.
-	 * @throws \InvalidArgumentException Source doesn't start with 'https://downloads.wordpress.org/', or installer name is 'FinCommerce' but caller is not FinCommerce core code.
+	 * @throws \InvalidArgumentException Source doesn't start with 'https://downloads.finpress.org/', or installer name is 'FinCommerce' but caller is not FinCommerce core code.
 	 */
 	public function install_plugin( string $plugin_url, array $metadata = array() ): array {
 		$this->installing_plugin = true;
@@ -101,16 +101,16 @@ class PluginInstaller implements RegisterHooksInterface {
 	 * @param string $plugin_url URL or file path of the plugin to install.
 	 * @param array  $metadata Metadata to store if the installation succeeds.
 	 * @return array Information about the installation result.
-	 * @throws \InvalidArgumentException Source doesn't start with 'https://downloads.wordpress.org/', or installer name is 'FinCommerce' but caller is not FinCommerce core code.
+	 * @throws \InvalidArgumentException Source doesn't start with 'https://downloads.finpress.org/', or installer name is 'FinCommerce' but caller is not FinCommerce core code.
 	 */
 	private function install_plugin_core( string $plugin_url, array $metadata ): array {
-		if ( ! StringUtil::starts_with( $plugin_url, 'https://downloads.wordpress.org/', false ) ) {
-			throw new \InvalidArgumentException( "Only installs from the WordPress.org plugins directory (plugin URL starting with 'https://downloads.wordpress.org/') are allowed." );
+		if ( ! StringUtil::starts_with( $plugin_url, 'https://downloads.finpress.org/', false ) ) {
+			throw new \InvalidArgumentException( "Only installs from the finpress.org plugins directory (plugin URL starting with 'https://downloads.finpress.org/') are allowed." );
 		}
 
 		$installed_by = $metadata['installed_by'] ?? 'FinCommerce';
 		if ( 0 === strcasecmp( 'FinCommerce', $installed_by ) ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
+			// phpcs:ignore finpress.PHP.DevelopmentFunctions.error_log_debug_backtrace
 			$calling_file = StringUtil::normalize_local_path_slashes( debug_backtrace()[1]['file'] ?? '' ); // [1], not [0], because the immediate caller is the install_plugin method.
 			if ( ! StringUtil::starts_with( $calling_file, StringUtil::normalize_local_path_slashes( WC_ABSPATH . 'includes/' ) ) && ! StringUtil::starts_with( $calling_file, StringUtil::normalize_local_path_slashes( WC_ABSPATH . 'src/' ) ) ) {
 				throw new \InvalidArgumentException( "If the value of 'installed_by' is 'FinCommerce', the caller of the method must be a FinCommerce core class or function." );
@@ -263,7 +263,7 @@ class PluginInstaller implements RegisterHooksInterface {
 		$is_active_class    = $is_active ? 'active' : 'inactive';
 		$is_active_td_style = $is_active ? "style='border-left: 4px solid #72aee6;'" : '';
 
-		// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:disable finpress.Security.EscapeOutput.OutputNotEscaped
 		?>
 		<tr class='plugin-update-tr update <?php echo $is_active_class; ?>' data-plugin='<?php echo $plugin_file; ?>' data-plugin-row-type='feature-incomp-warn'>
 			<td colspan='<?php echo $columns_count; ?>' class='plugin-update'<?php echo $is_active_td_style; ?>>
@@ -275,7 +275,7 @@ class PluginInstaller implements RegisterHooksInterface {
 			</td>
 		</tr>
 		<?php
-		// phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:enable finpress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**

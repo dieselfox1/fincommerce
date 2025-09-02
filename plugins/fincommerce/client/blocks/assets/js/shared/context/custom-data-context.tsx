@@ -2,7 +2,7 @@
  * External dependencies
  */
 import type { Context, PropsWithChildren } from 'react';
-import { createContext, useContext } from '@wordpress/element';
+import { createContext, useContext } from '@finpress/element';
 
 export interface CustomData< T > {
 	isLoading?: boolean;

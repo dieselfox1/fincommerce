@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import { addFilter } from '@wordpress/hooks';
-import { getBlockSupport, hasBlockSupport } from '@wordpress/blocks';
-import { Block } from '@wordpress/blocks/index';
-import { __ } from '@wordpress/i18n';
-import { justifyLeft, justifyCenter, justifyRight } from '@wordpress/icons';
+import { createHigherOrderComponent } from '@finpress/compose';
+import { addFilter } from '@finpress/hooks';
+import { getBlockSupport, hasBlockSupport } from '@finpress/blocks';
+import { Block } from '@finpress/blocks/index';
+import { __ } from '@finpress/i18n';
+import { justifyLeft, justifyCenter, justifyRight } from '@finpress/icons';
 import {
 	Flex,
 	FlexItem,
@@ -15,13 +15,13 @@ import {
 	__experimentalToolsPanelItem as ToolsPanelItem,
 	__experimentalToggleGroupControl as ToggleGroupControl,
 	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
-} from '@wordpress/components';
+} from '@finpress/components';
 import {
 	BlockControls,
 	InspectorControls,
 	// @ts-expect-error No types for this exist yet.
 	JustifyContentControl,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 const layoutBlockSupportKey = '__experimentalEmailFlexLayout';
 

@@ -55,7 +55,7 @@ class Segmenter extends ReportsSegmenter {
 
 		// Can't get all the numbers from one query, so split it into one query for product-level numbers and one for order-level numbers (which first need to have orders uniqued).
 		// Product-level numbers.
-		/* phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared */
+		/* phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared */
 		$segments_products = $wpdb->get_results(
 			"SELECT
 						$segmenting_groupby AS $segmenting_dimension_name
@@ -107,7 +107,7 @@ class Segmenter extends ReportsSegmenter {
 
 		// Can't get all the numbers from one query, so split it into one query for product-level numbers and one for order-level numbers (which first need to have orders uniqued).
 		// Product-level numbers.
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 		$segments_products = $wpdb->get_results(
 			"SELECT
 						{$intervals_query['select_clause']} AS time_interval,
@@ -125,7 +125,7 @@ class Segmenter extends ReportsSegmenter {
 					GROUP BY
 						time_interval, $segmenting_groupby
 					$segmenting_limit",
-				// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:enable finpress.DB.PreparedSQL.InterpolatedNotPrepared
 			ARRAY_A
 		);
 

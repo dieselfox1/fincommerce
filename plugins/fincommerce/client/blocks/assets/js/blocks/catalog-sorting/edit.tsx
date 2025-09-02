@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { Disabled, PanelBody, ToggleControl } from '@wordpress/components';
-import type { BlockEditProps } from '@wordpress/blocks';
-import { __ } from '@wordpress/i18n';
+import { useBlockProps, InspectorControls } from '@finpress/block-editor';
+import { Disabled, PanelBody, ToggleControl } from '@finpress/components';
+import type { BlockEditProps } from '@finpress/blocks';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -5,7 +5,7 @@ import { assertEvent, assign, fromCallback, fromPromise, setup } from 'xstate5';
 import { getQuery, navigateTo } from '@fincommerce/navigation';
 import { onboardingStore, type TaskListType } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
-import { dispatch } from '@wordpress/data';
+import { dispatch } from '@finpress/data';
 import { getSetting } from '@fincommerce/settings';
 
 /**

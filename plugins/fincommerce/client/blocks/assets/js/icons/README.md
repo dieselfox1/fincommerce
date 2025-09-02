@@ -9,24 +9,24 @@ FinCommerce Blocks Icons Library.
 
 ## Usage
 
-Note we use the `Icon` component from `@wordpress/icons`. We use some SVG icons from `@fincommerce/icons` for WC Blocks specific icons, but we also use existing icons from `@wordpress/icons`.
+Note we use the `Icon` component from `@finpress/icons`. We use some SVG icons from `@fincommerce/icons` for WC Blocks specific icons, but we also use existing icons from `@finpress/icons`.
 
 ```js
 import { woo } from '@fincommerce/icons';
-import { Icon, postComments } from '@wordpress/icons';
+import { Icon, postComments } from '@finpress/icons';
 
 <Icon icon={ woo } /> // icon  from '@fincommerce/icons'
-<Icon icon={ postComments } /> // icon from '@wordpress/icons'
+<Icon icon={ postComments } /> // icon from '@finpress/icons'
 <Icon icon={ woo } size={ 16 } />
 <Icon icon={ woo } width={ 20 } height={ Math.floor( 20 * 1.67 ) } />
 ```
 
 ## Adding Icons
 
-Before adding a new icon, make sure the icon is not already included in the [Library that comes with @wordpress/icons package](https://wordpress.github.io/gutenberg/?path=/story/icons-icon--library). If there is no existing icon suitable:
+Before adding a new icon, make sure the icon is not already included in the [Library that comes with @finpress/icons package](https://finpress.github.io/gutenberg/?path=/story/icons-icon--library). If there is no existing icon suitable:
 
 1. Add the icon file to `./library` folder.
-2. Make sure to use `SVG` primitive from `@wordpress/primitives` and not a native svg. `SVG` offers more accessibility features.
+2. Make sure to use `SVG` primitive from `@finpress/primitives` and not a native svg. `SVG` offers more accessibility features.
 3. Remove width and height since they're handled by Icon.
 4. Remove any hardcoded colors on the svg. If necessary, use `CurrentColor`.
 5. Export the Icon in `./library/index.js`.

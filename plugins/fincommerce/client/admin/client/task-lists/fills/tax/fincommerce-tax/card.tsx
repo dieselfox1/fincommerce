@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import interpolateComponents from '@automattic/interpolate-components';
 import { recordEvent } from '@fincommerce/tracks';
 import { updateQueryString } from '@fincommerce/navigation';
@@ -33,7 +33,7 @@ export const Card = () => {
 						strong: <strong />,
 					},
 				} ),
-				// eslint-disable-next-line @wordpress/i18n-translator-comments
+				// eslint-disable-next-line @finpress/i18n-translator-comments
 				__( '100% free', 'fincommerce' ),
 			] }
 			terms={

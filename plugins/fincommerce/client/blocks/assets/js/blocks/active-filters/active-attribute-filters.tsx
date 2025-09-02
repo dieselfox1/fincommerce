@@ -1,13 +1,13 @@
 /**
  * External dependencies
  */
-import { useEffect } from '@wordpress/element';
+import { useEffect } from '@finpress/element';
 import {
 	useCollection,
 	useQueryStateByKey,
 } from '@fincommerce/base-context/hooks';
-import { decodeEntities } from '@wordpress/html-entities';
-import { __ } from '@wordpress/i18n';
+import { decodeEntities } from '@finpress/html-entities';
+import { __ } from '@finpress/i18n';
 import { getSettingWithCoercion } from '@fincommerce/settings';
 import {
 	AttributeObject,

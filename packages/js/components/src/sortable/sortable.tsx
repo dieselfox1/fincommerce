@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { __, sprintf } from '@wordpress/i18n';
+import { __, sprintf } from '@finpress/i18n';
 import clsx from 'clsx';
 import {
 	createElement,
@@ -11,9 +11,9 @@ import {
 	useState,
 	createContext,
 	cloneElement,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { DragEvent, KeyboardEvent } from 'react';
-import { speak } from '@wordpress/a11y';
+import { speak } from '@finpress/a11y';
 import { throttle } from 'lodash';
 import { v4 } from 'uuid';
 

@@ -12,7 +12,7 @@ class PTKClient {
 	/**
 	 *  The Patterns Toolkit API URL
 	 */
-	const PATTERNS_TOOLKIT_URL = 'https://public-api.wordpress.com/rest/v1/ptk/patterns/';
+	const PATTERNS_TOOLKIT_URL = 'https://public-api.finpress.com/rest/v1/ptk/patterns/';
 
 	/**
 	 * The schema for the patterns toolkit.

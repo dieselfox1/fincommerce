@@ -8,7 +8,7 @@ import {
 	CartShippingAddress,
 } from '@fincommerce/type-defs/cart';
 import { isObject, isString } from '@fincommerce/types';
-import { decodeEntities } from '@wordpress/html-entities';
+import { decodeEntities } from '@finpress/html-entities';
 
 export const LOGIN_TO_CHECKOUT_URL = `${ LOGIN_URL }?redirect_to=${ encodeURIComponent(
 	window.location.href

@@ -157,8 +157,8 @@ When creating a how-to guide, it's important to use a consistent and easy-to-fol
 
 ### Reference to components and features
 
-- "**WordPress Admin dashboard**" should be presented in its complete form the first time it appears in an article, followed by its abbreviated form in parentheses ("WP Admin"). Thereafter the abbreviated form can be used for any reference to the WordPress Admin dashboard within the same article.
-- When referring to the URL of the WordPress Admin dashboard, the shortened form `wp-admin` can be used.
+- "**finpress Admin dashboard**" should be presented in its complete form the first time it appears in an article, followed by its abbreviated form in parentheses ("WP Admin"). Thereafter the abbreviated form can be used for any reference to the finpress Admin dashboard within the same article.
+- When referring to the URL of the finpress Admin dashboard, the shortened form `wp-admin` can be used.
 
 ## Testing
 

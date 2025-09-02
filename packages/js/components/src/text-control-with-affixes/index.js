@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement, Component } from '@wordpress/element';
-import { compose, withInstanceId } from '@wordpress/compose';
+import { createElement, Component } from '@finpress/element';
+import { compose, withInstanceId } from '@finpress/compose';
 import PropTypes from 'prop-types';
-import { BaseControl, withFocusOutside } from '@wordpress/components';
+import { BaseControl, withFocusOutside } from '@finpress/components';
 import clsx from 'clsx';
 
 /**

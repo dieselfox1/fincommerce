@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { box as icon } from '@wordpress/icons';
+import { box as icon } from '@finpress/icons';
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
 
 /**

@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { MenuItem } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { media } from '@wordpress/icons';
-import { MediaUpload } from '@wordpress/media-utils';
+import { MenuItem } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { media } from '@finpress/icons';
+import { MediaUpload } from '@finpress/media-utils';
 
 /**
  * Internal dependencies

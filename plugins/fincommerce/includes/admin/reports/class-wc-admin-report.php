@@ -113,7 +113,7 @@ class WC_Admin_Report {
 		$args         = apply_filters( 'fincommerce_reports_get_order_report_data_args', $args );
 		$args         = wp_parse_args( $args, $default_args );
 
-		// phpcs:ignore WordPress.PHP.DontExtract.extract_extract
+		// phpcs:ignore finpress.PHP.DontExtract.extract_extract
 		extract( $args );
 
 		if ( empty( $data ) ) {
@@ -245,14 +245,14 @@ class WC_Admin_Report {
 			}
 		}
 
-		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
+		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date
 		if ( $filter_range ) {
 			$query['where'] .= "
 				AND 	posts.post_date >= '" . date( 'Y-m-d H:i:s', $this->start_date ) . "'
 				AND 	posts.post_date < '" . date( 'Y-m-d H:i:s', strtotime( '+1 DAY', $this->end_date ) ) . "'
 			";
 		}
-		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
+		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date
 
 		if ( ! empty( $where_meta ) ) {
 
@@ -271,12 +271,12 @@ class WC_Admin_Report {
 				if ( strtolower( $value['operator'] ) === 'in' || strtolower( $value['operator'] ) === 'not in' ) {
 
 					if ( ! empty( $value['meta_value'] ) && ! is_array( $value['meta_value'] ) ) {
-						$value['meta_value'] = (array) $value['meta_value']; // @phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+						$value['meta_value'] = (array) $value['meta_value']; // @phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_value
 					}
 
 					if ( ! empty( $value['meta_value'] ) ) {
 						$formats     = implode( ', ', array_fill( 0, count( $value['meta_value'] ), '%s' ) );
-						$where_value = $value['operator'] . ' (' . $wpdb->prepare( $formats, $value['meta_value'] ) . ')'; // @phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+						$where_value = $value['operator'] . ' (' . $wpdb->prepare( $formats, $value['meta_value'] ) . ')'; // @phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 					}
 				} else {
 					$where_value = $value['operator'] . ' ' . $wpdb->prepare( '%s', $value['meta_value'] );
@@ -323,7 +323,7 @@ class WC_Admin_Report {
 					}
 					if ( ! empty( $value['value'] ) ) {
 						$formats     = implode( ', ', array_fill( 0, count( $value['value'] ), '%s' ) );
-						$where_value = $value['operator'] . ' (' . $wpdb->prepare( $formats, $value['value'] ) . ')'; // @phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+						$where_value = $value['operator'] . ' (' . $wpdb->prepare( $formats, $value['value'] ) . ')'; // @phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 					}
 				} else {
 					$where_value = $value['operator'] . ' ' . $wpdb->prepare( '%s', $value['value'] );
@@ -464,7 +464,7 @@ class WC_Admin_Report {
 	 * @return array
 	 */
 	public function prepare_chart_data( $data, $date_key, $data_key, $interval, $start_date, $group_by ) {
-		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
+		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date
 
 		$prepared_data = array();
 
@@ -521,7 +521,7 @@ class WC_Admin_Report {
 
 		return $prepared_data;
 
-		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
+		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date
 	}
 
 	/**
@@ -534,7 +534,7 @@ class WC_Admin_Report {
 	 */
 	public function get_sales_sparkline( $id = '', $days = 7, $type = 'sales' ) {
 
-		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
 
 		if ( $id ) {
 			$meta_key = ( 'sales' === $type ) ? '_line_total' : '_qty';
@@ -614,7 +614,7 @@ class WC_Admin_Report {
 
 		$sparkline_data = array_values( $this->prepare_chart_data( $data, 'post_date', 'sparkline_value', $days - 1, strtotime( 'midnight -' . ( $days - 1 ) . ' days', current_time( 'timestamp' ) ), 'day' ) );
 
-		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
 
 		return array(
 			'total' => $total,
@@ -654,13 +654,13 @@ class WC_Admin_Report {
 	 */
 	public function calculate_current_range( $current_range ) {
 
-		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
-		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		// phpcs:disable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
+		// phpcs:disable finpress.Security.NonceVerification.Recommended
 
 		switch ( $current_range ) {
 
 			case 'custom':
-				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+				// phpcs:ignore finpress.Security.ValidatedSanitizedInput.InputNotValidated
 				$this->start_date = max( strtotime( '-20 years' ), strtotime( sanitize_text_field( wp_unslash( $_GET['start_date'] ) ) ) );
 
 				if ( empty( $_GET['end_date'] ) ) {
@@ -672,7 +672,7 @@ class WC_Admin_Report {
 				$interval = 0;
 				$min_date = $this->start_date;
 
-				// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+				// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 				while ( ( $min_date = strtotime( '+1 MONTH', $min_date ) ) <= $this->end_date ) {
 					$interval ++;
 				}
@@ -725,7 +725,7 @@ class WC_Admin_Report {
 				$this->chart_interval = 0;
 				$min_date             = strtotime( date( 'Y-m-01', $this->start_date ) );
 
-				// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+				// phpcs:ignore finpress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 				while ( ( $min_date = strtotime( '+1 MONTH', $min_date ) ) <= $this->end_date ) {
 					$this->chart_interval ++;
 				}
@@ -734,8 +734,8 @@ class WC_Admin_Report {
 				break;
 		}
 
-		// phpcs:enable WordPress.Security.NonceVerification.Recommended
-		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date, WordPress.DateTime.CurrentTimeTimestamp.Requested
+		// phpcs:enable finpress.Security.NonceVerification.Recommended
+		// phpcs:enable finpress.DateTime.RestrictedFunctions.date_date, finpress.DateTime.CurrentTimeTimestamp.Requested
 	}
 
 	/**
@@ -808,13 +808,13 @@ class WC_Admin_Report {
 		}
 
 		if ( ! isset( $_GET['wc_reports_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_GET['wc_reports_nonce'] ), 'custom_range' ) ) {
-			// phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+			// phpcs:disable finpress.Security.ValidatedSanitizedInput.InputNotValidated
 			wp_die(
 				/* translators: %1$s: open link, %2$s: close link */
 				sprintf( esc_html__( 'This report link has expired. %1$sClick here to view the filtered report%2$s.', 'fincommerce' ), '<a href="' . esc_url( wp_nonce_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'custom_range', 'wc_reports_nonce' ) ) . '">', '</a>' ),
 				esc_attr__( 'Confirm navigation', 'fincommerce' )
 			);
-			// phpcs:enable WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+			// phpcs:enable finpress.Security.ValidatedSanitizedInput.InputNotValidated
 			exit;
 		}
 	}

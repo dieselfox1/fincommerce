@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { button } from '@wordpress/icons';
-import { getPlugin, registerPlugin } from '@wordpress/plugins';
+import { button } from '@finpress/icons';
+import { getPlugin, registerPlugin } from '@finpress/plugins';
 import { registerProductBlockType } from '@fincommerce/atomic-utils';
-import type { BlockConfiguration } from '@wordpress/blocks';
-import { addFilter } from '@wordpress/hooks';
+import type { BlockConfiguration } from '@finpress/blocks';
+import { addFilter } from '@finpress/hooks';
 
 /**
  * Internal dependencies

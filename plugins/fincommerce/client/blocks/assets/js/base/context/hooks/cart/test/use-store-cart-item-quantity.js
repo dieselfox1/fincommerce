@@ -2,7 +2,7 @@
  * External dependencies
  */
 import TestRenderer, { act } from 'react-test-renderer';
-import { createRegistry, RegistryProvider } from '@wordpress/data';
+import { createRegistry, RegistryProvider } from '@finpress/data';
 import { CART_STORE_KEY, CHECKOUT_STORE_KEY } from '@fincommerce/block-data';
 
 /**

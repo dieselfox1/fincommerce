@@ -401,7 +401,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 					{$this->subquery->get_query_statement()}
 				) AS tt";
 			$db_records_count = (int) $wpdb->get_var(
-				$count_query // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+				$count_query // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			);
 
 			$total_results = $db_records_count;
@@ -423,7 +423,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		}
 
 		$product_data = $wpdb->get_results(
-			$products_query, // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$products_query, // phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 			ARRAY_A
 		);
 
@@ -460,7 +460,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 		$table_name     = self::get_db_table_name();
 		$existing_items = $wpdb->get_col(
 			$wpdb->prepare(
-				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 				"SELECT order_item_id FROM {$table_name} WHERE order_id = %d",
 				$order_id
 			)
@@ -649,7 +649,7 @@ class DataStore extends ReportsDataStore implements DataStoreInterface {
 			array_unshift( $existing_items, $order_id );
 			$wpdb->query(
 				$wpdb->prepare(
-					// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+					// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared, finpress.DB.PreparedSQL.InterpolatedNotPrepared
 					"DELETE FROM {$table_name} WHERE order_id = %d AND order_item_id in ({$format})",
 					$existing_items
 				)

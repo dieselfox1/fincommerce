@@ -42,7 +42,7 @@ test.describe( 'Product Collection: Inspector Controls', () => {
 		await pageObject.createNewPostAndInsertBlock();
 
 		const sortedTitles = [
-			'WordPress Pennant',
+			'finpress Pennant',
 			'V-Neck T-Shirt',
 			'T-Shirt with Logo',
 			'T-Shirt',

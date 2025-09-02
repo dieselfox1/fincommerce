@@ -8,10 +8,10 @@ import {
 	useImperativeHandle,
 	useRef,
 	useId,
-} from '@wordpress/element';
+} from '@finpress/element';
 import clsx from 'clsx';
 import { isObject } from '@fincommerce/types';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@finpress/data';
 import { validationStore } from '@fincommerce/block-data';
 import type { InputHTMLAttributes } from 'react';
 

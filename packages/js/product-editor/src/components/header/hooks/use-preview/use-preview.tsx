@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { Product } from '@fincommerce/data';
-import { useEntityProp } from '@wordpress/core-data';
-import { useDispatch, useSelect } from '@wordpress/data';
-import { useRef } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useEntityProp } from '@finpress/core-data';
+import { useDispatch, useSelect } from '@finpress/data';
+import { useRef } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import { MouseEvent } from 'react';
 
 /**

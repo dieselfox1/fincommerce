@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { CheckboxControl } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { CheckboxControl } from '@finpress/components';
 import { importStore } from '@fincommerce/data';
-import { withDispatch } from '@wordpress/data';
+import { withDispatch } from '@finpress/data';
 
 function HistoricalDataSkipCheckbox( { checked, disabled, setSkipPrevious } ) {
 	const skipChange = ( value ) => {

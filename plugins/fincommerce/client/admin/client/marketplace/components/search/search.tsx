@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element';
+import { __ } from '@finpress/i18n';
+import { useEffect, useState } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 import { navigateTo, getNewPath, useQuery } from '@fincommerce/navigation';
-import { SearchControl } from '@wordpress/components';
+import { SearchControl } from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { Spinner } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { Spinner } from '@finpress/components';
+import { createElement } from '@finpress/element';
 import {
 	__experimentalSelectControl as SelectControl,
 	__experimentalSelectControlMenu as Menu,

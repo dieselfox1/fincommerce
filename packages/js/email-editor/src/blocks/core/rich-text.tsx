@@ -8,15 +8,15 @@ import {
 	insert,
 	create,
 	toHTMLString,
-} from '@wordpress/rich-text';
-import { __ } from '@wordpress/i18n';
-import { BlockControls } from '@wordpress/block-editor';
-import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
-import { useCallback, useState } from '@wordpress/element';
-import { addFilter } from '@wordpress/hooks';
-import { createHigherOrderComponent } from '@wordpress/compose';
-import * as React from '@wordpress/element';
+} from '@finpress/rich-text';
+import { __ } from '@finpress/i18n';
+import { BlockControls } from '@finpress/block-editor';
+import { ToolbarButton, ToolbarGroup } from '@finpress/components';
+import { useSelect, useDispatch } from '@finpress/data';
+import { useCallback, useState } from '@finpress/element';
+import { addFilter } from '@finpress/hooks';
+import { createHigherOrderComponent } from '@finpress/compose';
+import * as React from '@finpress/element';
 
 /**
  * Internal dependencies

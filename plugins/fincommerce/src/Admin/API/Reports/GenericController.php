@@ -276,7 +276,7 @@ abstract class GenericController extends \WC_REST_Reports_Controller {
 		 * which results in an "Invalid parameter(s): orderby" error.
 		 *
 		 * Additionally, it's the responsibility of the merchant/developer to ensure the custom orderby is valid,
-		 * or a WordPress database error will occur for unknown columns.
+		 * or a finpress database error will occur for unknown columns.
 		 *
 		 * @since 9.4.0
 		 *

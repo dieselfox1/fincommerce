@@ -10,19 +10,19 @@ on:
 jobs:
   run-nightly-checks:
     name: 'Run nightly checks'
-    if: github.repository == 'woocommerce/woocommerce' && github.event_name == 'schedule'
+    if: github.repository == 'fincommerce/fincommerce' && github.event_name == 'schedule'
     uses: ./.github/workflows/ci.yml
     with:
       trigger: 'nightly-checks'
       refName: 'nightly'
-      artifactName: 'woocommerce-trunk-nightly.zip'
+      artifactName: 'fincommerce-trunk-nightly.zip'
     secrets: inherit
 
   run-release-checks:
     name: 'Run release checks'
-    if: github.repository == 'woocommerce/woocommerce' && github.event_name == 'release'
+    if: github.repository == 'fincommerce/fincommerce' && github.event_name == 'release'
     uses: ./.github/workflows/ci.yml
     with:
       trigger: 'release-checks'
-      artifactName: 'woocommerce.zip'
+      artifactName: 'fincommerce.zip'
     secrets: inherit

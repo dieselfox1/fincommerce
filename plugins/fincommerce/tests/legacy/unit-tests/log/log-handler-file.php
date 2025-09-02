@@ -40,8 +40,8 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 
 		foreach ( $log_files as $file ) {
 			$file_path = WC_Log_Handler_File::get_log_file_path( $file );
-			if ( file_exists( $file_path ) && is_writable( $file_path ) ) { // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable
-				unlink( $file_path ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_unlink
+			if ( file_exists( $file_path ) && is_writable( $file_path ) ) { // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_is_writable
+				unlink( $file_path ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_unlink
 			}
 		}
 		parent::tearDown();
@@ -54,7 +54,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	 * @return false|string Contents of the file, or false on error.
 	 */
 	public function read_content( $handle ) {
-		// phpcs:ignore WordPress.WP.AlternativeFunctions
+		// phpcs:ignore finpress.WP.AlternativeFunctions
 		return file_get_contents( WC_Log_Handler_File::get_log_file_path( $handle ) );
 	}
 
@@ -184,7 +184,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	 * @since 3.0.0
 	 */
 	public function test_log_rotate() {
-		// phpcs:disable WordPress.WP.AlternativeFunctions
+		// phpcs:disable finpress.WP.AlternativeFunctions
 
 		// Handler with log size limit of 5mb.
 		$handler       = new WC_Log_Handler_File( 5 * 1024 * 1024 );
@@ -200,7 +200,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 
 		// Write some files to ensure they've rotated correctly.
 		for ( $i = 0; $i < 10; $i++ ) {
-			file_put_contents( WC_Log_Handler_File::get_log_file_path( $log_name . ".{$i}" ), $i ); // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents
+			file_put_contents( WC_Log_Handler_File::get_log_file_path( $log_name . ".{$i}" ), $i ); // phpcs:ignore finpress.VIP.FileSystemWritesDisallow.file_ops_file_put_contents
 		}
 
 		$context_source = array( 'source' => $log_name );
@@ -217,7 +217,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 			$this->assertEquals( $i - 1, $this->read_content( $log_name . ".{$i}" ) );
 		}
 
-		// phpcs:enable WordPress.WP.AlternativeFunctions
+		// phpcs:enable finpress.WP.AlternativeFunctions
 	}
 
 	/**

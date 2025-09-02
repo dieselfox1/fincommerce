@@ -81,7 +81,7 @@ class PaymentInfo {
 			$brand = 'unknown';
 		}
 
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode, WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode, finpress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 		return base64_encode( file_get_contents( __DIR__ . "/CardIcons/{$brand}.svg" ) );
 	}
 

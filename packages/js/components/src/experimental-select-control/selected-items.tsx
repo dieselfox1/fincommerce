@@ -7,8 +7,8 @@ import {
 	forwardRef,
 	useImperativeHandle,
 	useRef,
-} from '@wordpress/element';
-import { decodeEntities } from '@wordpress/html-entities';
+} from '@finpress/element';
+import { decodeEntities } from '@finpress/html-entities';
 
 /**
  * Internal dependencies

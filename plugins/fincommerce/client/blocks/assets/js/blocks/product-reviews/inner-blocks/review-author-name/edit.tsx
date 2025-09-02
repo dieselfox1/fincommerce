@@ -2,18 +2,18 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { __, _x } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import type { BlockEditProps } from '@wordpress/blocks';
-import { store as coreStore } from '@wordpress/core-data';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+import { __, _x } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import type { BlockEditProps } from '@finpress/blocks';
+import { store as coreStore } from '@finpress/core-data';
+import { PanelBody, ToggleControl } from '@finpress/components';
 import {
-	// @ts-expect-error AlignmentControl is not exported from @wordpress/block-editor
+	// @ts-expect-error AlignmentControl is not exported from @finpress/block-editor
 	AlignmentControl,
 	BlockControls,
 	InspectorControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 type Comment = {
 	author_name?: string;

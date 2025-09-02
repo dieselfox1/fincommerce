@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import type { BlockEditProps } from '@wordpress/blocks';
+import type { BlockEditProps } from '@finpress/blocks';
 
 export type BlockAttributes = {
 	taxonomy: string;

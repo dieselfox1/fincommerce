@@ -1,8 +1,8 @@
 /**
  * External dependencies
  */
-import { __, _x } from '@wordpress/i18n';
-import { createInterpolateElement, useState } from '@wordpress/element';
+import { __, _x } from '@finpress/i18n';
+import { createInterpolateElement, useState } from '@finpress/element';
 import { ADMIN_URL, getSetting } from '@fincommerce/settings';
 import { CHECKOUT_PAGE_ID } from '@fincommerce/block-settings';
 import {
@@ -11,7 +11,7 @@ import {
 	TextControl,
 	ExternalLink,
 	Notice,
-} from '@wordpress/components';
+} from '@finpress/components';
 import styled from '@emotion/styled';
 
 /**

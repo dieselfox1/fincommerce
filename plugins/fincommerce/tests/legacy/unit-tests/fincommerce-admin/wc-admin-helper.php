@@ -458,7 +458,7 @@ class WC_Admin_Tests_Admin_Helper extends WC_Unit_Test_Case {
 	}
 
 	/**
-	 * Copied and modified from https://github.com/WordPress/wordpress-develop/blob/126e3bcc2b41c06c92f95d1796c2766bfbb19f86/tests/phpunit/includes/abstract-testcase.php#L1212.
+	 * Copied and modified from https://github.com/finpress/finpress-develop/blob/126e3bcc2b41c06c92f95d1796c2766bfbb19f86/tests/phpunit/includes/abstract-testcase.php#L1212.
 	 *
 	 * Sets the global state to as if a given URL has been requested.
 	 *
@@ -489,7 +489,7 @@ class WC_Admin_Tests_Admin_Helper extends WC_Unit_Test_Case {
 			if ( isset( $parts['query'] ) ) {
 				$req .= '?' . $parts['query'];
 				// Parse the URL query vars into $_GET.
-				wp_parse_str( $parts['query'], $_GET ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				wp_parse_str( $parts['query'], $_GET ); // phpcs:ignore finpress.Security.NonceVerification.Recommended
 			}
 		} else {
 			$req = $url;
@@ -503,24 +503,24 @@ class WC_Admin_Tests_Admin_Helper extends WC_Unit_Test_Case {
 
 		wp_cache_flush();
 		unset( $GLOBALS['wp_query'], $GLOBALS['wp_the_query'] );
-		$GLOBALS['wp_the_query'] = new WP_Query(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-		$GLOBALS['wp_query']     = $GLOBALS['wp_the_query']; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['wp_the_query'] = new WP_Query(); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['wp_query']     = $GLOBALS['wp_the_query']; // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 
 		$public_query_vars  = $GLOBALS['wp']->public_query_vars;
 		$private_query_vars = $GLOBALS['wp']->private_query_vars;
 
-		$GLOBALS['wp']                     = new WP(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+		$GLOBALS['wp']                     = new WP(); // phpcs:ignore finpress.WP.GlobalVariablesOverride.Prohibited
 		$GLOBALS['wp']->public_query_vars  = $public_query_vars;
 		$GLOBALS['wp']->private_query_vars = $private_query_vars;
 
 		$this->cleanup_query_vars();
-		wp_reset_query(); // phpcs:ignore WordPress.WP.DiscouragedFunctions.wp_reset_query_wp_reset_query
+		wp_reset_query(); // phpcs:ignore finpress.WP.DiscouragedFunctions.wp_reset_query_wp_reset_query
 
 		$GLOBALS['wp']->main( $parts['query'] );
 	}
 
 	/**
-	 * Copied and modified from https://github.com/WordPress/wordpress-develop/blob/126e3bcc2b41c06c92f95d1796c2766bfbb19f86/tests/phpunit/includes/utils.php#L524.
+	 * Copied and modified from https://github.com/finpress/finpress-develop/blob/126e3bcc2b41c06c92f95d1796c2766bfbb19f86/tests/phpunit/includes/utils.php#L524.
 	 *
 	 * Clean out globals to stop them polluting wp and wp_query.
 	 *

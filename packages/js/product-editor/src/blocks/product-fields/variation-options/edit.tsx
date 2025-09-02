@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { BlockAttributes } from '@wordpress/blocks';
-import { Button } from '@wordpress/components';
+import { __ } from '@finpress/i18n';
+import { BlockAttributes } from '@finpress/blocks';
+import { Button } from '@finpress/components';
 import {
 	createElement,
 	createInterpolateElement,
 	useEffect,
 	useMemo,
-} from '@wordpress/element';
+} from '@finpress/element';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import {
 	Product,
@@ -22,7 +22,7 @@ import { getAdminLink } from '@fincommerce/settings';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore No types for this exist yet.
 // eslint-disable-next-line @fincommerce/dependency-group
-import { useEntityProp, useEntityId } from '@wordpress/core-data';
+import { useEntityProp, useEntityId } from '@finpress/core-data';
 
 /**
  * Internal dependencies

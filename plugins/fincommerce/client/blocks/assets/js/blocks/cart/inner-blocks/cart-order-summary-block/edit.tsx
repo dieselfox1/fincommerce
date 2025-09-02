@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import type { TemplateArray } from '@wordpress/blocks';
+import { useBlockProps, InnerBlocks } from '@finpress/block-editor';
+import type { TemplateArray } from '@finpress/blocks';
 import { innerBlockAreas } from '@fincommerce/blocks-checkout';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { TotalsFooterItem } from '@fincommerce/base-components/cart-checkout';
 import { getCurrencyFromPriceResponse } from '@fincommerce/price-format';
 import { useStoreCart } from '@fincommerce/base-context/hooks';

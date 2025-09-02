@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { createElement, Fragment } from '@wordpress/element';
+import { createElement, Fragment } from '@finpress/element';
 import { Product } from '@fincommerce/data';
-import { __ } from '@wordpress/i18n';
-import { Field } from '@wordpress/dataviews';
+import { __ } from '@finpress/i18n';
+import { Field } from '@finpress/dataviews';
 
 /**
  * Internal dependencies

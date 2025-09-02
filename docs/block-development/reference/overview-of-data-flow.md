@@ -22,7 +22,7 @@ You may wish to get data from the server into the client, and vice/versa. This d
 
 ## Where is data stored?
 
-All the data relating to a cart, customer, and order is stored on the server, either in the database or in the customer's session. When it is sent to the client, it is stored in [`@wordpress/data`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/) data stores.
+All the data relating to a cart, customer, and order is stored on the server, either in the database or in the customer's session. When it is sent to the client, it is stored in [`@finpress/data`](https://developer.finpress.org/block-editor/reference-guides/packages/packages-data/) data stores.
 
 ## How do I get my Server-side (PHP) data into the client (JavaScript) and vice/versa
 
@@ -91,7 +91,7 @@ The [Updating the cart on-demand with the Store API](https://github.com/dieselfo
 
 ### Page load
 
-On page load, if the Cart or Checkout block is present, the cart state is sent along with the initial request, and is hydrated into a client-side [`@wordpress/data`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/) data store.
+On page load, if the Cart or Checkout block is present, the cart state is sent along with the initial request, and is hydrated into a client-side [`@finpress/data`](https://developer.finpress.org/block-editor/reference-guides/packages/packages-data/) data store.
 
 On page load, the `wc/store/cart` and `wc/store/checkout` data stores are hydrated with the data from the server. The `wc/store/payment` data store is populated partly with data from the server, but needs some client-side processing to finish before all payment methods are registered there.
 

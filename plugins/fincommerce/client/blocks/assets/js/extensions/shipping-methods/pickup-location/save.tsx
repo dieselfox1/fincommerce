@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import styled from '@emotion/styled';
-import { Button } from '@wordpress/components';
+import { Button } from '@finpress/components';
 
 /**
  * Internal dependencies

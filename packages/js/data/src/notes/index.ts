@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { createReduxStore, register } from '@wordpress/data';
+import { createReduxStore, register } from '@finpress/data';
 import { Reducer, AnyAction } from 'redux';
-import { controls } from '@wordpress/data-controls';
+import { controls } from '@finpress/data-controls';
 
 /**
  * Internal dependencies

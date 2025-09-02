@@ -2,11 +2,11 @@
  * External dependencies
  */
 import { WooOnboardingTask } from '@fincommerce/onboarding';
-import { registerPlugin } from '@wordpress/plugins';
-import { __ } from '@wordpress/i18n';
-import { Icon, chevronUp, chevronDown } from '@wordpress/icons';
-import { Button } from '@wordpress/components';
-import { useMemo, useState } from '@wordpress/element';
+import { registerPlugin } from '@finpress/plugins';
+import { __ } from '@finpress/i18n';
+import { Icon, chevronUp, chevronDown } from '@finpress/icons';
+import { Button } from '@finpress/components';
+import { useMemo, useState } from '@finpress/element';
 import { getAdminLink } from '@fincommerce/settings';
 import { recordEvent } from '@fincommerce/tracks';
 

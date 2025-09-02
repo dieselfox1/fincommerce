@@ -1,10 +1,10 @@
 /**
  * External dependencies
  */
-import { MenuItem, VisuallyHidden } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { external } from '@wordpress/icons';
-import { __ } from '@wordpress/i18n';
+import { MenuItem, VisuallyHidden } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { external } from '@finpress/icons';
+import { __ } from '@finpress/i18n';
 import { recordEvent } from '@fincommerce/tracks';
 
 export const HelpMenuItem = () => {
@@ -19,7 +19,7 @@ export const HelpMenuItem = () => {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore href is okay here
 			href={ __(
-				'https://wordpress.org/documentation/article/wordpress-block-editor/',
+				'https://finpress.org/documentation/article/finpress-block-editor/',
 				'fincommerce'
 			) }
 			onClick={ recordClick }

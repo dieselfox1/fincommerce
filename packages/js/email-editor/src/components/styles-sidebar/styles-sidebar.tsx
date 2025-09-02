@@ -1,17 +1,17 @@
 /**
  * External dependencies
  */
-import { memo } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { useSelect } from '@wordpress/data';
-import { styles } from '@wordpress/icons';
+import { memo } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { useSelect } from '@finpress/data';
+import { styles } from '@finpress/icons';
 // eslint-disable-next-line @fincommerce/dependency-group
 import {
-	// @ts-expect-error Type for PluginSidebar is missing in @types/wordpress__editor
+	// @ts-expect-error Type for PluginSidebar is missing in @types/finpress__editor
 	PluginSidebar,
-	// @ts-expect-error Type for PluginSidebarMoreMenuItem is missing in @types/wordpress__editor
+	// @ts-expect-error Type for PluginSidebarMoreMenuItem is missing in @types/finpress__editor
 	PluginSidebarMoreMenuItem,
-} from '@wordpress/editor';
+} from '@finpress/editor';
 
 /**
  * Internal dependencies

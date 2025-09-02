@@ -5,9 +5,9 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 	InspectorControls,
-} from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+} from '@finpress/block-editor';
+import { __ } from '@finpress/i18n';
+import { PanelBody, ToggleControl } from '@finpress/components';
 
 const ACCORDION_BLOCK_NAME = 'fincommerce/accordion-item';
 const ACCORDION_BLOCK = {

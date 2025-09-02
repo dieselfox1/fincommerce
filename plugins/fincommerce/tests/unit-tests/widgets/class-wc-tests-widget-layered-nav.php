@@ -202,7 +202,7 @@ class WC_Tests_Widget_Layered_Nav extends WC_Unit_Test_Case {
 	private function set_post_as_draft( $post_id ) {
 		global $wpdb;
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:ignore finpress.DB.PreparedSQL.NotPrepared
 		$wpdb->query( 'update ' . $wpdb->posts . " set post_status='draft' where ID=" . $post_id );
 	}
 

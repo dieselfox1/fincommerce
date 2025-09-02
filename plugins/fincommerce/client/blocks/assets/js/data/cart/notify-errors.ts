@@ -3,8 +3,8 @@
  */
 import { ApiErrorResponse, isApiErrorResponse } from '@fincommerce/types';
 import { createNotice } from '@fincommerce/base-utils';
-import { decodeEntities } from '@wordpress/html-entities';
-import { dispatch } from '@wordpress/data';
+import { decodeEntities } from '@finpress/html-entities';
+import { dispatch } from '@finpress/data';
 
 /**
  * Internal dependencies

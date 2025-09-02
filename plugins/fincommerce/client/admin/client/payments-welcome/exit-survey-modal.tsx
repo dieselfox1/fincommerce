@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { useState } from '@wordpress/element';
+import { useState } from '@finpress/element';
 import {
 	Button,
 	Modal,
 	CheckboxControl,
 	TextareaControl,
-} from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
+} from '@finpress/components';
+import { useDispatch, useSelect } from '@finpress/data';
 import { optionsStore } from '@fincommerce/data';
 import { recordEvent } from '@fincommerce/tracks';
 

@@ -1,9 +1,9 @@
 /**
  * External dependencies
  */
-import { Button, Icon } from '@wordpress/components';
-import { __, sprintf } from '@wordpress/i18n';
-import { useContext } from '@wordpress/element';
+import { Button, Icon } from '@finpress/components';
+import { __, sprintf } from '@finpress/i18n';
+import { useContext } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
 import { navigateTo, getNewPath } from '@fincommerce/navigation';
 import { useUser } from '@fincommerce/data';

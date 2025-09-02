@@ -1,14 +1,14 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import {
 	StrictMode,
 	Suspense,
 	createElement,
 	createRoot,
 	lazy,
-} from '@wordpress/element';
+} from '@finpress/element';
 
 import {
 	Root,

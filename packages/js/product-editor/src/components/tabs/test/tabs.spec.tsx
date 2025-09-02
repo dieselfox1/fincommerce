@@ -2,10 +2,10 @@
  * External dependencies
  */
 import { render, fireEvent, screen } from '@testing-library/react';
-import { SlotFillProvider } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
+import { SlotFillProvider } from '@finpress/components';
+import { createElement } from '@finpress/element';
 import { recordEvent } from '@fincommerce/tracks';
-import { select } from '@wordpress/data';
+import { select } from '@finpress/data';
 
 /**
  * Internal dependencies
@@ -30,8 +30,8 @@ jest.mock( '@fincommerce/tracks', () => ( {
 	recordEvent: jest.fn(),
 } ) );
 
-jest.mock( '@wordpress/data', () => {
-	const originalModule = jest.requireActual( '@wordpress/data' );
+jest.mock( '@finpress/data', () => {
+	const originalModule = jest.requireActual( '@finpress/data' );
 	return {
 		...originalModule,
 		select: jest.fn( ( ...args ) => originalModule.select( ...args ) ),

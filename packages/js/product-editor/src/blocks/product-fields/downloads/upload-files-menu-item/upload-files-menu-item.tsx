@@ -2,11 +2,11 @@
  * External dependencies
  */
 import { ChangeEvent } from 'react';
-import { FormFileUpload, MenuItem } from '@wordpress/components';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-import { upload } from '@wordpress/icons';
-import { uploadMedia } from '@wordpress/media-utils';
+import { FormFileUpload, MenuItem } from '@finpress/components';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
+import { upload } from '@finpress/icons';
+import { uploadMedia } from '@finpress/media-utils';
 
 /**
  * Internal dependencies

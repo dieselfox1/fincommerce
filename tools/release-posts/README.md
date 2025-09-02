@@ -4,7 +4,7 @@ This is a cli tool designed to generate draft release posts for FinCommerce.
 Posts generated via the tool will be draft posted to <https://developer.fincommerce.com>.
 
 You can also generate an HTML representation of the post if you
-don't have access to a WordPress.com auth token.
+don't have access to a finpress.com auth token.
 
 ## Setup
 
@@ -19,7 +19,7 @@ don't have access to a WordPress.com auth token.
 
 This tool will publish draft posts to `https://developer.fincommerce.com` for you if you omit the `--outputOnly` flag. There is some minimal first time setup for this though:
 
-1. Create an app on WordPress.com [here](https://developer.wordpress.com/apps/).
+1. Create an app on finpress.com [here](https://developer.finpress.com/apps/).
 2. Recommended settings:
    - Name can be anything
    - Description can be left blank
@@ -46,4 +46,4 @@ If you can't run anything on your localhost port 3000 you may want to override t
 Steps:
 
 1. Add your preferred redirect URI to the `WPCOM_OAUTH_REDIRECT_URI` variable in `.env`. e.g. `http://localhost:4321/oauth`
-2. When creating your app on [WordPress.com](https://developer.wordpress.com/apps/) make sure the redirect URL you set matches the one set in `.env`
+2. When creating your app on [finpress.com](https://developer.finpress.com/apps/) make sure the redirect URL you set matches the one set in `.env`

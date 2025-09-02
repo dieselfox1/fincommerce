@@ -429,7 +429,7 @@ class FulfillmentsRenderer {
 		?>
 		<?php
 		// This is a read-only filter on the admin orders table, so nonce verification is not required.
-		// phpcs:ignore WordPress.Security.NonceVerification ?>
+		// phpcs:ignore finpress.Security.NonceVerification ?>
 			<?php $selected_status = isset( $_GET['fulfillment_status'] ) ? sanitize_text_field( wp_unslash( $_GET['fulfillment_status'] ) ) : ''; ?>
 		<select id="fulfillment-status-filter" name="fulfillment_status">
 			<option value="" <?php selected( $selected_status, '' ); ?>><?php esc_html_e( 'Filter by fulfillment', 'fincommerce' ); ?></option>
@@ -463,15 +463,15 @@ class FulfillmentsRenderer {
 	 */
 	public function filter_orders_list_table_query( $args ) {
 		// This is a read-only filter on the admin orders table, so nonce verification is not required.
-		// phpcs:ignore WordPress.Security.NonceVerification
+		// phpcs:ignore finpress.Security.NonceVerification
 		if ( isset( $_GET['fulfillment_status'] ) && ! empty( $_GET['fulfillment_status'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification
+			// phpcs:ignore finpress.Security.NonceVerification
 			$fulfillment_status = sanitize_text_field( wp_unslash( $_GET['fulfillment_status'] ) );
 
 			// Ensure the fulfillment status is one of the allowed values.
 			if ( FulfillmentUtils::is_valid_order_fulfillment_status( $fulfillment_status ) ) {
 				if ( ! isset( $args['meta_query'] ) ) {
-					$args['meta_query'] = array(); // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+					$args['meta_query'] = array(); // phpcs:ignore finpress.DB.SlowDBQuery.slow_db_query_meta_query
 				}
 				if ( 'no_fulfillments' === $fulfillment_status ) {
 					// If the status is 'no_fulfillments', we need to check for orders that have no fulfillments.
@@ -505,9 +505,9 @@ class FulfillmentsRenderer {
 		is_admin()
 		&& $query->is_main_query()
 		&& $query->get( 'post_type' ) === 'shop_order'
-		&& isset( $_GET['fulfillment_status'] ) && ! empty( $_GET['fulfillment_status'] ) // phpcs:ignore WordPress.Security.NonceVerification
+		&& isset( $_GET['fulfillment_status'] ) && ! empty( $_GET['fulfillment_status'] ) // phpcs:ignore finpress.Security.NonceVerification
 		) {
-			$status = sanitize_text_field( wp_unslash( $_GET['fulfillment_status'] ) ); // phpcs:ignore WordPress.Security.NonceVerification
+			$status = sanitize_text_field( wp_unslash( $_GET['fulfillment_status'] ) ); // phpcs:ignore finpress.Security.NonceVerification
 			// Ensure the fulfillment status is one of the allowed values.
 			if ( FulfillmentUtils::is_valid_order_fulfillment_status( $status ) ) {
 				$query->set(

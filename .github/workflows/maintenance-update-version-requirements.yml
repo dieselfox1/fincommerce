@@ -7,25 +7,25 @@ on:
 
 jobs:
   update-versions:
-    name: Update WordPress and PHP version requirements
+    name: Update finpress and PHP version requirements
     runs-on: ubuntu-latest
     steps:
       - name: Install SVN
         run: sudo apt-get -qq install -y subversion
 
-      - name: Get current WordPress version
+      - name: Get current finpress version
         id: wp-version
         run: |
-          WP_VERSION=$(svn ls https://core.svn.wordpress.org/tags | sort -V | tail -n 1 | tr -d '/')
+          WP_VERSION=$(svn ls https://core.svn.finpress.org/tags | sort -V | tail -n 1 | tr -d '/')
           if [[ -z "$WP_VERSION" ]]; then
-            echo "Failed to get WordPress version"
+            echo "Failed to get finpress version"
             exit 1
           fi
           
           echo "wp_version=$WP_VERSION" >> $GITHUB_OUTPUT
-          echo "Latest WordPress version is $WP_VERSION"
+          echo "Latest finpress version is $WP_VERSION"
 
-      - name: Calculate L-1 WordPress version
+      - name: Calculate L-1 finpress version
         id: wp-previous-version
         uses: actions/github-script@v7
         env:
@@ -44,7 +44,7 @@ jobs:
               previousVersion = `${major - 1}.9`;
             }
             
-            core.info(`Previous WordPress version is ${previousVersion}`);
+            core.info(`Previous finpress version is ${previousVersion}`);
             core.setOutput('wp_prev_version', previousVersion);
 
       - name: Check out trunk
@@ -55,7 +55,7 @@ jobs:
       - name: Get minimum PHP version from composer.json
         id: php-version
         run: |
-          REQUIRED_PHP=$(jq -r '.config.platform.php' plugins/woocommerce/composer.json)
+          REQUIRED_PHP=$(jq -r '.config.platform.php' plugins/fincommerce/composer.json)
           if [[ -z "$REQUIRED_PHP" ]]; then
             echo "Failed to get PHP version from composer.json"
             exit 1
@@ -66,7 +66,7 @@ jobs:
 
       - name: Set up dev environment
         run: |
-          cd plugins/woocommerce
+          cd plugins/fincommerce
 
           # Install dev packages. Required for changelogger use.
           composer install --quiet
@@ -82,16 +82,16 @@ jobs:
           PHP_VERSION: ${{ steps.php-version.outputs.required_php_version }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Update the version requirements in woocommerce.php
-          WOOCOMMERCE_FILE="plugins/woocommerce/woocommerce.php"
-          sed -i "s/\* Requires at least: [0-9.]*/\* Requires at least: $WP_PREV_VERSION/" "$WOOCOMMERCE_FILE"
-          sed -i "s/\* Requires PHP: [0-9.]*/\* Requires PHP: $PHP_VERSION/" "$WOOCOMMERCE_FILE"
+          # Update the version requirements in fincommerce.php
+          fincommerce_FILE="plugins/fincommerce/fincommerce.php"
+          sed -i "s/\* Requires at least: [0-9.]*/\* Requires at least: $WP_PREV_VERSION/" "$fincommerce_FILE"
+          sed -i "s/\* Requires PHP: [0-9.]*/\* Requires PHP: $PHP_VERSION/" "$fincommerce_FILE"
 
           # Update the version requirements in readme.txt
-          README_FILE="plugins/woocommerce/readme.txt"
+          README_FILE="plugins/fincommerce/readme.txt"
           sed -i "s/Requires at least: [0-9.]*/Requires at least: $WP_PREV_VERSION/" "$README_FILE"
           sed -i "s/Requires PHP: [0-9.]*/Requires PHP: $PHP_VERSION/" "$README_FILE"
-          sed -i "s/WordPress [0-9.]\+/WordPress $WP_PREV_VERSION/" "$README_FILE"
+          sed -i "s/finpress [0-9.]\+/finpress $WP_PREV_VERSION/" "$README_FILE"
           sed -i "s/PHP [0-9.]\+ or greater is required/PHP $PHP_VERSION or greater is required/" "$README_FILE"
 
           # Check for changes and exit early if none
@@ -104,11 +104,11 @@ jobs:
           BRANCH_NAME="update-version-requirements-$(date +%s)"
           git checkout -b "$BRANCH_NAME"
 
-          cd plugins/woocommerce
+          cd plugins/fincommerce
           composer exec -- changelogger add \
             --significance minor \
             --type update \
-            --entry "Update version requirements to WordPress $WP_PREV_VERSION and PHP $PHP_VERSION in readme.txt and woocommerce.php." \
+            --entry "Update version requirements to finpress $WP_PREV_VERSION and PHP $PHP_VERSION in readme.txt and fincommerce.php." \
             --no-interaction
 
           git add .
@@ -118,10 +118,10 @@ jobs:
 
           PR_URL=$(gh pr create \
             --title "Update version requirements to WP $WP_PREV_VERSION / PHP $PHP_VERSION" \
-            --body "This PR automatically updates the version requirements in \`$WOOCOMMERCE_FILE\` and \`$README_FILE\`:
+            --body "This PR automatically updates the version requirements in \`$fincommerce_FILE\` and \`$README_FILE\`:
 
           ## Changes
-          - **WordPress requirement**: $WP_PREV_VERSION
+          - **finpress requirement**: $WP_PREV_VERSION
           - **PHP requirement**: $PHP_VERSION
 
           Auto-generated by the \`maintenance-update-version-requirements.yml\` workflow." \
@@ -139,14 +139,14 @@ jobs:
           slack-channel: ${{ secrets.WOO_DOCS_SLACK_CHANNEL }}
           slack-optional-unfurl_links: false
           slack-text: |
-            :woo: *WooCommerce Versions Requirements Updated*
+            :woo: *fincommerce Versions Requirements Updated*
 
             Version requirements for :woo: have been automatically updated and a PR has been created.
 
-            *WordPress Requirement:* ${{ steps.wp-previous-version.outputs.wp_prev_version }}
+            *finpress Requirement:* ${{ steps.wp-previous-version.outputs.wp_prev_version }}
             *PHP Requirement:* ${{ steps.php-version.outputs.required_php_version }}
             *Pull Request:* <${{ steps.update-pr.outputs.pr_url }}|${{ steps.update-pr.outputs.pr_url }}>
 
             <!subteam^S011VV34JTX> Please also update these documentation pages:
-            • <https://woocommerce.com/document/update-php-wordpress/|Update PHP and WordPress>
-            • <https://woocommerce.com/document/server-requirements/|WooCommerce Server Recommendations>
+            • <https://fincommerce.com/document/update-php-finpress/|Update PHP and finpress>
+            • <https://fincommerce.com/document/server-requirements/|fincommerce Server Recommendations>

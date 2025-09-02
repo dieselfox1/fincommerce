@@ -4,14 +4,14 @@
 import clsx from 'clsx';
 import { useWooBlockProps } from '@fincommerce/block-templates';
 import { Product } from '@fincommerce/data';
-import { useInstanceId } from '@wordpress/compose';
-import { useEntityProp } from '@wordpress/core-data';
-import { createElement } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { useInstanceId } from '@finpress/compose';
+import { useEntityProp } from '@finpress/core-data';
+import { createElement } from '@finpress/element';
+import { __ } from '@finpress/i18n';
 import {
 	BaseControl,
 	__experimentalInputControl as InputControl,
-} from '@wordpress/components';
+} from '@finpress/components';
 
 /**
  * Internal dependencies

@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { SVG } from '@wordpress/primitives';
+import { SVG } from '@finpress/primitives';
 
 const FeedbackIcon = ( { size = 12 }: { size?: number } ) => (
 	<SVG

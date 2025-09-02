@@ -84,7 +84,7 @@ class DataRegeneratorTest extends \WC_Unit_Test_Case {
 	public function test_initiate_regeneration_creates_lookup_table( $previously_existing ) {
 		global $wpdb;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable finpress.DB.PreparedSQL.NotPrepared
 
 		$wpdb->query( 'DROP TABLE IF EXISTS ' . $this->lookup_table_name );
 
@@ -104,7 +104,7 @@ class DataRegeneratorTest extends \WC_Unit_Test_Case {
 		$value = $wpdb->get_var( 'SELECT product_id FROM ' . $this->lookup_table_name . ' LIMIT 1' );
 		$this->assertEquals( 1, $value );
 
-		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable finpress.DB.PreparedSQL.NotPrepared
 	}
 
 	/**

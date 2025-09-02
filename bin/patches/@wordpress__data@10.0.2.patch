@@ -25,7 +25,7 @@ index db195ec1d0d981dce1622c12382f2b2394b25208..8c923576fbaf0fb34fd675ee0ec615a8
 - *
 - * @example
 - * ```js
-- * import { resolveSelect } from '@wordpress/data';
+- * import { resolveSelect } from '@finpress/data';
 - * import { store as myCustomStore } from 'my-custom-store';
 - *
 - * resolveSelect( myCustomStore ).getPrice( 'hammer' ).then(console.log)
@@ -339,7 +339,7 @@ index 0000000000000000000000000000000000000000..dc0d1c27debdb895007c52061e7944ff
 + *
 + * @example
 + * ```ts
-+ * import { resolveSelect } from '@wordpress/data';
++ * import { resolveSelect } from '@finpress/data';
 + * import { store as myCustomStore } from 'my-custom-store';
 + *
 + * resolveSelect( myCustomStore ).getPrice( 'hammer' ).then(console.log)

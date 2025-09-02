@@ -2,12 +2,12 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import { isValidElement } from '@wordpress/element';
+import { isValidElement } from '@finpress/element';
 import type { ReactElement, ReactNode } from 'react';
 import type { Currency } from '@fincommerce/types';
 import { Skeleton } from '@fincommerce/base-components/skeleton';
 import { DelayedContentWithSkeleton } from '@fincommerce/base-components/delayed-content-with-skeleton';
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 
 /**
  * Internal dependencies

@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
-import { BlockEditProps } from '@wordpress/blocks';
+import { __ } from '@finpress/i18n';
+import { useEffect } from '@finpress/element';
+import { BlockEditProps } from '@finpress/blocks';
 
-import { Disabled } from '@wordpress/components';
+import { Disabled } from '@finpress/components';
 import { ProductShortDescriptionSkeleton } from '@fincommerce/base-components/skeleton/patterns/product-short-description';
 import { useProductDataContext } from '@fincommerce/shared-context';
 import {
 	BlockControls,
 	InspectorControls,
 	useBlockProps,
-} from '@wordpress/block-editor';
+} from '@finpress/block-editor';
 
 /**
  * Internal dependencies

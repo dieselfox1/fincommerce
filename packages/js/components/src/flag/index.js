@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import emojiFlags from 'emoji-flags';
 import { get } from 'lodash';
-import { createElement } from '@wordpress/element';
+import { createElement } from '@finpress/element';
 
 /**
  * Use the `Flag` component to display a country's flag using the operating system's emojis.

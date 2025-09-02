@@ -107,7 +107,7 @@ function schedule_event( $hook, $args = array() ) {
 		'args'      => $args,
 	);
 	$crons = (array) _get_cron_array();
-	// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+	// phpcs:ignore finpress.PHP.DiscouragedPHPFunctions.serialize_serialize
 	$key = md5( serialize( $event->args ) );
 
 	$crons[ $event->timestamp ][ $event->hook ][ $key ] = array(

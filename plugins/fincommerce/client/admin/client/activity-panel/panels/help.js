@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from '@finpress/i18n';
 import { Text } from '@fincommerce/experimental';
-import { withSelect } from '@wordpress/data';
-import { Fragment, useEffect } from '@wordpress/element';
-import { applyFilters } from '@wordpress/hooks';
-import { Icon, chevronRight, page } from '@wordpress/icons';
+import { withSelect } from '@finpress/data';
+import { Fragment, useEffect } from '@finpress/element';
+import { applyFilters } from '@finpress/hooks';
+import { Icon, chevronRight, page } from '@finpress/icons';
 import { partial } from 'lodash';
 import { List, Section } from '@fincommerce/components';
 import {
